@@ -1,0 +1,239 @@
+
+\documentclass[
+11pt,                          % standard font size
+english                        % standard language
+]{book}
+
+
+%
+% some macro packages
+%
+
+\usepackage[english]{babel}    % with explicit language
+\usepackage{amsmath}           % ams mathematical stuff
+\usepackage[utf8]{inputenc}    % smart input of funny chars
+\usepackage[T1]{fontenc}       % also for the font encoding
+\usepackage{longtable}         % tables longer than one page
+\usepackage{exscale}           % large summation signs in 11pt
+\usepackage[final]{graphicx}   % to include pdf pictures
+\usepackage[sort]{cite}        % nicer citations
+\usepackage{array}             % nice tables
+\usepackage{wasysym}           % smiley symbols
+\usepackage[a4paper]{geometry} % geometry of page layout
+\usepackage{xspace}            % better spacing after macros
+\usepackage{tikz}              % for commutative diagrams and stuff
+\usepackage{chairx}            % the Chair X style file
+\usepackage[expansion=false    % no font expansion
+           ]{microtype}        % only protrusion
+\usepackage[nottoc]{tocbibind} % refs and index in the toc
+\usepackage[backref=page,      % backrefs in the bibliography
+           final=true,         % always treat as final
+           pdfpagelabels       % use pdf page labels
+           ]{hyperref}         % hyperrefs are cool!
+
+
+%
+% pdf files for graphics in the following directory:
+%
+
+\graphicspath{{../tikz/}}
+
+
+%
+% tikz libraries to be loaded, feel free to add more...
+%
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathreplacing}
+
+
+
+%
+% Specify which files wil be included 
+% to have nicer aux-files
+%
+
+\includeonly{
+  Introduction, 
+  Chapter2, 
+  Chapter3, 
+  Chapter4, 
+  Chapter5, 
+  Chapter6,
+  Chapter7,
+  Chapter8
+  }
+
+
+%
+% page dimensions, scaling etc. Not final yet
+%
+
+
+\geometry{bindingoffset=1cm}
+\geometry{hcentering=true}
+\geometry{hscale=0.8}
+\geometry{vscale=0.8}
+
+
+%
+% own local math macros follow here
+%
+
+\newcommand{\Eta}{\operatorname{H}}
+\newcommand{\Rho}{\operatorname{P}}
+\newcommand{\bch}[2]{\mathtt{BCH}\left(#1, #2\right)}
+\newcommand{\bchpart}[3]{\mathtt{BCH}_{#1}\left(#2, #3\right)}
+\newcommand{\bchparts}[4]{\mathtt{BCH}_{#1, #2}\left(#3, #4\right)}
+\newcommand\ot[2]{\mathrel{\overset{\makebox[0pt]
+	{\mbox{\normalfont\footnotesize\sffamily #1}}}{#2}}}
+
+%
+% title page with the nice sign
+% of the university and official stuff
+%
+
+\title{Convergence of the Gutt star product}
+\author{Paul Stapor}
+
+%
+% the text starts here
+%
+
+
+
+
+\begin{document}
+
+% =============================================================================
+% 			Header part
+% =============================================================================
+
+% title page
+%
+\maketitle
+\thispagestyle{empty}
+
+
+
+% table of contents
+%
+\tableofcontents
+\thispagestyle{empty}
+
+% =============================================================================
+% /////////////////////////////////////////////////////////////////////////////
+
+
+
+
+% =============================================================================
+% 			Main Part
+% =============================================================================
+
+% Introduction
+%
+
+\include{Introduction}
+
+
+
+
+% Chapter 2
+%
+
+\include{Chapter2}
+
+
+
+
+% Chapter 3
+%
+
+\include{Chapter3}
+
+
+
+
+% Chapter 4
+%
+
+\include{Chapter4}
+
+
+
+
+% Chapter 5
+%
+
+\include{Chapter5}
+
+
+
+
+% Chapter 6
+%
+
+\include{Chapter6}
+
+
+
+
+% Chapter 7
+%
+
+\include{Chapter7}
+
+
+
+
+% Chapter 8
+%
+
+\include{Chapter8}
+
+
+
+
+% =============================================================================
+% /////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+% =============================================================================
+% 			Appendix Part
+% =============================================================================
+
+
+% =============================================================================
+% /////////////////////////////////////////////////////////////////////////////
+
+
+
+
+% =============================================================================
+% 			Bibliography Part
+% =============================================================================
+
+% Smaller than other text
+%
+
+{
+  \footnotesize
+  \renewcommand{\arraystretch}{0.5}
+  \bibliographystyle{chairx}
+  \bibliography{../references/master}
+}
+
+% =============================================================================
+% /////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+\end{document}
