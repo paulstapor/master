@@ -6,47 +6,47 @@
 \contentsline {section}{\numberline {2.3}The long way from formal to strict}{7}{section.2.3}
 \contentsline {chapter}{\numberline {3}Algebraic Preliminaries}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Linear Poisson structures}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}The universal enveloping algebra}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}The Baker-Campbell-Hausdorff formula}{9}{section.3.3}
+\contentsline {section}{\numberline {3.2}The universal enveloping algebra}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}The Baker-Campbell-Hausdorff formula}{10}{section.3.3}
 \contentsline {chapter}{\numberline {4}Formulas for the Gutt star product}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Formulas for the Gutt star product}{11}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}An Iterative Approach from Linear Terms}{11}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}A first general Formula}{13}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}A Formula for two Monomials}{15}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Consequences and examples}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Low-Verifications of the formulas}{17}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}First verifications with Mathematica}{17}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Ideas for an algorithm beyond}{17}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}A locally convex topology for the Gutt star product}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Why locally convex?}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Locally convex algebras}{21}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Locally convex spaces and algebras}{21}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}A special class of algebras}{21}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}The projective tensor product}{22}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}A topology for the Gutt star product}{22}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{22}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{22}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Completion}{22}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Nuclearity}{22}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{22}{section.5.4}
-\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}An overview}{23}{section.6.1}
-\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{23}{section.6.2}
-\contentsline {section}{\numberline {6.3}The projective limit}{23}{section.6.3}
-\contentsline {section}{\numberline {6.4}A module structure}{23}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Generic case and a counter-example}{23}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Nilpotent case and good news}{23}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Banach Lie algebras and the finite-dimensional case}{23}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Generalizations of nilpotency}{23}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}A new projective Limit}{23}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}A result for the finite-dimensional case}{23}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{25}{chapter.7}
-\contentsline {section}{\numberline {7.1}The co-product}{25}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{25}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{25}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{25}{section.7.2}
-\contentsline {chapter}{\numberline {8}Examples and remarks}{27}{chapter.8}
-\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{27}{section.8.1}
-\contentsline {section}{\numberline {8.2}Some new ideas}{27}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{27}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{27}{subsection.8.2.2}
+\contentsline {section}{\numberline {4.2}Consequences and examples}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Low-Verifications of the formulas}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}First verifications with Mathematica}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Ideas for an algorithm beyond}{22}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}A locally convex topology for the Gutt star product}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Why locally convex?}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Locally convex algebras}{25}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Locally convex spaces and algebras}{25}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}A special class of locally convex algebras}{26}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}The projective tensor product}{27}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}A topology for the Gutt star product}{27}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{27}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{27}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Completion}{27}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Nuclearity}{27}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{27}{section.5.4}
+\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}An overview}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}The projective limit}{29}{section.6.3}
+\contentsline {section}{\numberline {6.4}A module structure}{29}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Generic case and a counter-example}{29}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Nilpotent case and good news}{29}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Banach Lie algebras and the finite-dimensional case}{29}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Generalizations of nilpotency}{29}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}A new projective Limit}{29}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}A result for the finite-dimensional case}{29}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}The co-product}{31}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{31}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{31}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{31}{section.7.2}
+\contentsline {chapter}{\numberline {8}Examples and remarks}{33}{chapter.8}
+\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{33}{section.8.1}
+\contentsline {section}{\numberline {8.2}Some new ideas}{33}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{33}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{33}{subsection.8.2.2}

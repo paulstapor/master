@@ -6,7 +6,21 @@
 
 \chapter{A locally convex topology for the Gutt star product}
 
-Here should already be some stuff...
+We have finished the algebraic part of this work, except for some little 
+lemmas concerning the Hopf theoretic chapter. Our next goal is setting up a 
+locally convex topology on the symmetric tensor algebra, in which the Gutt 
+star product will be continuous. At the beginning of this chapter, we will 
+first give a motivation why the setting of locally convex algebras is 
+convenient and necessary. In the second part, we will briefly recall the most 
+important things on locally convex algebras and introduce the topology which 
+we will work with. In the third section, the core of this chapter, the 
+continuity of the star product and the dependence on the formal parameter are 
+proven. Part four treats the case when the formal parameter $z = 1$ and hence 
+talks about a locally convex topology on the universal enveloping algebra of a 
+Lie algebra. We will also show, that our topology is ''optimal'' in a specific 
+sense.
+
+
 
 \section{Why locally convex?}
 \label{sec:chap5_Prelim}
@@ -17,7 +31,7 @@ and most of them would even make things simpler: we could think of
 locally multiplicatively convex algebras, Banach algebras, $C^*$- or even 
 von Neumann algebras. All of them have much more structure than just 
 locally convex algebras. We would have an entire holomorphic calculus 
-within our algebra if assumed it to be locally m-convex or even a 
+within our algebra if we assumed it to be locally m-convex or even a 
 continuous one if we wanted it to be $C^*$.
 
 
@@ -54,17 +68,15 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 		operator $\ad_a$ is a derivation, which is always true for a Lie 
 		algebra which comes from an associative algebra with the 
 		commutator, since for $a, b, c \in \algebra{A}$ we have
-		\begin{align*}
+		\begin{equation*}
 			[a, bc]
-			& =
+			=
 			a b c - b c a
-			\\
-			& =
+			=
 			a b c - b a c + b a c - b c a
-			\\
-			& =
+			=
 			[a, b] c + b [a, c].
-		\end{align*}
+		\end{equation*}
 		Now for $n = 1$ Equation \eqref{Lemma:LCAna:NotLMCHelp} is 
 		certainly true. So let's look at the step $n \rightarrow n+1$.
 		We make use of the derivation property and have
@@ -225,7 +237,7 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 \begin{remark}
 	The so called Weyl algebra, which fulfils the properties of the 
 	foregoing proposition, can be constructed from a Poisson algebra with 
-	constant Poisson tensor. It is a fair question, why this 
+	constant Poisson tensor. On one hand, it is a fair question, why this 
 	restriction of not being locally m-convex should also be put on 
 	linear Poisson systems. On the other hand, there is no reason to 
 	expect that things become easier when we make the Poisson system more 
@@ -234,60 +246,171 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 	Heisenberg algebra, a particular Lie algebra. So there is also no 
 	reason why the original algebra should have a ''better'' analytical 
 	structure than the quotient, since the ideal, which is divided out by 
-	this procedure, is closed.
+	this procedure, is a closed one.
 \end{remark}
+There is a second good reason why we should avoid our topology to be locally 
+m-convex. The topology we set up on $\Sym^{\bullet}(\lie{g})$ for a Lie 
+algebra $\lie{g}$ will also give a topology on $\mathcal{U}(\lie{g})$.
+In Proposition \ref{Prop:LCAna:NoExpTopology} we will show, that, under weak 
+(but for our purpose necessary) additional assumptions, there can be no 
+topology on $\mathcal{U}(\lie{g})$ which allows an entire holomorphic 
+calculus. This underlines the results from Proposition 
+\ref{Prop:LCAna:QMnotLMC}, since locally m-convex algebras always have such a 
+calculus.
+
+
+In this sense, we have good reasons to think that 
+$\Sym^{\bullet}(\lie{g})$ will not allow a better setting than the
+one of a locally convex algebra if we want the Gutt star product to 
+be continuous. Before we attack this task, we have to recall some
+technology from locally convex analysis.
+
+
+
 \section{Locally convex algebras}
 \label{sec:chap5_LCAlg}
 
-
 \subsection{Locally convex spaces and algebras}
 
+Every locally convex algebra is of course also a locally convex space which 
+is, of course, a topological vector space. To make clear, what we talk about, 
+we first give a definition, which is taken from \cite{Rudin:Blue}.
+\begin{definition}[Topological vector space]
+	\label{Def:TVSpace}
+	Let $V$ be a vector space endowed with a topology $\tau$. Then we call 
+	$(V, \tau)$ (or for short just $V$, if there is no confusion about the 
+	topology possible) a topological vector space, if the two following things 
+	hold:
+	\begin{definitionlist}
+		\item
+		for every point in $x \in V$ the set $\{x\} $ is a closed and
+		
+		\item
+		the vector space operations (addition, scalar multiplication) are 
+		continuous.
+	\end{definitionlist}
+\end{definition}
+Not all books require axiom $(i)$ for a topological vector space. It is, 
+however useful, since it assures that the topology in a topological vector 
+space is Hausdorff -- a feature, which we will always want to have. The proof 
+for this is not difficult, but since we don't want to go too much into detail 
+here, we refer to \cite{Rudin:Blue} again, where it can be found as Theorem 
+1.12.
 
-\subsection{A special class of algebras}
 
-For a locally convex Lie algebra $\lie{g}$, the Lie bracket is usually 
-assumed to be continuous. This means that for every continuous 
-semi-norms $p$ there exists another continuous semi-norms $q$ such that 
-for all $\xi, \eta \in \lie{g}$ one has
-\begin{equation*}
-	p([\xi, \eta])
+The most important class of topological vector spaces are, at least, but not 
+only, from a physical point of view, locally convex ones. Almost all 
+interesting physical examples belong to this class: Finite-dimensional spaces, 
+inner product (or pre-Hilbert) spaces, Banach spaces, Fr\'echet spaces, 
+nuclear spaces and many more. Now, there are at least two equivalent 
+definitions of what is a locally convex space. While the first is more 
+geometrical, the second is better suited for our analytic purpose.
+\begin{theorem}
+	\label{Thm:LCAna:LCSpace}
+	For a topological vector space $V$, the following things are equivalent.
+	\begin{theoremlist}
+		\item
+		$V$ has a local base $\algebra{B}$ of the topology whose members are 
+		convex.
+		
+		\item
+		The topology on $V$ is generated by a separating family of semi-norms 
+		$\algebra{P}$.
+	\end{theoremlist}
+\end{theorem}
+\begin{proof}
+	This theorem is a very well-known result and can be found in standard 
+	literature, such as \cite{Rudin:Blue}, where it is divided into the 
+	Theorems 1.36 and 1.37.
+\end{proof}
+\begin{definition}[Locally convex space]
+	\label{Def:LCSpace}
+	A locally convex space is a topological vector space in which one (and 
+	thus all) of the properties from Theorem \ref{Thm:LCAna:LCSpace} are 
+	fulfilled.
+\end{definition}
+The first property explains the term ''locally convex''. 
+For our intention, the second property is more helpful, 
+since in this setting proving continuity just means putting estimates on 
+semi-norms. For this purpose, one often extends the set of semi-norms 
+$\algebra{P}$ to the set of all continuous semi-norms $\mathcal{P}$, which 
+contains all semi-norms that are compatible with the topology (e.g. sums, 
+multiples and maxima of (finitely many) semi-norms from $\algebra{P}$).
+
+
+The next step are locally convex algebras.
+\begin{definition}[Locally convex algebra]
+	\label{Def:LCAlgebra}
+	A locally convex algebra is a locally convex vector space with an 
+	additional algebra structure, which is continuous.
+\end{definition}
+More precisely, let $\algebra{A}$ be a locally convex algebra and 
+$\mathcal{P}$ the set of all continuous semi-norms, then for all $p \in 
+\mathcal{P}$ there exists a $q \in \mathcal{P}$ such that for all $x, y \in 
+\algebra{A}$ one has
+\begin{equation}
+	\label{LCAna:ProductContinuity}
+	p(a b)
 	\leq
-	q(\xi) q(\eta).
-\end{equation*}
-For our study of the Gutt star product, this will not be enough, since 
-we will have to estimate an arbitrary high number of nested brackets. We 
-will need an estimate which does not depend on the number of lie 
-brackets implied. But Lie algebras are just a special case and the 
-property makes sense for any kind of locally convex algebra. This 
-motivates the following definition.
-\begin{definition}
-	\label{def:AE}
-	Let $\algebra{A}$ be a Hausdorff, locally convex algebra (not 
-	necessarily 	associative) with $\cdot$ denoting the multiplication 
-	and 	$\{p_i\}_{i\in I}$ the set of all continuous semi-norms which 
-	defines the topology. For a given continuous semi-norm $p$ we call 
-	another continuous semi-norm $q$ an asymptotic estimate for $p$, if 
-	there exists an $m \in \mathbb{N}$ such that for all $n \geq m$ the 
-	following holds:
+	q(a) q(b).
+\end{equation}
+Remind that we didn't require our algebras to be associative. The product in 
+this equation could also be a Lie bracket. If we talk about associative 
+algebras, we will always say it explicitly.
+
+
+
+\subsection{A special class of locally convex algebras}
+
+For our study of the Gutt star product, the usual continuity estimate 
+\eqref{LCAna:ProductContinuity} will not be enough, since 
+there will be an arbitrarily high number of nested brackets to control. 
+We will need an estimate which does not depend on the number of Lie 
+brackets implied. But Lie also algebras are just a special type of algebras  
+and the property we need makes sense for other types of locally convex 
+algebra, too. This motivates the following definition.
+\begin{definition}[Asymptotic estimate algebra]
+	\label{Def:AE}
+	Let $\algebra{A}$ be a locally convex algebra (not necessarily 
+	associative) with $\cdot$ denoting the multiplication 
+	and $\algebra{P}$ the set of all continuous semi-norms. 
+	For a given $p \in \algebra{P}$ we call $q \in \algebra{P}$ an asymptotic 
+	estimate for $p$, if there exists an $m \in \mathbb{N}$ such that for all 
+	$n \geq m$ $q$ satisfies the following condition: $\forall_{x_1, \ldots, 
+	x_n \in \algebra{A}}$
 	\begin{equation}
-		\label{Intro:AE}
+		\label{LCAna:AE}
 		p(x_1 \cdot \ldots \cdot x_n)
 		\leq
-		q(x_1) \ldots q(x_n)
-		\quad
-		\forall_{x_1, \ldots, x_n \in \algebra{A}}.
+		q(x_1) \ldots q(x_n).
 	\end{equation}
 	We call a locally convex algebra an AE-algebra, if every continuous 
-	semi-norm has an asymptotic estimate.
+	semi-norm admits an asymptotic estimate.
 \end{definition}
 \begin{remark}
-	We can without restrictions define $m = 1$ in the upper definition, 
+	\label{Rem:AE1}
+	Without further restrictions, we can set $m = 1$ in the upper definition, 
 	since this just means taking the maximum over a finite number of 
-	continuous semi-norms. Clearly the result will be a continuous semi-
-	norm again.
+	continuous semi-norms. If $q$ satisfies the upper definition for some $m 
+	\in \mathbb{N}$ and for all $i = 2, \ldots, m-1$ we have
+	\begin{equation*}
+		p(x_1 \cdot \ldots \cdot x_i)
+		\leq
+		q^{(i)}(x_1) \ldots q^{(i)}(x_i)
+	\end{equation*}
+	for all $x_1, \ldots, x_i \in \mathcal{A}$, then we just set
+	\begin{equation*}
+		q'
+		=
+		\max\{ 
+			p, q^{(2)}, \ldots, q^{(m-1)}, q
+		\}.
+	\end{equation*}
+	Clearly, $q'$ will again be a continuous semi-norm and an asymptotic 
+	estimate for $p$.
 \end{remark}
 \begin{remark}
-	\label{rem:AE2}
+	\label{Rem:AE2}
 	\mbox{}
 	\begin{remarklist}
 		\item
@@ -309,13 +432,13 @@ motivates the following definition.
 		\item
 		There are, of course, a lot of example for AE (Lie) algebras. 
 		All finite dimensional and Banach (Lie) algebras fulfil 
-		\eqref{Intro:AE}, just as locally m-convex (Lie) algebras do. 
+		\eqref{LCAna:AE}, just as locally m-convex (Lie) algebras do. 
 		The same is true for nilpotent locally convex Lie algebras, 
 		since here again one just has to take the maximum of a finite 
-		number of semi-norms. We are, however, not sure what is exactly 
+		number of semi-norms. It is, however, far from clear what is exactly 
 		implied by \eqref{Intro:AE}. Are there examples for associative 
-		or Lie algebras which are AE but not locally m-convex, for 
-		example?
+		algebras which are AE but not locally m-convex, for example? Are there 
+		Lie algebras which are truly and not nilpotent?
 	\end{remarklist}
 \end{remark}
 It is at least possible to make some easy observations: an associative 
@@ -340,16 +463,15 @@ $\forall_{x \in \algebra{A}}$
 	<
 	\infty
 \end{equation*}
-where $p$ is a continuous semi-norm and $q$ its asymptotic estimate. So 
-in some sense, at least in the associative case, AE-algebras are very 
-close to locally m-convex ones. If the algebra is even commutative, then 
-it seems like they are the same. In \cite{} ... claims that an 
-associative, commutative locally convex algebra admitting an entire 
-calculus must already be locally m-convex.
-
-For non-commutative algebras, the situation is different. It is a very 
-interesting (and non-trivial) question, how an example of an 
-associative, non locally m-convex but AE-algebra could look like.
+where $p \in \algebra{P}$ and $q$ its asymptotic estimate. So in some sense, 
+at least in the associative case, AE algebras are very close to locally 
+m-convex ones. If the algebra is even commutative and Fr\'echet, then the two 
+notions coincide: in \cite{MRZ:1962:EntireCalculus} Mitiagin, Rolewicz and 
+Zelazko proved that a commutative Fr\'echet algebra admitting an entire 
+calculus is in fact locally m-convex. For non-commutative algebras, the 
+situation is different. It is a very interesting (and non-trivial) question, 
+if a non locally m-convex but AE algebra exists at all and if yes, how it 
+could look like.
 
 
 \subsection{The projective tensor product}

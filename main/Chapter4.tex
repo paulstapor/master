@@ -6,24 +6,24 @@
 
 \chapter{Formulas for the Gutt star product}
 
-We have seen some results on the Baker-Campbell-Hausdorff series and one 
-on an identity for the Gutt star product. In Theorem 
-\ref{Thm:Alg:GuttIsBCH} we found a very useful tool to get explicit 
-formulas for the Gutt star product. We moreover may not forget that we 
-still have to prove one part of it. We will do at the beginning of the 
-first section of this chapter. This will then lead to a first easy 
-formula for $\star_{zG}$. Afterwards, we will use the same procedure to 
-find two more formulas for it: a rather involved one for the $n$-fold 
-star product of vectors, which will not necessarily be helpful for 
-algebraic computations, but will turn out very useful for estimates, and 
-a more explicit one for the product of two monomials.
+We have seen some results on the Baker-Campbell-Hausdorff series and an 
+identity for the Gutt star product. The latter one, stated in Theorem 
+\ref{Thm:Alg:GuttIsBCH}, will be a very useful tool in the following, since 
+we want to get explicit formulas for $\star_{zG}$. There is still one part of 
+the proof missing, but this will be caught up at the beginning of the first 
+section of this chapter. From there, we will come to a first easy formula for 
+$\star_{zG}$. Afterwards, we will use the same procedure to find two more 
+formulas for it: a rather involved one for the $n$-fold star product of 
+vectors, which will not necessarily be helpful for algebraic computations, 
+but will turn out very useful for estimates, and a more explicit one for the 
+product of two monomials.
 
 From those formulas, we will be able to draw some easy, but nice 
 consequences in the next section and we will show how to compute the 
-Gutt star product explicitly by doing two easy examples.
+Gutt star product explicitly by calculating two easy examples.
 
 At the end of this chapter, we will give an easy Mathematica code, which 
-can be used to verify the correctness of our formulas for low orders.
+can be used to verify the correctness of our formulas for polynomials of low orders.
 
 
 
@@ -46,16 +46,16 @@ following one: For a given Lie algebra $\lie{g}$ and $\xi, \eta \in
     \sum\limits_{n=0}^k
     z^n C_n(\xi^k, \eta)
 \end{equation*}
-We have already done this already for the Gutt star product, now we 
+We have already done this for the Gutt star product, now we 
 want to do the same for the BCH star product. This will finish
-the proof of Theorem \ref{Thm:Alg:GuttIsBCH}. For this purpose, we will
-use
-\begin{equation*}
+the proof of Theorem \ref{Thm:Alg:GuttIsBCH}. For this purpose, 
+we will use that
+\begin{equation}\label{Formulas:MonomialDerivative}
     \xi^k
     =
     \frac{\partial^k}{\partial t^k}
     \At{t = 0} \exp(t \xi).
-\end{equation*}
+\end{equation}
 We now have all the ingredients to prove the following proposition:
 \begin{lemma}
     \label{Lemma:Formulas:LinearMonomial1}
@@ -72,8 +72,20 @@ We now have all the ingredients to prove the following proposition:
 \end{lemma}
 \begin{proof}
     We start from the simplified form for the Baker-Campbell-Hausdorff 
-    series from Equation \eqref{Alg:BCH1stOrder}. Putting things 
-    together we get
+    series from Equation \eqref{Alg:BCH1stOrder}:
+    \begin{equation*}
+		\bch{\xi}{\eta}
+		=
+		\xi 
+		+ 
+		\sum\limits_{n = 0}^{\infty}
+		\frac{B_n^*}{n!}
+		\left( \ad_{\xi} \right)^n (\eta)
+		+
+		\mathcal{O}(\eta^2).
+    \end{equation*}
+    Putting things together with the definition of the BCH star product and 
+    Equation \eqref{Formulas:MonomialDerivative} we get
     \begin{align*}
         \xi^k \star_{zH} \eta
         & =
@@ -98,7 +110,7 @@ We now have all the ingredients to prove the following proposition:
     From this, we see that only terms which have exactly $k$ of the
     $\xi$'s in them and which are linear in $\eta$ will
     contribute. This means we can cut off the sum at $j = k$. If we
-    now write out the exponential series, we can cut it, too, for the
+    now write out the exponential series which we can also cut for the
     same reason. We have
     \begin{align*}
         \xi^k \star_{zH} \eta
@@ -178,9 +190,9 @@ We now have all the ingredients to prove the following proposition:
 \end{proof}
 \begin{remark}
     We have now proven the equality of the two star products 
-    $\star_{zG}$ and $\star_{zH}$, by deriving an easy formula from both 
-    of them. From now on, we will derive all the other formulas from $
-    \star_{zH}$, since this is the one which is easier to compute.
+    $\star_{zG}$ and $\star_{zH}$ by deriving an easy formula from both 
+    of them. From now on, we will derive all the other formulas from 
+    $\star_{zH}$, since this is the one which is easier to compute.
 \end{remark}
 Once this is done, it is actually easy to get the formula for
 monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
@@ -203,7 +215,7 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
 \end{proposition}
 \begin{proof}
 	We get the result by just polarizing the formula from Lemma 
-	\ref{Thm:Formulas:LinearMonomial1}. Let $\xi_1, \ldots, \xi_k \in 
+	\ref{Lemma:Formulas:LinearMonomial1}. Let $\xi_1, \ldots, \xi_k \in 
 	\lie{g}$ be given, then we introduce the parameters $t_i$ for $i = 
 	1, \ldots, k$ and set
 	\begin{equation*}
@@ -211,7 +223,7 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
 		=		
 		\Xi(t_1, \ldots, t_k)
 		=
-		\sum\limits_{i=1}^k t_i \xi^k.
+		\sum\limits_{i=1}^k t_i \xi^i.
 	\end{equation*}
 	Then it is immediate to see that
 	\begin{equation*}
@@ -273,7 +285,7 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
 	\eqref{Formulas:LittleHelp1} and \eqref{Formulas:LittleHelp2} we get 
 	with the Leibniz rule
 	\begin{equation*}
-		\frac{partial}{\partial t_1}
+		\frac{\partial}{\partial t_1}
 		\gamma^k
 		(\Xi, \ldots, \Xi; \eta)
 		=
@@ -324,7 +336,7 @@ monomials. Nevertheless, we want to pursue it for a moment, since we
 will get an equality which will be, although rather unfriendly looking, 
 very useful in the following: for analytic observations, it will be 
 enough to put (even brutal) estimates on it and the exact nature of the 
-combinatorics in the formula is just not important. Hence we rewrite 
+combinatorics in the formula will not be important. Hence we rewrite 
 Equation \eqref{Formulas:LinearMonomial2} in order to cook up such a 
 formula.
 \begin{definition}
@@ -368,14 +380,21 @@ formula.
 	where we set $B_z^j(x) = 0$ if $\deg(x) < j$ .
 \end{definition}
 We immediately get an easier identity for Equation 
-\eqref{Formulas:LinearMonomial2}. More than that: We can extend it to 
-arbirtry symmetric tensors:
+\eqref{Formulas:LinearMonomial2}:
+\begin{equation}\label{Formulas:LinearMonomial3}
+	\xi_1 \ldots \xi_k \star_{zG} \eta
+	=
+	\sum\limits_{j = 0}^k
+	B_z^j(\xi_1 \ldots \xi_k, \eta).
+\end{equation}
+More than that: We can extend it to 
+arbitrary symmetric tensors:
 \begin{lemma}
-	\label{Lemma:LinearMonimial3}
+	\label{Lemma:LinearMonomial4}
 	Let $\lie{g}$ be a Lie-algebra an $x \in \Sym^{\bullet}(\lie{g})$. 
 	Then we have the formula
 	\begin{equation}
-		\label{Formulas:LinearMonomial3}
+		\label{Formulas:LinearMonomial4}
 		x \star_{zG} \eta
     	=
     	\sum\limits_{j=0}^{\infty}
@@ -384,7 +403,7 @@ arbirtry symmetric tensors:
 \end{lemma}
 \begin{proof}
 	First it is clear that the sum over $j$ in Equation 
-	\eqref{Formulas:LinearMonomial3} is actually finite, since for $j 
+	\eqref{Formulas:LinearMonomial4} is actually finite, since for $j 
 	> \deg(x)$ there is no further contribution. Using the grading we 
 	can write
 	\begin{equation*}
@@ -395,8 +414,9 @@ arbirtry symmetric tensors:
 	\end{equation*}
 	The $B_z^i$-maps are linear in the first argument and the 
 	$x_i^{(k)}$ can be chosen to be factorizing tensors. But on 
-	factorizing tensors, Equation \eqref{Formulas:LinearMonomial3} is 
-	clearly true. We hence have by the linearity of $\star_{zG}$
+	factorizing tensors, this is just Equation 
+	\eqref{Formulas:LinearMonomial3}. We hence have by the linearity 
+	of $\star_{zG}$
 	\begin{align*}
 		x \star_{zG} \eta
 		& =
@@ -409,7 +429,7 @@ arbirtry symmetric tensors:
 		\sum\limits_{k=0}^{\deg(x)}
 		\sum_i 
 		\sum\limits_{j=0}^{\infty}
-    	B_z^j(x_i^{(k)}, \eta)
+    	B_z^j \left( x_i^{(k)}, \eta \right)
 		\\
 		& =
 		\sum\limits_{j=0}^{\infty}
@@ -425,12 +445,12 @@ arbirtry symmetric tensors:
     	B_z^j(x, \eta).
 	\end{align*}
 \end{proof}
-Now we want to use this approach to go on:
+We can use this approach to go on:
 \begin{proposition}
 	\label{Prop:Formulas:MultipleStars}
 	Let $\lie{g}$, $2 \leq k \in \mathbb{N}$  and $\xi_1, \ldots, \xi_k 
 	\in \lie{g}$. Then we have
-	\begin{equation*}
+	\begin{equation}\label{Formulas:MultipleStars}
 		\xi_1 \star_{zG} \ldots \star_{zG} \xi_k		
 		=
 		\sum\limits_{\substack{
@@ -447,7 +467,7 @@ Now we want to use this approach to go on:
 			\right) 
 			\ldots, \xi_{k}
 		\right).
-	\end{equation*}
+	\end{equation}
 \end{proposition}
 \begin{proof}
 	We will prove this by induction over $k$. For $k = 2$ we get
@@ -459,10 +479,10 @@ Now we want to use this approach to go on:
 		B_z^1 \left( \xi_1, \xi_2 \right)
 		=
 		\xi_1 \xi_2 +
-		\frac{1}{2} [\xi_1, \xi_2].
+		\frac{1}{2} [\xi_1, \xi_2]
 	\end{equation*}
-	For the step $k \rightarrow k + 1$ we can directly apply Equation 
-	\eqref{Formulas:LinearMonomial3}:
+	Which is clearly true. For the step $k \rightarrow k + 1$ we can directly 
+	apply Equation \eqref{Formulas:LinearMonomial4}:
 	\begin{align*}
 		\xi_1 \star_{zG} \ldots \star_{zG} \xi_{k+1}
 		& =
@@ -526,21 +546,27 @@ Now we want to use this approach to go on:
 		\right)
 	\end{align*}
 \end{proof}
-Theoretically, we could now use this formula to get another one for the 
-case of two monomials with $\xi_1, \ldots, \xi_k, \eta_1, \ldots, 
-\eta_{\ell} \in \lie{g}$ since
-\begin{equation*}
-	\xi_1 \ldots \xi_k \star_{zG} \eta_1 \ldots \eta_{\ell}
-	=
-	\frac{1}{k! \ell!}
-	\sum\limits_{\sigma \in S_k}
-	\sum\limits_{\tau \in S_{\ell}}
-	\xi_{\sigma(1)} \star_{zG} \ldots \star_{zG} \xi_{\sigma(k)}
-	\star_{zG}
-	\eta_{\tau(1)} \star_{zG} \ldots \star_{zG} \eta_{\tau(\ell)}
-\end{equation*}
-This equality can easily be gotten from the definition of the map 
-$\mathfrak{q}$.
+
+\begin{remark}
+	Our final goal in this chapter is actually a nice identity for the case 
+	of two monomials $\xi_1 \ldots \xi_k \star_{zG} \eta_1 \ldots 
+	\eta_{\ell}$ with $\xi_1, \ldots, \xi_k, \eta_1, \ldots, \eta_{\ell} \in 
+	\lie{g}$. Theoretically, we could use Equation 
+	\eqref{Formulas:MultipleStars} for it, since
+	\begin{equation}\label{Formulas:2MonomialsWeird}
+		\xi_1 \ldots \xi_k \star_{zG} \eta_1 \ldots \eta_{\ell}
+		=
+		\frac{1}{k! \ell!}
+		\sum\limits_{\sigma \in S_k}
+		\sum\limits_{\tau \in S_{\ell}}
+		\xi_{\sigma(1)} \star_{zG} \ldots \star_{zG} \xi_{\sigma(k)}
+		\star_{zG}
+		\eta_{\tau(1)} \star_{zG} \ldots \star_{zG} \eta_{\tau(\ell)}.
+	\end{equation}
+	This equality can easily been proven from the definition of the map 
+	$\mathfrak{q}$. The only flaw in the plan is, however, that we're looking 
+	for something \textit{nice}. So we have to go for something different.
+\end{remark}
 
 
 
@@ -549,10 +575,12 @@ $\mathfrak{q}$.
 
 \subsection{A Formula for two Monomials}
 
-Now we need a formula for two monomials, which will be useful to prove 
-the continuity of $\star_{zG}$. It will not be very explicit, but it will 
-good enough to do computations with concrete examples. As a first step, 
-we must introduce a bit of notation:
+If we want to get an identity for the star product of two monomials, we have 
+to get back to Equation \eqref{Alg:GuttIsBCH}. The result will not be very 
+explicit either, but still by far better than Equation 
+\eqref{Formulas:2MonomialsWeird}. We will at least be able to do some 
+computations with concrete examples. As a first step, we must introduce 
+a bit of notation:
 \begin{definition}[G-Index]
 	\label{Def:GuttIndex}
 	Let $k, \ell, n \in \mathbb{N}$ and $r = k + \ell - n$. 
@@ -615,7 +643,7 @@ we must introduce a bit of notation:
 \end{definition}
 This allows us to state an explicit formula for the Gutt star product:
 \begin{lemma}
-	\label{lemma:2MonomialsFormula1}
+	\label{Lemma:2MonomialsFormula1}
 	Let $\lie{g}$ be a Lie algebra, $\xi, \eta \in \lie{g}$ and $k, 
 	\ell \in \mathbb{N}$. Then we have the following identity for the 
 	Gutt star product:
@@ -641,9 +669,28 @@ This allows us to state an explicit formula for the Gutt star product:
 \begin{proof}
 	We want to calculate what the $C_n$ look like. Let's denote $r = k 
 	+ \ell - n$ for brevity. Then we have
+	\begin{equation*}
+		C_n \left( \xi^k, \eta^{\ell} \right)
+		\in \Sym^r(\lie{g}).
+	\end{equation*}
+	Of course, the only part of the series
+	\begin{equation*}
+		\exp\left(
+			\frac{1}{z} \bch{z \xi}{z \eta}
+		\right)
+		=
+		\sum\limits_{n = 0}^{k + \ell}
+		\left(
+			\frac{1}{z} \bch{z \xi}{z \eta}
+		\right)^n
+		+ \mathcal{O}(\xi^{k + 1}, \eta^{\ell + 1})
+	\end{equation*} which lies in $\Sym^r(\lie{g})$ is the summand for 
+	$n = r $. Since we introduce the formal parameters $t$ and $s$, we don't 
+	need to care about terms of higher orders in $\xi$ and $\eta$ than $k$ 
+	and $\ell$ respectively.
     \begin{align}
         \nonumber
-        z^n C_n(\xi^k, \eta^{\ell})
+        z^n C_n \left( \xi^k, \eta^{\ell} \right)
         & =
         \frac{\partial^k}{\partial t^k}
         \frac{\partial^{\ell}}{\partial s^{\ell}}
@@ -688,26 +735,38 @@ This allows us to state an explicit formula for the Gutt star product:
             b_1 + \ldots + b_r = \ell
         }}
         \bchparts{a_i}{b_i}{\xi}{\eta}
-        \cdots
+        \ldots
         \bchparts{a_r}{b_r}{\xi}{\eta}
     \end{align}
     We sum over all possible arrangements of the $(a_i, b_i)$. In order 
-    to get rid of redundancies, we put an ordering on these multi-
-    indices: We use the one from definition \ref{Def:GuttIndex}. 
-    Obviously, we loose the freedom of arranging the $(a_i, b_i)$ a we 
+    to find a nicer form of the sum, we put the ordering from definition 
+    \ref{Def:GuttIndex} on these multi-indices and avoid therefore double 
+    counting. We loose the freedom of arranging the $(a_i, b_i)$ and 
     need to count the number of multi-indices $((a_1, b_1), \ldots, 
     (a_r, b_r))$ which belong to the same G-index $J$. This number will 
     be $\frac{r!}{J!}$, since we can't interchange the $(a_i, b_i)$ any 
     more (therefore $r!$), unless they are equal (therefore $J!^{-1}$). 
-    Changing the summation to $J \in \mathcal{G}_r(k, \ell)$ and 
-    multiplying by $\frac{r!}{J!}$ we get the identity 
-    \eqref{Formulas:2MonomialsFormula1}.
+    Since the ranges of the $(a_i, b_i)$ in Equation 
+    \eqref{Formulas:2MonomialsExplicit} and of  the elements in 
+    $\mathcal{G}_r(k, \ell)$ are the same. we can change the summation there 
+    to $J \in \mathcal{G}_r(k, \ell)$ and multiply by $\frac{r!}{J!}$. We 
+    find
+    \begin{equation*}
+    	z^n C_n \left( \xi^k, \eta^{\ell} \right)
+    	=
+    	z^n \frac{k! \ell!}{J!}
+    	\sum\limits_{J \in \mathcal{G}_r(k, \ell)}
+    	\bchparts{a_i}{b_i}{\xi}{\eta}
+        \ldots
+        \bchparts{a_r}{b_r}{\xi}{\eta}
+    \end{equation*}
+    which is precisely Equation \eqref{Formulas:2MonomialsFormula1}.
 \end{proof}
 Now we just need to generalize this to factorizing tensors. To do so, we 
 need a last definition:
 \begin{definition}
 	\label{Def:GuttInsert}
-	Let $\k, \ell, n \in \mathbb{N}$ and $J \in \mathcal{G}_{k + \ell - 
+	Let $k, \ell, n \in \mathbb{N}$ and $J \in \mathcal{G}_{k + \ell - 
 	n}(k, \ell)$. Then for $\xi_1, \ldots, \xi_k, \eta_1, \ldots, 
 	\eta_{\ell}$ from a Lie algebra $\lie{g}$ we set
 	\begin{equation}
@@ -725,7 +784,7 @@ need a last definition:
 	analogously with the $\eta$'s.
 \end{definition}
 \begin{proposition}
-	\label{proposition:2MonomialsFormula2}
+	\label{Prop:2MonomialsFormula2}
 	Let $\lie{g}$ be a Lie algebra, $k, \ell \in \mathbb{N}$ and $\xi_1, 
 	\ldots, \xi_k, \eta_1, \ldots, \eta_{\ell} \in \lie{g}$. Then we 
 	have the following identity for the Gutt star product:
@@ -759,49 +818,680 @@ need a last definition:
 \end{proposition}
 \begin{proof}
 	The proof relies on polarization again and is completely analogous 
-	to the one of proposition \ref{Thm:Formulas:LinearMonomial2}. We get 
-	rid of the factorials in Equation 
-	\eqref{Formulas:2MonomialsFormula1} and get symmetrizations over the 
-	$\xi_i$ and the $\eta_j$ instead, which gives the wanted result.
+	to the one of proposition \ref{Prop:Formulas:LinearMonomial2}. We set
+	\begin{equation*}
+		\Xi
+		=
+		\sum\limits_{i=1}^k t_i \xi^i
+		\quad \text{ and } \quad
+		\Eta
+		=
+		\sum\limits_{i=1}^{\ell} t_j \eta^j
+		.
+	\end{equation*}
+	Then it is easy to see that we will get rid of the factorials in Equation 
+	\eqref{Formulas:2MonomialsFormula1} since
+	\begin{equation*}
+		\xi_1 \ldots \xi_k \star_{zG} \eta_1 \ldots \eta_{\ell}
+		=
+		\frac{1}{k! \ell!}
+		\frac{\partial^{k + \ell}}
+		{\partial_{t_1} \ldots \partial_{s_{\ell}}}
+		\At{t_1, \ldots, s_{\ell} = 0}
+		\Xi^k \star_{zG} \Eta^{\ell}.
+	\end{equation*}
+	Instead of the factorials, we get symmetrizations over the 
+	$\xi_i$ and the $\eta_j$ as we did in Proposition 
+	\ref{Prop:Formulas:LinearMonomial2}, which gives the wanted result.
 \end{proof}
-\begin{remark}
-	Equation \eqref{Formulas:2MonomialsFormula2} allows us to do some 
-	explicit computations. One can check for example the following 
-	things:
-	\begin{remarklist}
-		\item
-		The classical limit holds:
-		\begin{equation*}
-			C_0(\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell})
-			=
-			\xi_1 \ldots \xi_k \eta_1 \ldots \eta_{\ell}
-		\end{equation*}
-		
-		\item
-		The semi-classical limit holds:
-		\begin{equation*}
-			\xi_1 \ldots \xi_k \star_{zG} \eta_1 \ldots \eta_{\ell}
-			-
-			\eta_1 \ldots \eta_{\ell} \star_{zG} \xi_1 \ldots \xi_k
-			=
-			z 
-			\{ \xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell} \}_{KKS}
-		\end{equation*}
-		with $\{\cdot, \cdot\}_{KKS}$ being the Kirillov-Konstant-
-		Souriau bracket.
-		
-		\item
-		For $\xi_1 \ldots \xi_k \star_{zG} \eta$ we get the smaller 
-		formula in Equation \eqref{Formulas:LinearMonomial2} again.
-	\end{remarklist}
-	We don't want to check this here, since these are easy calculations, 
-	but it is interesting to see that the formulas really give 
-	the wanted identities for the Gutt star product.
-\end{remark}
+
 
 
 \section{Consequences and examples}
 \label{sec:chap4_Consequences}
+
+\subsubsection*{Some consequences}
+Proposition \ref{Prop:2MonomialsFormula2} allows us to get some easy 
+algebraic results. For example, we know that the Gutt star product should 
+fulfil the classical and the semi-classical limit from Definition 
+\ref{Def:StarProduct} and this was also proven by Simone Gutt in the paper 
+\cite{Gutt:83-Gst} where she discovered it, but it is good to see that the 
+formula we set up really gives the same result.
+
+\begin{corollary}
+	\label{Cor:Formulas:LimitCases}
+	Given two arbitrary tensors $x,y \in \Sym^{\bullet}(\lie{g})$, we find
+	\begin{equation*}
+		x \star_{zG} y
+		=
+		C_0(x, y) + z C_1(x, y) + 
+		\sum\limits_{n = 2}^{\deg x + \deg y - 1} 
+		z^n C_n(x,y).
+	\end{equation*}
+	The $C_n$ satisfy the identities
+	\begin{equation*}
+		C_0(x,y)
+		= 
+		xy
+	\end{equation*}
+	and 
+	\begin{equation*}
+		C_1(x,y) - C_1(y,x)
+		= 
+		\left\{ x, y \right\}_{KKS}
+	\end{equation*}
+	where $\{ \cdot, \cdot \}_{KKS}$ denotes the Kirillov-Kostant-Souriau 
+	bracket.
+\end{corollary}
+\begin{proof}
+	Since the $C_n$ are bilinear, it is sufficient to check those identities 
+	on factorizing tensors. Again we take $\xi_1 \ldots \xi_k, \eta_1 \ldots 
+	\eta_{\ell} \in \Sym^{\bullet}(\lie{g})$. We have to look at the 
+	G-indices in $\mathcal{G}_{k + \ell}(k, \ell)$. This is easy, since there 
+	is just one element inside:
+	\begin{equation*}
+		\mathcal{G}_{k + \ell}(k, \ell)
+		=
+		\Big\{
+			( 
+				\underbrace{(0,1), \ldots, (0,1)}_{
+				\ell \text{ times}
+				}
+				,
+				\underbrace{(1,0), \ldots, (1,0)}_{
+				k \text{ times}
+				}
+			)
+		\Big\}.
+	\end{equation*}
+	So we find
+	\begin{align*}
+		C_0 
+		\left(
+			\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell}
+		\right)
+		& =
+		\sum\limits_{\sigma \in S_k}
+		\sum\limits_{\tau \in S_{\ell}}
+		\frac{1}{J!}
+		\bchparts{0}{1}{\varnothing}{\xi_{\sigma(1)}}
+		\ldots
+		\bchparts{0}{1}{\varnothing}{\xi_{\sigma(k)}}
+		\\
+		& \quad \cdot
+		\bchparts{1}{0}{\eta_{\tau(1)}}{\varnothing}
+		\ldots
+		\bchparts{1}{0}{\eta_{\tau(\ell)}}{\varnothing}
+		\\
+		& \ot{(a)}{=}
+		\sum\limits_{\sigma \in S_k}
+		\sum\limits_{\tau \in S_{\ell}}
+		\frac{1}{k! \ell!}
+		\xi_{\sigma(1)} \ldots \xi_{\sigma(k)}
+		\eta_{\tau(1)} \ldots \eta_{\tau(\ell)}
+		\\
+		& =
+		\xi_{\sigma(1)} \ldots \xi_{\sigma(k)}
+		\eta_{\tau(1)} \ldots \eta_{\tau(\ell)}
+	\end{align*}
+	where we used $J! = k! \ell!$ in (a) according to Definition 
+	\ref{Def:GuttFactorial}. We do the same for $C_1(\ldots)$. Also here, 
+	there is just one element in $\mathcal{G}_{k + \ell - 1}(k, \ell)$:
+		\begin{equation*}
+		\mathcal{G}_{k + \ell}(k, \ell)
+		=
+		\Big\{
+			( 
+				\underbrace{(0,1), \ldots, (0,1)}_{
+				\ell-1 \text{ times}
+				}
+				,
+				\underbrace{(1,0), \ldots, (1,0)}_{
+				k-1 \text{ times}
+				}
+				,
+				(1,1)
+			)
+		\Big\}.
+	\end{equation*}
+	Of course we have
+	\begin{equation*}
+		\bchparts{1}{1}{\xi}{\eta}
+		=
+		\frac{1}{2} [\xi, \eta]
+	\end{equation*}
+	and find with $J! = (k - 1)! (\ell - 1)!$ 
+	\begin{align*}
+		C_1 
+		\left(
+			\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell}
+		\right)
+		& =
+		\frac{1}{2}
+		\sum\limits_{\sigma \in S_k}
+		\sum\limits_{\tau \in S_{\ell}}
+		\frac{1}{(k-1)! (\ell-1)!}
+		\xi_{\sigma(1)} \ldots \xi_{\sigma(k-1)}
+		\eta_{\tau(1)} \ldots \eta_{\tau(\ell-1)}
+		[\xi_{\sigma(k)}, \eta_{\tau(\ell)}]
+		\\
+		& =
+		\frac{1}{2}
+		\sum\limits_{i = 0}^k
+		\sum\limits_{j = 0}^{\ell}
+		\xi_1 \ldots \widehat{\xi_i} \ldots \xi_k
+		\eta_1 \ldots \widehat{\eta_j} \ldots \eta_{\ell}
+		[\xi_i, \eta_j]
+	\end{align*}
+	where the hat means that the $\xi_i$ and the $\eta_j$ are left out. From 
+	this, the anti-symmetry of the Lie bracket yields
+	\begin{equation*}
+		C_1 
+		\left(
+			\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell}
+		\right)
+		-
+		C_1 
+		\left(
+			\eta_1 \ldots \eta_{\ell}, \xi_1 \ldots \xi_k
+		\right)
+		=
+		\sum\limits_{i = 0}^k
+		\sum\limits_{j = 0}^{\ell}
+		\xi_1 \ldots \widehat{\xi_i} \ldots \xi_k
+		\eta_1 \ldots \widehat{\eta_j} \ldots \eta_{\ell}
+		[\xi_i, \eta_j].
+	\end{equation*}
+	We just need to verify, that this is really the KKS-Poisson bracket for 
+	given polynomials $\xi_1 \ldots \xi_k$ and $\eta_1 \ldots \eta_{\ell}$.
+\end{proof}
+Moreover, we have compatibility of the bigger formula from Proposition 
+\ref{Prop:2MonomialsFormula2} with the smaller one from Proposition 
+\ref{Prop:Formulas:LinearMonomial2}.
+\begin{corollary}
+	\label{Cor:Formulas:FormulasCoincide}
+	Given $\xi_1, \ldots, \xi_k, \eta \in \lie{g}$, the results of the two 
+	Equations \eqref{Formulas:2MonomialsFormula2} and 
+	\eqref{Formulas:LinearMonomial2} coincide.
+\end{corollary}
+\begin{proof}
+	We have to compute sets of G-indices for $\xi_1, \ldots, \xi_k, 
+	\eta_{\ell} \in \lie{g}$. Again, they only have one element:
+	\begin{equation*}
+		\mathcal{G}_{k + 1 - n}(k, 1)
+		=
+		\Big\{
+			( 
+				\underbrace{(1,0), \ldots, (1,0)}_{
+				k - n \text{ times}
+				}
+				,
+				(n,1)
+			)
+		\Big\}.
+	\end{equation*}
+	So we have with $J! = (k - n)!$
+	\begin{equation*}
+		z^n C_n
+		\left(
+			\xi_1 \ldots \xi_k, \eta_{\ell}
+		\right)
+		=
+		z^n
+		\sum\limits_{\sigma \in S_k}
+		\frac{1}{(k - n)!}
+		\frac{B_n^*}{n!}
+		\xi_{\sigma(1)} \ldots \xi_{\sigma(k-n)}
+		[\xi_{\sigma(k-n+1)}, [
+			\ldots, [\xi_{\sigma(k), \eta} ] \ldots 
+		]]
+	\end{equation*}
+	which gives, after a light reordering
+	\begin{equation*}
+		z^n C_n
+		\left(
+			\xi_1 \ldots \xi_k, \eta_{\ell}
+		\right)
+		=
+		z^n
+		\frac{1}{k!}
+		\sum\limits_{\sigma \in S_k}
+		\binom{k}{n} B_n^*
+		[\xi_{\sigma(1)}, [
+			\ldots, [\xi_{\sigma(n), \eta} ] \ldots 
+		]]
+		\xi_{\sigma(n+1)} \ldots \xi_{\sigma(k)}.
+	\end{equation*}
+	Summing up over all $n$ now gives Equation 
+	\eqref{Formulas:LinearMonomial2}.
+\end{proof}
+Just to make it it complete, we also want to state what it looks like when we 
+change the left and the right hand side.
+\begin{proposition}
+	\label{Prop:Formulas:LinearMonomial2T}
+    Let $\lie{g}$ be a Lie algebra and $\xi_1, \ldots, \xi_k, \eta \in 
+    \lie{g}$. We have
+    \begin{equation}\label{Formulas:LinearMonomial2T}
+    	\eta \star_{zG} \xi_1 \ldots \xi_k
+    	=
+    	\sum\limits_{j=0}^k
+    	\frac{1}{k!} \binom{k}{j}
+    	z^j B_j
+    	\sum\limits_{\sigma \in S_k}
+    	[\xi_{\sigma(1)}, 
+    		[ \ldots [\xi_{\sigma(j)}, \eta] \ldots ]
+    	]
+    	\xi_{\sigma(j+1)} \ldots \xi_{\sigma(k)}.
+    \end{equation}
+\end{proposition}
+\begin{proof}
+	The proof is completely analogue to the one of Proposition 
+	\ref{Prop:Formulas:LinearMonomial2}. The only difference is that we take 
+	Equation \eqref{Alg:BCHFirstOrderT} which gives the BCH series up to 
+	first order in the first and not in the second argument.
+\end{proof}
+
+
+
+\subsubsection*{Two examples}
+Equation \eqref{Formulas:2MonomialsFormula2} is useful if one wants to do 
+real computations with the star product, but it does not look very easy to 
+apply on the first sight. This is why we will give two examples here. The 
+easiest one which is not covered by the simpler formula 
+\eqref{Formulas:LinearMonomial2} will be the star product of two quadratic 
+terms. The second one should be the a bit more complex case of a cubic term 
+with a quadratic term.
+
+\subsubsection*{Two quadratic terms}
+Let's take $\xi_1, \xi_2, \eta_1, \eta_2 \in \mathfrak{g}$. We want to 
+compute
+\begin{equation*}
+	\xi_1 \xi_2 \star_{zG} \eta_1 \eta_2
+	=
+	C_0(\xi_1, \xi_2, \eta_1, \eta_2) 
+	+ 
+	z C_1(\xi_1, \xi_2, \eta_1, \eta_2) 
+	+ 
+	z^2 C_2(\xi_1, \xi_2, \eta_1, \eta_2) 
+	+ 
+	z^3 C_3(\xi_1, \xi_2, \eta_1, \eta_2).
+\end{equation*}
+The very first thing we have to do is computing the set of G-indices. Then we 
+calculate the G-factorial and finally go through the permutations.
+\begin{itemize}
+	\item[$C_0$:]
+	We already did this in Corollary \ref{Cor:Formulas:LimitCases} and know, 
+	that the zeroth order in $z$ is just the symmetric product. Therefore we 
+	have
+	\begin{equation*}
+		C_0(\xi_1 \xi_2, \eta_1 \eta_2)
+		=
+		\xi_1 \xi_2 \eta_1 \eta_2
+	\end{equation*}
+	
+	\item[$C_1$:]
+	We also did this one in Corollary \ref{Cor:Formulas:LimitCases}: There is 
+	just one G-index and we finally get
+	\begin{equation*}
+		C_1(\xi_1 \xi_2, \eta_1 \eta_2)
+		=
+		\frac{1}{2} \left(
+			\xi_2 \eta_2 [\xi_1, \eta_1] +
+			\xi_2 \eta_1 [\xi_1, \eta_2] +
+			\xi_1 \eta_2 [\xi_2, \eta_1] +
+			\xi_1 \eta_1 [\xi_2, \eta_2]
+		\right).
+	\end{equation*}
+	
+	\item[$C_2$:]
+	This is the first time, something interesting happens. We have three 
+	G-indices:
+	\begin{equation*}
+		\mathcal{G}_2(2,2) 
+		=
+		\left\{ J^1, J^2, J^3 \right\}
+		= 
+		\big\{ 
+			\big((0,1), (2,1)\big), 
+			\big((1,0), (1,2)\big), 
+			\big((1,1), (1,1)\big) 
+		\big\}.
+	\end{equation*}
+	The G-factorials give $J^1! = J^2! = 1$ and $J^3! = 2$, since the index 
+	$(1,1)$ appears twice in $J_3$. We take $\bchparts{1}{2}{X}{Y}$ and 
+	$\bchparts{2}{1}{X}{Y}$ for two variables $X$ and $Y$ from Equation 
+	\eqref{Alg:BCHSeriesLong}:
+	\begin{equation*}
+		\bchparts{1}{2}{X}{Y}
+		=
+		\frac{1}{12}[Y, [Y, X]]
+		\quad \text{ and } \quad
+		\bchparts{2}{1}{X}{Y}
+		=
+		\frac{1}{12}[X, [X, Y]].
+	\end{equation*}
+	So we have to insert the $\xi_i$ and the $\eta_j$ into $\frac{1}{12} 
+	X [Y, [Y, X]]$ and $\frac{1}{12} Y [X, [X, Y]]$ respectively and then 
+	we go on with the last one, which is
+	\begin{equation*}
+		\frac{1}{2}
+		\bchparts{1}{1}{X}{Y}
+		\bchparts{1}{1}{X}{Y}
+		=
+		\frac{1}{8}
+		[X, Y][X, Y].
+	\end{equation*}
+	We hence get
+	\begin{align*}
+		C_2(\xi_1, \xi_2, \eta_1, \eta_2) 
+		& = 
+		\frac{1}{12}
+		\big( 
+			\eta_1 [[\eta_2, \xi_1],\xi_2] + 
+			\eta_1 [[\eta_2, \xi_2],\xi_1] + 
+			\eta_2 [[\eta_1, \xi_1],\xi_2] + 
+			\eta_2 [[\eta_1, \xi_2],\xi_1] +
+		\\
+		& \quad
+			\xi_1 [[\xi_2, \eta_1],\eta_2] + 
+			\xi_1 [[\xi_2, \eta_2],\eta_1] + 
+			\xi_2 [[\xi_1, \eta_1],\eta_2] + 
+			\xi_2 [[\xi_1, \eta_2],\eta_1] 
+ 		\big) +
+ 		\\
+ 		& \quad
+		\frac{1}{4} 
+		\big( 
+			[\xi_1,\eta_1][\xi_2,\eta_2] + 
+			[\xi_1,\eta_2][\xi_2,\eta_1] 
+		\big)
+	\end{align*}
+	
+	\item[$C_3$:]
+	Here, we only have one G-index:
+	\begin{equation*}
+		\mathcal{G}_1(2,2) 
+		=
+		\big\{ 
+			\big( (2,2) \big) 
+		\big\}
+	\end{equation*}
+	The G-factorial is $1$. We take again Equation \eqref{Alg:BCHSeriesLong} 
+	and see
+	\begin{equation*}
+		\bchparts{2}{2}{X}{Y}
+		=
+		\frac{1}{24}
+		[Y, [X, [Y, X]]].
+	\end{equation*}
+	This gives
+	\begin{align*}
+		C_3(\xi_1, \xi_2, \eta_1, \eta_2) 
+		& = 
+		\frac{1}{24}
+		\big( 
+			[[[\eta_1,\xi_1],\xi_2],\eta_2] + 
+			[[[\eta_1,\xi_2],\xi_1],\eta_2] +
+			[[[\eta_2,\xi_1],\xi_2],\eta_1] + 
+			[[[\eta_2,\xi_2],\xi_1],\eta_1] 
+		\big)
+	\end{align*}
+\end{itemize}
+We just have to put all the four terms together and have the star product.
+
+
+\subsubsection*{A cubic and a quadratic term}
+Let $\xi_1, \xi_2, \xi_3, \eta_1, \eta_2 \in \mathfrak{g}$. We compute
+\begin{equation*}
+	\xi_1 \xi_2 \xi_3 \star_G \eta_1 \eta_2
+	= 
+	\sum\limits_{n = 0}^4
+	z^n C_n(\xi_1, \xi_2, \xi_3, \eta_1, \eta_2)
+\end{equation*}
+\begin{itemize}
+	\item[$C_0$:]
+	The first part is again just the symmetric product:
+	\begin{equation*}
+		C_0(\xi_1 \xi_2 \xi_3, \eta_1 \eta_2)
+		=
+		\xi_1 \xi_2 \xi_3 \eta_1 \eta_2.
+	\end{equation*}
+	
+	\item[$C_1$:]
+	Here we have again the term from Corollary \ref{Cor:Formulas:LimitCases}:
+	\begin{align*}
+		C_1(\xi_1 \xi_2 \xi_3, \eta_1 \eta_2)
+		& =
+		\frac{1}{2} 
+		\big( 
+			\xi_2 \xi_3 \eta_2 [\xi_1, \eta_1] + 
+			\xi_2 \xi_3 \eta_1 [\xi_1, \eta_2] + 
+			\xi_1 \xi_3 \eta_2 [\xi_2, \eta_1] +
+		\\
+		& \quad 
+			\xi_1 \xi_3 \eta_1 [\xi_2, \eta_2] + 
+			\xi_1 \xi_2 \eta_2 [\xi_3, \eta_1] + 
+			\xi_1 \xi_2 \eta_1 [\xi_3, \eta_2] 
+ 		\big)
+	\end{align*}
+
+	\item[$C_2$:]
+	Here the calculation is very similar to the one of $C_2$ in the example 
+	before. We have three G-indices:
+	\begin{equation*}
+		\mathcal{G}_3(3,2) 
+		=
+		\left\{
+			J^1, J^2, J^3
+		\right\}
+		= 
+		\big\{ 
+			\big( (0,1), (1,0), (2,1) \big), 
+			\big( (1,0), (1,0), (1,2) \big), 
+			\big( (1,0), (1,1), (1,1) \big) 
+		\big\}.
+	\end{equation*}
+	The G-factorials are now $J^1! = 1$ and $J^2! = J^3! = 2$. Again, we take 
+	the BCH terms from Equation \eqref{Alg:BCHSeriesLong} and see, that we 
+	must insert the $\xi_i$ and the $\eta_j$ into
+	\begin{equation*}
+		\frac{1}{12} X Y [X, [X, Y]] +
+		\frac{1}{24} X X [Y, [Y, X]] +
+		\frac{1}{8} X [X, Y] [X, Y].
+	\end{equation*}
+	Now we go through all the possible permutations and get
+	\begin{align*}
+		C_2(\xi_1 \xi_2 \xi_3, \eta_1 \eta_2) 
+		& = 
+		\frac{1}{12} 
+		\big( 
+			\xi_1 \xi_2 [[\xi_3, \eta_1], \eta_2] + 
+			\xi_1 \xi_2 [[\xi_3, \eta_2], \eta_1] + 
+			\xi_1 \xi_3 [[\xi_2, \eta_1], \eta_2] +
+		\\
+		& \quad 
+			\xi_1 \xi_3 [[\xi_2, \eta_2], \eta_1] + 
+			\xi_2 \xi_3 [[\xi_1, \eta_1], \eta_2] + 
+			\xi_2 \xi_3 [[\xi_1, \eta_2], \eta_1] 
+		\big) +
+		\\ 
+		& \quad
+		\frac{1}{12} 
+		\big( 
+			\xi_1 \eta_1 [[\eta_2, \xi_2], \xi_3] + 
+			\xi_1 \eta_2 [[\eta_1, \xi_2], \xi_3] + 
+			\xi_1 \eta_1 [[\eta_2, \xi_3], \xi_2] +
+		\\
+		& \quad
+			\xi_1 \eta_2 [[\eta_1, \xi_3], \xi_2] + 
+			\xi_2 \eta_1 [[\eta_2, \xi_1], \xi_3] + 
+			\xi_2 \eta_2 [[\eta_1, \xi_1], \xi_3] +
+		\\
+		& \quad
+			\xi_2 \eta_1 [[\eta_2, \xi_3], \xi_1] + 
+			\xi_2 \eta_2 [[\eta_1, \xi_3], \xi_1] + 
+			\xi_3 \eta_1 [[\eta_2, \xi_2], \xi_1] +
+		\\
+		& \quad
+			\xi_3 \eta_2 [[\eta_1, \xi_2], \xi_1] + 
+			\xi_3 \eta_1 [[\eta_2, \xi_1], \xi_2] + 
+			\xi_3 \eta_2 [[\eta_1, \xi_1], \xi_2] 
+		\big) +
+		\\
+		& \quad
+		\frac{1}{4} 
+		\big( 
+			\xi_1 [\xi_2, \eta_1] [\xi_3, \eta_2] + 
+			\xi_1 [\xi_3, \eta_1] [\xi_2, \eta_2] + 
+			\xi_2 [\xi_1, \eta_1] [\xi_3, \eta_2] + 
+		\\
+		& \quad
+			\xi_2 [\xi_3, \eta_1] [\xi_1, \eta_2] + 
+			\xi_3 [\xi_1, \eta_1] [\xi_2, \eta_2] + 
+			\xi_3 [\xi_2, \eta_1] [\xi_1, \eta_2] 
+ 		\big).
+	\end{align*}
+
+	\item[$C_3$:]
+	We first calculate the G-indices:
+	\begin{equation*}
+		\mathcal{G}_2(3,2) 
+		= 
+		\left\{
+			J^1, J^2, J^3
+		\right\}
+		=
+		\left\{ 
+			\big( (0,1), (3,1) \big), 
+			\big( (1,0), (2,2) \big), 
+			\big( (1,1), (2,1) \big) 
+		\right\}.
+	\end{equation*}
+	We don't have to care about $J^1$, since $\bchparts{3}{1}{X}{Y} = 0$. The 
+	G-factorials for the other two indices are $1$. The BCH terms have been 
+	computed before. So we have to fill in the expression
+	\begin{equation*}
+		\frac{1}{24} X [Y, [X, [Y, X]]] +
+		\frac{1}{2 \cdot 12} [X, Y] [X, [X, Y]].
+	\end{equation*}
+	Doing the permutations, we get
+	\begin{align*}
+		C_3(\xi_1 \xi_2 \xi_3, \eta_1 \eta_2)
+		& =
+		\frac{1}{24}
+		\big( 
+			\xi_1[[[\eta_1, \xi_2], \xi_3], \eta_2] + 
+			\xi_1[[[\eta_2, \xi_2], \xi_3], \eta_1] + 
+			\xi_1[[[\eta_1, \xi_3], \xi_2], \eta_2] +
+		\\
+		& \quad
+			\xi_1[[[\eta_2, \xi_3], \xi_2], \eta_1] + 
+			\xi_2[[[\eta_1, \xi_1], \xi_3], \eta_2] + 
+			\xi_2[[[\eta_2, \xi_1], \xi_3], \eta_1] +
+		\\
+		& \quad
+			\xi_2[[[\eta_1, \xi_3], \xi_1], \eta_2] + 
+			\xi_2[[[\eta_2, \xi_3], \xi_1], \eta_1] + 
+			\xi_3[[[\eta_1, \xi_2], \xi_1], \eta_2] +
+		\\
+		& \quad
+			\xi_3[[[\eta_2, \xi_2], \xi_1], \eta_1] + 
+			\xi_3[[[\eta_1, \xi_1], \xi_2], \eta_2] + 
+			\xi_3[[[\eta_2, \xi_1], \xi_2], \eta_1]
+		\big) +
+		\\
+		& \quad
+		\frac{1}{24}
+		\big( 
+			[\xi_1, \eta_1][[\eta_2, \xi_2], \xi_3] + 
+			[\xi_1, \eta_2][[\eta_1, \xi_2], \xi_3] + 
+			[\xi_1, \eta_1][[\eta_2, \xi_3], \xi_2] +
+		\\
+		& \quad
+			[\xi_1, \eta_2][[\eta_1, \xi_3], \xi_2] + 
+			[\xi_2, \eta_1][[\eta_2, \xi_1], \xi_3] + 
+			[\xi_2, \eta_2][[\eta_1, \xi_1], \xi_3] +
+		\\
+		& \quad
+			[\xi_2, \eta_1][[\eta_2, \xi_3], \xi_1] + 
+			[\xi_2, \eta_2][[\eta_1, \xi_3], \xi_1] + 
+			[\xi_3, \eta_1][[\eta_2, \xi_2], \xi_1] +
+		\\
+		& \quad
+			[\xi_3, \eta_2][[\eta_1, \xi_2], \xi_1] + 
+			[\xi_3, \eta_1][[\eta_2, \xi_1], \xi_2] + 
+			[\xi_3, \eta_2][[\eta_1, \xi_1], \xi_2] 
+		\big).
+	\end{align*}
+
+	\item[$C_4$:]
+	Now there's only $C_4$ left. We only have one G-index:
+	\begin{equation*}
+		\mathcal{G}_1(3,2) 
+		= 
+		\left\{ \big( (3,2) \big) \right\},
+	\end{equation*}
+	but there are more terms which belong to it. We have to go through
+	\begin{equation*}
+		\bchparts{3}{2}{X}{Y}
+		=
+		\frac{1}{120} [[[[X,Y],X],Y],X] +
+		\frac{1}{360} [[[[Y,X],X],X],Y].
+	\end{equation*}
+	So we permute and get
+	\begin{align*}
+		C_4(\xi_1 \xi_2 \xi_3, \eta_1 \eta_2)
+		& =
+		\frac{1}{120} 
+		\big( 
+			[[[[\xi_1, \eta_1], \xi_2], \eta_2], \xi_3] + 
+			[[[[\xi_1, \eta_2], \xi_2], \eta_1], \xi_3] + 
+			[[[[\xi_1, \eta_1], \xi_3], \eta_2], \xi_2] +
+		\\
+		& \quad
+			[[[[\xi_1, \eta_2], \xi_3], \eta_1], \xi_2] + 
+			[[[[\xi_2, \eta_1], \xi_1], \eta_2], \xi_3] + 
+			[[[[\xi_2, \eta_2], \xi_1], \eta_1], \xi_3] +
+		\\
+		& \quad
+			[[[[\xi_2, \eta_1], \xi_3], \eta_2], \xi_1] + 
+			[[[[\xi_2, \eta_2], \xi_3], \eta_1], \xi_1] + 
+			[[[[\xi_3, \eta_1], \xi_2], \eta_2], \xi_1] +
+		\\
+		& \quad
+			[[[[\xi_3, \eta_2], \xi_2], \eta_1], \xi_1] + 
+			[[[[\xi_3, \eta_1], \xi_1], \eta_2], \xi_2] + 
+			[[[[\xi_3, \eta_2], \xi_1], \eta_1], \xi_2] 
+		\big) +
+		\\
+		& \quad
+		\frac{1}{360} 
+		\big( 
+			[[[[\eta_1, \xi_1], \xi_2], \xi_3], \eta_2] + 
+			[[[[\eta_2, \xi_1], \xi_2], \xi_3], \eta_1] + 
+			[[[[\eta_1, \xi_1], \xi_3], \xi_2], \eta_2] +
+		\\
+		& \quad
+			[[[[\eta_2, \xi_1], \xi_3], \xi_2], \eta_1] + 
+			[[[[\eta_1, \xi_2], \xi_1], \xi_3], \eta_2] + 
+			[[[[\eta_2, \xi_2], \xi_1], \xi_3], \eta_1] +
+		\\
+		& \quad
+			[[[[\eta_1, \xi_2], \xi_3], \xi_1], \eta_2] + 
+			[[[[\eta_2, \xi_2], \xi_3], \xi_1], \eta_1] + 
+			[[[[\eta_1, \xi_3], \xi_2], \xi_1], \eta_2] +
+		\\
+		& \quad
+			[[[[\eta_2, \xi_3], \xi_2], \xi_1], \eta_1] + 
+			[[[[\eta_1, \xi_3], \xi_1], \xi_2], \eta_2] + 
+			[[[[\eta_2, \xi_3], \xi_1], \xi_2], \eta_1] 
+		\big).
+	\end{align*}
+\end{itemize}
+Now we only have to add up all those terms and we have finally computed the 
+star product.
+
+
 
 
 \section{Low-Verifications of the formulas}

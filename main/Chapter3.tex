@@ -10,22 +10,109 @@
 \section{Linear Poisson structures}
 \label{sec:chap3_LinearPoisson}
 
-As we have seen before, there has already been done some work on how to strictly 
-quantize local Poisson structures. The Weyl-Moyal-product on locally convex vector 
-spaces was topologized by Stefan Waldmann in \cite{w_nuc} and then investigated more 
-closely by Matthias Schötz in \cite{Schoetz}. It is thus clear that in the next step 
-linear poisson structures on locally convex vector spaces must be done. Before we do 
-so in the rest of this master thesis, we recall briefly some basics on linear Poisson 
-structures.
-
-
+As we have seen before, there has already been done some work on how to 
+strictly quantize local Poisson structures. The Weyl-Moyal-product on locally 
+convex vector spaces was topologized by Stefan Waldmann in 
+\cite{Wladmann:2004:Nuclear} and then investigated more closely by Matthias 
+Schötz in \cite{Schoetz:Master}. It is thus clear that in the next step linear 
+Poisson structures on locally convex vector spaces should be done. This will 
+give a new big class of Poisson structures, which will be deformable in a 
+strict way. Before we do so in the rest of this master thesis, we recall 
+briefly some basics on linear Poisson structures.
 \begin{remark}[The axiom of choice]
-	Our final goal is to  do some locally convex functional analysis. Since in this 
-	game it is mandatory for us to sell our souls to the devil for the sake of the 
-	axiom of choice (e.g. in form of the Hahn-Banach theorem and the projective tensor 
-	product), there is no point in not doing it right from the beginning.
+	Our final goal is to  do some locally convex functional analysis. Since in 
+	this game it is mandatory for us to sell our souls to the devil for the 
+	sake of the axiom of choice (e.g. in form of the Hahn-Banach theorem and 
+	the projective tensor product), there is no point in not doing it right 
+	from the beginning.
 \end{remark}
-First of all, linear Poisson structures are actually something familiar: They are nothing but Lie algebras: Let $\{e^i\}_{i \in I}$ be a basis of a vector space $V*$ equipped with a Poisson bracket $\{\argument , \argument \}$.
+First of all, linear Poisson structures are actually something familiar: 
+We will always take a vector space $V$ and look at Poisson structures on its 
+dual space $V^*$. But a linear Poisson structure on $V^*$ is nothing but the 
+structure of a Lie algebra on $V$ itself, at least for finite-dimensional 
+vector spaces.
+\begin{proposition}
+	\label{Prop:Alg:LinPoissonIsLieAlg}
+	Let $V$ be a vector-space of dimension $n \in \mathbb{N}$ and $\pi \in 
+	\Secinfty(\Anti^2(TV^*))$. Then the two following things are 
+	equivalent:
+	\begin{propositionlist}
+		\item
+		$\pi$ is a Poisson tensor.
+		
+		\item
+		$V$ has a uniquely determined Lie algebra structure.
+	\end{propositionlist}
+\end{proposition}
+\begin{proof}
+	First, we want to think of what it means, that $\pi$ is a Poisson tensor. 
+	It is already a antisymmetric bi-vectorfield. The only thing which it must 
+	satisfy is the Jacobi-identity.
+\end{proof}
+
+
+We are interested in the polynomial algebra on the dual of the original vector 
+space, since the construction is inspired by the formal deformation 
+quantization on the cotangent bundle $T^*G$ of a Lie group $G$, which was 
+investigated in \cite{BNW:1998:TStarQ1}. Now we know, that this original 
+vector space really is a Lie algebra and for this reason we will call it in 
+the following $\lie{g}$. 
+
+
+The polynomial algebra $\Pol(\lie{g}^*)$ has many appearances and it is not an 
+easy question how the find a good generalization for infinite-dimensional 
+vector spaces. One could of course think of a good definition of the 
+polynomial functions on the dual of an infinite-dimensional Lie algebra $g$. 
+In order to keep the very most of the physically interesting cases in there, 
+we will assume it to be locally convex. But we know, that even the topological 
+dual $\lie{g}'$ will be a huge vector space and whatever the polynomials there 
+should be, there will be a lot of them. We will furthermore not be able to 
+find the nice correspondence of the Lie algebra structure on $\lie{g}$ and the 
+linear polynomials on $\lie{g}'$, since the procedure we used involved the 
+double-dual of $\lie{g}$. In general, this will be really bigger than 
+$\lie{g}$ and starting from a linear Poisson structure on $\lie{g}'$, we will 
+find a Lie algebra structure on $\lie{g}''$. Of course, we could just use the 
+canonical embedding $\lie{g} \subseteq \lie{g}''$, but it could (and, in 
+general, it will) happen, that the Lie bracket of $x,y \in \lie{g}$ will not 
+be in $\lie{g}$ any more, but just in its double-dual. In most of the physical 
+cases, we are actually not interested in the double-dual, but in the original 
+vector space.
+
+The little reflection shows, that we will have to think of a different 
+generalization of linear Poisson structure for the infinite-dimensional case.
+Luckily, in the finite-dimensional case, there's a different way of seeing the 
+polynomials on $\lie{g}^* = \lie{g}'$, which allows a much easier 
+generalization to infinite dimensions: It is the symmetric tensor algebra over 
+$\lie{g}$ itself.
+\begin{proposition}
+	\label{Prop:Alg:PolIsSym}
+	Let $\lie{g}$ be a vector space of dimension $n \in \mathbb{N}$. Then 
+	the algebras $\Sym^{\bullet}(\lie{g})$ and $\Pol(\lie{g}^*)$ are 
+	canonically isomorphic.
+\end{proposition}
+\begin{proof}
+	Again via basis and double-dual...
+\end{proof}
+Here again, we used the double dual, so one could ask why this situation 
+should differ from the foregoing one. But there is a difference: instead of 
+looking at $\Sym^{\bullet}(\lie{g}^{**})$ we can directly restrict to 
+$\Sym^{\bullet}(\lie{g})$. This is a setting in which closedness of the 
+Poisson bracket is automatically fulfilled, since we don't to to characterize 
+the object in $\Sym^{\bullet}(\lie{g}) \subseteq \Sym^{\bullet}
+(\lie{g}^{**})$. We can take the interesting linear Poisson structure on 
+$\Pol(\lie{g}^*)$ directly to be bilinear maps
+\begin{equation*}
+	\Sym^{\bullet}(\lie{g})
+	\times
+	\Sym^{\bullet}(\lie{g})
+	\longrightarrow
+	\Sym^{\bullet}(\lie{g})
+\end{equation*}
+which satisfy certain conditions on the degree. This is the way we want to go. 
+We generalize the finite-dimensional situation, where we have $\Pol(\lie{g}^*) 
+\cong \Sym^{\bullet}(\lie{g})$ in this sense, that we look directly at 
+$\Sym^{\bullet}(\lie{g})$ for infinite-dimensional Lie algebras, since those 
+(and their tensor products) are much better known and much easier to control.
 
 
 
