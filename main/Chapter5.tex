@@ -8,15 +8,349 @@
 
 Here should already be some stuff...
 
-\section{Some preliminaries}
+\section{Why locally convex?}
 \label{sec:chap5_Prelim}
 
+The first question one could ask is, why we want the observable algebra 
+to be a \textit{locally convex} one. There are a lot of different choices 
+and most of them would even make things simpler: we could think of 
+locally multiplicatively convex algebras, Banach algebras, $C^*$- or even 
+von Neumann algebras. All of them have much more structure than just 
+locally convex algebras. We would have an entire holomorphic calculus 
+within our algebra if assumed it to be locally m-convex or even a 
+continuous one if we wanted it to be $C^*$.
 
+
+The reason is, that all these nice features are simply not there, in 
+general. Quantum mechanics shows us, that the algebra made up by 
+$\hat{q}$ and $\hat{p}$ can not be locally m-convex.
+\begin{proposition}
+	\label{Prop:LCAna:QMnotLMC}
+	Let $\algebra{A}$ be a unital associative algebra which contains the 
+	quantum mechanical observables $\hat{q}$ and $\hat{p}$ and in which 
+	the canonical commutation relation
+	\begin{equation*}
+		[\hat{q}, \hat{p}]
+		=
+		i \hbar
+	\end{equation*}
+	is fulfilled. Then the only submultiplicative semi-norm on it is 
+	$p = 0$.
+\end{proposition}
+\begin{proof}
+	First, we need to show a little lemma:
+	\begin{lemma}
+		\label{Lemma:LCAna:NotLMCHelp}
+		In the given algebra, we have for $n \in \mathbb{N}$
+		\begin{equation}
+			\label{LCAna:NotLMCHelp}
+			\left( \ad_{\hat{q}} \right)^n (\hat{p}^n)
+			=
+			(i \hbar)^n n! \Unit.
+		\end{equation}
+	\end{lemma}
+	\begin{subproof}
+		To show it, we use the fact that for $a \in \algebra{A}$ the 
+		operator $\ad_a$ is a derivation, which is always true for a Lie 
+		algebra which comes from an associative algebra with the 
+		commutator, since for $a, b, c \in \algebra{A}$ we have
+		\begin{align*}
+			[a, bc]
+			& =
+			a b c - b c a
+			\\
+			& =
+			a b c - b a c + b a c - b c a
+			\\
+			& =
+			[a, b] c + b [a, c].
+		\end{align*}
+		Now for $n = 1$ Equation \eqref{Lemma:LCAna:NotLMCHelp} is 
+		certainly true. So let's look at the step $n \rightarrow n+1$.
+		We make use of the derivation property and have
+		\begin{align*}
+			\left( \ad_{\hat{q}} \right)^{n+1}
+			\left( \hat{p}^{n+1} \right)
+			& =
+			\left( \ad_{\hat{q}} \right)^{n}
+			\left(
+				i \hbar \hat{p}^n
+				+
+				\hat{p} 
+				\ad_{\hat{q}} \left( \hat{p}^n \right)
+			\right)
+			\\
+			& =
+			(i \hbar)^{n + 1} n!
+			+
+			\left( \ad_{\hat{q}} \right)^{n}
+			\left(
+				\hat{p}
+				\ad_{\hat{q}} \left( \hat{p}^n \right)
+			\right)
+			\\
+			& =
+			(i \hbar)^{n + 1} n!
+			+
+			\left( \ad_{\hat{q}} \right)^{n-1}
+			\left(
+				[\hat{q}, \hat{p}]
+				\ad_{\hat{q}} \left( \hat{p}^n \right)
+				+
+				\hat{p}
+				\left( \ad_{\hat{q}} \right)^2
+				\left( \hat{p}^n \right)
+			\right)
+			\\
+			& =
+			(i \hbar)^{n + 1} n!
+			+
+			i \hbar
+			\left( \ad_{\hat{q}} \right)^{n}
+			\left( \hat{p}^n \right)
+			+
+			\left( \ad_{\hat{q}} \right)^{n-1}
+			\left(
+				\hat{p}
+				\left( \ad_{\hat{q}} \right)^2
+				\left( \hat{p}^n \right)
+			\right)
+			\\
+			& =
+			2 (i \hbar)^{n+1} n!
+			+
+			\left( \ad_{\hat{q}} \right)^{n-1}
+			\left(
+				\hat{p}
+				\left( \ad_{\hat{q}} \right)^2
+				\left( \hat{p}^n \right)
+			\right)
+			\\
+			& \ot{($*$)}{=} 
+			\quad \vdots
+			\\
+			& =
+			n (i \hbar)^{n+1} n!
+			+
+			\ad_{\hat{q}}
+			\left(
+				\hat{p}
+				\left( \ad_{\hat{q}} \right)^n
+				\left( \hat{p}^n \right)
+			\right)
+			\\
+			& =
+			n (i \hbar)^{n+1} n!
+			+
+			i \hbar (i \hbar)^n n!
+			\\
+			& =
+			(i \hbar)^{n + 1} (n + 1)!.
+		\end{align*}
+		At ($*$) we actually used another statement which is to be 
+		proven by induction over $k$ and says
+		\begin{equation*}
+			\left( \ad_{\hat{q}} \right)^{n + 1}
+			\left( \hat{p}^{n + 1} \right)
+			=
+			k (i \hbar)^{n + 1} n!
+			+
+			\left( \ad_{\hat{q}} \right)^{n + 1 - k}
+			\left(
+				\hat{p}
+				\left( \ad_{\hat{q}} \right)^k
+				\left( \hat{p}^n \right)
+			\right).
+		\end{equation*}
+		Since this proof is analogous to the first lines of the 
+		computation before, we omit it here and the lemma is proven.
+	\end{subproof}	
+	Now we can go on with the actual proof. Let $\norm{\cdot}$ be a 
+	submultiplicative semi-norm. Then we see from Equation 
+	\eqref{Lemma:LCAna:NotLMCHelp} that
+	\begin{equation*}
+		\norm{
+			\left( \ad_{\hat{q}} \right)^n
+			(\hat{p}^n)
+		}
+		=
+		|\hbar|^n n! \norm{ \Unit }.
+	\end{equation*}
+	On the other hand, we have
+	\begin{align*}
+		\norm{
+			\left( \ad_{\hat{q}} \right)^n
+			(\hat{p}^n)
+		}
+		& =
+		\norm{
+			\hat{q}
+			\left( \ad_{\hat{q}} \right)^{n-1}
+			(\hat{p}^n)
+			-
+			\left( \ad_{\hat{q}} \right)^{n-1}
+			(\hat{p}^n)
+			\hat{q}
+		}
+		\\
+		& \leq
+		2 \norm{\hat{q}}
+		\norm{
+			\left( \ad_{\hat{q}} \right)^{n-1}
+			(\hat{p}^n)
+		}
+		\\
+		& \leq
+		\quad \vdots
+		\\
+		& \leq
+		2^n \norm{\hat{q}}^n
+		\norm{ \hat{p}^n }
+		\\
+		& \leq
+		2^n 
+		\norm{\hat{q}}^n
+		\norm{\hat{p}}^n
+	\end{align*}
+	So in the end we get
+	\begin{equation*}
+		|\hbar|^n n! \norm{ \Unit }
+		\leq
+		c^n
+	\end{equation*}
+	for some $c \in \mathbb{R}$. This cannot be fulfilled for all 
+	$n \in \mathbb{N}$ unless $\norm{ \Unit } = 0$. But then, by
+	submultiplicativity, the semi-norm itself must be equal to $0$.
+\end{proof}
+\begin{remark}
+	The so called Weyl algebra, which fulfils the properties of the 
+	foregoing proposition, can be constructed from a Poisson algebra with 
+	constant Poisson tensor. It is a fair question, why this 
+	restriction of not being locally m-convex should also be put on 
+	linear Poisson systems. On the other hand, there is no reason to 
+	expect that things become easier when we make the Poisson system more 
+	complex. Moreover, the Weyl algebra is actually nothing but a 
+	quotient of the Universal enveloping algebra of the so called 
+	Heisenberg algebra, a particular Lie algebra. So there is also no 
+	reason why the original algebra should have a ''better'' analytical 
+	structure than the quotient, since the ideal, which is divided out by 
+	this procedure, is closed.
+\end{remark}
 \section{Locally convex algebras}
 \label{sec:chap5_LCAlg}
 
 
 \subsection{Locally convex spaces and algebras}
+
+
+\subsection{A special class of algebras}
+
+For a locally convex Lie algebra $\lie{g}$, the Lie bracket is usually 
+assumed to be continuous. This means that for every continuous 
+semi-norms $p$ there exists another continuous semi-norms $q$ such that 
+for all $\xi, \eta \in \lie{g}$ one has
+\begin{equation*}
+	p([\xi, \eta])
+	\leq
+	q(\xi) q(\eta).
+\end{equation*}
+For our study of the Gutt star product, this will not be enough, since 
+we will have to estimate an arbitrary high number of nested brackets. We 
+will need an estimate which does not depend on the number of lie 
+brackets implied. But Lie algebras are just a special case and the 
+property makes sense for any kind of locally convex algebra. This 
+motivates the following definition.
+\begin{definition}
+	\label{def:AE}
+	Let $\algebra{A}$ be a Hausdorff, locally convex algebra (not 
+	necessarily 	associative) with $\cdot$ denoting the multiplication 
+	and 	$\{p_i\}_{i\in I}$ the set of all continuous semi-norms which 
+	defines the topology. For a given continuous semi-norm $p$ we call 
+	another continuous semi-norm $q$ an asymptotic estimate for $p$, if 
+	there exists an $m \in \mathbb{N}$ such that for all $n \geq m$ the 
+	following holds:
+	\begin{equation}
+		\label{Intro:AE}
+		p(x_1 \cdot \ldots \cdot x_n)
+		\leq
+		q(x_1) \ldots q(x_n)
+		\quad
+		\forall_{x_1, \ldots, x_n \in \algebra{A}}.
+	\end{equation}
+	We call a locally convex algebra an AE-algebra, if every continuous 
+	semi-norm has an asymptotic estimate.
+\end{definition}
+\begin{remark}
+	We can without restrictions define $m = 1$ in the upper definition, 
+	since this just means taking the maximum over a finite number of 
+	continuous semi-norms. Clearly the result will be a continuous semi-
+	norm again.
+\end{remark}
+\begin{remark}
+	\label{rem:AE2}
+	\mbox{}
+	\begin{remarklist}
+		\item
+		The term asymptotic estimate has, to the best of our knowledge, 
+		first been used by Czichowski at all in [REFERENCE]. They 
+		defined asymptotic estimates in the same way we did, but their 
+		notion of AE-algebra was different from ours: in their 
+		definition of an AE algebra, not just one but a series of 
+		asymptotic estimates has to exist which fulfils two more 
+		properties. This is not the case in our definition, which is, in 
+		general, weaker.
+		
+		\item
+		In \cite{}, Neeb and Gl\"ockner used a property to which they 
+		referred as $(*)$ for associative algebras. It was then used in 
+		\cite{} by ... and ..., who called it the $GN$-property. It is 
+		easy to see that it is equivalent to being AE. 
+		
+		\item
+		There are, of course, a lot of example for AE (Lie) algebras. 
+		All finite dimensional and Banach (Lie) algebras fulfil 
+		\eqref{Intro:AE}, just as locally m-convex (Lie) algebras do. 
+		The same is true for nilpotent locally convex Lie algebras, 
+		since here again one just has to take the maximum of a finite 
+		number of semi-norms. We are, however, not sure what is exactly 
+		implied by \eqref{Intro:AE}. Are there examples for associative 
+		or Lie algebras which are AE but not locally m-convex, for 
+		example?
+	\end{remarklist}
+\end{remark}
+It is at least possible to make some easy observations: an associative 
+AE-algebra $\algebra{A}$ will admit an entire holomorphic calculus: let 
+$f \colon \mathbb{C} \longrightarrow \mathbb{C}$ be an entire function 
+and $a_n$ such that $f(z) = \sum_n a_n z^n$. Then one has 
+$\forall_{x \in \algebra{A}}$
+\begin{equation*}
+	p(f(x))
+	=
+	p \left(
+		\sum\limits_{n=0}^{\infty}
+		a_n x^n
+	\right)
+	\leq
+	\sum\limits_{n=0}^{\infty}
+	|a_n| 
+	p \left( x^n \right)
+	\leq
+	\sum\limits_{n=0}^{\infty}
+	|a_n| q(x)^n
+	<
+	\infty
+\end{equation*}
+where $p$ is a continuous semi-norm and $q$ its asymptotic estimate. So 
+in some sense, at least in the associative case, AE-algebras are very 
+close to locally m-convex ones. If the algebra is even commutative, then 
+it seems like they are the same. In \cite{} ... claims that an 
+associative, commutative locally convex algebra admitting an entire 
+calculus must already be locally m-convex.
+
+For non-commutative algebras, the situation is different. It is a very 
+interesting (and non-trivial) question, how an example of an 
+associative, non locally m-convex but AE-algebra could look like.
+
 
 \subsection{The projective tensor product}
  - Inequality of the symmetric tensor product
