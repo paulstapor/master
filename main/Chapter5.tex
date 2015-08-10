@@ -9,7 +9,7 @@
 We have finished the algebraic part of this work, except for some little 
 lemmas concerning the Hopf theoretic chapter. Our next goal is setting up a 
 locally convex topology on the symmetric tensor algebra, in which the Gutt 
-star product will be continuous. At the beginning of this chapter, we will 
+star product will converge. At the beginning of this chapter, we will 
 first give a motivation why the setting of locally convex algebras is 
 convenient and necessary. In the second part, we will briefly recall the most 
 important things on locally convex algebras and introduce the topology which 
@@ -25,28 +25,28 @@ sense.
 \section{Why locally convex?}
 \label{sec:chap5_Prelim}
 
-The first question one could ask is, why we want the observable algebra 
+The first question one could ask is why we want the observable algebra 
 to be a \textit{locally convex} one. There are a lot of different choices 
 and most of them would even make things simpler: we could think of 
 locally multiplicatively convex algebras, Banach algebras, $C^*$- or even 
 von Neumann algebras. All of them have much more structure than just 
 locally convex algebras. We would have an entire holomorphic calculus 
-within our algebra if we assumed it to be locally m-convex or even a 
+within our algebra if we assumed it to be locally m-convex, or even a 
 continuous one if we wanted it to be $C^*$.
 
 
-The reason is, that all these nice features are simply not there, in 
-general. Quantum mechanics shows us, that the algebra made up by 
-$\hat{q}$ and $\hat{p}$ can not be locally m-convex.
+The reason is that, in general, all these nice features are simply not there. 
+Quantum mechanics tells us that the algebra made up by the space and momentum 
+operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 \begin{proposition}
 	\label{Prop:LCAna:QMnotLMC}
-	Let $\algebra{A}$ be a unital associative algebra which contains the 
+	Let $\mathcal{A}$ be a unital associative algebra which contains the 
 	quantum mechanical observables $\hat{q}$ and $\hat{p}$ and in which 
 	the canonical commutation relation
 	\begin{equation*}
 		[\hat{q}, \hat{p}]
 		=
-		i \hbar
+		i \hbar \Unit
 	\end{equation*}
 	is fulfilled. Then the only submultiplicative semi-norm on it is 
 	$p = 0$.
@@ -64,10 +64,10 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 		\end{equation}
 	\end{lemma}
 	\begin{subproof}
-		To show it, we use the fact that for $a \in \algebra{A}$ the 
+		To show it, we use the fact that for $a \in \mathcal{A}$ the 
 		operator $\ad_a$ is a derivation, which is always true for a Lie 
 		algebra which comes from an associative algebra with the 
-		commutator, since for $a, b, c \in \algebra{A}$ we have
+		commutator, since for $a, b, c \in \mathcal{A}$ we have
 		\begin{equation*}
 			[a, bc]
 			=
@@ -77,7 +77,7 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 			=
 			[a, b] c + b [a, c].
 		\end{equation*}
-		Now for $n = 1$ Equation \eqref{Lemma:LCAna:NotLMCHelp} is 
+		For $n = 1$, Equation \eqref{LCAna:NotLMCHelp} is 
 		certainly true. So let's look at the step $n \rightarrow n+1$.
 		We make use of the derivation property and have
 		\begin{align*}
@@ -159,7 +159,7 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 			& =
 			(i \hbar)^{n + 1} (n + 1)!.
 		\end{align*}
-		At ($*$) we actually used another statement which is to be 
+		At ($*$), we actually used another statement which is to be 
 		proven by induction over $k$ and says
 		\begin{equation*}
 			\left( \ad_{\hat{q}} \right)^{n + 1}
@@ -179,7 +179,7 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 	\end{subproof}	
 	Now we can go on with the actual proof. Let $\norm{\cdot}$ be a 
 	submultiplicative semi-norm. Then we see from Equation 
-	\eqref{Lemma:LCAna:NotLMCHelp} that
+	\eqref{LCAna:NotLMCHelp} that
 	\begin{equation*}
 		\norm{
 			\left( \ad_{\hat{q}} \right)^n
@@ -237,22 +237,22 @@ $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 \begin{remark}
 	The so called Weyl algebra, which fulfils the properties of the 
 	foregoing proposition, can be constructed from a Poisson algebra with 
-	constant Poisson tensor. On one hand, it is a fair question, why this 
-	restriction of not being locally m-convex should also be put on 
+	constant Poisson tensor. On one hand, it is a fair to ask the question, 
+	why this restriction of not being locally m-convex should also be put on 
 	linear Poisson systems. On the other hand, there is no reason to 
 	expect that things become easier when we make the Poisson system more 
 	complex. Moreover, the Weyl algebra is actually nothing but a 
-	quotient of the Universal enveloping algebra of the so called 
-	Heisenberg algebra, a particular Lie algebra. So there is also no 
-	reason why the original algebra should have a ''better'' analytical 
-	structure than the quotient, since the ideal, which is divided out by 
+	quotient of the universal enveloping algebra of the so called 
+	Heisenberg algebra, which is a particular Lie algebra. There is 
+	no reason why the original algebra should have a ''better'' analytical 
+	structure than its quotient, since the ideal, which is divided out by 
 	this procedure, is a closed one.
 \end{remark}
-There is a second good reason why we should avoid our topology to be locally 
+There's a second good reason why we should avoid our topology to be locally 
 m-convex. The topology we set up on $\Sym^{\bullet}(\lie{g})$ for a Lie 
 algebra $\lie{g}$ will also give a topology on $\mathcal{U}(\lie{g})$.
-In Proposition \ref{Prop:LCAna:NoExpTopology} we will show, that, under weak 
-(but for our purpose necessary) additional assumptions, there can be no 
+In Proposition \ref{Prop:LCAna:NoBetterTopology} ,we will show that, under 
+weak (but for our purpose necessary) additional assumptions, there can be no 
 topology on $\mathcal{U}(\lie{g})$ which allows an entire holomorphic 
 calculus. This underlines the results from Proposition 
 \ref{Prop:LCAna:QMnotLMC}, since locally m-convex algebras always have such a 
@@ -273,14 +273,13 @@ technology from locally convex analysis.
 \subsection{Locally convex spaces and algebras}
 
 Every locally convex algebra is of course also a locally convex space which 
-is, of course, a topological vector space. To make clear, what we talk about, 
-we first give a definition, which is taken from \cite{Rudin:Blue}.
+is, of course, a topological vector space. To make clear what we talk about, 
+we first give a definition which is taken from \cite{Rudin:Blue}.
 \begin{definition}[Topological vector space]
 	\label{Def:TVSpace}
 	Let $V$ be a vector space endowed with a topology $\tau$. Then we call 
-	$(V, \tau)$ (or for short just $V$, if there is no confusion about the 
-	topology possible) a topological vector space, if the two following things 
-	hold:
+	$(V, \tau)$ (or just $V$, if there is no confusion possible) 
+	a topological vector space, if the two following things  hold:
 	\begin{definitionlist}
 		\item
 		for every point in $x \in V$ the set $\{x\} $ is a closed and
@@ -291,8 +290,8 @@ we first give a definition, which is taken from \cite{Rudin:Blue}.
 	\end{definitionlist}
 \end{definition}
 Not all books require axiom $(i)$ for a topological vector space. It is, 
-however useful, since it assures that the topology in a topological vector 
-space is Hausdorff -- a feature, which we will always want to have. The proof 
+however, useful, since it assures that the topology in a topological vector 
+space is Hausdorff -- a feature which we will always want to have. The proof 
 for this is not difficult, but since we don't want to go too much into detail 
 here, we refer to \cite{Rudin:Blue} again, where it can be found as Theorem 
 1.12.
@@ -302,7 +301,7 @@ The most important class of topological vector spaces are, at least, but not
 only, from a physical point of view, locally convex ones. Almost all 
 interesting physical examples belong to this class: Finite-dimensional spaces, 
 inner product (or pre-Hilbert) spaces, Banach spaces, Fr\'echet spaces, 
-nuclear spaces and many more. Now, there are at least two equivalent 
+nuclear spaces and many more. There are at least two equivalent 
 definitions of what is a locally convex space. While the first is more 
 geometrical, the second is better suited for our analytic purpose.
 \begin{theorem}
@@ -315,13 +314,13 @@ geometrical, the second is better suited for our analytic purpose.
 		
 		\item
 		The topology on $V$ is generated by a separating family of semi-norms 
-		$\algebra{P}$.
+		$\mathcal{P}$.
 	\end{theoremlist}
 \end{theorem}
 \begin{proof}
 	This theorem is a very well-known result and can be found in standard 
-	literature, such as \cite{Rudin:Blue}, where it is divided into the 
-	Theorems 1.36 and 1.37.
+	literature, such as \cite{Rudin:Blue} again, where it is divided into 
+	two 	Theorems (namely 1.36 and 1.37).
 \end{proof}
 \begin{definition}[Locally convex space]
 	\label{Def:LCSpace}
@@ -333,21 +332,21 @@ The first property explains the term ''locally convex''.
 For our intention, the second property is more helpful, 
 since in this setting proving continuity just means putting estimates on 
 semi-norms. For this purpose, one often extends the set of semi-norms 
-$\algebra{P}$ to the set of all continuous semi-norms $\mathcal{P}$, which 
+$\mathcal{P}$ to the set of all continuous semi-norms $\algebra{P}$ which 
 contains all semi-norms that are compatible with the topology (e.g. sums, 
-multiples and maxima of (finitely many) semi-norms from $\algebra{P}$).
+multiples and maxima of (finitely many) semi-norms from $\mathcal{P}$).
+From here, we can start looking at locally convex algebras.
 
 
-The next step are locally convex algebras.
 \begin{definition}[Locally convex algebra]
 	\label{Def:LCAlgebra}
 	A locally convex algebra is a locally convex vector space with an 
-	additional algebra structure, which is continuous.
+	additional algebra structure which is continuous.
 \end{definition}
-More precisely, let $\algebra{A}$ be a locally convex algebra and 
-$\mathcal{P}$ the set of all continuous semi-norms, then for all $p \in 
-\mathcal{P}$ there exists a $q \in \mathcal{P}$ such that for all $x, y \in 
-\algebra{A}$ one has
+More precisely, let $\mathcal{A}$ be a locally convex algebra and 
+$\algebra{P}$ the set of all continuous semi-norms, then for all $p \in 
+\algebra{P}$ there exists a $q \in \algebra{P}$ such that for all $x, y \in 
+\mathcal{A}$ one has
 \begin{equation}
 	\label{LCAna:ProductContinuity}
 	p(a b)
@@ -366,29 +365,30 @@ For our study of the Gutt star product, the usual continuity estimate
 \eqref{LCAna:ProductContinuity} will not be enough, since 
 there will be an arbitrarily high number of nested brackets to control. 
 We will need an estimate which does not depend on the number of Lie 
-brackets implied. But Lie also algebras are just a special type of algebras  
-and the property we need makes sense for other types of locally convex 
-algebra, too. This motivates the following definition.
+brackets involved. Since Lie algebras are just one type of algebras, 
+we can define the property we need also for other locally convex algebras. 
 \begin{definition}[Asymptotic estimate algebra]
 	\label{Def:AE}
-	Let $\algebra{A}$ be a locally convex algebra (not necessarily 
-	associative) with $\cdot$ denoting the multiplication 
-	and $\algebra{P}$ the set of all continuous semi-norms. 
-	For a given $p \in \algebra{P}$ we call $q \in \algebra{P}$ an asymptotic 
-	estimate for $p$, if there exists an $m \in \mathbb{N}$ such that for all 
-	$n \geq m$ $q$ satisfies the following condition: $\forall_{x_1, \ldots, 
-	x_n \in \algebra{A}}$
+	Let $\mathcal{A}$ be a locally convex algebra (not necessarily 
+	associative) with the set of all continuous semi-norms $\algebra{P}$. 
+	For a given $p \in \algebra{P}$ we call $q \in \algebra{P}$ an 
+	asymptotic estimate for $p$, if there exists an $m \in \mathbb{N}$ 
+	such that for all $n \geq m$ we have
 	\begin{equation}
 		\label{LCAna:AE}
 		p(x_1 \cdot \ldots \cdot x_n)
 		\leq
-		q(x_1) \ldots q(x_n).
+		q(x_1) \ldots q(x_n)
+		\quad
+		\forall_{x_1, \ldots, x_n \in \algebra{A}}.
 	\end{equation}
-	We call a locally convex algebra an AE-algebra, if every continuous 
-	semi-norm admits an asymptotic estimate.
+	For non-associative algebras, we want this estimate to be fulfilled 
+	for all ways of setting brackets on the left hand side.
+	We call a locally convex algebra an AE algebra, if every $p \in 
+	\algebra{P}$ has an asymptotic estimate.
 \end{definition}
 \begin{remark}
-	\label{Rem:AE1}
+	\label{Rem:LCAna:AE1}
 	Without further restrictions, we can set $m = 1$ in the upper definition, 
 	since this just means taking the maximum over a finite number of 
 	continuous semi-norms. If $q$ satisfies the upper definition for some $m 
@@ -409,89 +409,1874 @@ algebra, too. This motivates the following definition.
 	Clearly, $q'$ will again be a continuous semi-norm and an asymptotic 
 	estimate for $p$.
 \end{remark}
-\begin{remark}
-	\label{Rem:AE2}
+\begin{remark}[The notion ''asymptotic estimate'']
+	\label{Rem:LCAna:AE2}
 	\mbox{}
 	\begin{remarklist}
 		\item
 		The term asymptotic estimate has, to the best of our knowledge, 
-		first been used by Czichowski at all in [REFERENCE]. They 
-		defined asymptotic estimates in the same way we did, but their 
-		notion of AE-algebra was different from ours: in their 
-		definition of an AE algebra, not just one but a series of 
-		asymptotic estimates has to exist which fulfils two more 
-		properties. This is not the case in our definition, which is, in 
-		general, weaker.
+		first been used by Boseck, Czichowski and Rudolph in 
+		\cite{BCR:AsympEsti:1981}. They defined asymptotic estimates in 
+		the same way we did, but their idea of an AE algebra was different 
+		from ours: for them, in an AE algebra every continuous semi-norm 
+		admits a series of asymptotic estimates. This series must fulfil two 
+		additional properties, which actually make the algebra locally 
+		m-convex. Clearly, our definition is weaker,	since it does not imply, 
+		a priori, the existence of an topologically 
+		equivalent set of submultiplicative semi-norms.
 		
 		\item
-		In \cite{}, Neeb and Gl\"ockner used a property to which they 
-		referred as $(*)$ for associative algebras. It was then used in 
-		\cite{} by ... and ..., who called it the $GN$-property. It is 
-		easy to see that it is equivalent to being AE. 
-		
-		\item
-		There are, of course, a lot of example for AE (Lie) algebras. 
-		All finite dimensional and Banach (Lie) algebras fulfil 
-		\eqref{LCAna:AE}, just as locally m-convex (Lie) algebras do. 
-		The same is true for nilpotent locally convex Lie algebras, 
-		since here again one just has to take the maximum of a finite 
-		number of semi-norms. It is, however, far from clear what is exactly 
-		implied by \eqref{Intro:AE}. Are there examples for associative 
-		algebras which are AE but not locally m-convex, for example? Are there 
-		Lie algebras which are truly and not nilpotent?
+		In \cite{GN:CIARegGroup:2012}, Gl\"ockner and Neeb used a property to 
+		which they referred as $(*)$ for associative algebras. It was then 
+		used in 	\cite{} by ... and ..., who called it the $GN$-property. It 
+		is easy to see that it is equivalent to our AE condition. 
 	\end{remarklist}
 \end{remark}
-It is at least possible to make some easy observations: an associative 
-AE-algebra $\algebra{A}$ will admit an entire holomorphic calculus: let 
-$f \colon \mathbb{C} \longrightarrow \mathbb{C}$ be an entire function 
-and $a_n$ such that $f(z) = \sum_n a_n z^n$. Then one has 
-$\forall_{x \in \algebra{A}}$
-\begin{equation*}
-	p(f(x))
-	=
-	p \left(
+
+There are, of course, a lot of examples of AE (Lie) algebras. 
+All finite dimensional and Banach (Lie) algebras fulfil 
+\eqref{LCAna:AE}, just as locally m-convex (Lie) algebras do. 
+The same is true for nilpotent locally convex Lie algebras, 
+since here again one just has to take the maximum of a finite 
+number of semi-norms, analogously to the procedure in Remark 
+\ref{Rem:LCAna:AE1}.
+
+		
+It is far from clear what is exactly implied by the AE property. 
+Are there examples for associative algebras which are AE but not locally 
+m-convex, for example? Are there Lie algebras which are truly AE and not 
+locally m-convex or nilpotent? We don't have an answer to this questions,
+but we can make some simple observations, which allow us to give an answer
+for special cases.
+\begin{proposition}[Entire calculus]
+	Let $\mathcal{A}$ be an associative AE algebra. Then it has an
+	entire holomorphic calculus.
+\end{proposition}
+\begin{proof}
+	The proof is the same as for locally m-convex algebras: let 
+	$f \colon \mathbb{C} \longrightarrow \mathbb{C}$ be an entire 
+	function with $f(z) = \sum_n a_n z^n$ and $p$
+	a continuous semi-norm with an asymptotic estimate $q$.
+	Then one has $\forall_{x \in \mathcal{A}}$
+	\begin{equation*}
+		p(f(x))
+		=
+		p \left(
+			\sum\limits_{n=0}^{\infty}
+			a_n x^n
+		\right)
+		\leq
 		\sum\limits_{n=0}^{\infty}
-		a_n x^n
-	\right)
-	\leq
-	\sum\limits_{n=0}^{\infty}
-	|a_n| 
-	p \left( x^n \right)
-	\leq
-	\sum\limits_{n=0}^{\infty}
-	|a_n| q(x)^n
-	<
-	\infty
-\end{equation*}
-where $p \in \algebra{P}$ and $q$ its asymptotic estimate. So in some sense, 
-at least in the associative case, AE algebras are very close to locally 
-m-convex ones. If the algebra is even commutative and Fr\'echet, then the two 
-notions coincide: in \cite{MRZ:1962:EntireCalculus} Mitiagin, Rolewicz and 
-Zelazko proved that a commutative Fr\'echet algebra admitting an entire 
-calculus is in fact locally m-convex. For non-commutative algebras, the 
-situation is different. It is a very interesting (and non-trivial) question, 
-if a non locally m-convex but AE algebra exists at all and if yes, how it 
-could look like.
+		|a_n| 
+		p \left( x^n \right)
+		\leq
+		\sum\limits_{n=0}^{\infty}
+		|a_n| q(x)^n
+		<
+		\infty.
+	\end{equation*}
+\end{proof}
+\begin{remark}[Entire Calculus, AE and LMC algebras]
+	The fact that AE algebras have an entire calculus makes them very similar 
+	to locally m-convex ones.
+	Now there is something we can say about associative algebras which have an 
+	entire calculus: if such an algebra is additionally commutative and 
+	Fr\'echet, then must be even locally m-convex. This statement was proved 
+	in \cite{MRZ:EntireCalculus:1962} by Mitiagin, Rolewicz and 
+	Zelazko. Oudadess and El kinani extended this result to commutative, 
+	associative algebras, in which the Baire category theorem holds.
+	For non-commutative algebras, the situation is different. There are 
+	associative ''Baire algebras'' having an entire calculus, which are not 
+	locally m-convex. Zelazko gave an example for such an algebra in 
+	\cite{Zelazko:EntButNotLMC:1998}. Unfortunately, his example is also not 
+	AE. It seems to be is an interesting (and non-trivial) question, 
+	if a non locally m-convex but AE algebra exists at all and if yes, 
+	how an example could look like.
+\end{remark}
+
 
 
 \subsection{The projective tensor product}
- - Inequality of the symmetric tensor product
+
+We want to set up a topology on $\Sym^{\bullet}(\lie{g})$. Therefore, 
+we will first construct a topology on the tensor algebra $\Tensor^{\bullet}
+(\lie{g})$. As all the following constructions in this section don't use any 
+algebra structure, we will do them on a locally convex vector space $V$ where 
+$\algebra{P}$ is the set of continuous semi-norms. Then we can use the 
+projective tensor product $\tensor[\pi]$ in order to get a locally convex 
+topology on each tensor power $V^{\tensor[\pi] n}$. The precise construction 
+can be found in standard textbooks on locally convex analysis like 
+\cite{Jarchow:LCSpaces} or in the lecture notes \cite{Waldmann:LectureAlgDyn}. 
+Recall that for $p_1, \ldots, p_n \in \algebra{P}$ we have a continuous 
+semi-norm on $V^{\tensor[\pi] n}$ via
+\begin{equation*}
+	(p_1 \tensor[\pi] \ldots \tensor[\pi] p_n)(x)
+	=
+	\inf
+	\left\{
+	\left.
+		\sum_i
+		p_1 \left( x_i^{(1)} \right)
+		\ldots
+		p_n \left( x_i^{(n)} \right)
+	\right|
+		x
+		=
+		\sum_i
+		x_i^{(1)}
+		\tensor \ldots \tensor
+		x_i^{(n)}
+	\right\}.
+\end{equation*}
+On factorizing tensors, we moreover have the property
+\begin{equation}
+	\label{LCAna:FactorTensor}
+	(p_1 \tensor[\pi] \ldots \tensor[\pi] p_n)
+	(x_1 \tensor[\pi] \ldots \tensor[\pi] x_n)
+	=
+	p_1(x_1) \ldots p_n(x_n)
+\end{equation}
+which will be extremely useful in the following and which can be proven by
+the Hahn-Banach theorem. We also have 
+\begin{equation*}
+	(p_1 \tensor \ldots \tensor p_n) 
+	\tensor 
+	(q_1 \tensor \ldots \tensor q_m) 
+	= 
+	p_1 \tensor \ldots \tensor p_n \tensor q_1 \tensor \ldots \tensor q_m.
+\end{equation*}
+For a given $p \in \algebra{P}$ we will denote $p^n = p^{\tensor[\pi] n}$ and 
+$p^0$ is just the absolute value on the field $\mathbb{K}$. The $\pi$-topology 
+on $V^{\tensor[\pi] n}$ is set up by all the projective tensor products of 
+continuous semi-norms, or, equivalently, by all the $p^n$ for $p \in 
+\algebra{P}$.
+
+The projective tensor product has a very nice feature: if we want to show a 
+(continuity) estimate on the tensor algebra, it is enough to do it on 
+factorizing tensors. We will use this very often and just refer to it as the 
+''infimum argument''.
+\begin{lemma}[Infimum argument for the projective tensor product]
+	\label{Lemma:LCAna:InfimumArgument}
+	Let $V_1, \ldots, V_n, W$ be locally convex vector spaces and 
+	\begin{equation*}
+		\phi \colon
+		V_1 \times \ldots \times V_n
+		\longrightarrow
+		W
+	\end{equation*}
+	a $n$-linear map, from which we get the linear map 
+	$\Phi \colon V_1 \tensor[\pi] \ldots \tensor[\pi] V_n \longrightarrow W$.
+	Then $\Phi$ is continuous if and only if this is true for $\phi$ and if 
+	for $p, q \in \algebra{P}$ the estimate
+	\begin{equation*}
+		p \left(
+			\Phi (x_1 \tensor \ldots \tensor x_n)
+		\right)
+		\leq
+		q(v_1) \ldots q(v_n)
+	\end{equation*}
+	is fulfilled for all $x_i \in V_i, i=1, \ldots, n$, then we have
+	\begin{equation*}
+		p \left(
+			\Phi (x)
+		\right)
+		\leq
+		q(x)
+	\end{equation*}
+	for all $x \in V_1 \tensor \ldots \tensor V_n$.
+\end{lemma}
+\begin{proof}
+	If $\Phi$ is continuous, the continuity of $\phi$ is clear. 
+	The other implication is more interesting.
+	Continuity for $\phi$ means, that for every continuous semi-norm $q$ on 
+	$W$ we have continuous semi-norms $p_i$ on $V_i$ with $i = 1, \ldots, n$ 
+	such that for all $x^{(i)} \in V_i$ the estimate
+	\begin{equation}
+		\label{LCAna:ContiFactorTensors}
+		q \left(
+			\phi\left( x^{(1)}, \ldots, x^{(n)} \right)
+		\right)
+		\leq
+		p_1 \left( x^{(1)} \right) 
+		\ldots 
+		p_n \left( x^{(n)} \right)
+	\end{equation}
+	holds. Let $x \in V_1 \tensor[\pi] \ldots \tensor[\pi] V_n$, then it 
+	has a representation in terms of factorizing tensors like
+	\begin{equation*}
+		x
+		=
+		\sum_j
+		x_j^{(1)} 
+		\tensor[\pi] \ldots \tensor[\pi] 
+		x_j^{(n)}.
+	\end{equation*}
+	We thus have
+	\begin{align*}
+		q( \Phi(x) )
+		& =
+		q \left(
+			\sum_j
+			\Phi \left(
+				x_j^{(1)} 
+				\tensor[\pi] \ldots \tensor[\pi] 
+				x_j^{(n)}
+			\right)
+		\right)
+		\\
+		& \leq
+		\sum_j
+		q \left(
+			\phi \left(
+				x_j^{(1)} 
+				, \ldots ,
+				x_j^{(n)}
+			\right)
+		\right)
+		\\
+		& \leq
+		\sum_j
+		p_1 \left( x_j^{(1)} \right) 
+		\ldots 
+		p_n \left( x_j^{(n)} \right).
+	\end{align*}
+	Now we take the infimum over all possibilities of writing $x$ as a sum of 
+	factorizing tensors on both sides. While nothing will happen on the left 
+	hand side, on the right hand side we will find $\left( p_1 \tensor[\pi] 
+	\ldots \tensor[\pi] p_n \right)(x)$. This gives exactly the estimate we 
+	wanted.
+\end{proof}
+
+
+Most of the time, we will deal with the symmetric tensor algebra. Therefore, 
+we want to recall some basic facts about $\Sym^n(V)$, when it inherits the 
+$\pi$-topology from the $V^{\tensor[\pi] n}$. We will call it 
+$\Sym_{\pi}^n(V)$ when we endow it with this topology.
+\begin{lemma}
+	\label{Lemma:LCAna:ProjTensSymm}
+	Let $V$ be a locally convex vector space, $p$ a continuous semi-norm 
+	and $n,m \in \mathbb{N}$.
+	\begin{lemmalist}
+		\item
+		The symmetrization map
+		\begin{equation*}
+			\Symmetrizer_n
+			\colon
+			V^{\tensor_{\pi} n}
+			\longrightarrow
+			V^{\tensor_{\pi} n}
+			, \quad
+			(x_1 \tensor \ldots \tensor x_n)
+			\longmapsto
+			\frac{1}{n!}
+			\sum\limits_{\sigma \in S_n}
+			x_{\sigma(1)}
+			\tensor \ldots \tensor
+			x_{\sigma(n)}
+		\end{equation*}
+		is continuous and we have for all $x \in V^{\tensor_{\pi} n}$ 
+		the estimate
+		\begin{equation}
+			\label{LCAna:SymmProdCont}
+			p^n(\Symmetrizer_n(x))
+			\leq
+			p^n(x).
+		\end{equation}
+		
+		\item
+		Each symmetric tensor power $\Sym_{\pi}^n(V) \subseteq 
+		V^{\tensor_{\pi} n}$ is a closed subspace.
+		
+		\item
+		For $x \in \Sym_{\pi}^n(V)$ and $y \in \Sym_{\pi}^m(V)$ we have
+		\begin{equation*}
+			p^{n + m}(xy)
+			\leq
+			p^n(x) p^m(y).
+		\end{equation*}
+	\end{lemmalist}
+\end{lemma}
+\begin{proof}
+	The first part is very easy to see and uses most of the tools which are 
+	typical for the projective tensor product. We have the estimate for 
+	factorizing tensors $x_1 \tensor \ldots \tensor x_n$
+	\begin{align*}
+		p^n \left(
+			\Symmetrizer \left(
+				x_1 \tensor \ldots \tensor x_n
+			\right)
+		\right)
+		& =
+		p^n \left(
+			\frac{1}{n!}
+			\sum	\limits_{\sigma \in S_n}
+			x_{\sigma(1)} 
+			\tensor \ldots \tensor 
+			x_{\sigma(n)}
+		\right)
+		\\
+		& \leq
+		\frac{1}{n!}
+		\sum\limits_{\sigma \in S_n}
+		p^n \left(
+			x_{\sigma(1)} 
+			\tensor \ldots \tensor 
+			x_{\sigma(n)}
+		\right)
+		\\
+		& =
+		\frac{1}{n!}
+		\sum\limits_{\sigma \in S_n}
+		p \left( x_{\sigma(1)} \right)
+		\ldots
+		p \left( x_{\sigma(n)} \right)
+		\\
+		& =
+		p \left( x_1 \right)
+		\ldots
+		p \left( x_n \right)
+		\\
+		& =
+		p^n \left(
+			x_1 \tensor \ldots \tensor x_n
+		\right).
+	\end{align*}
+	Then we use the infimum argument from Lemma 
+	\ref{Lemma:LCAna:InfimumArgument} and we are done.
+	The second part is also easy since the kernel of a continuous map is
+	always a closed subspace of the initial space and we have
+	\begin{equation*}
+		\Sym_{\pi}^n 
+		= 
+		\ker (\id - \Symmetrizer_n).
+	\end{equation*}
+	The third part is a consequence from the first and also immediate.
+\end{proof}
+One could maybe think that the inequality in the first part of this lemma is 
+just an artefact which is due to the infimum argument and should actually be 
+an equality, if one looked to it more closely. It is very interesting to see, 
+that this is \textit{not} the case, since it may happen that this 
+inequality is strict. The following example illustrates this.
+\begin{example}
+	We take $V = \mathbb{R}^2$ with the standard basis $e_1,	e_2$ 
+	and $V$ is endowed with the maximum norm. Now look at 
+	$e_1 \tensor e_2$, which has the norm
+	\begin{equation*}
+		\norm{
+			e_1 \tensor e_2
+		}
+		= 
+		\norm{e_1}
+		\tensor
+		\norm{e_2}
+		=
+		1
+	\end{equation*}
+	We now evaluate the symmetrization map on $V \tensor[\pi] V$:
+	\begin{equation*}
+		\Symmetrizer \left(
+			e_1 \tensor e_2
+		\right)
+		=
+		\frac{1}{2}
+		\left(
+			e_1 \tensor e_2
+			+
+			e_2 \tensor e_1
+		\right).
+	\end{equation*}
+	Our aim is to show, that the projective tensor product of the norm of this 
+	symmetrized vector is not $1$. Therefore we need to find another way of 
+	writing it which has a norm of less than $1$. Observe that
+	\begin{equation*}
+		\frac{1}{2}
+		(e_1 \tensor e_2 + e_2 \tensor e_1)
+		=
+		\frac{1}{4}
+		(
+			(e_1 + e_2) \tensor (e_1 + e_2)
+			+
+			(-e_1 + e_2) \tensor (e_1 - e_2)
+		)
+	\end{equation*}
+	and we have
+	\begin{align*}
+		& 
+		\frac{1}{4}
+		\norm{
+			(e_1 + e_2) \tensor (e_1 + e_2)
+			+
+			(-e_1 + e_2) \tensor (e_1 - e_2)
+		}
+		\\
+		& \leq
+		\frac{1}{4}
+		(
+			\norm{ (e_1 + e_2) \tensor (e_1 + e_2) }
+			+
+			\norm{ (-e_1 + e_2) \tensor (e_1 - e_2) }
+		)
+		\\
+		& =
+		\frac{1}{4}
+		(1 + 1)
+		\\
+		& =
+		\frac{1}{2}.
+	\end{align*}
+	So we have $\norm{\Symmetrizer(e_1 \tensor e_2)} \leq \frac{1}{2} < 1$.
+\end{example}
+
+
+\subsection{A topology for the Gutt star product}
+
+The next step is to set up a topology on $\Tensor^{\bullet}(V)$ which 
+has the $\pi$-topology on each component. A priori, there are a lot of such 
+topologies and at least two natural ones: the direct sum topology which is 
+very fine and has a very small closure, and the cartesian product topology 
+which is very coarse and therefore has a very big closure. We need something 
+in between, which we can adjust in a convenient way.
+\begin{definition}[R-topology]
+	Let $p$ be an continuous semi-norm on a locally convex vector space 
+	$V$ and $R \in \mathbb{R}$. We define the semi-norm
+	\begin{equation*}
+		p_R 
+		= 
+		\sum\limits_{n=0}^{\infty}
+		n!^R p^n
+	\end{equation*}
+	on the Tensor algebra $\Tensor^{\bullet}(V)$. We write for 
+	the tensor or the symmetric algebra endowed with all such semi-norms  
+	$\Tensor_R^{\bullet}(V)$ or $\Sym_R^{\bullet}(V)$ respectively.
+\end{definition}
+We now want to collect the most important results on the locally convex 
+algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left( 
+\Sym_R^{\bullet}(V), \vee \right)$. 
+\begin{lemma}
+    \label{Lemma:LCAna:Projections}%
+    Let $R' \geq R \geq 0$ and $q, p$ are continuous semi-norms on $V$.
+    \begin{lemmalist}
+	  \item \label{Item:EstimateForSeminorms}
+	    	If $q \geq p$ then $q_R \geq p_R$ and $p_{R'} \geq p_R$.
+	  \item \label{Item:TensorProductContinuous}
+	    	The tensor product is continuous and satisfies the following 
+	    	inequality:
+	    	 \begin{equation*}
+	    		p_R(x \tensor y)
+	    		\leq
+	    		\left( 2^R p \right)_R(x)
+	    		\left( 2^R p \right)_R(y)
+	    	\end{equation*}
+	  \item \label{Item:PitopologyOnComponents}
+	    	For all $n \in \mathbb{N}$ the induced topology on 
+	    	$\Tensor^n(V) \subset \Tensor_R^{\bullet}(V)$ and on 
+	    	$\Sym^n(V) \subset \Sym_R^{\bullet}(V)$ is the $\pi$-
+	    	topology.
+	  \item \label{Item:ComponentProjectionsContinuous}
+	    	For all $n \in \mathbb{N}$ the projection and the inclusion 
+	    	maps
+	        \begin{equation*}
+	        	\begin{array}{ccccc}
+		    	    \Tensor_R^{\bullet}(V)
+		        	&
+	    	   		\longrightarrow
+	    	    		&
+	    	    		V^{\tensor_{\pi} n}
+	    	    		&
+	    	    		\longrightarrow
+	    		    &
+	    		    \Tensor^{\bullet}(V)
+	    		    \\
+		        \Sym_R^{\bullet}(V)
+		        &
+	    	        \longrightarrow
+	    	    		&
+	    	    		\Sym_{\pi}^n(V)
+	    	    		&
+	    	    		\longrightarrow
+	    		    &
+	    		    \Sym_R^{\bullet}(V)
+	        	\end{array}
+	        \end{equation*}
+	        are continuous.
+	  \item \label{Item:CompletionExplicitly}
+    		The completions $\widehat{\Tensor}_R^{\bullet}(V)$ of 
+    		$\Tensor_R^{\bullet}(V)$ and $\widehat{\Sym}_R^{\bullet}(V)$ 
+    		of $\Sym_R^{\bullet}(V)$ can be described explicitly as
+    		\begin{equation*}
+	    		\begin{array}{ccccc}
+		    		\widehat{\Tensor}_R^{\bullet}(V)
+		    		&
+		    		=
+		    		&
+		    		\left\{
+		    		\left.
+		    			x
+		    			=
+		    			\sum\limits_{n=0}^{\infty}
+		    			x_n
+		    		\ \right| \ 
+		    			p_R(x)
+		    			<
+		    			\infty
+		    			, \text{ for all } p
+		    		\right\}
+		    		&
+		    		\subseteq
+		    		&
+		    		\prod\limits_{n=0}^{\infty}
+		    		V^{\hat{\tensor}_{\pi} n}
+		    		\\
+		    		\widehat{\Sym}_R^{\bullet}(V)
+		    		&
+		    		=
+		    		&
+		    		\left\{
+		    		\left.
+		    			x
+		    			=
+		    			\sum\limits_{n=0}^{\infty}
+		    			x_n
+		    		\ \right| \ 
+		    			p_R(x)
+		    			<
+		    			\infty
+		    			, \text{ for all } p
+		    		\right\}
+		    		&
+		    		\subseteq
+	    			&
+	    			\prod\limits_{n=0}^{\infty}
+	    			\Sym_{\hat{\tensor}_{\pi}}^n
+	    		\end{array}
+    		\end{equation*}
+    		with $p$ running through all continuous semi-norms on $V$ and
+    		the $p_R$ are extended to the Cartesian product allowing the 
+	    	value $+ \infty$.
+      \item \label{Item:StrictlyFinerForBiggerR}
+    		If $R' > R$, then the topology on $\Tensor_{R'}^{\bullet}(V)$ 
+    		is strictly finer than the one on $\Tensor_R^{\bullet}(V)$, 
+    		the same holds for $\Sym_{R'}^{\bullet}(V)$ and 
+    		$\Sym_R^{\bullet}(V)$. Therefore the completions get smaller 
+    		for bigger $R$.
+      \item \label{Item:ComponentInclusionsContinuous}
+    		The inclusion maps $\widehat{\Tensor}_{R'}^{\bullet}(V) 
+    		\longrightarrow \widehat{\Tensor}_R^{\bullet}(V)$ and 
+    		$\widehat{\Sym}_{R'}^{\bullet}(\lie{g}) \longrightarrow 
+    		\widehat{\Sym}_R^{\bullet}(\lie{g})$ are continuous.
+	  \item \label{Item:LmcJustForZero}
+    		The topology on $\Tensor_R^{\bullet}(V)$ with the tensor 
+    		product and on $\Sym_R^{\bullet}(V)$ with the symmetric 
+    		product is locally m-convex if and only if $R = 0$.
+      \item \label{Item:FirstCountable}
+    		The algebras $\Tensor_R^{\bullet}(V)$ and $\Sym_R^{\bullet}(V)$
+    		are first countable if and only if this is true for $V$.
+    \end{lemmalist}
+\end{lemma}
+\begin{proof}
+	The first part is clear on factorizing tensors and extends to the whole 
+	tensor algebra via the infimum argument. For part $(ii)$, take two 
+	factorizing tensors
+	\begin{equation*}
+		x
+		=
+		x^{(1)} \tensor \ldots \tensor x^{(n)}
+		\quad \text{ and }
+		y
+		=
+		y^{(1)} \tensor \ldots \tensor y^{(m)}
+	\end{equation*}
+	and compute:
+	\begin{align*}
+		p_R \left(
+			x \tensor y
+		\right)
+		& =
+		(n + m)!^R
+		p^{n + m} \left(
+			x^{(1)} \tensor \ldots x^{(n)}
+			\tensor
+			y^{(1)} \tensor \ldots y^{(m)}
+		\right)
+		\\
+		& =
+		(n + m)!^R
+		p^n \left(
+			x^{(1)} \tensor \ldots x^{(n)}
+		\right)
+		p^m \left(
+			y^{(1)} \tensor \ldots y^{(m)}
+		\right)
+		\\
+		& =
+		\binom{n + m}{n}^R
+		n!^R m!^R
+		p^n \left(
+			x^{(1)} \tensor \ldots x^{(n)}
+		\right)
+		p^m \left(
+			y^{(1)} \tensor \ldots y^{(m)}
+		\right)
+		\\
+		& \leq
+		2^{(n + m) R}
+		p_R \left( x^{(1)} \tensor \ldots x^{(n)} \right)
+		p_R \left( y^{(1)} \tensor \ldots y^{(m)} \right)
+		\\
+		& =
+		\left( 2^R p\right)_R 
+		\left( x^{(1)} \tensor \ldots x^{(n)} \right)
+		\left( 2^R p \right)_R 
+		\left( y^{(1)} \tensor \ldots y^{(m)} \right).
+	\end{align*}
+	The parts $(iii)$ and $(iv)$ are clear from the construction of the $R$-
+	topology. In part $(v)$ we used the completion of the tensor product 
+	$\hat{\tensor}$, the statement itself is clear and implies $(vi)$ 
+	directly, since we have really more elements in the completion for $R < 
+	R'$, like the series over $x^{n} \frac{1}{n!^t}$ for $t \in (R, R')$ and 
+	$0 \neq x \in V$. Statement $(vii)$ follows from the first. For $(viii)$, 
+	it is easy to see that $\Tensor_0^{\bullet}(V)$ and $\Sym_0^{\bullet}(V)$ 
+	are locally m-convex. For every $R > 0$ we have
+	\begin{equation*}
+		p_R \left(x^n \right)
+		=
+		n!^R
+		p(x)^n
+	\end{equation*}
+	for all $n \in \mathbb{N}$ and all $x \in V$. If we had a 
+	submultiplicative semi-norm $\norm{\cdot}$ from an equivalent topology, 
+	then we would have some $x \in V$, and a continuous semi-norm $p$ with 
+	$p(x) \neq 0$ such that $p_R \leq \norm{\cdot}$, and hence
+	\begin{equation*}
+		n!^R p(x)^R
+		\leq
+		\norm{x^n}
+		\leq
+		\norm{x}^n.
+	\end{equation*}
+	Since this is valid for all $n \in \mathbb{N}$, we get a contradiction.
+	For the last part, the tensor algebras cannot be first countable if $V$ 
+	itself isn't. On the other hand, if $V$ has a finite base of the topology, 
+	then $\Tensor_R^{\bullet}(V)$ and $\Sym_R^{\bullet}(V)$ are just a 
+	countable multiple of $V$ and stay therefore first countable.
+\end{proof}
+The projective tensor product obviously keeps a lot of important and 
+strong properties of the original vector space $V$. But Proposition 
+\ref{Prop:LCAna:Projections} still leaves some important things. 
+We will not make use of them in the following, but it is worth naming 
+them for completeness. To do this in full generality, we 
+need one more definition, which will be also very important in chapter 5.
+\begin{definition}\label{ProjectiveLimit}
+	For a locally convex vector space $V$ and $R \geq 0$ we set
+	\begin{equation*}
+		\Sym_{R^-}^{\bullet}(V)
+		=
+		\projlim\limits_{\epsilon \longrightarrow 0}
+		\Sym_{1 - \epsilon}^{\bullet}(V)
+	\end{equation*}
+	and call its completion $\widehat{\Sym}_{R^-}^{\bullet}(V)$.
+\end{definition}
+Now we can state two more propositions. Since we won't use them, we omit the 
+proofs here. They can be found in \cite{Waldmann:nuclear:2014}.
+\begin{proposition}
+	\label{Prop:LCAna:Bases}
+	Let $R \geq 0$ and $V$ a locally convex vector space.
+	If $\{e_i\}_{i \in I}$ is an absolute Schauder basis of $V$ with 
+	coefficient functionals $\{\varphi^i\}_{i \in I}$, i.e. for every 
+	$x \in V$ we have
+	\begin{equation*}
+		x
+		=
+		\sum\limits_{i \in I}
+		\varphi^i(x) e_i
+	\end{equation*}
+	such that for every $p \in \algebra{P}$ there is a 
+	$q \in \algebra{P}$ such that
+	\begin{equation}
+		\label{LCAna:AbsoluteSchauder}
+		\sum\limits_{i \in I}
+		|\varphi^i(x)|
+		p(e_i)
+		\leq
+		q(x),
+	\end{equation}
+	then the set 
+	$\{e_{i_1} \tensor \ldots \tensor e_{i_n}\}_{i_1, \ldots, i_n \in I}$ 
+	defines an absolute Schauder basis of $\Tensor_R^{\bullet}(V)$ 
+	together with the linear functionals $\{\varphi^{i_1} \tensor \ldots 
+	\tensor 	\varphi^{i_n}\}_{i_1, \ldots, i_n \in I}$ which satisfy
+	\begin{equation*}
+		\sum\limits_{n=0}^{\infty}
+		\sum\limits_{i_1, \ldots, i_n \in I}
+		\left| 
+			\left(
+				\varphi^{i_1} \tensor \ldots \tensor \varphi^{i_n}
+			\right)
+			(x)
+		\right|
+		p_R \left(
+			e_{i_1} \tensor \ldots \tensor e_{i_n}
+		\right)
+		\leq
+		q_R (x)
+	\end{equation*}
+	for every $x \in \Tensor_R^{\bullet}(V)$ whenever $p$ and $q$ satisfy 
+	\eqref{LCAna:AbsoluteSchauder}. The same statement is true for 
+	$\Sym_R^{\bullet}(V)$ and for $\Sym_{R^-}^{\bullet}(V)$ (for $R > 0$) when 
+	we choose a maximal linearly independent subset out of the set $\{e_{i_1} 
+	\ldots e_{i_n}\}_{i_1, \ldots, i_n \in I}$.
+\end{proposition}
+\begin{proposition}
+	\label{LCAna:Nuclearity}
+	Let $V$ be a locally convex space. For $R \geq 0$ the following statements 
+	are equivalent:
+	\begin{propositionlist}
+	  \item
+		$V$ is nuclear.
+	  \item
+	  	$\Tensor_R^{\bullet}(V)$ is nuclear.
+	  \item
+	  	$\Sym_R^{\bullet}(V)$ is nuclear.	  	
+	\end{propositionlist}
+	If moreover $R > 0$, then the following statements are equivalent:
+	\begin{propositionlist}
+	  \item
+		$V$ is strongly nuclear.
+	  \item
+	  	$\Tensor_R^{\bullet}(V)$ is strongly nuclear.
+	  \item
+	  	$\Sym_R^{\bullet}(V)$ is strongly nuclear.
+	\end{propositionlist}
+\end{proposition}
 
 
 
-\section{A topology for the Gutt star product}
+
+\section{Continuity results for the Gutt star product}
 \label{sec:chap5_TopologyStar}
 
+From now on, we start with an AE Lie algebra $\lie{g}$ rather than with a 
+general locally convex space. We have all the tools by the hand to show the 
+continuity of the Gutt star product. We can do it either via the bigger 
+formula \eqref{Formulas:2MonomialsFormula2} for two monomials or via the 
+smaller one \eqref{Formulas:LinearMonomial2} for a monomial with a 
+vector and iterate it. The results are very similar, but a bit better for the 
+first approach. Nevertheless, both approaches give strong results, and 
+depending on the precise situation, each one has its advantages. This is why 
+we want to give both proofs here.
+
+There will be a very general way how most of the proofs will work, and which 
+tools will be used in the following. If we want to show the continuity of a 
+map $f \colon \Sym_R^{\bullet}(\lie{g}) \longrightarrow 
+\Sym_R^{\bullet}(\lie{g})$, we will proceed most of the time like this:
+\begin{enumerate}
+	\item \label{Item:LCAna:Step1}
+	First, we extend a map to the whole tensor algebra by putting the 
+	symmetrizer in front: $f = f \circ \Symmetrizer$. This doesn't lead 
+	to problems since the symmetrization does not affect symmetric tensors.
+
+	\item \label{Item:LCAna:Step2}
+	Then, we start with an estimate, which we do only on 
+	factorizing tensors in order to use the infimum argument 
+	(Lemma \ref{Lemma:LCAna:InfimumArgument}).
+
+	\item \label{Item:LCAna:Step3}
+	During the estimation process, we find symmetric products of Lie 
+	brackets. Those will be split up by the continuity of the symmetric 
+	product \eqref{LCAna:SymmProdCont} from Lemma 
+	\ref{Lemma:LCAna:ProjTensSymm} the AE property \eqref{LCAna:AE}.
+	
+	\item \label{Item:LCAna:Step4}
+	Finally, we rearrange the split up semi-norms to the semi-norm of a 
+	factorizing tensor by \eqref{LCAna:FactorTensor}.
+\end{enumerate}
+
+
 \subsection{Continuity of the product}
- - a counter-example
- 
+In the first proof, we want to approach the estimate via the formula
+\begin{equation*}
+    \xi_1 \cdots \xi_k \star_{zG} \eta_1 \cdots \eta_{\ell}
+    =
+    \sum\limits_{n=0}^{k + \ell -1}
+    z^n
+    C_n (\xi_1 \cdots \xi_k, \eta_1 \cdots \eta_{\ell})
+\end{equation*}
+Since this comes from polarizing the formula
+\begin{equation}
+    \label{LCAna:2MonomialsSumCn}
+    \xi^k \star_{zG} \eta^{\ell}
+    =
+    \sum\limits_{n=0}^{k + \ell -1}
+    z^n
+    C_n \left( \xi^k, \eta^{\ell} \right),
+\end{equation}
+we will just give an explicit proof for the latter one. One gets the
+estimate for the first one easily in the same way, since in the end,
+all Lie brackets are broken up in step $(iii)$. One will get 
+sums over permutations weighted with the inverse of their quantity and, as 
+their semi-norms are just numbers which commute, one ends up with the same 
+estimate as for \eqref{LCAna:2MonomialsSumCn}. First, we want to extend the 
+Gutt star product to the whole tensor algebra: we define
+\begin{equation*}
+	\ostar_{zG}
+	\colon
+	\Tensor^{\bullet}(\lie{g})
+	\times
+	\Tensor^{\bullet}(\lie{g})
+	\longrightarrow
+	\Tensor^{\bullet}(\lie{g})
+	, \quad
+	\ostar_{zG} 
+	= 
+	\star_{zG} \circ \Symmetrizer.
+\end{equation*}
+\begin{theorem}
+    \label{Thm:LCAna:Continuity1}%
+    Let $\lie{g}$ be an AE-Lie algebra and $R \geq 1$, then for $x, y
+    \in \Tensor_R^{\bullet}(\lie{g})$, $z \in \mathbb{C}$ and each 
+    continuous semi-norm $p$ on $\lie{g}$ there exists a constant $c$ 
+    such that we have for an asymptotic estimate $q$ of $p$
+    \begin{equation}
+        \label{LCAna:Continuity1}
+        p_R(x \ostar_{zG} y)
+        \leq
+        (c q)_R(x) (c q)_R(y).
+    \end{equation}
+    Hence the Gutt star product is continuous on
+    $\Sym_R^{\bullet}(\lie{g})$ for all $z \in \mathbb{C}$.
+\end{theorem}
+\begin{proof}
+    We need to give estimates on the $z^n C_n$ in order to show their
+    convergence.  Let us use $r = k + \ell - n$ for brevity and recall
+    that the products are taken in the symmetric algebra.
+    Then we can use Equation \eqref{Formulas:2MonomialsExplicit} in the 
+    proof of Lemma \ref{Lemma:Formulas:2MonomialsFormula1} and put 
+    estimates on it. Let $p$ be a continuous semi-norm
+    and let $q$ be an asymptotic estimate for it. By using the
+    continuity estimate for the symmetric tensor product in (a), the
+    AE property of the Lie bracket \eqref{LCAna:AE} in (b) and then 
+    simplifying the summation by adding more terms in (c), we get
+    \begin{align}
+        \nonumber
+        p_R \left(
+            z^n C_n\left( \xi^k, \eta^{\ell} \right)
+        \right)
+        & =
+        p_R \bigg(
+        z^n
+        \frac{k! \ell!}{r!}
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_i + b_i \geq 1 \\
+            a_1 + \ldots + a_r = k \\
+            b_1 + \ldots + b_r = \ell
+          }}
+        \bchparts{a_1}{b_1}{\xi}{\eta}
+        \cdots
+        \bchparts{a_r}{b_r}{\xi}{\eta}
+        \bigg)
+        \\
+        \nonumber
+        & \ot{(a)}{\leq}
+        |z|^n
+        \frac{k! \ell!}{r!}
+        r!^R
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_i + b_i \geq 1 \\
+            a_1 + \ldots + a_r = k \\
+            b_1 + \ldots + b_r = \ell
+          }}
+        p^{a_1 + b_1} \left( \bchparts{a_1}{b_1}{\xi}{\eta} \right)
+        \cdots
+        p^{a_r + b_r} \left( \bchparts{a_r}{b_r}{\xi}{\eta} \right)
+        \\
+        \nonumber
+        & \ot{(b)}{\leq}
+        |z|^n
+        \frac{k! \ell!}{r!^{1-R}}
+        q(\xi)^k q(\eta)^{\ell}
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_i + b_i \geq 1 \\
+            a_1 + \ldots + a_r = k \\
+            b_1 + \ldots + b_r = \ell
+          }}
+        |\vartheta_{a_1, b_1}| \ldots |\vartheta_{a_r, b_r}|
+        \\
+        \label{LCAna:2MonomialsPreEstimate}
+        & \ot{(c)}{\leq}
+        |z|^n
+        \frac{k! \ell!}{r!^{1-R}}
+        q(\xi)^k q(\eta)^{\ell}
+        \sum\limits_{\substack{j_1, \ldots, j_r \geq 1 \\
+            j_1 + \ldots + j_r = k + \ell}}
+        |\vartheta_{j_1}| \ldots |\vartheta_{j_r}|
+    \end{align}
+    Now we will use the fact that Thompson gave estimate for the growth 
+    of the Baker-Campbell-Hausdorff coefficientsin in 
+    \cite{Thompson:Convergence:1989}. More precisely he showed 
+    $|\vartheta_j| \leq \frac{2}{j}$. For us, it will be sufficient that 
+    for all $j \in \mathbb{N}$ we have $|\vartheta_j| \leq 2$. Knowing this 
+    and using some easy combinatoric estimates we find
+    \begin{equation*}
+        \sum\limits_{
+          \substack{
+            j_1, \ldots, j_r \geq 1 \\
+            j_1 + \ldots + j_r = k + \ell
+          }
+        }
+        |\vartheta_{j_1}| \cdots |\vartheta_{j_r}|
+        \leq
+        2^r \sum\limits_{
+          \substack
+          {j_1, \ldots, j_r \geq 1 \\
+            j_1 + \cdots + j_r = k + \ell
+          }
+        } 1
+        \leq
+        2^r \binom{k + \ell + r - 1}{k + \ell}
+        \leq
+        2^{3 (k + \ell) - 2n - 1}.
+    \end{equation*}
+    We put this together with \eqref{LCAna:2MonomialsPreEstimate}
+    into the estimate
+    \begin{align}
+        \nonumber
+        p_R \left(
+            \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
+        \right)
+        & =
+        p_R \left(
+            \sum\limits_{n=0}^{k + \ell - 1}
+            z^n
+            C_n \left( \xi^k, \eta^{\ell} \right)
+        \right)
+        \\
+        \nonumber
+        & \leq
+        \sum\limits_{n=0}^{k + \ell - 1}
+        |z|^n
+        \frac{k! \ell!}{(k + \ell - n)!^{1-R}}
+        q(\xi)^k q(\eta)^{\ell}
+        2^{3 (k + \ell) - 2 n - 1}
+        \\
+        \nonumber
+        & =
+        \frac{1}{2}
+        \sum\limits_{n=0}^{k + \ell - 1}
+        \frac{|z|^n}{4^n}
+        \left( \frac{k! \ell! n!}{(k + \ell - n)! n!}
+        \right)^{1-R}
+        (8 q)_R \left( \xi^{\tensor k} \right)
+        (8 q)_R \left( \eta^{\tensor \ell} \right)
+        \\
+        \label{LCAna:2MonomialEstimate}
+        & \leq
+        \frac{1}{2}
+        \sum\limits_{n=0}^{k + \ell - 1}
+        \frac{|z|^n}{4^n}
+        \frac{1}{n!^{R - 1}}
+        \binom{k + \ell}{k}^{R - 1}
+        \binom{k + \ell}{n}^{1 - R}
+        (8 q)_R \left( \xi^{\tensor k} \right)
+        (8 q)_R \left( \eta^{\tensor \ell} \right)
+        \\
+        \nonumber
+        & \leq
+        \frac{1}{2}
+        \sum\limits_{n=0}^{k + \ell - 1}
+        \frac{|z|^n}{4^n n!^{R - 1}}
+        2^{(1-R)(k + \ell)}
+        (8 q)_R \left( \xi^{\tensor k} \right)
+        (8 q)_R \left( \eta^{\tensor \ell} \right)
+        \\
+        \nonumber
+        & =
+        \frac{1}{2}
+        \sum\limits_{n=0}^{k + \ell - 1}
+        \frac{|z|^n}{4^n n!^{R - 1}}
+        (8 q)_R \left( \xi^{\tensor k} \right)
+        (8 q)_R \left( \eta^{\tensor \ell} \right).
+    \end{align}
+    Remind that $R \geq 1$, so $2^{1-R} \leq 1$. For $|z| \leq 2$ we get
+    \begin{align*}
+        \nonumber
+        p_R \left(
+            \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
+        \right)
+        & \leq
+        \frac{1}{2}
+        \sum\limits_{n=0}^{\infty}
+        \frac{1}{2^n}
+        (8 q)_R(\xi^{\tensor k})
+        (8 q)_R(\eta^{\tensor \ell})
+        \\
+        & =
+        (8 q)_R \left( \xi^{\tensor k} \right)
+        (8 q)_R \left( \eta^{\tensor \ell} \right).
+    \end{align*}
+    For $|z| > 1$ we have on the other hand
+    \begin{align*}
+        \nonumber
+        p_R \left(
+            \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
+        \right)
+        & \leq
+        \frac{1}{2}
+        \sum\limits_{n=0}^{k + \ell - 1}
+        \frac{|z|^{k + \ell}}{4^n}
+        (8 q)_R(\xi^{\tensor k})
+        (8 q)_R(\eta^{\tensor \ell})
+        \\
+        & \leq
+        (8z q)_R \left( \xi^{\tensor k} \right)
+        (8z q)_R \left( \eta^{\tensor \ell} \right).
+    \end{align*}
+    Thus we can find in both cases a continuous semi-norm which
+    fulfils \eqref{LCAna:Continuity1}. The proof for factorizing
+    tensors is the same and one finally gets
+    \begin{equation*}
+    	p_R
+    	\left(
+    		\xi_1 \tensor \ldots \tensor \xi_k
+    		\star_{zG}
+    		\eta_1 \tensor \ldots \tensor \eta_{\ell}
+    	\right)
+    	\leq
+    	(c q)_R
+    	\left(
+    		\xi_1 \tensor \ldots \tensor \xi_k
+    	\right)
+    	(c q)_R
+    	\left(
+    		\eta_1 \tensor \ldots \tensor \eta_{\ell}
+    	\right)
+    \end{equation*}
+    with the same $c$'s as before. Having established this, we can use 
+    the infimum argument to get the statement on arbitrary tensors
+    and we are done.
+\end{proof}
+\begin{remark}
+	\mbox{}
+	\label{Rem:LCAna:CnOperators}
+	We have actually proven more than just the continuity of the star product. 
+	We will come back to this proof later in order to show also the entire 
+	holomorphic dependence of the star product on the formal parameter. This 
+	will be possible because we put bounds on the series 
+	$\sum_n z^n C_n(\cdot, \cdot)$.
+	This again means, that we have proven the continuity of the $C_n$ 
+	operators, too: for arbitrary tensors $x, y \in \Tensor_R^{\bullet}
+	(\lie{g})$ and a continuous semi-norm $p$, there is a constant $c$ 
+	independent of $z$ (and even of $R$) such that
+	\begin{equation}
+		\label{LCAna:CnOperators}
+		p_R
+		\left( C_n(x, y) \right)
+		\leq
+		(c q)_R (x)
+		(c q)_R (y)
+	\end{equation}
+	for all $n \in \mathbb{N}$, where $q$ is an asymptotic estimate 
+	for $p$. But we even have more than that:
+\end{remark}
+\begin{corollary}
+	\label{Coro:LCAna:ContinuityCn}
+	Let $R \geq 0$ and $n \in \mathbb{N}$. Then, for every continuous semi-
+	norm $p$ there exists a constant $c > 0$ such that for an asymptotic 
+	estimate $q$ and every $x,y \in \Tensor_R^{\bullet}(\lie{g})$ we get
+	the estimate
+	\begin{equation}
+		\label{LCAna:ContinuityCn}
+		p_R \left( C_n(x,y) \right)
+		\leq
+		n!^{1 - R}
+		(c q)_R(x) (c q)_R(y).
+	\end{equation}
+\end{corollary}
+\begin{proof}
+	We go back to \eqref{LCAna:2MonomialsPreEstimate} in the proof and use the 
+	estimate for the sum over the $|\vartheta_i|$:
+	\begin{align*}
+		p_R \left(
+			C_n \left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
+		\right)
+		& \leq
+		|z|^n
+		\frac{k! \ell!}{(k + \ell - n)!^{1-R}}
+		2^{3(k + \ell)}
+		q(\xi)^k q(\eta)^{\ell}
+		\\
+		& =
+		|z|^n
+		\left(
+			\frac{k! \ell! (k + \ell)! n!}
+			{(k + \ell - n)! (k + \ell)! n!}
+		\right)^{1 - R}
+		2^{3(k + \ell)}
+		q_R\left( \xi^{\tensor k} \right)
+		q_R\left( \eta^{\tensor \ell} \right)
+		\\
+		& \leq
+		|z|^n
+		2^{(1 - R)(k + \ell)}
+		n!^{1 - R}
+		2^{3(k + \ell)}
+		q_R\left( \xi^{\tensor k} \right)
+		q_R\left( \eta^{\tensor \ell} \right)
+		\\
+		& \leq
+		n!^{1-R}
+		\left( 16 (|z| + 1) \right)^{k + \ell}
+		q_R\left( \xi^{\tensor k} \right)
+		q_R\left( \eta^{\tensor \ell} \right).
+	\end{align*}
+	We just have to absorb the constant in front into the semi-norms and the 
+	proof is done.
+\end{proof}
+\begin{remark}
+	This makes things a bit clearer: The estimate \ref{LCAna:ContinuityCn} is 
+	exactly the one from \eqref{LCAna:CnOperators} for $R \geq 1$. All the 
+	$C_n$ are indeed continuous for any $R \geq 0$, but only for $R \geq 1$ 
+	there is something like a uniform continuity. When $R$ decreases, the 
+	continuity of the $C_n$'s ''gets worse'' and the uniform continuity 
+	finally breaks down when the threshold $R = 1$ is trespassed. But we need
+	this uniform estimate, since we have to control the operators up to an 
+	arbitrarily high order if we want to guarantee the continuity of the 
+	star product. Continuity up to a formerly chosen order $n$ does not 
+	suffice.
+\end{remark}
+
+
+
+Now, we want to give the second proof, which relies on 
+\eqref{Formulas:LinearMonomial2}. Approaching like this, we don't account for 
+the fact that we will encounter terms like $[\eta, \eta]$ which will vanish, 
+but we estimate more brutally. During this procedure, we will also count the 
+formal parameter $z$ more often than it is actually there. This is why we will 
+have to make assumptions on $R$ and $z$ which are a bit stronger than before. 
+Moreover, we will split up tensor products and put them together again various 
+times, which is the reason why an AE Lie algebra will not suffice any more: we 
+will need $\lie{g}$ to be locally m-convex. But if we make these assumptions, 
+we get the following lemma which will finally make the proof easier.
+\begin{lemma}
+    \label{Lemma:LCAna:PreContinuity2}%
+    Let $\lie{g}$ be a locally m-convex Lie algebra and $R \geq1$. 
+    Then if $|z| < 2 \pi$ or $R >1$ there exists for $x \in
+    \Tensor^{\bullet}(\lie{g})$ of degree at most $k$, $\eta \in \lie{g}$
+    and each continuous submultiplicative semi-norm $p$ a constant $c_{z,R}$ 
+    only depending on $z$ and $R$ such that the following estimate holds:
+    \begin{equation}
+        \label{LCAna:PreContinuity2}
+        p_R(x \ostar_{zG} \eta)
+        \leq
+        c_{z,R} (k+1)^R p_R(x) q(\eta)
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    We start again with factorizing tensors. Since we get the same estimate 
+    for monomials and for powers of some $\xi \in \lie{g}$ via polarization, 
+    it is enough to consider $\xi^{\tensor k} \ostar_{zG} \eta$. This gives
+    \begin{align*}
+        p_R \left( \xi^{\tensor k} \ostar_{zG} \eta \right)
+        & =
+        p_R \left(
+        \sum\limits_{n=0}^k
+        \binom{k}{n} B_n^* z^n \xi^{k-n}
+        \left( \ad_\xi \right)^n (\eta)
+        \right)
+        \\
+        & =
+        \sum\limits_{n=0}^k
+        \binom{k}{n} |B_n^*| |z|^n
+        (k + 1 - n)!^R
+        p^{k + 1 - n} 
+        \left(
+         	\xi^{k-n}
+         	\left( \ad_\xi \right)^n (\eta)
+        \right)
+        \\
+        & \leq
+        (k + 1)^R
+        \sum\limits_{n=0}^k
+        |B_n^*| |z|^n
+        \frac{k! (k - n)!^R}{(k - n)! n!}
+        p(\xi)^k p(\eta)
+        \\
+        & =
+        (k + 1)^R
+        \sum\limits_{n=0}^k
+        \frac{|B_n^*| |z|^n}{n!^R}
+        \left( \frac{(k - n)! n!}{k!} \right)^{R - 1}
+        p_R \left( \xi^{\tensor k} \right) p(\eta)
+        \\
+        & \leq
+        (k + 1)^R
+        p_R \left( \xi^{\tensor k} \right) p(\eta)
+        \sum\limits_{n=0}^k
+        \frac{|B_n^*| |z|^n}{n!^R}.
+    \end{align*}
+    Now if $|z| < 2 \pi$ the sum can be estimated by extending it to a
+    series which converges. We end up with a constant depending on $R$
+    and on $z$ such that
+    \begin{equation*}
+        p_R \left( \xi^{\tensor k} \ostar_{zG} \eta \right)
+        \leq
+        (k + 1)^R c_{z, R}
+        p_R \left( \xi^{\tensor k} \right) p(\eta).
+    \end{equation*}
+    If on the other hand $|z| \geq 2 \pi$ and $R > 1$ we can estimate
+    \begin{align*}
+        p_R \left( \xi^{\tensor k} \ostar_{zG} \eta \right)
+        &\leq
+        (k + 1)^R
+        p_R \left( \xi^{\tensor k} \right) p(\eta)
+        \left(
+        \sum\limits_{n=0}^k
+        \frac{|B_n^*|}{n!}
+        \right) \left(
+        \sum\limits_{n=0}^k
+        \frac{|z|^n}{n!^{R - 1}}
+        \right)
+        \\
+        &\leq
+        (k + 1)^R
+        \underbrace{2 \tilde{c}_{z,R}}_{= c_{z,R}}
+        p_R \left( \xi^{\tensor k} \right) p(\eta).
+    \end{align*}
+    We hence have the estimate on factorizing tensors and can extend
+    this to generic tensors of degree at most $k$ by the infimum argument.
+\end{proof}
+
+
+In the following, we assume again that either $R > 1$ or $R \geq 1$
+and $|z| < 2\pi$ in order the use
+Lemma~\ref{Lemma:LCAna:PreContinuity2}. Now we can give a simpler proof of 
+Theorem~\ref{Thm:LCAna:Continuity1} for the case of a locally m-convex 
+Lie algebra:
+\begin{proof}[Alternative Proof of Theorem~\ref{Thm:LCAna:Continuity1}]
+    Assume that $\lie{g}$ is now even locally m-convex.  We want to
+    replace $\eta$ in the foregoing lemma by an arbitrary tensor $y$
+    of degree at most $\ell$. Again, we do that on factorizing tensors
+    first and get
+    \begin{align*}
+        p_R \left(
+        \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
+        \right)
+        & =
+        p_R \big(
+        \xi^{\tensor k}
+        \underbrace{\ostar_{zG} \eta \ostar \cdots \ostar_{zG} \eta}_{
+        \ell \textrm{-times}}
+        \big)
+        \\
+        & \leq
+        c_{z,R} (k + \ell)^R
+        p_R \big(
+        \xi^{\tensor k}
+        \underbrace{\ostar_{zG} \eta \ostar \cdots \ostar_{zG} \eta}_{
+        \ell - 1 \textrm{-times}}
+        \big)
+        p(\eta)
+        \\
+        & \leq
+        \quad \vdots
+        \\
+        & \leq
+        c_{z,R}^{\ell} ((k + \ell) \cdots (k + 1))^R
+        p_R \left( \xi^{\tensor k} \right)
+        p(\eta)^{\ell}
+        \\
+        & =
+        c_{z,R}^{\ell} \left(
+        \frac{(k + \ell)!}{k! \ell!}
+        \right)^R
+        p_R \left( \xi^{\tensor k} \right)
+        p_R \left( \eta^{\tensor \ell} \right)
+        \\
+        & \leq
+        (2^R p)_R \left( \xi^{\tensor k} \right)
+        (2^R c_{z,R} p)_R \left( \eta^{\tensor \ell} \right).
+    \end{align*}
+    Once again, we have the estimate on factorizing tensors via
+    polarization and extend it via the infimum argument to the whole
+    tensor algebra, since the estimate depends no longer on the degree
+    of the tensors.
+\end{proof}
+
+
+Using this approach for continuity, it is easy to see that nilpotency
+of the Lie algebra changes the estimate substantially: If we knew that
+we will have at most $N$ brackets because $N + 1$ brackets vanish,
+then the sum in the proof of Lemma \ref{Lemma:LCAna:PreContinuity2}
+would end at $N$ instead of $k$ and would therefore be independent of
+the degree of $x$.
+
+
+In both proofs, it is easy to see that we need at least $R \geq 1$ to
+get rid of the factorials which come up because of the combinatorics
+of the star product. It is nevertheless interesting to see that this
+result is sharp, that means the Gutt star product really fails
+continuity, if $R < 1$:
+\begin{example}
+    \label{Ex:LCAna:HeisenbergAlgebra}%
+    Let $0 \leq R < 1$ and $\lie{g}$ be the Heisenberg algebra in three 
+    dimensions, i.e. the Lie algebra generated by the elements 
+    $P$, $Q$ and $E$ with the bracket $[P,Q] = E$ and all other brackets
+    vanishing. This is a very simple example for a non-abelian Lie algebra
+    and if continuity of the star product fails for this one, then we
+    can not expect it to hold for more complex ones. We impose on
+    $\lie{g}$ the $\ell^1$-topology with the norm $n$ and $n(P) = n(Q)
+    = n(E) = 1$. This will be helpful, since here we really have the equality
+    \begin{equation*}
+    		p^{n+m} \left( X^n Y^m \right)
+    		=
+    		p^n \left( X^n \right)
+    		p^m \left( Y^m \right)
+    \end{equation*}
+    for the symmetric product. Then we consider
+    \begin{equation*}
+        a_k
+        =
+        \frac{P^k}{k!^R}
+        \quad
+        \textrm{and}
+        \quad
+        b_k
+        =
+        \frac{Q^k}{k!^R}.
+    \end{equation*}
+    It is easy to see that
+    \begin{equation*}
+        n_R(a_k)
+        =
+        n_R(b_k)
+        =
+        1
+    \end{equation*}
+    We want to show that there is no $c > 0$ such that
+    \begin{equation*}
+        n_R(a_k \star_{zG} b_k)
+        \leq
+        (c n)_R(a_k) (c n)_R(b_k)
+    \end{equation*}
+    With other words, $n_R(a_k \star_{zG} b_k)$ grows faster than
+    exponentially. But this is the case, since with our combinatorial
+    formula \eqref{Formulas:2MonomialsFormula2} we see
+    \begin{align*}
+        n_R(a_k \star_{zG} b_k)
+        & =
+        n_R \left(
+        \sum\limits_{j=0}^k
+        \binom{k}{j}
+        \binom{k}{j}
+        j! \frac{1}{k!^{2R}}
+        P^{k-j} Q^{k-j} E^j
+        \right)
+        \\
+        & =
+        \sum\limits_{j=0}^k
+        \frac{k!^2 j! (2k - j)!^R}{(k-j)!^2 j!^2 k!^{2R}}
+        \underbrace{
+        n^{2k-j}
+        ( P^{k-j} Q^{k-j} E^j )
+        }_{= 1}
+        \\
+        & =
+        \sum\limits_{j=0}^k
+        \underbrace{
+        \binom{k}{j}^2 \binom{2k}{k} \binom{2k}{j}^{-1}
+        }_{\geq 1}
+        j!^{1-R}
+        \\
+        & \geq
+        \sum\limits_{j=0}^k
+        j!^{1-R}
+        \\
+        & \geq
+        k!^{1-R},
+    \end{align*}
+    which is exactly what we wanted to show.
+\end{example}
+
+
+
 \subsection{Dependence on the formal parameter}
 
-\subsection{Completion}
+We now look at the completion $\widehat{\Sym}_R^{\bullet}(\lie{g})$ of
+the symmetric algebra with the Gutt star product $\star_{zG}$ and 
+get the following negative result:
+\begin{proposition}
+    \label{proposition:NoExponentialsSorry}%
+    Let $\xi \in \lie{g}$ and $R \geq 1$, then $\exp(\xi) \not\in
+    \widehat{\Sym}_R^{\bullet}(\lie{g})$, where $\exp(\xi) =
+    \sum_{n=0}^{\infty} \frac{\xi^n}{n!}$.
+\end{proposition}
+\begin{proof}
+    Take a semi-norm $p$ such that $p(\xi) \neq 0$. Then set $c =
+    p(\xi)^{-1}$. For $\xi^n$ the powers in the sense of either the
+    usual tensor product, or the symmetric product or the star product
+    are the same. So we have for $N \in \mathbb{N}$
+    \begin{equation*}
+        p_R \left(
+        \sum\limits_{n=0}^N
+        \frac{c^n}{n!} \xi^n
+        \right)
+        =
+        \sum\limits_{n=0}^N
+        \frac{n!^R}{n!}
+        c^n
+        p_R \left( \xi^n
+        \right)
+        =
+        \sum\limits_{n=0}^N
+        n!^{R - 1}
+        \geq
+        N,
+    \end{equation*}
+    and clearly $\exp(\xi)$ does not converge for the semi-norm $p_R$.
+\end{proof}
+As already mentioned, the proof of Theorem \ref{Thm:LCAna:Continuity1}
+gives more than stated before. We know, that for $R \geq 1$ the star product 
+is continuous on $\Sym_R^{\bullet}(\lie{g})$ and therefore has a continuous 
+extension to $\widehat{\Sym}_R^{\bullet}(\lie{g})$, but this extension is a 
+priori abstract. It does not need to be the series of the $C_n$ operators 
+again. Yet, this is the case.
+\begin{corollary}
+	\label{Coro:LCAna:StarProdAbsConv}
+	Let $\lie{g}$ be an AE Lie algebra and $R \geq 1$. Then, for every $z \in 
+	\mathbb{C}$, the Gutt star product converges absolutely, i.e. for every 
+	continuous semi-norm $p$, there is another continuous semi-norm $q$ such 
+	that for all $f,g \in \widehat{\Sym}_R^{\bullet}(\lie{g})$
+	\begin{equation}
+		\label{LCAna:StarProdAbsConv}
+		p_R \left( f \star_{zG} g \right)
+		\leq
+		\sum\limits_{n = 0}^{\infty}
+		p_R \left( z^n C_n(f, g) \right)
+		\leq
+		q_R(f) q_R(g).
+	\end{equation}
+\end{corollary}
+\begin{proof}
+	The first inequality is clear. We know that for all $z \in \mathbb{C}$ 
+	and for all $p \in \algebra{P}$ there is a $q \in \algebra{P}$ such that
+	\begin{equation*}
+		p_R \left( z^n C_n(f, g) \right)
+		\leq
+		q_R(f) q_R(g)
+	\end{equation*}
+	holds for all $n \in \mathbb{N}$. So there is also a $q' \in 
+	\algebra{P}$ such that this holds for $2z$. We hence get
+	\begin{equation*}
+		p_R \left( z^n C_n(f, g) \right)
+		\leq
+		2^{-n} q'_R(f) q'_R(g).
+	\end{equation*}
+	Now the conclusion follows since
+	\begin{align*}
+		\sum\limits_{n = 0}^{\infty}
+		p_R \left( z^n C_n(f, g) \right)
+		& \leq
+		\sum\limits_{n = 0}^{\infty}
+		2^{-n} q'_R(f) q'_R(g)
+		\\
+		& \leq
+		2 q'_R(f) q'_R(g)
+	\end{align*}
+	and the $2$ in front can be absorbed in the semi-norms.
+\end{proof}
+The consequence of Corollary \ref{Coro:LCAna:StarProdAbsConv} is that 
+$\star_{zG}$ really converges to the formal series, and not just in an 
+abstract sense. So the formal series 
+\begin{equation*}
+	x \star_{zG} y
+	=
+	\sum\limits_{n = 0}^{\infty}
+	z^n C_n(x,y)
+\end{equation*}
+remains valid for elements $x,y$ in the completion. Knowing this and using the 
+fact that all the projections on the homogeneous components are continuous 
+from Lemma \ref{Lemma:LCAna:Projections} 
+(\ref{Item:ComponentProjectionsContinuous}), we can reinterpret the 
+continuity result we found in Theorem \ref{Thm:LCAna:Continuity1}.
+\begin{proposition}
+    \label{Prop:LCAna:HolomorphicDependence}%
+    Let $R \geq 1$, then for all $f, g \in
+    \widehat{\Sym}_R^{\bullet}(\lie{g})$ the map
+    \begin{equation}
+        \label{LCAna:Holomorphicity}
+        \mathbb{K} \ni z
+        \longmapsto
+        f \star_{zG} g \in
+        \widehat{\Sym}_R^{\bullet}(\lie{g})
+    \end{equation}
+    is real-analytic if $\mathbb{K} = \mathbb{R}$ and
+    entire-holomorphic if $\mathbb{K} = \mathbb{C}$ with Taylor
+    expansion at $z = 0$ given by Equation 
+    \eqref{Formulas:2MonomialsFormula2}. The collection of the algebras 
+    $\left\{ \left( \widehat{\Sym}_R^{\bullet}(\lie{g}), \star_{zG} \right) 
+    \right\}_{z \in \mathbb{C}}$ is a holomorphic deformation of 
+    the completed symmetric tensor algebra 
+    $\left( \widehat{\Sym}_R^{\bullet}(\lie{g}), \vee \right)$.
+\end{proposition}
+\begin{proof}
+	The important point is that for $f,g \in \widehat{\Sym}_R^{\bullet}
+	(\lie{g})$ and every continuous semi-norm $p$ we have another 
+	continuous semi-norm $q$ such that
+	\begin{align*}
+		p_R \left( f \star_{zG} g \right)
+		& =
+		p_R 
+		\left(
+			\sum\limits_{n=0}^{\infty}
+			z^n C_n(f,g)
+		\right)
+		\\
+		& =
+		\sum\limits_{n=0}^{\infty}
+		|z|^n
+		p_R( C_n(f, g) )
+		\\
+		& \leq
+		\sum\limits_{n=0}^{\infty}
+		|z|^n
+		q_R(f)
+		q_R(g).
+	\end{align*}
+	We already showed that for every $M > 0$, there exists a $c \geq 1$, 
+	such that in the open disc $|z| < M \subset \mathbb{C}$ the 
+	inequality
+	\begin{equation*}
+		p_R \left( f \star_{zG} g \right)
+		\leq
+		\sum\limits_{n=0}^{\infty}
+		|z|^n
+		q_R(f)
+		q_R(g)
+		\leq
+		(c q)_R(f)
+		(c q)_R(g)
+		<
+		\infty
+	\end{equation*}
+	holds. Thus the map \eqref{LCAna:Holomorphicity} is holomorphic in 
+	$z$ on every open disc around $0$. This means that the map is 
+	actually entire.
+\end{proof}
+\begin{remark}
+	If $R > 1$, we even have the result
+	\begin{equation*}
+		p_R \left(
+			C_n (f, g)
+		\right)
+		\leq
+		\frac{1}{n!^{R - 1}}
+		q_R(f) q_R(g)
+	\end{equation*}
+	from \eqref{LCAna:CnOperators} for every $p \in \algebra{P}$ and a 
+	suitable $q \in \algebra{P}$. In this case, we get
+	\begin{equation*}
+		p_R \left(
+			f \star_{zG} g
+		\right)
+		\leq
+		\sum\limits_{n = 0}^{\infty}
+		p_R \left(
+			z^n
+			C_n (f, g)
+		\right)
+		\leq
+		\sum\limits_{n = 0}^{\infty}
+		\frac{|z|^n}{n!^{R - 1}}
+		q_R(f) q_R(g),
+	\end{equation*}
+	and we see the entire dependence easier.
+\end{remark}
 
-\subsection{Nuclearity}
+
+
+\section{Functorialty, Representations and an optimal result}
+\label{sec:chap5_Functoriality}
+
+\subsubsection*{An optimal result}
+Let's set the formal parameter $z = 1$ for a moment and make some 
+observations. So far, we found a topology on $\Sym_R^{\bullet}(\lie{g})$ which 
+gives a continuous star product and which has a reasonably large completion, 
+but it is always fair to ask if we can do better than that: we've seen that 
+our completed algebra will not contain exponential series, which would be a 
+very nice feature to have. So is it possible to put another locally convex 
+topology on $\Sym_R^{\bullet}(\lie{g})$ which gives a completion with 
+exponentials? The answer is no, at least under mild additional assumptions. 
+\begin{proposition}
+	\label{Prop:LCAna:NoBetterTopology}
+	Let $\lie{g}$ be an AE Lie algebra in which one has elements $\xi, \eta$ 
+	for which the Baker-Campbell-Hausdorff series does not converge. 
+	Then there is no locally convex topology on $\Sym^{\bullet}(\lie{g})$ 
+	such that all of the following things are fulfilled:
+	\begin{propositionlist}
+		\item
+		The Gutt star product $\star_G$ is continuous.
+		\item
+		For every $\xi \in \lie{g}$ the series $\exp(\xi)$ converges 
+		absolutely in the completion of $\Sym^{\bullet}(\lie{g})$.
+		\item
+		For all $n \in \mathbb{N}$ the projection and inclusion maps with 
+		respect to the graded structure
+		\begin{equation*}
+			\Sym^{\bullet}(\lie{g})
+	    		\ot{$\pi_n$}{\longrightarrow}
+    	    		\Sym^n(\lie{g})
+	    	    	\ot{$\iota_n$}{\longrightarrow}
+	    		\Sym^{\bullet}(\lie{g})
+		\end{equation*}
+		are continuous.
+	\end{propositionlist}
+\end{proposition}
+\begin{proof}
+	We will just need the projection $\pi_1$ to the Lie algebra itself. Let 
+	$\xi, \eta \in \lie{g}$ such that $\bch{\xi}{\eta}$ does not exist, i.e.
+	there is a continuous semi-norm $p$ such that the limit
+	\begin{equation}\label{LCAna:BCHContradiction}
+		p \left(
+			\lim_{N \rightarrow \infty}
+			\lim_{M \rightarrow \infty}		
+			\sum\limits_{n,m = 0}^{N,M}
+			\bchparts{\xi}{\eta}{n}{m}
+		\right)				
+	\end{equation}
+	does not exist. But if we assume that the Gutt star product is continuous
+	and that the exponential series is absolutely convergent, then we have
+	\begin{align*}
+	\pi_1 \left( \exp(\xi) \star_G \exp(\eta) \right)
+	& =
+	\pi_1
+	\left(
+		\lim_{N \rightarrow \infty}
+		\left(
+			\sum\limits_{n=0}^N
+			\frac{\xi^n}{n!}
+		\right)
+		\star_G
+		\lim_{M \rightarrow \infty}
+		\left(
+			\sum\limits_{m=0}^M
+			\frac{\eta^m}{m!}
+		\right)
+	\right)
+	\\
+	& \ot{(a)}{=}
+	\pi_1
+	\left(
+		\lim_{N \rightarrow \infty}
+		\lim_{M \rightarrow \infty}
+		\left(
+			\sum\limits_{n=0}^N
+			\frac{\xi^n}{n!}
+		\right)
+		\star_G
+		\left(
+			\sum\limits_{m=0}^M
+			\frac{\eta^m}{m!}
+		\right)
+	\right)
+	\\
+	& \ot{(b)}{=}
+	\lim_{N \rightarrow \infty}
+	\lim_{M \rightarrow \infty}
+	\pi_1
+	\left(	
+		\left(
+			\sum\limits_{n=0}^N
+			\frac{\xi^n}{n!}
+		\right)
+		\star_G
+		\left(
+			\sum\limits_{m=0}^M
+			\frac{\eta^m}{m!}
+		\right)
+	\right)
+	\\
+	& \ot{(c)}{=}
+	\lim_{N \rightarrow \infty}
+	\lim_{M \rightarrow \infty}
+	\sum\limits_{n,m=0}^{N, M}
+	\bchparts{\xi}{\eta}{n}{m}
+	\end{align*}
+	where we used the continuity of the star product in (a), the continuity of 
+	the projection in (b) and evaluated the projection in (c). Since 
+	$\exp(\xi)$ and $\exp(\eta)$ are elements in the completion, their star 
+	product exists and hence each continuous semi-norm has a well-defined 
+	value for it. But if we take now the semi-norm from 
+	\eqref{LCAna:BCHContradiction} of it, we get a contradiction.
+\end{proof}
+Of course, there are many ways of arranging the Baker-Campbell-Hausdorff 
+series. There is no need to write it like in \eqref{LCAna:BCHContradiction}, 
+but this is enough to illustrate the meaning of Proposition 
+\ref{Prop:LCAna:NoBetterTopology}. For finite-dimensional Lie algebras, the 
+statement is even better: In a finite-dimensional Lie algebra, the 
+Baker-Campbell-Hausdorff series converges if and only if it converges 
+absolutely, since we can write it as a power series.
 
 
 
-\section{Alternative topologies and an optimal result}
-\label{sec:chap5_AlternativeOptimal}
+\subsection*{Functoriality}
+
+For $z = 1$, the algebra $\Sym_1^{\bullet}(\lie{g})$ with the 
+Gutt star product $\star_G$ is isomorphic to the universal enveloping 
+algebra $\mathcal{U}(\lie{g})$. Since $\mathcal{U}(\lie{g})$ and 
+$\Sym^{\bullet}(\lie{g})$ have universal properties and we 
+endowed them with a topology, we can ask whether we get some functorial
+properties with our construction. In other words: Let $\mathcal{A}$ be
+an associative, locally convex algebra and $\phi \colon \lie{g}
+\longrightarrow \mathcal{A}$ a continuous Lie algebra homomorphism. We
+have the commuting diagram
+\begin{center}
+    \begin{tikzpicture}
+        \matrix (m)[
+        matrix of math nodes,
+        row sep=6em,
+        column sep=7em
+        ]
+        {
+          \mathcal{U}_R(\lie{g})
+          & \Sym_R^{\bullet}(\lie{g}) \\
+          \lie{g}
+          & \mathcal{A} \\
+        };
+        \draw
+        [-stealth]
+        (m-1-1) edge node [above] {$\lie{q}^{-1}$}
+        (m-1-2) edge node [left] {$\Phi$}
+        (m-2-2)
+        (m-1-2) edge node [right] {$\widetilde{\Phi}$}
+        (m-2-2)
+        (m-2-1) edge node [left] {$\iota$}
+        (m-1-1)
+        (m-2-1) edge node [below] {$\phi$}
+        (m-2-2);
+    \end{tikzpicture}
+\end{center}
+from the algebraic theory. The important question is now whether the
+algebra homomorphisms $\Phi$ and $\widetilde{\Phi}$ are continuous. This 
+question is partly answered by the following result:
+\begin{proposition}
+    \label{Thm:LCAna:Semi-functoriality}%
+    Let $\lie{g}$ be an AE-Lie algebra, $\mathcal{A}$ an associative
+    AE-algebra and $\phi \colon \lie{g} \longrightarrow \mathcal{A}$
+    is a continuous Lie algebra homomorphism.  If $R \geq 0$, then the
+    induced algebra homomorphisms $\Phi$ and $\widetilde{\Phi}$ are
+    continuous.
+\end{proposition}
+\begin{proof}
+    We define an extension of $\Phi$ on the whole tensor algebra
+    again:
+    \begin{equation*}
+        \Psi \colon
+        \Tensor_R^{\bullet}(\lie{g})
+        \longrightarrow
+        \mathcal{A},
+        \quad
+        \Psi
+        =
+        \widetilde{\Phi} \circ \Symmetrizer
+    \end{equation*}
+    It is clear that if $\Psi$ is continuous on factorizing tensors,
+    we get the continuity of $\widetilde{\Phi}$ and of $\Phi$ via the
+    infimum argument. So let $p$ be a continuous semi-norm on
+    $\mathcal{A}$ with its asymptotic estimate $q$ and $\xi_1, \ldots,
+    \xi_n \in \lie{g}$. Since $\phi$ is continuous, we find a
+    continuous semi-norm $r$ on $\lie{g}$ such that for all $\xi \in
+    \lie{g}$ we have $q(\phi(\xi)) \leq r(\xi)$. Then we have
+    \begin{align*}
+        p \left(
+        \Psi \left(
+        \xi_1 \tensor \cdots \tensor \xi_n
+        \right) \right)
+        & =
+        p \left(
+        \widetilde{\Phi} \left(
+        \xi_1 \star_{zG} \cdots \star_{zG} \xi_n
+        \right) \right)
+        \\
+        & =
+        p( \phi(\xi_1) \cdots \phi(\xi_n) )
+        \\
+        & \leq
+        q( \phi(\xi_1) )
+        \cdots
+        q( \phi(\xi_n) )
+        \\
+        & \leq
+        r(\xi_1) \cdots r(\xi_n)
+        \\
+        & \leq
+        r_R(\xi_1 \tensor \cdots \tensor \xi_n),
+    \end{align*}
+    where the last inequality is true for all $R \geq 0$.
+\end{proof}
+
+
+Although this is a nice result, our construction fails to be
+universal, since the universal enveloping algebra endowed with our
+topology is \emph{not} AE in general. This is even very easy to see:
+\begin{example}
+    Take $\xi \in \lie{g}$, then we know that $\xi^{\tensor n} =
+    \xi^{\ostar_G n} = \xi^n$ for $n \in \mathbb{N}$ where the formal
+    parameter is $z = 1$. Let $R > 0$ and $p$ a continuous semi-norm
+    in $\lie{g}$ then we find
+    \begin{equation}
+        p_R(\xi^n)
+        =
+        n!^R p(\xi)^n
+        =
+        \frac{n!^R}{c^n} q(\xi)^n
+    \end{equation}
+    for $c = \frac{p(\xi)}{q(\xi)}$ for a different semi-norm $q$ with
+    $q(\xi) \neq 0$.  But since the $\frac{n!^R}{c^n}$ will always
+    diverge for $n \rightarrow \infty$ we will never get an asymptotic
+    estimate for $p_R$.
+\end{example}
+Nevertheless, we can draw a nice conclusion from
+Proposition~\ref{Thm:LCAna:Semi-functoriality}:
+\begin{proposition}
+    \label{Thm:LCAna:ContinuousRepresentations}%
+    Let $R \geq 1$ and $\mathcal{U}_R(\lie{g})$ the universal
+    enveloping algebra of an AE-Lie algebra $\lie{g}$, then for every
+    continuous representation $\phi$ of $\lie{g}$ into the bounded
+    linear operators $\Bounded(V)$ on a Banach space $V$ the induced
+    homomorphism of associative algebras $\Phi \colon
+    \mathcal{U}(\lie{g}) \longrightarrow \Bounded(V)$ is continuous.
+\end{proposition}
+\begin{proof}
+    This follows directly from
+    Proposition~\ref{Thm:LCAna:Semi-functoriality} and $\Bounded(V)$
+    being a Banach algebra.
+\end{proof}
+\begin{remark}
+    \label{Rem:LCAnaBCHConvergence}
+    ~
+    \begin{remarklist}
+    \item \label{item:FiniteDimRepsContinuous} From this, it follows
+        in particular that for all finite-dimensional Lie algebras all
+        finite-dimensional representations on some vector space $V$
+        extend to continuous algebra homomorphisms
+        $\mathcal{U}_R(\lie{g}) \longrightarrow
+        \operatorname{End}(V)$. For representations on
+        infinite-dimensional Banach or Hilbert spaces, the statement
+        is typically rather irrelevant, since there one rarely has
+        norm-continuous representations, but merely strongly
+        continuous ones.
+    \item In \cite{pflaum.schottenloher:1998a} Schottenloher and
+        Pflaum mention an alternative topology on
+        $\mathcal{U}(\lie{g})$ for finite-dimensional Lie algebras:
+        They took the coarsest locally convex topology, such that all
+        finite-dimensional representations of $\lie{g}$ extend to
+        continuous algebra homomorphisms. This topology is in fact
+        even locally m-convex. Our topology which uses the grading on
+        $\Sym_R^{\bullet}(\lie{g})$ is different from that: As we have
+        seen in Proposition~\ref{Thm:LCAna:ContinuousRepresentations},
+        it is finer for $R \geq 0$ and even strictly finer for $R >
+        0$. For the interesting case $R \geq 1$ it is ''just'' locally
+        convex, but its advantage (for our purpose) is that it
+        respects the grading, which is helpful for the holomorphic
+        dependence on the formal parameter. 
+    \end{remarklist}
+\end{remark}

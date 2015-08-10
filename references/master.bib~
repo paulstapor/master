@@ -924,7 +924,7 @@ BernoulliNumbers}},
   Timestamp                = {2015.03.06}
 }
 
-@Book{Waldmann:PoissonDQ:2007,
+@Book{WaldmannPoissonDQ,
   Title                    = {Poisson-{G}eometrie und {D}eformationsquantisierung},
   Author                   = {Waldmann, S.},
   Publisher                = {Springer Verlag},
@@ -957,7 +957,7 @@ BernoulliNumbers}},
   Timestamp                = {2015.06.09}
 }
 
-@Article{Wojtynski:BanachLieBCH:1998a,
+@Article{wojtynski,
   Title                    = {Quasi-nilpotent {B}anach-{L}ie-Algebras are {B}aker-{C}ampbell-{H}ausdorff},
   Author                   = {Wojtynski},
   Journal                  = {Journal of Functional Analysis},

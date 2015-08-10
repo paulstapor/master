@@ -23,30 +23,29 @@
 \contentsline {subsection}{\numberline {5.2.1}Locally convex spaces and algebras}{25}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}A special class of locally convex algebras}{26}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}The projective tensor product}{27}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}A topology for the Gutt star product}{27}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{27}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{27}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Completion}{27}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Nuclearity}{27}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{27}{section.5.4}
-\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}An overview}{29}{section.6.1}
-\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{29}{section.6.2}
-\contentsline {section}{\numberline {6.3}The projective limit}{29}{section.6.3}
-\contentsline {section}{\numberline {6.4}A module structure}{29}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Generic case and a counter-example}{29}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Nilpotent case and good news}{29}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Banach Lie algebras and the finite-dimensional case}{29}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Generalizations of nilpotency}{29}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}A new projective Limit}{29}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}A result for the finite-dimensional case}{29}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{31}{chapter.7}
-\contentsline {section}{\numberline {7.1}The co-product}{31}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{31}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{31}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{31}{section.7.2}
-\contentsline {chapter}{\numberline {8}Examples and remarks}{33}{chapter.8}
-\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{33}{section.8.1}
-\contentsline {section}{\numberline {8.2}Some new ideas}{33}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{33}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{33}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {5.2.4}A topology for the Gutt star product}{30}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Continuity results for the Gutt star product}{32}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{33}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{38}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Functorialty, Representations and an optimal result}{40}{section.5.4}
+\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}An overview}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{43}{section.6.2}
+\contentsline {section}{\numberline {6.3}The projective limit}{43}{section.6.3}
+\contentsline {section}{\numberline {6.4}A module structure}{43}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Generic case and a counter-example}{43}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Nilpotent case and good news}{43}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Banach Lie algebras and the finite-dimensional case}{43}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Generalizations of nilpotency}{43}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}A new projective Limit}{43}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}A result for the finite-dimensional case}{43}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{45}{chapter.7}
+\contentsline {section}{\numberline {7.1}The co-product}{45}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{45}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{45}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{45}{section.7.2}
+\contentsline {chapter}{\numberline {8}Examples and remarks}{47}{chapter.8}
+\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{47}{section.8.1}
+\contentsline {section}{\numberline {8.2}Some new ideas}{47}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{47}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{47}{subsection.8.2.2}
