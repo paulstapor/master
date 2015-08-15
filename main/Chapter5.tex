@@ -1996,7 +1996,7 @@ continuity result we found in Theorem \ref{Thm:LCAna:Continuity1}.
 \section{Functorialty, Representations and an optimal result}
 \label{sec:chap5_Functoriality}
 
-\subsubsection*{An optimal result}
+\subsection{An optimal result}
 Let's set the formal parameter $z = 1$ for a moment and make some 
 observations. So far, we found a topology on $\Sym_R^{\bullet}(\lie{g})$ which 
 gives a continuous star product and which has a reasonably large completion, 
@@ -2005,7 +2005,7 @@ our completed algebra will not contain exponential series, which would be a
 very nice feature to have. So is it possible to put another locally convex 
 topology on $\Sym_R^{\bullet}(\lie{g})$ which gives a completion with 
 exponentials? The answer is no, at least under mild additional assumptions. 
-\begin{proposition}
+\begin{proposition}[Optimality the $R$-topology]
 	\label{Prop:LCAna:NoBetterTopology}
 	Let $\lie{g}$ be an AE Lie algebra in which one has elements $\xi, \eta$ 
 	for which the Baker-Campbell-Hausdorff series does not converge. 
@@ -2030,7 +2030,81 @@ exponentials? The answer is no, at least under mild additional assumptions.
 		are continuous.
 	\end{propositionlist}
 \end{proposition}
+First of all, we should make clear what ''the Baker-Campbell-Hausdorff series 
+does not converge'' actually means. This may be clear for a finite-dimensional 
+Lie algebra, but in the locally convex setting, it is not that obvious. First, 
+we note here that a sequence in a locally convex space is  convergent [or  
+Cauchy], if it is convergent [or Cauchy] with respect to all $p \in 
+\algebra{P}$. Quite similar to a normed space, we can make the following
+definition.
+\begin{definition}
+	\label{Def:RadiusOfConvergenceLCS}
+	Let $V$ be a locally convex vector space, $\algebra{P}$ the set of 
+	continuous semi-norms and $\alpha = (\alpha_n)_{n \in \mathbb{N}} 
+	\subseteq V$ a sequence in $V$. We set
+	\begin{equation*}
+		\rho_p(\alpha)
+		=
+		\left(
+			\limsup_{n \longrightarrow \infty}
+			\sqrt[n]{p \left(\alpha_n \right)}
+		\right)^{-1}
+	\end{equation*}
+	where $\rho_p(\alpha) = \infty$ if $\limsup_{n \longrightarrow \infty} 
+	\sqrt[n]{p \left(\alpha_n \right)} = 0$ as usual.
+\end{definition}
+From this, we immediately get the two following lemmas.
+\begin{lemma}[Root test in locally convex spaces]
+	\label{Lemma:LCAna:RootTest}
+	Let $V$ be a complete locally convex vector space, $p \in \algebra{P}$ 
+	and $\alpha = (\alpha_n)_{n \in \mathbb{N}} \subseteq V$ a sequence. 
+	Then, if $\rho_p(\alpha) > 1$, the series
+	\begin{equation*}
+		\mathcal{S}_n(\alpha)
+		=
+		\sum\limits_{j = 0}^n
+		\alpha_j
+	\end{equation*}
+	converges absolutely with respect to $p$. If, conversely, this
+	series convegres with respect to $p$, then we have 
+	$\rho_p(\alpha) \geq 1$.	
+\end{lemma}
 \begin{proof}
+	The proof is completely analogous to the one in finite dimensions.
+\end{proof}
+\begin{lemma}
+	\label{Lemma:LCAna:PowerSeriesConvAbs}
+	Let $V$ be a complete locally convex vector space, $p \in \algebra{P}$, 
+	$\alpha = (\alpha_n)_{n \in \mathbb{N}} \subseteq V$ a sequence and
+	$M > 0$. Then, if the power series
+	\begin{equation*}
+		\lim_{n \longrightarrow \infty}
+		\sum\limits_{j = 0}^n
+		\alpha_j z^j
+	\end{equation*}
+	converges for all $z \in \mathbb{C}$ with $|z| \leq M$, it converges
+	absolutely with respect to $p$ for all $z \in \mathbb{C}$ with $|z| < M$.
+\end{lemma}
+\begin{proof}
+	Like in the finite-dimensional setting, we use the root test: Convergence 
+	for $|z| \leq M$ means $\rho_p(\alpha_z) \geq 1$, where we have set 
+	$\alpha_z = (\alpha_n z^n)_{n \in \mathbb{N}}$. Hence, for every $z' < z$ 
+	we get $\rho_p(\alpha_{z'}) > 1$ and absolute convergence by Lemma 
+	\ref{Lemma:LCAna:RootTest}.
+\end{proof}
+Now we can prove a Lemma, from which Proposition 
+\ref{Prop:LCAna:NoBetterTopology} will follow immediately.
+\begin{lemma}
+	Let $\lie{g}$ be an AE Lie algebra and $\Sym^{\bullet}(\lie{g})$ is 
+	endowed with a locally convex topology, such that the conditions $(i) - 
+	(iii)$ from Proposition \ref{Prop:LCAna:NoBetterTopology} are fulfilled. 
+	Then the Baker-Campbell-Hausdorff series converges absolutely for all 
+	$\xi, \eta \in \lie{g}$.
+\end{lemma}
+\begin{proof}
+	We ... 
+\end{proof}
+\begin{proof}[Proof of Proposition \ref{Prop:LCAna:NoBetterTopology}]
 	We will just need the projection $\pi_1$ to the Lie algebra itself. Let 
 	$\xi, \eta \in \lie{g}$ such that $\bch{\xi}{\eta}$ does not exist, i.e.
 	there is a continuous semi-norm $p$ such that the limit
@@ -2117,7 +2191,7 @@ absolutely, since we can write it as a power series.
 
 
 
-\subsection*{Functoriality}
+\subsection{Functoriality}
 
 For $z = 1$, the algebra $\Sym_1^{\bullet}(\lie{g})$ with the 
 Gutt star product $\star_G$ is isomorphic to the universal enveloping 
@@ -2234,8 +2308,13 @@ topology is \emph{not} AE in general. This is even very easy to see:
     diverge for $n \rightarrow \infty$ we will never get an asymptotic
     estimate for $p_R$.
 \end{example}
-Nevertheless, we can draw a nice conclusion from
-Proposition~\ref{Thm:LCAna:Semi-functoriality}:
+
+
+
+\subsection{Representations}
+
+Although the construction is not functiorial, we can draw a nice conclusion 
+from Proposition~\ref{Thm:LCAna:Semi-functoriality}:
 \begin{proposition}
     \label{Thm:LCAna:ContinuousRepresentations}%
     Let $R \geq 1$ and $\mathcal{U}_R(\lie{g})$ the universal

@@ -28,24 +28,27 @@
 \contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{33}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{38}{subsection.5.3.2}
 \contentsline {section}{\numberline {5.4}Functorialty, Representations and an optimal result}{40}{section.5.4}
-\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}An overview}{43}{section.6.1}
-\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{43}{section.6.2}
-\contentsline {section}{\numberline {6.3}The projective limit}{43}{section.6.3}
-\contentsline {section}{\numberline {6.4}A module structure}{43}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Generic case and a counter-example}{43}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Nilpotent case and good news}{43}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Banach Lie algebras and the finite-dimensional case}{43}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Generalizations of nilpotency}{43}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}A new projective Limit}{43}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}A result for the finite-dimensional case}{43}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}The co-product}{45}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{45}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{45}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{45}{section.7.2}
-\contentsline {chapter}{\numberline {8}Examples and remarks}{47}{chapter.8}
-\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{47}{section.8.1}
-\contentsline {section}{\numberline {8.2}Some new ideas}{47}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{47}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{47}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {5.4.1}An optimal result}{40}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Functoriality}{41}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Representations}{42}{subsection.5.4.3}
+\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}An overview}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{45}{section.6.2}
+\contentsline {section}{\numberline {6.3}The projective limit}{45}{section.6.3}
+\contentsline {section}{\numberline {6.4}A module structure}{45}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Generic case and a counter-example}{45}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Nilpotent case and good news}{45}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Banach Lie algebras and the finite-dimensional case}{45}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Generalizations of nilpotency}{45}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}A new projective Limit}{45}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}A result for the finite-dimensional case}{45}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}The co-product}{47}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{47}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{47}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{47}{section.7.2}
+\contentsline {chapter}{\numberline {8}Examples and remarks}{49}{chapter.8}
+\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{49}{section.8.1}
+\contentsline {section}{\numberline {8.2}Some new ideas}{49}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{49}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{49}{subsection.8.2.2}

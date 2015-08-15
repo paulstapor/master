@@ -71,11 +71,18 @@
 \contentsline {proposition}{{Proposition}{5.3.{9}}{}}{39}{lemma.5.3.9}
 \contentsline {proof}{{Proof}{24}{}}{39}{proof.24}
 \contentsline {remark}{{Remark}{5.3.{10}}{}}{39}{lemma.5.3.10}
-\contentsline {proposition}{{Proposition}{5.4.{1}}{}}{40}{lemma.5.4.1}
+\contentsline {proposition}{{Proposition}{5.4.{1}}{Optimality the $R$-topology}}{40}{lemma.5.4.1}
+\contentsline {definition}{{Definition}{5.4.{2}}{}}{40}{lemma.5.4.2}
+\contentsline {lemma}{{Lemma}{5.4.{3}}{Root test in locally convex spaces}}{40}{lemma.5.4.3}
 \contentsline {proof}{{Proof}{25}{}}{40}{proof.25}
-\contentsline {proposition}{{Proposition}{5.4.{2}}{}}{41}{lemma.5.4.2}
+\contentsline {lemma}{{Lemma}{5.4.{4}}{}}{40}{lemma.5.4.4}
 \contentsline {proof}{{Proof}{26}{}}{41}{proof.26}
-\contentsline {example}{{Example}{5.4.{3}}{}}{41}{lemma.5.4.3}
-\contentsline {proposition}{{Proposition}{5.4.{4}}{}}{42}{lemma.5.4.4}
-\contentsline {proof}{{Proof}{27}{}}{42}{proof.27}
-\contentsline {remark}{{Remark}{5.4.{5}}{}}{42}{lemma.5.4.5}
+\contentsline {lemma}{{Lemma}{5.4.{5}}{}}{41}{lemma.5.4.5}
+\contentsline {proof}{{Proof}{27}{}}{41}{proof.27}
+\contentsline {proof}{{Proof}{28}{Proof of Proposition \ref {Prop:LCAna:NoBetterTopology}}}{41}{proof.28}
+\contentsline {proposition}{{Proposition}{5.4.{6}}{}}{42}{lemma.5.4.6}
+\contentsline {proof}{{Proof}{29}{}}{42}{proof.29}
+\contentsline {example}{{Example}{5.4.{7}}{}}{42}{lemma.5.4.7}
+\contentsline {proposition}{{Proposition}{5.4.{8}}{}}{43}{lemma.5.4.8}
+\contentsline {proof}{{Proof}{30}{}}{43}{proof.30}
+\contentsline {remark}{{Remark}{5.4.{9}}{}}{43}{lemma.5.4.9}
