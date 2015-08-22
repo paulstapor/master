@@ -608,7 +608,33 @@ Since we have a formula for $\star_z$ which involves the
 Baker-Campbell-Hausdorff series, we want to give a short overview
 about it and introduce some results, that will be helpful later on.
 Note however, that there is not \emph{the} BCH formula, since one can always 
-rearrange terms using antisymmetry, Jacobi and higher identities.
+rearrange terms using antisymmetry, Jacobi and higher identities, but for 
+$\xi, \eta \in \lie{g}$ for some Lie algebra $\lie{g}$, we can always write it 
+as
+\begin{equation}
+	\label{Alg:NamesOfBCH}
+	\bch{\xi}{\eta}
+	=
+	\sum\limits_{n = 1}^{\infty}
+	\bchpart{n}{\xi}{\eta}
+	=
+	\sum\limits_{a,b = 0}^{\infty}
+	\bchparts{a}{b}{\xi}{\eta},
+\end{equation}
+where $\bchpart{n}{\xi}{\eta}$ denotes all expressions having $n$ letters and 
+$\bchparts{a}{b}{\xi}{\eta}$ denotes all expressions with $a$ $\xi$'s and $b$ 
+$\eta$'s. Clearly we have
+\begin{equation*}
+	\bchpart{n}{\xi}{\eta}
+	=
+	\sum\limits_{b + b = n}
+	\bchparts{a}{b}{\xi}{\eta}.
+\end{equation*}
+This only postpones the problem of non-uniqueness to the partial expressions, 
+but it will be helpful, since we don't have to choose a special form for 
+writing BCH every time.
+
+
 
 \subsection{Some general and historical remarks}
 Let a noncommutative algebra $\algebra{A}$ be given. For $\xi, \eta \in 
@@ -1342,13 +1368,12 @@ The first step is associativity, since it will simplify the proof later.
 Note that for a star product, the maps must fulfil the classical and the 
 semi-classical limit. This will be done in Corollary 
 \ref{Formulas:Cor:LimitCases}. It is left to show, that the star product are 
-in fact equal. It is enough to show that 
-they coincide for terms of the form $\xi^k \star \eta$ with $\xi, \eta \in 
-\lie{g}$ and $k \in \mathbb{N}$, since we get them on homogeneous 
-polynomials of the form $\xi_1 \ldots \xi_k \star \eta$ by polarization 
-and for two polynomials like $\xi_1 \ldots \xi_k \star \eta_1 \ldots 
-\eta_{\ell}$ by iteration, which is possible due to associativity.
-The next lemma will be a first big step:
+in fact equal. It is enough to show that they coincide for terms of the form 
+$\xi^k \star \eta$ with $\xi, \eta \in \lie{g}$ and $k \in \mathbb{N}$, since 
+we get them on homogeneous polynomials of the form $\xi_1 \ldots \xi_k \star 
+\eta$ by polarization and for two polynomials like $\xi_1 \ldots \xi_k \star 
+\eta_1 \ldots \eta_{\ell}$ by iteration, which is possible due to 
+associativity. The next lemma will be a first big step:
 \begin{lemma}
 	Let $\lie{g}$ be a Lie algebra, then we have
 	\begin{equation}
