@@ -58,7 +58,7 @@ we will use that
 \end{equation}
 We now have all the ingredients to prove the following proposition:
 \begin{lemma}
-    \label{Lemma:Formulas:LinearMonomial1}
+    \label{Formulas:Lemma:LinearMonomial1}
     Let $\lie{g}$ be a Lie algebra and $\xi, \eta \in \lie{g}$. We
     have the following identity for the BCH star product $\star_{zG}$
     \begin{equation}
@@ -859,36 +859,73 @@ fulfil the classical and the semi-classical limit from Definition
 formula we set up really gives the same result.
 
 \begin{corollary}
-	\label{Cor:Formulas:LimitCases}
-	Given two arbitrary tensors $x,y \in \Sym^{\bullet}(\lie{g})$, we find
+	\label{Formulas:Cor:LimitCases}
+	Let $\lie{g}$ be a Lie algebra and $\Sym^{\bullet}(\lie{g})$ edowed with 
+	the Gutt star product
 	\begin{equation*}
-		x \star_{zG} y
-		=
-		C_0(x, y) + z C_1(x, y) + 
-		\sum\limits_{n = 2}^{\deg x + \deg y - 1} 
+		x \star_z y
+		= 
+		\sum\limits_{n = 0}^{\infty}
 		z^n C_n(x,y).
-	\end{equation*}
-	The $C_n$ satisfy the identities
-	\begin{equation*}
-		C_0(x,y)
-		= 
-		xy
-	\end{equation*}
-	and 
-	\begin{equation*}
-		C_1(x,y) - C_1(y,x)
-		= 
-		\left\{ x, y \right\}_{KKS}
-	\end{equation*}
-	where $\{ \cdot, \cdot \}_{KKS}$ denotes the Kirillov-Kostant-Souriau 
-	bracket.
+	\end{equation*}	
+	\begin{corollarylist}
+		\item
+		On factorizing tensors $\xi_1 \ldots \xi_k$ and $\eta_1 \ldots 
+		\eta_{\ell}$, $C_0$ and $C_1$ give
+		\begin{align}
+			\label{Formulas:ClassicalLimit}
+			C_0 \left(
+				\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell}
+			\right)
+			& = 
+			\xi_1 \ldots \xi_k \eta_1 \ldots \eta_{\ell}
+			\\
+			\label{Formulas:SemiClassicalLimit}
+			C_1 \left(
+				\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell}
+			\right)
+				& =
+			\frac{1}{2}	
+			\sum\limits_{i = 1}^k
+			\sum\limits_{j = 1}^{\ell}
+			\xi_1 \ldots \widehat{\xi_i} \ldots \xi_k
+			\eta_1 \ldots \widehat{\eta_j} \ldots \eta_{\ell}
+			[\xi_i \eta_j],
+		\end{align}
+		where the hat denotes elements which are left out.
+		
+		\item
+		If $\lie{g}$ is finite-dimensional and we use the canonical 
+		isomorphism $\mathcal{J} \colon \Sym^{\bullet}(\lie{g}) 
+		\longrightarrow \Pol^{\bullet}(\lie{g}^*)$, we have for
+		$f,g \in \Pol^{\bullet}(\lie{g}^*)$
+		\begin{equation*}
+			C_1 \left(
+				\mathcal{J} (f),
+				\mathcal{J} (g)
+			\right)
+			-
+			C_1 \left(
+				\mathcal{J} (f),
+				\mathcal{J} (g)
+			\right)
+			= 
+			\mathcal{J}^{-1} \left( 
+				\{ f, g \}_{KKS}
+			\right)
+		\end{equation*}
+		where $\{ \cdot, \cdot \}_{KKS}$ is the Kirillov-Kostant-Souriau 
+		bracket.
+		
+		\item
+		The map $\star_z$ fulfils the classical and the semi-classical limit 
+		and is therefore a star product.
+	\end{corollarylist}
 \end{corollary}
 \begin{proof}
-	Since the $C_n$ are bilinear, it is sufficient to check those identities 
-	on factorizing tensors. Again we take $\xi_1 \ldots \xi_k, \eta_1 \ldots 
-	\eta_{\ell} \in \Sym^{\bullet}(\lie{g})$. We have to look at the 
-	G-indices in $\mathcal{G}_{k + \ell}(k, \ell)$. This is easy, since there 
-	is just one element inside:
+	We take $\xi_1 \ldots \xi_k, \eta_1 \ldots \eta_{\ell} \in \Sym^{\bullet}
+	(\lie{g})$ and consider the 	G-indices in $\mathcal{G}_{k + \ell}(k, \ell)$ 
+	first. This is easy, since there is just one element inside:
 	\begin{equation*}
 		\mathcal{G}_{k + \ell}(k, \ell)
 		=
@@ -923,7 +960,7 @@ formula we set up really gives the same result.
 		\ldots
 		\bchparts{1}{0}{\eta_{\tau(\ell)}}{\varnothing}
 		\\
-		& \ot{(a)}{=}
+		& =
 		\sum\limits_{\sigma \in S_k}
 		\sum\limits_{\tau \in S_{\ell}}
 		\frac{1}{k! \ell!}
@@ -934,9 +971,9 @@ formula we set up really gives the same result.
 		\xi_{\sigma(1)} \ldots \xi_{\sigma(k)}
 		\eta_{\tau(1)} \ldots \eta_{\tau(\ell)}
 	\end{align*}
-	where we used $J! = k! \ell!$ in (a) according to Definition 
-	\ref{Def:GuttFactorial}. We do the same for $C_1(\ldots)$. Also here, 
-	there is just one element in $\mathcal{G}_{k + \ell - 1}(k, \ell)$:
+	where we used $J! = k! \ell!$  according to 
+	Definition~\ref{Def:GuttFactorial}. We do the same for $C_1(\ldots)$. Also 
+	here, we have just one element in $\mathcal{G}_{k + \ell - 1}(k, \ell)$:
 		\begin{equation*}
 		\mathcal{G}_{k + \ell}(k, \ell)
 		=
@@ -954,13 +991,13 @@ formula we set up really gives the same result.
 			)
 		\Big\}.
 	\end{equation*}
-	Of course we have
+	Using
 	\begin{equation*}
 		\bchparts{1}{1}{\xi}{\eta}
 		=
 		\frac{1}{2} [\xi, \eta]
 	\end{equation*}
-	and find with $J! = (k - 1)! (\ell - 1)!$ 
+	and $J! = (k - 1)! (\ell - 1)!$, we find
 	\begin{align*}
 		C_1 
 		\left(
@@ -981,10 +1018,10 @@ formula we set up really gives the same result.
 		\sum\limits_{j = 0}^{\ell}
 		\xi_1 \ldots \widehat{\xi_i} \ldots \xi_k
 		\eta_1 \ldots \widehat{\eta_j} \ldots \eta_{\ell}
-		[\xi_i, \eta_j]
+		[\xi_i, \eta_j].
 	\end{align*}
-	where the hat means that the $\xi_i$ and the $\eta_j$ are left out. From 
-	this, the anti-symmetry of the Lie bracket yields
+	This finishes part one. From this, the anti-symmetry of the Lie bracket 
+	yields
 	\begin{equation*}
 		C_1 
 		\left(
@@ -1002,14 +1039,62 @@ formula we set up really gives the same result.
 		\eta_1 \ldots \widehat{\eta_j} \ldots \eta_{\ell}
 		[\xi_i, \eta_j].
 	\end{equation*}
-	We just need to verify, that this is really the KKS-Poisson bracket for 
-	given polynomials $\xi_1 \ldots \xi_k$ and $\eta_1 \ldots \eta_{\ell}$.
+	We now need to compute the KKS brackets on polynomials. Because of the 
+	linearity in both arguments, it is sufficient to check it on monomials of 
+	coordinates. Let $e_1, \ldots, e_n$ be a basis with linear coordinates 
+	$x_1, \ldots, x_n$. Now take $\mu_1, \ldots, \mu_n, \nu_1, \ldots \nu_n 
+	\in \mathbb{N}$ and 	consider the monomials $f = x_1^{\mu_1} \ldots 
+	x_n^{\mu_n}$ and $g = x_1^{\nu_1} \ldots x_n^{\nu_n}$. We use the 
+	notation fronm Proposition~\ref{Alg:Prop:LinPoissonIsLieAlg} and find
+	for $x \in \lie{g}^*$
+	\begin{align*}
+		\{ f, g \}_{KKS}(x)
+		& =
+		x_k c_{ij}^k
+		\frac{\partial f}{\partial x_i}
+		\frac{\partial g}{\partial x_j}
+		\\
+		& =
+		\mu_i \nu_j c_{ij}^k
+		x_k 
+		x_1^{\mu_1} \ldots x_i^{\mu_i - 1} \ldots x_n^{\mu_n}
+		x_1^{\nu_1} \ldots x_j^{\nu_j - 1} \ldots x_n^{\nu_n}.
+	\end{align*}
+	Applying $\mathcal{J}^{-1}$ to it gives
+	\begin{equation}
+		\label{Formulas:SemiClassicalIntermediate}
+		\mathcal{J}^{-1}
+		\left(
+			\{ f, g \}_{KKS}
+		\right)
+		=
+		\sum\limits_{i=0}^n
+		\sum\limits_{j=0}^n
+		\mu_i \nu_j
+		e_1^{\mu_1} \ldots e_i^{\mu_i - 1} \ldots e_n^{\mu_n}
+		e_1^{\nu_1} \ldots e_j^{\nu_j - 1} \ldots e_n^{\nu_n}
+		[e_i, e_j].
+	\end{equation}
+	On the other hand, we have
+	\begin{equation*}
+		\mathcal{J}(f)
+		=
+		e_1^{\mu_1} \ldots e_n^{\mu_n}
+		\quad \text{ and } \quad
+		\mathcal{J}(g)
+		=
+		e_1^{\nu_1} \ldots e_n^{\nu_n}.
+	\end{equation*}
+	Together with \eqref{Formulas:SemiClassicalLimit} this is exactly 
+	\eqref{Formulas:SemiClassicalIntermediate} and proves part two.
+	From this, the third part is immediate, due to the bilinearity of 
+	the $C_n$.
 \end{proof}
 Moreover, we have compatibility of the bigger formula from Proposition 
 \ref{Prop:2MonomialsFormula2} with the smaller one from Proposition 
 \ref{Prop:Formulas:LinearMonomial2}.
 \begin{corollary}
-	\label{Cor:Formulas:FormulasCoincide}
+	\label{Formulas:Cor:FormulasCoincide}
 	Given $\xi_1, \ldots, \xi_k, \eta \in \lie{g}$, the results of the two 
 	Equations \eqref{Formulas:2MonomialsFormula2} and 
 	\eqref{Formulas:LinearMonomial2} coincide.

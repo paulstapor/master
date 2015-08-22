@@ -4,50 +4,57 @@
 \BOOKMARK [1][-]{section.2.2}{Why Deformation quantization}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{The long way from formal to strict}{chapter.2}% 5
 \BOOKMARK [0][-]{chapter.3}{Algebraic Preliminaries}{}% 6
-\BOOKMARK [1][-]{section.3.1}{Linear Poisson structures}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.2}{The universal enveloping algebra}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.3}{The Baker-Campbell-Hausdorff formula}{chapter.3}% 9
-\BOOKMARK [0][-]{chapter.4}{Formulas for the Gutt star product}{}% 10
-\BOOKMARK [1][-]{section.4.1}{Formulas for the Gutt star product}{chapter.4}% 11
-\BOOKMARK [2][-]{subsection.4.1.1}{An Iterative Approach from Linear Terms}{section.4.1}% 12
-\BOOKMARK [2][-]{subsection.4.1.2}{A first general Formula}{section.4.1}% 13
-\BOOKMARK [2][-]{subsection.4.1.3}{A Formula for two Monomials}{section.4.1}% 14
-\BOOKMARK [1][-]{section.4.2}{Consequences and examples}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.3}{Low-Verifications of the formulas}{chapter.4}% 16
-\BOOKMARK [2][-]{subsection.4.3.1}{First verifications with Mathematica}{section.4.3}% 17
-\BOOKMARK [2][-]{subsection.4.3.2}{Ideas for an algorithm beyond}{section.4.3}% 18
-\BOOKMARK [0][-]{chapter.5}{A locally convex topology for the Gutt star product}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Why locally convex?}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{Locally convex algebras}{chapter.5}% 21
-\BOOKMARK [2][-]{subsection.5.2.1}{Locally convex spaces and algebras}{section.5.2}% 22
-\BOOKMARK [2][-]{subsection.5.2.2}{A special class of locally convex algebras}{section.5.2}% 23
-\BOOKMARK [2][-]{subsection.5.2.3}{The projective tensor product}{section.5.2}% 24
-\BOOKMARK [2][-]{subsection.5.2.4}{A topology for the Gutt star product}{section.5.2}% 25
-\BOOKMARK [1][-]{section.5.3}{Continuity results for the Gutt star product}{chapter.5}% 26
-\BOOKMARK [2][-]{subsection.5.3.1}{Continuity of the product}{section.5.3}% 27
-\BOOKMARK [2][-]{subsection.5.3.2}{Dependence on the formal parameter}{section.5.3}% 28
-\BOOKMARK [1][-]{section.5.4}{Functorialty, Representations and an optimal result}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.4.1}{An optimal result}{section.5.4}% 30
-\BOOKMARK [2][-]{subsection.5.4.2}{Functoriality}{section.5.4}% 31
-\BOOKMARK [2][-]{subsection.5.4.3}{Representations}{section.5.4}% 32
-\BOOKMARK [0][-]{chapter.6}{Nilpotent Lie algebras}{}% 33
-\BOOKMARK [1][-]{section.6.1}{An overview}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.2}{The Heisenberg and the Weyl algebra}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.3}{The projective limit}{chapter.6}% 36
-\BOOKMARK [1][-]{section.6.4}{A module structure}{chapter.6}% 37
-\BOOKMARK [2][-]{subsection.6.4.1}{Generic case and a counter-example}{section.6.4}% 38
-\BOOKMARK [2][-]{subsection.6.4.2}{Nilpotent case and good news}{section.6.4}% 39
-\BOOKMARK [1][-]{section.6.5}{Banach Lie algebras and the finite-dimensional case}{chapter.6}% 40
-\BOOKMARK [2][-]{subsection.6.5.1}{Generalizations of nilpotency}{section.6.5}% 41
-\BOOKMARK [2][-]{subsection.6.5.2}{A new projective Limit}{section.6.5}% 42
-\BOOKMARK [2][-]{subsection.6.5.3}{A result for the finite-dimensional case}{section.6.5}% 43
-\BOOKMARK [0][-]{chapter.7}{The Hopf algebra structure}{}% 44
-\BOOKMARK [1][-]{section.7.1}{The co-product}{chapter.7}% 45
-\BOOKMARK [2][-]{subsection.7.1.1}{A formula for the co-product}{section.7.1}% 46
-\BOOKMARK [2][-]{subsection.7.1.2}{Continuity for the co-product}{section.7.1}% 47
-\BOOKMARK [1][-]{section.7.2}{The whole Hopf algebra structure}{chapter.7}% 48
-\BOOKMARK [0][-]{chapter.8}{Examples and remarks}{}% 49
-\BOOKMARK [1][-]{section.8.1}{Some classical Lie algebra}{chapter.8}% 50
-\BOOKMARK [1][-]{section.8.2}{Some new ideas}{chapter.8}% 51
-\BOOKMARK [2][-]{subsection.8.2.1}{A subalgebra of the Weyl algebra}{section.8.2}% 52
-\BOOKMARK [2][-]{subsection.8.2.2}{Holomorphic vector fields}{section.8.2}% 53
+\BOOKMARK [1][-]{section.3.1}{Linear Poisson structures in infinite dimensions}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{The Gutt star product}{chapter.3}% 8
+\BOOKMARK [2][-]{subsection.3.2.1}{The universal enveloping algebra}{section.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.2.2}{The Poincar\351-Birkhoff-Witt theorem}{section.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.2.3}{The Gutt star product}{section.3.2}% 11
+\BOOKMARK [1][-]{section.3.3}{The Baker-Campbell-Hausdorff series}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.3.1}{Some general and historical remarks}{section.3.3}% 13
+\BOOKMARK [2][-]{subsection.3.3.2}{Forms of the BCH}{section.3.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.3}{The Goldberg-Thompson formula and some results}{section.3.3}% 15
+\BOOKMARK [1][-]{section.3.4}{The Equality of the Star Products}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Formulas for the Gutt star product}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Formulas for the Gutt star product}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.1.1}{An Iterative Approach from Linear Terms}{section.4.1}% 19
+\BOOKMARK [2][-]{subsection.4.1.2}{A first general Formula}{section.4.1}% 20
+\BOOKMARK [2][-]{subsection.4.1.3}{A Formula for two Monomials}{section.4.1}% 21
+\BOOKMARK [1][-]{section.4.2}{Consequences and examples}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Low-Verifications of the formulas}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.3.1}{First verifications with Mathematica}{section.4.3}% 24
+\BOOKMARK [2][-]{subsection.4.3.2}{Ideas for an algorithm beyond}{section.4.3}% 25
+\BOOKMARK [0][-]{chapter.5}{A locally convex topology for the Gutt star product}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Why locally convex?}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Locally convex algebras}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.2.1}{Locally convex spaces and algebras}{section.5.2}% 29
+\BOOKMARK [2][-]{subsection.5.2.2}{A special class of locally convex algebras}{section.5.2}% 30
+\BOOKMARK [2][-]{subsection.5.2.3}{The projective tensor product}{section.5.2}% 31
+\BOOKMARK [2][-]{subsection.5.2.4}{A topology for the Gutt star product}{section.5.2}% 32
+\BOOKMARK [1][-]{section.5.3}{Continuity results for the Gutt star product}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.3.1}{Continuity of the product}{section.5.3}% 34
+\BOOKMARK [2][-]{subsection.5.3.2}{Dependence on the formal parameter}{section.5.3}% 35
+\BOOKMARK [1][-]{section.5.4}{Functorialty, Representations and an optimal result}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.4.1}{An optimal result}{section.5.4}% 37
+\BOOKMARK [2][-]{subsection.5.4.2}{Functoriality}{section.5.4}% 38
+\BOOKMARK [2][-]{subsection.5.4.3}{Representations}{section.5.4}% 39
+\BOOKMARK [0][-]{chapter.6}{Nilpotent Lie algebras}{}% 40
+\BOOKMARK [1][-]{section.6.1}{An overview}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{The Heisenberg and the Weyl algebra}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.3}{The projective limit}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.4}{A module structure}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.4.1}{Generic case and a counter-example}{section.6.4}% 45
+\BOOKMARK [2][-]{subsection.6.4.2}{Nilpotent case and good news}{section.6.4}% 46
+\BOOKMARK [1][-]{section.6.5}{Banach Lie algebras and the finite-dimensional case}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.5.1}{Generalizations of nilpotency}{section.6.5}% 48
+\BOOKMARK [2][-]{subsection.6.5.2}{A new projective Limit}{section.6.5}% 49
+\BOOKMARK [2][-]{subsection.6.5.3}{A result for the finite-dimensional case}{section.6.5}% 50
+\BOOKMARK [0][-]{chapter.7}{The Hopf algebra structure}{}% 51
+\BOOKMARK [1][-]{section.7.1}{The co-product}{chapter.7}% 52
+\BOOKMARK [2][-]{subsection.7.1.1}{A formula for the co-product}{section.7.1}% 53
+\BOOKMARK [2][-]{subsection.7.1.2}{Continuity for the co-product}{section.7.1}% 54
+\BOOKMARK [1][-]{section.7.2}{The whole Hopf algebra structure}{chapter.7}% 55
+\BOOKMARK [0][-]{chapter.8}{Examples and remarks}{}% 56
+\BOOKMARK [1][-]{section.8.1}{Some classical Lie algebra}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.2}{Some new ideas}{chapter.8}% 58
+\BOOKMARK [2][-]{subsection.8.2.1}{A subalgebra of the Weyl algebra}{section.8.2}% 59
+\BOOKMARK [2][-]{subsection.8.2.2}{Holomorphic vector fields}{section.8.2}% 60

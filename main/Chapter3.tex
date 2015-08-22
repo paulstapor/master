@@ -7,118 +7,1745 @@
 \chapter{Algebraic Preliminaries}
 
 
-\section{Linear Poisson structures}
+\section{Linear Poisson structures in infinite dimensions}
 \label{sec:chap3_LinearPoisson}
 
 As we have seen before, there has already been done some work on how to 
-strictly quantize local Poisson structures. The Weyl-Moyal-product on locally 
-convex vector spaces was topologized by Stefan Waldmann in 
+strictly quantize Poisson structures on vector spaces. The Weyl-Moyal-product 
+on locally convex vector spaces was topologized by Stefan Waldmann in 
 \cite{Wladmann:2004:Nuclear} and then investigated more closely by Matthias 
-Schötz in \cite{Schoetz:Master}. It is thus clear that in the next step linear 
-Poisson structures on locally convex vector spaces should be done. This will 
-give a new big class of Poisson structures, which will be deformable in a 
+Schötz in \cite{Schoetz:Master}. It is thus clear that in the next step 
+linear Poisson structures on locally convex vector spaces should be done. This 
+will give a new big class of Poisson structures, which will be deformable in a 
 strict way. Before we do so in the rest of this master thesis, we recall 
 briefly some basics on linear Poisson structures.
-\begin{remark}[The axiom of choice]
-	Our final goal is to  do some locally convex functional analysis. Since in 
-	this game it is mandatory for us to sell our souls to the devil for the 
-	sake of the axiom of choice (e.g. in form of the Hahn-Banach theorem and 
-	the projective tensor product), there is no point in not doing it right 
-	from the beginning.
-\end{remark}
-First of all, linear Poisson structures are actually something familiar: 
-We will always take a vector space $V$ and look at Poisson structures on its 
-dual space $V^*$. But a linear Poisson structure on $V^*$ is nothing but the 
-structure of a Lie algebra on $V$ itself, at least for finite-dimensional 
-vector spaces.
+
+
+We will always take a vector space $V$ and look at Poisson structures on the 
+coordinates which are elements of the dual space $V^*$. In order to cover most 
+of the physically interesting examples by our reflections, our aim will be 
+locally convex vector spaces. Here we have to think about what coordinates 
+should be and how a Poisson structure on them could look like. A priori, it is 
+not even clear which dual we should consider: the algebraic dual $V^*$ of all 
+linear forms on $V$, or the topological dual $V'$ which contains just the 
+continuous linear forms. Here, one could argue that only $V'$ is of real 
+interest, since otherwise we would encounter the very strange effect of having 
+discontinuous polynomials, and constructing a continuous star product on this 
+space seems somehow pointless. But even if we stick to $V'$, it still remains 
+the question if we want to consider the weak or the strong topology there and 
+why one of them should be better. Once this is done, we have to think about a 
+generalization of Poisson tensors to this context. These are just the very 
+first problems which come up and they won't be the last. For this reason, it 
+is worth looking at some equivalent formulations of $Pol(V^*)$, since they 
+may allow for better generalizations. To do so, we have to go back to the 
+finite-dimensional case.
+
+Let $V$ be a finite dimensional vector space. There is now no questions 
+about the dual or its topology, since $V^* = V'$ is finite-dimensional, too, 
+and we deal with polynomials on it. But a linear Poisson structure on $V^*$ is 
+something very familiar: It is equivalent to a Lie algebra structure on $V$.
 \begin{proposition}
-	\label{Prop:Alg:LinPoissonIsLieAlg}
+	\label{Alg:Prop:LinPoissonIsLieAlg}
 	Let $V$ be a vector-space of dimension $n \in \mathbb{N}$ and $\pi \in 
 	\Secinfty(\Anti^2(TV^*))$. Then the two following things are 
 	equivalent:
 	\begin{propositionlist}
 		\item
-		$\pi$ is a Poisson tensor.
+		$\pi$ is a linear Poisson tensor.
 		
 		\item
 		$V$ has a uniquely determined Lie algebra structure.
 	\end{propositionlist}
 \end{proposition}
 \begin{proof}
-	First, we want to think of what it means, that $\pi$ is a Poisson tensor. 
-	It is already a antisymmetric bi-vectorfield. The only thing which it must 
-	satisfy is the Jacobi-identity.
+	We choose a basis $e_1, \ldots, e_n \in V$ and denote its dual basis $e^1, 
+	\ldots, e^n \in V^*$. Then we call the linear coordinates in these bases 
+	$x_1, \ldots, x_n \in \Cinfty(V^*)$ and $\xi^1, \ldots, \xi^n \in 
+	\Cinfty(V)$, such that for all $\xi \in V, x \in V^*$
+	\begin{equation*}
+		\xi
+		=
+		\xi^i(\xi) e_i
+		\quad \text{ and } \quad
+		x
+		=
+		x_i (x) e^i.
+	\end{equation*}
+	In these coordinates, the Poisson tensor reads
+	\begin{equation*}
+		\pi
+		=
+		\frac{1}{2}
+		\pi_{ij}
+		\frac{\partial}{\partial x_i}
+		\wedge
+		\frac{\partial}{\partial x_j},
+	\end{equation*}
+	where $\pi$ is linear in the coordinates and we have
+	\begin{equation*}
+		\pi_{ij}(x)
+		=
+		c_{ij}^k x_k.
+	\end{equation*}
+	This equivalent to a tensor
+	\begin{equation*}
+		c
+		=
+		\frac{1}{2}
+		c_{ij}^k 
+		e_k \tensor e^i \wedge e^j
+	\end{equation*}
+	which gives for $f,g \in \Cinfty(V^*)$
+	\begin{equation}
+		\label{Alg:KksInCoordinates}
+		\{f, g\} (x)
+		=
+		\pi(df, dg)(x)
+		=
+		x_k c_{ij}^k 
+		\frac{\partial f}{\partial x_i}
+		\frac{\partial g}{\partial x_j},
+	\end{equation}
+	using the identification $T^*V^* \cong V^{**} \cong V$.
+	But now, the statement is obvious, since antisymmetry of $\pi$ means
+	antisymmetry of the $c_{ij}^k$ in the indices $i$ and $j$ and the Jacobi
+	identity for the Poisson tensor gives
+	\begin{equation}
+		\label{Alg:JacobiInStructureConst}
+		c_{ij}^\ell c_{\ell k}^m
+		+
+		c_{j k}^\ell c_{\ell i}^m
+		+
+		c_{ki}^\ell c_{\ell j}^m
+		=
+		0
+	\end{equation}
+	for all $i, j, k, m$, since it must be fulfilled for all smooth functions.
+	Vicely versa, \eqref{Alg:JacobiInStructureConst} ensures the Jacobi 
+	identity of $\pi$ in \eqref{Alg:KksInCoordinates}. Hence the map
+	\begin{equation}
+		\label{Alg:LieBracketOfKks}
+		[ \cdot, \cdot ]
+		\colon
+		V
+		\times
+		V
+		\longrightarrow
+		V
+		\quad
+		(e_i, e_j)
+		\longmapsto
+		c_{ij}^k e_k
+	\end{equation}
+	defines a Lie bracket, since the $c_{ij}^k$ are antisymmetric and fulfil 
+	the Jacobi identity and are therefore structures constants. Conversely, 
+	the structure constants of a Lie algebra on $V$ define a Poisson tensor on 
+	$V^*$ via \eqref{Alg:KksInCoordinates}.
 \end{proof}
 
 
-We are interested in the polynomial algebra on the dual of the original vector 
-space, since the construction is inspired by the formal deformation 
-quantization on the cotangent bundle $T^*G$ of a Lie group $G$, which was 
-investigated in \cite{BNW:1998:TStarQ1}. Now we know, that this original 
-vector space really is a Lie algebra and for this reason we will call it in 
-the following $\lie{g}$. 
+Since we know now, that $V$ is actually a Lie algebra, we will call it 
+$\lie{g}$ from now on. Since they carry additional structure, these Poisson 
+systems have a special name.
+\begin{definition}[Kirillov-Kostant-Souriau bracket]
+	\label{Def:KKS}
+	Let $\lie{g}$ be a finite-dimensional Lie algebra. Then the Poisson 
+	bracket $\{ \cdot , \cdot \}_{KKS}$, which is given by 
+	Proposition~\ref{Alg:Prop:LinPoissonIsLieAlg} on $\lie{g}^*$ is called the 
+	Kirillov-Kostant-Souriau bracket.
+\end{definition}
 
 
-The polynomial algebra $\Pol(\lie{g}^*)$ has many appearances and it is not an 
-easy question how the find a good generalization for infinite-dimensional 
-vector spaces. One could of course think of a good definition of the 
-polynomial functions on the dual of an infinite-dimensional Lie algebra $g$. 
-In order to keep the very most of the physically interesting cases in there, 
-we will assume it to be locally convex. But we know, that even the topological 
-dual $\lie{g}'$ will be a huge vector space and whatever the polynomials there 
-should be, there will be a lot of them. We will furthermore not be able to 
-find the nice correspondence of the Lie algebra structure on $\lie{g}$ and the 
-linear polynomials on $\lie{g}'$, since the procedure we used involved the 
+
+The correspondence from Proposittion~\ref{Alg:Prop:LinPoissonIsLieAlg} is a 
+first hint how we could extend our ideas to infinite dimensionsal systems. 
+Unfortunately, we will not be able to find this nice 
+correspondence of a Lie algebra structure on $\lie{g}$ and the linear 
+polynomials on $\lie{g}'$, since the procedure we used involves the 
 double-dual of $\lie{g}$. In general, this will be really bigger than 
-$\lie{g}$ and starting from a linear Poisson structure on $\lie{g}'$, we will 
-find a Lie algebra structure on $\lie{g}''$. Of course, we could just use the 
-canonical embedding $\lie{g} \subseteq \lie{g}''$, but it could (and, in 
-general, it will) happen, that the Lie bracket of $x,y \in \lie{g}$ will not 
-be in $\lie{g}$ any more, but just in its double-dual. In most of the physical 
-cases, we are actually not interested in the double-dual, but in the original 
-vector space.
+$\lie{g}$ itself, and starting from some analogon of a linear Poisson 
+structure on $\lie{g}'$, we will find a Lie algebra structure on $\lie{g}''$. 
+Of course, we could just use the canonical embedding $\lie{g} \subseteq 
+\lie{g}''$, but it could (and, in general, it will) happen, that the Lie 
+bracket of $x,y \in \lie{g}$ will not be in $\lie{g}$ any more, but just in 
+its double-dual. In most of the physical cases, we are actually not interested 
+in the double-dual, but in the original vector space. Therefore, it seems to 
+be a good choice to translate ''linear Poisson structure on $\lie{g}^*$'' as 
+''$\lie{g}$ is a Lie algebra'' in infinite dimensions. Remark however that 
+this is a choice and not a necessity, and other choices would have been 
+possible.
 
-The little reflection shows, that we will have to think of a different 
-generalization of linear Poisson structure for the infinite-dimensional case.
-Luckily, in the finite-dimensional case, there's a different way of seeing the 
-polynomials on $\lie{g}^* = \lie{g}'$, which allows a much easier 
-generalization to infinite dimensions: It is the symmetric tensor algebra over 
-$\lie{g}$ itself.
+
+The next task are the polynomials on $\lie{g}'$. As already mentioned, it is 
+not easy to find a good generalization for them, since for a locally convex 
+Lie algebra $\lie{g}$, even $\lie{g}'$ will be a rather huge vector space. 
+Again, it is helpful to go back to the finite-dimensional case, where we have 
+the following result:
 \begin{proposition}
-	\label{Prop:Alg:PolIsSym}
+	\label{Alg:Prop:PolIsSym}
 	Let $\lie{g}$ be a vector space of dimension $n \in \mathbb{N}$. Then 
-	the algebras $\Sym^{\bullet}(\lie{g})$ and $\Pol(\lie{g}^*)$ are 
-	canonically isomorphic.
+	the algebras $\Sym^{\bullet}(\lie{g})$ and $\Pol^{\bullet}(\lie{g}^*)$ 
+	are canonically isomorphic.
 \end{proposition}
 \begin{proof}
-	Again via basis and double-dual...
+	since this is a very well-known result, we just want to sketch the proof 
+	briefly: Take a basis $e_1, \ldots, e_n$ of $\lie{g}$ and its linear 
+	coordinates $x_1, \ldots, x_n \in \Cinfty(\lie{g}^*)$ with $x_i(\xi) = 
+	e_i(\xi)$ for $\xi \in \lie{g}^*$. On homogeneous symmetric tensors this 
+	yields the map
+	\begin{equation*}
+		\mathcal{J}
+		\colon
+		\Sym^{\bullet}(\lie{g})
+		\longrightarrow
+		\Pol^{\bullet}(\lie{g}^*),
+		\quad
+		e_1^{\mu_1} \ldots e_n^{\mu_n}
+		\longmapsto
+		\xi_1^{\mu_1} \ldots \xi_n^{\mu_n}.
+	\end{equation*}
+	From the construction, we see that this is an isomorphism, but note, that 
+	we have used the identification $\lie{g}^{**} \cong \lie{g}$ via
+	\begin{equation*}
+		e_i(\xi)
+		=
+		\langle \xi, e_i \rangle.
+	\end{equation*}
 \end{proof}
-Here again, we used the double dual, so one could ask why this situation 
-should differ from the foregoing one. But there is a difference: instead of 
-looking at $\Sym^{\bullet}(\lie{g}^{**})$ we can directly restrict to 
-$\Sym^{\bullet}(\lie{g})$. This is a setting in which closedness of the 
-Poisson bracket is automatically fulfilled, since we don't to to characterize 
-the object in $\Sym^{\bullet}(\lie{g}) \subseteq \Sym^{\bullet}
-(\lie{g}^{**})$. We can take the interesting linear Poisson structure on 
-$\Pol(\lie{g}^*)$ directly to be bilinear maps
+This gives a new idea for generalizing $\Pol(\lie{g}^*)$. One could argue that 
+this isomorphism also uses the double dual which we wanted to avoid, since we 
+could ''drop out'' of our original algebra and end up in $\Sym^{\bullet}
+(\lie{g}^{**})$. Luckily, things are different now, and this is not possible. 
+We can extend the Poisson bracket on $\lie{g}$ as a bi-derivation to 
+$\Sym^{\bullet}(\lie{g})$ and get a closed Poisson algebra now. This way, we 
+never even need to talk about $\Sym^{\bullet}(\lie{g}^{**})$. Of course, 
+$\Sym^{\bullet}(\lie{g})$ only injects in $\Pol(\lie{g}')$ and we don't have 
+an isomorphism any more, but we have good reason to think that this is enough: 
+we get a closed and reasonably big subalgebra of of the polynomials. Moreover, 
+the symmetric tensor algebra is defined on infinite-dimensional spaces 
+exactly in the syme way as on finite-dimensional ones, there is no question 
+about how to generalize, the construction is canonical.
+
+
+Finally, we found a suitable way of speaking about object of interest: We 
+replace linear Poisson structures on $\Pol^{\bullet}(\lie{g}^*)$ by 
+$\Sym^{\bullet}(\lie{g})$. In finite dimension, this will not make a 
+difference, but for the infinite-dimensional case, this is a choice and it is 
+not mandatory to do it like this. Anyway, a decision had to be made and we 
+have good reasons to believe that we are not completely misguided.
+
+
+
+\section{The Gutt star product}
+\label{sec:chap3_GuttStar}
+
+Our final aim is to endow the symmetric algebra, and hence the polynomial 
+algebra, with a new, noncommutative product. This is possible in a very 
+natural way, due to the Poincar\'e-Birkhoff-Wit theorem. It links the 
+symmetric tensor algebra $\Sym^{\bullet}(\lie{g})$ of a Lie algebra $\lie{g}$ 
+to its universal enveloping algebra $\algebra{U}(\lie{g})$.
+
+
+\subsection{The universal enveloping algebra}
+\label{subsec:chap3_UniversalEnvelopingAlgebra}
+
+If $\algebra{A}$ is an associative algebra, one can construct a Lie algebra 
+out of it by using the commutator
 \begin{equation*}
+	[a,b]
+	=
+	a \cdot b - b \cdot a
+	, \quad
+	a,b \in \algebra{A}.
+\end{equation*}
+This construction is in fact functorial, since it doesn't only map associative 
+algebras to Lie algebras, but also morphisms of the former to those of the 
+latter. While getting a Lie algebra out of an associative algebra is easy, the 
+reversed process is more complicated, but also possible. It is a well-known 
+fact that every Lie algebra $\lie{g}$ can be embedded into an associative 
+algebra, known as the universal enveloping algebra $\algebra{U}(\lie{g})$. It 
+is uniquely determined (up to isomorphism) by the universal property: for 
+every unital associative algebra $\algebra{A}$ and every homomorphism for Lie 
+algebras $\phi\colon \lie{g} \longrightarrow \algebra{A}$ using the 
+commutator on $\algebra{A}$, one gets a unital homomorphism of associative 
+algebras $\Phi \colon \algebra{U}(\lie{g}) \longrightarrow \algebra{A}$ such 
+that the following diagram is commutative:
+\begin{center}
+    \begin{tikzpicture}
+        \matrix (m)[
+        matrix of math nodes,
+        row sep=2.5em,
+        column sep=8em
+        ]
+        {
+          \mathcal{U}(\lie{g}) & \\
+           & \algebra{A} \\
+          \lie{g} &  \\
+        };
+        \draw
+        [-stealth]
+        (m-1-1) 	edge node 
+        			[above] 
+        			{$\Phi$}
+        					(m-2-2)
+        	(m-3-1)	edge node
+        			[below]
+        			{$\phi$}
+        					(m-2-2)
+        					
+        			edge node
+        			[left]
+        			{$\iota$}
+        					(m-1-1)
+        	;
+    \end{tikzpicture}
+\end{center}
+The proof of existence and uniqueness of the universal enveloping algebra can 
+be found in every standard textbook on Lie theory like 
+\cite{hilgert.neeb:2012a} or \cite{varadarajan:1971a}, and we won't do it here 
+in detail. Just recall that existence is proven by an explicit construction: 
+one takes the tensor algebra $\Tensor^{\bullet}(\lie{g})$ and considers the 
+two-sided ideal
+\begin{equation*}
+	\mathrm{I}
+	=
+	< \xi \tensor \eta - \eta \tensor \xi - [\xi, \eta] >
+	, \quad
+	\forall_{\xi, \eta \in \lie{g}}
+\end{equation*}
+inside of it. Then one gets the universal enveloping algebra by the quotient
+\begin{equation}
+	\label{Alg:UnivEnvAlg}
+	\algebra{U}
+	=
+	\frac{\Tensor^{\bullet}(\lie{g})}{\mathrm{I}}.
+\end{equation}
+It follows from this construction, that $\algebra{U}(\lie{g})$ is a filtered 
+algebra
+\begin{equation*}
+	\algebra{U}(\lie{g})
+	=
+	\bigcup_{k \in \mathbb{N}}
+	\algebra{U}^k(\lie{g})
+	, \quad
+	\algebra{U}^k(\lie{g})
+	= 
+	\Big\lbrace
+		x 
+		= 
+		\sum_i
+		\xi_1^i \cdot \ldots \cdot \xi_n^i
+	\ \Big| \ 
+		\xi_j^i \in \lie{g}
+		, \
+		1 \leq j \leq n,
+		i \in \mathbb{N}
+	\Big\rbrace.
+\end{equation*}
+We just get a filtration, not a graded structure, however, since the ideal 
+$\mathrm{I}$ is not homogeneous. Moreover, $\algebra{U}(\lie{g})$ is 
+commutative (and graded) if and only if $\lie{g}$ was commutative. But 
+$\algebra{U}(\lie{g})$ is much more than an associative algebra: it is also a 
+Hopf algebra, since one can define a coassociative, cocommutative coproduct on 
+it
+\begin{equation*}
+	\Delta \colon
+	\algebra{U}(\lie{g})
+	\longrightarrow
+	\algebra{U}(\lie{g})
+	\tensor
+	\algebra{U}(\lie{g})
+	, \quad
+	\xi
+	\longmapsto
+	\xi \tensor \Unit
+	+
+	\Unit \tensor \xi
+	, \quad
+	\forall_{\xi \in \lie{g}}
+\end{equation*} 
+which extends to $\algebra{U}(\lie{g})$ via algebra homomorphism, as well as an antipode
+\begin{equation*}
+	S \colon
+	\algebra{U}(\lie{g})
+	\longrightarrow
+	\algebra{U}(\lie{g})
+	, \quad
+	\xi
+	\longmapsto
+	- \xi
+	, \quad
+	\forall_{\xi \in \lie{g}}
+\end{equation*}
+which extends to $\algebra{U}(\lie{g})$ via algebra antihomomorphism.
+
+\subsection{The Poincar\'e-Birkhoff-Witt theorem}
+\label{subsec:chap3_PoincareBirkhoffWitt}
+
+It is a well-known fact that one has a basis in $\algebra{U}(\lie{g})$. This 
+result is due to the already mentioned theorem of Poincar\'e, Birkhoff and 
+Witt:
+\begin{theorem}[Poincar\'e-Birkhoff-Witt theorem]
+	\label{Thm:Alg:PBW}
+	Let $\lie{g}$ be a Lie algebra with a basis $\mathcal{B}_{\lie{g}} = \{ 
+	\beta_i \}_{i \in I}$. Then the set
+	\begin{equation*}
+		\mathcal{B}_{\algebra{U}(\lie{g})}
+		=
+		\big\{
+			\beta_{i_1}^{\mu_{i_1}}
+			\cdot \ldots \cdot
+			\beta_{i_n}^{\mu_{i_n}}
+		\ \big| \
+			n \in \mathbb{N}, \ 
+			i_k \in I
+			\text{ with } i_1 \earlier \ldots \earlier i_n 
+			\text{ and } \beta_{i_k} \in \mathcal{B}_{\lie{g}}, \
+			\mu_{i_1}, \ldots, \mu_{i_n} \in \mathbb{N}
+		\big\}
+	\end{equation*}
+	defines a basis of $\algebra{U}(\lie{g})$.
+\end{theorem}
+there are different proofs for this statement. While a geometrical proof is 
+very convenient in the finite-dimensional case, a combinatorial argument must 
+be used in infinite dimensions. Most textbooks give the latter one, but 
+restrict to finite-dimensional Lie algebras in order to avoid speaking of 
+basis in infinite dimensions (except, of course, \cite{bourbaki:}). Once one 
+has accepted working with the Lemma of Zorn, the proof will work the same way 
+for any Lie algebra, since the idea relies on ordered index sets which can be 
+defined in any dimension.
+The PBW theorem allows us to set up an isomorphism between $\Sym^{\bullet}
+(\lie{g})$ and $\algebra{U}(\lie{g})$ immediately, since a basis of the former 
+can be given by almost the same expression
+\begin{equation*}
+	\mathcal{B}_{\Sym^{\bullet}(\lie{g})}
+	=
+	\big\{
+		\beta_{i_1}^{\mu_{i_1}}
+		\ldots
+		\beta_{i_n}^{\mu_{i_n}}
+	\ \big| \
+		n \in \mathbb{N}, \ 
+		i_k \in I, 1 \leq k \leq n,
+		i_1 \earlier \ldots \earlier i_n 
+		\text{ and } \beta_{i_k} \in \mathcal{B}_{\lie{g}}, \
+		\mu_{i_1}, \ldots, \mu_{i_n} \in \mathbb{N}
+	\big\}
+\end{equation*}
+where we just have replaced the noncommutative product in $\algebra{U}
+(\lie{g})$ by the symmetric tensor product $\vee$ (which we will usually 
+denote without a symbol, if possible) in $\Sym^{\bullet}(\lie{g})$. This 
+allows us to write down an isomorphsim between the symmetric tensor algebra 
+and the universal enveloping algebra, just by mapping the basis vectors to 
+each other in a naive way. Of course, this can never be an isomorphism in the 
+sense of algebras, but only of (filtered) vector spaces, because one of the 
+algebras is commutative and the other isn't. Moreover, the symmetric algebra 
+has a grading in the sense that
+\begin{equation*}
+	\Sym^{\bullet}(\lie{g})
+	=
+	\bigoplus\limits_{n = 0}^{\infty}
+	\Sym^n(\lie{g})
+	, \quad
+	\Sym^n(\lie{g})
+	=
+	\underbrace{
+		\lie{g} \vee \ldots \vee \lie{g}
+	}_{
+		n \text{ times}
+	},
+\end{equation*}
+which induces a filtration by $\Sym^{(k)}(\lie{g}) = \sum_{j=0}^k 
+\Sym^j(\lie{g})$. Our simple isomorphism will respect the filtration, but it 
+isn't the only isomorphism which one can write down. In \cite{berezin:1971a}, 
+Berezin proposed another isomorphism which is more helpful to use:
+\begin{equation}
+	\label{Alg:BerezinQuantization}
+	\mathfrak{q}_n
+	\colon
+	\Sym^n(\lie{g})
+	\longrightarrow
+	\algebra{U}^n(\lie{g})
+	, \quad
+	\beta_{i_1} \ldots \beta_{i_n}
+	\longmapsto
+	\frac{1}{n!}
+	\sum\limits_{\sigma \in S_n}
+	\beta_{i_{\sigma(1)}} 
+	\cdot \ldots \cdot
+	\beta_{i_{\sigma(n)}}
+	, \quad
+	\mathfrak{q}
+	=
+	\sum\limits_{n = 0}^{\infty}
+	\mathfrak{q}_n.
+\end{equation}
+We will refer to it as the quantization map, for reasons that will soon become 
+clear. It also respects the filtration and transfers the symmetric product to 
+another symmetric expression. In this sense, we can now switch between both 
+algebras and use the setting, which is more convenient in the current 
+situation: the graded structure of $\Sym^{\bullet}(\lie{g})$, or the Hopf 
+algebra structure of $\algebra{U}(\lie{g})$.
+
+
+\subsection{The Gutt star product}
+Since we know, that the universal enveloping and the symmetric tensor algebra 
+are isomorphic as vector spaces, we have a good tool at hand to endow the 
+symmetric tensor algebra, and hence the polynomials, with a noncommutative 
+product. This is exactly what Gutt did in \cite{gutt:1983a}. She constructed a 
+star product on $\Pol^{\bullet}(\lie{g}^*)$ by pulling back the one from 
+$\algebra{U}(\lie{g})$ while encoding the noncommutativity in a formal 
+parameter $z \in \mathbb{C}$ in a convenient way. 
+\begin{definition}[Gutt star product]
+	\label{Def:GuttStar}
+	Let $\lie{g}$ be a Lie algebra, $z \in \mathbb{C}$, and 
+	$f, g \in \Sym^{\bullet}(\lie{g})$ of degree $k$ and $\ell$ respectively. 
+	Then we define the Gutt star product:
+	\begin{equation}
+		\star_z
+		\colon
+		\Sym^{\bullet}(\lie{g})
+		\times
+		\Sym^{\bullet}(\lie{g})
+		\longrightarrow
+		\Sym^{\bullet}(\lie{g})
+		, \quad
+		(f,g)
+		\longmapsto
+		\sum\limits_{n = 0}^{e + \ell - 1}
+		z^n
+		\pi_{k + \ell - n}
+		\left(
+			\mathfrak{q}^{-1} \left(
+				\mathfrak{q}(f) \cdot \mathfrak{q}(g)
+			\right)
+		\right),
+	\end{equation}
+	where the $\pi_n \colon \Sym^{\bullet}(\lie{g}) \longrightarrow 
+	\Sym^n(\lie{g})$ are the projections on the homogeneous components of 
+	degree $n$. 
+\end{definition}
+This is the original way in which Gutt defined her star product in 
+\cite{gutt:1983a}, but there are two more ways to do it. Define
+\begin{equation*}
+	\mathrm{I}_z
+	=
+	< \xi \tensor \eta - \eta \tensor \xi - z [\xi, \eta] >
+\end{equation*}
+for $z \in \mathbb{C}$. Then we set 
+\begin{equation}
+	\label{Alg:DeformedUnivEnvAlg}
+	\algebra{U}(\lie{g}_z)
+	=
+	\frac{\Tensor^{\bullet}(\lie{g})}{\mathrm{I}_z},
+\end{equation}
+and get the map
+\begin{equation}
+	\label{Alg:DeformedQuantization}
+	\mathfrak{q}_{z,n}
+	\colon
+	\Sym^n(\lie{g})
+	\longrightarrow
+	\algebra{U}^n(\lie{g}_z)
+	, \quad
+	\beta_{i_1} \ldots \beta_{i_n}
+	\longmapsto
+	\frac{1}{n!}
+	\sum\limits_{\sigma \in S_n}
+	\beta_{i_{\sigma(1)}} 
+	\cdot \ldots \cdot
+	\beta_{i_{\sigma(n)}}
+	, \quad
+	\mathfrak{q}_z
+	=
+	\sum\limits_{n = 0}^{\infty}
+	\mathfrak{q}_{z, n}.
+\end{equation}
+This way, we also get a star product:
+\begin{equation}
+	\label{Alg:DeformedStar}
+	\widehat{\star}_z
+	\colon
 	\Sym^{\bullet}(\lie{g})
 	\times
 	\Sym^{\bullet}(\lie{g})
 	\longrightarrow
 	\Sym^{\bullet}(\lie{g})
-\end{equation*}
-which satisfy certain conditions on the degree. This is the way we want to go. 
-We generalize the finite-dimensional situation, where we have $\Pol(\lie{g}^*) 
-\cong \Sym^{\bullet}(\lie{g})$ in this sense, that we look directly at 
-$\Sym^{\bullet}(\lie{g})$ for infinite-dimensional Lie algebras, since those 
-(and their tensor products) are much better known and much easier to control.
+	, \quad
+	(f,g)
+	\longmapsto
+	\mathfrak{q}_z^{-1} 
+	\left(
+		\mathfrak{q}_z(f) \cdot \mathfrak{q}_z(g)
+	\right).
+\end{equation}
+In \cite{drinfeld:1981a}, Drinfeld also constructed a star product using the 
+Baker-Campbell-Hausdorff series: take $\xi, \eta \in \lie{g}$ and set
+\begin{equation}
+	\label{Alg:DrinfeldStar}
+	\exp(\xi) \ast_z \exp(\eta)
+	=
+	\exp \left(
+		\frac{1}{z}
+		\bch{z \xi}{z \eta}
+	\right),
+\end{equation}
+where the exponential series is understood a formal power series in $\xi$ and 
+$\eta$. By differentiating, on gets the star product on all polynomials.
+
+
+Of course, our aim is to show that these three maps are in fact identical and 
+that they define a star product. Since this is a long way to go, we postpone 
+the proof to the end of this chapter. It will be useful to learn something 
+about the Baker-Campbell-Hausdorff series and the Bernoulli number first.
 
 
 
-\section{The universal enveloping algebra}
-\label{sec:chap3_UniversalEnveloping}
-
-
-\section{The Baker-Campbell-Hausdorff formula}
+\section{The Baker-Campbell-Hausdorff series}
 \label{sec:chap3_BCH}
+
+Since we have a formula for $\star_z$ which involves the
+Baker-Campbell-Hausdorff series, we want to give a short overview
+about it and introduce some results, that will be helpful later on.
+Note however, that there is not \emph{the} BCH formula, since one can always 
+rearrange terms using antisymmetry, Jacobi and higher identities.
+
+\subsection{Some general and historical remarks}
+Let a noncommutative algebra $\algebra{A}$ be given. For $\xi, \eta \in 
+\algebra{A}$ we look at the identity
+\begin{equation*}
+	\exp(\chi)
+	=
+	\exp(\xi)
+	\exp(\eta).
+\end{equation*}
+Then, algebraically speaking, the BCH series is the formal power series for 
+$\chi$ as a commutator expression in $\xi$ and $\eta$. We can take the formal 
+power series for the exponentials
+\begin{equation*}
+	\exp(\xi)\exp(\eta) 
+	= 
+	\sum\limits_{n,m=0}^{\infty} 
+	\frac{\xi^n \eta^m}{n! m!}
+\end{equation*}
+and use the formal power series for the logarithm
+\begin{equation*}
+	\log(\chi) 
+	= 
+	\sum\limits_{k = 1}^{\infty} 
+	\frac{ (-1)^{k-1} }{ k } (\chi - 1)^k.
+\end{equation*}
+This yields
+\begin{equation}
+	\label{Alg:BCHinRaw}
+	\chi
+	= 
+	\log \left( \exp(\xi) \exp(\eta) \right) 
+	= 
+	\sum\limits_{k = 1}^{\infty} 
+	\frac{ (-1)^{k - 1} }{k} 
+	\sum\limits_{ \substack{ 
+		i \in \{1, \ldots, k\} \\ 
+		n_i, m_i \geq 0 \\ n_i + m_i \geq 1
+	}}
+	\frac{
+		\xi^{n_1} \eta^{m_1} 
+		\ldots 
+		\xi^{n_k} \eta^{m_k}
+	}
+	{n_1! m_1! \ldots n_k! m_k!}.
+\end{equation}
+It is obviously far from trivial, if and how this can be expressed using 
+commutators, and the first one to find a general way for this was Dynkin in 
+the 1950's.
+
+
+Now let $\lie{g}$ be a finite-dimensional Lie algebra with a corresponding Lie 
+group $G$. From the geometric point of view, the BCH formula is the 
+infinitesimal counterpart of the multiplication law in $G$. One can express it 
+as a series of Lie brackets, which converges just in a small neighbourhood 
+around the unit element $e \in G$. Since the exponential function  $\exp 
+\colon \lie{g} \longrightarrow G$ is locally diffeomorphic there, one gets for 
+$\xi, \eta \in \lie{g}$
+\begin{align*}
+	\bch{\xi}{\eta}
+	& =
+	\log \left( \exp(X) \exp(Y) \right)
+	\\
+	& =
+	\xi + \eta
+	+ \frac{1}{2} [\xi, \eta]
+	+ \frac{1}{12} ( [\xi, [\xi, \eta]] + [\eta, [\eta, \xi]] )
+	+ \ldots
+\end{align*}
+The formula was recovered by Campbell \cite{campb1, campb2}, Baker 
+\cite{baker} and Hausdorff \cite{hausd} independently, founding on a work by 
+Schur \cite{schur}. A lot of work has been done on it since, and one can find 
+a nice summary about it in the introductory part of \cite{casmur}.
+
+
+\subsection{Forms of the BCH}
+As already mentioned, there are different forms of stating the BCH formula and 
+depending on the problem one wants to solve, not each one is well suited. One 
+can classify them roughly into four groups.
+\begin{enumerate}
+	\item
+	There are recursive formulas, which calculate each term from the previous 
+	one. The first expression due to Baker, Campbell and Hausdorff were of 
+	this kind. Though the idea is old, this approach is still much used and 
+	allows powerful applications: Casas and Murua found an efficient 
+	algorithms \cite{casas.murua:yeara} for calculating the BCH series up to 
+	high orders, based on a recursive formula given by Varadarajan in his 
+	textbook \cite{varadarajan:yeara}.
+	
+	\item
+	Most textbooks prove an integral form of the series, like 
+	\cite{hall:yeara} and \cite{hilgert.neeb:2012a}. since we will use it, 
+	too, we want to introduce it here briefly. Take the meromorphic function
+	\begin{equation}
+		\label{Alg:DefinitionLogBernoullis}
+		g \colon 
+		\mathbb{C}
+		\longrightarrow
+		\mathbb{C},
+		\quad
+		z 
+		\longmapsto
+		\frac{ z \log(z) }{z - 1}
+	\end{equation}
+	and denote for $\xi \in \lie{g}$ by
+	\begin{equation*}
+		\ad_{\xi}
+		\colon
+		\lie{g}
+		\longrightarrow
+		\lie{g},
+		\quad
+		\eta
+		\longmapsto
+		[\xi, \eta]
+	\end{equation*}
+	the usual ad-operator. Then one has for $\xi, \eta \in \lie{g}$
+	\begin{equation}
+		\label{Alg:BCHinIntegral}
+		\bch{\xi}{\eta}
+		=
+		\xi + 
+		\int\limits_0^1
+		g \left( 
+			\exp \left(
+				\ad_{\xi}
+			\right)
+			\exp \left(
+				t \ad_{\eta}
+			\right)
+		\right)
+		(\eta) 
+		dt.
+	\end{equation}
+	
+	\item
+	As already mentioned, Dynkin found a closed form for \eqref{Alg:BCHinRaw},
+	which is the only one of this kind known so far. One can its proof for 
+	example in \cite{jacobson:yeara}. It reads
+	\begin{equation}
+		\label{Alg:BCHinDynkin}
+		\bch{\xi}{\eta}
+		=
+		\sum\limits_{k = 1}^{\infty} 
+		\frac{ (-1)^{k - 1} }{k}
+		\sum\limits_{\substack{
+			i \in \{1, \ldots, k\} \\
+			n_i, m_i \geq 0 \\ 
+			n_i + m_i \geq 1
+		}}
+		\frac{1}{ \sum_{i = 1}^k(n_i + m_i) }
+		\frac{ \left[
+			\xi^{n_1} \eta^{m_1} \ldots \xi^{n_k} \eta^{m_k}
+		\right]}
+		{ n_1! m_1! \ldots n_k! m_k! },
+	\end{equation}
+	where the expression $[ \ldots ]$ denotes Lie brackets nested to the left:
+	\begin{equation*}
+		[\xi \eta \eta \xi]
+		=.
+		[[[\xi, \eta], \eta], \xi]
+	\end{equation*}
+	Unfortunately, the combinatorics get extremely complicated for higher 
+	degrees, since it contains a lot of redundancies.
+	
+	\item
+	Goldberg gave a form of the series which is based on words in two letters:
+	\begin{equation}
+		\bch{\xi}{\eta}
+		=
+		\sum\limits_{n = 1}^{\infty}
+		\sum\limits_{|w| = n}
+		g_w w.
+	\end{equation}
+	The $g_w$ are coefficients, which can be calculated using the recursively
+	defined Goldberg polynomials (see \cite{goldberg:1956a}). It was put into 
+	commutator form by Thompson in \cite{thompson:1982a}:
+	\begin{equation}
+		\label{Alg:BCHinGoldbergThompson}
+		\bch{\xi}{\eta}
+		=
+		\sum\limits_{n = 1}^{\infty}
+		\sum\limits_{|w| = n}
+		\frac{g_w}{n} [w].
+	\end{equation}
+	Again, the $[w]$ are Lie brackets nested to the left. Of course, this 
+	formula will also have redundancies, but its combinatorial aspect is much 
+	easier than the one of \eqref{Alg:BCHinDynkin}. Since there are estimates 
+	for the coefficients $g_w$, we will use this form for our Main Theorem.
+\end{enumerate}
+
+
+\subsection{The Goldberg-Thompson formula and some results}
+
+\subsubsection{Goldberg's theorems}
+We now introduce the results of Goldberg: he noted a word in the letters $\xi$ 
+and $\eta$ as
+\begin{equation*}
+	w_{\xi}(s_1, s_2, \ldots, s_m)
+	=
+	\xi^{s_1} \eta^{s_2} \ldots (\xi \vee \eta)^{s_m},
+\end{equation*}
+with $m \in \mathbb{N}$ and the last letter will be $\xi$ if $m$ is odd and 
+$\eta$ if $m$ is even. The index $\xi$ of $w_{\xi}$ means, that the word 
+starts with a $\xi$. Now we can assign to each word $w_{\xi \vee \eta}(s_1, 
+\ldots, s_m)$ a coefficient $c_{\xi \vee \eta}(s_1, \ldots, s_m)$. This is 
+done by the following formula:
+\begin{equation}
+	\label{Alg:GoldbergCoeff1}
+	c_{\xi}(s_1, \ldots, s_m) 
+	= 
+	\int\limits_0^1 
+	t^{m'} (t - 1)^{m''} 
+	G_{s_1}(t) \ldots G_{s_m}(t) dt,
+\end{equation}
+where we have $m' = \lfloor \frac{m}{2} \rfloor$, $m'' = \lfloor \frac{m-1}{2} 
+\rfloor$ with $\lfloor \cdot \rfloor$ denoting the entire part of a real 
+number and we have $n = \sum_{i = 1}^m s_i$. For $c_{\eta}$ we have
+\begin{equation}
+	\label{Alg:GoldbergCoeff2}
+	c_{\eta}\left( s_1, \ldots, s_m \right)
+	= 
+	\begin{cases}
+		c_{\xi}\left( s_1, \ldots, s_m \right)
+		& 
+		\text{ if } m \text{ is odd} 
+		\\
+		(-1)^{n-1} c_{\xi} \left( s_1, \ldots, s_m \right)
+		& 
+		\text{ if } m \text{ is even.}
+	\end{cases}
+\end{equation}
+The $G_s$ are the recursively defined Goldberg polynomials
+\begin{equation}
+	\label{Alg:GoldbergPolynomials}
+	G_s(t) 
+	= 
+	\frac{1}{s} 
+	\frac{d}{dt} 
+	t(t-1) G_{s-1}(t),
+\end{equation}
+for $s > 1$ and $G_1(t) = 1$. From \eqref{Alg:GoldbergCoeff2} we get 
+immediately
+\begin{equation*}
+	c_{\xi}\left( s_1, \ldots, s_m \right)
+	= 
+	c_{\eta}\left( s_1, \ldots, s_m \right) 
+	= 
+	0 
+	\quad 
+	\text{ if $m$ is odd and $n$ is even.}
+\end{equation*}
+Of course, Goldberg found interesting identities which are fulfilled by the 
+coefficients. A very remarkable one is that for all permutations $\sigma \in 
+S_m$ one has
+\begin{equation*}
+	c_{\xi}\left( s_1, \ldots, s_m \right)
+	=
+	c_{\xi}\left( s_{\sigma(1)}, \ldots, s_{\sigma(m)} \right),
+\end{equation*}
+since \eqref{Alg:GoldbergCoeff1} obviously doesn't see the ordering of the 
+$s_i$ and $m'$, $m''$ and $n$ are not affected by reordering. For words with 
+$m = 2$, an easier formula can be found:
+\begin{equation*}
+	c_{\xi}(s_1, s_2) 
+	= 
+	\frac{ (-1)^{s_1} }{s_1! s_2!} 
+	\sum\limits_{n = 1}^{s_2} 
+	\binom{s_2}{n} B_{s_1 + s_2 - n},
+\end{equation*}
+where the $B_s$ denote the Bernoulli numbers, which will be explained more 
+precisely in the next paragraph. First, we note that the only case which 
+matters to us is of course $s_1 = 1$, since for $s_1, s_2 > 1$ we will find 
+something like $[[\xi, \xi], \ldots ] = 0$. For simplicity, let's set 
+$s_2 = 1$ and to permute $s_1 \leftrightarrow s_2$:
+\begin{equation}
+	\label{Alg:GoldbergCoeffBernoulli}
+	c_{\xi}(1, n-1)
+	=
+	\frac{ (-1)^{n-1} }{s!}
+	B_s.
+\end{equation}
+
+
+\subsubsection{Bernoulli numbers}
+We have seen the Bernoulli numbers $B_n$ showing up and we will encounter them 
+very often in the following. Hence it is useful to learn a few important 
+things about them. They are defined by the series expansion of
+\begin{equation}
+	\label{Alg:DefBernoulli}
+	g \colon
+	\mathbb{C}
+	\longrightarrow
+	\mathbb{C}
+	, \quad
+	z \longmapsto
+	\frac{z}{\E^z - 1}
+	=
+	\sum\limits_{n=0}^{\infty}
+	\frac{B_n}{n!}z^n.
+\end{equation}
+Clearly, $g$ has poles at $z = 2 k \pi i$, $k \in \mathbb{Z}\backslash \{0\}$.
+Moreover, one can easily show that all odd Bernoulli numbers are zero, except 
+for $B_1 = - \frac{1}{2}$ and since in some applications one needs $B_1$ to be 
+positive, there is a different convention for naming them: one often 
+encounters $B_n^* = (-1)^n B_n$ (which only differs for $n = 1$). The nonzero 
+Bernoulli number alternate in sign and for there absolute value, one can show 
+the asymptotic behaviour (see \cite{luschny.oeis})
+\begin{equation*}
+	B_{2n} 
+	\sim 
+	(-1)^{n-1} 
+	4\sqrt{\pi n} 
+	\left( \frac{n}{\pi e} \right)^{2n}.
+\end{equation*}
+This is not surprising, since we now that the generating function $g$ had 
+poles at $\pm 2\pi i$. The Bernoulli numbers can also be calculated by the 
+recursion formula
+\begin{equation}
+	B_n
+	=
+	- \frac{1}{n + 1}
+	\sum\limits_{k = 0}^{n- 1}
+	\binom{n + 1}{k}
+	B_k,
+\end{equation}
+which is well-known in the literature. Since we will deal a lot with them, we 
+want to give the first numbers of this series here.
+\begin{center}
+	\begin{tabular}
+	{c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+		$n$ & $0$ & $1$ & 
+		$2$ & $3$ & $4$ & 
+		$5$ & $6$ & $7$ & 
+		$8$ & $9$ & $10$ & 
+		$11$ & $12$ & $13$ & 
+		$14$ & $15$ & $16$
+		\\
+		\hline 
+		$B_n$ & $1$ & $-\frac{1}{2}$ & 
+		$\frac{1}{6}$ & $0$ & $-\frac{1}{30}$ & 
+		$0$ & $\frac{1}{42}$ & $0$ & 
+		$-\frac{1}{30}$ & $0$ & $\frac{5}{66}$ & 
+		$0$ & $\frac{691}{2730}$ & $0$ & 
+		$\frac{7}{6}$ & $0$ & $\frac{3617}{510}$
+	\end{tabular} 
+\end{center}
+
+
+\subsubsection{BCH up to first order}
+
+\begin{proposition}
+	Let $\lie{g}$ be a Lie algebra and the Bernoulli numbers as defined 
+	before. Then we have for $\xi, \eta \in \lie{g}$
+	\begin{align}
+		\label{Alg:BCHFirstOrderXi}
+		\bch{\xi}{\eta}
+		& =
+		\sum\limits_{n = 0}^{\infty}
+		\frac{B_n^*}{n!}
+		\left( \ad_{\xi} \right)^n (\eta)
+		+ \mathcal{O} \left( \eta^2 \right)
+		\\
+		\label{Alg:BCHFirstOrderEta}
+		& =
+		\sum\limits_{n = 0}^{\infty}
+		\frac{B_n}{n!}
+		\left( \ad_{\xi} \right)^n (\eta)
+		+ \mathcal{O} \left( \xi^2 \right)
+	\end{align}
+\end{proposition}
+\begin{proof}
+	This is something we can perfectly calculate using the Goldberg 
+	coefficients. Remind that we will put words to Lie brackets, and for 
+	computing the coefficients we will need the words $\eta \xi^n$ \emph{and} 
+	$\xi \eta \xi^{n-1}$ because of antisymmetry. Now let $n \in \mathbb{N}$. 
+	We have
+	\begin{equation*}
+		c{\eta}(1,n) 
+		= 
+		(-1)^n c_{\xi}(1,n) 
+		= 
+		(-1)^n 
+		\frac{(-1)^n}{n!} 
+		B_n 
+		= 
+		\frac{B_n}{n!}.
+	\end{equation*}
+	By $n-fold$ skew-symmetry and \eqref{Alg:BCHinGoldbergThompson}, we get 
+	the contribution
+	\begin{equation*}
+		\frac{(-1)^n}{(n+1)!} 
+		B_n \left( \ad_{\xi} \right)^n (\eta)
+		=
+		\frac{1}{(n+1)!} 
+		B_n^* \left( \ad_{\xi} \right)^n (\eta)		
+	\end{equation*}
+	Now we need $c_{\xi}(1, 1, n-1)$: let $n > 1$, then
+	\begin{align*}
+		c_{\xi}(1, 1, n - 1) 
+		& = 
+		\int\limits_0^1 
+		t(t-1) G_{n-1}(t) 
+		dt 
+		\\
+		& = 
+		- \int\limits_0^1 
+		t \frac{d}{dt} 
+		\left( t(t-1) G_{n-1}(t) \right) 
+		dt 
+		\\
+		& =
+		- \int\limits_0^1 
+		n t G_n(t) 
+		dt 
+		\\
+		& = 
+		-n 
+		c_{\xi}(1,n) 
+		\\
+		& = 
+		-n 
+		\frac{(-1)^n}{n!} 
+		B_n 
+		\\
+		& =  
+		(-1)^{n + 1} 
+		\frac{1}{(n-1)!} B_n
+	\end{align*}
+	So by using $n-1$ times the skew-symmetry of the Lie bracket, we get
+	\begin{equation*}
+		\frac{1}{n + 1} 
+		\cdot (-1)^{n + 1} 
+		\frac{1}{ (n - 1)! }
+		B_n 
+		[\ldots [\xi, \eta], \xi] \ldots ], \xi] 
+		= 
+		\frac{n}{(n+1)!} 
+		B_n 
+		\left( \ad_{\xi} \right)^n (\eta)
+	\end{equation*}
+	For $n > 1$, we add up those two and use the fact that $B_n = B_n^*$ and 
+	find the result we want. For $n = 1$, there is just the first contribution 
+	and $c_{\xi}(1,1) = - B_1$, which gives
+	\begin{equation*}
+		B_1^* \ad_{\xi}(\eta)
+	\end{equation*}
+	in total. For $n = 0$ , we get $c_{\xi}(1) = c_{\eta}(1) = 1$ and finally 
+	get \eqref{Alg:BCHFirstOrderXi}. For \eqref{Alg:BCHFirstOrderEta}, note 
+	that we need $c_{\xi}(1, n)$ and $c_{\eta}(1, 1, n-1)$. We have 
+	$c_{\xi}(1,n) = (-1)^n c_{\eta}(1,n)$ and 
+	$c_{\eta}(1, 1, n-1) = (-1)^n c_{\xi}(1,1,n-1$.
+	this gives a global $(-1)^n$ and makes hence $B_n$ out of $B_n^*$.
+\end{proof}
+\begin{remark}
+	Note that we could also have used the integral formula 
+	\eqref{Alg:BCHinIntegral} to prove this. We have two exponential series, 
+	but the second one can be cut after the constant term, since we are 
+	looking for contributions which are linear in $\eta$. The function in the 
+	integral is 	nothing but $(g \circ \log)(z)$. Since we insert 
+	$\exp(\ad_{\xi})$, we get
+	\begin{equation*}
+		\bch{\xi}{\eta}
+		=
+		\xi + 
+		\int_0^1
+		g \left( \ad_{\xi} \right)
+		(\eta)
+		dt
+		+ \mathcal{O} \left( \eta^2 \right)
+		=
+		\xi +
+		\sum\limits_{n = 1}^{\infty}
+		\frac{B_n^*}{n!}
+		\left( \ad_{\xi} \right)^n (\eta)
+		+ \mathcal{O} \left( \eta^2 \right)
+	\end{equation*}
+	since there is no dependence on $t$ any more.
+\end{remark}
+
+
+
+\section{The Equality of the Star Products}
+\label{sec:chap3_StarProductProof}
+
+The first step is associativity, since it will simplify the proof later.
+\begin{proposition}
+	\label{Alg:Lemma:Associtivity}
+	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ define
+	associative multiplications.
+\end{proposition}
+\begin{proof}
+  \mbox{}
+  \begin{enumerate}
+	\item 
+	For $\widehat{\star}_z$, associativity is clear from the very 
+	construction, since the multiplication in $\algebra{U}(\lie{g}_z)$
+	is associative. Bilinearity is also immediate.
+	
+	\item
+	For $\star_z$, we have to move around sums and shift projections.
+	Recall that $\pi_n(f \star_z g) = 0$, if $n > \deg(f) + \deg(g)$.
+	Take homogeneous tensors $f, g, h \in \Sym^{\bullet}(\lie{g})$
+	of degree $k, \ell, m \in \mathbb{N}$ respectively. The we have
+	\begin{align*}
+		\left(
+			f \star_z g
+		\right)
+		\star_z
+		h
+		& =
+		\sum\limits_{j=0}^{k + \ell -1}
+		\sum\limits_{i = 0}^{k + \ell + m -j - 1}
+		z^i
+		\left( 
+			\pi_{k + \ell + m - j - i} 
+			\circ 
+			\mathfrak{q}^{-1}
+		\right)
+		\left(
+			\mathfrak{q}
+			\left(
+				z^j
+				\left(
+					\pi_{k + \ell - j} 
+					\circ 
+					\mathfrak{q}^{-1}
+				\right)
+				\left(
+					\mathfrak{q} (a)
+					\mathfrak{q} (b)
+				\right)
+			\right)
+			\mathfrak{q}(h)
+		\right)
+		\\
+		& =
+		\sum\limits_{j=0}^{k + \ell -1}
+		\sum\limits_{i = 0}^{k + \ell + m - 1}
+		z^{i-j}
+		\left( 
+			\pi_{k + \ell + m - i} 
+			\circ 
+			\mathfrak{q}^{-1}
+		\right)
+		\left(
+			\mathfrak{q}
+			\left(
+				z^j
+				\left(
+					\pi_{k + \ell - j} 
+					\circ 
+					\mathfrak{q}^{-1}
+				\right)
+				\left(
+					\mathfrak{q} (a)
+					\mathfrak{q} (b)
+				\right)
+			\right)
+			\mathfrak{q}(h)
+		\right)
+		\\
+		& =
+		\sum\limits_{i = 0}^{k + \ell + m - 1}
+		z^i
+		\left( 
+			\pi_{k + \ell + m - i} 
+			\circ 
+			\mathfrak{q}^{-1}
+		\right)
+		\left(
+			\mathfrak{q}
+			\left(
+				\sum\limits_{j=0}^{k + \ell -1}
+				z^{-j}
+				z^j
+				\left(
+					\pi_{k + \ell - j} 
+					\circ 
+					\mathfrak{q}^{-1}
+				\right)
+				\left(
+					\mathfrak{q} (a)
+					\mathfrak{q} (b)
+				\right)
+			\right)
+			\mathfrak{q}(h)
+		\right)
+		\\
+		& =
+		\sum\limits_{i = 0}^{k + \ell + m - 1}
+		z^i
+		\left( 
+			\pi_{k + \ell + m - i} 
+			\circ 
+			\mathfrak{q}^{-1}
+		\right)
+		\left(
+			\mathfrak{q} a)
+			\mathfrak{q}(b)
+			\mathfrak{q}(h)
+		\right),
+	\end{align*}
+	and we just need to reverse this procedure on the right hand side
+	in order to get the wanted result. All we did was using the linearity 
+	of the involved maps. Bilinearity is also clear for $\star_z$, since
+	all the maps involved are (bi-)linear.
+		
+	\item
+	Also for $\ast_z$, associativity is not complicated, since one can 
+	write the star product, using the formal power series of the 
+	exponential and the logarithm. Since in this setting, we have
+	\begin{equation*}
+		\exp(\log(z))
+		=
+		z
+		, \quad
+		\forall_{z \in \lie{g}},
+	\end{equation*}
+	one has
+	\begin{align*}
+		\left( 
+			\exp(\xi) \ast_z \exp(\eta) 
+		\right) 
+		\ast_z \exp(\chi)
+		&=
+		\exp
+		\left(
+			\frac{1}{z}
+			\bch{
+				\left(
+					\frac{1}{z}
+					\bch{z \xi}{z \eta}
+				\right)
+			}
+			{z \chi}
+		\right)
+		\\
+		&=
+		\exp
+		\left(
+			\frac{1}{z}
+			\bch{z \xi}
+			{
+				\left(
+					\frac{1}{z}
+					\bch{z \eta}{z \chi}
+				\right)
+			}
+		\right)
+		\\
+		&=
+		\exp(\xi)
+		\ast_z
+		\left( 
+			\exp(\eta) \ast_z \exp(\chi) 
+		\right), 
+	\end{align*}
+	since
+	\begin{align*}
+	\bch{
+		\left(
+			\frac{1}{z}
+			\bch{z \xi}{z \eta}
+		\right)
+	}
+	{z \chi}
+	& =
+	\log\left(
+		\exp\left(
+			\log\left(
+				\frac{1}{z}
+				\exp\left(
+					z \xi
+				\right)
+				\exp\left(
+					z \eta
+				\right)
+			\right)
+		\right)
+		\exp\left(
+			z \chi
+		\right)
+	\right)
+	\\
+	& =
+	\log\left(
+		\frac{1}{z}
+		\exp\left(
+			z \xi
+		\right)
+		\exp\left(
+			z \eta
+		\right)
+		\exp\left(
+			z \chi
+		\right)
+	\right)
+	\\
+	& =
+	\log\left(
+		\exp\left(
+			z \xi
+		\right)
+		\log\left(
+			\left(
+				\frac{1}{z}
+				\exp\left(
+					z \eta
+				\right)
+				\exp\left(
+					z \chi
+				\right)
+			\right)
+		\right)
+	\right)
+	\\
+	& =
+	\bch{z \xi}
+	{
+		\left(
+			\frac{1}{z}
+			\bch{z \eta}{z \chi}
+		\right)
+	}.
+	\end{align*}
+	Bilinearity follows from differentiating the formula and is 
+	a simple computation.
+  \end{enumerate}	 
+\end{proof}
+Note that for a star product, the maps must fulfil the classical and the 
+semi-classical limit. This will be done in Corollary 
+\ref{Formulas:Cor:LimitCases}. It is left to show, that the star product are 
+in fact equal. It is enough to show that 
+they coincide for terms of the form $\xi^k \star \eta$ with $\xi, \eta \in 
+\lie{g}$ and $k \in \mathbb{N}$, since we get them on homogeneous 
+polynomials of the form $\xi_1 \ldots \xi_k \star \eta$ by polarization 
+and for two polynomials like $\xi_1 \ldots \xi_k \star \eta_1 \ldots 
+\eta_{\ell}$ by iteration, which is possible due to associativity.
+The next lemma will be a first big step:
+\begin{lemma}
+	Let $\lie{g}$ be a Lie algebra, then we have
+	\begin{equation}
+		\label{Alg:GuttStarFormula}
+		\xi^k \widehat{\star}_z \eta
+		=
+	 	\sum\limits_{n=0}^k 
+	 	z^n \binom{k}{n} B_n^*
+	 	\xi^{k-n} 
+	 	\left( \ad_{\xi} \right)^n (\eta),
+	\end{equation}
+	where the $B_n^*$ are the Bernoulli numbers defined as above.
+\end{lemma}
+\begin{proof}
+	This proof is divided into the two following lemmata:
+	\begin{lemma}
+		\label{Alg:Lemma:BadSublemma1}
+		Let $\xi, \eta \in \mathfrak{g}$ and $k\in \mathbbm{N}$. Then we have
+		\begin{equation*}
+			{q}_z \left(\sum\limits_{n=0}^k z^n
+			\binom{k}{n} B_n^* \xi^{k-n}
+			\left(\ad_{\xi}\right)^n(\eta)\right)
+			=
+			\sum\limits_{s=0}^k\mathcal{K}(k,s)
+			\xi^{k-s} \cdot \eta \cdot \xi^s
+		\end{equation*}
+		with
+		\begin{equation*}
+			 \mathcal{K}(k,s)
+			 =
+			 \frac{1}{k + 1} \sum\limits_{n=0}^k
+			 \binom{k+1}{n} B_n^*
+			 \sum\limits_{j=0}^n
+			 (-1)^j \binom{n}{j}
+			 \sum\limits_{\ell=0}^{k-n} \delta_{s, \ell+j}
+		\end{equation*}
+	\end{lemma}
+	\begin{subproof}
+		Since the map $\mathfrak{q}_z$ is linear, we can pull out the
+		constants and get
+		\begin{equation*}
+			\mathfrak{q}_z \left( \sum\limits_{n=0}^k
+			z^n \binom{k}{n} B_n^* \xi^{k-n} 
+			\left(\ad_{\xi}\right)^k(\eta)\right)
+			=
+			\sum\limits_{n=0}^k
+			\binom{k}{n} B_n^*
+			\mathfrak{q}_z\left(z^n \xi^{k-n}
+			\left(\ad_{\xi}\right)^k(\eta)\right)
+		\end{equation*}
+		Now we need the two equalities
+		\begin{align*}
+			\mathfrak{q}_z\left( \xi^k \eta \right)
+			& = 
+			\frac{1}{k+1}\sum\limits_{j=0}^k 
+			\xi^{k-l} \cdot \eta \cdot \xi^k
+		\intertext{and}
+			\mathfrak{q}_z\left(
+			\left(z^n \ad_{\xi}\right)^k (\eta) \right)
+			& = 
+			\sum\limits_{j=0}^k
+			(-1)^j \binom{k}{j}
+			\xi^{k-j} \cdot \eta \cdot \xi^j
+		\end{align*}
+		which can easily be shown by induction and plug them in:
+		\begin{align*}
+			\sum\limits_{n=0}^k
+			\binom{k}{n} B_n^* \mathfrak{q}_z(\ldots)
+			& = 
+			\sum\limits_{n=0}^k
+			\binom{k}{n} \frac{B_n^*}{k-n+1}
+			\sum\limits_{\ell=0}^{k-n}
+			\xi^{k-n-\ell} \cdot \left(
+			\sum\limits_{j=0}^n
+			(-1)^j \binom{n}{j} \xi^{n-j} \cdot \eta \cdot \xi^j
+			\right) \cdot \xi^{\ell}
+			\\
+			& =
+			\sum\limits_{n=0}^k
+			\binom{k}{n} \frac{B_n^*}{k-n+1}
+			\sum\limits_{\ell=0}^{k-n}
+			\sum\limits_{j=0}^n
+			(-1)^j \binom{n}{j} 
+			\xi^{k-\ell-j} \cdot \eta \cdot \xi^{\ell+j} 
+			\\	
+			& = 
+			\frac{1}{k + 1} \sum\limits_{n=0}^k
+			\binom{k+1}{n} B_n^*
+			\sum\limits_{j=0}^n (-1)^j \binom{n}{j}
+			\sum\limits_{\ell=0}^{k-n}
+			\xi^{k-\ell-j} \cdot \eta \cdot \xi^{\ell+j}
+		\end{align*}
+		We just need to collect those terms for which we have $\ell + j = s$
+		for all	$s = 0, \ldots, k$. If we do this with a Kronecker-delta, we 
+		will get exactly the $\mathcal{K}(k, s)$.
+	\end{subproof}
+	For the second lemma, we need some statement on Bernoulli numbers and 
+	binomial coefficients:
+	Let $k,m,n \in \mathbbm{N}$. Then we have the following identities for 
+	Bernoulli numbers and binomial coefficients:
+	\begin{align}
+		\label{Alg:Lemmastuff:1_B0}
+		\sum\limits_{j=0}^k \binom{k+1}{n} B_j
+		& = 0 \\
+		\label{Alg:Lemmastuff:1_B1}
+		\sum\limits_{j=0}^k
+		\binom{k+1}{n} B_j^* 
+		& = k+1 \\
+		\label{Alg:Lemmastuff:1_Carl}
+		(-1)^k \sum\limits_{j=0}^k
+		\binom{k}{j} B_{m+j} 
+		& = 
+		(-1)^m \sum\limits_{i=0}^m 
+		\binom{m}{i} B_{k+i} \\
+		\label{Alg:Lemmastuff:1_Bin1} 
+		\sum\limits_{j=0}^m
+		(-1)^j \binom{n}{j} 
+		& = 
+		(-1)^m \binom{n-1}{m} \\
+		\label{Alg:Lemmastuff:1_Bin2}
+		\binom{n}{m}\binom{m}{k}
+		& =
+		\binom{n}{k}\binom{n-k}{m-k}.
+	\end{align}
+	The identity \eqref{Alg:Lemmastuff:1_B1} is the standard recursion for 
+	the $B_n^*$ (see e.g. \cite{aik}), \eqref{Alg:Lemmastuff:1_Bin1} and 
+	\eqref{Alg:Lemmastuff:1_Bin2} can be found in good textbooks on 
+	combinatorics such as \cite{aig_enum}. Equation 
+	\eqref{Alg:Lemmastuff:1_Carl} is a theorem due to Carlitz, proven in 
+	\cite{carl}. With them, we can show the next lemma which will finish this 
+	subproof.
+	\begin{lemma}
+		\label{Alg:Lemma:BadSublemma2}
+		Let $\mathcal{K}(k,s)$ be defined as in Lemma 
+		\ref{Alg:Lemma:Badsublemma1}, then we have for all $k\in \mathbbm{N}$
+		\begin{equation*}
+			\mathcal{K}(k, s)
+			=
+			\begin{cases}
+				1 & s=0 \\
+				0 & \text{else}.		
+			\end{cases}
+		\end{equation*}
+	\end{lemma}
+	\begin{subproof}
+		\mbox{}
+		\begin{enumerate}[(i)]
+		  \item $s=0$:
+			The Kronecker-delta will always be zero unless $l=j=0$. So we get
+			\begin{equation*}
+				\mathcal{K}(k,0)
+				=
+				\frac{1}{k+1} \sum\limits_{n=0}^k
+				\binom{k+1}{n} B_n^*
+				=
+				\frac{k+1}{k+1}
+				=
+				1
+			\end{equation*}
+			where we have used (\ref{1_B1}).
+
+			\item $s=1$:
+			To get a contribution, we must have $(j, \ell) = (1,0)$ or
+			 $(0,1)$. Except for $n=0$ and $n=k$, both cases are possible. We 
+			 split them off:
+			\begin{align*}
+				\mathcal{K}(k,1)
+				& = 
+				\underbrace{\frac{1}{k+1}}_{n=0}
+				- \underbrace{k B_k^*}_{n=k}
+				+ \frac{1}{k+1}
+				\sum\limits_{n=1}^{k-1}
+				\binom{k+1}{n}B_n^*
+				\left(1 + (-1) \binom{n}{1} \right)\\
+				& = 
+				\frac{1}{k+1}
+				+ \frac{1}{k+1} \sum\limits_{n=1}^{k-1}
+				\binom{k+1}{n}B_n^* 
+				- \frac{1}{k+1}	\sum\limits_{n=1}^{k-1}
+				\binom{k+1}{n}n B_n^* 
+				- k B_k^* \\
+				& = 
+				\underbrace{\frac{1}{k+1}
+				\sum\limits_{n=0}^{k-1}}_{ = 1 - B_k^*} 
+				- \frac{1}{k+1} \sum\limits_{n=0}^k
+				\binom{k+1}{n}n B_n^*\\
+				& =
+				1 - B_k^* 
+				- \underbrace{\frac{k+1}{k+1}
+				\sum\limits_{n=0}^k
+				\binom{k+1}{n} B_n^*}_{ = k+1}
+				+ \sum\limits_{n=0}^k 
+				\underbrace{\frac{k+1-n}{k+1}
+				\binom{k+1}{n}}_{\binom{k}{n}} B_n^*\\
+				& = 
+				1 - B_k^* - k - 1 
+				+ \sum\limits_{n=0}^{k-1}
+				\binom{k}{n} B_n^* - B_k^*\\
+				& =
+				- k + 
+				\sum\limits_{n}^{k-1} 
+				\binom{k}{n} B_n^*\\
+				& = 
+				0
+			\end{align*}
+	
+		  \item $s \mapsto s+1$:
+			It is sufficient to prove 
+			$\mathcal{K}(k,s+1) - \mathcal{K}(k,s) = 0$.
+			In order to do that, we look for a better (i.e. well-suited, not
+			necessarily nicely looking) form of $\mathcal{K}(k,s)$.
+			\begin{align*}
+				\mathcal{K}(k,s)
+				& = 
+				\frac{1}{k + 1}	\sum\limits_{n=0}^k
+				\binom{k+1}{n} B_n^* \sum\limits_{j=0}^n
+				(-1)^j \binom{n}{j} \sum\limits_{\ell=0}^{k-n}
+				\delta_{s, \ell+j}\\
+				& = 
+				\frac{1}{k + 1} \sum\limits_{n=0}^s
+				\binom{k+1}{n} B_n^* \sum\limits_{j=0}^n
+				(-1)^j \binom{n}{j} \sum\limits_{\ell=0}^{k-n}
+				\delta_{s, \ell+j} \\
+				& \quad + \frac{1}{k + 1} \sum\limits_{n=s+1}^k
+				\binom{k+1}{n} B_n^* \sum\limits_{j=0}^s
+				(-1)^j \binom{n}{j} \sum\limits_{\ell=0}^{k-n}
+				\delta_{s, \ell+j} \\
+				& = \frac{1}{k + 1} \sum\limits_{n=0}^s
+				\binom{k+1}{n} B_n^* 
+				\sum\limits_{j=\max\{0, s+n-k\}}^n
+				(-1)^j \binom{n}{j} \\
+				& \quad + \frac{1}{k + 1}
+				\sum\limits_{n=s+1}^k
+				\binom{k+1}{n} B_n^*
+				\sum\limits_{j=\max\{0, s+n-k\}}^s
+				(-1)^j \binom{n}{j}
+			\end{align*}
+			As long as $\max\{0, s+n-k\} = 0$, the second sum in the first 
+			summand will be zero as it is just the binomial expansion of 
+			$(1-1)^n$. We may not forget that for $n=0$ we cannot plug this 
+			in. Hence we get a special case and a shorter first sum. In the 
+			sums over $j$ we use again the binomial expansion of $(1-1)^n$ and 
+			get 
+			\begin{align*}
+				\mathcal{K}(k,s)
+				& = 
+				\frac{1}{k+1} \left[ 
+				1 + \sum\limits_{k+1-s}^s 
+				\binom{k+1}{n} B_n^* \left(
+				- \sum\limits_{j=0}^{s+n-k-1} 
+				(-1)^j \binom{n}{j}\right) \right. \\
+				& \quad + \left. 
+				\sum\limits_{n=s+1}^k 
+				\binom{k+1}{n} B_n^* \left( 
+				- \sum\limits_{j=0}^{s+n-k-1} 
+				(-1)^j\binom{n}{j} - 
+				\sum\limits_{j=s+1}^n 
+				(-1)^j \binom{n}{j} \right) \right]
+			\end{align*}
+			Now it is helpful to use (\ref{1_Bin1}) and 
+			$\binom{k}{n-k} = \binom{k}{n}$. 
+			We also get some $-1$-terms which we can put together with the 
+			$B_n^*$:
+			\begin{align*}
+				\mathcal{K}(k,s)
+				& = 
+				\frac{1}{k+1} \left[
+				1+ \sum\limits_{n=k+1-s}^s
+				\binom{k+1}{n} B_n (-1)^{k-s}
+				\binom{n-1}{k-s} \right. \\
+				& \quad + \left.
+				\sum\limits_{n=s+1}^k
+				\binom{k+1}{n}B_n \left(
+				(-1)^{k-s}\binom{n-1}{k-s} + (-1)^{n+s}\binom{n-1}{s}
+				\right) \right]
+			\end{align*}
+			We finally found the "better" form. We hence must compute
+			$\mathcal{K}(k,s+1) - \mathcal{K}(k,s)$.
+			Since we want to show that it is $0$, we can multiply it with
+			$k+1$ in order to get rid of the factor in front:
+			\begin{align*}
+				& \quad
+				(k+1) \left( \mathcal{K}(k,s+1) - \mathcal{K}(k,s) \right)\\
+				& =
+				\sum\limits_{n=k-s}^{s+1}
+				\binom{k+1}{n} B_n (-1)^{k-s-1}
+				\binom{n-1}{k-s-1} - \sum\limits_{n=k+1-s}^s
+				\binom{k+1}{n} B_n (-1)^{k-s} \binom{n-1}{k-s} \\
+				& \quad
+				+ \sum\limits_{n=s+2}^k
+				\binom{k+1}{n} B_n \left(
+				(-1)^{k-s-1}\binom{n-1}{k-s-1}
+				+ (-1)^{n+s+1}\binom{n-1}{s+1}
+				\right) \\
+				& \quad
+				- \sum\limits_{n=s+1}^k
+				\binom{k+1}{n} B_n \left(
+				(-1)^{k-s}\binom{n-1}{k-s} + (-1)^{n+s}\binom{n-1}{s}
+				\right) \\
+				& =
+				-\sum\limits_{n=k-s}^k
+				\binom{k+1}{n} B_n (-1)^{k-s}
+				\binom{n-1}{k-s-1} -\sum\limits_{n=k-s+1}^k
+				\binom{k+1}{n}B_n (-1)^{k-s} \binom{n-1}{k-s} \\
+				& \quad -
+				\sum\limits_{n=s+2}^k
+				\binom{k+1}{n}B_n (-1)^{n+s}
+				\binom{n-1}{s+1} - \sum\limits_{n=s+1}^k
+				\binom{k+1}{n}B_n (-1)^{n+s} \binom{n-1}{s} \\
+				& =
+				-\sum\limits_{n=k-s}^k
+				\binom{k+1}{n}B_n (-1)^{k-s} \left(
+				\binom{n-1}{k-s-1} + \binom{n-1}{k-s}
+				\right) \\
+				& \quad -
+				\sum\limits_{n=s+1}^k
+				\binom{k+1}{n} B_n (-1)^{n+s}
+				\left( \binom{n-1}{s+1} + \binom{n-1}{s} \right)
+			\end{align*}
+			We have just rearranged the sums, added some $0$-terms and put 
+			them together to get it nicer. Now we will use the recursion 
+			formula for the binomial coefficients
+			\begin{equation*}
+				\binom{n-1}{k-1} + \binom{n-1}{k}
+				=
+				\binom{n}{k}
+			\end{equation*}
+			and our binomial multiplication equality (\ref{1_Bin2}):
+			\begin{align*}
+				& =
+				- \sum\limits_{n=k-s}^k
+				\binom{k+1}{n} B_n (-1)^{k-s} \binom{n}{k-s}
+				- \sum\limits_{n=s+1}^k
+				\binom{k+1}{n} B_n (-1)^{n+s} \binom{n}{s+1} \\
+				& = 
+				- \sum\limits_{n=k-s}^k 
+				\binom{k+1}{s+1} \binom{s+1}{n+s-k} B_n (-1)^{k-s}
+				- \sum\limits_{n=s+1}^k
+				\binom{k+1}{s+1} \binom{k-s}{n-s-1} B_n (-1)^{n+s}
+			\end{align*}
+			Since we want to show that this is $0$, we can divide by
+			$\binom{k+1}{s+1}$, because this will not be zero as long as 
+			$s\leq k$. After doing so, can use the fact that $n>1$ in the 
+			second sum of this induction (since $s\geq 1$) and hence only even 
+			$n$ will come up, as for odd $n$ the Bernoulli numbers are zero. 
+			For this reason we get $(-1)^n = 1$. Then we rewrite these sums by 
+			shifting the indices and add two zeros:
+			\begin{align*}
+				& \quad
+				- \sum\limits_{n=k-s}^k
+				\binom{s+1}{n+s-k} B_n (-1)^{k-s}
+				+ \sum\limits_{n=s+1}^k
+				\binom{k-s}{n-s-1} B_n (-1)^{s+1} \\
+				& =
+				(-1)^{s+1} \sum\limits_{\ell=0}^{k-s-1}
+				\binom{k-s}{\ell} B_{\ell+s+1}
+				- (-1)^{k-s}\sum\limits_{\ell=0}^s 
+				\binom{s+1}{\ell} B_{\ell + k - s} \\
+				& =
+				(-1)^{s+1} \sum\limits_{\ell=0}^{k-s}
+				\binom{k-s}{\ell} B_{\ell+s+1}
+				- (-1)^{k-s} \sum\limits_{\ell=0}^{s+1}
+				\binom{s+1}{\ell} B_{\ell + k - s}\\
+				& \quad
+				- (-1)^{s+1} \binom{k-s}{k-s} B_{k+1} 
+				+ (-1)^{k-s} \binom{s+1}{s+1} B_{k+1}
+			\end{align*}
+			The first two terms are exactly the Carlitz-identity 
+			(\ref{1_Carl}), they vanish for this reason. So we are left with 
+			the last two terms. We get
+			\begin{equation*}
+				- (-1)^{s+1} B_{k+1} + (-1)^{k-s} B_{k+1}
+				=
+				(-1)^s B_{k+1} \left(1 + (-1)^k\right) = 0
+			\end{equation*}
+			since the bracket will be zero if $k$ is odd and $B_{k+1}=0$ if 
+			$k$ is even.
+		\end{enumerate}
+	\end{subproof}
+\end{proof}
+In Lemma \ref{Formulas:Lemma:LinearMonomial1}, we will see that also	$\ast_z$ 
+fulfils this identity. Hence $\ast_z = \widehat{\star}_z$. We only need to 
+show $\widehat{\star}_z = \star_z$. For $z = 1$, the two 	maps are clearly 
+identical and therefore we find
+\begin{equation*}
+	\xi^k \star_r \eta
+	=
+	\sum\limits_{n=0}^k
+	\binom{k}{n} B_n^* \xi^{k-n}
+	\left( \ad_{\xi} \right)^k(\eta).
+\end{equation*}
+But knowing this and inserting it into the definition of $\star_z$, we get 
+$\widehat{\star}_z = \star_z$. So with the proof in chapter 4, we have finally 
+proven the following theorem:
+\begin{theorem}
+	\label{Alg:Thm:ThreeStarsAreOne}
+	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ 
+	coincide on $\Sym^{\bullet}(\lie{g})$ and define star products.
+\end{theorem}
+

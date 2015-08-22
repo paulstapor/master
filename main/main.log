@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.26)  13 AUG 2015 00:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.26)  21 AUG 2015 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1179,76 +1179,226 @@ ne 16.
 
 LaTeX Warning: Citation `Schoetz:Master' on page 9 undefined on input line 17.
 
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 22.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 35.
-LaTeX Font Info:    Try loading font information for U+bbm on input line 36.
+input line 48.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 49.
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 48.
+line 61.
+ [9]
+LaTeX Font Info:    Try loading font information for U+euf on input line 148.
 
-
-LaTeX Warning: Citation `BNW:1998:TStarQ1' on page 9 undefined on input line 57
-.
-
-LaTeX Font Info:    Try loading font information for U+euf on input line 59.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-) [9]) [10]
+)
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 150.
+ [10] [11]
+
+LaTeX Warning: Citation `hilgert.neeb:2012a' on page 12 undefined on input line
+ 305.
+
+
+LaTeX Warning: Citation `varadarajan:1971a' on page 12 undefined on input line 
+305.
+
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
+t line 388.
+
+LaTeX Warning: Citation `bourbaki:' on page 12 undefined on input line 413.
+
+[12]
+
+LaTeX Warning: Citation `berezin:1971a' on page 13 undefined on input line 460.
+
+
+
+LaTeX Warning: Citation `gutt:1983a' on page 13 undefined on input line 495.
+
+
+LaTeX Warning: Citation `gutt:1983a' on page 13 undefined on input line 529.
+
+[13]
+
+LaTeX Warning: Citation `drinfeld:1981a' on page 14 undefined on input line 582
+.
+
+[14]
+
+LaTeX Warning: Citation `campb1' on page 15 undefined on input line 681.
+
+
+LaTeX Warning: Citation `campb2' on page 15 undefined on input line 681.
+
+
+LaTeX Warning: Citation `baker' on page 15 undefined on input line 682.
+
+
+LaTeX Warning: Citation `hausd' on page 15 undefined on input line 682.
+
+
+LaTeX Warning: Citation `schur' on page 15 undefined on input line 683.
+
+
+LaTeX Warning: Citation `casmur' on page 15 undefined on input line 684.
+
+
+LaTeX Warning: Citation `casas.murua:yeara' on page 15 undefined on input line 
+697.
+
+
+LaTeX Warning: Citation `varadarajan:yeara' on page 15 undefined on input line 
+699.
+
+
+LaTeX Warning: Citation `hall:yeara' on page 15 undefined on input line 703.
+
+
+LaTeX Warning: Citation `hilgert.neeb:2012a' on page 15 undefined on input line
+ 703.
+
+
+LaTeX Warning: Citation `jacobson:yeara' on page 15 undefined on input line 750
+.
+
+[15]
+
+LaTeX Warning: Citation `goldberg:1956a' on page 16 undefined on input line 787
+.
+
+
+LaTeX Warning: Citation `thompson:1982a' on page 16 undefined on input line 788
+.
+
+[16]
+
+LaTeX Warning: Citation `luschny.oeis' on page 17 undefined on input line 919.
+
+[17]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 1067.
+ [18] [19]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
+line 1353.
+Package hyperref Info: bookmark level for unknown subproof defaults to 0 on inp
+ut line 1390.
+ [20]
+
+LaTeX Warning: Citation `aik' on page 21 undefined on input line 1477.
+
+
+LaTeX Warning: Citation `aig_enum' on page 21 undefined on input line 1479.
+
+
+LaTeX Warning: Citation `carl' on page 21 undefined on input line 1481.
+
+
+LaTeX Warning: Reference `Alg:Lemma:Badsublemma1' on page 21 undefined on input
+ line 1486.
+
+
+LaTeX Warning: Reference `1_B1' on page 21 undefined on input line 1511.
+
+[21]
+
+LaTeX Warning: Reference `1_Bin1' on page 22 undefined on input line 1611.
+
+[22]
+
+LaTeX Warning: Reference `1_Bin2' on page 23 undefined on input line 1679.
+
+
+LaTeX Warning: Reference `1_Carl' on page 23 undefined on input line 1720.
+
+[23]) [24]
 \openout2 = `Chapter4.aux'.
 
-
-(./Chapter4.tex
+ (./Chapter4.tex
 Chapter 4.
 
-LaTeX Warning: Reference `Thm:Alg:GuttIsBCH' on page 11 undefined on input line
+LaTeX Warning: Reference `Thm:Alg:GuttIsBCH' on page 25 undefined on input line
  11.
 
 
-LaTeX Warning: Reference `Thm:Alg:GuttIsBCH' on page 11 undefined on input line
+LaTeX Warning: Reference `Thm:Alg:GuttIsBCH' on page 25 undefined on input line
  51.
 
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 61.
 
-LaTeX Warning: Reference `Alg:BCH1stOrder' on page 11 undefined on input line 7
+LaTeX Warning: Reference `Alg:BCH1stOrder' on page 25 undefined on input line 7
 5.
 
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[11
+[25
 
 
 
-] [12] [13]
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 343.
- [14]
+]
 
-LaTeX Warning: Reference `Alg:GuttIsBCH' on page 15 undefined on input line 579
+LaTeX Warning: Reference `Lemma:Formulas:LinearMonomial1' on page 26 undefined 
+on input line 218.
+
+[26] [27] [28]
+
+LaTeX Warning: Reference `Alg:GuttIsBCH' on page 29 undefined on input line 579
 .
 
-[15] [16]
+[29] [30]
 
-LaTeX Warning: Reference `Def:StarProduct' on page 17 undefined on input line 8
+LaTeX Warning: Reference `Def:StarProduct' on page 31 undefined on input line 8
 57.
 
 
-LaTeX Warning: Citation `Gutt:83-Gst' on page 17 undefined on input line 858.
+LaTeX Warning: Citation `Gutt:83-Gst' on page 31 undefined on input line 858.
 
-[17]
+[31]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 862.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 936.
+ [32] [33]
+
+LaTeX Warning: Reference `Alg:BCHFirstOrderT' on page 34 undefined on input lin
+e 1175.
+
+
+LaTeX Warning: Reference `Cor:Formulas:LimitCases' on page 34 undefined on inpu
+t line 1208.
+
+
+LaTeX Warning: Reference `Cor:Formulas:LimitCases' on page 34 undefined on inpu
+t line 1218.
+
+
+LaTeX Warning: Reference `Alg:BCHSeriesLong' on page 34 undefined on input line
+ 1248.
+
+[34]
+
+LaTeX Warning: Reference `Alg:BCHSeriesLong' on page 35 undefined on input line
+ 1304.
+
+
+LaTeX Warning: Reference `Cor:Formulas:LimitCases' on page 35 undefined on inpu
+t line 1346.
+
+
+LaTeX Warning: Reference `Alg:BCHSeriesLong' on page 35 undefined on input line
+ 1380.
+
+[35] [36]) [37]
+\openout2 = `Chapter5.aux'.
+
+ (./Chapter5.tex [38
+
+
+
+]
+Chapter 5.
+[39]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 161.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1257,105 +1407,77 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [18]
+ [40]
 
-LaTeX Warning: Reference `Alg:BCHFirstOrderT' on page 19 undefined on input lin
-e 1090.
-
-[19]
-
-LaTeX Warning: Reference `Alg:BCHSeriesLong' on page 20 undefined on input line
- 1163.
+LaTeX Warning: Citation `Rudin:Blue' on page 41 undefined on input line 277.
 
 
-LaTeX Warning: Reference `Alg:BCHSeriesLong' on page 20 undefined on input line
- 1219.
-
-[20]
-
-LaTeX Warning: Reference `Alg:BCHSeriesLong' on page 21 undefined on input line
- 1295.
-
-[21]) [22]
-\openout2 = `Chapter5.aux'.
-
- (./Chapter5.tex
-Chapter 5.
-Package hyperref Info: bookmark level for unknown subproof defaults to 0 on inp
-ut line 67.
-[23
+LaTeX Warning: Citation `Rudin:Blue' on page 41 undefined on input line 296.
 
 
+LaTeX Warning: Citation `Rudin:Blue' on page 41 undefined on input line 322.
 
-] [24]
+[41]
 
-LaTeX Warning: Citation `Rudin:Blue' on page 25 undefined on input line 277.
-
-
-LaTeX Warning: Citation `Rudin:Blue' on page 25 undefined on input line 296.
-
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 308.
-
-LaTeX Warning: Citation `Rudin:Blue' on page 25 undefined on input line 322.
-
-[25]
-
-LaTeX Warning: Citation `BCR:AsympEsti:1981' on page 26 undefined on input line
+LaTeX Warning: Citation `BCR:AsympEsti:1981' on page 42 undefined on input line
  419.
 
 
-LaTeX Warning: Citation `GN:CIARegGroup:2012' on page 26 undefined on input lin
+LaTeX Warning: Citation `GN:CIARegGroup:2012' on page 42 undefined on input lin
 e 429.
 
-[26]
+[42]
 
-LaTeX Warning: Citation `MRZ:EntireCalculus:1962' on page 27 undefined on input
+LaTeX Warning: Citation `MRZ:EntireCalculus:1962' on page 43 undefined on input
  line 485.
 
 
-LaTeX Warning: Citation `Zelazko:EntButNotLMC:1998' on page 27 undefined on inp
+LaTeX Warning: Citation `Zelazko:EntButNotLMC:1998' on page 43 undefined on inp
 ut line 491.
 
 
-LaTeX Warning: Citation `Jarchow:LCSpaces' on page 27 undefined on input line 5
+LaTeX Warning: Citation `Jarchow:LCSpaces' on page 43 undefined on input line 5
 09.
 
 
-LaTeX Warning: Citation `Waldmann:LectureAlgDyn' on page 27 undefined on input 
+LaTeX Warning: Citation `Waldmann:LectureAlgDyn' on page 43 undefined on input 
 line 509.
 
-[27]
+[43]
 Overfull \hbox (9.40727pt too wide) in paragraph at lines 560--561
 []\T1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 V[]; [] ; V[]; W$
  []
 
-[28]
+[44]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 761.
- [29] [30]
+ [45] [46]
 
-LaTeX Warning: Reference `Prop:LCAna:Projections' on page 31 undefined on input
+LaTeX Warning: Reference `Prop:LCAna:Projections' on page 47 undefined on input
  line 1065.
 
-[31]
+[47]
 
-LaTeX Warning: Citation `Waldmann:nuclear:2014' on page 32 undefined on input l
+LaTeX Warning: Citation `Waldmann:nuclear:2014' on page 48 undefined on input l
 ine 1080.
 
-[32] [33]
+[48] [49]
 
-LaTeX Warning: Citation `Thompson:Convergence:1989' on page 34 undefined on inp
+LaTeX Warning: Citation `Thompson:Convergence:1989' on page 50 undefined on inp
 ut line 1315.
 
-[34] [35] [36] [37] [38] [39] [40] [41] [42]
+[50] [51] [52] [53] [54] [55] [56] [57] [58]
 
-LaTeX Warning: Citation `pflaum.schottenloher:1998a' on page 43 undefined on in
+LaTeX Warning: Citation `pflaum.schottenloher:1998a' on page 59 undefined on in
 put line 2346.
+
+
+LaTeX Warning: Reference `Thm:LCAna:ContinuousRepresentations' on page 59 undef
+ined on input line 2354.
 
 
 Overfull \hbox (9.72919pt too wide) in paragraph at lines 2346--2360
@@ -1365,34 +1487,34 @@ T1/cmr/m/n/10.95 (\U/euf/m/n/10.95 g\OT1/cmr/m/n/10.95 )$ \T1/cmr/m/n/10.95 for
  finite-dimensional
  []
 
-) [43]
+) [59]
 \openout2 = `Chapter6.aux'.
 
- (./Chapter6.tex [44
+ (./Chapter6.tex [60
 
 
 
 ]
 Chapter 6.
-) [45]
+) [61]
 \openout2 = `Chapter7.aux'.
 
- (./Chapter7.tex [46
+ (./Chapter7.tex [62
 
 
 
 ]
 Chapter 7.
-) [47]
+) [63]
 \openout2 = `Chapter8.aux'.
 
- (./Chapter8.tex [48
+ (./Chapter8.tex [64
 
 
 
 ]
 Chapter 8.
-) [49]
+) [65]
 No file main.bbl.
 \tf@thm=\write6
 \openout6 = `main.thm'.
@@ -1405,7 +1527,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 85F37F23A2E92353441E1A15970073B6;4083.
+(rerunfilecheck)             Checksum: F2DBC1449167E13B3D1A10F510CB6D7B;4685.
 
 
 LaTeX Warning: There were undefined references.
@@ -1413,16 +1535,16 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
  ) 
 Here is how much of TeX's memory you used:
- 21048 strings out of 494935
- 365543 string characters out of 6178122
- 491494 words of memory out of 5000000
- 23478 multiletter control sequences out of 15000+600000
- 34834 words of font info for 105 fonts, out of 8000000 for 9000
+ 21297 strings out of 494935
+ 369132 string characters out of 6178122
+ 496027 words of memory out of 5000000
+ 23645 multiletter control sequences out of 15000+600000
+ 33995 words of font info for 100 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,16n,73p,797b,821s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/paul/.texmf-var/fonts/pk/ljfour/public/bbm/bbm8.600pk> </home/paul/.t
-exmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600pk> </home/paul/.texmf-var/fon
-ts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/paul/.texmf-var/fonts/pk/ljfour
+ 56i,16n,73p,797b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600pk> </home/pa
+ul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/paul/.texmf-va
+r/fonts/pk/ljfour/public/bbm/bbm8.600pk> </home/paul/.texmf-var/fonts/pk/ljfour
 /jknappen/ec/ecbx1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec
 /ecsl1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.60
 0pk> </home/paul/.texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk> </home/paul
@@ -1445,16 +1567,15 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stma
-ry10.pfb>
-Output written on main.pdf (49 pages, 473114 bytes).
+pe1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryr
+d/stmary10.pfb>
+Output written on main.pdf (65 pages, 543687 bytes).
 PDF statistics:
- 1388 PDF objects out of 1440 (max. 8388607)
- 852 compressed objects within 9 object streams
- 268 named destinations out of 1000 (max. 500000)
- 18869 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 1601 PDF objects out of 1728 (max. 8388607)
+ 1030 compressed objects within 11 object streams
+ 354 named destinations out of 1000 (max. 500000)
+ 16365 words of extra memory for PDF output out of 17280 (max. 10000000)
 
