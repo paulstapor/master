@@ -15,10 +15,7 @@ convenient and necessary. In the second part, we will briefly recall the most
 important things on locally convex algebras and introduce the topology which 
 we will work with. In the third section, the core of this chapter, the 
 continuity of the star product and the dependence on the formal parameter are 
-proven. Part four treats the case when the formal parameter $z = 1$ and hence 
-talks about a locally convex topology on the universal enveloping algebra of a 
-Lie algebra. We will also show, that our topology is ''optimal'' in a specific 
-sense.
+proven. We also show that representations of Lie algebras lift in a good way to  those of the deformed symmetric algebra and that our construction is in fact functorial. Part four treats the case when the formal parameter $z = 1$ and hence talks about a locally convex topology on the universal enveloping algebra of a Lie algebra. We will also show, that our topology is ''optimal'' in a specific sense.
 
 
 
@@ -1156,7 +1153,7 @@ proofs here. They can be found in \cite{Waldmann:nuclear:2014}.
 \label{sec:chap5_TopologyStar}
 
 From now on, we start with an AE Lie algebra $\lie{g}$ rather than with a 
-general locally convex space. We have all the tools by the hand to show the 
+general locally convex space $V$. We have all the tools by the hand to show the 
 continuity of the Gutt star product. We can do it either via the bigger 
 formula \eqref{Formulas:2MonomialsFormula2} for two monomials or via the 
 smaller one \eqref{Formulas:LinearMonomial2} for a monomial with a 
@@ -1195,7 +1192,7 @@ map $f \colon \Sym_R^{\bullet}(\lie{g}) \longrightarrow
 \subsection{Continuity of the product}
 In the first proof, we want to approach the estimate via the formula
 \begin{equation*}
-    \xi_1 \cdots \xi_k \star_{zG} \eta_1 \cdots \eta_{\ell}
+    \xi_1 \cdots \xi_k \star_z \eta_1 \cdots \eta_{\ell}
     =
     \sum\limits_{n=0}^{k + \ell -1}
     z^n
@@ -1204,7 +1201,7 @@ In the first proof, we want to approach the estimate via the formula
 Since this comes from polarizing the formula
 \begin{equation}
     \label{LCAna:2MonomialsSumCn}
-    \xi^k \star_{zG} \eta^{\ell}
+    \xi^k \star_z \eta^{\ell}
     =
     \sum\limits_{n=0}^{k + \ell -1}
     z^n
@@ -1215,10 +1212,12 @@ estimate for the first one easily in the same way, since in the end,
 all Lie brackets are broken up in step $(iii)$. One will get 
 sums over permutations weighted with the inverse of their quantity and, as 
 their semi-norms are just numbers which commute, one ends up with the same 
-estimate as for \eqref{LCAna:2MonomialsSumCn}. First, we want to extend the 
-Gutt star product to the whole tensor algebra: we define
+estimate as for \eqref{LCAna:2MonomialsSumCn}. 
+
+Before we star, we must fix two things: first, we want to extend the Gutt star 
+product to the whole tensor algebra: define
 \begin{equation*}
-	\ostar_{zG}
+	\ostar_z
 	\colon
 	\Tensor^{\bullet}(\lie{g})
 	\times
@@ -1226,44 +1225,145 @@ Gutt star product to the whole tensor algebra: we define
 	\longrightarrow
 	\Tensor^{\bullet}(\lie{g})
 	, \quad
-	\ostar_{zG} 
+	\ostar_z 
 	= 
-	\star_{zG} \circ \Symmetrizer.
+	\star_z \circ \Symmetrizer.
 \end{equation*}
+Second, we will need the next lemma:
+\begin{lemma}
+	\label{LCAna:Lemma:BCHTermsEstiamte}
+	Let $\lie{g}$ be a AE-Lie algebra, $\xi, \eta \in \lie{g}$, $p$ a 
+	continuous seminorm, $q$ an	asymptotic estimate for it and $a, b, n \in 
+	\mathbb{N}$ with $a + b = n$. Then, using the Goldberg-Thompson form of 
+	the Baker-Campbell-Hausdorff series, we have the following estimates:
+	\begin{lemmalist}
+	  \item \label{Item:ThompsonEstimate}
+		The coefficients $g_w$ from \eqref{Alg:BCHinGoldbergThompson} 
+		fulfil the estimate
+		\begin{equation}
+			\label{LCAna:ThompsonEstimate}
+			\sum\limits_{|w| = n}
+			\left| \frac{g_w}{n} \right|
+			\leq
+			\frac{2}{n}.
+		\end{equation}
+		Recall that $|w|$ denotes the length of a word $w$ and $[w]$ is the
+		word put in Lie brackets nested to  the left.
+	\item \label{Item:AEonWords}
+		For every word $w$ which has consists of $a$ $\xi$'s and $b$ $\eta$'s,
+		we have
+		\begin{equation}
+		\label{LCAna:AEonWords}
+			p([w])
+			\leq
+			q(\xi)^a q(\eta)^b.
+		\end{equation}
+	\item \label{Item:BCHEstimate}
+		We have the estimate
+		\begin{equation}
+		\label{LCAna:BCHEstimate}
+			p \left(
+				\bchparts{a}{b}{\xi}{\eta}
+			\right)
+			\leq
+			\frac{2}{a + b}
+			q(\xi)^a q(\eta)^b.
+		\end{equation}
+	\end{lemmalist}
+\end{lemma}
+\begin{proof}
+	As already mentioned, Thompson showed in \cite{thompson:1982a} how the 
+	Goldberg expression could be rearranged in Lie bracket form. In 
+	\cite{thompson:1989a}, he put estimates on this coefficients and proved 
+	\eqref{LCAna:ThompsonEstimate}. The next estimate \eqref{LCAna:AEonWords} 
+	is due to the AE property, which does not see the way how brackets are set 
+	but just counts the number of $\xi$'s and $\eta$'s in the whole 
+	expression.
+	Let's now use the notation $|w|_{\xi}$ for the number of $\xi$'s appearing
+	in a word $w$ and $|w|_{\eta}$ for the number of $\eta$'s. Clearly, $|w| =
+	|w|_{\xi} + |w|_{\eta}$. With \eqref{LCAna:ThompsonEstimate} and the AE
+	property of $\lie{g}$, we get
+	\begin{align*}
+		p \left(
+			\bchparts{a}{b}{\xi}{\eta}
+		\right)
+		& \leq
+		\sum\limits_{\substack{
+			|w|_{\xi} = a \\
+			|w|_{\eta} = b
+		}}
+		p^{a + b} \left(
+			\frac{g_w}{a + b}
+			[w]
+		\right)
+		\\
+		& \leq
+		\sum\limits_{\substack{
+			|w|_{\xi} = a \\
+			|w|_{\eta} = b
+		}}
+		\left| \frac{g_w}{a + b} \right|
+		p([w])
+		\\
+		& \leq
+		\sum\limits_{\substack{
+			|w|_{\xi} = a \\
+			|w|_{\eta} = b
+		}}
+		\left| \frac{g_w}{a + b} \right|
+		q(\xi)^a q(\eta)^b
+		\\
+		& \leq
+		\frac{2}{a + b}
+		q(\xi)^a q(\eta)^b.
+	\end{align*}
+\end{proof}
+
 \begin{theorem}
     \label{Thm:LCAna:Continuity1}%
-    Let $\lie{g}$ be an AE-Lie algebra and $R \geq 1$, then for $x, y
-    \in \Tensor_R^{\bullet}(\lie{g})$, $z \in \mathbb{C}$ and each 
-    continuous semi-norm $p$ on $\lie{g}$ there exists a constant $c$ 
-    such that we have for an asymptotic estimate $q$ of $p$
-    \begin{equation}
-        \label{LCAna:Continuity1}
-        p_R(x \ostar_{zG} y)
-        \leq
-        (c q)_R(x) (c q)_R(y).
-    \end{equation}
-    Hence the Gutt star product is continuous on
-    $\Sym_R^{\bullet}(\lie{g})$ for all $z \in \mathbb{C}$.
+    Let $\lie{g}$ be an AE-Lie algebra, $R \geq 0$, $p$ a continuous seminorm
+    with an asymptotic estimate $q$ and $z \in \mathbb{C}$.
+    \begin{theoremlist}
+    	\item \label{item:CnOperatorEstimate}
+    	For $n \in \mathbb{N}$, the operator $C_n$ is continuous and for all
+    	$x, y \in \Tensor_R^{\bullet}(\lie{g})$ we have the estimate:
+    	\begin{equation}
+    		\label{LCAna:CnOperators}
+    		p_R \left( C_n(x,y) \right)
+			\leq
+        	\frac{n!^{1 - R}}{2 \cdot 8^n}
+        	(16 q)_R (x)
+        	(16 q)_R (y)
+    	\end{equation}
+    	\item \label{item:LCAna:Continuity1}
+    	For $R \geq 1$, the Gutt star product is continuous and for all
+    	$x, y \in \Tensor_R^{\bullet}(\lie{g})$ we have the estimate:
+	    \begin{equation}
+	   	    \label{LCAna:Continuity1}
+	        p_R(x \ostar_z y)
+	        \leq
+	        (c q)_R(x) (c q)_R(y)
+	    \end{equation}
+	    with $c = 16(|z| + 1)$. Hence, the Gutt star product is continuous and
+	    the estimate \eqref{LCAna:Continuity1} holds on
+	    $\widehat{\Sym}_R^\bullet(\lie{g})$ for all $z \in \mathbb{C}$
+	\end{theoremlist}
 \end{theorem}
 \begin{proof}
-    We need to give estimates on the $z^n C_n$ in order to show their
-    convergence.  Let us use $r = k + \ell - n$ for brevity and recall
+    We need to give an estimate on the $C_n$ in order to show their
+    convergence. Let us use $r = k + \ell - n$ for brevity and recall
     that the products are taken in the symmetric algebra.
-    Then we can use Equation \eqref{Formulas:2MonomialsExplicit} in the 
-    proof of Lemma \ref{Lemma:Formulas:2MonomialsFormula1} and put 
-    estimates on it. Let $p$ be a continuous semi-norm
-    and let $q$ be an asymptotic estimate for it. By using the
-    continuity estimate for the symmetric tensor product in (a), the
-    AE property of the Lie bracket \eqref{LCAna:AE} in (b) and then 
-    simplifying the summation by adding more terms in (c), we get
-    \begin{align}
-        \nonumber
+    We use Equation \eqref{Formulas:2MonomialsExplicit} from 
+    Lemma~\ref{Formulas:Lemma:2MonomialsFormula1} and put
+    estimates on it using Lemma~\ref{LCAna:Lemma:BCHTermsEstiamte} 
+    \textit{(\ref{Item:BCHEstimate})}. So let $p$ be a continuous seminorm
+    and let $q$ be an asymptotic estimate for it:
+    \begin{align*}
         p_R \left(
-            z^n C_n\left( \xi^k, \eta^{\ell} \right)
+            C_n \left( \xi^k, \eta^{\ell} \right)
         \right)
         & =
         p_R \bigg(
-        z^n
         \frac{k! \ell!}{r!}
         \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
             a_i + b_i \geq 1 \\
@@ -1275,9 +1375,7 @@ Gutt star product to the whole tensor algebra: we define
         \bchparts{a_r}{b_r}{\xi}{\eta}
         \bigg)
         \\
-        \nonumber
-        & \ot{(a)}{\leq}
-        |z|^n
+        & \leq
         \frac{k! \ell!}{r!}
         r!^R
         \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
@@ -1289,261 +1387,157 @@ Gutt star product to the whole tensor algebra: we define
         \cdots
         p^{a_r + b_r} \left( \bchparts{a_r}{b_r}{\xi}{\eta} \right)
         \\
-        \nonumber
-        & \ot{(b)}{\leq}
-        |z|^n
+        & \leq
         \frac{k! \ell!}{r!^{1-R}}
-        q(\xi)^k q(\eta)^{\ell}
         \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
             a_i + b_i \geq 1 \\
             a_1 + \ldots + a_r = k \\
             b_1 + \ldots + b_r = \ell
           }}
-        |\vartheta_{a_1, b_1}| \ldots |\vartheta_{a_r, b_r}|
+		\frac{2 q(\xi)^{a_1} q(\eta)^{b_1}}{a_1 + b_1}
+		\ldots
+		\frac{2 q(\xi)^{a_r} q(\eta)^{b_r}}{a_r + b_r}
         \\
-        \label{LCAna:2MonomialsPreEstimate}
-        & \ot{(c)}{\leq}
-        |z|^n
-        \frac{k! \ell!}{r!^{1-R}}
+        & \leq
         q(\xi)^k q(\eta)^{\ell}
-        \sum\limits_{\substack{j_1, \ldots, j_r \geq 1 \\
-            j_1 + \ldots + j_r = k + \ell}}
-        |\vartheta_{j_1}| \ldots |\vartheta_{j_r}|
-    \end{align}
-    Now we will use the fact that Thompson gave estimate for the growth 
-    of the Baker-Campbell-Hausdorff coefficientsin in 
-    \cite{Thompson:Convergence:1989}. More precisely he showed 
-    $|\vartheta_j| \leq \frac{2}{j}$. For us, it will be sufficient that 
-    for all $j \in \mathbb{N}$ we have $|\vartheta_j| \leq 2$. Knowing this 
-    and using some easy combinatoric estimates we find
+        2^r
+        \frac{k! \ell!}{r!^{1-R}}
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_i + b_i \geq 1 \\
+            a_1 + \ldots + a_r = k \\
+            b_1 + \ldots + b_r = \ell
+          }}
+		1,
+    \end{align*}
+    where we just used $\frac{2}{a_i + b_i} \leq 2$ in the last step. We need
+    to count the number of terms in the sum:
     \begin{equation*}
-        \sum\limits_{
-          \substack{
-            j_1, \ldots, j_r \geq 1 \\
-            j_1 + \ldots + j_r = k + \ell
-          }
-        }
-        |\vartheta_{j_1}| \cdots |\vartheta_{j_r}|
-        \leq
-        2^r \sum\limits_{
-          \substack
-          {j_1, \ldots, j_r \geq 1 \\
-            j_1 + \cdots + j_r = k + \ell
-          }
-        } 1
-        \leq
-        2^r \binom{k + \ell + r - 1}{k + \ell}
-        \leq
-        2^{3 (k + \ell) - 2n - 1}.
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_i + b_i \geq 1 \\
+            a_1 + \ldots + a_r = k \\
+            b_1 + \ldots + b_r = \ell
+          }}
+		1
+		\leq
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_1 + b_1 + \ldots + a_r + b_r = k + \ell
+          }}
+		1
+		=
+		\binom{k + \ell + 2r - 1}{k + \ell}
+		\leq
+		2^{3(k + \ell) - 2n - 1},
     \end{equation*}
-    We put this together with \eqref{LCAna:2MonomialsPreEstimate}
-    into the estimate
-    \begin{align}
-        \nonumber
+    where we gave up some restrictions in the first estimate and got
+    therefore more terms. Now we have
+    \begin{align*}
         p_R \left(
-            \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
-        \right)
-        & =
-        p_R \left(
-            \sum\limits_{n=0}^{k + \ell - 1}
-            z^n
             C_n \left( \xi^k, \eta^{\ell} \right)
         \right)
-        \\
-        \nonumber
         & \leq
-        \sum\limits_{n=0}^{k + \ell - 1}
-        |z|^n
-        \frac{k! \ell!}{(k + \ell - n)!^{1-R}}
         q(\xi)^k q(\eta)^{\ell}
-        2^{3 (k + \ell) - 2 n - 1}
+        2^{k + \ell - n}
+        \frac{k! \ell!}{(k + \ell - n)!^{1-R}}
+        2^{3(k + \ell) - 2n - 1}
         \\
-        \nonumber
         & =
-        \frac{1}{2}
-        \sum\limits_{n=0}^{k + \ell - 1}
-        \frac{|z|^n}{4^n}
-        \left( \frac{k! \ell! n!}{(k + \ell - n)! n!}
+        q_R \left( \xi^{\tensor k} \right)
+        q_R \left( \eta^{\tensor \ell} \right)
+        2^{4(k + \ell) - 3n - 1}
+        \left(
+        	\frac{k! \ell! n!}{(k + \ell - n)! n!}
         \right)^{1-R}
-        (8 q)_R \left( \xi^{\tensor k} \right)
-        (8 q)_R \left( \eta^{\tensor \ell} \right)
         \\
-        \label{LCAna:2MonomialEstimate}
         & \leq
-        \frac{1}{2}
-        \sum\limits_{n=0}^{k + \ell - 1}
-        \frac{|z|^n}{4^n}
-        \frac{1}{n!^{R - 1}}
-        \binom{k + \ell}{k}^{R - 1}
-        \binom{k + \ell}{n}^{1 - R}
-        (8 q)_R \left( \xi^{\tensor k} \right)
-        (8 q)_R \left( \eta^{\tensor \ell} \right)
-        \\
-        \nonumber
-        & \leq
-        \frac{1}{2}
-        \sum\limits_{n=0}^{k + \ell - 1}
-        \frac{|z|^n}{4^n n!^{R - 1}}
-        2^{(1-R)(k + \ell)}
-        (8 q)_R \left( \xi^{\tensor k} \right)
-        (8 q)_R \left( \eta^{\tensor \ell} \right)
-        \\
-        \nonumber
-        & =
-        \frac{1}{2}
-        \sum\limits_{n=0}^{k + \ell - 1}
-        \frac{|z|^n}{4^n n!^{R - 1}}
-        (8 q)_R \left( \xi^{\tensor k} \right)
-        (8 q)_R \left( \eta^{\tensor \ell} \right).
-    \end{align}
-    Remind that $R \geq 1$, so $2^{1-R} \leq 1$. For $|z| \leq 2$ we get
-    \begin{align*}
-        \nonumber
-        p_R \left(
-            \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
-        \right)
-        & \leq
-        \frac{1}{2}
-        \sum\limits_{n=0}^{\infty}
-        \frac{1}{2^n}
-        (8 q)_R(\xi^{\tensor k})
-        (8 q)_R(\eta^{\tensor \ell})
+        q_R \left( \xi^{\tensor k} \right)
+        q_R \left( \eta^{\tensor \ell} \right)
+        2^{4(k + \ell) - 3n - 1}
+        2^{(1 - R)(k + \ell)}
+        n!^{1 - R}
         \\
         & =
-        (8 q)_R \left( \xi^{\tensor k} \right)
-        (8 q)_R \left( \eta^{\tensor \ell} \right).
+        \frac{n!^{1 - R}}{2 \cdot 8^n}
+        (16 q)_R \left( \xi^{\tensor k} \right)
+        (16 q)_R \left( \eta^{\tensor \ell} \right)
     \end{align*}
-    For $|z| > 1$ we have on the other hand
-    \begin{align*}
-        \nonumber
-        p_R \left(
-            \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
-        \right)
-        & \leq
-        \frac{1}{2}
-        \sum\limits_{n=0}^{k + \ell - 1}
-        \frac{|z|^{k + \ell}}{4^n}
-        (8 q)_R(\xi^{\tensor k})
-        (8 q)_R(\eta^{\tensor \ell})
-        \\
-        & \leq
-        (8z q)_R \left( \xi^{\tensor k} \right)
-        (8z q)_R \left( \eta^{\tensor \ell} \right).
-    \end{align*}
-    Thus we can find in both cases a continuous semi-norm which
-    fulfils \eqref{LCAna:Continuity1}. The proof for factorizing
-    tensors is the same and one finally gets
+    and the first part is proven on factorizing tensors by polarization:
     \begin{equation*}
     	p_R
-    	\left(
+    	\left( C_n \left(
     		\xi_1 \tensor \ldots \tensor \xi_k
-    		\star_{zG}
+    		,
     		\eta_1 \tensor \ldots \tensor \eta_{\ell}
-    	\right)
+    	\right) \right)
     	\leq
-    	(c q)_R
+    	\frac{n!^{1 - R}}{2 \cdot 8^n}
+    	(16 q)_R
     	\left(
     		\xi_1 \tensor \ldots \tensor \xi_k
     	\right)
-    	(c q)_R
+    	(16 q)_R
     	\left(
     		\eta_1 \tensor \ldots \tensor \eta_{\ell}
-    	\right)
+    	\right).
     \end{equation*}
-    with the same $c$'s as before. Having established this, we can use 
-    the infimum argument to get the statement on arbitrary tensors
-    and we are done.
+    For general tensors $x,y \in \Tensor_R^{\bullet}(\lie{g})$, we use the 
+    infimum argument from Lemma~\ref{LCAna:Lemma:InfimumArgument} and the 
+    first part is done. For the second part, let $x$ and $y$
+    be tensors of degree at most $k$ and $\ell$ respectively. We use
+    \eqref{LCAna:CnOperators} in (a), the fact that $R \geq 1$ in (b) and have
+    \begin{align}
+	    \nonumber
+	    	p_R \left(
+	    	x \star_z y
+	    	\right)
+	    	& =
+	    	p_R \left(
+	    		\sum\limits_{n=0}^{l + \ell - 1}
+	    		z^n C_n(x, y)
+	    	\right)
+	    	\\
+	    \nonumber
+	    	& \leq
+	    	\sum\limits_{n=0}^{k + \ell - 1}
+	    	p_R \left(
+	    		z^n C_n(x, y)
+	    	\right)
+	    	\\
+	    \label{LCAna:2MonomialEstimate}
+	    	& \ot{(a)}{\leq}
+	    	\sum\limits_{n=0}^{k + \ell - 1}
+	    	\frac{|z|^n}{2 \cdot 8^n}
+	    	n!^{1 - R}
+	    	(16 q)_R(x)
+	    	(16 q)_R(y)
+	    	\\
+	    \nonumber
+	    	& \ot{(b)}{\leq}
+	    	\frac{(|z| + 1)^{k + \ell}}{2}
+	    	(16 q)_R(x)
+	    	(16 q)_R(y)
+	    	\sum\limits_{n = 0}^{\infty}
+	    	\frac{1}{8^n}
+			\\
+		\nonumber
+			& \leq
+	    	(16(|z| + 1) q)_R(x)
+	    	(16(|z| + 1) q)_R(y).
+    \end{align}
+    Since estimates on $\Sym_R^{\bullet}(\lie{g})$ also hold for the
+    completion, the Theorem is proven.
 \end{proof}
 \begin{remark}
-	\mbox{}
-	\label{Rem:LCAna:CnOperators}
-	We have actually proven more than just the continuity of the star product. 
-	We will come back to this proof later in order to show also the entire 
-	holomorphic dependence of the star product on the formal parameter. This 
-	will be possible because we put bounds on the series 
-	$\sum_n z^n C_n(\cdot, \cdot)$.
-	This again means, that we have proven the continuity of the $C_n$ 
-	operators, too: for arbitrary tensors $x, y \in \Tensor_R^{\bullet}
-	(\lie{g})$ and a continuous semi-norm $p$, there is a constant $c$ 
-	independent of $z$ (and even of $R$) such that
-	\begin{equation}
-		\label{LCAna:CnOperators}
-		p_R
-		\left( C_n(x, y) \right)
-		\leq
-		(c q)_R (x)
-		(c q)_R (y)
-	\end{equation}
-	for all $n \in \mathbb{N}$, where $q$ is an asymptotic estimate 
-	for $p$. But we even have more than that:
-\end{remark}
-\begin{corollary}
-	\label{Coro:LCAna:ContinuityCn}
-	Let $R \geq 0$ and $n \in \mathbb{N}$. Then, for every continuous semi-
-	norm $p$ there exists a constant $c > 0$ such that for an asymptotic 
-	estimate $q$ and every $x,y \in \Tensor_R^{\bullet}(\lie{g})$ we get
-	the estimate
-	\begin{equation}
-		\label{LCAna:ContinuityCn}
-		p_R \left( C_n(x,y) \right)
-		\leq
-		n!^{1 - R}
-		(c q)_R(x) (c q)_R(y).
-	\end{equation}
-\end{corollary}
-\begin{proof}
-	We go back to \eqref{LCAna:2MonomialsPreEstimate} in the proof and use the 
-	estimate for the sum over the $|\vartheta_i|$:
-	\begin{align*}
-		p_R \left(
-			C_n \left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
-		\right)
-		& \leq
-		|z|^n
-		\frac{k! \ell!}{(k + \ell - n)!^{1-R}}
-		2^{3(k + \ell)}
-		q(\xi)^k q(\eta)^{\ell}
-		\\
-		& =
-		|z|^n
-		\left(
-			\frac{k! \ell! (k + \ell)! n!}
-			{(k + \ell - n)! (k + \ell)! n!}
-		\right)^{1 - R}
-		2^{3(k + \ell)}
-		q_R\left( \xi^{\tensor k} \right)
-		q_R\left( \eta^{\tensor \ell} \right)
-		\\
-		& \leq
-		|z|^n
-		2^{(1 - R)(k + \ell)}
-		n!^{1 - R}
-		2^{3(k + \ell)}
-		q_R\left( \xi^{\tensor k} \right)
-		q_R\left( \eta^{\tensor \ell} \right)
-		\\
-		& \leq
-		n!^{1-R}
-		\left( 16 (|z| + 1) \right)^{k + \ell}
-		q_R\left( \xi^{\tensor k} \right)
-		q_R\left( \eta^{\tensor \ell} \right).
-	\end{align*}
-	We just have to absorb the constant in front into the semi-norms and the 
-	proof is done.
-\end{proof}
-\begin{remark}
-	This makes things a bit clearer: The estimate \ref{LCAna:ContinuityCn} is 
-	exactly the one from \eqref{LCAna:CnOperators} for $R \geq 1$. All the 
-	$C_n$ are indeed continuous for any $R \geq 0$, but only for $R \geq 1$ 
-	there is something like a uniform continuity. When $R$ decreases, the 
-	continuity of the $C_n$'s ''gets worse'' and the uniform continuity 
-	finally breaks down when the threshold $R = 1$ is trespassed. But we need
-	this uniform estimate, since we have to control the operators up to an 
-	arbitrarily high order if we want to guarantee the continuity of the 
-	star product. Continuity up to a formerly chosen order $n$ does not 
+	Part \textit{(i)} of the theorem makes clear, why exactly continuity will 
+	only hold if $R \geq 1$: the estimate in \eqref{LCAna:CnOperators} shows, 
+	that all the 	$C_n$ are indeed continuous for any $R \geq 0$, but only 
+	for $R \geq 1$ there is something like a uniform continuity. When $R$ 
+	decreases, the continuity of the $C_n$'s ''gets worse'' and the uniform 
+	continuity finally breaks down when the threshold $R = 1$ is trespassed. 
+	But we need this uniform estimate, since we have to control the operators 
+	up to an arbitrarily high order if we want to guarantee the continuity of 
+	the 	star product. Continuity up to a formerly chosen order $n$ does not 
 	suffice.
 \end{remark}
-
 
 
 Now, we want to give the second proof, which relies on 
@@ -1565,7 +1559,7 @@ we get the following lemma which will finally make the proof easier.
     only depending on $z$ and $R$ such that the following estimate holds:
     \begin{equation}
         \label{LCAna:PreContinuity2}
-        p_R(x \ostar_{zG} \eta)
+        p_R(x \ostar_z \eta)
         \leq
         c_{z,R} (k+1)^R p_R(x) q(\eta)
     \end{equation}
@@ -1573,9 +1567,9 @@ we get the following lemma which will finally make the proof easier.
 \begin{proof}
     We start again with factorizing tensors. Since we get the same estimate 
     for monomials and for powers of some $\xi \in \lie{g}$ via polarization, 
-    it is enough to consider $\xi^{\tensor k} \ostar_{zG} \eta$. This gives
+    it is enough to consider $\xi^{\tensor k} \ostar_z \eta$. This gives
     \begin{align*}
-        p_R \left( \xi^{\tensor k} \ostar_{zG} \eta \right)
+        p_R \left( \xi^{\tensor k} \ostar_z \eta \right)
         & =
         p_R \left(
         \sum\limits_{n=0}^k
@@ -1617,14 +1611,14 @@ we get the following lemma which will finally make the proof easier.
     series which converges. We end up with a constant depending on $R$
     and on $z$ such that
     \begin{equation*}
-        p_R \left( \xi^{\tensor k} \ostar_{zG} \eta \right)
+        p_R \left( \xi^{\tensor k} \ostar_z \eta \right)
         \leq
         (k + 1)^R c_{z, R}
         p_R \left( \xi^{\tensor k} \right) p(\eta).
     \end{equation*}
     If on the other hand $|z| \geq 2 \pi$ and $R > 1$ we can estimate
     \begin{align*}
-        p_R \left( \xi^{\tensor k} \ostar_{zG} \eta \right)
+        p_R \left( \xi^{\tensor k} \ostar_z \eta \right)
         &\leq
         (k + 1)^R
         p_R \left( \xi^{\tensor k} \right) p(\eta)
@@ -1658,12 +1652,12 @@ Lie algebra:
     first and get
     \begin{align*}
         p_R \left(
-        \xi^{\tensor k} \ostar_{zG} \eta^{\tensor \ell}
+        \xi^{\tensor k} \ostar_z \eta^{\tensor \ell}
         \right)
         & =
         p_R \big(
         \xi^{\tensor k}
-        \underbrace{\ostar_{zG} \eta \ostar \cdots \ostar_{zG} \eta}_{
+        \underbrace{\ostar_z \eta \ostar \cdots \ostar_z \eta}_{
         \ell \textrm{-times}}
         \big)
         \\
@@ -1671,7 +1665,7 @@ Lie algebra:
         c_{z,R} (k + \ell)^R
         p_R \big(
         \xi^{\tensor k}
-        \underbrace{\ostar_{zG} \eta \ostar \cdots \ostar_{zG} \eta}_{
+        \underbrace{\ostar_z \eta \ostar \cdots \ostar_z \eta}_{
         \ell - 1 \textrm{-times}}
         \big)
         p(\eta)
@@ -1753,15 +1747,15 @@ continuity, if $R < 1$:
     \end{equation*}
     We want to show that there is no $c > 0$ such that
     \begin{equation*}
-        n_R(a_k \star_{zG} b_k)
+        n_R(a_k \star_z b_k)
         \leq
         (c n)_R(a_k) (c n)_R(b_k)
     \end{equation*}
-    With other words, $n_R(a_k \star_{zG} b_k)$ grows faster than
+    With other words, $n_R(a_k \star_z b_k)$ grows faster than
     exponentially. But this is the case, since with our combinatorial
     formula \eqref{Formulas:2MonomialsFormula2} we see
     \begin{align*}
-        n_R(a_k \star_{zG} b_k)
+        n_R(a_k \star_z b_k)
         & =
         n_R \left(
         \sum\limits_{j=0}^k
@@ -1801,7 +1795,7 @@ continuity, if $R < 1$:
 \subsection{Dependence on the formal parameter}
 
 We now look at the completion $\widehat{\Sym}_R^{\bullet}(\lie{g})$ of
-the symmetric algebra with the Gutt star product $\star_{zG}$ and 
+the symmetric algebra with the Gutt star product $\star_z$ and 
 get the following negative result:
 \begin{proposition}
     \label{proposition:NoExponentialsSorry}%
@@ -1833,167 +1827,131 @@ get the following negative result:
     \end{equation*}
     and clearly $\exp(\xi)$ does not converge for the semi-norm $p_R$.
 \end{proof}
-As already mentioned, the proof of Theorem \ref{Thm:LCAna:Continuity1}
-gives more than stated before. We know, that for $R \geq 1$ the star product 
-is continuous on $\Sym_R^{\bullet}(\lie{g})$ and therefore has a continuous 
-extension to $\widehat{\Sym}_R^{\bullet}(\lie{g})$, but this extension is a 
-priori abstract. It does not need to be the series of the $C_n$ operators 
-again. Yet, this is the case.
-\begin{corollary}
-	\label{Coro:LCAna:StarProdAbsConv}
-	Let $\lie{g}$ be an AE Lie algebra and $R \geq 1$. Then, for every $z \in 
-	\mathbb{C}$, the Gutt star product converges absolutely, i.e. for every 
-	continuous semi-norm $p$, there is another continuous semi-norm $q$ such 
-	that for all $f,g \in \widehat{\Sym}_R^{\bullet}(\lie{g})$
-	\begin{equation}
-		\label{LCAna:StarProdAbsConv}
-		p_R \left( f \star_{zG} g \right)
-		\leq
-		\sum\limits_{n = 0}^{\infty}
-		p_R \left( z^n C_n(f, g) \right)
-		\leq
-		q_R(f) q_R(g).
-	\end{equation}
-\end{corollary}
-\begin{proof}
-	The first inequality is clear. We know that for all $z \in \mathbb{C}$ 
-	and for all $p \in \algebra{P}$ there is a $q \in \algebra{P}$ such that
-	\begin{equation*}
-		p_R \left( z^n C_n(f, g) \right)
-		\leq
-		q_R(f) q_R(g)
-	\end{equation*}
-	holds for all $n \in \mathbb{N}$. So there is also a $q' \in 
-	\algebra{P}$ such that this holds for $2z$. We hence get
-	\begin{equation*}
-		p_R \left( z^n C_n(f, g) \right)
-		\leq
-		2^{-n} q'_R(f) q'_R(g).
-	\end{equation*}
-	Now the conclusion follows since
-	\begin{align*}
-		\sum\limits_{n = 0}^{\infty}
-		p_R \left( z^n C_n(f, g) \right)
-		& \leq
-		\sum\limits_{n = 0}^{\infty}
-		2^{-n} q'_R(f) q'_R(g)
-		\\
-		& \leq
-		2 q'_R(f) q'_R(g)
-	\end{align*}
-	and the $2$ in front can be absorbed in the semi-norms.
-\end{proof}
-The consequence of Corollary \ref{Coro:LCAna:StarProdAbsConv} is that 
-$\star_{zG}$ really converges to the formal series, and not just in an 
-abstract sense. So the formal series 
-\begin{equation*}
-	x \star_{zG} y
-	=
-	\sum\limits_{n = 0}^{\infty}
-	z^n C_n(x,y)
-\end{equation*}
-remains valid for elements $x,y$ in the completion. Knowing this and using the 
-fact that all the projections on the homogeneous components are continuous 
-from Lemma \ref{Lemma:LCAna:Projections} 
-(\ref{Item:ComponentProjectionsContinuous}), we can reinterpret the 
-continuity result we found in Theorem \ref{Thm:LCAna:Continuity1}.
+When we go back to Theorem~\ref{Thm:LCAna:Continuity1}, we see that we have 
+actually proven slightly more than we stated: We showed that the star product 
+converges absolutely and locally uniform in $z$. This means, that the star 
+product does is not only continuous, but also that the formal series converges 
+to the star product in the completion. We can take a closer look at this proof 
+in order to get a new result for the dependence on the formal parameter $z$:
 \begin{proposition}
-    \label{Prop:LCAna:HolomorphicDependence}%
-    Let $R \geq 1$, then for all $f, g \in
-    \widehat{\Sym}_R^{\bullet}(\lie{g})$ the map
+    \label{corollary:HolomorphicDependence}%
+    Let $R \geq 1$, then for all $x, y \in \widehat{\Sym}_R^\bullet(\lie{g})$ 
+    the map
     \begin{equation}
         \label{LCAna:Holomorphicity}
         \mathbb{K} \ni z
         \longmapsto
-        f \star_{zG} g \in
-        \widehat{\Sym}_R^{\bullet}(\lie{g})
+        x \star_z y \in
+        \widehat{\Sym}_R^\bullet(\lie{g})
     \end{equation}
-    is real-analytic if $\mathbb{K} = \mathbb{R}$ and
-    entire-holomorphic if $\mathbb{K} = \mathbb{C}$ with Taylor
-    expansion at $z = 0$ given by Equation 
-    \eqref{Formulas:2MonomialsFormula2}. The collection of the algebras 
-    $\left\{ \left( \widehat{\Sym}_R^{\bullet}(\lie{g}), \star_{zG} \right) 
-    \right\}_{z \in \mathbb{C}}$ is a holomorphic deformation of 
-    the completed symmetric tensor algebra 
-    $\left( \widehat{\Sym}_R^{\bullet}(\lie{g}), \vee \right)$.
+    is analytic with (absolutely convergent) Taylor expansion at $z = 0$ 
+    given by Equation~\eqref{Formulas:2MonomialsFormula1}. For 
+    $\mathbb{K} = \mathbb{C}$, the collection of algebras $\left\{ \left( 
+    \widehat{\Sym}_R^\bullet(\lie{g}), \star_z \right) \right\}_{z \in 
+    \mathbb{C}}$ is an entire holomorphic deformation of the completed 
+    symmetric tensor algebra $\left( \widehat{\Sym}_R^\bullet(\lie{g}), \vee 
+    \right)$.
 \end{proposition}
 \begin{proof}
-	The important point is that for $f,g \in \widehat{\Sym}_R^{\bullet}
-	(\lie{g})$ and every continuous semi-norm $p$ we have another 
-	continuous semi-norm $q$ such that
+	The crucial point is that for $x, y \in \widehat{\Sym}_R^\bullet
+	(\lie{g})$ and every continuous seminorm $p$ we have an asymptotic
+	estimate $q$ such that
 	\begin{align*}
-		p_R \left( f \star_{zG} g \right)
+		p_R \left( x \star_z y \right)
 		& =
-		p_R 
+		p_R
 		\left(
 			\sum\limits_{n=0}^{\infty}
-			z^n C_n(f,g)
+			z^n C_n(x,y)
 		\right)
 		\\
 		& =
 		\sum\limits_{n=0}^{\infty}
 		|z|^n
-		p_R( C_n(f, g) )
+		p_R( C_n(x, y) )
 		\\
 		& \leq
+		(16 q)_R (x)
+        (16 q)_R (y)
 		\sum\limits_{n=0}^{\infty}
-		|z|^n
-		q_R(f)
-		q_R(g).
+        \frac{|z|^n n!^{1 - R}}{2 \cdot 8^n},
 	\end{align*}
-	We already showed that for every $M > 0$, there exists a $c \geq 1$, 
-	such that in the open disc $|z| < M \subset \mathbb{C}$ the 
-	inequality
+	where we used the fact that the estimate \eqref{LCAna:CnOperators}
+	extends to the completion. For $R > 1$, this map is clearly analytic
+	and absolutely convergent for all $z \in \mathbb{K}$.
+	If $R = 1$, then for every $M \geq 1$ we go back to homogeneous,
+	factorizing tensors $x^{(k)}$ and $y^{(\ell)}$ of degree $k$ and $\ell$
+	respectively, and have
+	\begin{align*}
+		M^{n} p_R \left(
+			C_n \left( x^{(k)}, y^{(\ell)} \right)
+		\right)
+		& \leq
+		\frac{M^n}{2 \cdot 8^n}
+		(16 q)_R \left( x^{(k)} \right)
+		(16 q)_R \left( y^{(\ell)} \right)
+		\\
+		& \leq
+		M^{k + \ell}
+		(16 q)_R \left( x^{(k)} \right)
+		(16 q)_R \left( y^{(\ell)} \right)
+		\\
+		& =
+		(16M q)_R \left( x^{(k)} \right)
+		(16M q)_R \left( y^{(\ell)} \right),
+	\end{align*}
+	where we used that $0 \leq n \leq k + \ell - 1$. The infimum argument 
+	gives the estimate on all Tensors $x,y \in \Tensor_R^{\bullet}(\lie{g})$ 
+	and it extends to the completion such that
 	\begin{equation*}
-		p_R \left( f \star_{zG} g \right)
+		p_R \left( z^n C_n(x, y) \right)
 		\leq
+		(16M q)_R(x) (16M q)_R(y)
+		\frac{|z|^n}{2 \cdot (8M)^n}
+	\end{equation*}
+	and hence
+	\begin{equation*}
+		p_R(x \star_z y)
+		\leq
+		(16 M q)_R (x)
+        (16 M q)_R (y)
 		\sum\limits_{n=0}^{\infty}
-		|z|^n
-		q_R(f)
-		q_R(g)
-		\leq
-		(c q)_R(f)
-		(c q)_R(g)
-		<
-		\infty
+        \frac{|z|^n}{2 \cdot (8M)^n}.
 	\end{equation*}
-	holds. Thus the map \eqref{LCAna:Holomorphicity} is holomorphic in 
-	$z$ on every open disc around $0$. This means that the map is 
-	actually entire.
+	So the power series converges for all $z \in \mathbb{C}$ with
+	$|z| < 8M$ and converges uniformly if $|z| \leq c M$ for $c < 8$.
+	But then, the map \eqref{LCAna:Holomorphicity} converges on all open discs
+	centered around $z = 0$, and it must therefore be entire.
 \end{proof}
-\begin{remark}
-	If $R > 1$, we even have the result
-	\begin{equation*}
-		p_R \left(
-			C_n (f, g)
-		\right)
-		\leq
-		\frac{1}{n!^{R - 1}}
-		q_R(f) q_R(g)
-	\end{equation*}
-	from \eqref{LCAna:CnOperators} for every $p \in \algebra{P}$ and a 
-	suitable $q \in \algebra{P}$. In this case, we get
-	\begin{equation*}
-		p_R \left(
-			f \star_{zG} g
-		\right)
-		\leq
-		\sum\limits_{n = 0}^{\infty}
-		p_R \left(
-			z^n
-			C_n (f, g)
-		\right)
-		\leq
-		\sum\limits_{n = 0}^{\infty}
-		\frac{|z|^n}{n!^{R - 1}}
-		q_R(f) q_R(g),
-	\end{equation*}
-	and we see the entire dependence easier.
+\begin{remark}[(Weakly) holomorphic maps with values in locally convex spaces]
+	\label{LCAna:Rem:Holomorphicity}
+	One could argue, that the term ''holomorphic'' in a locally convex space 
+	$V$ does not necessarily mean that a map has a absolutely convergent 
+	Taylor expansion, but one should rather see the map 
+	\eqref{LCAna:Holomorphicity} as a collection of paths $\mathbb{C} 
+	\longrightarrow \widehat{\Sym}_R^{\bullet}(\lie{g})$ and ask for their 
+	complex differentiability in the sense of a differential quotient. Of 
+	course, this would be is a valid formulation of the word ''holomorphic''. 
+	In this sense, one can call a map ''weakly holomorphic'', if every 
+	continuous linear form $\lambda \colon V \longrightarrow \mathbb{C}$
+	applied to it gives a holomorphic map in $\mathbb{C}$. Then, we would just 
+	have proven the map \eqref{LCAna:Holomorphicity} to be weakly holomorphic.
+	Yet, we have proven real holomorphicity, since in \cite{Rudin:blue} Rudin 
+	gave a prove the two notions of holomorphicity coincide in locally convex 
+	spaces.
 \end{remark}
 
 
 
-\section{Functorialty, Representations and an optimal result}
+\subsection{Representations}
+
+
+
+\subsection{Functoriality}
+
+
+
+\section{Alternative topologies and an optimal result}
 \label{sec:chap5_Functoriality}
 
 \subsection{An optimal result}
@@ -2267,7 +2225,7 @@ question is partly answered by the following result:
         & =
         p \left(
         \widetilde{\Phi} \left(
-        \xi_1 \star_{zG} \cdots \star_{zG} \xi_n
+        \xi_1 \star_z \cdots \star_z \xi_n
         \right) \right)
         \\
         & =
