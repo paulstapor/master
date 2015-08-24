@@ -6,39 +6,655 @@
 
 \chapter{Nilpotent Lie algebras}
 
-\section{An overview}
-\label{sec:chap6_overview}
- - Reference to the counter-example before, no big change
- - Yet: Projective Limit
- - Module structure
- - Generalizations to nilpotency
- 
- 
- 
-\section{The Heisenberg and the Weyl algebra}
-\label{sec:chap6_HeisenbergWeyl}
+At the end of the last chapter, we have seen that the Baker-Campbell-Hausdorff 
+series and its convergence plays an important role for a topology on the 
+universal enveloping algebra. It is thus natural to ask whether things will 
+change, if we look at Lie algebras from which have a globally convergent BCH 
+series. To make things not too complicated from the beginning, we focus on 
+locally convex and truly nilpotent Lie algebras. Recall that a Lie algebra 
+$\lie{g}$ is nilpotent, if there exists a $N \in \mathbb{N}$, such that for 
+all $n \geq N$ and all $\xi_1, \ldots, \xi_n \in \lie{g}$ we have
+\begin{equation}
+	\label{Nilpot:StrongNilpotency}
+	\ad_{\xi_1} \circ \ldots \circ \ad_{\xi_n}
+	=
+	0.
+\end{equation}
+In the infinite-dimensional case, this is \emph{not} the same as 
+\begin{equation*}
+	\label{Nilpot:WeakNilpotency}
+	\left( \ad_{\xi} \right)^n
+	=
+	0
+\end{equation*}
+for all $\xi \in \lie{g}$ and and $n \geq N$, but (typically strictly) 
+stronger. In the case of finite-dimensional Lie algebras, the notions 
+\eqref{Nilpot:StrongNilpotency} and \eqref{Nilpot:WeakNilpotency} coincide due 
+to the so-called theorem of Engel, which makes use of the existence of a 
+finite series of nilpotent ideals in the Lie algebra. Such a terminating 
+series doesn't need to exist in infinite dimensions and there are known 
+counter-examples to it.
+
+Before we look at this case more closely, let's first make a list of things, 
+that we expect to change or not when we go to this more particular setting.
+\begin{enumerate}
+	\item
+	In Example~\ref{LCAna:Ex:HeisenbergAlgebra} we have seen that we can not 
+	expect to get a continuous algebra structure for $R < 1$, even for very 
+	simple nilpotent, but non-abelian Lie algebras. Therefore, we should not 
+	expect to get much larger completions now.
+	
+	\item
+	In \cite{waldmann:2014a}, Waldmann showed that the Weyl-Moyal star product 
+	converges in the $R$-topology for $R \geq \frac{1}{2}$. This so-called 
+	Weyl algebra is, however, nothing but a quotient of the Heisenberg 
+	algebra. It would be interesting to understand this a bit better, since we 
+	know that we need $R \geq 1$ for the latter. The quotient procedure must 
+	therefore have some strong influence on this construction. Can we 
+	reproduce the value $R \geq \frac{1}{2}$ somehow by dividing out an ideal?
+	
+	\item
+	The argument we used in Propositipon~\ref{LCAna:Prop:NoBetterTopology},
+	namely the non-global convergence of BCH, is not given any more. Now, we 
+	don't have a reason any longer to expect that exponentials won't be part 
+	of the completion. In this sense, it would be at least nice to have 
+	something more than ''just'' $R = 1$. Can we do that?
+	
+	\item
+	As already mentioned, there are generalizations or weaker forms of 
+	nilpotency in infinite-dimensions, especially for Banach-Lie algebras, 
+	which are equivalent to the usual notion of nilpotency in finite 
+	dimensions. If we get a stronger result for nilpotent Lie algebras, can we 
+	extend it to some of these generalizations?
+\end{enumerate}
+The very fascinating and highly interesting answer to the three questions we 
+just posed is: yes, we can. The first section of this chapter will be devoted 
+to the question from point $(iii)$: we get a bigger completion by using a 
+projective limit. We will also see how to get again the nice functorial 
+properties we had before. In second section, we will reproduce the result by 
+Waldmann, at least for the finite-dimensional case. The third part will take 
+care of some generalizations of nilpotentcy for Banach-Lie algebras and will 
+extend the result of the projective limit to a particular subcase there.
+
 
 
  
 \section{The projective limit} 
 \label{sec:chap6_ProjLim} 
- 
- 
- 
-\section{A module structure}
-\label{sec:chap6_Modules}
- 
-\subsection{Generic case and a counter-example}
 
-\subsection{Nilpotent case and good news}
+\subsection{Continuity of the Product}
+
+As already mentioned, it is possible to extend the continuity result. 
+Therefore, we take a locally convex, nilpotent Lie algebra $\lie{g}$ and look 
+at
+\begin{equation*}
+	\Sym_{1^-}^{\bullet}(\lie{g})
+	=
+	\projlim_{\epsilon \longrightarrow 0}
+	\Sym_{1 - \epsilon}^{\bullet}(\lie{g}).
+\end{equation*}
+A tensor is in the completion $\widehat{Sym}_{1^-}^{\bullet}(\lie{g})$, 
+when it lies for every $\epsilon > 0$ in the completion or 
+$\Sym_{1 - \epsilon}^{\bullet}(\lie{g})$. Otherwise stated: Let $\algebra{P}$ 
+be the set of all continuous seminorms of the Lie algebra $\lie{g}$, then 
+\begin{equation*}
+	f \in \widehat{Sym}_{1^-}^{\bullet}(\lie{g})
+	\quad \Longleftrightarrow \quad
+	p_{1 - \epsilon} (x) 
+	< 
+	\infty
+	\quad
+	\forall_{p \in \algebra{P}}
+	\forall_{\epsilon > 0}.
+\end{equation*}
+So, if we want to show, that the Gutt star product is continuous in 
+$\widehat{Sym}_{1^-}^{\bullet}(\lie{g})$, we need to show that for every 
+$p \in \algebra{P}$ and  $R < 1$, there exists a $q \in \algebra{P}$ and a 
+$R' < 1$, such that for all $x,y \in \Sym^{\bullet}(\lie{g})$ we have
+\begin{equation*}
+	p_R \left(
+		x \star_z y
+	\right)
+	\leq
+	q_{R'}(x)
+	q_{R'}(y).
+\end{equation*}
+Before we prove the next proposition, we want to remind that locally convex, 
+nilpotent Lie algebras are always AE Lie algebras. So the results we have 
+found so far, are valid in this case.
+\begin{theorem}
+    \label{Nilpot:Thm:ProjLimit}%
+    Let $\lie{g}$ be a nilpotent locally convex Lie algebra with
+    continuous Lie bracket and $N \in \mathbb{N}$ such that $N + 1$
+    Lie brackets vanish.
+    \begin{theoremlist}
+	    	\item \label{item:Nilpot:CnOperators}
+	    	If $0 \leq R < 1$, the $C_n$-operators are continuous and fulfil the 
+	    	estimate
+	    	\begin{equation}
+	    		\label{eq:Nilpot:CnOperators}
+	    		p_R \left(
+	    			C_n (x, y)
+	    		\right)
+	    		\leq
+	    		\frac{1}{2 \cdot 8^n}
+	    		(32 \E q)_{R + \epsilon}(x)
+	    		(32 \E q)_{R + \epsilon}(y),
+	    	\end{equation}
+	    	for all $x, y \in \Sym_R^{\bullet}(\lie{g})$, where $p$ is a 
+	    	continuous seminorm, $q$ an asymptotic estimate and 
+	    	$\epsilon = \frac{N - 1}{N}(1 - R)$.
+	    	
+	    	\item \label{item_Nilpot:SEinsMinus}
+	    	The Gutt star product $\star_z$ is continuous for the locally convex 
+	    	projective limit $\Sym_{1^-}^\bullet(\lie{g})$ and we have
+	    	\begin{equation}
+	    		\label{eq:Nilpot:Continuity}
+	    		p_R \left(
+	    			x \star_z y
+	    		\right)
+	    		\leq
+	    		(c q)_{R + \epsilon}(x)
+	    		(c q)_{R + \epsilon}(y)
+	    	\end{equation}
+	    	with $c = 32 \E (|z| +1)$ and the $\epsilon$ from the first part.
+	    	The Gutt star product extends continuously to
+	    	$\widehat{\Sym}_R^{\bullet}(\lie{g})$, where it converges absolutely 
+	    	and coincides with the formal series.
+    \end{theoremlist}
+\end{theorem}
+\begin{proof}
+    Again we use $\star_z$ on the whole tensor algebra and compute the 
+    estimate for $\xi^{\tensor k}$ and $\eta^{\tensor \ell}$. The important 
+    point is that now, we get restrictions for the values of $n$.
+    Recall that $k + \ell - n$ is the symmetric degree of $C_n \left( 
+    \xi^{\tensor k}, \eta^{\tensor \ell} \right)$ and that we must have
+    \begin{equation*}
+	    	(k + \ell - n) N
+    		\geq
+    		k + \ell
+    		\quad 
+    		\Longleftrightarrow 
+    		\quad
+    		n 
+    		\leq
+    		(k + \ell)
+    		\frac{N - 1}{N}
+    \end{equation*}
+    for $C_n \left( \xi^{\tensor k}, \eta^{\tensor \ell} \right) \neq 0$. 
+    This makes it possible to estimate $n!^{1-R}$ in 
+    \eqref{LCAna:CnOperators}: set $\delta = \frac{N - 1}{N}$ and also denote 
+    a factorial where we have non-integers, meaning the gamma function. We get
+    \begin{align*}
+        n!^{1-R}
+        & \leq
+        (\delta (k + \ell)!)^{1 - R}
+        \\
+        & \leq
+        (\delta (k + \ell))^{(1 - R) \delta (k + \ell)}
+        \\
+        & \leq
+        (k + \ell)^{(1 - R) \delta (k + \ell)}
+        \\
+        & =
+        \left(
+            (k + \ell)^{(k + \ell)}
+        \right)^{(1 - R) \delta}
+        \\
+        & \leq
+        \left(
+            \E^{k + \ell} 2^{k + \ell} k! \ell!
+        \right)^{(1-R) \delta}
+        \\
+        & =
+        \left( (2 \E)^{\delta (1-R)} \right)^{k + \ell}
+        k!^{\epsilon} \ell!^{\epsilon},
+    \end{align*}
+    using $\epsilon = \delta (1 - R)$. Hence
+    \begin{align*}
+        p_R \left(
+        	C_n \left(
+        		\xi^{\tensor k}, \eta^{\tensor \ell}
+        	\right)
+        \right)
+        & \leq
+        \frac{
+        	\left(
+        		(2 \E)^{\delta (1 - R)}
+        	\right)^{k + \ell}
+        	k!^{\epsilon}
+        	\ell!^{\epsilon}
+        }{2 \cdot 8^n}
+        (16 q)_R \left( \xi^{\tensor k} \right)
+        (16 q)_R \left( \eta^{\tensor \ell} \right)
+        \\
+        & \leq
+        \frac{1}{2 \cdot 8^n}
+        (c q)_{R + \epsilon} \left( \xi^{\tensor k} \right)
+        (c q)_{R + \epsilon} \left( \eta^{\tensor \ell} \right)
+    \end{align*}
+    with $c = 16 (2 \E)^{\delta (1 - R)} \leq 32 \E$.
+    We then get the estimate on all tensors by the infimum argument and extend 
+    it to the completion. Note, that for every $R < 1$ we also have 
+    $R + \epsilon < 1$ with the $\epsilon = \delta(1-R)$ from above. Iterating 
+    this continuity estimate, we get closer and closer to $1$ and it is not 
+    possible to repeat this process an arbitrary number of times and stop at 
+    some value strictly less than $1$. For the second part, we can conclude 
+    analogously to the second part of 
+    Proposition~\ref{LCAna:Prop:Continuity1}.
+\end{proof}
+Again, we can do an easier proof by assuming submultiplicativity of the seminorms, since we get an alternative version of 
+Lemma~\ref{LCAna:Lemma:PreContinuity2}:
+\begin{lemma}
+	Here comes the alternative Lemma...
+\end{lemma}
+\begin{proof}
+	Here comes its proof...
+\end{proof}
+Now, we can iterate Lemma~\ref{Nilpot:Lemma:PreContinuity2} in the same way:
+\begin{proof}[Alternative Proof of Theorem~\ref{Nilpot:Thm:ProjLimitConti}]
+	Here the stuff...
+\end{proof}
+Of course, the projective limit case gives us a bigger completion. We
+immediately end up with the following result:
+\begin{corollary}
+    \label{corollary:NilpotentCase}%
+    Let $\lie{g}$ be a nilpotent, locally convex Lie algebra.
+    \begin{corollarylist}
+    \item \label{item:NilpotentHasExp} 
+    		Let $\exp(\xi)$ be the
+        exponential series for $\xi \in \lie{g}$, the we have $\exp(t
+        \xi) \in \widehat{\Sym}_{1^-}^\bullet(\lie{g})$ for all $t
+        \in \mathbb{K}$.
+    \item \label{item:NilpotentExpGivesBCH} 
+    		For $\xi, \eta \in
+        \lie{g}$ and $z \neq 0$ we have $\exp(\xi) \ostar_z
+        \exp(\eta) = \exp \left(\frac 1 z \bch{z \xi}{z \eta}
+        \right)$.
+    \item \label{item:NipotentOneParameterGroups}
+    		For $s,t \in
+        \mathbb{K}$ and $\xi \in \lie{g}$ we have $\exp(t \xi)
+        \ostar_z \exp(s \xi) = \exp ((t + s) \xi)$.
+    \end{corollarylist}
+\end{corollary}
+\begin{proof}
+    For the first part, recall that the completion of the projective
+    limit $1^-$ will contain all those series $(a_n)_{n \in
+      \mathbb{N}_0}$ such that
+    \begin{equation*}
+        \sum\limits_{n=0}^{\infty}
+        a_n n!^{1 - \epsilon} c^n
+        <
+        \infty
+    \end{equation*}
+    for all $c > 0$.  This is the case for the exponential series of
+    $t \xi$ for $t \in \mathbb{K}$ and $\xi \in \lie{g}$. The second
+    part follows from the fact that all the projections $\pi_n$ onto
+    the homogeneous subspaces $\Sym_{\pi}^n$ are continuous. The third
+    part is then a direct consequence of the second.
+\end{proof}
+
+
+%
+% A bit Functioriality also in this case
+%
+
+\subsection{Representations and Functoriality}
+\label{subsec:NilpotentFunctorialityRepresentations}
+
+We get the same results for the extension of maps from $\lie{g}$ into 
+associative AE-algebras and the same functorial properties in this case.
+We just need to adapt Lemma~\ref{Lemma:LCAna:LemmaPreContinuityN}:
+\begin{lemma}
+    \label{Lemma:Nilpot:LemmaPreContinuityN}%
+    Let $\lie{g}$ be locally convex nilpotent Lie algebra, $0 \leq R < 1$ and 
+    $z \in \mathbb{C}$. Then for $p$ a continuous seminorm, $q$ an
+    asymptotic estimate, $n \in \mathbb{N}$ and all $\xi_1, \ldots,
+    \xi_n \in \lie{g}$ the following estimate
+    \begin{equation}
+        \label{Nilpot:LemmaPreContinuityN}
+        p_R \left(
+            \xi_1 \star_z \cdots \star_z \xi_n
+        \right)
+        \leq
+        c^n n!^{R + \epsilon}
+        q^n(\xi_1 \tensor \cdots \tensor \xi_n)
+    \end{equation}
+    holds with $c = 16 \E^2 (|z| + 1)$ and $\epsilon = \frac{N-1}{N}(1 - R)$
+    and the estimate is locally unifrom in $z$.
+\end{lemma}
+\begin{proof}
+    We take $R < 1$ and go directly into the proof of
+    Lemma~\ref{Lemma:LCAna:LemmaPreContinuityN} at
+    \eqref{LCAna:PreContinuityIntermediateN}.  We know that, since we
+    may have at most $N$ brackets, also the values for $\ell$ are
+    restricted to
+    \begin{equation*}
+        \ell
+        \leq
+        \frac{N-1}{N} n
+        =
+        \delta n
+    \end{equation*}
+    Using that in the proof of Lemma~\ref{Lemma:LCAna:LemmaPreContinuityN} 
+    leads to
+    \begin{align*}
+        &p_R \left(
+            \xi_1 \star_z \cdots \star_z \xi_n
+        \right)
+        \\
+        &\quad\leq
+        \sum\limits_{\ell = 0}^{\delta n}
+        (n - \ell)!^R
+        \sum\limits_{\substack{
+			1 \leq j \leq n-1 \\
+			i_j \in \{0, \ldots, j\} \\
+			\sum_{j = 1}^{n - 1} i_j = \ell
+		}}
+        |z|^{\ell}
+        \frac{1!  (2 - i_1)! \cdots (n-1 - i_1 - \cdots - i_{n-2})!}
+        {(1 - i_1)! \cdots (n-1 - i_1 - \cdots - i_{n-1})!}
+        q(\xi_1) \cdots q(\xi_n)
+        \\
+        &\quad\leq
+        \sum\limits_{\ell = 0}^{\delta n}
+        (n - \ell)!^R
+        \sum\limits_{\substack{
+			1 \leq j \leq n-1 \\
+			i_j \in \{0, \ldots, j\} \\
+			\sum_{j = 1}^{n - 1} i_j = \ell
+		}}
+        |z|^{\ell} (2 \E)^n \ell!
+        q(\xi_1) \cdots q(\xi_n)
+        \\
+        &\quad\leq
+        (2 \E)^n (|z| + 1)^n
+        q(\xi_1) \cdots q(\xi_n)
+        \sum\limits_{\ell = 0}^{\delta n}
+        (n - \ell)!^R \ell!
+        \binom{n + \ell - 2}{\ell - 1}
+    \end{align*}
+    We have
+    \begin{equation*}
+        \ell!
+        =
+        \ell!^R
+        \ell!^{1-R}
+        \leq
+        \ell!^R
+        \left(
+            (\delta n)^{\delta n}
+        \right)^{1-R}
+        \leq
+        \ell!^R
+        n^{\delta n (1-R)}
+        \leq
+        \ell!^R
+        n!^{\delta (1 - R)}
+        \E^{\delta n (1 - R)}.
+    \end{equation*}
+    Together with $\ell!^R (n - \ell)!^R \leq n!^R$ this gives
+    \begin{align*}
+        p_R \left(
+            \xi_1 \star_z \cdots \star_z \xi_n
+        \right)
+        & \leq
+        (2 \E)^n (|z| + 1)^n
+        n!^R n!^{\delta (1 - R)}
+        q(\xi_1) \cdots q(\xi_n)
+        \sum\limits_{\ell = 0}^{\delta n}
+        \binom{n + \ell - 2}{\ell - 1}
+        e^{\delta n (1 - R)}
+        \\
+        & \leq
+        (2 \E)^n (|z| + 1)^n
+        \left(\E^{(1-R) \delta}\right)^n
+        4^n n!^{R + \epsilon}
+        q(\xi_1) \cdots q(\xi_n),
+    \end{align*}
+    with $\epsilon = \delta (1-R)$. It is clear that for all $R < 1$ we have $R 
+    + \epsilon < 1$. Set 
+    \begin{equation*}
+    	c 
+    	= 
+    	8 \E (|z|+1) \E^{(1-R)\delta}
+    	\leq
+    	16 \E^2 (|z|+1)
+	\end{equation*}
+	and note that the estimate is locally uniform in $z$, even
+    though it will not be uniform in $z$.
+\end{proof}
+\begin{proposition}
+	\label{proposition:FunctorialityNilpotent}
+	Let $\lie{g}$ be a nilpotent locally convex Lie algebra with continuous Lie 
+	bracket. Then the statements of 
+	Proposition~\ref{Prop:LCAna:Semi-functoriality}, 
+	Corollary~\ref{Coro:LCAna:ContinuousRepresentations} and 
+	Proposition~\ref{proposition:Functoriality} hold for the projective limit 
+	$\Sym_{1^-}^{\bullet}(\lie{g})$.
+\end{proposition}
 
 
 
-\section{Banach Lie algebras and the finite-dimensional case}
+\section{The Heisenberg and the Weyl algebra}
+\label{sec:chap6_HeisenbergWeyl}
+
+Now we want to see how we get the link to the Weyl algebra from
+\cite{waldmann:2014a}. For simplicity, we consider the easiest case of
+the Weyl algebra with two generators. Recall that the Weyl
+algebra is a quotient of the enveloping algebra of the Heisenberg
+algebra $\lie{h}$ which one gets from dividing out its center. So let
+$c \in \mathbb{C}$ and we have a projection
+\begin{equation}
+    \label{Nilpot:WeylProjection}
+    \pi \colon
+    \widehat{\Sym}_R^\bullet(\lie{h})
+    \longrightarrow
+    \widehat{\mathcal{W}}_R(\lie{h})
+    =
+     \left(
+    	\frac{\Sym_R^\bullet(\lie{h})}
+    	{\langle E - c \Unit \rangle}
+    \right)^{\widehat{} }
+\end{equation}
+Of course we want to know if this projection is continuous.
+\begin{proposition}
+    \label{proposition:ProjectionWeylContinuous}%
+    The projection $\pi$ is continuous for $R \geq 0$.
+\end{proposition}
+\begin{proof}
+    We extend $\pi$ to the whole tensor algebra by symmetrizing
+    beforehand. Let then $p$ be a continuous seminorm on $\lie{h}$, $k,
+    \ell, m \in \mathbb{N}_0$. We have
+    \begin{align*}
+        p_R(\pi (
+        	Q^{\tensor k} \tensor
+        	P^{\tensor \ell} \tensor
+        	E^{\tensor m}
+        ) )
+        & =
+        p_R( Q^k P^{\ell} c^m )
+        \\
+        & =
+        |c|^m (k + \ell)!^R
+        p^{k + \ell}(Q^k P^{\ell})
+        \\
+        & \leq
+        (|c| + 1)^{k + \ell + m}
+        (k + \ell + m)!^R
+        p(Q)^k p(P)^{\ell} p(E)^m
+        \\
+        & =
+        ((|c| + 1) p)_R
+        (Q^{\tensor k} \tensor
+        P^{\tensor \ell} \tensor
+        E^{\tensor m}).
+    \end{align*}
+    Then we do the usual infimum argument and have the result on
+    arbitrary tensors again.
+\end{proof}
+
+
+To establish the link to the continuity results of the Weyl algebra,
+we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac 
+1 2$.
+\begin{proposition}
+    \label{proposition:ContinuousProductInWeyl}%
+    Let $R \geq \frac{1}{2}$ and $\pi$ the projection from
+    \eqref{Nilpot:WeylProjection}. Then the map $\pi \circ
+    \ostar_z$ is continuous.
+\end{proposition}
+\begin{proof}
+    We need to get the estimate on factorizing tensors: Let $p$ be a
+    continuous seminorm, $q$ an asymptotic estimate and $k, k',
+    \ell, \ell', m, m' \in \mathbb{N}_0$. Then we have to get an
+    estimate for
+    \begin{align*}
+        p_R \left(
+            \pi\left(
+                Q^k P^{\ell} E^m \ostar_z Q^{k'} P^{\ell'} E^{m'}
+            \right)
+        \right).
+    \end{align*}
+    If we calculate the star product explicitly, we see, that we only
+    get Lie brackets where we have $P$'s and $Q$'s. Let $r = k + \ell
+    + m$ and $s = k' + \ell' + m'$, then we can actually simplify the
+    calculations by
+    \begin{align*}
+        p_R \left(
+        \pi(Q^k P^{\ell} E^m
+        \ostar_z    Q^{k'} P^{\ell'} E^{m'}
+        ) \right)
+        & =
+        (p_R \circ \pi) \left(
+        \sum\limits_{n=0}^{r + s - 1}
+        z^n C_n(Q^k P^{\ell} E^m,
+        Q^{k'} P^{\ell'} E^{m'})
+        \right)
+        \\
+        & \leq
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n
+        (p_R \circ \pi) \left(
+        C_n(Q^k P^{\ell} E^m,
+        Q^{k'} P^{\ell'} E^{m'})
+        \right)
+        \\
+        & \leq
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n
+        (p_R \circ \pi) \left(
+        C_n(Q^r, P^s)
+        \right)
+        \\
+        & =
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n
+        \frac{r! s!}{(r-n)! (s-n)! n!}
+        (p_R \circ \pi) \left(
+        Q^{r-n} P^{s-n} E^n
+        \right)
+        \\
+        & =
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n |c|^n
+        \frac{r! s!}{(r-n)! (s-n)! n!}
+        p_R \left(
+        Q^{r-n} P^{s-n}
+        \right)
+        \\
+        & \leq
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n |c|^n
+        \frac{r! s!}{(r-n)! (s-n)! n!}
+        \frac{(r + s - 2n)!^R}{r!^R s!^R}
+        p_R \left(Q^{\tensor r} \right)
+        p_R \left(P^{\tensor s} \right)
+        \\
+        & \leq
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n |c|^n
+        \binom{r}{n} \binom{s}{n}
+        \frac{(r + s - 2n)!^R n!}{r!^R s!^R}
+        p_R \left(Q^{\tensor r} \right)
+        p_R \left(P^{\tensor s} \right)
+        \\
+        & \leq
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n |c|^n
+        \binom{r}{n} \binom{s}{n}
+        \frac{(r + s - 2n)!^R n!}{r!^R s!^R}
+        p_R \left(Q^{\tensor r} \right)
+        p_R \left(P^{\tensor s} \right)
+        \\
+        & \ot{(a)}{\leq}
+        \sum\limits_{n=0}^{r + s - 1}
+        |z|^n |c|^n
+        \binom{r}{n} \binom{s}{n}
+        \binom{r + s}{s}^R
+        \binom{r + s}{2n}^{-R}
+        p_R \left(Q^{\tensor r} \right)
+        p_R \left(P^{\tensor s} \right)
+        \\
+        & \leq
+        \sum\limits_{n=0}^{r + s - 1}
+        (|z| + 1)^n (|c| + 1)^n
+        4^{r + s}
+        p_R \left(Q^{\tensor r} \right)
+        p_R \left(P^{\tensor s} \right)
+        \\
+        & \leq
+        \underbrace{
+        (8 (|z| + 1) (|c| + 1))^{r + s}
+        }_{ = \tilde{c}^{r + s}}
+        p_R \left(Q^{\tensor r} \right)
+        p_R \left(P^{\tensor s} \right)
+        \\
+        & =
+        (\tilde{c} p)_R \left(Q^{\tensor r} \right)
+        (\tilde{c} p)_R \left(P^{\tensor s} \right)
+        \\
+        & \ot{(b)}{ = }
+        (\tilde{c} p)_R \left(
+        Q^{\tensor k} \tensor
+        P^{\tensor \ell} \tensor
+        E^{\tensor m} \right)
+        (\tilde{c} p)_R \left(
+        Q^{\tensor k'} \tensor
+        P^{\tensor \ell'} \tensor
+        E^{\tensor m'} \right),
+    \end{align*}
+    where in (a) we expanded the fraction with $(r + s)!^R$ to get the
+    two binomial coefficients. It is clear, that this step just works
+    for $R \geq \frac{1}{2}$.  In (b) we used the fact that we can ask
+    for $p(Q) = p(P) = p(E)$. Now we just need to use
+    \begin{equation*}
+        \left(
+        	Q^{\tensor k} \tensor
+        	P^{\tensor \ell} \tensor
+        	E^{\tensor m}
+        \right)
+        \ostar_z
+        \left(
+        	Q^{\tensor k'} \tensor
+        	P^{\tensor \ell'} \tensor
+        	E^{\tensor m'}
+        \right)
+        =
+        Q^k P^{\ell} E^m
+        \ostar_z
+        Q^{k'} P^{\ell'} E^{m'}
+    \end{equation*}
+    in the first line and we are done, since we can use again the
+    infimum argument to expand this estimate to all tensors.
+\end{proof}
+
+
+
+\section{Banach-Lie algebras}
 \label{sec:chap6_TheEProperty}
 
 \subsection{Generalizations of nilpotency}
 
 \subsection{A new projective Limit}
-
-\subsection{A result for the finite-dimensional case}
+	 - statement for the finite-dimensional case
