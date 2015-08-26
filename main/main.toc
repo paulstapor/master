@@ -40,18 +40,19 @@
 \contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{61}{chapter.6}
 \contentsline {section}{\numberline {6.1}The projective limit}{62}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Continuity of the Product}{62}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Representations and Functoriality}{63}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}The Heisenberg and the Weyl algebra}{65}{section.6.2}
-\contentsline {section}{\numberline {6.3}Banach-Lie algebras}{66}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Generalizations of nilpotency}{66}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}A new projective Limit}{66}{subsection.6.3.2}
-\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{67}{chapter.7}
-\contentsline {section}{\numberline {7.1}The co-product}{67}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{67}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{67}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{67}{section.7.2}
-\contentsline {chapter}{\numberline {8}Examples and remarks}{69}{chapter.8}
-\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{69}{section.8.1}
-\contentsline {section}{\numberline {8.2}Some new ideas}{69}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{69}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{69}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {6.1.2}Representations and Functoriality}{65}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Module structures}{66}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Heisenberg and the Weyl algebra}{67}{section.6.3}
+\contentsline {section}{\numberline {6.4}Banach-Lie algebras}{69}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Generalizations of nilpotency}{69}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}A new projective Limit}{70}{subsection.6.4.2}
+\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{71}{chapter.7}
+\contentsline {section}{\numberline {7.1}The co-product}{71}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}A formula for the co-product}{71}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Continuity for the co-product}{71}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}The whole Hopf algebra structure}{71}{section.7.2}
+\contentsline {chapter}{\numberline {8}Examples and remarks}{73}{chapter.8}
+\contentsline {section}{\numberline {8.1}Some classical Lie algebra}{73}{section.8.1}
+\contentsline {section}{\numberline {8.2}Some new ideas}{73}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}A subalgebra of the Weyl algebra}{73}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Holomorphic vector fields}{73}{subsection.8.2.2}
