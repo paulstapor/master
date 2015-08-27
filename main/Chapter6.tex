@@ -1142,22 +1142,499 @@ we will show, that it is possible to generalize the result of Theorem
 \ref{Nilpot:Thm:ProjLimit} to this case.
 
 
-\subsection{A new projective Limit}
 
-Let $\lie{g}$ be a uniformly topologically nilpotent Banach-Lie algebra. 
-It is clear that we get a monotonously decreasing series 
-$(\alpha_n)_{n \in \mathbb{N}}$ by defining
+\subsection{An adapted $R$-topology}
+
+The idea will be to slightly change the topology: Instead of taking 
+$n!^R$ as weights with $0 \leq R < 1$, we take sequence $(\alpha_n)_{n \in 
+\mathbb{N}}$ (or just $(\alpha)$, for short) with a certain asymptotic 
+behaviour for $n \longrightarrow \infty$ and use $\frac{n!}{\alpha_n}$ as 
+weights. This will generalize the idea of $n!^R$ and be the starting point for 
+the estimates.
+
+First, we observe that every uniformly topologically nilpotent Banach-Lie 
+algebra $\lie{g}$ comes with a characteristic, monotonously decreasing sequence
 \begin{equation}
-	\alpha_n
+	\label{Nilpot:CharDownSequence}
+	\omega_n
 	=
 	\sup_{m \geq n} \mathcal{N}(m).	
 \end{equation}
-We also have
+If there exists a $N \in \mathbb{N}$, such that $\omega_n = 0$ for all $n \geq 
+N$, then $\lie{g}$ is actually nilpotent and we can use the results of the 
+first section in this chapter. We may hence restrict to those Banach-Lie 
+algebras, where we have $\omega_n > 0$ for all $n \in \mathbb{N}$. This allows 
+the next definition.
+\begin{definition}[Rapidly increasing sequences]
+	Let $\lie{g}$ be a uniformly topologically nilpotent Banach-Lie algebra and 
+	$(\omega)$ the sequence defined in \eqref{Nilpot:CharDownSequence}. Then we 
+	define the characteristic sequence $\chi(\lie{g})$ of $\lie{g}$ by
+	\begin{equation}
+		\label{Nilpot:CharSequence}
+		\chi(\lie{g})_n
+		=
+		\max
+		\left\{ 
+			\frac{1}{\omega_n}
+			,
+			2
+		\right\}.
+	\end{equation}
+	We moreover say, that a sequence $(\alpha)$ in $(1, \infty)$ is $\lie{g}$-
+	rapidly increasing, if it fulfils the following properties:
+	\begin{definitionlist}
+		\item
+		It grows fast than exponentially, i.e.
+		\begin{equation*}
+			\lim_{n \longrightarrow \infty}
+			\frac{\log \left(\alpha_n \right)}{n}
+			=
+			\infty.
+		\end{equation*}
+		
+		\item
+		There exists a constant $c > 0$, such that
+		\begin{equation*}
+			\alpha_n 
+			\leq 
+			c^n  \chi(\lie{g})_n.
+		\end{equation*}
+	\end{definitionlist}
+	We denote by $\algebra{I}_{\lie{g}}$ the set of all $\lie{g}$-rapidly 
+	increasing sequences.
+\end{definition}
+Clearly, $(\chi(\lie{g}))$ is a $\lie{g}$-rapidly increasing series itself.
+\begin{remark}
+	The number $2$ in \eqref{Nilpot:CharSequence} may look a bit confusing at 
+	the first sight, since it is somehow arbitrary, but for technical reasons, 
+	we will need $\chi(g) > 1$ later. So actually every real number $c > 1$ 
+	could have been put there. In this sense, the previous definition is rather 
+	a technical tool than a ''general idea''.
+\end{remark}
+Each $(\alpha) \in \algebra{I}_{\lie{g}}$ gives a continuous seminorm 
+$p_{\alpha}$ on the tensor algebra with the projective tensor product 
+$\Tensor_{\pi}^{\bullet}(\lie{g})$ by
 \begin{equation*}
-	\lim_{n \longrightarrow \infty}
-	\frac{\log( \alpha_n )}{n}
+	p_{\alpha}
 	=
-	\infty.
+	\sum\limits_{n = 0}^{\infty}
+	\frac{n!}{\alpha_n}
+	\norm{\cdot}^{\tensor[\pi] n},
 \end{equation*}
+and we denote the set of all those seminorms by $\algebra{P}_{\lie{g}}$. 
+Furthermore, For every sequence $(\xi_n)_{n \in \mathbb{N}} \subset 
+\mathbb{B}_1(0)$ we get
+\begin{equation*}
+	\norm{
+		[ \ldots [[\xi_1, \xi_2], \xi_3], \ldots \xi_n]
+	}
+	\leq
+	\frac{2^n}{\chi(\lie{g})_n}.
+\end{equation*}
+Every rapidly increasing sequence $(\alpha)$ yields a continuous function 
+$f_{\alpha}$ by
+\begin{equation}
+	\label{Nilpot:IncreasingFunction}
+	f_{\alpha}
+	\colon
+	\mathbb{R}_0^+
+	\longrightarrow
+	\mathbb{R}^+
+	, \quad
+	f_{\alpha}(0)
+	=
+	2
+	,\
+	f_{\alpha}(n)
+	=
+	\log \left( \alpha_n \right)
+	,\
+	\forall_{n \in \mathbb{N}},
+\end{equation}
+and linear interpolation between the values at the integers. The idea behind is 
+that this will allow us to use a lemma, which we now introduce. It is taken 
+from a work \cite{mitiagin.rolewicz.zelazko:1962a} by Mitiagin, Rolewicz and 
+\.{Z}elazko, where it is stated in Lemma~2.1 and Lemma~2.2.
+\begin{lemma}
+	\label{Nilpot:Lemma:MRZGrothLemma}
+	Let $f\colon \mathbb{R}_0^+ \longrightarrow \mathbb{R}^+$ be a continuous 
+	functions, such that
+	\begin{equation}
+		\label{Nilpot:GrowthProperty}
+		\lim_{n \longrightarrow \infty}
+		\frac{f(x)}{x}
+		=
+		\infty.
+	\end{equation}
+	Then there exists a convex, continuous function $g \colon \mathbb{R}_0^+ 
+	\longrightarrow \mathbb{R}^+$, fulfilling \eqref{Nilpot:GrowthProperty} and
+	\begin{equation}
+		\label{Nilpot:SplittingProperty}
+		g \left(
+			t_1 + \ldots + t_n
+		\right)
+		\leq
+		8 \left(
+			g \left( t_1 \right)
+			+ \ldots +
+			g \left( t_n \right)
+		\right)
+		+
+		f(n)
+		, \quad
+		\forall_{n \in \mathbb{N}}
+		\text{ and all }
+		t_i \in \mathbb{R}_0^+.
+	\end{equation}
+\end{lemma}
+It is clear that Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} is applicable to our 
+function $f_{\alpha}$. 
 
-	 - statement for the finite-dimensional case
+
+\subsection{A new continuity result}
+
+Now, we have finally prepared our toolbox well enough to prove a new result.
+\begin{proposition}
+	\label{Nilpot:Prop:TopNilBanachLie}
+	Let $\lie{g}$ be a uniformly topologically nilpotent Banach-Lie algebra,
+	$\alpha \in \algebra{I}_{\lie{g}}$, $p_{\alpha}$ the corresponding seminorm 
+	according to \eqref{Nilpot:IncreasingFunction} and $z \in \mathbb{C}$. 
+	Then, there exists a series $\beta = (\beta_n)_{n \in \mathbb{N}} \in 
+	\algebra{I}_{\lie{g}}$, such that for all $x,y \in \Tensor_{\pi}^{\bullet}
+	(\lie{g})$ we have the estimate
+	\begin{equation}
+		\label{Nilpot:TopNilBanachLie}
+		p_{\alpha} \left(
+			x \star_z y
+		\right)
+		\leq
+		(c p)_{\beta} (x)
+		(c p)_{\beta} (y)
+	\end{equation}
+	with a $c > 0$, which only depends on $\alpha$.
+\end{proposition}
+\begin{proof}
+	We can again do the estimate on factorizing tensors and extend it with the 
+	infimum argument later. Let hence $k, \ell \in \mathbb{N}$ and 
+	$\xi, \eta \in \lie{g}$. we need to estimate the $C_n$-operators for $n = 
+	0, 1, \ldots, k + \ell - 1$ and note therefore $r = k + \ell - n$ again.
+	We get for $p_{\alpha} \in \algebra{P}_{\lie{g}}$
+	\begin{align*}
+		p_{\alpha} \left(
+			C_n\left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
+		\right)
+		& =
+		p_{\alpha}
+		\bigg(
+        		\frac{k! \ell!}{r!}
+        		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            		a_i + b_i \geq 1 \\
+            		a_1 + \ldots + a_r = k \\
+            		b_1 + \ldots + b_r = \ell
+          		}}
+        		\bchparts{a_1}{b_1}{\xi}{\eta}
+        		\ldots
+        		\bchparts{a_r}{b_r}{\xi}{\eta}
+        \bigg)
+        \\
+        & \leq 
+    		\frac{k! \ell!}{r!}
+    		\frac{r!}{\alpha_r}
+    		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+        		a_i + b_i \geq 1 \\
+        		a_1 + \ldots + a_r = k \\
+        		b_1 + \ldots + b_r = \ell
+       	}}
+       	\norm{
+    			\bchparts{a_1}{b_1}{\xi}{\eta}
+    		}
+    		\ldots
+    		\norm{
+    			\bchparts{a_r}{b_r}{\xi}{\eta}
+    		}
+        \\
+        & \leq
+    		\frac{k! \ell!}{\alpha_r}
+    		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+        		a_i + b_i \geq 1 \\
+        		a_1 + \ldots + a_r = k \\
+        		b_1 + \ldots + b_r = \ell
+       	}}
+       	2^r 
+       	\frac{1}{\chi(\lie{g})_{a_1 + b_1}}
+       	\ldots
+       	\frac{1}{\chi(\lie{g})_{a_r + b_r}}
+       	\norm{\xi}^k
+       	\norm{\eta}^{\ell},
+    \end{align*}
+	where we have used the estimate from Lemma 
+	\ref{LCAna:Lemma:BCHTermsEstiamte} \textit{(\ref{Item:BCHEstimate})}
+	in the last step. Rearranging this, we have
+	\begin{equation*}
+		p_{\alpha} \left(
+			C_n\left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
+		\right)
+		\leq
+    		k! \ell! 2^r
+    		\norm{\xi}^k
+       	\norm{\eta}^{\ell}
+    		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+        		a_i + b_i \geq 1 \\
+        		a_1 + \ldots + a_r = k \\
+        		b_1 + \ldots + b_r = \ell
+       	}}
+       	\frac{1}
+       	{
+       		\alpha_r
+       		\cdot
+       		\chi(\lie{g})_{a_1 + b_1}
+       		\ldots
+       		\chi(\lie{g})_{a_r + b_r}
+       	},
+	\end{equation*}
+	and we would like to find a $(\beta) \in \algebra{I}_{\lie{g}}$ such that
+	\begin{equation}
+		\label{Nilpot:SavingSequence}
+		\sup
+		\left\{
+		\left.
+			\frac{\beta_k \cdot \beta_{\ell}}
+	       	{
+	       		\alpha_r
+	       		\cdot
+	       		\chi(\lie{g})_{a_1 + b_1}
+	       		\ldots
+	       		\chi(\lie{g})_{a_r + b_r}
+	       	}
+	    \right|
+	    		k, \ell \in \mathbb{N},\
+	    		a_i + b_i \geq 1,\
+        		\sum_i a_i = k,\
+        		\sum_j b_j = \ell
+		\right\}
+		\leq
+		\kappa^{k + \ell}
+	\end{equation}
+	for some $\kappa > 0$, just depending on $(\alpha)$. Then we would have
+	\begin{align*}
+		p_{\alpha} \left(
+			C_n\left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
+		\right)
+		& \leq
+    		\frac{k! \ell!}{\beta_k \beta_{\ell}} 
+    		2^r
+    		\norm{\xi}^k
+       	\norm{\eta}^{\ell}
+    		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+        		a_i + b_i \geq 1 \\
+        		a_1 + \ldots + a_r = k \\
+        		b_1 + \ldots + b_r = \ell
+       	}}
+       	\kappa^{k + \ell}
+       	\\
+       	& =
+       	2^{-n}
+       	(2 \kappa)^{k + \ell}
+       	p_{\beta}
+       	\left( \xi^{\tensor k} \right)
+       	p_{\beta}
+       	\left( \eta^{\tensor \ell} \right)
+       	\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+        		a_i + b_i \geq 1 \\
+        		a_1 + \ldots + a_r = k \\
+        		b_1 + \ldots + b_r = \ell
+       	}}
+       	1
+       	\\
+       	& \leq
+       	\frac{1}{2 \cdot 8^n} 
+       	(16 \kappa)^{k + \ell}
+       	p_{\beta}
+       	\left( \xi^{\tensor k} \right)
+       	p_{\beta}
+       	\left( \eta^{\tensor \ell} \right)
+       	\\ 
+       	& =
+       	\frac{1}{2 \cdot 8^n} 
+       	(16 \kappa p)_{\beta}
+       	\left( \xi^{\tensor k} \right)
+       	(16 \kappa p)_{\beta}
+       	\left( \eta^{\tensor \ell} \right).
+    \end{align*}
+    From this we could conclude analogously to the procedure in the proof of 
+    Theorem~\ref{Thm:LCAna:Continuity1} and the statement would be proven.
+    We now need to show the existence of a $(\beta) \in \algebra{I}_{\lie{g}}$ 
+    and a $\kappa > 0$, such that \eqref{Nilpot:SavingSequence} holds.
+    \begin{claim}
+    		For $f_{\alpha}$ defined as in \eqref{Nilpot:IncreasingFunction}, we 
+    		take the function $g$ we get from 
+    		Lemma~\ref{Nilpot:Lemma:MRZGrothLemma}. Then the sequence $(\beta)$ 
+    		defined by
+    		\begin{equation}
+    			\beta_n
+    			=
+    			\exp \left(
+    				\frac{g(n)}{8}
+    			\right)
+    		\end{equation}
+    		and $\kappa = c' \E^{8 g(1)}$ have the desired properties, where 
+    		$c' > 0$ is a constant, such that $\alpha_n \leq c'^n \chi(\lie{g})_n$.
+    \end{claim}
+    \begin{subproof}
+    		First note that there is a fixed $c' > 0$
+    		\begin{equation*}
+    			\frac{1}{\chi(\lie{g})_n}
+    			\leq
+    			\frac{c'^n}{\alpha_n}
+    		\end{equation*}
+    		Denote $a_i + b_i = n_i$. Then we have
+    		\begin{equation*}
+    			\frac{\beta_k \cdot \beta_{\ell}}
+	       	{
+	       		\alpha_r
+	       		\cdot
+	       		\chi(\lie{g})_{n_1}
+	       		\ldots
+	       		\chi(\lie{g})_{n_r}
+	       	}
+	       	\leq
+    			\frac{c'^{k + \ell} \beta_k \cdot \beta_{\ell}}
+	       	{
+	       		\alpha_r
+	       		\cdot
+	       		\alpha_{n_1}
+	       		\ldots
+	       		\alpha_{n_r}
+	       	}
+    		\end{equation*}
+    		and hence
+    		\begin{align*}
+    			\log \left(
+    				\frac{\beta_k \cdot \beta_{\ell}}
+		       	{
+		       		\alpha_r
+		       		\cdot
+		       		\chi(\lie{g})_{a_1 + b_1}
+		       		\ldots
+		       		\chi(\lie{g})_{a_r + b_r}
+		       	}
+	       	\right)
+	       	& \leq
+    			\log \left(
+    				\frac{c'^{k + \ell} \beta_k \cdot \beta_{\ell}}
+		       	{
+		       		\alpha_r
+		       		\cdot
+		       		\alpha_{n_1}
+		       		\ldots
+		       		\alpha_{n_r}
+		       	}
+	       	\right)
+	       	\\
+	       	& =
+	       	(k + \ell) \log(c')
+	       	+
+	       	\frac{g(k)}{8}
+	       	+
+	       	\frac{g(\ell)}{8}
+	       	-
+	       	f_{\alpha}(r)
+	       	-
+	       	f_{\alpha}(n_1)
+	       	- \ldots -
+	       	f_{\alpha}(n_r)
+	       	\\
+	       	& \ot{(a)}{\leq}
+	       	(k + \ell) \log(c')
+	       	+
+	       	\frac{g(k + \ell)}{8}
+			-
+	       	f_{\alpha}(r)
+	       	-
+	       	f_{\alpha}(n_1)
+	       	- \ldots -
+	       	f_{\alpha}(n_r)
+	       	\\
+	       	& \ot{(b)}{\leq}
+			(k + \ell) \log(c')
+	       	+
+	       	g(n_1) + \ldots + g(n_r)
+	       	+
+	       	\frac{f_{\alpha}(r)}{8}
+	       	\\
+	       	& \qquad
+	       	-
+	       	f_{\alpha}(r)
+	       	-
+	       	f_{\alpha}(n_1)
+	       	- \ldots -
+	       	f_{\alpha}(n_r)
+	       	\\
+	       	& \ot{(c)}{\leq}
+	       	(k + \ell) \log(c')
+	       	+
+	       	\left( g(n_1) - f_{\alpha}(n_1) \right)
+	       	+ \ldots + 
+	       	\left( g(n_r) - f_{\alpha}(n_r) \right)
+	       	\\
+	       	& \ot{(d)}{\leq}
+	       	(k + \ell) \log(c')
+	       	+
+	       	8 g(1) n_1
+	       	+ \ldots + 
+	       	8 g(1) n_r
+	       	\\
+	       	& =
+	       	(k + \ell)
+	       	(\log(c') + 8 g(1)),
+    		\end{align*}
+    		where we have used the convexity of $g$ in (a), 
+    		Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} in (b) and $\frac{g(n)}{8} \leq 
+    		g(n)$ in (c). In (d) we used the lemma again by estimating
+    		\begin{equation*}
+    			g(n)
+    			=
+    			g(1 + \ldots - 1)
+    			\leq
+    			8 n g(1) + f_{\alpha}(n).
+    		\end{equation*}
+    		This shows that $\kappa = c' \E^{8 g(1)}$ really gives the estimate.
+    \end{subproof}
+    Now, we only need to sum up the $|z|^n C_n\left( \xi^{\tensor} k, 
+    \eta^{\tensor \ell} \right)$. We know this is possible from Chapter 5, and 
+    we finally get a continuity estimate which is locally uniform in $z$.
+\end{proof}
+
+
+At the end of Chapter 5, we showed that a finite-dimensional Lie algebra 
+$\lie{g}$ is nilpotent if and only if its universal enveloping algebra 
+$\algebra{U}(\lie{g})$ admitted a locally convex topology, such that the 
+following three things are fulfilled:
+\begin{enumerate}
+	\item
+	The product in $\algebra{U}(\lie{g})$ is continuous.
+
+	\item
+	For every $\xi \in \lie{g}$ the series $\exp(\xi)$ converges 
+	absolutely in the completion of $\algebra{U}(\lie{g})$.
+
+	\item
+	Pulling back the topology to the symmetric tensor algebra, the projection 
+	and inclusion maps with respect to the graded structure
+	\begin{equation*}
+		\Sym^{\bullet}(\lie{g})
+    		\ot{$\pi_n$}{\longrightarrow}
+   	    		\Sym^n(\lie{g})
+    	    	\ot{$\iota_n$}{\longrightarrow}
+    		\Sym^{\bullet}(\lie{g})
+	\end{equation*}
+	are continuous for all $n \in \mathbb{N}$.
+\end{enumerate}
+For Banach-Lie algebras, we came quite close to a similar statement: We know 
+from Proposition~\ref{LCAna:Prop:NoBetterTopology} and the result of 
+Wojty\`nski, that a Banach-Lie algebra must at least be \emph{topologically 
+nil} to satisfy the three upper points. We also know, that a uniformly 
+topologically nilpotent Banach-Lie algebra $\lie{g}$ allows us to construct 
+such a locally convex topology on $\algebra{U}(\lie{g})$ explicitly. Maybe it 
+is possible to find a notion of generalized nilpotency, which characterizes 
+those three points exactly.
