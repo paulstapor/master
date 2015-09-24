@@ -6,16 +6,22 @@
 
 \chapter{The Hopf algebra structure}
 
-\section{The Hopf algebra maps}
-\label{sec:chap7_Coproduct}
+\section{Everything works}
 
-\label{sec:Hopf}
-
-Since we found an interesting locally convex topologies on the universal
-enveloping algebra considered as an associative algebra, we want to know if the 
-coalgebra structure on $\algebra{U}_R(\lie{g}_z)$ is continuous. 
-Indeed, this is the case. To prove it, we first need an explicit formula for 
-the coproduct
+In the above sections we discussed a locally convex topology on the universal
+enveloping algebra considered as an associative algebra, which makes the Gutt 
+star product continuous. In the following we investigate the continuity of the structures
+of Hopf structure on $\algebra{U}_R(\lie{g}_z)$. 
+For this purpose, we need an explicit formula for
+the antipode
+\begin{equation}
+    \label{eq:Antipode}
+    S_z \colon
+    \algebra{U}(\lie{g}_z)
+    \longrightarrow
+    \algebra{U}(\lie{g}_z)
+\end{equation}
+and the coproduct
 \begin{equation}
     \label{eq:CoProduct}
     \coproduct_z \colon
@@ -25,18 +31,35 @@ the coproduct
     \tensor
     \algebra{U}(\lie{g}_z)
 \end{equation}
-of the universal enveloping algebra.  We pull back the coproduct
-on the symmetric algebra and want to give an estimate there. It is
-therefore helpful to extend the coproduct on the whole tensor algebra
-again, just as we did with the star product. We define
+in the universal enveloping algebra. We pull them back on the symmetric 
+algebra and extend them to the whole tensor algebra by symmetrizing beforehand.
+We set
+\begin{equation}
+    \label{eq:AntipodeOnTensor}
+    S_z \colon
+    \Tensor^\bullet(\lie{g})
+    \longrightarrow
+    \Sym^\bullet(\lie{g})
+    , \quad
+    S_z
+    =
+    \mathfrak{q}_z^{-1}
+    \circ
+    S_z
+    \circ
+    \mathfrak{q}_z
+    \circ
+    \Symmetrizer.
+\end{equation}
+and
 \begin{equation}
     \label{eq:CoProductOnTensor}
     \ocoproduct_z \colon
-    \Tensor^\bullet(\lie{g})[[z]]
+    \Tensor^\bullet(\lie{g})
     \longrightarrow
-    \Sym^\bullet(\lie{g})[[z]]
+    \Sym^\bullet(\lie{g})
     \tensor
-    \Sym^\bullet(\lie{g})[[z]]
+    \Sym^\bullet(\lie{g})
     , \quad
     \ocoproduct_z
     =
@@ -48,214 +71,302 @@ again, just as we did with the star product. We define
     \circ
     \Symmetrizer.
 \end{equation}
-Now we can state an explicit formula for the coproduct.
+Now we can prove two explicit formulas.
 \begin{lemma}
-    \label{Thm:Hopf:CoproductFormula}%
-    For $\xi_1, \ldots, \xi_n \in \lie{g}$ we have
+    \label{Thm:Hopf:Formulas}%
+    For $\xi_1, \ldots, \xi_n \in \lie{g}$ we have the identities
+    \begin{equation}
+        \label{Hopf:AntipodeFormula}
+        S_z(\xi_1 \tensor \cdots \tensor \xi_n)
+        =
+        (-1)^n
+        \xi_1 \cdots \xi_n
+    \end{equation}
+    and
     \begin{equation}
         \label{Hopf:CoproductFormula}
         \ocoproduct_z(\xi_1 \tensor \cdots \tensor \xi_n)
         =
-        \frac{1}{n!}
-        \sum\limits_{\sigma \in S_n}
-        \sum\limits_{k=0}^n
-        \sum\limits_{\substack{
-            1 \leq i_1 < \cdots < i_k \leq n \\
-            I = \{i_1, \ldots, i_k\} }}
-        ( \xi_{\sigma(i_1)}
-        \star_z \cdots \star_z
-        \xi_{\sigma(i_k)} )
+        \sum\limits_{
+        	I \subseteq
+        	\{1, \ldots, n\}
+        }
+        \xi_I
         \tensor
-        ( \xi_{\sigma(1)} \star_z
-        \cdots \widehat{\xi_{\sigma(I)}} \cdots
-        \star_z \xi_{\sigma(n)} ),
+        \xi_1 \cdots
+        \widehat{\xi_I}
+        \cdots \xi_n
     \end{equation}
-    where $\widehat{\xi_{\sigma(I)}}$ means that the $\xi_i$ with $i
-    \in \sigma(I)$ are left out.
+    where $\xi_I$ denotes the symmetric tensor product of all $\xi_i$ with 
+    $i \in I$ and $\widehat{\xi_I}$ means that the $\xi_i$ with $i \in I$ 
+    are left out.
 \end{lemma}
 \begin{proof}
-    This formula comes from the well-known one for the shuffle coproduct
-    on $\algebra{U}(\lie{g})$. The multiplication in $\algebra{U}
-    (\lie{g})$ is translated into star products and is symmetrized
-    before. One gets this formula by taking the coproduct on the Lie
-    algebra and then extending it as an homomorphism of associative
-    algebras.
+	First, we derive Formula \ref{Hopf:AntipodeFormula}: the antipode gives
+	$S_z(\xi) = - \xi$ for $\xi \in \lie{g}$ and extends to $\algebra{U}
+	(\lie{g}_z)$ by algebra antihomomorphism, hence
+	\begin{equation*}
+		S_z \left( 
+			\xi_1 \odot \cdots \odot \xi_n
+		\right)
+		=
+		(-1)^n
+		\xi_n \odot \cdots \odot \xi_1
+	\end{equation*}
+	in $\algebra{U}(\lie{g}_z)$ for $\xi_1, \ldots, \xi_n \in \lie{g}$.
+	This means
+	\begin{equation*}
+		S_z \left( 
+			\xi_1 \star_z \cdots \star_z \xi_n
+		\right)
+		=
+		(-1)^n
+		\xi_n \star_z \cdots \star_z \xi_1
+	\end{equation*}	
+	in $\Sym^{\bullet}(\lie{g})$. But now, using the linearity of $S_z$ 
+	we get
+	\begin{align*}
+		S_z \left( \xi_1 \cdots \xi_n \right)
+		& =
+		S_z \left( 
+		\frac{1}{n!}
+			\sum\limits_{\sigma \in S_n}
+			\xi_{\sigma(1)} 
+			\star_z \cdots \star_z 
+			\xi_{\sigma(n)}
+		\right)
+		\\
+		& =
+		\frac{1}{n!}
+		\sum\limits_{\sigma \in S_n}
+		S_z \left( 
+			\xi_{\sigma(1)} 
+			\star_z \cdots \star_z 
+			\xi_{\sigma(n)}
+		\right)
+		\\
+		& =
+		\frac{1}{n!}
+		\sum\limits_{\sigma \in S_n}
+		(-1)^n
+		\xi_{\sigma(n)} 
+		\star_z \cdots \star_z 
+		\xi_{\sigma(1)}
+		\\
+		& =
+		(-1)^n
+		\xi_1 \cdots \xi_n.
+	\end{align*}
+	For the coproduct, we have well-known formula with shuffle permutations:
+	\begin{equation*}
+		\ocoproduct_z \left(
+			\xi_1 \odot \cdots \odot \xi_n
+		\right)
+		=
+		\sum\limits_{k=0}^n
+		\sum\limits_{\substack{
+			1 \leq i_1
+			< \ldots <
+			i_k \leq n
+			\\
+			I = \{i_1, \ldots, i_k\}
+		}}
+		\xi_{i_1} \odot \cdots \odot \xi_{i_k}
+		\tensor
+		\xi_1 
+		\odot \cdots 
+		\widehat{\xi_I}
+		\cdots \odot
+		\xi_n.
+	\end{equation*}
+	Pulling this back to $\Sym^{\bullet}(\lie{g}_z)$, we get star products
+	instead of $\odot$. For symmetric tensor we have by linearity
+	\begin{align*}
+		\ocoproduct_z \left( \xi_1 \cdots \xi_n \right)
+		& =
+		\ocoproduct_z \left( 
+			\frac{1}{n!}
+			\sum\limits_{\sigma \in S_n}
+			\xi_{\sigma(1)} 
+			\star_z \cdots \star_z 
+			\xi_{\sigma(n)}
+		\right)
+		\\
+		& =
+		\frac{1}{n!}
+		\sum\limits_{\sigma \in S_n}
+		\ocoproduct_z \left( 
+			\xi_{\sigma(1)} 
+			\star_z \cdots \star_z 
+			\xi_{\sigma(n)}
+		\right)
+		\\
+		& =
+		\frac{1}{n!}
+		\sum\limits_{\sigma \in S_n}
+		\sum\limits_{k=0}^n
+		\sum\limits_{\substack{
+			1 \leq i_1
+			< \ldots <
+			i_k \leq n
+			\\
+			I = \{i_1, \ldots, i_k\}
+		}}
+		\xi_{i_{\sigma(1)}} 
+		\star_z \cdots \star_z
+		\xi_{i_{\sigma(k)}}
+		\tensor
+		\xi_{\sigma(1)}
+		\star_z \cdots
+		\widehat{\xi_{\sigma(I)}}
+		\cdots \star_z 
+		\xi_{\sigma(n)}
+		\\
+		& =
+		\frac{1}{n!}
+		\sum\limits_{k=0}^n
+		\sum\limits_{\sigma \in S_k}
+		\sum\limits_{\tau \in S_{n - k}}
+		\sum\limits_{
+			\{i_1, \ldots, i_k\}
+			\subseteq
+			\{1, \ldots, n\}
+		}
+		\frac{n!}{k! (n - k)!}
+		\\
+		& \qquad
+		\cdot
+		\xi_{i_{\sigma(1)}} 
+		\star_z \cdots \star_z 
+		\xi_{i_{\sigma(k)}}
+		\tensor
+		\xi_{\tau(1)}
+		\star_z \cdots 
+		\widehat{\xi_I}
+		\cdots \star_z 
+		\xi_{\tau(n)}
+		\\
+		& =
+		\sum\limits_{k=0}^n
+		\sum\limits_{
+			\{i_1, \ldots, i_k\}
+			\subseteq
+			\{1, \ldots, n\}
+		}
+		\xi_{i_1} \cdots \xi_{i_k}
+		\tensor
+		\xi_1 \cdots \widehat{\xi_I} \cdots \xi_n.
+	\end{align*}
 \end{proof}
-
+\begin{remark}
+	From Equations \ref{Hopf:AntipodeFormula} and 
+	\ref{Hopf:CoproductFormula}, we see that the maps $S_z$ and 
+	$\ocoproduct_z$ do not depend on $z$, since only symmetric tensor products 
+	are involved. Hence $S_z = S_0$ and $\ocoproduct_z = \ocoproduct_0$. 
+	This means that the product is the only map of the Hopf algebra, which is 
+	deformed.
+\end{remark}
 % AE-Lie Algebras
 %
 
 
-First, we need a topology on the tensor product in
-\eqref{Hopf:CoproductFormula}, for which we take again the projective
-tensor product. An easy way to prove continuity would be assuming that 
-$\lie{g}$ is locally m-convex, $|z|< 2\pi$ and we could conclude by 
-Lemma~\ref{Lemma:LCAna:PreContinuity2}. But we can also do it via 
-Lemma~\ref{LCAna:PreContinuityIntermediateN} for AE-Lie algebras as
-well.
+We need a topology on the tensor product in \eqref{Hopf:CoproductFormula}, 
+for which we take again the projective tensor product. The continuity of the 
+two maps is now easy to prove.
 \begin{proposition}
     \label{Prop:Hopf:CoproductContinuity}%
-    Let $\lie{g}$ be an AE-Lie algebra, $R \geq 1$ and $z \in
-    \mathbb{C}$. Then we have for all $x \in 
-    \widehat{\Tensor}_R^\bullet(\lie{g})$, 
-    $p$ a continuous seminorm with an asymptotic estimate $q$
+    Let $\lie{g}$ be an AE-Lie algebra and $R \geq 0$. For every continuous 
+    seminorm $p$ and all $x \in \widehat{\Tensor}_R^\bullet(\lie{g})$
+    the following estimates hold:
+    \begin{equation}
+        \label{Hopf:AntipodeContinuity}
+        p_R \left( S_z(x) \right)
+        \leq
+        p_R (x)
+    \end{equation}
+    and
     \begin{equation}
         \label{Hopf:CoproductContinuity}
         (p_R \tensor p_R)
         \left(\ocoproduct_z(x)\right)
         \leq
-        (c q)_R (x),
+        (2 p)_R (x).
     \end{equation}
-    with $c = 16 \E (|z| + 1)$ being locally uniform in $z$.
 \end{proposition}
 \begin{proof}
-    We give the estimate on factorizing tensors: Let $\xi_1, \ldots, \xi_n \in 
-    \lie{g}$. We use Equation \eqref{Hopf:CoproductFormula} in ($a$), 
-	Lemma~\ref{LCAna:PreContinuityIntermediateN} in ($b$) and get
-    \begin{align*}
-        &
-        (p_R \tensor p_R) \left(
-            \ocoproduct_z
-            \left(
-                \xi_1 \tensor \cdots \tensor \xi_n
-            \right)
-        \right)
-        \\
-        &\quad\ot{(a)}{\leq}
-        \frac{1}{n!}
-        \sum\limits_{\sigma \in S_n}
-        \sum\limits_{k=0}^n
-        \sum\limits_{\substack{
-            1 \leq i_1 < \cdots < i_k \leq n \\
-            I = \{i_1, \ldots, i_k\} }}
-        p_R( \xi_{\sigma(i_1)}
-        \star_z \cdots \star_z
-        \xi_{\sigma(i_k)} )
-        p_R( \xi_{\sigma(1)} \star_z
-        \cdots
-        \widehat{\xi_{\sigma(I)}}
-        \cdots
-        \star_z \xi_{\sigma(n)} )
-        \\
-        &\quad\ot{(b)}{\leq}
-        \frac{1}{n!}
-        \sum\limits_{\sigma \in S_n}
-        \sum\limits_{k=0}^n
-        \sum\limits_{\substack{
-            1 \leq i_1 < \cdots < i_k \leq n \\
-            I = \{i_1, \ldots, i_k\} }}
-        c^k k!^R
-        q(\xi_{\sigma(i_1)})
-        \cdots
-        q(\xi_{\sigma(i_k)})
-        c^{n-k} (n-k)!^R
-        q(\xi_{\sigma(1)})
-        \cdots
-        \widehat{q(\xi_{\sigma(I)})}
-        \cdots
-        q(\xi_{\sigma(n)})
-    \end{align*}
-    with $c = 8 \E (|z| + 1)$. Then
-    \begin{align*}
-    	(p_R \tensor p_R) \left(
-            \ocoproduct_z
-            \left(
-                \xi_1 \tensor \cdots \tensor \xi_n
-            \right)
+	We use the extension to the whole tensor algebra. Inequality
+	\eqref{Hopf:AntipodeContinuity} is clear on factorizing tensors 
+	and extends to all tensors by the infimum argument. 
+	To get the estimate~\eqref{Hopf:CoproductContinuity}, 
+	we compute it on factorizing tensors:
+	\begin{align*}
+		(p_R \tensor p_R)
+        \left( \ocoproduct_z
+        	\left(
+        		\xi_1 \tensor \cdots \tensor \xi_n
+        	\right)
         \right)
         & =
-        \sum\limits_{k=0}^n
-        \sum\limits_{\substack{
-            1 \leq i_1 < \cdots < i_k \leq n \\
-            I = \{i_1, \ldots, i_k\} }}
-        c^n (n-k)!^R k!^R
-        q(\xi_1) \cdots q(\xi_n)
+		(p_R \tensor p_R)
+        \left( 
+			\sum\limits_{
+        		I \subseteq
+        		\{1, \ldots, n\}
+        	}
+        	\xi_I
+        	\tensor
+        	\xi_1 \cdots
+        	\widehat{\xi_I}
+        	\cdots \xi_n
+        \right)
         \\
-        & \ot{(c)}{\leq}
-        \sum\limits_{k=0}^n
-        \binom{n}{k}
-        c^n n!^R
-        q(\xi_1) \cdots q(\xi_n)
+        & \leq
+        \sum\limits_{
+        	I \subseteq
+        	\{1, \ldots, n\}
+        }
+        |I|!^R (n - |I|)!^R
+        p^{|I|} \left( \xi_I \right)
+        p^{n - |I|}
+        \left( 
+        	\xi_1 \cdots \widehat{\xi_I} \cdots \xi_n 
+        \right)
+        \\
+        & \leq
+        \sum\limits_{
+        	I \subseteq
+        	\{1, \ldots, n\}
+        }
+        |I|!^R (n - |I|)!^R
+        p(\xi_1) \cdots p(\xi_n)
+        \\
+        & \leq
+        \sum\limits_{
+        	I \subseteq
+        	\{1, \ldots, n\}
+        }
+        n!^R
+        p(\xi_1) \cdots p(\xi_n)
         \\
         & =
-        2^n c^n n!^R
-        q(\xi_1) \cdots q(\xi_n)
+        2^n n!^R
+        p(\xi_1) \cdots p(\xi_n)
         \\
         & =
-        (2c q)_R \left(
-            \xi_1 \tensor \cdots \tensor \xi_n
+        (2p)_R \left(
+        	\xi_1 \tensor \cdots \tensor \xi_n
         \right).
-    \end{align*}
-    In ($c$) we just counted the number of the index sets $\{i_1,
-    \ldots, i_k\}$ which is precisely $\binom{n}{k}$. We hence get the result 
-    on all tensors and on the completion via the infimum argument and 
-    continuous extension.
+	\end{align*}
+	This extends to all tensors by the infimum argument.
 \end{proof}
 
-% The Case of Nilpotent Lie Algebras
-%
-
-The continuity of the coproduct also holds if the Lie algebra is nilpotent 
-and we take the projective limit $R \longrightarrow 1^-$. Therefore, we use 
-Lemma~\ref{Nilpot:LemmaPreContinuityN} and conclude analogously.
-\begin{proposition}
-    \label{Thm:Hopf:CoproductContinuity2}%
-    Let $\lie{g}$ be a locally convex nilpotent Lie algebra such that $N + 1$ 
-    Lie brackets vanish, $0 \leq R < 1$ and $z \in \mathbb{C}$. Then for $c = 
-    32 \E^2$ (locally uniform in $z$) and 
-    $\epsilon = \frac{N - 1}{N}(1 - R)$ we have for all $x \in 
-    \widehat{\Tensor}_R^\bullet(\lie{g})$ and $p$ a continuous seminorm with 
-    asymptotic estimate $q$
-    \begin{equation}\label{Hopf:CoproductContinuity2}
-        (p_R \tensor p_R) \left(
-        \ocoproduct_z (x) \right)
-        \leq
-        (c q)_{R + \epsilon} (x).
-    \end{equation}
-\end{proposition}
-
-% The antipode
-%
-
-
-For a continuous Hopf structure, only the unit, the counit and the Antipode are 
-left. Their continuity is given by the next proposition.
+Since the continuity of the unit and the counit is clear by the definition of 
+our topology, we have the following result.
 \begin{proposition}
     \label{Prop:Hopf:ContinuousHopf}%
-    Let $\lie{g}$ be an AE-Lie algebra. Then, if $R \geq 1$,
-    $\widehat{\Sym}_R^\bullet (\lie{g})$ for all $z \in \mathbb{C}$ 
-    the unit $\eta$, the counit $\varepsilon$ and the antipode $S_z$ are 
-    continuous. The same holds $\widehat{\Sym}_{1^-}^\bullet(\lie{g})$ if 
-    $\lie{g}$ is a nilpotent, locally convex Lie algebra. with continuous Lie 
-    bracket.
+    Let $\lie{g}$ be an AE-Lie algebra and $z \in \mathbb{C}$. Then, 
+    if $R \geq 1$, $\widehat{\Sym}_R^\bullet (\lie{g})$ is a topological Hopf 
+    algebra. The same holds for $\widehat{\Sym}_{1^-}^{\bullet}(\lie{g})$,
+    if $\lie{g}$ is a nilpotent locally convex Lie algebra with continuous
+    Lie bracket.
 \end{proposition}
-\begin{proof}
-    The continuity of the unit and the counit is immediate
-    from the definition of our topology. The antipode $S_z$
-    is a multiplication with $-1$ on Lie algebra level which extends to
-    $\algebra{U}_R(\lie{g}_z)$ as an algebra anti-homomorphism. Translated
-    back to $\Sym_R^\bullet(\lie{g})$ via $\mathfrak{q}_z^{-1}$, this means 
-    that for $\xi_1, \ldots, \xi_n \in \lie{g}$
-    \begin{equation*}
-    	S_z\left(
-    		\xi_1 \ldots \xi_n
-    	\right)
-    	=
-    	(-1)^n \xi_n \star_z \ldots \star_z \xi_1.
-    \end{equation*}
-    In order to get an estimate, we extend the antipode to the whole
-    tensor algebra and use either Lemma \ref{Lemma:LCAna:LemmaPreContinuityN}
-    (in the AE case) or Lemma \ref{Lemma:Nilpot:LemmaPreContinuityN} (in the
-    nilpotent case). Then we conclude for arbitrary tensors by the
-    infimum argument and extend the estimate to the completion.
-\end{proof}
-
-
-\subsection{A formula for the co-product}
-
-\subsection{Continuity for the co-product}
-
-
-
-\section{The whole Hopf algebra structure}
-\label{sec:chap7_HopfAlgebra}

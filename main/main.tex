@@ -30,6 +30,7 @@ english                        % standard language
            final=true,         % always treat as final
            pdfpagelabels       % use pdf page labels
            ]{hyperref}         % hyperrefs are cool!
+\usepackage[toc,page]{appendix}
 
 
 %
@@ -63,7 +64,9 @@ english                        % standard language
   Chapter5, 
   Chapter6,
   Chapter7,
-  Chapter8
+  appendixA,
+  appendixB,
+  appendixC
   }
 
 
@@ -209,14 +212,6 @@ english                        % standard language
 
 
 
-% Chapter 8
-%
-
-\include{Chapter8}
-
-
-
-
 % ============================================================================
 % ////////////////////////////////////////////////////////////////////////////
 
@@ -228,6 +223,15 @@ english                        % standard language
 % 			Appendix Part
 % ============================================================================
 
+\begin{appendices}
+
+  \include{appendixA}
+  
+  \include{appendixB}
+  
+  \include{appendixC}
+
+\end{appendices}
 
 % ============================================================================
 % ////////////////////////////////////////////////////////////////////////////
