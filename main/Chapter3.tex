@@ -13,8 +13,8 @@
 As we have seen before, there has already been done some work on how to 
 strictly quantize Poisson structures on vector spaces. The Weyl-Moyal-product 
 on locally convex vector spaces was topologized by Stefan Waldmann in 
-\cite{Wladmann:2004:Nuclear} and then investigated more closely by Matthias 
-Schötz in \cite{Schoetz:Master}. It is thus clear that in the next step 
+\cite{waldmann:2014a} and then investigated more closely by Matthias 
+Schötz in \cite{schoetz:2014a}. It is thus clear that in the next step 
 linear Poisson structures on locally convex vector spaces should be done. This 
 will give a new big class of Poisson structures, which will be deformable in a 
 strict way. Before we do so in the rest of this master thesis, we recall 
@@ -76,7 +76,7 @@ something very familiar: It is equivalent to a Lie algebra structure on $V$.
 		\pi
 		=
 		\frac{1}{2}
-		\pi_{ij}
+		\pi_{ij}(x)
 		\frac{\partial}{\partial x_i}
 		\wedge
 		\frac{\partial}{\partial x_j},
@@ -144,9 +144,9 @@ something very familiar: It is equivalent to a Lie algebra structure on $V$.
 \end{proof}
 
 
-Since we know now, that $V$ is actually a Lie algebra, we will call it 
-$\lie{g}$ from now on. Since they carry additional structure, these Poisson 
-systems have a special name.
+From now on, we will call the original vector space $\lie{g}$ instead of $V$
+which is more intuitive for a Lie algebra. Since this kind of Poisson systems
+has a particular structure, there is a proper name for them.
 \begin{definition}[Kirillov-Kostant-Souriau bracket]
 	\label{Def:KKS}
 	Let $\lie{g}$ be a finite-dimensional Lie algebra. Then the Poisson 
@@ -157,28 +157,29 @@ systems have a special name.
 
 
 
-The correspondence from Proposittion~\ref{Alg:Prop:LinPoissonIsLieAlg} is a 
-first hint how we could extend our ideas to infinite dimensionsal systems. 
-Unfortunately, we will not be able to find this nice 
-correspondence of a Lie algebra structure on $\lie{g}$ and the linear 
-polynomials on $\lie{g}'$, since the procedure we used involves the 
-double-dual of $\lie{g}$. In general, this will be really bigger than 
-$\lie{g}$ itself, and starting from some analogon of a linear Poisson 
-structure on $\lie{g}'$, we will find a Lie algebra structure on $\lie{g}''$. 
-Of course, we could just use the canonical embedding $\lie{g} \subseteq 
-\lie{g}''$, but it could (and, in general, it will) happen, that the Lie 
-bracket of $x,y \in \lie{g}$ will not be in $\lie{g}$ any more, but just in 
-its double-dual. In most of the physical cases, we are actually not interested 
-in the double-dual, but in the original vector space. Therefore, it seems to 
-be a good choice to translate ''linear Poisson structure on $\lie{g}^*$'' as 
-''$\lie{g}$ is a Lie algebra'' in infinite dimensions. Remark however that 
-this is a choice and not a necessity, and other choices would have been 
-possible.
+Proposittion~\ref{Alg:Prop:LinPoissonIsLieAlg} gives us a hint how we could
+think of ''infinite-dimensionsal vector spaces with linear Poisson tensor'':
+We take $\lie{g}$ to be an infinite-dimensional Lie algebra, which gives
+something like a linear Poisson structure on $\lie{g}'$.
+If, on the other hand, we chose directly $\lie{g}'$ to have a linear
+Poisson tensor, we would get a Lie algebra structure on $\lie{g}''$.
+Of course, we could think of ''just using this structure on $\lie{g}$'',
+but in general, this will \emph{not} be closed: taking the Lie bracket of
+$\xi, \eta \in \lie{g}$, we might drop out of $\lie{g}$ and have
+$[\xi, \eta] \subseteq \lie{g}'' \backslash \lie{g}$. Usually, such
+a behaviour will not be of physical interest, since the algebras of 
+physical systems are usually closed objects and the double-dual is
+not object of interest. This is why we will translate  the term
+''linear Poisson structure on $\lie{g}^*$'' by  ''$\lie{g}$ is a Lie 
+algebra'' in infinite dimensions and  from now on,we will restrict our 
+observations to systems which can be described as such. Remark however, 
+that, from a mathematical point of view, this is a choice and not a necessity 
+and other choices would be possible.
 
 
 The next task are the polynomials on $\lie{g}'$. As already mentioned, it is 
 not easy to find a good generalization for them, since for a locally convex 
-Lie algebra $\lie{g}$, even $\lie{g}'$ will be a rather huge vector space. 
+Lie algebra $\lie{g}$, even $\lie{g}'$ will be a huge vector space. 
 Again, it is helpful to go back to the finite-dimensional case, where we have 
 the following result:
 \begin{proposition}
@@ -188,10 +189,10 @@ the following result:
 	are canonically isomorphic.
 \end{proposition}
 \begin{proof}
-	since this is a very well-known result, we just want to sketch the proof 
+	Since this is a very well-known result, we just want to sketch the proof 
 	briefly: Take a basis $e_1, \ldots, e_n$ of $\lie{g}$ and its linear 
-	coordinates $x_1, \ldots, x_n \in \Cinfty(\lie{g}^*)$ with $x_i(\xi) = 
-	e_i(\xi)$ for $\xi \in \lie{g}^*$. On homogeneous symmetric tensors this 
+	coordinates $x_1, \ldots, x_n \in \Cinfty(\lie{g}^*)$ with $x_i(x) = 
+	e_i(x)$ for $x \in \lie{g}^*$. On homogeneous symmetric tensors this 
 	yields the map
 	\begin{equation*}
 		\mathcal{J}
@@ -207,41 +208,38 @@ the following result:
 	From the construction, we see that this is an isomorphism, but note, that 
 	we have used the identification $\lie{g}^{**} \cong \lie{g}$ via
 	\begin{equation*}
-		e_i(\xi)
+		e_i(x)
 		=
-		\langle \xi, e_i \rangle.
+		\langle x, e_i \rangle.
 	\end{equation*}
 \end{proof}
-This gives a new idea for generalizing $\Pol(\lie{g}^*)$. One could argue that 
-this isomorphism also uses the double dual which we wanted to avoid, since we 
-could ''drop out'' of our original algebra and end up in $\Sym^{\bullet}
-(\lie{g}^{**})$. Luckily, things are different now, and this is not possible. 
-We can extend the Poisson bracket on $\lie{g}$ as a bi-derivation to 
-$\Sym^{\bullet}(\lie{g})$ and get a closed Poisson algebra now. This way, we 
-never even need to talk about $\Sym^{\bullet}(\lie{g}^{**})$. Of course, 
-$\Sym^{\bullet}(\lie{g})$ only injects in $\Pol(\lie{g}')$ and we don't have 
-an isomorphism any more, but we have good reason to think that this is enough: 
-we get a closed and reasonably big subalgebra of of the polynomials. Moreover, 
+The last identification we used in the last step will not work in both
+directions any more, but just in one: we have a canonical injection
+$\Sym^{\bullet}(\lie{g}) \subseteq \Pol^{\bullet}(\lie{g}')$, so every 
+symmetric tensor still gives a polynomial. Anyway, this gives an idea 
+how to avoid speaking about $\Pol(\lie{g}^*)$ and its topology: we 
+restrict right from the beginning to $\Sym^{\bullet}(\lie{g})$.
+For finite-dimensional systems, both points of view are equivalent,
+but in infinite dimensions, this becomes a choice. However,
+we have good reasons to think that this is enough: we get a closed 
+and reasonably big subalgebra of of the polynomials. Moreover, 
 the symmetric tensor algebra is defined on infinite-dimensional spaces 
-exactly in the syme way as on finite-dimensional ones, there is no question 
-about how to generalize, the construction is canonical.
+exactly in the same way as on finite-dimensional ones,  and the 
+construction is identical. 
 
+So finally, we found a suitable way of speaking about our object of interest: 
+We replace linear Poisson structures on $\Pol^{\bullet}(\lie{g}^*)$ by 
+$\Sym^{\bullet}(\lie{g})$. 
 
-Finally, we found a suitable way of speaking about object of interest: We 
-replace linear Poisson structures on $\Pol^{\bullet}(\lie{g}^*)$ by 
-$\Sym^{\bullet}(\lie{g})$. In finite dimension, this will not make a 
-difference, but for the infinite-dimensional case, this is a choice and it is 
-not mandatory to do it like this. Anyway, a decision had to be made and we 
-have good reasons to believe that we are not completely misguided.
 
 
 
 \section{The Gutt star product}
 \label{sec:chap3_GuttStar}
 
-Our final aim is to endow the symmetric algebra, and hence the polynomial 
+The aim of this chapter is to endow the symmetric algebra, and hence the polynomial 
 algebra, with a new, noncommutative product. This is possible in a very 
-natural way, due to the Poincar\'e-Birkhoff-Wit theorem. It links the 
+natural way, due to the Poincar\'e-Birkhoff-Witt theorem. It links the 
 symmetric tensor algebra $\Sym^{\bullet}(\lie{g})$ of a Lie algebra $\lie{g}$ 
 to its universal enveloping algebra $\algebra{U}(\lie{g})$.
 
@@ -258,18 +256,18 @@ out of it by using the commutator
 	, \quad
 	a,b \in \algebra{A}.
 \end{equation*}
-This construction is in fact functorial, since it doesn't only map associative 
+This construction is functorial, since it doesn't only map associative 
 algebras to Lie algebras, but also morphisms of the former to those of the 
-latter. While getting a Lie algebra out of an associative algebra is easy, the 
-reversed process is more complicated, but also possible. It is a well-known 
-fact that every Lie algebra $\lie{g}$ can be embedded into an associative 
-algebra, known as the universal enveloping algebra $\algebra{U}(\lie{g})$. It 
+latter. While constructing a Lie algebra out of an associative algebra is easy, 
+the reversed process is more complicated, but also possible. Every Lie algebra 
+$\lie{g}$ can be embedded into a particular associative algebra, known as 
+the universal enveloping algebra $\algebra{U}(\lie{g})$, which
 is uniquely determined (up to isomorphism) by the universal property: for 
 every unital associative algebra $\algebra{A}$ and every homomorphism for Lie 
 algebras $\phi\colon \lie{g} \longrightarrow \algebra{A}$ using the 
 commutator on $\algebra{A}$, one gets a unital homomorphism of associative 
 algebras $\Phi \colon \algebra{U}(\lie{g}) \longrightarrow \algebra{A}$ such 
-that the following diagram is commutative:
+that the following diagram commutes:
 \begin{center}
     \begin{tikzpicture}
         \matrix (m)[
@@ -302,23 +300,23 @@ that the following diagram is commutative:
 \end{center}
 The proof of existence and uniqueness of the universal enveloping algebra can 
 be found in every standard textbook on Lie theory like 
-\cite{hilgert.neeb:2012a} or \cite{varadarajan:1971a}, and we won't do it here 
+\cite{hilgert.neeb:2012a} or \cite{varadarajan:1974a}, and we won't do it here 
 in detail. Just recall that existence is proven by an explicit construction: 
 one takes the tensor algebra $\Tensor^{\bullet}(\lie{g})$ and considers the 
 two-sided ideal
 \begin{equation*}
-	\mathrm{I}
+	\mathfrak{I}
 	=
-	< \xi \tensor \eta - \eta \tensor \xi - [\xi, \eta] >
+	\langle \xi \tensor \eta - \eta \tensor \xi - [\xi, \eta] \rangle
 	, \quad
 	\forall_{\xi, \eta \in \lie{g}}
 \end{equation*}
 inside of it. Then one gets the universal enveloping algebra by the quotient
 \begin{equation}
 	\label{Alg:UnivEnvAlg}
-	\algebra{U}
+	\algebra{U}(\lie{g})
 	=
-	\frac{\Tensor^{\bullet}(\lie{g})}{\mathrm{I}}.
+	\frac{\Tensor^{\bullet}(\lie{g})}{\mathfrak{I}}.
 \end{equation}
 It follows from this construction, that $\algebra{U}(\lie{g})$ is a filtered 
 algebra
@@ -339,15 +337,16 @@ algebra
 		\xi_j^i \in \lie{g}
 		, \
 		1 \leq j \leq n,
-		i \in \mathbb{N}
+		i \in I
 	\Big\rbrace.
 \end{equation*}
-We just get a filtration, not a graded structure, however, since the ideal 
-$\mathrm{I}$ is not homogeneous. Moreover, $\algebra{U}(\lie{g})$ is 
-commutative (and graded) if and only if $\lie{g}$ was commutative. But 
-$\algebra{U}(\lie{g})$ is much more than an associative algebra: it is also a 
-Hopf algebra, since one can define a coassociative, cocommutative coproduct on 
-it
+Generally, we just get a filtration, not a graded structure, since the 
+ideal $\mathfrak{I}$ is not homogeneous in the symmetric degree. We only 
+get a graded structure on $\algebra{U}(\lie{g})$, if and only if $\lie{g}$ 
+was commutative. Then $\algebra{U}(\lie{g})$ is isomorphic to the symmetric
+tensor algebra and hence commutative, too. But $\algebra{U}(\lie{g})$
+is much more than an associative algebra: it is also a Hopf algebra, 
+since one can define a coassociative, cocommutative coproduct on it
 \begin{equation*}
 	\Delta \colon
 	\algebra{U}(\lie{g})
@@ -364,7 +363,8 @@ it
 	, \quad
 	\forall_{\xi \in \lie{g}}
 \end{equation*} 
-which extends to $\algebra{U}(\lie{g})$ via algebra homomorphism, as well as an antipode
+which extends to $\algebra{U}(\lie{g})$ via algebra homomorphism, 
+as well as an antipode
 \begin{equation*}
 	S \colon
 	\algebra{U}(\lie{g})
@@ -378,6 +378,14 @@ which extends to $\algebra{U}(\lie{g})$ via algebra homomorphism, as well as an 
 	\forall_{\xi \in \lie{g}}
 \end{equation*}
 which extends to $\algebra{U}(\lie{g})$ via algebra antihomomorphism.
+We will come back to those two maps and to the Hopf structure in chapter 7,
+when we talk about their continuity. More details on the algebraic
+aspect of deformation theory using Hopf algebras can be found in 
+\cite{chari.pressley:1994a} and \cite{majid:1995a}, for example.
+
+
+
+
 
 \subsection{The Poincar\'e-Birkhoff-Witt theorem}
 \label{subsec:chap3_PoincareBirkhoffWitt}

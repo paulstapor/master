@@ -16,8 +16,8 @@
 \contentsline {subsection}{\numberline {3.3.3}The Goldberg-Thompson formula and some results}{16}{subsection.3.3.3}
 \contentsline {subsubsection}{Goldberg's theorems}{16}{section*.2}
 \contentsline {subsubsection}{Bernoulli numbers}{17}{section*.3}
-\contentsline {subsubsection}{BCH up to first order}{18}{section*.4}
-\contentsline {section}{\numberline {3.4}The Equality of the Star Products}{19}{section.3.4}
+\contentsline {subsubsection}{BCH up to first order}{17}{section*.4}
+\contentsline {section}{\numberline {3.4}The Equality of the Star Products}{18}{section.3.4}
 \contentsline {chapter}{\numberline {4}Formulas for the Gutt star product}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Formulas for the Gutt Star Product}{25}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}A Monomial with a Linear Term}{25}{subsection.4.1.1}
@@ -59,3 +59,4 @@
 \contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{85}{Appendix.1.C}
 \contentsline {section}{\numberline {C.1}Particular Lie algebras}{85}{section.1.C.1}
 \contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{85}{section.1.C.2}
+\contentsline {chapter}{Bibliography}{87}{chapter*.10}
