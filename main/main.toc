@@ -59,3 +59,4 @@
 \contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{85}{Appendix.1.C}
 \contentsline {section}{\numberline {C.1}Particular Lie algebras}{85}{section.1.C.1}
 \contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{85}{section.1.C.2}
+\contentsline {chapter}{Bibliography}{87}{chapter*.10}

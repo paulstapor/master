@@ -96,23 +96,6 @@ english                        % standard language
 \newcommand\ot[2]{\mathrel{\overset{\makebox[0pt]
 	{\mbox{\normalfont\footnotesize\sffamily #1}}}{#2}}}
 
-\newcount\colveccount
-\newcommand*\colvec[1]{
-        \global\colveccount#1
-        \begin{pmatrix}
-        \colvecnext
-}
-\def\colvecnext#1{
-        #1
-        \global\advance\colveccount-1
-        \ifnum\colveccount>0
-                \\
-                \expandafter\colvecnext
-        \else
-                \end{pmatrix}
-        \fi
-}
-
 %
 % title page with the nice sign
 % of the university and official stuff
@@ -249,8 +232,8 @@ english                        % standard language
 {
   \footnotesize
   \renewcommand{\arraystretch}{0.5}
-  \bibliographystyle{chairx}
-  \bibliography{../references/master}
+  \bibliographystyle{../../texmf/bib/bst/chairx}
+  \bibliography{../../texmf/bib/dqarticle, ../../texmf/bib/dqbook, ../../texmf/bib/preprints, ../../texmf/bib/dqthesis}
 }
 
 % ============================================================================

@@ -11,11 +11,11 @@
 \label{sec:chap3_LinearPoisson}
 
 As we have seen before, there has already been done some work on how to 
-strictly quantize Poisson structures on vector spaces. The Weyl-Moyal-product 
-on locally convex vector spaces was topologized by Stefan Waldmann in 
-\cite{Wladmann:2004:Nuclear} and then investigated more closely by Matthias 
-Schötz in \cite{Schoetz:Master}. It is thus clear that in the next step 
-linear Poisson structures on locally convex vector spaces should be done. This 
+strictly quantize Poisson structures on vector spaces. Star products of
+exponential type on locally convex vector spaces were topologized by Stefan 
+Waldmann in \cite{waldmann:2014a} and then investigated more closely by 
+Matthias Schötz in \cite{schoetz:2014a}. Hence, as a the next step, we try
+to attack linear Poisson structures on locally convex vector spaces. This 
 will give a new big class of Poisson structures, which will be deformable in a 
 strict way. Before we do so in the rest of this master thesis, we recall 
 briefly some basics on linear Poisson structures.
@@ -23,27 +23,32 @@ briefly some basics on linear Poisson structures.
 
 We will always take a vector space $V$ and look at Poisson structures on the 
 coordinates which are elements of the dual space $V^*$. In order to cover most 
-of the physically interesting examples by our reflections, our aim will be 
-locally convex vector spaces. Here we have to think about what coordinates 
-should be and how a Poisson structure on them could look like. A priori, it is 
-not even clear which dual we should consider: the algebraic dual $V^*$ of all 
-linear forms on $V$, or the topological dual $V'$ which contains just the 
-continuous linear forms. Here, one could argue that only $V'$ is of real 
-interest, since otherwise we would encounter the very strange effect of having 
-discontinuous polynomials, and constructing a continuous star product on this 
-space seems somehow pointless. But even if we stick to $V'$, it still remains 
-the question if we want to consider the weak or the strong topology there and 
-why one of them should be better. Once this is done, we have to think about a 
-generalization of Poisson tensors to this context. These are just the very 
-first problems which come up and they won't be the last. For this reason, it 
-is worth looking at some equivalent formulations of $Pol(V^*)$, since they 
-may allow for better generalizations. To do so, we have to go back to the 
-finite-dimensional case.
+of the physically interesting examples by our reflections, we will assume that 
+$V$ is a locally convex vector space. Every finite-dimensional vector space is 
+normable and complete and hence locally convex, so it fits in this framework. 
+It is clear what $V^*$ should be and there is just one interesting topology on 
+it. For infinite-dimensional spaces, the situation is more delicate:
+we have to think about what coordinates should be and how a Poisson structure 
+on them could look like. A priori, it is not clear which dual we should 
+consider: the algebraic dual $V^*$ of all linear forms on $V$, or the 
+topological dual $V'$ which contains just the continuous linear forms? Here, 
+one could argue that only $V'$ is of real interest, since otherwise we would 
+encounter the very strange effect of having discontinuous polynomials, and the 
+aim of constructing a continuous star product on them seems somehow pointless. 
+But even if we stick to $V'$, the question of the topology still remains: 
+do we want to consider the weak or the strong topology there and why one of 
+them should be more interesting. In any case, we have to choose a topology on 
+this space. Once this is done, we have to think about a good notion of Poisson 
+tensors in this context. However, we encounter quite a number of question,
+which have no trivial answer. For this reason, it is worth looking at some 
+equivalent formulations of $Pol(V^*)$ in the finite-dimensional case, since 
+they may allow better generalizations.
 
-Let $V$ be a finite dimensional vector space. There is now no questions 
+
+Let $V$ be a finite dimensional vector space. Now, there is now question 
 about the dual or its topology, since $V^* = V'$ is finite-dimensional, too, 
-and we deal with polynomials on it. But a linear Poisson structure on $V^*$ is 
-something very familiar: It is equivalent to a Lie algebra structure on $V$.
+and we deal with polynomials on it. A linear Poisson structure on $V^*$ is 
+something very familiar: it is equivalent to a Lie algebra structure on $V$.
 \begin{proposition}
 	\label{Alg:Prop:LinPoissonIsLieAlg}
 	Let $V$ be a vector-space of dimension $n \in \mathbb{N}$ and $\pi \in 
