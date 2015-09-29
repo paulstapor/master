@@ -14,41 +14,43 @@ As we have seen before, there has already been done some work on how to
 strictly quantize Poisson structures on vector spaces. Star products of
 exponential type on locally convex vector spaces were topologized by Stefan 
 Waldmann in \cite{waldmann:2014a} and then investigated more closely by 
-Matthias Schötz in \cite{schoetz:2014a}. Hence, as a the next step, we want #
+Matthias Schötz in \cite{schoetz:2014a}. Hence, as a the next step, we want 
 to do linear Poisson structures on locally convex vector spaces. This 
-will give a new big class of Poisson structures, which will be deformable in a 
-strict way. Before we do so in the rest of this master thesis, we recall 
-briefly some basics on linear Poisson structures.
+will give a new big class of Poisson structures, which will be deformable 
+in a strict way. Before we do so in the rest of this master thesis, we 
+recall briefly some basics on linear Poisson structures.
 
 
-We will always take a vector space $V$ and look at Poisson structures on the 
-coordinates which are elements of the dual space $V^*$. In order to cover most 
-of the physically interesting examples by our reflections, we will assume that 
-$V$ is a locally convex vector space. Every finite-dimensional vector space is 
-normable and complete and hence locally convex, so it fits in this framework. 
-It is clear what $V^*$ should be and there is just one interesting topology on 
-it. For infinite-dimensional spaces, the situation is more delicate:
-we have to think about what coordinates should be and how a Poisson structure 
-on them could look like. A priori, it is not clear which dual we should 
-consider: the algebraic dual $V^*$ of all linear forms on $V$, or the 
-topological dual $V'$ which contains just the continuous linear forms? Here, 
-one could argue that only $V'$ is of real interest, since otherwise we would 
-encounter the very strange effect of having discontinuous polynomials, and the 
-aim of constructing a continuous star product on them seems somehow pointless. 
+We will always take a vector space $V$ and look at Poisson structures on 
+the coordinates which are elements of the dual space $V^*$. In order to 
+cover most of the physically interesting examples by our reflections, we 
+will assume that $V$ is a locally convex vector space. Every finite-
+dimensional vector space is normable and complete and hence locally convex, 
+so it fits in this framework. It is clear what $V^*$ should be and there is 
+just one interesting topology on it. For infinite-dimensional spaces, the 
+situation is more delicate: we have to think about what coordinates should 
+be and how a Poisson structure on them could look like. A priori, it is not 
+clear which dual we should consider: the algebraic dual $V^*$ of all linear 
+forms on $V$, or the topological dual $V'$ which contains just the 
+continuous linear forms? Here, one could argue that only $V'$ is of real 
+interest, since otherwise we would encounter the very strange effect of 
+having discontinuous polynomials, and the aim of constructing a continuous 
+star product on them seems somehow pointless. 
 But even if we stick to $V'$, the question of the topology still remains: 
 do we want to consider the weak or the strong topology there and why one of 
-them should be more interesting. In any case, we have to choose a topology on 
-this space. Once this is done, we have to think about a good notion of Poisson 
-tensors in this context. However, we encounter quite a number of question,
-which have no trivial answer. For this reason, it is worth looking at some 
-equivalent formulations of $Pol(V^*)$ in the finite-dimensional case, since 
-they may allow better generalizations.
+them should be more interesting. In any case, we have to choose a topology 
+on this space. Once this is done, we have to think about a good notion of 
+Poisson tensors in this context. However, we encounter quite a number of 
+question, which have no trivial answer. For this reason, it is worth 
+looking at some equivalent formulations of $Pol(V^*)$ in the finite-
+dimensional case, since they may allow better generalizations.
 
 
 Let $V$ be a finite dimensional vector space. Now, there is now question 
-about the dual or its topology, since $V^* = V'$ is finite-dimensional, too, 
-and we deal with polynomials on it. A linear Poisson structure on $V^*$ is 
-something very familiar: it is equivalent to a Lie algebra structure on $V$.
+about the dual or its topology, since $V^* = V'$ is finite-dimensional, 
+too, and we deal with polynomials on it. A linear Poisson structure on 
+$V^*$ is something very familiar: it is equivalent to a Lie algebra 
+structure on $V$.
 \begin{proposition}
 	\label{Alg:Prop:LinPoissonIsLieAlg}
 	Let $V$ be a vector-space of dimension $n \in \mathbb{N}$ and $\pi \in 
@@ -63,10 +65,10 @@ something very familiar: it is equivalent to a Lie algebra structure on $V$.
 	\end{propositionlist}
 \end{proposition}
 \begin{proof}
-	We choose a basis $e_1, \ldots, e_n \in V$ and denote its dual basis $e^1, 
-	\ldots, e^n \in V^*$. Then we call the linear coordinates in these bases 
-	$x_1, \ldots, x_n \in \Cinfty(V^*)$ and $\xi^1, \ldots, \xi^n \in 
-	\Cinfty(V)$, such that for all $\xi \in V, x \in V^*$
+	We choose a basis $e_1, \ldots, e_n \in V$ and denote its dual basis 
+	$e^1, \ldots, e^n \in V^*$. Then we call the linear coordinates in 
+	these bases $x_1, \ldots, x_n \in \Cinfty(V^*)$ and $\xi^1, \ldots, 
+	\xi^n \in \Cinfty(V)$, such that for all $\xi \in V, x \in V^*$
 	\begin{equation*}
 		\xi
 		=
@@ -113,8 +115,8 @@ something very familiar: it is equivalent to a Lie algebra structure on $V$.
 	\end{equation}
 	using the identification $T^*V^* \cong V^{**} \cong V$.
 	But now, the statement is obvious, since antisymmetry of $\pi$ means
-	antisymmetry of the $c_{ij}^k$ in the indices $i$ and $j$ and the Jacobi
-	identity for the Poisson tensor gives
+	antisymmetry of the $c_{ij}^k$ in the indices $i$ and $j$ and the 
+	Jacobi identity for the Poisson tensor gives
 	\begin{equation}
 		\label{Alg:JacobiInStructureConst}
 		c_{ij}^\ell c_{\ell k}^m
@@ -125,9 +127,9 @@ something very familiar: it is equivalent to a Lie algebra structure on $V$.
 		=
 		0
 	\end{equation}
-	for all $i, j, k, m$, since it must be fulfilled for all smooth functions.
-	Vicely versa, \eqref{Alg:JacobiInStructureConst} ensures the Jacobi 
-	identity of $\pi$ in \eqref{Alg:KksInCoordinates}. Hence the map
+	for all $i, j, k, m$, since it must be fulfilled for all smooth 
+	functions. Vicely versa, \eqref{Alg:JacobiInStructureConst} ensures the 
+	Jacobi identity of $\pi$ in \eqref{Alg:KksInCoordinates}. Hence the map
 	\begin{equation}
 		\label{Alg:LieBracketOfKks}
 		[ \cdot, \cdot ]
@@ -142,30 +144,30 @@ something very familiar: it is equivalent to a Lie algebra structure on $V$.
 		\longmapsto
 		c_{ij}^k e_k
 	\end{equation}
-	defines a Lie bracket, since the $c_{ij}^k$ are antisymmetric and fulfil 
-	the Jacobi identity and are therefore structures constants. Conversely, 
-	the structure constants of a Lie algebra on $V$ define a Poisson tensor on 
-	$V^*$ via \eqref{Alg:KksInCoordinates}.
+	defines a Lie bracket, since the $c_{ij}^k$ are antisymmetric and 
+	fulfil the Jacobi identity and are therefore structures constants. 
+	Conversely, the structure constants of a Lie algebra on $V$ define a 
+	Poisson tensor on $V^*$ via \eqref{Alg:KksInCoordinates}.
 \end{proof}
 
 
-From now on, we will call the original vector space $\lie{g}$ instead of $V$
-which is more intuitive for a Lie algebra. Since this kind of Poisson systems
-has a particular structure, there is a proper name for them.
+From now on, we will call the original vector space $\lie{g}$ instead of 
+$V$ which is more intuitive for a Lie algebra. Since this kind of Poisson 
+systems has a particular structure, there is a proper name for them.
 \begin{definition}[Kirillov-Kostant-Souriau bracket]
 	\label{Def:KKS}
 	Let $\lie{g}$ be a finite-dimensional Lie algebra. Then the Poisson 
 	bracket $\{ \cdot , \cdot \}_{KKS}$, which is given by 
-	Proposition~\ref{Alg:Prop:LinPoissonIsLieAlg} on $\lie{g}^*$ is called the 
-	Kirillov-Kostant-Souriau bracket.
+	Proposition~\ref{Alg:Prop:LinPoissonIsLieAlg} on $\lie{g}^*$ is called 
+	the Kirillov-Kostant-Souriau bracket.
 \end{definition}
 
 
 
 Proposittion~\ref{Alg:Prop:LinPoissonIsLieAlg} gives us a hint how we could
-think of ''infinite-dimensionsal vector spaces with linear Poisson tensor'':
-We take $\lie{g}$ to be an infinite-dimensional Lie algebra, which gives
-something like a linear Poisson structure on $\lie{g}'$.
+think of ''infinite-dimensionsal vector spaces with linear Poisson 
+tensor'':We take $\lie{g}$ to be an infinite-dimensional Lie algebra, which 
+gives something like a linear Poisson structure on $\lie{g}'$.
 If, on the other hand, we chose directly $\lie{g}'$ to have a linear
 Poisson tensor, we would get a Lie algebra structure on $\lie{g}''$.
 Of course, we could think of ''just using this structure on $\lie{g}$'',
@@ -178,15 +180,15 @@ not object of interest. This is why we will translate  the term
 ''linear Poisson structure on $\lie{g}^*$'' by  ''$\lie{g}$ is a Lie 
 algebra'' in infinite dimensions and  from now on,we will restrict our 
 observations to systems which can be described as such. Remark however, 
-that, from a mathematical point of view, this is a choice and not a necessity 
-and other choices would be possible.
+that, from a mathematical point of view, this is a choice and not a 
+necessity and other choices would be possible.
 
 
-The next task are the polynomials on $\lie{g}'$. As already mentioned, it is 
-not easy to find a good generalization for them, since for a locally convex 
-Lie algebra $\lie{g}$, even $\lie{g}'$ will be a huge vector space. 
-Again, it is helpful to go back to the finite-dimensional case, where we have 
-the following result:
+The next task are the polynomials on $\lie{g}'$. As already mentioned, it 
+is not easy to find a good generalization for them, since for a locally 
+convex Lie algebra $\lie{g}$, even $\lie{g}'$ will be a huge vector space. 
+Again, it is helpful to go back to the finite-dimensional case, where we 
+have the following result:
 \begin{proposition}
 	\label{Alg:Prop:PolIsSym}
 	Let $\lie{g}$ be a vector space of dimension $n \in \mathbb{N}$. Then 
@@ -194,11 +196,11 @@ the following result:
 	are canonically isomorphic.
 \end{proposition}
 \begin{proof}
-	Since this is a very well-known result, we just want to sketch the proof 
-	briefly: Take a basis $e_1, \ldots, e_n$ of $\lie{g}$ and its linear 
-	coordinates $x_1, \ldots, x_n \in \Cinfty(\lie{g}^*)$ with $x_i(x) = 
-	e_i(x)$ for $x \in \lie{g}^*$. On homogeneous symmetric tensors this 
-	yields the map
+	Since this is a very well-known result, we just want to sketch the 
+	proof briefly: Take a basis $e_1, \ldots, e_n$ of $\lie{g}$ and its 
+	linear coordinates $x_1, \ldots, x_n \in \Cinfty(\lie{g}^*)$ with 
+	$x_i(x) = e_i(x)$ for $x \in \lie{g}^*$. On homogeneous symmetric 
+	tensors this yields the map
 	\begin{equation*}
 		\mathcal{J}
 		\colon
@@ -210,8 +212,8 @@ the following result:
 		\longmapsto
 		\xi_1^{\mu_1} \ldots \xi_n^{\mu_n}.
 	\end{equation*}
-	From the construction, we see that this is an isomorphism, but note, that 
-	we have used the identification $\lie{g}^{**} \cong \lie{g}$ via
+	From the construction, we see that this is an isomorphism, but note, 
+	that we have used the identification $\lie{g}^{**} \cong \lie{g}$ via
 	\begin{equation*}
 		e_i(x)
 		=
@@ -232,9 +234,9 @@ the symmetric tensor algebra is defined on infinite-dimensional spaces
 exactly in the same way as on finite-dimensional ones,  and the 
 construction is identical. 
 
-So finally, we found a suitable way of speaking about our object of interest: 
-We replace linear Poisson structures on $\Pol^{\bullet}(\lie{g}^*)$ by 
-$\Sym^{\bullet}(\lie{g})$. 
+So finally, we found a suitable way of speaking about our object of 
+interest: We replace linear Poisson structures on $\Pol^{\bullet}
+(\lie{g}^*)$ by $\Sym^{\bullet}(\lie{g})$. 
 
 
 
@@ -242,11 +244,11 @@ $\Sym^{\bullet}(\lie{g})$.
 \section{The Gutt star product}
 \label{sec:chap3_GuttStar}
 
-The aim of this chapter is to endow the symmetric algebra, and hence the polynomial 
-algebra, with a new, noncommutative product. This is possible in a very 
-natural way, due to the Poincar\'e-Birkhoff-Witt theorem. It links the 
-symmetric tensor algebra $\Sym^{\bullet}(\lie{g})$ of a Lie algebra $\lie{g}$ 
-to its universal enveloping algebra $\algebra{U}(\lie{g})$.
+The aim of this chapter is to endow the symmetric algebra, and hence the 
+polynomial algebra, with a new, noncommutative product. This is possible in 
+a very natural way, due to the Poincar\'e-Birkhoff-Witt theorem. It links 
+the symmetric tensor algebra $\Sym^{\bullet}(\lie{g})$ of a Lie algebra 
+$\lie{g}$ to its universal enveloping algebra $\algebra{U}(\lie{g})$.
 
 
 \subsection{The universal enveloping algebra}
@@ -263,16 +265,16 @@ out of it by using the commutator
 \end{equation*}
 This construction is functorial, since it doesn't only map associative 
 algebras to Lie algebras, but also morphisms of the former to those of the 
-latter. While constructing a Lie algebra out of an associative algebra is easy, 
-the reversed process is more complicated, but also possible. Every Lie algebra 
-$\lie{g}$ can be embedded into a particular associative algebra, known as 
-the universal enveloping algebra $\algebra{U}(\lie{g})$, which
-is uniquely determined (up to isomorphism) by the universal property: for 
-every unital associative algebra $\algebra{A}$ and every homomorphism for Lie 
-algebras $\phi\colon \lie{g} \longrightarrow \algebra{A}$ using the 
+latter. While constructing a Lie algebra out of an associative algebra is 
+easy, the reversed process is more complicated, but also possible. Every 
+Lie algebra $\lie{g}$ can be embedded into a particular associative 
+algebra, known as the universal enveloping algebra $\algebra{U}(\lie{g})$, 
+whichis uniquely determined (up to isomorphism) by the universal property: 
+for every unital associative algebra $\algebra{A}$ and every homomorphism 
+for Lie algebras $\phi\colon \lie{g} \longrightarrow \algebra{A}$ using the 
 commutator on $\algebra{A}$, one gets a unital homomorphism of associative 
-algebras $\Phi \colon \algebra{U}(\lie{g}) \longrightarrow \algebra{A}$ such 
-that the following diagram commutes:
+algebras $\Phi \colon \algebra{U}(\lie{g}) \longrightarrow \algebra{A}$ 
+such that the following diagram commutes:
 \begin{center}
     \begin{tikzpicture}
         \matrix (m)[
@@ -303,12 +305,12 @@ that the following diagram commutes:
         	;
     \end{tikzpicture}
 \end{center}
-The proof of existence and uniqueness of the universal enveloping algebra can 
-be found in every standard textbook on Lie theory like 
-\cite{hilgert.neeb:2012a} or \cite{varadarajan:1974a}, and we won't do it here 
-in detail. Just recall that existence is proven by an explicit construction: 
-one takes the tensor algebra $\Tensor^{\bullet}(\lie{g})$ and considers the 
-two-sided ideal
+The proof of existence and uniqueness of the universal enveloping algebra 
+can be found in every standard textbook on Lie theory like 
+\cite{hilgert.neeb:2012a} or \cite{varadarajan:1974a}, and we won't do it 
+here in detail. Just recall that existence is proven by an explicit 
+construction: one takes the tensor algebra $\Tensor^{\bullet}(\lie{g})$ and 
+considers the two-sided ideal
 \begin{equation*}
 	\mathfrak{I}
 	=
@@ -316,15 +318,19 @@ two-sided ideal
 	, \quad
 	\forall_{\xi, \eta \in \lie{g}}
 \end{equation*}
-inside of it. Then one gets the universal enveloping algebra by the quotient
+inside of it. Then one gets the universal enveloping algebra by the 
+quotient
 \begin{equation}
 	\label{Alg:UnivEnvAlg}
 	\algebra{U}(\lie{g})
 	=
 	\frac{\Tensor^{\bullet}(\lie{g})}{\mathfrak{I}}.
 \end{equation}
-It follows from this construction, that $\algebra{U}(\lie{g})$ is a filtered 
-algebra
+To avoid confusion, we will always denote the multiplication in 
+$\algebra{U}(\lie{g})$ by $\odot$, whereas the commutative product in 
+$\Sym^{\bullet}(\lie{g})$ will be denoted without a sign.
+It follows from this construction, that $\algebra{U}(\lie{g})$ is a 
+filtered algebra
 \begin{equation*}
 	\algebra{U}(\lie{g})
 	=
@@ -337,7 +343,7 @@ algebra
 		x 
 		= 
 		\sum_i
-		\xi_1^i \cdot \ldots \cdot \xi_n^i
+		\xi_1^i \odot \ldots \odot \xi_n^i
 	\ \Big| \ 
 		\xi_j^i \in \lie{g}
 		, \
@@ -395,9 +401,9 @@ aspect of deformation theory using Hopf algebras can be found in
 \subsection{The Poincar\'e-Birkhoff-Witt theorem}
 \label{subsec:chap3_PoincareBirkhoffWitt}
 
-It is a well-known fact that one has a basis in $\algebra{U}(\lie{g})$. This 
-result is due to the already mentioned theorem of Poincar\'e, Birkhoff and 
-Witt:
+The algebra $\algebra{U}(\lie{g})$ always admits a basis, which must be 
+infinite. This result is due to the already mentioned theorem of 
+Poincar\'e, Birkhoff and Witt:
 \begin{theorem}[Poincar\'e-Birkhoff-Witt theorem]
 	\label{Thm:Alg:PBW}
 	Let $\lie{g}$ be a Lie algebra with a basis $\mathcal{B}_{\lie{g}} = \{ 
@@ -407,7 +413,7 @@ Witt:
 		=
 		\big\{
 			\beta_{i_1}^{\mu_{i_1}}
-			\cdot \ldots \cdot
+			\odot \ldots \odot
 			\beta_{i_n}^{\mu_{i_n}}
 		\ \big| \
 			n \in \mathbb{N}, \ 
