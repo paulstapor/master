@@ -1,8 +1,15 @@
 \backcite {waldmann:2014a}{{9}{3.1}{section.3.1}}
 \backcite {schoetz:2014a}{{9}{3.1}{section.3.1}}
 \backcite {hilgert.neeb:2012a}{{12}{3.2.1}{subsection.3.2.1}}
+<<<<<<< HEAD
 \backcite {varadarajan:1971a}{{12}{3.2.1}{subsection.3.2.1}}
 \backcite {bourbaki:}{{13}{3.2.2}{thm.3.2.1}}
+=======
+\backcite {varadarajan:1974a}{{12}{3.2.1}{subsection.3.2.1}}
+\backcite {chari.pressley:1994a}{{12}{3.2.1}{equation.3.2.1}}
+\backcite {majid:1995a}{{12}{3.2.1}{equation.3.2.1}}
+\backcite {bourbaki:}{{12}{3.2.2}{thm.3.2.1}}
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 \backcite {berezin:1971a}{{13}{3.2.2}{thm.3.2.1}}
 \backcite {gutt:1983a}{{13}{3.2.3}{subsection.3.2.3}}
 \backcite {gutt:1983a}{{13}{3.2.3}{equation.3.2.3}}
@@ -16,7 +23,11 @@
 \backcite {varadarajan:yeara}{{15}{i}{Item.3}}
 \backcite {hall:yeara}{{15}{ii}{Item.4}}
 \backcite {hilgert.neeb:2012a}{{15}{ii}{Item.4}}
+<<<<<<< HEAD
 \backcite {jacobson:yeara}{{16}{iii}{Item.5}}
+=======
+\backcite {jacobson:yeara}{{15}{iii}{Item.5}}
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 \backcite {goldberg:1956a}{{16}{iv}{equation.3.3.6}}
 \backcite {thompson:1982a}{{16}{iv}{equation.3.3.6}}
 \backcite {luschny.oeis}{{17}{3.3.3}{equation.3.3.12}}

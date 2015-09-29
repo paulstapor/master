@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 \begin{thebibliography}{1}
+=======
+\begin{thebibliography}{10}
+
+\bibitem {chari.pressley:1994a}
+\textsc{Chari, V., Pressley, A.: }\newblock \emph{A Guide to Quantum Groups}.
+\newblock Cambridge University Press, Cambridge, 1994.
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 
 \bibitem {goldberg:1956a}
 \textsc{Goldberg, K.: }\newblock \emph{The formal power series for
@@ -10,6 +18,19 @@
   Bundle of a Lie Group}.
 \newblock Lett. Math. Phys.  \textbf{7} (1983), 249--258.
 
+<<<<<<< HEAD
+=======
+\bibitem {hilgert.neeb:2012a}
+\textsc{Hilgert, J., Neeb, K.-H.: }\newblock \emph{Structure and geometry of
+  {L}ie groups}.
+\newblock \emph{Springer Monographs in Mathematics}.
+\newblock Springer-Verlag, Heidelberg, New York, 2012.
+
+\bibitem {majid:1995a}
+\textsc{Majid, S.: }\newblock \emph{Foundations of Quantum Group Theory}.
+\newblock Cambridge University Press, 1995.
+
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 \bibitem {mitiagin.rolewicz.zelazko:1962a}
 \textsc{Mitiagin, B.~S., Rolewicz, S., Zelazko, W.: }\newblock \emph{Entire
   functions in $B_0$-algebras}.
@@ -30,6 +51,14 @@
   exponential series}.
 \newblock Linear Algebra and its Applications  \textbf{121} (1989), 3--7.
 
+<<<<<<< HEAD
+=======
+\bibitem {varadarajan:1974a}
+\textsc{Varadarajan, V.~S.: }\newblock \emph{Lie Groups, Lie Algebras, and
+  Their Representations}, vol. 102 in \emph{Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, New York, 1974.
+
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 \bibitem {waldmann:2014a}
 \textsc{Waldmann, S.: }\newblock \emph{A nuclear Weyl algebra}.
 \newblock J. Geom. Phys.  \textbf{81} (2014), 10--46.

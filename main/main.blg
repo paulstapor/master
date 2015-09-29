@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+=======
+This is BibTeX, Version 0.99d (TeX Live 2013/TeX Live for SUSE Linux)
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Introduction.aux
@@ -16,6 +20,7 @@ A level-1 auxiliary file: Chapter7.aux
 A level-1 auxiliary file: appendixA.aux
 A level-1 auxiliary file: appendixB.aux
 A level-1 auxiliary file: appendixC.aux
+<<<<<<< HEAD
 The style file: ../../texmf/bib/bst/chairx.bst
 White space in argument---line 35 of file main.aux
  : \bibdata{../../texmf/bib/dqarticle,
@@ -25,6 +30,16 @@ Database file #1: ../../texmf/bib/dqarticle.bib
 Warning--I didn't find a database entry for "schoetz:2014a"
 Warning--I didn't find a database entry for "hilgert.neeb:2012a"
 Warning--I didn't find a database entry for "varadarajan:1971a"
+=======
+The style file: chairx.bst
+White space in argument---line 35 of file main.aux
+ : \bibdata{../../../.texmf/bibtex/bib/dqbook,../../../.texmf/bibtex/bib/dqarticle,
+ :                                                                                  ../../../.texmf/bibtex/bib/dqthesis,../../../.texmf/bibtex/bib/preprints}
+I'm skipping whatever remains of this command
+Database file #1: ../../../.texmf/bibtex/bib/dqbook.bib
+Database file #2: ../../../.texmf/bibtex/bib/dqarticle.bib
+Warning--I didn't find a database entry for "schoetz:2014a"
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 Warning--I didn't find a database entry for "bourbaki:"
 Warning--I didn't find a database entry for "berezin:1971a"
 Warning--I didn't find a database entry for "drinfeld:1981a"
@@ -56,6 +71,7 @@ Warning--I didn't find a database entry for "Waldmann:nuclear:2014"
 Warning--I didn't find a database entry for "wojtynski:2000a"
 Warning--I didn't find a database entry for "mueller:2000a"
 Warning--I didn't find a database entry for "mueller:XXXXa"
+<<<<<<< HEAD
 You've used 7 entries,
             2314 wiz_defined-function locations,
             562 strings with 4917 characters,
@@ -97,4 +113,47 @@ warning$ -- 0
 while$ -- 28
 width$ -- 8
 write$ -- 65
+=======
+You've used 11 entries,
+            2314 wiz_defined-function locations,
+            585 strings with 5361 characters,
+and the built_in function-call counts, 3238 in all, are:
+= -- 351
+> -- 102
+< -- 1
++ -- 47
+- -- 32
+* -- 268
+:= -- 543
+add.period$ -- 23
+call.type$ -- 11
+change.case$ -- 38
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 140
+empty$ -- 282
+format.name$ -- 32
+if$ -- 683
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 15
+newline$ -- 48
+num.names$ -- 22
+pop$ -- 47
+preamble$ -- 1
+purify$ -- 38
+quote$ -- 0
+skip$ -- 69
+stack$ -- 0
+substring$ -- 198
+swap$ -- 32
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 0
+while$ -- 36
+width$ -- 13
+write$ -- 107
+>>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 (There were 2 error messages)
