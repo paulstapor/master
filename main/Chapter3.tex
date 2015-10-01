@@ -1,4 +1,4 @@
-
+ 
 %
 % Chapter 3 of my master thesis:
 % The first real chapter
@@ -425,41 +425,42 @@ Poincar\'e, Birkhoff and Witt:
 	\end{equation*}
 	defines a basis of $\algebra{U}(\lie{g})$.
 \end{theorem}
-there are different proofs for this statement. While a geometrical proof is 
-very convenient in the finite-dimensional case, a combinatorial argument must 
-be used in infinite dimensions. Most textbooks give the latter one, but 
-restrict to finite-dimensional Lie algebras in order to avoid speaking of 
-basis in infinite dimensions (except, of course, \cite{bourbaki:}). Once one 
-has accepted working with the Lemma of Zorn, the proof will work the same way 
-for any Lie algebra, since the idea relies on ordered index sets which can be 
-defined in any dimension.
+There are different proofs for this statement. While a geometrical proof 
+(like it can be found in \cite{waldmann:2015a:script}) is very convenient 
+in the finite-dimensional case, a combinatorial argument must be used for 
+infinite-dimensional Lie algebras. Most textbooks restrict to 
+finite-dimensional Lie algebras and give a version of the latter one, except 
+\cite{bourbaki:1989a}, which does it ni full generality. The idea of most
+of the combinatoric proof works with minor changes also for any Lie algebra,
+since in relies on ordered index sets which can be defined in any dimension.
 The PBW theorem allows us to set up an isomorphism between $\Sym^{\bullet}
-(\lie{g})$ and $\algebra{U}(\lie{g})$ immediately, since a basis of the former 
-can be given by almost the same expression
+(\lie{g})$ and $\algebra{U}(\lie{g})$ immediately, since a basis of the 
+former can be given by almost the same expression
 \begin{equation*}
 	\mathcal{B}_{\Sym^{\bullet}(\lie{g})}
 	=
 	\big\{
 		\beta_{i_1}^{\mu_{i_1}}
-		\ldots
+		\cdots
 		\beta_{i_n}^{\mu_{i_n}}
 	\ \big| \
 		n \in \mathbb{N}, \ 
 		i_k \in I, 1 \leq k \leq n,
-		i_1 \earlier \ldots \earlier i_n 
+		i_1 \earlier \cdots \earlier i_n 
 		\text{ and } \beta_{i_k} \in \mathcal{B}_{\lie{g}}, \
 		\mu_{i_1}, \ldots, \mu_{i_n} \in \mathbb{N}
 	\big\}
 \end{equation*}
 where we just have replaced the noncommutative product in $\algebra{U}
-(\lie{g})$ by the symmetric tensor product $\vee$ (which we will usually 
+(\lie{g})$ by the symmetric tensor product $\cdot$ (which we will usually 
 denote without a symbol, if possible) in $\Sym^{\bullet}(\lie{g})$. This 
-allows us to write down an isomorphsim between the symmetric tensor algebra 
+allows us to write down an isomorphism between the symmetric tensor algebra 
 and the universal enveloping algebra, just by mapping the basis vectors to 
-each other in a naive way. Of course, this can never be an isomorphism in the 
-sense of algebras, but only of (filtered) vector spaces, because one of the 
-algebras is commutative and the other isn't. Moreover, the symmetric algebra 
-has a grading in the sense that
+each other in a naive way. Of course, this can never be an isomorphism in 
+the sense of algebras, but only of (filtered) vector spaces, because one of 
+the algebras is commutative and the other isn't. Moreover, the symmetric 
+algebra has a graded structure from the one on the tensor algebra which the 
+universal enveloping algebra does not have:
 \begin{equation*}
 	\Sym^{\bullet}(\lie{g})
 	=
@@ -472,12 +473,15 @@ has a grading in the sense that
 		\lie{g} \vee \ldots \vee \lie{g}
 	}_{
 		n \text{ times}
-	},
+	}.
 \end{equation*}
-which induces a filtration by $\Sym^{(k)}(\lie{g}) = \sum_{j=0}^k 
-\Sym^j(\lie{g})$. Our simple isomorphism will respect the filtration, but it 
-isn't the only isomorphism which one can write down. In \cite{berezin:1971a}, 
-Berezin proposed another isomorphism which is more helpful to use:
+We will denote by $\pi_n \colon \Sym^{\bullet}(\lie{g}) \longrightarrow
+\Sym^n(\lie{g})$ the canonical projections of this grading.
+This induces a filtration by $\Sym^{(k)}(\lie{g}) = \sum_{j=0}^k 
+\Sym^j(\lie{g})$. Our simple isomorphism will respect the filtration, but 
+not the grading. However, it isn't the only isomorphism which one can write 
+down. In \cite{berezin:1971a}, Berezin proposed another isomorphism which is 
+more helpful to use:
 \begin{equation}
 	\label{Alg:BerezinQuantization}
 	\mathfrak{q}_n
@@ -499,27 +503,29 @@ Berezin proposed another isomorphism which is more helpful to use:
 	\sum\limits_{n = 0}^{\infty}
 	\mathfrak{q}_n.
 \end{equation}
-We will refer to it as the quantization map, for reasons that will soon become 
-clear. It also respects the filtration and transfers the symmetric product to 
-another symmetric expression. In this sense, we can now switch between both 
-algebras and use the setting, which is more convenient in the current 
-situation: the graded structure of $\Sym^{\bullet}(\lie{g})$, or the Hopf 
-algebra structure of $\algebra{U}(\lie{g})$.
+We will refer to it as the quantization map, for reasons that will soon 
+become clear. It also respects the filtration and transfers the symmetric 
+product to another symmetric expression. In this sense, we can now switch 
+between both algebras and use the setting, which is more convenient in the 
+current situation: the graded structure of $\Sym^{\bullet}(\lie{g})$, or the 
+Hopf algebra structure of $\algebra{U}(\lie{g})$.
 
 
 \subsection{The Gutt star product}
-Since we know, that the universal enveloping and the symmetric tensor algebra 
-are isomorphic as vector spaces, we have a good tool at hand to endow the 
-symmetric tensor algebra, and hence the polynomials, with a noncommutative 
-product. This is exactly what Gutt did in \cite{gutt:1983a}. She constructed a 
-star product on $\Pol^{\bullet}(\lie{g}^*)$ by pulling back the one from 
-$\algebra{U}(\lie{g})$ while encoding the noncommutativity in a formal 
-parameter $z \in \mathbb{C}$ in a convenient way. 
+Since we know, that the universal enveloping and the symmetric tensor 
+algebra are isomorphic as vector spaces, we have a good tool at hand to 
+endow the symmetric tensor algebra, and hence the polynomials, with a 
+noncommutative product by pulling back the product from $\algebra{U}
+(\lie{g})$ to $\Sym^{\bullet}(\lie{g})$ via $\mathfrak{q}$. This is exactly 
+what Gutt did in \cite{gutt:1983a}. She constructed a star product on 
+$\Pol^{\bullet}(\lie{g}^*)$ from $\algebra{U}(\lie{g})$ while encoding the 
+noncommutativity in a formal parameter $z \in \mathbb{C}$ in a convenient 
+way. 
 \begin{definition}[Gutt star product]
 	\label{Def:GuttStar}
 	Let $\lie{g}$ be a Lie algebra, $z \in \mathbb{C}$, and 
-	$f, g \in \Sym^{\bullet}(\lie{g})$ of degree $k$ and $\ell$ respectively. 
-	Then we define the Gutt star product:
+	$f, g \in \Sym^{\bullet}(\lie{g})$ of degree $k$ and $\ell$ 
+	respectively. Then we define the Gutt star product by:
 	\begin{equation}
 		\star_z
 		\colon
@@ -531,23 +537,20 @@ parameter $z \in \mathbb{C}$ in a convenient way.
 		, \quad
 		(f,g)
 		\longmapsto
-		\sum\limits_{n = 0}^{e + \ell - 1}
+		\sum\limits_{n = 0}^{k + \ell - 1}
 		z^n
 		\pi_{k + \ell - n}
 		\left(
 			\mathfrak{q}^{-1} \left(
 				\mathfrak{q}(f) \cdot \mathfrak{q}(g)
 			\right)
-		\right),
+		\right).
 	\end{equation}
-	where the $\pi_n \colon \Sym^{\bullet}(\lie{g}) \longrightarrow 
-	\Sym^n(\lie{g})$ are the projections on the homogeneous components of 
-	degree $n$. 
 \end{definition}
 This is the original way in which Gutt defined her star product in 
 \cite{gutt:1983a}, but there are two more ways to do it. Define
 \begin{equation*}
-	\mathrm{I}_z
+	\mathfrak{I}_z
 	=
 	< \xi \tensor \eta - \eta \tensor \xi - z [\xi, \eta] >
 \end{equation*}
@@ -556,7 +559,7 @@ for $z \in \mathbb{C}$. Then we set
 	\label{Alg:DeformedUnivEnvAlg}
 	\algebra{U}(\lie{g}_z)
 	=
-	\frac{\Tensor^{\bullet}(\lie{g})}{\mathrm{I}_z},
+	\frac{\Tensor^{\bullet}(\lie{g})}{\mathfrak{I}_z},
 \end{equation}
 and get the map
 \begin{equation}
@@ -609,14 +612,16 @@ Baker-Campbell-Hausdorff series: take $\xi, \eta \in \lie{g}$ and set
 		\bch{z \xi}{z \eta}
 	\right),
 \end{equation}
-where the exponential series is understood a formal power series in $\xi$ and 
-$\eta$. By differentiating, on gets the star product on all polynomials.
+where the exponential series is understood a formal power series in $\xi$ 
+and $\eta$. By formally differentiating, on gets the star product on all 
+polynomials.
 
 
-Of course, our aim is to show that these three maps are in fact identical and 
-that they define a star product. Since this is a long way to go, we postpone 
-the proof to the end of this chapter. It will be useful to learn something 
-about the Baker-Campbell-Hausdorff series and the Bernoulli number first.
+Of course, our aim is to show that these three maps are in fact identical 
+and that they define a star product. Since this is a long way to go, we 
+postpone the proof to the end of this chapter. It will be useful to learn 
+something about the Baker-Campbell-Hausdorff series and the Bernoulli number 
+first.
 
 
 
@@ -625,11 +630,9 @@ about the Baker-Campbell-Hausdorff series and the Bernoulli number first.
 
 Since we have a formula for $\star_z$ which involves the
 Baker-Campbell-Hausdorff series, we want to give a short overview
-about it and introduce some results, that will be helpful later on.
-Note however, that there is not \emph{the} BCH formula, since one can always 
-rearrange terms using antisymmetry, Jacobi and higher identities, but for 
-$\xi, \eta \in \lie{g}$ for some Lie algebra $\lie{g}$, we can always write it 
-as
+about it and introduce some results that will be helpful later on.
+Note however, that there is not \emph{the} BCH \emph{formula}, since one 
+can always rearrange terms using antisymmetry or Jacobi identity, but for $\xi, \eta \in \lie{g}$, we can always write it as
 \begin{equation}
 	\label{Alg:NamesOfBCH}
 	\bch{\xi}{\eta}
@@ -640,33 +643,45 @@ as
 	\sum\limits_{a,b = 0}^{\infty}
 	\bchparts{a}{b}{\xi}{\eta},
 \end{equation}
-where $\bchpart{n}{\xi}{\eta}$ denotes all expressions having $n$ letters and 
-$\bchparts{a}{b}{\xi}{\eta}$ denotes all expressions with $a$ $\xi$'s and $b$ 
-$\eta$'s. Clearly we have
+where $\bchpart{n}{\xi}{\eta}$ denotes all expressions having $n$ letters 
+and $\bchparts{a}{b}{\xi}{\eta}$ denotes all expressions with $a$ $\xi$'s 
+and $b$ $\eta$'s. We have $\bchparts{0}{0}{\xi}{\eta} = 0$, $\bchparts{1}{0}
+{\xi}{\eta} = \xi$ and $\bchparts{0}{1}{\xi}{\eta} = \eta$. Clearly this 
+gives
 \begin{equation*}
 	\bchpart{n}{\xi}{\eta}
 	=
-	\sum\limits_{b + b = n}
+	\sum\limits_{a + b = n}
 	\bchparts{a}{b}{\xi}{\eta}.
 \end{equation*}
-This only postpones the problem of non-uniqueness to the partial expressions, 
-but it will be helpful, since we don't have to choose a special form for 
-writing BCH every time.
+Of course, this only moves the problem of non-uniqueness to a later point 
+when we will have to discuss the partial expressions. Yet, in the beginning, 
+this will be helpful.
 
 
 
 \subsection{Some general and historical remarks}
-Let a noncommutative algebra $\algebra{A}$ be given. For $\xi, \eta \in 
-\algebra{A}$ we look at the identity
+Assume $\lie{g}$ to be the Lie algebra of a finite-dimensional Lie group 
+$G$. From the geometric point of view, the BCH formula is the infinitesimal 
+counterpart of the multiplication law in $G$. Since the multiplication is 
+smooth and and the exponential function locally diffeomorphic around the 
+unit element $e$, we would expect that there is a Lie algebraic analogon to 
+the group multiplication, at least near the origin, which depends somehow 
+''smoothly on the arguments''. Finding this expression is, however, a 
+different task.
+
+
+One approach to this would be the following: consider an algebra 
+$\algebra{A}$ with the noncommuting elements $\xi, \eta$. We want to study 
+the identity of formal power series 
 \begin{equation*}
 	\exp(\chi)
 	=
 	\exp(\xi)
 	\exp(\eta).
 \end{equation*}
-Then, algebraically speaking, the BCH series is the formal power series for 
-$\chi$ as a commutator expression in $\xi$ and $\eta$. We can take the formal 
-power series for the exponentials
+There should be a $\chi \in \algebra{A}$, which fulfils this relation. 
+We can rewrite the right hand side as
 \begin{equation*}
 	\exp(\xi)\exp(\eta) 
 	= 
@@ -678,9 +693,9 @@ and use the formal power series for the logarithm
 	\log(\chi) 
 	= 
 	\sum\limits_{k = 1}^{\infty} 
-	\frac{ (-1)^{k-1} }{ k } (\chi - 1)^k.
+	\frac{ (-1)^{k-1} }{ k } (\chi - 1)^k
 \end{equation*}
-This yields
+in order to get an expression for $\chi$. This yields
 \begin{equation}
 	\label{Alg:BCHinRaw}
 	\chi
@@ -700,18 +715,18 @@ This yields
 	}
 	{n_1! m_1! \ldots n_k! m_k!}.
 \end{equation}
-It is obviously far from trivial, if and how this can be expressed using 
-commutators, and the first one to find a general way for this was Dynkin in 
-the 1950's.
+It is far from trivial, if and how this can be expressed using Lie brackets.
+The first one who found a general way for this was Dynkin in the 1950's. Of 
+course, the question of convergence still remains, although we would expect 
+the expression to converge at least in a neighbourhood of $0$.
 
 
-Now let $\lie{g}$ be a finite-dimensional Lie algebra with a corresponding Lie 
-group $G$. From the geometric point of view, the BCH formula is the 
-infinitesimal counterpart of the multiplication law in $G$. One can express it 
-as a series of Lie brackets, which converges just in a small neighbourhood 
-around the unit element $e \in G$. Since the exponential function  $\exp 
-\colon \lie{g} \longrightarrow G$ is locally diffeomorphic there, one gets for 
-$\xi, \eta \in \lie{g}$
+A different approach works via differential equations. We can consider flows 
+on the Lie group. This gives also an expression of the group multiplication 
+in logarithmic coordinates just using Lie brackets. One gets recursive 
+relations for the $\bchpart{n}{\xi}{\eta}$ and the first formulas due to 
+Baker \cite{baker}, Campbell \cite{campb1, campb2} and Hausdorff 
+\cite{hausd} were of this kind. For the first terms, on finds
 \begin{align*}
 	\bch{\xi}{\eta}
 	& =
@@ -721,27 +736,24 @@ $\xi, \eta \in \lie{g}$
 	\xi + \eta
 	+ \frac{1}{2} [\xi, \eta]
 	+ \frac{1}{12} ( [\xi, [\xi, \eta]] + [\eta, [\eta, \xi]] )
-	+ \ldots
+	+ \ldots,
 \end{align*}
-The formula was recovered by Campbell \cite{campb1, campb2}, Baker 
-\cite{baker} and Hausdorff \cite{hausd} independently, founding on a work by 
-Schur \cite{schur}. A lot of work has been done on it since, and one can find 
-a nice summary about it in the introductory part of \cite{casmur}.
+which coincides of course with the result from Dynkin.
 
 
 \subsection{Forms of the BCH}
-As already mentioned, there are different forms of stating the BCH formula and 
-depending on the problem one wants to solve, not each one is well suited. One 
-can classify them roughly into four groups.
+As already mentioned, there are different forms of stating the BCH formula 
+and depending on the problem one wants to solve, not every one is equally 
+well suited. One can classify them roughly into four groups.
 \begin{enumerate}
 	\item
-	There are recursive formulas, which calculate each term from the previous 
-	one. The first expression due to Baker, Campbell and Hausdorff were of 
-	this kind. Though the idea is old, this approach is still much used and 
-	allows powerful applications: Casas and Murua found an efficient 
-	algorithms \cite{casas.murua:yeara} for calculating the BCH series up to 
-	high orders, based on a recursive formula given by Varadarajan in his 
-	textbook \cite{varadarajan:yeara}.
+	There are recursive formulas, which calculate each term from the 
+	previous one. The first expression due to Baker, Campbell and Hausdorff 
+	were of this kind. Though the idea is old, this approach is still much 
+	used and allows powerful applications: Casas and Murua found an 
+	efficient algorithms \cite{casas.murua:yeara} for calculating the BCH 
+	series up to high orders, based on a recursive formula given by 
+	Varadarajan in his textbook \cite{varadarajan:yeara}.
 	
 	\item
 	Most textbooks prove an integral form of the series, like 
