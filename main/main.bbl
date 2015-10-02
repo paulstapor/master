@@ -1,12 +1,61 @@
-<<<<<<< HEAD
-\begin{thebibliography}{1}
-=======
 \begin{thebibliography}{10}
+
+\bibitem {arakawa.ibukiyama.kaneko:2014a}
+\textsc{Arakawa, T., Ibukiyama, T., Kaneko, M.: }\newblock \emph{{B}ernoulli
+  Numbers and {Zeta} functions}.
+\newblock \emph{Springer Monographs in Mathematics}.
+\newblock Springer-Verlag, 2014.
+
+\bibitem {baker:1905a}
+\textsc{Baker, H.: }\newblock \emph{Alternants and Continuous Groups}.
+\newblock Proc. Lond. Math. Soc.  \textbf{3} (1905), 24--47.
+
+\bibitem {berezin:1967a}
+\textsc{Berezin, F.~A.: }\newblock \emph{Some remarks on the associative
+  envelope of a Lie algebra}.
+\newblock Funkcion. Anal. Priloz.  \textbf{1}.5 (1967), 1--14.
+
+\bibitem {bourbaki:1989a}
+\textsc{Bourbaki, N.: }\newblock \emph{Lie Groups and Lie Algebras}.
+\newblock Springer-Verlag, Berlin, Heidelberg, New York, 1989.
+
+\bibitem {campbell:1896a}
+\textsc{Campbell, J.~E.: }\newblock \emph{On a Law of Combination of Operators
+  bearing on the Theory of Continuous Transformation Groups}.
+\newblock Proc. Lond. Math. Soc.  \textbf{28} (1896), 381--390.
+
+\bibitem {campbell:1897a}
+\textsc{Campbell, J.~E.: }\newblock \emph{On a Law of Combination of
+  Operators}.
+\newblock Proc. Lond. Math. Soc.  \textbf{29} (1897), 14--32.
+
+\bibitem {casas.murua:2009a}
+\textsc{Casas, F., Murua, A.: }\newblock \emph{An efficient algorithm for
+  computing the Baker–Campbell–Hausdorff series and some of its
+  applications}.
+\newblock J. Math. Phys.  \textbf{50} (2009).
 
 \bibitem {chari.pressley:1994a}
 \textsc{Chari, V., Pressley, A.: }\newblock \emph{A Guide to Quantum Groups}.
 \newblock Cambridge University Press, Cambridge, 1994.
->>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
+
+\bibitem {drinfeld:1983a}
+\textsc{Drinfel'd, V.~G.: }\newblock \emph{On constant quasiclassical solutions
+  of the Yang-Baxter quantum equation}.
+\newblock Sov. Math. Dokl.  \textbf{28} (1983), 667--671.
+
+\bibitem {dynkin:1947a}
+\textsc{Dynkin, E.~B.: }\newblock \emph{Calculation of the Coefficients in the
+  {C}ampbell-{H}ausdorff formula}.
+\newblock Doklady Akademii Nauk SSSR  \textbf{57} (1947), 323--326.
+\newblock English version in ''Selected papers of E. B. Dynkin with
+  commentary'', by AMS in 2000.
+
+\bibitem {dynkin:1950a}
+\textsc{Dynkin, E.~B.: }\newblock \emph{Normed {L}ie algebras and analytic
+  groups}.
+\newblock Uspekhi Mat. Nauk.  \textbf{5} (1950), 135--186.
+\newblock English version in ''AMS Translation'', series 1, volume 9, 1962.
 
 \bibitem {goldberg:1956a}
 \textsc{Goldberg, K.: }\newblock \emph{The formal power series for
@@ -18,21 +67,33 @@
   Bundle of a Lie Group}.
 \newblock Lett. Math. Phys.  \textbf{7} (1983), 249--258.
 
-<<<<<<< HEAD
-=======
+\bibitem {hall:2003a}
+\textsc{Hall, B.~C.: }\newblock \emph{Lie Groups, Lie Algebras, and
+  Representations}, vol. 222 in \emph{Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, Berlin, Heidelberg, New York, 2003.
+
+\bibitem {hausdorff:1906a}
+\textsc{Hausdorff, F.: }\newblock \emph{Die symbolische {E}xponentialformel in
+  der {G}ruppentheorie}.
+\newblock Sächsische Akademie der Wissenschaften  \textbf{58} (1906), 19–48.
+
 \bibitem {hilgert.neeb:2012a}
 \textsc{Hilgert, J., Neeb, K.-H.: }\newblock \emph{Structure and geometry of
   {L}ie groups}.
 \newblock \emph{Springer Monographs in Mathematics}.
 \newblock Springer-Verlag, Heidelberg, New York, 2012.
 
+\bibitem {jacobson:1979a}
+\textsc{Jacobson, N.: }\newblock \emph{Lie algebras}.
+\newblock Dover Publications Inc., New York, 1979.
+\newblock Republication of the 1962 original.
+
 \bibitem {majid:1995a}
 \textsc{Majid, S.: }\newblock \emph{Foundations of Quantum Group Theory}.
 \newblock Cambridge University Press, 1995.
 
->>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 \bibitem {mitiagin.rolewicz.zelazko:1962a}
-\textsc{Mitiagin, B.~S., Rolewicz, S., Zelazko, W.: }\newblock \emph{Entire
+\textsc{Mitiagin, B.~S., Rolewicz, S., {\.Z}elazko, W.: }\newblock \emph{Entire
   functions in $B_0$-algebras}.
 \newblock Studia Math.  \textbf{21} (1962), 291--306.
 
@@ -40,6 +101,30 @@
 \textsc{Pflaum, M.~J., Schottenloher, M.: }\newblock \emph{Holomorphic
   deformation of Hopf algebras and applications to quantum groups}.
 \newblock J. Geom. Phys.  \textbf{28} (1998), 31--44.
+
+\bibitem {schoetz:2014a}
+\textsc{Sch{\"o}tz, M.: }\newblock \emph{Konvergente Sternprodukte auf
+  Hilbertr{\"a}umen}.
+\newblock master thesis, Mathematisches Institut der Universit{\"a}t
+  W{\"u}rzburg, W{\"u}rzburg, 2014.
+
+\bibitem {serre:2006a}
+\textsc{Serre, J.-P.: }\newblock \emph{Lie algebras and {L}ie groups}, vol.
+  1500 in \emph{Lecture Notes in Mathematics}.
+\newblock Springer-Verlag, Berlin, 2. edition, 2006.
+\newblock 1964 lectures given at Harvard University, Corrected fifth printing.
+
+\bibitem {oeis:A027642}
+\textsc{Sloane, N. J.~A.: }\newblock \emph{Denominator of Bernoulli number
+  $B_n$}.
+\newblock The On-Line Encyclopedia of Integer Sequences, 1964, 2015.
+\newblock https://oeis.org/A027641.
+
+\bibitem {oeis:A027641}
+\textsc{Sloane, N. J.~A.: }\newblock \emph{Numerator of Bernoulli number
+  $B_n$}.
+\newblock The On-Line Encyclopedia of Integer Sequences, 1964, 2015.
+\newblock https://oeis.org/A027641.
 
 \bibitem {thompson:1982a}
 \textsc{Thompson, R.~C.: }\newblock \emph{Cyclic relations and the Goldberg
@@ -51,16 +136,17 @@
   exponential series}.
 \newblock Linear Algebra and its Applications  \textbf{121} (1989), 3--7.
 
-<<<<<<< HEAD
-=======
 \bibitem {varadarajan:1974a}
 \textsc{Varadarajan, V.~S.: }\newblock \emph{Lie Groups, Lie Algebras, and
   Their Representations}, vol. 102 in \emph{Graduate Texts in Mathematics}.
 \newblock Springer-Verlag, New York, 1974.
 
->>>>>>> a1f8de4c0a6f9bd5e39d68b2474dc33c3f851a86
 \bibitem {waldmann:2014a}
 \textsc{Waldmann, S.: }\newblock \emph{A nuclear Weyl algebra}.
 \newblock J. Geom. Phys.  \textbf{81} (2014), 10--46.
+
+\bibitem {waldmann:2015a:script}
+\textsc{Waldmann, S.: }\newblock \emph{Differential Geometry}, 2015.
+\newblock Lecture notes in preparation.
 
 \end{thebibliography}

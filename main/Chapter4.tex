@@ -13,19 +13,16 @@ since we want to get explicit formulas for $\star_z$. There is still a part of
 the proof missing, but this will be caught up at the beginning of the first 
 section of this chapter. From there, we will come to a first easy formula for 
 $\star_z$. Afterwards, we will use the same procedure to find two more 
-formulas for it: a rather involved one for the $n$-fold star product of 
-vectors, which will not necessarily be helpful for algebraic computations, 
-but will turn out very useful for estimates, and a more explicit one for the 
-product of two monomials.
+formulas for it: the first is a rather involved one for the $n$-fold star 
+product of vectors. It will not be helpful for algebraic computations, 
+but very useful for estimates. The second one is a more explicit formula for 
+the product of two monomials.
 
 From those formulas, we will be able to draw some easy, but nice 
-consequences in the next section and we will prove the classical and the semi-
-calssical limit. Then, we will show how to compute the Gutt star product 
-explicitly by calculating two easy examples.
+conclusion in the second section and we will prove the classical and the 
+semi-classical limit. Then, we will show how to calculate the Gutt star 
+product explicitly by computing two easy examples.
 
-At the end of this chapter, we will give an easy Mathematica code, which 
-can be used to verify the correctness of our formulas for polynomials of low 
-orders.
 
 
 
@@ -39,18 +36,18 @@ orders.
 
 \subsection{A Monomial with a Linear Term}
 
-The easiest case for which we will to develop a formula is surely the 
+The easiest case for which we will develop a formula is surely the 
 following one: For a given Lie algebra $\lie{g}$ and $\xi, \eta \in 
 \lie{g}$ we would like to compute
 \begin{equation*}
-    \xi^k \star_{zG} \eta
+    \xi^k \star_z \eta
     =
     \sum\limits_{n=0}^k
     z^n C_n(\xi^k, \eta)
 \end{equation*}
-We have already done this for $\star_z$ and $\widehat{\star}_t$, now we 
-want to do the same for $\ast_z$. This will finish the proof of Theorem 
-\ref{Alg:Thm:ThreeStarsAreOne}. For this purpose, we will use that
+We have already done this for $\star_z$ and $\widehat{\star}_z$, now we 
+want to do the same for $\ast_z$. This will finish the proof of the equality of 
+the star products from Theorem~\ref{Alg:Thm:ThreeStarsAreOne}. We will use that
 \begin{equation}\label{Formulas:MonomialDerivative}
     \xi^k
     =
@@ -73,7 +70,8 @@ Now we have all the ingredients to prove the following lemma:
 \end{lemma}
 \begin{proof}
     We start from the simplified form for the Baker-Campbell-Hausdorff 
-    series from Equation \eqref{Alg:BCH1stOrder}:
+    series from Equation \eqref{Alg:BCHFirstOrderXi} in 
+    Proposition~\ref{Alg:Prop:BCHFristOrder}:
     \begin{equation*}
 		\bch{\xi}{\eta}
 		=
@@ -85,8 +83,8 @@ Now we have all the ingredients to prove the following lemma:
 		+
 		\mathcal{O}(\eta^2).
     \end{equation*}
-    Putting things together with the definition of the Drinfel'ds tar product 
-    and Equation \eqref{Formulas:MonomialDerivative} we get
+    If we insert this into the definition of the Drinfel'd star product 
+    and use Equation~\eqref{Formulas:MonomialDerivative} we get
     \begin{align*}
         \xi^k \ast_z \eta
         & =
@@ -106,13 +104,14 @@ Now we have all the ingredients to prove the following lemma:
             z^j \frac{B_j^*}{j!}
             \left( \ad_{t \xi} \right)^j
             (s \eta)
+            + \mathcal{O}(\eta^2)
         \right).
     \end{align*}
-    From this, we see that only terms which have exactly $k$ of the
+    We see that only terms which have exactly $k$ of the
     $\xi$'s in them and which are linear in $\eta$ will
-    contribute. This means we can cut off the sum at $j = k$. If we
-    now write out the exponential series which we can also cut for the
-    same reason. We have
+    contribute. This means we can cut off the sum at $j = k$ and omit 
+    higher orders in $\eta$. We now use the exponential series,
+    cut it at $k$ for the same reason and get
     \begin{align*}
         \xi^k \ast_z \eta
         & =
@@ -164,9 +163,9 @@ Now we have all the ingredients to prove the following lemma:
             (s \eta)
         \right).
     \end{align*}
-    In the last step we just cut off the sum over $m$ since the terms
-    for $m >1$ will vanish because of the differentiation with respect
-    to $s$. We can finally differentiate to get the formula
+    In the last step we set $m = 1$ since the other term have either too
+    many or not enough $\eta$'s and will vanish because of the differentiation 
+    with respect to $s$. We can finally differentiate to get the formula
     \begin{align*}
         \xi^k \ast_z \eta
         & =
@@ -190,20 +189,19 @@ Now we have all the ingredients to prove the following lemma:
     which is the wanted result.
 \end{proof}
 \begin{remark}
-    We have now proven the equality of the  star products $\widehat{\star}_z$
+    We have proven the equality of the  star products $\widehat{\star}_z$
     $\ast_z$ by deriving an easy formula for both of them. From now on, we 
-    will derive all the other formulas from $\star_{zH}$, since this is the 
+    will get all other formulas from $\ast_z$, since this is the 
     one which is easier to compute.
 \end{remark}
-Once this is done, it is actually easy to get the formula for
-monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
+Now it is actually easy to get the formula for monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
 \begin{proposition}
 	\label{Formulas:Prop:LinearMonomial2}
     Let $\lie{g}$ be a Lie algebra and $\xi_1, \ldots, \xi_k, \eta \in 
     \lie{g}$. We have
     \begin{align}
     		\label{Formulas:LinearMonomial2}
-	    	\xi_1 \ldots \xi_k \star_{zG} \eta
+	    	\xi_1 \cdots \xi_k \star_{zG} \eta
     		& =
     		\sum\limits_{j=0}^k
     		\frac{1}{k!} \binom{k}{j}
@@ -212,10 +210,10 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
     		[\xi_{\sigma(1)}, 
     			[ \ldots [\xi_{\sigma(j)}, \eta] \ldots ]
     		]
-    		\xi_{\sigma(j+1)} \ldots \xi_{\sigma(k)} \text{ and}
+    		\xi_{\sigma(j+1)} \cdots \xi_{\sigma(k)} \text{ and}
     		\\
 		\label{Formulas:LinearMonomial2T}
-	    	\eta \star_{zG} \xi_1 \ldots \xi_k
+	    	\eta \star_{zG} \xi_1 \cdots \xi_k
     		& =
     		\sum\limits_{j=0}^k
     		\frac{1}{k!} \binom{k}{j}
@@ -224,13 +222,13 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
     		[\xi_{\sigma(1)}, 
     			[ \ldots [\xi_{\sigma(j)}, \eta] \ldots ]
     		]
-    		\xi_{\sigma(j+1)} \ldots \xi_{\sigma(k)}.
+    		\xi_{\sigma(j+1)} \cdots \xi_{\sigma(k)}.
     \end{align}
 \end{proposition}
 \begin{proof}
 	We get the result by just polarizing the formula from Lemma 
-	\ref{Lemma:Formulas:LinearMonomial1}. Let $\xi_1, \ldots, \xi_k \in 
-	\lie{g}$ be given, then we introduce the parameters $t_i$ for $i = 
+	\ref{Formulas:Lemma:LinearMonomial1}. Let $\xi_1, \ldots, \xi_k \in 
+	\lie{g}$, then we introduce the parameters $t_i$ for $i = 
 	1, \ldots, k$ and set
 	\begin{equation*}
 		\Xi
@@ -239,13 +237,13 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
 		=
 		\sum\limits_{i=1}^k t_i \xi^i.
 	\end{equation*}
-	Then it is immediate to see that
+	Then we see that
 	\begin{equation*}
-		\xi_1 \ldots \xi_k
+		\xi_1 \cdots \xi_k
 		=
 		\frac{1}{k!}
 		\frac{\partial^k}{\partial t_1 \ldots \partial t_k}
-		\At{t_1, \ldots, t_k = 0}
+		\At{t_1, \cdots, t_k = 0}
 		\Xi^k
 	\end{equation*}
 	since for every $i = 1, \ldots, k$ we have
@@ -262,6 +260,17 @@ monomials of the form $\xi_1 \ldots \xi_k$ with $\eta \in \lie{g}$:
 		=
 		\ad_{\xi_i}(\eta).
 	\end{equation}
+	Now we get
+	\begin{align*}
+		\xi_1 \cdots \xi_k \star_z \eta
+		&=
+		\frac{1}{k!}
+		\frac{\partial^k}{\partial t_1 \ldots \partial t_k}
+		\At{t_1, \cdots, t_k = 0}
+		
+	\end{align*}
+	
+	
 	Now we just need to calculate $\Xi^k \star_{zG} \eta$ and 
 	differentiate with respect to the $t_i$. In order to do this 
 	properly, we define

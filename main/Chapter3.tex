@@ -480,7 +480,7 @@ We will denote by $\pi_n \colon \Sym^{\bullet}(\lie{g}) \longrightarrow
 This induces a filtration by $\Sym^{(k)}(\lie{g}) = \sum_{j=0}^k 
 \Sym^j(\lie{g})$. Our simple isomorphism will respect the filtration, but 
 not the grading. However, it isn't the only isomorphism which one can write 
-down. In \cite{berezin:1971a}, Berezin proposed another isomorphism which is 
+down. In \cite{berezin:1967a}, Berezin proposed another isomorphism which is 
 more helpful to use:
 \begin{equation}
 	\label{Alg:BerezinQuantization}
@@ -601,7 +601,7 @@ This way, we also get a star product:
 		\mathfrak{q}_z(f) \cdot \mathfrak{q}_z(g)
 	\right).
 \end{equation}
-In \cite{drinfeld:1981a}, Drinfeld also constructed a star product using the 
+In \cite{drinfeld:1983a}, Drinfeld also constructed a star product using the 
 Baker-Campbell-Hausdorff series: take $\xi, \eta \in \lie{g}$ and set
 \begin{equation}
 	\label{Alg:DrinfeldStar}
@@ -632,7 +632,8 @@ Since we have a formula for $\star_z$ which involves the
 Baker-Campbell-Hausdorff series, we want to give a short overview
 about it and introduce some results that will be helpful later on.
 Note however, that there is not \emph{the} BCH \emph{formula}, since one 
-can always rearrange terms using antisymmetry or Jacobi identity, but for $\xi, \eta \in \lie{g}$, we can always write it as
+can always rearrange terms using antisymmetry or Jacobi identity, but for 
+$\xi, \eta \in \lie{g}$, we can always write it as
 \begin{equation}
 	\label{Alg:NamesOfBCH}
 	\bch{\xi}{\eta}
@@ -716,17 +717,19 @@ in order to get an expression for $\chi$. This yields
 	{n_1! m_1! \ldots n_k! m_k!}.
 \end{equation}
 It is far from trivial, if and how this can be expressed using Lie brackets.
-The first one who found a general way for this was Dynkin in the 1950's. Of 
-course, the question of convergence still remains, although we would expect 
-the expression to converge at least in a neighbourhood of $0$.
+The first one who found a general way for this was Dynkin in the 1950's 
+\cite{dynkin:1947a, dynkin:1950a}. Of course, the question of convergence 
+still remains, although we would expect the expression to converge at least in 
+a neighbourhood of $0$.
 
 
 A different approach works via differential equations. We can consider flows 
 on the Lie group. This gives also an expression of the group multiplication 
 in logarithmic coordinates just using Lie brackets. One gets recursive 
 relations for the $\bchpart{n}{\xi}{\eta}$ and the first formulas due to 
-Baker \cite{baker}, Campbell \cite{campb1, campb2} and Hausdorff 
-\cite{hausd} were of this kind. For the first terms, on finds
+Baker \cite{baker:1905a}, Campbell \cite{campbell:1896a, campbell:1897a} and 
+Hausdorff \cite{hausdorff:1906a} were of this kind. For the first terms, one 
+finds
 \begin{align*}
 	\bch{\xi}{\eta}
 	& =
@@ -748,17 +751,20 @@ well suited. One can classify them roughly into four groups.
 \begin{enumerate}
 	\item
 	There are recursive formulas, which calculate each term from the 
-	previous one. The first expression due to Baker, Campbell and Hausdorff 
-	were of this kind. Though the idea is old, this approach is still much 
-	used and allows powerful applications: Casas and Murua found an 
-	efficient algorithms \cite{casas.murua:yeara} for calculating the BCH 
-	series up to high orders, based on a recursive formula given by 
-	Varadarajan in his textbook \cite{varadarajan:yeara}.
+	previous one. The first expressions due to Baker, Campbell and Hausdorff 
+	were of this kind. Though the idea is old, this approach is still much in
+	use and allows powerful applications: Casas and Murua found an 
+	efficient algorithm \cite{casas.murua:2009a} for calculating 	a form of 
+	BCH series without redundancies based on a recursive formula, which was 
+	given by Varadarajan in his textbook \cite{varadarajan:1974a}. 
+	For such a non-redundant formula one needs a notion of basis of the free 
+	Lie algebra. There are approaches to such (Hall or Hall-Viennot) basis, 
+	which can e.g. be found in \cite{serre:2006a}.
 	
 	\item
 	Most textbooks prove an integral form of the series, like 
-	\cite{hall:yeara} and \cite{hilgert.neeb:2012a}. since we will use it, 
-	too, we want to introduce it here briefly. Take the meromorphic function
+	\cite{hall:2003a} and \cite{hilgert.neeb:2012a}. Since we will use it, 
+	too, we want to introduce it briefly. Take the function
 	\begin{equation}
 		\label{Alg:DefinitionLogBernoullis}
 		g \colon 
@@ -803,8 +809,8 @@ well suited. One can classify them roughly into four groups.
 	
 	\item
 	As already mentioned, Dynkin found a closed form for \eqref{Alg:BCHinRaw},
-	which is the only one of this kind known so far. One can its proof for 
-	example in \cite{jacobson:yeara}. It reads
+	which is the only one of this kind known so far. A proof can be found in 
+	\cite{jacobson:1979a}, for example. It reads
 	\begin{equation}
 		\label{Alg:BCHinDynkin}
 		\bch{\xi}{\eta}
@@ -825,11 +831,12 @@ well suited. One can classify them roughly into four groups.
 	where the expression $[ \ldots ]$ denotes Lie brackets nested to the left:
 	\begin{equation*}
 		[\xi \eta \eta \xi]
-		=.
-		[[[\xi, \eta], \eta], \xi]
+		=
+		[[[\xi, \eta], \eta], \xi].
 	\end{equation*}
 	Unfortunately, the combinatorics get extremely complicated for higher 
-	degrees, since it contains a lot of redundancies.
+	degrees and increasingly many terms belong to the same Lie bracket 
+	expression.
 	
 	\item
 	Goldberg gave a form of the series which is based on words in two letters:
@@ -869,7 +876,7 @@ and $\eta$ as
 	\xi^{s_1} \eta^{s_2} \ldots (\xi \vee \eta)^{s_m},
 \end{equation*}
 with $m \in \mathbb{N}$ and the last letter will be $\xi$ if $m$ is odd and 
-$\eta$ if $m$ is even. The index $\xi$ of $w_{\xi}$ means, that the word 
+$\eta$ if $m$ is even. The index $\xi$ of $w_{\xi}$ means that the word 
 starts with a $\xi$. Now we can assign to each word $w_{\xi \vee \eta}(s_1, 
 \ldots, s_m)$ a coefficient $c_{\xi \vee \eta}(s_1, \ldots, s_m)$. This is 
 done by the following formula:
@@ -883,22 +890,8 @@ done by the following formula:
 \end{equation}
 where we have $m' = \lfloor \frac{m}{2} \rfloor$, $m'' = \lfloor \frac{m-1}{2} 
 \rfloor$ with $\lfloor \cdot \rfloor$ denoting the entire part of a real 
-number and we have $n = \sum_{i = 1}^m s_i$. For $c_{\eta}$ we have
-\begin{equation}
-	\label{Alg:GoldbergCoeff2}
-	c_{\eta}\left( s_1, \ldots, s_m \right)
-	= 
-	\begin{cases}
-		c_{\xi}\left( s_1, \ldots, s_m \right)
-		& 
-		\text{ if } m \text{ is odd} 
-		\\
-		(-1)^{n-1} c_{\xi} \left( s_1, \ldots, s_m \right)
-		& 
-		\text{ if } m \text{ is even.}
-	\end{cases}
-\end{equation}
-The $G_s$ are the recursively defined Goldberg polynomials
+number and we have $n = \sum_{i = 1}^m s_i$. The $G_s$ are the recursively 
+defined Goldberg polynomials
 \begin{equation}
 	\label{Alg:GoldbergPolynomials}
 	G_s(t) 
@@ -907,20 +900,30 @@ The $G_s$ are the recursively defined Goldberg polynomials
 	\frac{d}{dt} 
 	t(t-1) G_{s-1}(t),
 \end{equation}
-for $s > 1$ and $G_1(t) = 1$. From \eqref{Alg:GoldbergCoeff2} we get 
-immediately
+for $s > 1$ and $G_1(t) = 1$. For $c_{\eta}$ we have
+\begin{equation}
+	\label{Alg:GoldbergCoeff2}
+	c_{\eta}\left( s_1, \ldots, s_m \right)
+	= 
+	(-1)^{n-1} c_{\xi} \left( s_1, \ldots, s_m \right)
+\end{equation}
+and furthermore
+\begin{equation*}
+	c_{\eta}\left( s_1, \ldots, s_m \right)
+	= 
+	c_{\xi} \left( s_1, \ldots, s_m \right)
+\end{equation*}
+if $m$ is odd. This yields immediately
 \begin{equation*}
 	c_{\xi}\left( s_1, \ldots, s_m \right)
 	= 
 	c_{\eta}\left( s_1, \ldots, s_m \right) 
 	= 
 	0 
-	\quad 
-	\text{ if $m$ is odd and $n$ is even.}
 \end{equation*}
-Of course, Goldberg found interesting identities which are fulfilled by the 
-coefficients. A very remarkable one is that for all permutations $\sigma \in 
-S_m$ one has
+if $m$ is odd and $n$ is even. Of course, Goldberg found interesting identities 
+which are fulfilled by the coefficients. A very remarkable one is that for all 
+permutations $\sigma \in S_m$ one has
 \begin{equation*}
 	c_{\xi}\left( s_1, \ldots, s_m \right)
 	=
@@ -943,9 +946,9 @@ something like $[[\xi, \xi], \ldots ] = 0$. For simplicity, let's set
 $s_2 = 1$ and to permute $s_1 \leftrightarrow s_2$:
 \begin{equation}
 	\label{Alg:GoldbergCoeffBernoulli}
-	c_{\xi}(1, n-1)
+	c_{\xi}(1, s)
 	=
-	\frac{ (-1)^{n-1} }{s!}
+	\frac{ (-1)^s }{s!}
 	B_s.
 \end{equation}
 
@@ -969,19 +972,18 @@ things about them. They are defined by the series expansion of
 \end{equation}
 Clearly, $g$ has poles at $z = 2 k \pi i$, $k \in \mathbb{Z}\backslash \{0\}$.
 Moreover, one can easily show that all odd Bernoulli numbers are zero, except 
-for $B_1 = - \frac{1}{2}$ and since in some applications one needs $B_1$ to be 
+for $B_1 = - \frac{1}{2}$ and since in some applications one wants $B_1$ to be 
 positive, there is a different convention for naming them: one often 
 encounters $B_n^* = (-1)^n B_n$ (which only differs for $n = 1$). The nonzero 
-Bernoulli number alternate in sign and for there absolute value, one can show 
-the asymptotic behaviour (see \cite{luschny.oeis})
+Bernoulli numbers alternate in sign. For their absolute value, one can show 
+the asymptotic behaviour (see \cite{oeis:A027641, oeis:A027642})
 \begin{equation*}
-	B_{2n} 
+	|B_{2n}|
 	\sim 
-	(-1)^{n-1} 
-	4\sqrt{\pi n} 
-	\left( \frac{n}{\pi e} \right)^{2n}.
+	(-1)^{n-1}
+	\frac{2 (2n)!}{(2 \pi)^{2*n}}.
 \end{equation*}
-This is not surprising, since we now that the generating function $g$ had 
+This is not surprising, since we know that the generating function $g$ had 
 poles at $\pm 2\pi i$. The Bernoulli numbers can also be calculated by the 
 recursion formula
 \begin{equation}
@@ -992,8 +994,9 @@ recursion formula
 	\binom{n + 1}{k}
 	B_k,
 \end{equation}
-which is well-known in the literature. Since we will deal a lot with them, we 
-want to give the first numbers of this series here.
+which is well-known in the literature (e.g. 
+\cite{arakawa.ibukiyama.kaneko:2014a}). Since we will deal with them, 
+we want to give the first numbers of this series here.
 \begin{center}
 	\begin{tabular}
 	{c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
@@ -1018,6 +1021,7 @@ want to give the first numbers of this series here.
 \subsubsection{BCH up to first order}
 
 \begin{proposition}
+	\label{Alg:Prop:BCHFristOrder}
 	Let $\lie{g}$ be a Lie algebra and the Bernoulli numbers as defined 
 	before. Then we have for $\xi, \eta \in \lie{g}$
 	\begin{align}
@@ -1033,18 +1037,18 @@ want to give the first numbers of this series here.
 		& =
 		\sum\limits_{n = 0}^{\infty}
 		\frac{B_n}{n!}
-		\left( \ad_{\xi} \right)^n (\eta)
+		\left( \ad_{\eta} \right)^n (\xi)
 		+ \mathcal{O} \left( \xi^2 \right)
 	\end{align}
 \end{proposition}
 \begin{proof}
-	This is something we can perfectly calculate using the Goldberg 
-	coefficients. Remind that we will put words to Lie brackets, and for 
-	computing the coefficients we will need the words $\eta \xi^n$ \emph{and} 
-	$\xi \eta \xi^{n-1}$ because of antisymmetry. Now let $n \in \mathbb{N}$. 
-	We have
+	We want to can calculate this using the Goldberg coefficients. Remind that 
+	we will put words to Lie brackets, and for computing the coefficients we 
+	will need the words $\eta \xi^n$ \emph{and} $\xi \eta \xi^{n-1}$ because 
+	of antisymmetry and words of the form $\xi^k \eta \xi^{n-k}$ with $k > 1$ 
+	will give vanishing expressions. Now let $n \in \mathbb{N}$. We have
 	\begin{equation*}
-		c{\eta}(1,n) 
+		c_{\eta}(1,n) 
 		= 
 		(-1)^n c_{\xi}(1,n) 
 		= 
@@ -1054,7 +1058,7 @@ want to give the first numbers of this series here.
 		= 
 		\frac{B_n}{n!}.
 	\end{equation*}
-	By $n-fold$ skew-symmetry and \eqref{Alg:BCHinGoldbergThompson}, we get 
+	By $n$-fold skew-symmetry and \eqref{Alg:BCHinGoldbergThompson}, we get 
 	the contribution
 	\begin{equation*}
 		\frac{(-1)^n}{(n+1)!} 
@@ -1093,8 +1097,9 @@ want to give the first numbers of this series here.
 		\\
 		& =  
 		(-1)^{n + 1} 
-		\frac{1}{(n-1)!} B_n
+		\frac{1}{(n-1)!} B_n,
 	\end{align*}
+	where we have done an integration by parts in the third step.
 	So by using $n-1$ times the skew-symmetry of the Lie bracket, we get
 	\begin{equation*}
 		\frac{1}{n + 1} 
@@ -1107,7 +1112,7 @@ want to give the first numbers of this series here.
 		B_n 
 		\left( \ad_{\xi} \right)^n (\eta)
 	\end{equation*}
-	For $n > 1$, we add up those two and use the fact that $B_n = B_n^*$ and 
+	For $n > 1$ we add up those two and use the fact that $B_n = B_n^*$ and 
 	find the result we want. For $n = 1$, there is just the first contribution 
 	and $c_{\xi}(1,1) = - B_1$, which gives
 	\begin{equation*}
@@ -1118,14 +1123,15 @@ want to give the first numbers of this series here.
 	that we need $c_{\xi}(1, n)$ and $c_{\eta}(1, 1, n-1)$. We have 
 	$c_{\xi}(1,n) = (-1)^n c_{\eta}(1,n)$ and 
 	$c_{\eta}(1, 1, n-1) = (-1)^n c_{\xi}(1,1,n-1$.
-	this gives a global $(-1)^n$ and makes hence $B_n$ out of $B_n^*$.
+	This gives $(-1)^n$ and switches $B_n$ to $B_n^*$.
 \end{proof}
-\begin{remark}
+\begin{remark}[Alternative Proof]
 	Note that we could also have used the integral formula 
-	\eqref{Alg:BCHinIntegral} to prove this. We have two exponential series, 
-	but the second one can be cut after the constant term, since we are 
-	looking for contributions which are linear in $\eta$. The function in the 
-	integral is 	nothing but $(g \circ \log)(z)$. Since we insert 
+	\eqref{Alg:BCHinIntegral} to prove this. We want to sketch an alternative 
+	proof here: if we write the second of the two exponential functions as a 
+	series, we see that it can be cut after the constant term, since we are 
+	looking for contributions which are linear in $\eta$. The function left to 
+	integrate is then just $(g \circ \log)(z)$. Since we insert 
 	$\exp(\ad_{\xi})$, we get
 	\begin{equation*}
 		\bch{\xi}{\eta}
@@ -1141,9 +1147,9 @@ want to give the first numbers of this series here.
 		\sum\limits_{n = 1}^{\infty}
 		\frac{B_n^*}{n!}
 		\left( \ad_{\xi} \right)^n (\eta)
-		+ \mathcal{O} \left( \eta^2 \right)
+		+ \mathcal{O} \left( \eta^2 \right),
 	\end{equation*}
-	since there is no dependence on $t$ any more.
+	since there is no dependence on $t$ left and we get the same result.
 \end{remark}
 
 
@@ -1151,22 +1157,27 @@ want to give the first numbers of this series here.
 \section{The Equality of the Star Products}
 \label{sec:chap3_StarProductProof}
 
-The first step is associativity, since it will simplify the proof later.
+We want to prove the equality of the three star products. As a first step, it 
+will be helpful to show their associativity.
 \begin{proposition}
 	\label{Alg:Lemma:Associtivity}
 	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ define
 	associative multiplications.
 \end{proposition}
 \begin{proof}
-  \mbox{}
+  All maps are defined as $\Sym^{\bullet}(\lie{g}) \times \Sym^{\bullet}
+  (\lie{g}) \longrightarrow \Sym^{\bullet}(\lie{g})$, so we have to show 
+  bilinearity and associativity.
   \begin{enumerate}
 	\item 
-	For $\widehat{\star}_z$, associativity is clear from the very 
-	construction, since the multiplication in $\algebra{U}(\lie{g}_z)$
-	is associative. Bilinearity is also immediate.
+	For $\widehat{\star}_z$, associativity and bilinearity are clear from the 
+	construction, since we just pull-back the multiplication in $\algebra{U}
+	(\lie{g}_z)$.
 	
 	\item
-	For $\star_z$, we have to move around sums and shift projections.
+	For $\star_z$, bilinearity follows from the fact that all maps, that are 
+	used in its definition, are (bi-)linear. For associativity, we have to 
+	interchange sums and shift projections.
 	Recall that $\pi_n(f \star_z g) = 0$, if $n > \deg(f) + \deg(g)$.
 	Take homogeneous tensors $f, g, h \in \Sym^{\bullet}(\lie{g})$
 	of degree $k, \ell, m \in \mathbb{N}$ respectively. The we have
@@ -1195,10 +1206,12 @@ The first step is associativity, since it will simplify the proof later.
 					\mathfrak{q}^{-1}
 				\right)
 				\left(
-					\mathfrak{q} (a)
-					\mathfrak{q} (b)
+					\mathfrak{q} (f) 
+					\odot
+					\mathfrak{q} (g)
 				\right)
 			\right)
+			\odot
 			\mathfrak{q}(h)
 		\right)
 		\\
@@ -1221,10 +1234,12 @@ The first step is associativity, since it will simplify the proof later.
 					\mathfrak{q}^{-1}
 				\right)
 				\left(
-					\mathfrak{q} (a)
-					\mathfrak{q} (b)
+					\mathfrak{q} (f)
+					\odot
+					\mathfrak{q} (g)
 				\right)
 			\right)
+			\odot
 			\mathfrak{q}(h)
 		\right)
 		\\
@@ -1248,10 +1263,12 @@ The first step is associativity, since it will simplify the proof later.
 					\mathfrak{q}^{-1}
 				\right)
 				\left(
-					\mathfrak{q} (a)
-					\mathfrak{q} (b)
+					\mathfrak{q} (f)
+					\odot
+					\mathfrak{q} (g)
 				\right)
 			\right)
+			\odot
 			\mathfrak{q}(h)
 		\right)
 		\\
@@ -1264,28 +1281,19 @@ The first step is associativity, since it will simplify the proof later.
 			\mathfrak{q}^{-1}
 		\right)
 		\left(
-			\mathfrak{q} a)
-			\mathfrak{q}(b)
+			\mathfrak{q}(f)
+			\odot
+			\mathfrak{q}(g)
+			\odot
 			\mathfrak{q}(h)
 		\right),
 	\end{align*}
-	and we just need to reverse this procedure on the right hand side
-	in order to get the wanted result. All we did was using the linearity 
-	of the involved maps. Bilinearity is also clear for $\star_z$, since
-	all the maps involved are (bi-)linear.
-		
+	and we just need to do the reversed process on the right hand side to get 
+	the wanted result.
+	
 	\item
-	Also for $\ast_z$, associativity is not complicated, since one can 
-	write the star product, using the formal power series of the 
-	exponential and the logarithm. Since in this setting, we have
-	\begin{equation*}
-		\exp(\log(z))
-		=
-		z
-		, \quad
-		\forall_{z \in \lie{g}},
-	\end{equation*}
-	one has
+	For $\ast_z$, we get associativity using the exponential function and the 
+	logarithm. We have
 	\begin{align*}
 		\left( 
 			\exp(\xi) \ast_z \exp(\eta) 
@@ -1396,17 +1404,16 @@ The first step is associativity, since it will simplify the proof later.
 	a simple computation.
   \end{enumerate}	 
 \end{proof}
-Note that for a star product, the maps must fulfil the classical and the 
-semi-classical limit. This will be done in Corollary 
-\ref{Formulas:Cor:LimitCases}. It is left to show, that the star product are 
-in fact equal. It is enough to show that they coincide for terms of the form 
-$\xi^k \star \eta$ with $\xi, \eta \in \lie{g}$ and $k \in \mathbb{N}$, since 
-we get them on homogeneous polynomials of the form $\xi_1 \ldots \xi_k \star 
-\eta$ by polarization and for two polynomials like $\xi_1 \ldots \xi_k \star 
-\eta_1 \ldots \eta_{\ell}$ by iteration, which is possible due to 
-associativity. The next lemma will be a first big step:
+Note star products must fulfil the classical and the semi-classical limit. 
+We will do this in Corollary~\ref{Formulas:Cor:LimitCases} and so just the 
+equality is left to show. It is enough to prove the coincidence for terms of 
+the form $\xi^k \star \eta$ with $\xi, \eta \in \lie{g}$ and $k \in 
+\mathbb{N}$, because $\Sym^{\bullet}(\lie{g})$ is a commutative algebra and 
+hence we get them on arbitrary monomials by polarization. The equality for the 
+product of two monomials then follows by iteration, which is possible due to 
+associativity. The next lemma will be a first big step.
 \begin{lemma}
-	Let $\lie{g}$ be a Lie algebra, then we have
+	Let $\xi, \eta \lie{g}$, then we have
 	\begin{equation}
 		\label{Alg:GuttStarFormula}
 		\xi^k \widehat{\star}_z \eta
@@ -1414,9 +1421,8 @@ associativity. The next lemma will be a first big step:
 	 	\sum\limits_{n=0}^k 
 	 	z^n \binom{k}{n} B_n^*
 	 	\xi^{k-n} 
-	 	\left( \ad_{\xi} \right)^n (\eta),
+	 	\left( \ad_{\xi} \right)^n (\eta).
 	\end{equation}
-	where the $B_n^*$ are the Bernoulli numbers defined as above.
 \end{lemma}
 \begin{proof}
 	This proof is divided into the two following lemmata:
@@ -1424,12 +1430,12 @@ associativity. The next lemma will be a first big step:
 		\label{Alg:Lemma:BadSublemma1}
 		Let $\xi, \eta \in \mathfrak{g}$ and $k\in \mathbbm{N}$. Then we have
 		\begin{equation*}
-			{q}_z \left(\sum\limits_{n=0}^k z^n
+			\lie{q}_z \left(\sum\limits_{n=0}^k z^n
 			\binom{k}{n} B_n^* \xi^{k-n}
 			\left(\ad_{\xi}\right)^n(\eta)\right)
 			=
 			\sum\limits_{s=0}^k\mathcal{K}(k,s)
-			\xi^{k-s} \cdot \eta \cdot \xi^s
+			\xi^{k-s} \odot \eta \odot \xi^s
 		\end{equation*}
 		with
 		\begin{equation*}
