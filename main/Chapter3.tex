@@ -730,17 +730,41 @@ relations for the $\bchpart{n}{\xi}{\eta}$ and the first formulas due to
 Baker \cite{baker:1905a}, Campbell \cite{campbell:1896a, campbell:1897a} and 
 Hausdorff \cite{hausdorff:1906a} were of this kind. For the first terms, one 
 finds
-\begin{align*}
+\begin{align}
+	\nonumber
 	\bch{\xi}{\eta}
 	& =
 	\log \left( \exp(X) \exp(Y) \right)
 	\\
+	\nonumber
 	& =
 	\xi + \eta
 	+ \frac{1}{2} [\xi, \eta]
-	+ \frac{1}{12} ( [\xi, [\xi, \eta]] + [\eta, [\eta, \xi]] )
-	+ \ldots,
-\end{align*}
+	+ \frac{1}{12} ( [[\eta, \xi], \xi]  + [[\xi, \eta], \eta] )
+	+ \frac{1}{24} [[[\eta, \xi], \xi], \eta]
+	\\
+	\nonumber
+	& \quad
+	+ \frac{1}{120}
+	(
+		[[[[\eta, \xi], \eta], \xi], \eta] + 
+		[[[[\xi, \eta], \xi], \eta], \xi]
+	)
+	+ \frac{1}{360}
+	(
+		[[[[\eta, \xi], \xi], \xi], \eta] + 
+		[[[[\xi, \eta], \eta], \eta], \xi]
+	)
+	\\
+	\label{Alg:BCHSeriesLong}
+	& \quad
+	- \frac{1}{720}
+	(
+		[[[[\eta, \xi], \xi], \xi], \xi] + 
+		[[[[\xi, \eta], \eta], \eta], \eta]
+	)
+	+ \cdots
+\end{align}
 which coincides of course with the result from Dynkin.
 
 
@@ -987,6 +1011,7 @@ This is not surprising, since we know that the generating function $g$ had
 poles at $\pm 2\pi i$. The Bernoulli numbers can also be calculated by the 
 recursion formula
 \begin{equation}
+	\label{Alg:BernoulliRecursive}
 	B_n
 	=
 	- \frac{1}{n + 1}
@@ -1157,8 +1182,20 @@ we want to give the first numbers of this series here.
 \section{The Equality of the Star Products}
 \label{sec:chap3_StarProductProof}
 
-We want to prove the equality of the three star products. As a first step, it 
-will be helpful to show their associativity.
+We want to prove the equality of the three star products. For a general and 
+possibly infinite-dimensional Lie algebra, this is quite tedious. As a first 
+step, it will be helpful to show their associativity.
+\begin{remark}
+	In the finite-dimensional case, there are different proofs for 
+	Theorem~\ref{Alg:Thm:ThreeStarsAreOne}, the main theorem of this section, 
+	which mostly rely on geometric arguments, like the one in 
+	\cite{bordemann.neumaier.waldmann:1999a}. Unluckily, these techniques are 
+	not at hand in infinite dimensions and one has to find an algebraic proof 
+	instead. Since in the community of deformation quantization, this 
+	statement is somehow folklore and believed for any Lie algebra, it 
+	strongly seems like such a proof already exists. However, the author was 
+	not able to trace it down in literature and therefore gives an own proof.
+\end{remark}
 \begin{proposition}
 	\label{Alg:Lemma:Associtivity}
 	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ define
@@ -1182,11 +1219,14 @@ will be helpful to show their associativity.
 	Take homogeneous tensors $f, g, h \in \Sym^{\bullet}(\lie{g})$
 	of degree $k, \ell, m \in \mathbb{N}$ respectively. The we have
 	\begin{align*}
-		\left(
-			f \star_z g
-		\right)
+		\big(
+			f 
+		&
+			\star_z g
+		\big)
 		\star_z
 		h
+		\\
 		& =
 		\sum\limits_{j=0}^{k + \ell -1}
 		\sum\limits_{i = 0}^{k + \ell + m -j - 1}
@@ -1445,7 +1485,7 @@ associativity. The next lemma will be a first big step.
 			 \binom{k+1}{n} B_n^*
 			 \sum\limits_{j=0}^n
 			 (-1)^j \binom{n}{j}
-			 \sum\limits_{\ell=0}^{k-n} \delta_{s, \ell+j}
+			 \sum\limits_{\ell=0}^{k-n} \delta_{s, \ell+j}.
 		\end{equation*}
 	\end{lemma}
 	\begin{subproof}
@@ -1454,39 +1494,61 @@ associativity. The next lemma will be a first big step.
 		\begin{equation*}
 			\mathfrak{q}_z \left( \sum\limits_{n=0}^k
 			z^n \binom{k}{n} B_n^* \xi^{k-n} 
-			\left(\ad_{\xi}\right)^k(\eta)\right)
+			\left(
+				\ad_{\xi}\right)^n(\eta)
+			\right)
 			=
 			\sum\limits_{n=0}^k
 			\binom{k}{n} B_n^*
-			\mathfrak{q}_z\left(z^n \xi^{k-n}
-			\left(\ad_{\xi}\right)^k(\eta)\right)
+			\mathfrak{q}_z
+			\left(
+				z^n \xi^{k-n}
+				\left( \ad_{\xi} \right)^n
+				(\eta)
+			\right).
 		\end{equation*}
 		Now we need the two equalities
 		\begin{align*}
-			\mathfrak{q}_z\left( \xi^k \eta \right)
+			\mathfrak{q}_z
+			\left( \xi^n \eta \right)
 			& = 
-			\frac{1}{k+1}\sum\limits_{j=0}^k 
-			\xi^{k-l} \cdot \eta \cdot \xi^k
+			\frac{1}{n + 1}
+			\sum\limits_{\ell = 0}^n 
+			\xi^{k - \ell} \odot \eta \odot \xi^{\ell}
 		\intertext{and}
-			\mathfrak{q}_z\left(
-			\left(z^n \ad_{\xi}\right)^k (\eta) \right)
+			\mathfrak{q}_z
+			\left(
+				\left( z^n \ad_{\xi} \right)^n 
+				(\eta) 
+			\right)
 			& = 
-			\sum\limits_{j=0}^k
-			(-1)^j \binom{k}{j}
-			\xi^{k-j} \cdot \eta \cdot \xi^j
+			\sum\limits_{j=0}^n
+			(-1)^j \binom{n}{j}
+			\xi^{n-j} \odot \eta \odot \xi^j
 		\end{align*}
-		which can easily be shown by induction and plug them in:
+		which can easily be shown by induction. They give
 		\begin{align*}
 			\sum\limits_{n=0}^k
-			\binom{k}{n} B_n^* \mathfrak{q}_z(\ldots)
+			\binom{k}{n} B_n^*
+			&
+			\mathfrak{q}_z
+			\left(
+				z^n \xi^{k-n}
+				\left( \ad_{\xi} \right)^n
+				(\eta)
+			\right)
+			\\
 			& = 
 			\sum\limits_{n=0}^k
 			\binom{k}{n} \frac{B_n^*}{k-n+1}
 			\sum\limits_{\ell=0}^{k-n}
-			\xi^{k-n-\ell} \cdot \left(
-			\sum\limits_{j=0}^n
-			(-1)^j \binom{n}{j} \xi^{n-j} \cdot \eta \cdot \xi^j
-			\right) \cdot \xi^{\ell}
+			\xi^{k-n-\ell} \odot
+			\left(
+				\sum\limits_{j=0}^n
+				(-1)^j \binom{n}{j} 
+				\xi^{n-j} \odot \eta \odot \xi^j
+			\right) 
+			\odot \xi^{\ell}
 			\\
 			& =
 			\sum\limits_{n=0}^k
@@ -1494,27 +1556,23 @@ associativity. The next lemma will be a first big step.
 			\sum\limits_{\ell=0}^{k-n}
 			\sum\limits_{j=0}^n
 			(-1)^j \binom{n}{j} 
-			\xi^{k-\ell-j} \cdot \eta \cdot \xi^{\ell+j} 
+			\xi^{k-\ell-j} \odot \eta \odot \xi^{\ell+j} 
 			\\	
 			& = 
 			\frac{1}{k + 1} \sum\limits_{n=0}^k
 			\binom{k+1}{n} B_n^*
 			\sum\limits_{j=0}^n (-1)^j \binom{n}{j}
 			\sum\limits_{\ell=0}^{k-n}
-			\xi^{k-\ell-j} \cdot \eta \cdot \xi^{\ell+j}
+			\xi^{k-\ell-j} \odot \eta \odot \xi^{\ell+j}
 		\end{align*}
 		We just need to collect those terms for which we have $\ell + j = s$
 		for all	$s = 0, \ldots, k$. If we do this with a Kronecker-delta, we 
 		will get exactly the $\mathcal{K}(k, s)$.
 	\end{subproof}
-	For the second lemma, we need some statement on Bernoulli numbers and 
-	binomial coefficients:
-	Let $k,m,n \in \mathbbm{N}$. Then we have the following identities for 
-	Bernoulli numbers and binomial coefficients:
+	For the second lemma, we need some statements on Bernoulli numbers and 
+	binomial coefficients. Let $k,m,n \in \mathbbm{N}$. Then we have the 
+	following identities:
 	\begin{align}
-		\label{Alg:Lemmastuff:1_B0}
-		\sum\limits_{j=0}^k \binom{k+1}{n} B_j
-		& = 0 \\
 		\label{Alg:Lemmastuff:1_B1}
 		\sum\limits_{j=0}^k
 		\binom{k+1}{n} B_j^* 
@@ -1535,17 +1593,18 @@ associativity. The next lemma will be a first big step.
 		& =
 		\binom{n}{k}\binom{n-k}{m-k}.
 	\end{align}
-	The identity \eqref{Alg:Lemmastuff:1_B1} is the standard recursion for 
-	the $B_n^*$ (see e.g. \cite{aik}), \eqref{Alg:Lemmastuff:1_Bin1} and 
-	\eqref{Alg:Lemmastuff:1_Bin2} can be found in good textbooks on 
-	combinatorics such as \cite{aig_enum}. Equation 
-	\eqref{Alg:Lemmastuff:1_Carl} is a theorem due to Carlitz, proven in 
-	\cite{carl}. With them, we can show the next lemma which will finish this 
-	subproof.
+	The first one can easily be proven using the recursive definition of the 
+	Bernoulli numbers \eqref{Alg:BernoulliRecursive}.
+	Equation~\eqref{Alg:Lemmastuff:1_Bin1} and \eqref{Alg:Lemmastuff:1_Bin2} 
+	are standard identities in combinatorics and can be found in the textbook 
+	of Aigner \cite{aigner:2000a}. Finally, 
+	Equation~\eqref{Alg:Lemmastuff:1_Carl} is a theorem due to Carlitz 
+	\cite{carlitz:1968a}. With them, we can show the next lemma which will 
+	finish this proof.
 	\begin{lemma}
 		\label{Alg:Lemma:BadSublemma2}
 		Let $\mathcal{K}(k,s)$ be defined as in Lemma 
-		\ref{Alg:Lemma:Badsublemma1}, then we have for all $k\in \mathbbm{N}$
+		\ref{Alg:Lemma:BadSublemma1}, then we have for all $k\in \mathbbm{N}$
 		\begin{equation*}
 			\mathcal{K}(k, s)
 			=
@@ -1556,7 +1615,8 @@ associativity. The next lemma will be a first big step.
 		\end{equation*}
 	\end{lemma}
 	\begin{subproof}
-		\mbox{}
+		This is divided into three parts. First, we show the statement for 
+		$s=0$, then we show it for $s=1$ and then proceed by induction.
 		\begin{enumerate}[(i)]
 		  \item $s=0$:
 			The Kronecker-delta will always be zero unless $l=j=0$. So we get
@@ -1568,14 +1628,14 @@ associativity. The next lemma will be a first big step.
 				=
 				\frac{k+1}{k+1}
 				=
-				1
+				1,
 			\end{equation*}
-			where we have used (\ref{1_B1}).
+			where we have used \eqref{Alg:Lemmastuff:1_B1}.
 
 			\item $s=1$:
-			To get a contribution, we must have $(j, \ell) = (1,0)$ or
-			 $(0,1)$. Except for $n=0$ and $n=k$, both cases are possible. We 
-			 split them off:
+			To get a contribution from the $\delta$, we must have 
+			$(j, \ell) = (1,0)$ or $(0,1)$. Except for $n=0$ and $n=k$, 
+			both cases are possible. We split them off:
 			\begin{align*}
 				\mathcal{K}(k,1)
 				& = 
@@ -1593,10 +1653,15 @@ associativity. The next lemma will be a first big step.
 				\binom{k+1}{n}n B_n^* 
 				- k B_k^* \\
 				& = 
-				\underbrace{\frac{1}{k+1}
-				\sum\limits_{n=0}^{k-1}}_{ = 1 - B_k^*} 
+				\underbrace{
+					\frac{1}{k+1}
+					\sum\limits_{n=0}^{k-1}
+					\binom{k + 1}{n}
+					B_n^*
+				}_{ = 1 - B_k^*} 
 				- \frac{1}{k+1} \sum\limits_{n=0}^k
-				\binom{k+1}{n}n B_n^*\\
+				\binom{k+1}{n}n B_n^*
+				\\
 				& =
 				1 - B_k^* 
 				- \underbrace{\frac{k+1}{k+1}
@@ -1604,24 +1669,27 @@ associativity. The next lemma will be a first big step.
 				\binom{k+1}{n} B_n^*}_{ = k+1}
 				+ \sum\limits_{n=0}^k 
 				\underbrace{\frac{k+1-n}{k+1}
-				\binom{k+1}{n}}_{\binom{k}{n}} B_n^*\\
+				\binom{k+1}{n}}_{\binom{k}{n}} B_n^*
+				\\
 				& = 
 				1 - B_k^* - k - 1 
 				+ \sum\limits_{n=0}^{k-1}
-				\binom{k}{n} B_n^* - B_k^*\\
+				\binom{k}{n} B_n^* + B_k^*
+				\\
 				& =
 				- k + 
 				\sum\limits_{n}^{k-1} 
-				\binom{k}{n} B_n^*\\
+				\binom{k}{n} B_n^*
+				\\
 				& = 
-				0
+				0.
 			\end{align*}
 	
 		  \item $s \mapsto s+1$:
-			It is sufficient to prove 
+			Due to the induction, it is sufficient to prove 
 			$\mathcal{K}(k,s+1) - \mathcal{K}(k,s) = 0$.
-			In order to do that, we look for a better (i.e. well-suited, not
-			necessarily nicely looking) form of $\mathcal{K}(k,s)$.
+			In order to do that, we must get rid of the $\delta$'s and 
+			therefore rewrite $\mathcal{K}(k,s)$:
 			\begin{align*}
 				\mathcal{K}(k,s)
 				& = 
@@ -1646,14 +1714,13 @@ associativity. The next lemma will be a first big step.
 				\sum\limits_{n=s+1}^k
 				\binom{k+1}{n} B_n^*
 				\sum\limits_{j=\max\{0, s+n-k\}}^s
-				(-1)^j \binom{n}{j}
+				(-1)^j \binom{n}{j}.
 			\end{align*}
-			As long as $\max\{0, s+n-k\} = 0$, the second sum in the first 
-			summand will be zero as it is just the binomial expansion of 
-			$(1-1)^n$. We may not forget that for $n=0$ we cannot plug this 
-			in. Hence we get a special case and a shorter first sum. In the 
-			sums over $j$ we use again the binomial expansion of $(1-1)^n$ and 
-			get 
+			As long as $\max\{0, s+n-k\} = 0$, the first sum over $j$ will be 
+			zero as it is just the binomial expansion of $(1-1)^n$, except for 
+			$n = 0$. Hence we get a special case and a shorter first sum over 
+			$n$. In the sums over $j$ we use again the binomial expansion of 
+			$(1-1)^n$ and get 
 			\begin{align*}
 				\mathcal{K}(k,s)
 				& = 
@@ -1668,12 +1735,11 @@ associativity. The next lemma will be a first big step.
 				- \sum\limits_{j=0}^{s+n-k-1} 
 				(-1)^j\binom{n}{j} - 
 				\sum\limits_{j=s+1}^n 
-				(-1)^j \binom{n}{j} \right) \right]
+				(-1)^j \binom{n}{j} \right) \right].
 			\end{align*}
-			Now it is helpful to use (\ref{1_Bin1}) and 
-			$\binom{k}{n-k} = \binom{k}{n}$. 
-			We also get some $-1$-terms which we can put together with the 
-			$B_n^*$:
+			Now it is helpful to use \eqref{Alg:Lemmastuff:1_Bin1} and 
+			$\binom{k}{n-k} = \binom{k}{n}$. We also get $(-1)^n$-terms which 
+			we can put together with the $B_n^*$ to get $B_n$:
 			\begin{align*}
 				\mathcal{K}(k,s)
 				& = 
@@ -1685,12 +1751,12 @@ associativity. The next lemma will be a first big step.
 				\sum\limits_{n=s+1}^k
 				\binom{k+1}{n}B_n \left(
 				(-1)^{k-s}\binom{n-1}{k-s} + (-1)^{n+s}\binom{n-1}{s}
-				\right) \right]
+				\right) \right].
 			\end{align*}
-			We finally found the "better" form. We hence must compute
-			$\mathcal{K}(k,s+1) - \mathcal{K}(k,s)$.
-			Since we want to show that it is $0$, we can multiply it with
-			$k+1$ in order to get rid of the factor in front:
+			We finally made the $\delta$ disappear. Hence we must compute
+			$\mathcal{K}(k,s+1) - \mathcal{K}(k,s)$. Since we want to show 
+			that it is $0$, we can multiply it with $k + 1$ in order to get 
+			rid of the factor in front:
 			\begin{align*}
 				& \quad
 				(k+1) \left( \mathcal{K}(k,s+1) - \mathcal{K}(k,s) \right)\\
@@ -1728,17 +1794,18 @@ associativity. The next lemma will be a first big step.
 				& \quad -
 				\sum\limits_{n=s+1}^k
 				\binom{k+1}{n} B_n (-1)^{n+s}
-				\left( \binom{n-1}{s+1} + \binom{n-1}{s} \right)
+				\left( \binom{n-1}{s+1} + \binom{n-1}{s} \right).
 			\end{align*}
-			We have just rearranged the sums, added some $0$-terms and put 
-			them together to get it nicer. Now we will use the recursion 
-			formula for the binomial coefficients
+			We have rearranged the sums, added some zeros and shortened the 
+			expression. Now we will use the recursion formula for the binomial 
+			coefficients
 			\begin{equation*}
 				\binom{n-1}{k-1} + \binom{n-1}{k}
 				=
 				\binom{n}{k}
 			\end{equation*}
-			and our binomial multiplication equality (\ref{1_Bin2}):
+			and our binomial multiplication equality 
+			\eqref{Alg:Lemmastuff:1_Bin2}:
 			\begin{align*}
 				& =
 				- \sum\limits_{n=k-s}^k
@@ -1749,15 +1816,15 @@ associativity. The next lemma will be a first big step.
 				- \sum\limits_{n=k-s}^k 
 				\binom{k+1}{s+1} \binom{s+1}{n+s-k} B_n (-1)^{k-s}
 				- \sum\limits_{n=s+1}^k
-				\binom{k+1}{s+1} \binom{k-s}{n-s-1} B_n (-1)^{n+s}
+				\binom{k+1}{s+1} \binom{k-s}{n-s-1} B_n (-1)^{n+s}.
 			\end{align*}
 			Since we want to show that this is $0$, we can divide by
-			$\binom{k+1}{s+1}$, because this will not be zero as long as 
-			$s\leq k$. After doing so, can use the fact that $n>1$ in the 
-			second sum of this induction (since $s\geq 1$) and hence only even 
-			$n$ will come up, as for odd $n$ the Bernoulli numbers are zero. 
-			For this reason we get $(-1)^n = 1$. Then we rewrite these sums by 
-			shifting the indices and add two zeros:
+			$\binom{k+1}{s+1}$ which will never be zero because 
+			$s \in \{0, 1, \ldots, k\}$. After doing so, can use $n > 1$ in 
+			the second sum and thus only even $n$ will show up, because for 
+			odd $n$ the Bernoulli numbers are zero. For this reason we have 
+			$(-1)^n = 1$. Then we rewrite these sums by shifting the indices 
+			and we add two zeros:
 			\begin{align*}
 				& \quad
 				- \sum\limits_{n=k-s}^k
@@ -1776,15 +1843,15 @@ associativity. The next lemma will be a first big step.
 				\binom{s+1}{\ell} B_{\ell + k - s}\\
 				& \quad
 				- (-1)^{s+1} \binom{k-s}{k-s} B_{k+1} 
-				+ (-1)^{k-s} \binom{s+1}{s+1} B_{k+1}
+				+ (-1)^{k-s} \binom{s+1}{s+1} B_{k+1}.
 			\end{align*}
-			The first two terms are exactly the Carlitz-identity 
-			(\ref{1_Carl}), they vanish for this reason. So we are left with 
-			the last two terms. We get
+			The first two terms give the Carlitz-identity 
+			\eqref{Alg:Lemmastuff:1_Carl} and vanish. So we are left with 
+			the last two terms and get
 			\begin{equation*}
 				- (-1)^{s+1} B_{k+1} + (-1)^{k-s} B_{k+1}
 				=
-				(-1)^s B_{k+1} \left(1 + (-1)^k\right) = 0
+				(-1)^s B_{k+1} \left(1 + (-1)^k\right) = 0,
 			\end{equation*}
 			since the bracket will be zero if $k$ is odd and $B_{k+1}=0$ if 
 			$k$ is even.
@@ -1796,15 +1863,15 @@ fulfils this identity. Hence $\ast_z = \widehat{\star}_z$. We only need to
 show $\widehat{\star}_z = \star_z$. For $z = 1$, the two 	maps are clearly 
 identical and therefore we find
 \begin{equation*}
-	\xi^k \star_r \eta
+	\xi^k \star_1 \eta
 	=
 	\sum\limits_{n=0}^k
 	\binom{k}{n} B_n^* \xi^{k-n}
 	\left( \ad_{\xi} \right)^k(\eta).
 \end{equation*}
-But knowing this and inserting it into the definition of $\star_z$, we get 
-$\widehat{\star}_z = \star_z$. So with the proof in chapter 4, we have finally 
-proven the following theorem:
+But now $\widehat{\star}_z = \star_z$ follows from the definition of $\star_z$: 
+we just have to plug in powers of $z$ and find \eqref{Alg:GuttStarFormula}. 
+So with the proofs in Chapter 4, we will have proven the following theorem:
 \begin{theorem}
 	\label{Alg:Thm:ThreeStarsAreOne}
 	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ 

@@ -23,11 +23,6 @@ Database file #3: ../../bibfiles/bib/dqthesis.bib
 Database file #4: ../../bibfiles/bib/preprints.bib
 Database file #5: ../../bibfiles/bib/misc.bib
 Database file #6: ../../bibfiles/bib/script.bib
-Warning--I didn't find a database entry for "aik"
-Warning--I didn't find a database entry for "aig_enum"
-Warning--I didn't find a database entry for "carl"
-Warning--I didn't find a database entry for "neumaier:1998c"
-Warning--I didn't find a database entry for "dixmier:1974a"
 Warning--I didn't find a database entry for "Rudin:Blue"
 Warning--I didn't find a database entry for "BCR:AsympEsti:1981"
 Warning--I didn't find a database entry for "GN:CIARegGroup:2012"
@@ -40,45 +35,45 @@ Warning--I didn't find a database entry for "Waldmann:nuclear:2014"
 Warning--I didn't find a database entry for "wojtynski:2000a"
 Warning--I didn't find a database entry for "mueller:2000a"
 Warning--I didn't find a database entry for "mueller:XXXXa"
-You've used 29 entries,
+You've used 35 entries,
             2314 wiz_defined-function locations,
-            673 strings with 7483 characters,
-and the built_in function-call counts, 8033 in all, are:
-= -- 871
-> -- 243
-< -- 3
-+ -- 108
-- -- 74
-* -- 643
-:= -- 1353
-add.period$ -- 66
-call.type$ -- 29
-change.case$ -- 96
+            706 strings with 8353 characters,
+and the built_in function-call counts, 9653 in all, are:
+= -- 1046
+> -- 295
+< -- 4
++ -- 131
+- -- 90
+* -- 777
+:= -- 1629
+add.period$ -- 80
+call.type$ -- 35
+change.case$ -- 116
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 357
-empty$ -- 706
-format.name$ -- 74
-if$ -- 1712
+cite$ -- 35
+duplicate$ -- 430
+empty$ -- 844
+format.name$ -- 90
+if$ -- 2053
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 34
-newline$ -- 127
-num.names$ -- 58
-pop$ -- 108
+int.to.str$ -- 35
+missing$ -- 41
+newline$ -- 153
+num.names$ -- 70
+pop$ -- 129
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 115
 quote$ -- 0
-skip$ -- 182
+skip$ -- 220
 stack$ -- 0
-substring$ -- 444
-swap$ -- 85
-text.length$ -- 3
+substring$ -- 519
+swap$ -- 104
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
+type$ -- 118
 warning$ -- 0
-while$ -- 82
-width$ -- 31
-write$ -- 292
+while$ -- 98
+width$ -- 37
+write$ -- 354
 (There was 1 error message)

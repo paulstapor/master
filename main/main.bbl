@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem {aigner:2000a}
+\textsc{Aigner, M.: }\newblock \emph{A course in enumeration}, vol. 238 in
+  \emph{Graduate texts in mathematics}.
+\newblock Springer-Verlag, 2000.
+
 \bibitem {arakawa.ibukiyama.kaneko:2014a}
 \textsc{Arakawa, T., Ibukiyama, T., Kaneko, M.: }\newblock \emph{{B}ernoulli
   Numbers and {Zeta} functions}.
@@ -15,6 +20,12 @@
   envelope of a Lie algebra}.
 \newblock Funkcion. Anal. Priloz.  \textbf{1}.5 (1967), 1--14.
 
+\bibitem {bordemann.neumaier.waldmann:1999a}
+\textsc{Bordemann, M., Neumaier, N., Waldmann, S.: }\newblock \emph{Homogeneous
+  Fedosov star products on cotangent bundles II: GNS representations, the WKB
+  expansion, traces, and applications}.
+\newblock J. Geom. Phys.  \textbf{29} (1999), 199--234.
+
 \bibitem {bourbaki:1989a}
 \textsc{Bourbaki, N.: }\newblock \emph{Lie Groups and Lie Algebras}.
 \newblock Springer-Verlag, Berlin, Heidelberg, New York, 1989.
@@ -29,6 +40,10 @@
   Operators}.
 \newblock Proc. Lond. Math. Soc.  \textbf{29} (1897), 14--32.
 
+\bibitem {carlitz:1968a}
+\textsc{Carlitz, L.: }\newblock \emph{Bernoulli Numbers}.
+\newblock Fibonacci Quarterly  \textbf{6} (1968), 71--85.
+
 \bibitem {casas.murua:2009a}
 \textsc{Casas, F., Murua, A.: }\newblock \emph{An efficient algorithm for
   computing the Baker–Campbell–Hausdorff series and some of its
@@ -38,6 +53,11 @@
 \bibitem {chari.pressley:1994a}
 \textsc{Chari, V., Pressley, A.: }\newblock \emph{A Guide to Quantum Groups}.
 \newblock Cambridge University Press, Cambridge, 1994.
+
+\bibitem {dixmier:1977a}
+\textsc{Dixmier, J.: }\newblock \emph{Enveloping Algebras}.
+\newblock \emph{North-Holland Mathematical Library} no. \textbf{14}.
+\newblock North-Holland Publishing Co., Amsterdam, New York, Oxford, 1977.
 
 \bibitem {drinfeld:1983a}
 \textsc{Drinfel'd, V.~G.: }\newblock \emph{On constant quasiclassical solutions
@@ -88,6 +108,11 @@
 \newblock Dover Publications Inc., New York, 1979.
 \newblock Republication of the 1962 original.
 
+\bibitem {kathotia:1998a:pre}
+\textsc{Kathotia, V.: }\newblock \emph{Kontsevich's universal formula for
+  deformation quantization and the Campbell-Baker-Hausdorff Formula, I}.
+\newblock Preprint  \textbf{math.QA/9811174v2} (December 1998).
+
 \bibitem {majid:1995a}
 \textsc{Majid, S.: }\newblock \emph{Foundations of Quantum Group Theory}.
 \newblock Cambridge University Press, 1995.
@@ -96,6 +121,13 @@
 \textsc{Mitiagin, B.~S., Rolewicz, S., {\.Z}elazko, W.: }\newblock \emph{Entire
   functions in $B_0$-algebras}.
 \newblock Studia Math.  \textbf{21} (1962), 291--306.
+
+\bibitem {neumaier:1998a}
+\textsc{Neumaier, N.: }\newblock \emph{Sternprodukte auf
+  {K}otangentenb{\"{u}}ndeln und {O}rdnungs-{V}orschriften}.
+\newblock master thesis, Fakult{\"{a}}t f{\"{u}}r Physik,
+  Albert-Ludwigs-Universit{\"{a}}t, Freiburg, 1998.
+\newblock Available at \texttt{http://idefix.physik.uni-freiburg.de/\~{}nine/}.
 
 \bibitem {pflaum.schottenloher:1998a}
 \textsc{Pflaum, M.~J., Schottenloher, M.: }\newblock \emph{Holomorphic

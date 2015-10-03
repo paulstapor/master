@@ -1,62 +1,69 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {chapter}{\numberline {2}Deformation quantization}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Mechanics, the classical and the quantum view}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Why Deformation quantization}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}The long way from formal to strict}{7}{section.2.3}
-\contentsline {chapter}{\numberline {3}Algebraic Preliminaries}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Linear Poisson structures in infinite dimensions}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}The Gutt star product}{11}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}The universal enveloping algebra}{11}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}The Poincar\'e-Birkhoff-Witt theorem}{12}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}The Gutt star product}{13}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}The Baker-Campbell-Hausdorff series}{14}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Some general and historical remarks}{14}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Forms of the BCH}{15}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}The Goldberg-Thompson formula and some results}{16}{subsection.3.3.3}
-\contentsline {subsubsection}{Goldberg's theorems}{16}{section*.2}
-\contentsline {subsubsection}{Bernoulli numbers}{17}{section*.3}
-\contentsline {subsubsection}{BCH up to first order}{18}{section*.4}
-\contentsline {section}{\numberline {3.4}The Equality of the Star Products}{19}{section.3.4}
-\contentsline {chapter}{\numberline {4}Formulas for the Gutt star product}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Formulas for the Gutt Star Product}{25}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}A Monomial with a Linear Term}{25}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}An Iterated Formula for the General Case}{27}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}A Formula for two Monomials}{29}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Consequences and examples}{31}{section.4.2}
-\contentsline {chapter}{\numberline {5}A locally convex topology for the Gutt star product}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Why locally convex?}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Locally convex algebras}{39}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Locally convex spaces and algebras}{39}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}A special class of locally convex algebras}{40}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}The projective tensor product}{41}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}A topology for the Gutt star product}{44}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Continuity results for the Gutt star product}{46}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{47}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{52}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Representations}{53}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Functoriality}{55}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{57}{section.5.4}
-\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{61}{chapter.6}
-\contentsline {section}{\numberline {6.1}The projective limit}{62}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Continuity of the Product}{62}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Representations and Functoriality}{65}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Module structures}{66}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Heisenberg and the Weyl algebra}{68}{section.6.3}
-\contentsline {section}{\numberline {6.4}Banach-Lie algebras}{69}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Generalizations of nilpotency}{70}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}An adapted $R$-topology}{70}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}A new continuity result}{72}{subsection.6.4.3}
-\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{75}{chapter.7}
-\contentsline {section}{\numberline {7.1}Everything works}{75}{section.7.1}
-\contentsline {chapter}{Appendices}{79}{section*.9}
-\contentsline {chapter}{\numberline {A}Important theorems in Lie theory}{81}{Appendix.1.A}
-\contentsline {section}{\numberline {A.1}The Poincar\'e-Birkhoff-Witt theorem}{81}{section.1.A.1}
-\contentsline {section}{\numberline {A.2}The Integral form of Baker-Campbell-Hausdorff}{81}{section.1.A.2}
-\contentsline {chapter}{\numberline {B}Locally convex algebras}{83}{Appendix.1.B}
-\contentsline {section}{\numberline {B.1}Locally convex algebras with entire calculus}{83}{section.1.B.1}
-\contentsline {section}{\numberline {B.2}Locally m-convex and AE-algebras}{83}{section.1.B.2}
-\contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{85}{Appendix.1.C}
-\contentsline {section}{\numberline {C.1}Particular Lie algebras}{85}{section.1.C.1}
-\contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{85}{section.1.C.2}
-\contentsline {chapter}{Bibliography}{87}{chapter*.10}
+\contentsline {chapter}{\numberline {2}Deformation quantization}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Mechanics: The Classical and the Quantum World}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Classical Mechanical Systems}{9}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Quantum Mechanics}{9}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}The Correspondence Principle}{9}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Making Things Noncommutative: Quantization}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Noncommutative Geometry}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Deformation Quantization}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Formal vs. Strict Deformation Quantization}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}A Mathematical Theory}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}From Formal to Strict}{9}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Algebraic Preliminaries}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Linear Poisson structures in infinite dimensions}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}The Gutt star product}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}The universal enveloping algebra}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}The Poincar\'e-Birkhoff-Witt theorem}{14}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}The Gutt star product}{15}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}The Baker-Campbell-Hausdorff series}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Some general and historical remarks}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Forms of the BCH}{17}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The Goldberg-Thompson formula and some results}{19}{subsection.3.3.3}
+\contentsline {subsubsection}{Goldberg's theorems}{19}{section*.2}
+\contentsline {subsubsection}{Bernoulli numbers}{20}{section*.3}
+\contentsline {subsubsection}{BCH up to first order}{20}{section*.4}
+\contentsline {section}{\numberline {3.4}The Equality of the Star Products}{21}{section.3.4}
+\contentsline {chapter}{\numberline {4}Formulas for the Gutt star product}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Formulas for the Gutt Star Product}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}A Monomial with a Linear Term}{29}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}An Iterated Formula for the General Case}{31}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}A Formula for two Monomials}{32}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Consequences and examples}{35}{section.4.2}
+\contentsline {chapter}{\numberline {5}A locally convex topology for the Gutt star product}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Why locally convex?}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Locally convex algebras}{43}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Locally convex spaces and algebras}{43}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}A special class of locally convex algebras}{44}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}The projective tensor product}{45}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}A topology for the Gutt star product}{48}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Continuity results for the Gutt star product}{50}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{51}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{56}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Representations}{57}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Functoriality}{59}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{61}{section.5.4}
+\contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{65}{chapter.6}
+\contentsline {section}{\numberline {6.1}The projective limit}{66}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Continuity of the Product}{66}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Representations and Functoriality}{69}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Module structures}{70}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Heisenberg and the Weyl algebra}{72}{section.6.3}
+\contentsline {section}{\numberline {6.4}Banach-Lie algebras}{73}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Generalizations of nilpotency}{74}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}An adapted $R$-topology}{74}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}A new continuity result}{76}{subsection.6.4.3}
+\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{79}{chapter.7}
+\contentsline {section}{\numberline {7.1}Everything works}{79}{section.7.1}
+\contentsline {chapter}{Appendices}{83}{section*.9}
+\contentsline {chapter}{\numberline {A}Important theorems in Lie theory}{85}{Appendix.1.A}
+\contentsline {section}{\numberline {A.1}The Poincar\'e-Birkhoff-Witt theorem}{85}{section.1.A.1}
+\contentsline {section}{\numberline {A.2}The Integral form of Baker-Campbell-Hausdorff}{85}{section.1.A.2}
+\contentsline {chapter}{\numberline {B}Locally convex algebras}{87}{Appendix.1.B}
+\contentsline {section}{\numberline {B.1}Locally convex algebras with entire calculus}{87}{section.1.B.1}
+\contentsline {section}{\numberline {B.2}Locally m-convex and AE-algebras}{87}{section.1.B.2}
+\contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{89}{Appendix.1.C}
+\contentsline {section}{\numberline {C.1}Particular Lie algebras}{89}{section.1.C.1}
+\contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{89}{section.1.C.2}
+\contentsline {chapter}{Bibliography}{91}{chapter*.10}
