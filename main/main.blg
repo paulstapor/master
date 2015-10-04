@@ -35,45 +35,45 @@ Warning--I didn't find a database entry for "Waldmann:nuclear:2014"
 Warning--I didn't find a database entry for "wojtynski:2000a"
 Warning--I didn't find a database entry for "mueller:2000a"
 Warning--I didn't find a database entry for "mueller:XXXXa"
-You've used 35 entries,
+You've used 37 entries,
             2314 wiz_defined-function locations,
-            706 strings with 8353 characters,
-and the built_in function-call counts, 9653 in all, are:
-= -- 1046
-> -- 295
-< -- 4
-+ -- 131
-- -- 90
-* -- 777
-:= -- 1629
-add.period$ -- 80
-call.type$ -- 35
-change.case$ -- 116
+            716 strings with 8564 characters,
+and the built_in function-call counts, 10189 in all, are:
+= -- 1098
+> -- 314
+< -- 5
++ -- 139
+- -- 96
+* -- 822
+:= -- 1719
+add.period$ -- 85
+call.type$ -- 37
+change.case$ -- 124
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 430
-empty$ -- 844
-format.name$ -- 90
-if$ -- 2053
+cite$ -- 37
+duplicate$ -- 458
+empty$ -- 893
+format.name$ -- 96
+if$ -- 2168
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 41
-newline$ -- 153
-num.names$ -- 70
-pop$ -- 129
+int.to.str$ -- 37
+missing$ -- 45
+newline$ -- 162
+num.names$ -- 74
+pop$ -- 140
 preamble$ -- 1
-purify$ -- 115
+purify$ -- 122
 quote$ -- 0
-skip$ -- 220
+skip$ -- 230
 stack$ -- 0
-substring$ -- 519
-swap$ -- 104
-text.length$ -- 4
+substring$ -- 529
+swap$ -- 112
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 118
+type$ -- 122
 warning$ -- 0
-while$ -- 98
-width$ -- 37
-write$ -- 354
+while$ -- 102
+width$ -- 39
+write$ -- 378
 (There was 1 error message)

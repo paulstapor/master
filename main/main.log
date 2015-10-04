@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.26)  3 OCT 2015 18:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.26)  4 OCT 2015 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1001,28 +1001,25 @@ ydecorations.code.tex
 \tikz@lib@dec@box=\box41
 )
 (/home/paul/texmf/tex/latex/generic/pgf/libraries/decorations/pgflibrarydecorat
-ions.pathreplacing.code.tex)) (./main.aux (./Introduction.aux) (./Chapter2.aux
-
-LaTeX Warning: Label `subsec:chap2_MathTheory' multiply defined.
-
-) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux) (./Chapter6.aux)
+ions.pathreplacing.code.tex)) (./main.aux (./Introduction.aux) (./Chapter2.aux)
+(./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux) (./Chapter6.aux)
 (./Chapter7.aux) (./appendixA.aux) (./appendixB.aux) (./appendixC.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1089,7 +1086,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \microtypecontext on input line 115.
+LaTeX Info: Redefining \microtypecontext on input line 116.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1103,7 +1100,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 115.
+Package hyperref Info: Link coloring OFF on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1113,20 +1110,20 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count188
 )
-LaTeX Info: Redefining \ref on input line 115.
-LaTeX Info: Redefining \pageref on input line 115.
-LaTeX Info: Redefining \nameref on input line 115.
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for U+wasy on input line 124.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+LaTeX Font Info:    Try loading font information for U+msa on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1134,7 +1131,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 124.
+LaTeX Font Info:    Try loading font information for U+msb on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1142,12 +1139,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 124.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 124.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 125.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
@@ -1165,7 +1162,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 124.
 
 (./Introduction.tex
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+bbm on input line 12.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 50.
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [5
@@ -1184,10 +1181,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 2.
-) [9]
+[9]
+LaTeX Font Info:    Try loading font information for U+euf on input line 175.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+) [10]
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 180.
+) [11]
 \openout2 = `Chapter3.aux'.
 
- (./Chapter3.tex [10
+
+(./Chapter3.tex [12
 
 
 
@@ -1197,51 +1206,39 @@ Package hyperref Info: bookmark level for unknown proposition defaults to 0 on
 input line 55.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 68.
-[11]
-LaTeX Font Info:    Try loading font information for U+euf on input line 154.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
-File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-
-)
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 157.
- [12] [13]
+[13] [14] [15]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 407.
-
-[14]pdfTeX warning (ext4): destination with the same identifier (name{definitio
-n.2}) has been already used, duplicate ignored
+ [16]pdfTeX warning (ext4): destination with the same identifier (name{definiti
+on.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.524 \begin{definition}
-                        [Gutt star product] [15] [16] [17] [18] [19]pdfTeX warn
+                        [Gutt star product] [17] [18] [19] [20] [21]pdfTeX warn
 ing (ext4): destination with the same identifier (name{proposition.1}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1048 \begin{proposition}
-                           [20]
+                           [22]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 1153.
- [21] [22]
+ [23] [24]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 1456.
 Package hyperref Info: bookmark level for unknown subproof defaults to 0 on inp
 ut line 1492.
- [23] [24] [25] [26]) [27]
+ [25] [26] [27] [28]) [29]
 \openout2 = `Chapter4.aux'.
 
 
-(./Chapter4.tex [28
+(./Chapter4.tex [30
 
 
 
 ]
 Chapter 4.
-[29]pdfTeX warning (ext4): destination with the same identifier (name{remark.2}
+[31]pdfTeX warning (ext4): destination with the same identifier (name{remark.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1251,14 +1248,14 @@ l.191 \begin{remark}
 <to be read again> 
                    \relax 
 l.198 \begin{proposition}
-                          [30] [31] [32] [33] [34]
+                          [32] [33] [34] [35] [36]
 
-LaTeX Warning: Reference `Def:StarProduct' on page 35 undefined on input line 8
+LaTeX Warning: Reference `Def:StarProduct' on page 37 undefined on input line 8
 00.
 
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 804.
-[35] [36] [37] [38] [39]) [40]
+[37] [38] [39] [40] [41]) [42]
 \openout2 = `Chapter5.aux'.
 
  (./Chapter5.tex
@@ -1268,7 +1265,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{proposition.1
 <to be read again> 
                    \relax 
 l.43 \begin{proposition}
-                         [41
+                         [43
 
 
 
@@ -1283,76 +1280,82 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [42]
+ [44]
 
-LaTeX Warning: Reference `Prop:LCAna:NoBetterTopology' on page 43 undefined on 
+LaTeX Warning: Reference `Prop:LCAna:NoBetterTopology' on page 45 undefined on 
 input line 256.
 
 
-LaTeX Warning: Citation `Rudin:Blue' on page 43 undefined on input line 279.
+LaTeX Warning: Citation `Rudin:Blue' on page 45 undefined on input line 279.
+
+pdfTeX warning (ext4): destination with the same identifier (name{definition.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \begin{definition}
+                        [Topological vector space]
+
+LaTeX Warning: Citation `Rudin:Blue' on page 45 undefined on input line 298.
 
 
-LaTeX Warning: Citation `Rudin:Blue' on page 43 undefined on input line 298.
+LaTeX Warning: Citation `Rudin:Blue' on page 45 undefined on input line 324.
 
-
-LaTeX Warning: Citation `Rudin:Blue' on page 43 undefined on input line 324.
-
-[43]pdfTeX warning (ext4): destination with the same identifier (name{remark.6}
+[45]pdfTeX warning (ext4): destination with the same identifier (name{remark.6}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.392 \begin{remark}
                     
 
-LaTeX Warning: Citation `BCR:AsympEsti:1981' on page 44 undefined on input line
+LaTeX Warning: Citation `BCR:AsympEsti:1981' on page 46 undefined on input line
  421.
 
 
-LaTeX Warning: Citation `GN:CIARegGroup:2012' on page 44 undefined on input lin
+LaTeX Warning: Citation `GN:CIARegGroup:2012' on page 46 undefined on input lin
 e 431.
 
-[44]
+[46]
 
-LaTeX Warning: Citation `MRZ:EntireCalculus:1962' on page 45 undefined on input
+LaTeX Warning: Citation `MRZ:EntireCalculus:1962' on page 47 undefined on input
  line 487.
 
 
-LaTeX Warning: Citation `Zelazko:EntButNotLMC:1998' on page 45 undefined on inp
+LaTeX Warning: Citation `Zelazko:EntButNotLMC:1998' on page 47 undefined on inp
 ut line 493.
 
 
-LaTeX Warning: Citation `Jarchow:LCSpaces' on page 45 undefined on input line 5
+LaTeX Warning: Citation `Jarchow:LCSpaces' on page 47 undefined on input line 5
 11.
 
 
-LaTeX Warning: Citation `Waldmann:LectureAlgDyn' on page 45 undefined on input 
+LaTeX Warning: Citation `Waldmann:LectureAlgDyn' on page 47 undefined on input 
 line 511.
 
-[45]
+[47]
 Overfull \hbox (9.40727pt too wide) in paragraph at lines 562--563
 []\T1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 V[]; [] ; V[]; W$
  []
 
-[46]
+[48]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 763.
- [47] [48]
+ [49] [50]
 
-LaTeX Warning: Reference `Prop:LCAna:Projections' on page 49 undefined on input
+LaTeX Warning: Reference `Prop:LCAna:Projections' on page 51 undefined on input
  line 1067.
 
-[49]
+[51]
 
-LaTeX Warning: Citation `Waldmann:nuclear:2014' on page 50 undefined on input l
+LaTeX Warning: Citation `Waldmann:nuclear:2014' on page 52 undefined on input l
 ine 1082.
 
-[50] [51] [52]
+[52] [53] [54]
 
-LaTeX Warning: Reference `LCAna:Lemma:InfimumArgument' on page 53 undefined on 
+LaTeX Warning: Reference `LCAna:Lemma:InfimumArgument' on page 55 undefined on 
 input line 1488.
 
 pdfTeX warning (ext4): destination with the same identifier (name{remark.3}) ha
@@ -1360,31 +1363,31 @@ s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1534 \begin{remark}
-                     [Uniform continuity] [53]
+                     [Uniform continuity] [55]
 
-LaTeX Warning: Reference `Lemma:LCAna:PreContinuity2' on page 54 undefined on i
+LaTeX Warning: Reference `Lemma:LCAna:PreContinuity2' on page 56 undefined on i
 nput line 1650.
 
-[54]
+[56]
 
-LaTeX Warning: Reference `Lemma:LCAna:PreContinuity2' on page 55 undefined on i
+LaTeX Warning: Reference `Lemma:LCAna:PreContinuity2' on page 57 undefined on i
 nput line 1707.
 
-[55] [56]
+[57] [58]
 
-LaTeX Warning: Citation `Rudin:blue' on page 57 undefined on input line 1944.
+LaTeX Warning: Citation `Rudin:blue' on page 59 undefined on input line 1944.
 
 
 Overfull \hbox (10.43463pt too wide) in paragraph at lines 1933--1947
 []\T1/cmr/m/n/10.95 One
  []
 
-[57] [58]
+[59] [60]
 Overfull \hbox (1.87595pt too wide) in paragraph at lines 2237--2237
 [] 
  []
 
-[59] [60]pdfTeX warning (ext4): destination with the same identifier (name{prop
+[61] [62]pdfTeX warning (ext4): destination with the same identifier (name{prop
 osition.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1395,22 +1398,22 @@ ed, duplicate ignored
 <to be read again> 
                    \relax 
 l.2456 \begin{definition}
-                          [61]
+                          [63]
 
-LaTeX Warning: Reference `Lemma:LCAna:RootTest' on page 62 undefined on input l
+LaTeX Warning: Reference `Lemma:LCAna:RootTest' on page 64 undefined on input l
 ine 2510.
 
 
-LaTeX Warning: Reference `Prop:LCAna:NoBetterTopology' on page 62 undefined on 
+LaTeX Warning: Reference `Prop:LCAna:NoBetterTopology' on page 64 undefined on 
 input line 2543.
 
-[62]
+[64]
 
-LaTeX Warning: Citation `wojtynski:2000a' on page 63 undefined on input line 26
+LaTeX Warning: Citation `wojtynski:2000a' on page 65 undefined on input line 26
 25.
 
 
-LaTeX Warning: Citation `mueller:2000a' on page 63 undefined on input line 2636
+LaTeX Warning: Citation `mueller:2000a' on page 65 undefined on input line 2636
 .
 
 pdfTeX warning (ext4): destination with the same identifier (name{remark.6}) ha
@@ -1420,41 +1423,41 @@ s been already used, duplicate ignored
 l.2646 \begin{remark}
                      [Another topology in $\algebra{U}(\lie{g})$]
 
-LaTeX Warning: Reference `Thm:LCAna:ContinuousRepresentations' on page 63 undef
+LaTeX Warning: Reference `Thm:LCAna:ContinuousRepresentations' on page 65 undef
 ined on input line 2659.
 
-[63]) [64]
+[65]) [66]
 \openout2 = `Chapter6.aux'.
 
  (./Chapter6.tex
 Chapter 6.
-[65
+[67
 
 
 
-] [66]
+] [68]
 
-LaTeX Warning: Reference `LCAna:Prop:Continuity1' on page 67 undefined on input
+LaTeX Warning: Reference `LCAna:Prop:Continuity1' on page 69 undefined on input
  line 244.
 
 
-LaTeX Warning: Reference `Nilpot:Thm:ProjLimitConti' on page 67 undefined on in
+LaTeX Warning: Reference `Nilpot:Thm:ProjLimitConti' on page 69 undefined on in
 put line 309.
 
-[67] [68]
+[69] [70]
 
-LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 69 undefined
+LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 71 undefined
  on input line 473.
 
 
-LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 69 undefined
+LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 71 undefined
  on input line 497.
 
 
-LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 69 undefined
+LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 71 undefined
  on input line 508.
 
-[69]pdfTeX warning (ext4): destination with the same identifier (name{propositi
+[71]pdfTeX warning (ext4): destination with the same identifier (name{propositi
 on.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1464,13 +1467,13 @@ ifier (name{proposition.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.625 \begin{proposition}
-                         [Bimodules in $\Sym_R^{\bullet}(\lie{g})$] [70]pdfTeX 
+                         [Bimodules in $\Sym_R^{\bullet}(\lie{g})$] [72]pdfTeX 
 warning (ext4): destination with the same identifier (name{remark.2}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.708 \begin{remark}
-                    [Possible extensions] [71]pdfTeX warning (ext4): destinatio
+                    [Possible extensions] [73]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{proposition.1}) has been already used, duplica
 te ignored
 <to be read again> 
@@ -1486,9 +1489,9 @@ Overfull \hbox (12.3277pt too wide) in paragraph at lines 1008--1008
 [] 
  []
 
-[72] [73]
+[74] [75]
 
-LaTeX Warning: Citation `mueller:XXXXa' on page 74 undefined on input line 1055
+LaTeX Warning: Citation `mueller:XXXXa' on page 76 undefined on input line 1055
 .
 
 pdfTeX warning (ext4): destination with the same identifier (name{definition.1}
@@ -1498,7 +1501,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{definition.1}
 l.1058 \begin{definition}
                          
 
-LaTeX Warning: Citation `wojtynski:2000a' on page 74 undefined on input line 11
+LaTeX Warning: Citation `wojtynski:2000a' on page 76 undefined on input line 11
 40.
 
 
@@ -1514,7 +1517,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{definition.2}
 <to be read again> 
                    \relax 
 l.1168 \begin{definition}
-                         [Rapidly increasing sequences] [74]pdfTeX warning (ext
+                         [Rapidly increasing sequences] [76]pdfTeX warning (ext
 4): destination with the same identifier (name{remark.3}) has been already used
 , duplicate ignored
 <to be read again> 
@@ -1525,7 +1528,7 @@ r (name{proposition.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1297 \begin{proposition}
-                           [75] [76]
+                           [77] [78]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input 
 line 1469.
 
@@ -1533,12 +1536,12 @@ Overfull \hbox (5.40721pt too wide) in paragraph at lines 1590--1590
 [] 
  []
 
-[77]) [78]
+[79]) [80]
 \openout2 = `Chapter7.aux'.
 
  (./Chapter7.tex
 Chapter 7.
-[79
+[81
 
 
 
@@ -1552,51 +1555,51 @@ l.261 \begin{remark}
 <to be read again> 
                    \relax 
 l.276 \begin{proposition}
-                          [80]pdfTeX warning (ext4): destination with the same 
+                          [82]pdfTeX warning (ext4): destination with the same 
 identifier (name{proposition.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.365 \begin{proposition}
-                         ) [81] [82
+                         ) [83] [84
 
 
-] [83
+] [85
 
-] [84]
+] [86]
 \openout2 = `appendixA.aux'.
 
  (./appendixA.tex
 Appendix A.
-) [85
+) [87
 
 
 ]
 \openout2 = `appendixB.aux'.
 
- (./appendixB.tex [86
+ (./appendixB.tex [88
 
 
 
 ]
 Appendix B.
-) [87]
+) [89]
 \openout2 = `appendixC.aux'.
 
- (./appendixC.tex [88
+ (./appendixC.tex [90
 
 
 
 ]
 Appendix C.
-) [89] (./main.bbl (./main.brf)
+) [91] (./main.bbl (./main.brf)
 \tf@brf=\write6
 \openout6 = `main.brf'.
 
- [90
+ [92
 
 
-]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 131.
+] [93]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 142.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -1607,55 +1610,47 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 5726) in paragraph at lines 131--131
+Underfull \hbox (badness 5726) in paragraph at lines 142--142
 []\T1/cmr/m/sc/9 Neumaier, N.:  \T1/cmr/m/it/9 Stern-pro-dukte auf Kotan-gen-te
 n-bün-deln und Ordnungs-Vorschriften\T1/cmr/m/n/9 .  mas-
  []
 
 
-Underfull \hbox (badness 7722) in paragraph at lines 131--131
+Underfull \hbox (badness 7722) in paragraph at lines 142--142
 \T1/cmr/m/n/9 ter the-sis, Fakultät für Physik, Albert-Ludwigs-Universität, Fre
 iburg, 1998.  Avail-able at
  []
 
-[91])
+)
 \tf@thm=\write7
 \openout7 = `main.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
- [92]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+ [94]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
  (./main.aux (./Introduction.aux) (./Chapter2.aux) (./Chapter3.aux)
 (./Chapter4.aux) (./Chapter5.aux) (./Chapter6.aux) (./Chapter7.aux)
 (./appendixA.aux) (./appendixB.aux) (./appendixC.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FED6465F6EC687B3BAEF51E2DC0333D2;5054.
+Package rerunfilecheck Info: File `main.brf' has not changed.
+(rerunfilecheck)             Checksum: CA7F04B2BB295047798843CB9F4E72AC;3199.
 
-
-Package rerunfilecheck Warning: File `main.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `main.brf':
-(rerunfilecheck)             Before: 45C4E4404A033B05D1D5279D6970E823;3082
-(rerunfilecheck)             After:  DDEB7B3AA420809F0EDE514792B3ADB1;3082.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 252.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
  ) 
 Here is how much of TeX's memory you used:
- 21972 strings out of 494935
- 380519 string characters out of 6178122
- 506369 words of memory out of 5000000
- 24151 multiletter control sequences out of 15000+600000
+ 21999 strings out of 494935
+ 380902 string characters out of 6178122
+ 506436 words of memory out of 5000000
+ 24174 multiletter control sequences out of 15000+600000
  37119 words of font info for 107 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,16n,73p,2759b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,16n,73p,449b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/pa
 ul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </home/paul/.texmf-va
 r/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk> </home/paul/.texmf-var/fonts/pk/l
@@ -1692,10 +1687,10 @@ fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/stmaryrd/stmary10.pfb>
-Output written on main.pdf (92 pages, 733657 bytes).
+Output written on main.pdf (94 pages, 747322 bytes).
 PDF statistics:
- 2267 PDF objects out of 2487 (max. 8388607)
- 1423 compressed objects within 15 object streams
- 484 named destinations out of 1000 (max. 500000)
+ 2285 PDF objects out of 2487 (max. 8388607)
+ 1436 compressed objects within 15 object streams
+ 488 named destinations out of 1000 (max. 500000)
  18965 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -1,136 +1,137 @@
-\contentsline {proposition}{{Proposition}{3.1.{1}}{}}{11}{proposition.1}
-\contentsline {proof}{{Proof}{I}{}}{11}{proof.1}
-\contentsline {definition}{{Definition}{3.1.{2}}{Kirillov-Kostant-Souriau bracket}}{12}{definition.2}
-\contentsline {proposition}{{Proposition}{3.1.{3}}{}}{13}{proposition.3}
-\contentsline {proof}{{Proof}{II}{}}{13}{proof.2}
-\contentsline {theorem}{{Theorem}{3.2.{1}}{Poincar\'e-Birkhoff-Witt theorem}}{14}{thm.3.2.1}
-\contentsline {definition}{{Definition}{3.2.{2}}{Gutt star product}}{15}{definition.2}
-\contentsline {proposition}{{Proposition}{3.3.{1}}{}}{20}{proposition.1}
-\contentsline {proof}{{Proof}{III}{}}{20}{proof.3}
-\contentsline {remark}{{Remark}{3.3.{2}}{Alternative Proof}}{21}{remark.2}
-\contentsline {remark}{{Remark}{3.4.{1}}{}}{21}{remark.1}
-\contentsline {proposition}{{Proposition}{3.4.{2}}{}}{22}{proposition.2}
-\contentsline {proof}{{Proof}{IV}{}}{22}{proof.4}
-\contentsline {lemma}{{Lemma}{3.4.{3}}{}}{23}{lemma.3.4.3}
-\contentsline {proof}{{Proof}{V}{}}{23}{proof.5}
-\contentsline {lemma}{{Lemma}{3.4.{4}}{}}{23}{lemma.3.4.4}
-\contentsline {subproof}{{Proof}{I}{}}{23}{subproof.1}
-\contentsline {lemma}{{Lemma}{3.4.{5}}{}}{24}{lemma.3.4.5}
-\contentsline {subproof}{{Proof}{II}{}}{24}{subproof.2}
-\contentsline {theorem}{{Theorem}{3.4.{6}}{}}{27}{thm.3.4.6}
-\contentsline {lemma}{{Lemma}{4.1.{1}}{}}{29}{lemma.4.1.1}
-\contentsline {proof}{{Proof}{VI}{}}{29}{proof.6}
-\contentsline {remark}{{Remark}{4.1.{2}}{}}{30}{remark.2}
-\contentsline {proposition}{{Proposition}{4.1.{3}}{}}{30}{proposition.3}
-\contentsline {proof}{{Proof}{VII}{}}{30}{proof.7}
-\contentsline {remark}{{Remark}{4.1.{4}}{}}{31}{remark.4}
-\contentsline {proposition}{{Proposition}{4.1.{5}}{}}{32}{proposition.5}
-\contentsline {proof}{{Proof}{VIII}{}}{32}{proof.8}
-\contentsline {remark}{{Remark}{4.1.{6}}{}}{32}{remark.6}
-\contentsline {definition}{{Definition}{4.1.{7}}{G-Index}}{32}{definition.7}
-\contentsline {definition}{{Definition}{4.1.{8}}{G-Factorial}}{33}{definition.8}
-\contentsline {lemma}{{Lemma}{4.1.{9}}{}}{33}{lemma.4.1.9}
-\contentsline {proof}{{Proof}{IX}{}}{33}{proof.9}
-\contentsline {definition}{{Definition}{4.1.{10}}{}}{34}{definition.10}
-\contentsline {proposition}{{Proposition}{4.1.{11}}{}}{34}{proposition.11}
-\contentsline {proof}{{Proof}{X}{}}{35}{proof.10}
-\contentsline {corollary}{{Corollary}{4.2.{1}}{}}{35}{corollary.1}
-\contentsline {proof}{{Proof}{XI}{}}{35}{proof.11}
-\contentsline {corollary}{{Corollary}{4.2.{2}}{}}{37}{corollary.2}
-\contentsline {proof}{{Proof}{XII}{}}{37}{proof.12}
-\contentsline {proposition}{{Proposition}{5.1.{1}}{}}{41}{proposition.1}
-\contentsline {proof}{{Proof}{XIII}{}}{41}{proof.13}
-\contentsline {lemma}{{Lemma}{5.1.{2}}{}}{41}{lemma.5.1.2}
-\contentsline {subproof}{{Proof}{III}{}}{42}{subproof.3}
-\contentsline {remark}{{Remark}{5.1.{3}}{}}{42}{remark.3}
-\contentsline {definition}{{Definition}{5.2.{1}}{Topological vector space}}{43}{definition.1}
-\contentsline {theorem}{{Theorem}{5.2.{2}}{}}{43}{thm.5.2.2}
-\contentsline {proof}{{Proof}{XIV}{}}{43}{proof.14}
-\contentsline {definition}{{Definition}{5.2.{3}}{Locally convex space}}{43}{definition.3}
-\contentsline {definition}{{Definition}{5.2.{4}}{Locally convex algebra}}{44}{definition.4}
-\contentsline {definition}{{Definition}{5.2.{5}}{Asymptotic estimate algebra}}{44}{definition.5}
-\contentsline {remark}{{Remark}{5.2.{6}}{}}{44}{remark.6}
-\contentsline {remark}{{Remark}{5.2.{7}}{The notion ''asymptotic estimate''}}{44}{remark.7}
-\contentsline {proposition}{{Proposition}{5.2.{8}}{Entire calculus}}{45}{proposition.8}
-\contentsline {proof}{{Proof}{XV}{}}{45}{proof.15}
-\contentsline {remark}{{Remark}{5.2.{9}}{Entire Calculus, AE and LMC algebras}}{45}{remark.9}
-\contentsline {lemma}{{Lemma}{5.2.{10}}{Infimum argument for the projective tensor product}}{46}{lemma.5.2.10}
-\contentsline {proof}{{Proof}{XVI}{}}{46}{proof.16}
-\contentsline {lemma}{{Lemma}{5.2.{11}}{}}{47}{lemma.5.2.11}
-\contentsline {proof}{{Proof}{XVII}{}}{47}{proof.17}
-\contentsline {example}{{Example}{5.2.{12}}{}}{47}{example.12}
-\contentsline {definition}{{Definition}{5.2.{13}}{R-topology}}{48}{definition.13}
-\contentsline {lemma}{{Lemma}{5.2.{14}}{The $R$-topology}}{48}{lemma.5.2.14}
-\contentsline {proof}{{Proof}{XVIII}{}}{49}{proof.18}
-\contentsline {definition}{{Definition}{5.2.{15}}{}}{50}{definition.15}
-\contentsline {proposition}{{Proposition}{5.2.{16}}{Schauder bases}}{50}{proposition.16}
-\contentsline {proposition}{{Proposition}{5.2.{17}}{Nuclearity}}{50}{proposition.17}
-\contentsline {lemma}{{Lemma}{5.3.{1}}{}}{51}{lemma.5.3.1}
-\contentsline {proof}{{Proof}{XIX}{}}{52}{proof.19}
-\contentsline {theorem}{{Theorem}{5.3.{2}}{Continuity of the star product}}{52}{thm.5.3.2}
-\contentsline {proof}{{Proof}{XX}{}}{52}{proof.20}
-\contentsline {remark}{{Remark}{5.3.{3}}{Uniform continuity}}{53}{remark.3}
-\contentsline {lemma}{{Lemma}{5.3.{4}}{}}{54}{lemma.5.3.4}
-\contentsline {proof}{{Proof}{XXI}{}}{54}{proof.21}
-\contentsline {proof}{{Proof}{XXII}{Alternative Proof of Theorem~\ref {Thm:LCAna:Continuity1}}}{55}{proof.22}
-\contentsline {example}{{Example}{5.3.{5}}{A counter-example}}{55}{example.5}
-\contentsline {proposition}{{Proposition}{5.3.{6}}{}}{56}{proposition.6}
-\contentsline {proof}{{Proof}{XXIII}{}}{56}{proof.23}
-\contentsline {proposition}{{Proposition}{5.3.{7}}{Dependence on $z$}}{56}{proposition.7}
-\contentsline {proof}{{Proof}{XXIV}{}}{56}{proof.24}
-\contentsline {remark}{{Remark}{5.3.{8}}{(Weakly) holomorphic maps with values in locally convex spaces}}{57}{remark.8}
-\contentsline {proposition}{{Proposition}{5.3.{9}}{Universal property}}{58}{proposition.9}
-\contentsline {proof}{{Proof}{XXV}{}}{58}{proof.25}
-\contentsline {example}{{Example}{5.3.{10}}{}}{58}{example.10}
-\contentsline {corollary}{{Corollary}{5.3.{11}}{Continuous Representations}}{58}{corollary.11}
-\contentsline {proof}{{Proof}{XXVI}{}}{58}{proof.26}
-\contentsline {remark}{{Remark}{5.3.{12}}{}}{58}{remark.12}
-\contentsline {lemma}{{Lemma}{5.3.{13}}{}}{59}{lemma.5.3.13}
-\contentsline {proof}{{Proof}{XXVII}{}}{59}{proof.27}
-\contentsline {proposition}{{Proposition}{5.3.{14}}{Functoriality}}{61}{proposition.14}
-\contentsline {proof}{{Proof}{XXVIII}{}}{61}{proof.28}
-\contentsline {proposition}{{Proposition}{5.4.{1}}{Optimality of the $R$-topology}}{61}{proposition.1}
-\contentsline {definition}{{Definition}{5.4.{2}}{}}{62}{definition.2}
-\contentsline {lemma}{{Lemma}{5.4.{3}}{Root test in locally convex spaces}}{62}{lemma.5.4.3}
-\contentsline {proof}{{Proof}{XXIX}{}}{62}{proof.29}
-\contentsline {lemma}{{Lemma}{5.4.{4}}{}}{62}{lemma.5.4.4}
-\contentsline {proof}{{Proof}{XXX}{}}{62}{proof.30}
-\contentsline {lemma}{{Lemma}{5.4.{5}}{}}{63}{lemma.5.4.5}
-\contentsline {proof}{{Proof}{XXXI}{}}{63}{proof.31}
-\contentsline {remark}{{Remark}{5.4.{6}}{Another topology in $\algebra {U}(\lie {g})$}}{63}{remark.6}
-\contentsline {theorem}{{Theorem}{6.1.{1}}{}}{66}{thm.6.1.1}
-\contentsline {proof}{{Proof}{XXXII}{}}{66}{proof.32}
-\contentsline {lemma}{{Lemma}{6.1.{2}}{}}{67}{lemma.6.1.2}
-\contentsline {proof}{{Proof}{XXXIII}{}}{67}{proof.33}
-\contentsline {proof}{{Proof}{XXXIV}{Alternative Proof of Theorem~\ref {Nilpot:Thm:ProjLimitConti}}}{68}{proof.34}
-\contentsline {corollary}{{Corollary}{6.1.{3}}{}}{68}{corollary.3}
-\contentsline {proof}{{Proof}{XXXV}{}}{68}{proof.35}
-\contentsline {proposition}{{Proposition}{6.1.{4}}{universal property}}{69}{proposition.4}
-\contentsline {proof}{{Proof}{XXXVI}{}}{69}{proof.36}
-\contentsline {corollary}{{Corollary}{6.1.{5}}{Continuous Representations}}{69}{corollary.5}
-\contentsline {lemma}{{Lemma}{6.1.{6}}{}}{69}{lemma.6.1.6}
-\contentsline {proof}{{Proof}{XXXVII}{}}{69}{proof.37}
-\contentsline {proposition}{{Proposition}{6.1.{7}}{}}{70}{proposition.7}
-\contentsline {proof}{{Proof}{XXXVIII}{}}{70}{proof.38}
-\contentsline {proposition}{{Proposition}{6.2.{1}}{Bimodules in $\Sym _R^{\bullet }(\lie {g})$}}{70}{proposition.1}
-\contentsline {proof}{{Proof}{XXXIX}{}}{70}{proof.39}
-\contentsline {remark}{{Remark}{6.2.{2}}{Possible extensions}}{71}{remark.2}
-\contentsline {example}{{Example}{6.2.{3}}{}}{71}{example.3}
-\contentsline {proposition}{{Proposition}{6.3.{1}}{}}{72}{proposition.1}
-\contentsline {proof}{{Proof}{XL}{}}{72}{proof.40}
-\contentsline {proposition}{{Proposition}{6.3.{2}}{}}{72}{proposition.2}
-\contentsline {proof}{{Proof}{XLI}{}}{72}{proof.41}
-\contentsline {definition}{{Definition}{6.4.{1}}{}}{74}{definition.1}
-\contentsline {definition}{{Definition}{6.4.{2}}{Rapidly increasing sequences}}{75}{definition.2}
-\contentsline {remark}{{Remark}{6.4.{3}}{}}{75}{remark.3}
-\contentsline {lemma}{{Lemma}{6.4.{4}}{}}{75}{lemma.6.4.4}
-\contentsline {proposition}{{Proposition}{6.4.{5}}{}}{76}{proposition.5}
-\contentsline {proof}{{Proof}{XLII}{}}{76}{proof.42}
-\contentsline {claim}{{Claim}{6.4.{6}}{}}{77}{claim.6}
-\contentsline {subproof}{{Proof}{IV}{}}{77}{subproof.4}
-\contentsline {lemma}{{Lemma}{7.1.{1}}{}}{79}{lemma.7.1.1}
-\contentsline {proof}{{Proof}{XLIII}{}}{79}{proof.43}
-\contentsline {remark}{{Remark}{7.1.{2}}{}}{80}{remark.2}
-\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{80}{proposition.3}
-\contentsline {proof}{{Proof}{XLIV}{}}{81}{proof.44}
-\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{81}{proposition.4}
+\contentsline {definition}{{Definition}{2.1.{1}}{Poisson Manifold}}{11}{definition.1}
+\contentsline {proposition}{{Proposition}{3.1.{1}}{}}{13}{proposition.1}
+\contentsline {proof}{{Proof}{I}{}}{13}{proof.1}
+\contentsline {definition}{{Definition}{3.1.{2}}{Kirillov-Kostant-Souriau bracket}}{14}{definition.2}
+\contentsline {proposition}{{Proposition}{3.1.{3}}{}}{15}{proposition.3}
+\contentsline {proof}{{Proof}{II}{}}{15}{proof.2}
+\contentsline {theorem}{{Theorem}{3.2.{1}}{Poincar\'e-Birkhoff-Witt theorem}}{16}{thm.3.2.1}
+\contentsline {definition}{{Definition}{3.2.{2}}{Gutt star product}}{17}{definition.2}
+\contentsline {proposition}{{Proposition}{3.3.{1}}{}}{22}{proposition.1}
+\contentsline {proof}{{Proof}{III}{}}{22}{proof.3}
+\contentsline {remark}{{Remark}{3.3.{2}}{Alternative Proof}}{23}{remark.2}
+\contentsline {remark}{{Remark}{3.4.{1}}{}}{23}{remark.1}
+\contentsline {proposition}{{Proposition}{3.4.{2}}{}}{24}{proposition.2}
+\contentsline {proof}{{Proof}{IV}{}}{24}{proof.4}
+\contentsline {lemma}{{Lemma}{3.4.{3}}{}}{25}{lemma.3.4.3}
+\contentsline {proof}{{Proof}{V}{}}{25}{proof.5}
+\contentsline {lemma}{{Lemma}{3.4.{4}}{}}{25}{lemma.3.4.4}
+\contentsline {subproof}{{Proof}{I}{}}{25}{subproof.1}
+\contentsline {lemma}{{Lemma}{3.4.{5}}{}}{26}{lemma.3.4.5}
+\contentsline {subproof}{{Proof}{II}{}}{26}{subproof.2}
+\contentsline {theorem}{{Theorem}{3.4.{6}}{}}{29}{thm.3.4.6}
+\contentsline {lemma}{{Lemma}{4.1.{1}}{}}{31}{lemma.4.1.1}
+\contentsline {proof}{{Proof}{VI}{}}{31}{proof.6}
+\contentsline {remark}{{Remark}{4.1.{2}}{}}{32}{remark.2}
+\contentsline {proposition}{{Proposition}{4.1.{3}}{}}{32}{proposition.3}
+\contentsline {proof}{{Proof}{VII}{}}{32}{proof.7}
+\contentsline {remark}{{Remark}{4.1.{4}}{}}{33}{remark.4}
+\contentsline {proposition}{{Proposition}{4.1.{5}}{}}{34}{proposition.5}
+\contentsline {proof}{{Proof}{VIII}{}}{34}{proof.8}
+\contentsline {remark}{{Remark}{4.1.{6}}{}}{34}{remark.6}
+\contentsline {definition}{{Definition}{4.1.{7}}{G-Index}}{34}{definition.7}
+\contentsline {definition}{{Definition}{4.1.{8}}{G-Factorial}}{35}{definition.8}
+\contentsline {lemma}{{Lemma}{4.1.{9}}{}}{35}{lemma.4.1.9}
+\contentsline {proof}{{Proof}{IX}{}}{35}{proof.9}
+\contentsline {definition}{{Definition}{4.1.{10}}{}}{36}{definition.10}
+\contentsline {proposition}{{Proposition}{4.1.{11}}{}}{36}{proposition.11}
+\contentsline {proof}{{Proof}{X}{}}{37}{proof.10}
+\contentsline {corollary}{{Corollary}{4.2.{1}}{}}{37}{corollary.1}
+\contentsline {proof}{{Proof}{XI}{}}{37}{proof.11}
+\contentsline {corollary}{{Corollary}{4.2.{2}}{}}{39}{corollary.2}
+\contentsline {proof}{{Proof}{XII}{}}{39}{proof.12}
+\contentsline {proposition}{{Proposition}{5.1.{1}}{}}{43}{proposition.1}
+\contentsline {proof}{{Proof}{XIII}{}}{43}{proof.13}
+\contentsline {lemma}{{Lemma}{5.1.{2}}{}}{43}{lemma.5.1.2}
+\contentsline {subproof}{{Proof}{III}{}}{44}{subproof.3}
+\contentsline {remark}{{Remark}{5.1.{3}}{}}{44}{remark.3}
+\contentsline {definition}{{Definition}{5.2.{1}}{Topological vector space}}{45}{definition.1}
+\contentsline {theorem}{{Theorem}{5.2.{2}}{}}{45}{thm.5.2.2}
+\contentsline {proof}{{Proof}{XIV}{}}{45}{proof.14}
+\contentsline {definition}{{Definition}{5.2.{3}}{Locally convex space}}{45}{definition.3}
+\contentsline {definition}{{Definition}{5.2.{4}}{Locally convex algebra}}{46}{definition.4}
+\contentsline {definition}{{Definition}{5.2.{5}}{Asymptotic estimate algebra}}{46}{definition.5}
+\contentsline {remark}{{Remark}{5.2.{6}}{}}{46}{remark.6}
+\contentsline {remark}{{Remark}{5.2.{7}}{The notion ''asymptotic estimate''}}{46}{remark.7}
+\contentsline {proposition}{{Proposition}{5.2.{8}}{Entire calculus}}{47}{proposition.8}
+\contentsline {proof}{{Proof}{XV}{}}{47}{proof.15}
+\contentsline {remark}{{Remark}{5.2.{9}}{Entire Calculus, AE and LMC algebras}}{47}{remark.9}
+\contentsline {lemma}{{Lemma}{5.2.{10}}{Infimum argument for the projective tensor product}}{48}{lemma.5.2.10}
+\contentsline {proof}{{Proof}{XVI}{}}{48}{proof.16}
+\contentsline {lemma}{{Lemma}{5.2.{11}}{}}{49}{lemma.5.2.11}
+\contentsline {proof}{{Proof}{XVII}{}}{49}{proof.17}
+\contentsline {example}{{Example}{5.2.{12}}{}}{49}{example.12}
+\contentsline {definition}{{Definition}{5.2.{13}}{R-topology}}{50}{definition.13}
+\contentsline {lemma}{{Lemma}{5.2.{14}}{The $R$-topology}}{50}{lemma.5.2.14}
+\contentsline {proof}{{Proof}{XVIII}{}}{51}{proof.18}
+\contentsline {definition}{{Definition}{5.2.{15}}{}}{52}{definition.15}
+\contentsline {proposition}{{Proposition}{5.2.{16}}{Schauder bases}}{52}{proposition.16}
+\contentsline {proposition}{{Proposition}{5.2.{17}}{Nuclearity}}{52}{proposition.17}
+\contentsline {lemma}{{Lemma}{5.3.{1}}{}}{53}{lemma.5.3.1}
+\contentsline {proof}{{Proof}{XIX}{}}{54}{proof.19}
+\contentsline {theorem}{{Theorem}{5.3.{2}}{Continuity of the star product}}{54}{thm.5.3.2}
+\contentsline {proof}{{Proof}{XX}{}}{54}{proof.20}
+\contentsline {remark}{{Remark}{5.3.{3}}{Uniform continuity}}{55}{remark.3}
+\contentsline {lemma}{{Lemma}{5.3.{4}}{}}{56}{lemma.5.3.4}
+\contentsline {proof}{{Proof}{XXI}{}}{56}{proof.21}
+\contentsline {proof}{{Proof}{XXII}{Alternative Proof of Theorem~\ref {Thm:LCAna:Continuity1}}}{57}{proof.22}
+\contentsline {example}{{Example}{5.3.{5}}{A counter-example}}{57}{example.5}
+\contentsline {proposition}{{Proposition}{5.3.{6}}{}}{58}{proposition.6}
+\contentsline {proof}{{Proof}{XXIII}{}}{58}{proof.23}
+\contentsline {proposition}{{Proposition}{5.3.{7}}{Dependence on $z$}}{58}{proposition.7}
+\contentsline {proof}{{Proof}{XXIV}{}}{58}{proof.24}
+\contentsline {remark}{{Remark}{5.3.{8}}{(Weakly) holomorphic maps with values in locally convex spaces}}{59}{remark.8}
+\contentsline {proposition}{{Proposition}{5.3.{9}}{Universal property}}{60}{proposition.9}
+\contentsline {proof}{{Proof}{XXV}{}}{60}{proof.25}
+\contentsline {example}{{Example}{5.3.{10}}{}}{60}{example.10}
+\contentsline {corollary}{{Corollary}{5.3.{11}}{Continuous Representations}}{60}{corollary.11}
+\contentsline {proof}{{Proof}{XXVI}{}}{60}{proof.26}
+\contentsline {remark}{{Remark}{5.3.{12}}{}}{60}{remark.12}
+\contentsline {lemma}{{Lemma}{5.3.{13}}{}}{61}{lemma.5.3.13}
+\contentsline {proof}{{Proof}{XXVII}{}}{61}{proof.27}
+\contentsline {proposition}{{Proposition}{5.3.{14}}{Functoriality}}{63}{proposition.14}
+\contentsline {proof}{{Proof}{XXVIII}{}}{63}{proof.28}
+\contentsline {proposition}{{Proposition}{5.4.{1}}{Optimality of the $R$-topology}}{63}{proposition.1}
+\contentsline {definition}{{Definition}{5.4.{2}}{}}{64}{definition.2}
+\contentsline {lemma}{{Lemma}{5.4.{3}}{Root test in locally convex spaces}}{64}{lemma.5.4.3}
+\contentsline {proof}{{Proof}{XXIX}{}}{64}{proof.29}
+\contentsline {lemma}{{Lemma}{5.4.{4}}{}}{64}{lemma.5.4.4}
+\contentsline {proof}{{Proof}{XXX}{}}{64}{proof.30}
+\contentsline {lemma}{{Lemma}{5.4.{5}}{}}{65}{lemma.5.4.5}
+\contentsline {proof}{{Proof}{XXXI}{}}{65}{proof.31}
+\contentsline {remark}{{Remark}{5.4.{6}}{Another topology in $\algebra {U}(\lie {g})$}}{65}{remark.6}
+\contentsline {theorem}{{Theorem}{6.1.{1}}{}}{68}{thm.6.1.1}
+\contentsline {proof}{{Proof}{XXXII}{}}{68}{proof.32}
+\contentsline {lemma}{{Lemma}{6.1.{2}}{}}{69}{lemma.6.1.2}
+\contentsline {proof}{{Proof}{XXXIII}{}}{69}{proof.33}
+\contentsline {proof}{{Proof}{XXXIV}{Alternative Proof of Theorem~\ref {Nilpot:Thm:ProjLimitConti}}}{70}{proof.34}
+\contentsline {corollary}{{Corollary}{6.1.{3}}{}}{70}{corollary.3}
+\contentsline {proof}{{Proof}{XXXV}{}}{70}{proof.35}
+\contentsline {proposition}{{Proposition}{6.1.{4}}{universal property}}{71}{proposition.4}
+\contentsline {proof}{{Proof}{XXXVI}{}}{71}{proof.36}
+\contentsline {corollary}{{Corollary}{6.1.{5}}{Continuous Representations}}{71}{corollary.5}
+\contentsline {lemma}{{Lemma}{6.1.{6}}{}}{71}{lemma.6.1.6}
+\contentsline {proof}{{Proof}{XXXVII}{}}{71}{proof.37}
+\contentsline {proposition}{{Proposition}{6.1.{7}}{}}{72}{proposition.7}
+\contentsline {proof}{{Proof}{XXXVIII}{}}{72}{proof.38}
+\contentsline {proposition}{{Proposition}{6.2.{1}}{Bimodules in $\Sym _R^{\bullet }(\lie {g})$}}{72}{proposition.1}
+\contentsline {proof}{{Proof}{XXXIX}{}}{72}{proof.39}
+\contentsline {remark}{{Remark}{6.2.{2}}{Possible extensions}}{73}{remark.2}
+\contentsline {example}{{Example}{6.2.{3}}{}}{73}{example.3}
+\contentsline {proposition}{{Proposition}{6.3.{1}}{}}{74}{proposition.1}
+\contentsline {proof}{{Proof}{XL}{}}{74}{proof.40}
+\contentsline {proposition}{{Proposition}{6.3.{2}}{}}{74}{proposition.2}
+\contentsline {proof}{{Proof}{XLI}{}}{74}{proof.41}
+\contentsline {definition}{{Definition}{6.4.{1}}{}}{76}{definition.1}
+\contentsline {definition}{{Definition}{6.4.{2}}{Rapidly increasing sequences}}{77}{definition.2}
+\contentsline {remark}{{Remark}{6.4.{3}}{}}{77}{remark.3}
+\contentsline {lemma}{{Lemma}{6.4.{4}}{}}{77}{lemma.6.4.4}
+\contentsline {proposition}{{Proposition}{6.4.{5}}{}}{78}{proposition.5}
+\contentsline {proof}{{Proof}{XLII}{}}{78}{proof.42}
+\contentsline {claim}{{Claim}{6.4.{6}}{}}{79}{claim.6}
+\contentsline {subproof}{{Proof}{IV}{}}{79}{subproof.4}
+\contentsline {lemma}{{Lemma}{7.1.{1}}{}}{81}{lemma.7.1.1}
+\contentsline {proof}{{Proof}{XLIII}{}}{81}{proof.43}
+\contentsline {remark}{{Remark}{7.1.{2}}{}}{82}{remark.2}
+\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{82}{proposition.3}
+\contentsline {proof}{{Proof}{XLIV}{}}{83}{proof.44}
+\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{83}{proposition.4}

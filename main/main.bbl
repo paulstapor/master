@@ -11,6 +11,11 @@
 \newblock \emph{Springer Monographs in Mathematics}.
 \newblock Springer-Verlag, 2014.
 
+\bibitem {arnold:1989a}
+\textsc{Arno{l'd}, V.~I.: }\newblock \emph{Mathematical Methods of Classical
+  Mechanics}, vol.~60 in \emph{Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, Berlin, Heidelberg, New York, 2. edition, 1989.
+
 \bibitem {baker:1905a}
 \textsc{Baker, H.: }\newblock \emph{Alternants and Continuous Groups}.
 \newblock Proc. Lond. Math. Soc.  \textbf{3} (1905), 24--47.
@@ -116,6 +121,12 @@
 \bibitem {majid:1995a}
 \textsc{Majid, S.: }\newblock \emph{Foundations of Quantum Group Theory}.
 \newblock Cambridge University Press, 1995.
+
+\bibitem {marsden.ratiu:1999a}
+\textsc{Marsden, J.~E., Ratiu, T.~S.: }\newblock \emph{Introduction to
+  Mechanics and Symmetry}.
+\newblock \emph{Texts in applied mathematics} no. \textbf{17}.
+\newblock Springer-Verlag, New York, Heidelberg, 1999.
 
 \bibitem {mitiagin.rolewicz.zelazko:1962a}
 \textsc{Mitiagin, B.~S., Rolewicz, S., {\.Z}elazko, W.: }\newblock \emph{Entire
