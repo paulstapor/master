@@ -6,11 +6,6 @@ A level-1 auxiliary file: Chapter2.aux
 A level-1 auxiliary file: Chapter3.aux
 A level-1 auxiliary file: Chapter4.aux
 A level-1 auxiliary file: Chapter5.aux
-Case mismatch error between cite keys Rudin:blue and Rudin:Blue
----line 141 of file Chapter5.aux
- : \citation{Rudin:blue
- :                     }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: Chapter6.aux
 A level-1 auxiliary file: Chapter7.aux
 A level-1 auxiliary file: appendixA.aux
@@ -23,57 +18,49 @@ Database file #3: ../../bibfiles/bib/dqthesis.bib
 Database file #4: ../../bibfiles/bib/preprints.bib
 Database file #5: ../../bibfiles/bib/misc.bib
 Database file #6: ../../bibfiles/bib/script.bib
-Warning--I didn't find a database entry for "Rudin:Blue"
-Warning--I didn't find a database entry for "BCR:AsympEsti:1981"
-Warning--I didn't find a database entry for "GN:CIARegGroup:2012"
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "MRZ:EntireCalculus:1962"
-Warning--I didn't find a database entry for "Zelazko:EntButNotLMC:1998"
-Warning--I didn't find a database entry for "Jarchow:LCSpaces"
-Warning--I didn't find a database entry for "Waldmann:LectureAlgDyn"
-Warning--I didn't find a database entry for "Waldmann:nuclear:2014"
+Warning--I didn't find a database entry for "Rudin:blue"
 Warning--I didn't find a database entry for "wojtynski:2000a"
 Warning--I didn't find a database entry for "mueller:2000a"
 Warning--I didn't find a database entry for "mueller:XXXXa"
-You've used 37 entries,
+You've used 55 entries,
             2314 wiz_defined-function locations,
-            716 strings with 8564 characters,
-and the built_in function-call counts, 10189 in all, are:
-= -- 1098
-> -- 314
-< -- 5
-+ -- 139
-- -- 96
-* -- 822
-:= -- 1719
-add.period$ -- 85
-call.type$ -- 37
-change.case$ -- 124
+            795 strings with 10389 characters,
+and the built_in function-call counts, 15210 in all, are:
+= -- 1630
+> -- 480
+< -- 7
++ -- 210
+- -- 148
+* -- 1223
+:= -- 2558
+add.period$ -- 122
+call.type$ -- 55
+change.case$ -- 188
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 458
-empty$ -- 893
-format.name$ -- 96
-if$ -- 2168
+cite$ -- 55
+duplicate$ -- 687
+empty$ -- 1339
+format.name$ -- 148
+if$ -- 3240
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 45
-newline$ -- 162
-num.names$ -- 74
-pop$ -- 140
+int.to.str$ -- 55
+missing$ -- 70
+newline$ -- 235
+num.names$ -- 110
+pop$ -- 227
 preamble$ -- 1
-purify$ -- 122
+purify$ -- 184
 quote$ -- 0
-skip$ -- 230
+skip$ -- 341
 stack$ -- 0
-substring$ -- 529
-swap$ -- 112
-text.length$ -- 5
+substring$ -- 788
+swap$ -- 162
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 122
+type$ -- 178
 warning$ -- 0
-while$ -- 102
-width$ -- 39
-write$ -- 378
-(There was 1 error message)
+while$ -- 152
+width$ -- 57
+write$ -- 553
+(There were 4 warnings)

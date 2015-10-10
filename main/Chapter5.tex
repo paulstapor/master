@@ -6,21 +6,21 @@
 
 \chapter{A locally convex topology for the Gutt star product}
 
-We have finished the algebraic part of this work, except for some little 
-lemmas concerning the Hopf theoretic chapter. Our next goal is setting up a 
+We have finished the algebraic part of this work, except for one little 
+lemma concerning the Hopf theoretic chapter. Our next goal is setting up a 
 locally convex topology on the symmetric tensor algebra, in which the Gutt 
-star product will converge. At the beginning of this chapter, we will 
+star product will be continuous. At the beginning of this chapter, we will 
 first give a motivation why the setting of locally convex algebras is 
-convenient and necessary. In the second part, we will briefly recall the most 
-important things on locally convex algebras and introduce the topology which 
-we will work with. In the third section, the core of this chapter, the 
-continuity of the star product and the dependence on the formal parameter are 
-proven. We also show that representations of Lie algebras lift in a good way 
-to  those of the deformed symmetric algebra and that our construction is in 
-fact functorial. Part four treats the case when the formal parameter $z = 1$ 
-and hence talks about a locally convex topology on the universal enveloping 
-algebra of a Lie algebra. We will also show, that our topology is ''optimal'' 
-in a specific sense.
+convenient and necessary. In the second section, we will briefly recall the 
+most important things on locally convex algebras and introduce the topology 
+which we will work with. In the third section, the core of this chapter, the 
+continuity of the star product and the analytic dependence on the formal 
+parameter are proven. We also show that continuous representations of Lie 
+algebras lift to  those of the deformed symmetric algebra and that our 
+construction is in fact functorial. Part four treats the case when the formal 
+parameter $z = 1$ and hence talks about a locally convex topology on universal 
+enveloping algebras. We will show, that our topology is ''optimal'' in a 
+specific sense.
 
 
 
@@ -28,18 +28,19 @@ in a specific sense.
 \label{sec:chap5_Prelim}
 
 The first question one could ask is why we want the observable algebra 
-to be a \textit{locally convex} one. There are a lot of different choices 
-and most of them would even make things simpler: we could think of 
-locally multiplicatively convex algebras, Banach algebras, $C^*$- or even 
-von Neumann algebras. All of them have much more structure than just 
-locally convex algebras. We would have an entire holomorphic calculus 
+to be a \textit{locally convex} one. One can think of very different types of 
+topologies and most of them would be nicer than a locally convex setting: we 
+could think of locally multiplicatively convex algebras, Banach algebras, 
+$C^*$- or even von Neumann algebras. All of them have much more structure than 
+just locally convex algebras. We would have an entire holomorphic calculus 
 within our algebra if we assumed it to be locally m-convex, or even a 
 continuous one if we wanted it to be $C^*$.
 
 
-The reason is that, in general, all these nice features are simply not there. 
-Quantum mechanics tells us that the algebra made up by the space and momentum 
-operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
+The reason for our choice is that, in general, all these nice features are 
+simply not there. Quantum mechanics tells us that even for the simplest systems 
+the algebra made up by the space and momentum operators $\hat{q}$ and $\hat{p}$ 
+can not be locally m-convex and hence not Banach or $C^*$.
 \begin{proposition}
 	\label{Prop:LCAna:QMnotLMC}
 	Let $\mathcal{A}$ be a unital associative algebra which contains the 
@@ -50,8 +51,7 @@ operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 		=
 		i \hbar \Unit
 	\end{equation*}
-	is fulfilled. Then the only submultiplicative semi-norm on it is 
-	$p = 0$.
+	is fulfilled. Then the only submultiplicative seminorm on it is 0.
 \end{proposition}
 \begin{proof}
 	First, we need to show a little lemma:
@@ -67,9 +67,9 @@ operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 	\end{lemma}
 	\begin{subproof}
 		To show it, we use the fact that for $a \in \mathcal{A}$ the 
-		operator $\ad_a$ is a derivation, which is always true for a Lie 
-		algebra which comes from an associative algebra with the 
-		commutator, since for $a, b, c \in \mathcal{A}$ we have
+		operator $\ad_a$ is a derivation. This is always true for the 
+		commutator Lie algebra of an associative algebra, since for 
+		$a, b, c \in \mathcal{A}$ we have
 		\begin{equation*}
 			[a, bc]
 			=
@@ -180,7 +180,7 @@ operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 		computation before, we omit it here and the lemma is proven.
 	\end{subproof}	
 	Now we can go on with the actual proof. Let $\norm{\cdot}$ be a 
-	submultiplicative semi-norm. Then we see from Equation 
+	submultiplicative seminorm. Then we see from Equation 
 	\eqref{LCAna:NotLMCHelp} that
 	\begin{equation*}
 		\norm{
@@ -232,17 +232,17 @@ operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 		\leq
 		c^n
 	\end{equation*}
-	for some $c \in \mathbb{R}$. This cannot be fulfilled for all 
-	$n \in \mathbb{N}$ unless $\norm{ \Unit } = 0$. But then, by
-	submultiplicativity, the semi-norm itself must be equal to $0$.
+	for $1 \norm{\hat q} \norm{\hat p} = c \in \mathbb{R}$. This cannot be 
+	fulfilled for all $n \in \mathbb{N}$ unless $\norm{ \Unit } = 0$. But 
+	then, by submultiplicativity, the seminorm itself must be equal to $0$.
 \end{proof}
 \begin{remark}
 	The so called Weyl algebra, which fulfils the properties of the 
 	foregoing proposition, can be constructed from a Poisson algebra with 
-	constant Poisson tensor. On one hand, it is a fair to ask the question, 
-	why this restriction of not being locally m-convex should also be put on 
+	constant a Poisson tensor. On one hand, it is a fair to ask the question, 
+	why this restriction of not being locally m-convex should also be apply to
 	linear Poisson systems. On the other hand, there is no reason to 
-	expect that things become easier when we make the Poisson system more 
+	expect that things become easier when we make the Poisson structure more 
 	complex. Moreover, the Weyl algebra is actually nothing but a 
 	quotient of the universal enveloping algebra of the so called 
 	Heisenberg algebra, which is a particular Lie algebra. There is 
@@ -253,9 +253,9 @@ operators $\hat{q}$ and $\hat{p}$ can not be locally m-convex.
 There's a second good reason why we should avoid our topology to be locally 
 m-convex. The topology we set up on $\Sym^{\bullet}(\lie{g})$ for a Lie 
 algebra $\lie{g}$ will also give a topology on $\mathcal{U}(\lie{g})$.
-In Proposition \ref{Prop:LCAna:NoBetterTopology} ,we will show that, under 
+In Proposition \ref{LCAna:Prop:NoBetterTopology} ,we will show that, under 
 weak (but for our purpose necessary) additional assumptions, there can be no 
-topology on $\mathcal{U}(\lie{g})$ which allows an entire holomorphic 
+topology on $\mathcal{U}(\lie{g})$, which allows an entire holomorphic 
 calculus. This underlines the results from Proposition 
 \ref{Prop:LCAna:QMnotLMC}, since locally m-convex algebras always have such a 
 calculus.
@@ -264,7 +264,7 @@ calculus.
 In this sense, we have good reasons to think that 
 $\Sym^{\bullet}(\lie{g})$ will not allow a better setting than the
 one of a locally convex algebra if we want the Gutt star product to 
-be continuous. Before we attack this task, we have to recall some
+be continuous. Before we go to this task, we have to recall some
 technology from locally convex analysis.
 
 
@@ -274,9 +274,10 @@ technology from locally convex analysis.
 
 \subsection{Locally convex spaces and algebras}
 
-Every locally convex algebra is of course also a locally convex space which 
+Every locally convex algebra is also a locally convex space which 
 is, of course, a topological vector space. To make clear what we talk about, 
-we first give a definition which is taken from \cite{Rudin:Blue}.
+we first give a definition which is taken from 
+\cite[Definition 1.6]{rudin:1991a}.
 \begin{definition}[Topological vector space]
 	\label{Def:TVSpace}
 	Let $V$ be a vector space endowed with a topology $\tau$. Then we call 
@@ -284,7 +285,7 @@ we first give a definition which is taken from \cite{Rudin:Blue}.
 	a topological vector space, if the two following things  hold:
 	\begin{definitionlist}
 		\item
-		for every point in $x \in V$ the set $\{x\} $ is a closed and
+		for every point in $x \in V$ the set $\{x\} $ is closed and
 		
 		\item
 		the vector space operations (addition, scalar multiplication) are 
@@ -292,15 +293,15 @@ we first give a definition which is taken from \cite{Rudin:Blue}.
 	\end{definitionlist}
 \end{definition}
 Not all books require axiom $(i)$ for a topological vector space. It is, 
-however, useful, since it assures that the topology in a topological vector 
+however, useful, since it assures that our topological vector 
 space is Hausdorff -- a feature which we will always want to have. The proof 
-for this is not difficult, but since we don't want to go too much into detail 
-here, we refer to \cite{Rudin:Blue} again, where it can be found as Theorem 
-1.12.
+for this is not difficult, but since we do not want to go too much into details 
+here, we refer to \cite{rudin:1991a} again, where it can be found in the 
+theorem 1.10 and 1.12.
 
 
-The most important class of topological vector spaces are, at least, but not 
-only, from a physical point of view, locally convex ones. Almost all 
+The most important class of topological vector spaces are, at least from a 
+physical point of view, locally convex ones. Almost all 
 interesting physical examples belong to this class: Finite-dimensional spaces, 
 inner product (or pre-Hilbert) spaces, Banach spaces, Fr\'echet spaces, 
 nuclear spaces and many more. There are at least two equivalent 
@@ -315,13 +316,13 @@ geometrical, the second is better suited for our analytic purpose.
 		convex.
 		
 		\item
-		The topology on $V$ is generated by a separating family of semi-norms 
+		The topology on $V$ is generated by a separating family of seminorms 
 		$\mathcal{P}$.
 	\end{theoremlist}
 \end{theorem}
 \begin{proof}
 	This theorem is a very well-known result and can be found in standard 
-	literature, such as \cite{Rudin:Blue} again, where it is divided into 
+	literature, such as \cite{rudin:1991a} again, where it is divided into 
 	two 	Theorems (namely 1.36 and 1.37).
 \end{proof}
 \begin{definition}[Locally convex space]
@@ -331,31 +332,42 @@ geometrical, the second is better suited for our analytic purpose.
 	fulfilled.
 \end{definition}
 The first property explains the term ''locally convex''. 
-For our intention, the second property is more helpful, 
+For our concrete computations, the second property is more helpful, 
 since in this setting proving continuity just means putting estimates on 
-semi-norms. For this purpose, one often extends the set of semi-norms 
-$\mathcal{P}$ to the set of all continuous semi-norms $\algebra{P}$ which 
-contains all semi-norms that are compatible with the topology (e.g. sums, 
-multiples and maxima of (finitely many) semi-norms from $\mathcal{P}$).
-From here, we can start looking at locally convex algebras.
-
-
+seminorms. For this purpose, one often extends the set of seminorms 
+$\mathcal{P}$ to the set of all continuous seminorms $\algebra{P}$ which 
+contains all seminorms that are compatible with the topology:
+\begin{equation*}
+	p \in \algebra{P}
+	\Longleftrightarrow
+	\exists_{n \in \mathbb{N}}
+	\exists_{c_1, \ldots, c_n > 0}
+	\exists_{p_1, \ldots, p_n \in \mathcal{P}}
+	\colon
+	p 
+	\leq 
+	\sum\limits_{i = 1}^n
+	c_i p_i.
+\end{equation*}
+In particular, one can take maxima of finitely many continuous seminorms to get 
+again a continuous seminorm. From here, we can start looking at locally convex 
+algebras.
 \begin{definition}[Locally convex algebra]
 	\label{Def:LCAlgebra}
 	A locally convex algebra is a locally convex vector space with an 
 	additional algebra structure which is continuous.
 \end{definition}
-More precisely, let $\mathcal{A}$ be a locally convex algebra and 
-$\algebra{P}$ the set of all continuous semi-norms, then for all $p \in 
+More precisely, let $\algebra{A}$ be a locally convex algebra and 
+$\algebra{P}$ the set of all continuous seminorms, then for all $p \in 
 \algebra{P}$ there exists a $q \in \algebra{P}$ such that for all $x, y \in 
-\mathcal{A}$ one has
+\algebra{A}$ one has
 \begin{equation}
 	\label{LCAna:ProductContinuity}
-	p(a b)
+	p(a \cdot b)
 	\leq
 	q(a) q(b).
 \end{equation}
-Remind that we didn't require our algebras to be associative. The product in 
+Remind that we did not require our algebras to be associative. The product in 
 this equation could also be a Lie bracket. If we talk about associative 
 algebras, we will always say it explicitly.
 
@@ -370,95 +382,107 @@ We will need an estimate which does not depend on the number of Lie
 brackets involved. Since Lie algebras are just one type of algebras, 
 we can define the property we need also for other locally convex algebras. 
 \begin{definition}[Asymptotic estimate algebra]
-	\label{Def:AE}
-	Let $\mathcal{A}$ be a locally convex algebra (not necessarily 
-	associative) with the set of all continuous semi-norms $\algebra{P}$. 
-	For a given $p \in \algebra{P}$ we call $q \in \algebra{P}$ an 
-	asymptotic estimate for $p$, if there exists an $m \in \mathbb{N}$ 
-	such that for all $n \geq m$ we have
-	\begin{equation}
-		\label{LCAna:AE}
-		p(x_1 \cdot \ldots \cdot x_n)
-		\leq
-		q(x_1) \ldots q(x_n)
-		\quad
-		\forall_{x_1, \ldots, x_n \in \algebra{A}}.
-	\end{equation}
-	For non-associative algebras, we want this estimate to be fulfilled 
-	for all ways of setting brackets on the left hand side.
-	We call a locally convex algebra an AE algebra, if every $p \in 
-	\algebra{P}$ has an asymptotic estimate.
+    \label{Def:AE}
+    Let $\algebra{A}$ be a locally convex algebra (not necessarily associative) 
+    with $\cdot$ denoting the multiplication and $\algebra{P}$ the set 
+    of all continuous seminorms. Let $p \in \algebra{P}$.
+    \begin{definitionlist}
+    \item \label{item:AsymptoticEstimate} 
+        We call $q \in \algebra{P}$ an asymptotic estimate for $p$, if
+        \begin{equation}
+            \label{LCAna:AEProperty}
+            p\left(
+                w_n(x_1, \ldots, x_n)
+            \right)
+            \leq
+            q(x_1) \cdots q(x_n)
+        \end{equation}
+        for all words $w_n(x_1, \ldots, x_n)$ made out of $n-1$
+        products of the elements $x_1, \ldots, x_n \in \algebra{A}$
+        with arbitrary position of placing brackets.
+    \item \label{item:AEAlgebra} 
+        A locally convex algebra is said to be an asymptotic estimate algebra 
+        (AE algebra), if every $p \in \algebra{P}$ has an asymptotic estimate.
+    \end{definitionlist}
 \end{definition}
-\begin{remark}
-	\label{Rem:LCAna:AE1}
-	Without further restrictions, we can set $m = 1$ in the upper definition, 
-	since this just means taking the maximum over a finite number of 
-	continuous semi-norms. If $q$ satisfies the upper definition for some $m 
-	\in \mathbb{N}$ and for all $i = 2, \ldots, m-1$ we have
-	\begin{equation*}
-		p(x_1 \cdot \ldots \cdot x_i)
-		\leq
-		q^{(i)}(x_1) \ldots q^{(i)}(x_i)
-	\end{equation*}
-	for all $x_1, \ldots, x_i \in \mathcal{A}$, then we just set
-	\begin{equation*}
-		q'
-		=
-		\max\{ 
-			p, q^{(2)}, \ldots, q^{(m-1)}, q
-		\}.
-	\end{equation*}
-	Clearly, $q'$ will again be a continuous semi-norm and an asymptotic 
-	estimate for $p$.
-\end{remark}
 \begin{remark}[The notion ''asymptotic estimate'']
-	\label{Rem:LCAna:AE2}
+	\label{LCAna:Rem:AE1}
 	\mbox{}
 	\begin{remarklist}
 		\item
 		The term asymptotic estimate has, to the best of our knowledge, 
 		first been used by Boseck, Czichowski and Rudolph in 
-		\cite{BCR:AsympEsti:1981}. They defined asymptotic estimates in 
-		the same way we did, but their idea of an AE algebra was different 
-		from ours: for them, in an AE algebra every continuous semi-norm 
-		admits a series of asymptotic estimates. This series must fulfil two 
-		additional properties, which actually make the algebra locally 
-		m-convex. Clearly, our definition is weaker,	since it does not imply, 
-		a priori, the existence of an topologically 
-		equivalent set of submultiplicative semi-norms.
+		\cite{boseck.czichowski.rudolph:1981a}. They gave a seemingly weaker
+		definition of asymptotic estimates, which is in fact equivalent.
+		They wanted that for every seminorm $p\in \algebra{P}$, there is a 
+		$m \in \mathbb{N}$ and a $q \in \algebra{P}$ such that for all 
+		$n \geq m$ one has
+		\begin{equation}
+			\label{LCAna:PseudiAE}
+			p \left( x_1 \cdots x_n \right)
+			\leq
+			q \left(x_1\right) \cdots q \left(x_n\right)
+			\quad
+			\forall_{x_1, \ldots, x_n \in \algebra{A}}.
+		\end{equation}
+		But here we can set $m = 1$, since we just need to take the maximum of 
+		a finite number of continuous seminorms. Let $q$ satisfy 
+		\eqref{LCAna:PseudiAE}. By Continuity, we have for all 
+		$i = 2, \ldots, m-1$
+		\begin{equation*}
+		 	p(x_1 \cdots x_i)
+		 	\leq
+		 	q^{(i)}(x_1) \ldots q^{(i)}(x_i)
+		 	\quad
+		 	\forall_{x_1, \ldots, x_i \in \algebra{A}}
+		\end{equation*}
+		Now we get an asymptotic estimate $q'$ for $p$ in our sense by setting
+		\begin{equation*}
+		 	q'
+		 	=
+		 	\max\{ 
+		 		p, q^{(2)}, \ldots, q^{(m-1)}, q
+		 	\}.
+		\end{equation*}
+		Also AE algebras were defined by Boseck et al. in 
+		\cite{boseck.czichowski.rudolph:1981a}, but here the notion is really 
+		different from ours: for them, in an AE algebra every continuous 
+		seminorm admits a sequence of asymptotic estimates. This sequence must 
+		fulfil two additional properties, which actually make the algebra 
+		locally 	m-convex. Our definition is weaker,	since it does not imply, 
+		a priori, the existence of an topologically equivalent set of 
+		submultiplicative seminorms.
 		
 		\item
-		In \cite{GN:CIARegGroup:2012}, Gl\"ockner and Neeb used a property to 
+		In \cite{gloeckner.neeb:2012a}, Gl\"ockner and Neeb used a property to 
 		which they referred as $(*)$ for associative algebras. It was then 
-		used in 	\cite{} by ... and ..., who called it the $GN$-property. It 
-		is easy to see that it is equivalent to our AE condition. 
+		used in 	\cite{bogfjellmo.dahmen.schmedig:2015a} by Bogfjellmo, Dahmen 
+		and Schmedig, who called it the $GN$-property. It is rather easy to 
+		see that it is equivalent to our AE condition. 
 	\end{remarklist}
 \end{remark}
 
 There are, of course, a lot of examples of AE (Lie) algebras. 
-All finite dimensional and Banach (Lie) algebras fulfil 
-\eqref{LCAna:AE}, just as locally m-convex (Lie) algebras do. 
+All finite dimensional and Banach (Lie) algebras fulfil Inequality
+\eqref{LCAna:AEProperty}, just as locally m-convex (Lie) algebras do. 
 The same is true for nilpotent locally convex Lie algebras, 
 since here again one just has to take the maximum of a finite 
 number of semi-norms, analogously to the procedure in Remark 
-\ref{Rem:LCAna:AE1}.
-
-		
-It is far from clear what is exactly implied by the AE property. 
-Are there examples for associative algebras which are AE but not locally 
-m-convex, for example? Are there Lie algebras which are truly AE and not 
-locally m-convex or nilpotent? We don't have an answer to this questions,
-but we can make some simple observations, which allow us to give an answer
-for special cases.
+\ref{LCAna:Rem:AE1}. On the other hand, it is not clear what the AE property 
+implies exactly. Are there examples for associative algebras which are AE but 
+not locally m-convex, for example? Are there Lie algebras which are truly AE 
+and not locally m-convex or nilpotent? We don't have an answer to this 
+questions, but we can make some simple observations, which allow us to give an 
+answer for special cases.
 \begin{proposition}[Entire calculus]
-	Let $\mathcal{A}$ be an associative AE algebra. Then it has an
-	entire holomorphic calculus.
+	Let $\mathcal{A}$ be an associative AE algebra. Then it admits an
+	entire calculus.
 \end{proposition}
 \begin{proof}
 	The proof is the same as for locally m-convex algebras: let 
 	$f \colon \mathbb{C} \longrightarrow \mathbb{C}$ be an entire 
-	function with $f(z) = \sum_n a_n z^n$ and $p$
-	a continuous semi-norm with an asymptotic estimate $q$.
+	function with $f(z) = \sum_{n=0}^{\infty} a_n z^n$ and $p$
+	a continuous seminorm with an asymptotic estimate $q$.
 	Then one has $\forall_{x \in \mathcal{A}}$
 	\begin{equation*}
 		p(f(x))
@@ -479,21 +503,21 @@ for special cases.
 	\end{equation*}
 \end{proof}
 \begin{remark}[Entire Calculus, AE and LMC algebras]
-	The fact that AE algebras have an entire calculus makes them very similar 
-	to locally m-convex ones.
+	The fact that associative AE algebras have an entire calculus makes them 
+	very similar to locally m-convex ones.
 	Now there is something we can say about associative algebras which have an 
 	entire calculus: if such an algebra is additionally commutative and 
-	Fr\'echet, then must be even locally m-convex. This statement was proved 
-	in \cite{MRZ:EntireCalculus:1962} by Mitiagin, Rolewicz and 
-	Zelazko. Oudadess and El kinani extended this result to commutative, 
-	associative algebras, in which the Baire category theorem holds.
-	For non-commutative algebras, the situation is different. There are 
-	associative ''Baire algebras'' having an entire calculus, which are not 
-	locally m-convex. Zelazko gave an example for such an algebra in 
-	\cite{Zelazko:EntButNotLMC:1998}. Unfortunately, his example is also not 
-	AE. It seems to be is an interesting (and non-trivial) question, 
-	if a non locally m-convex but AE algebra exists at all and if yes, 
-	how an example could look like.
+	Fr\'echet, then must be even locally m-convex. This statement was proven 
+	in \cite{mitiagin.rolewicz.zelazko:1962a} by Mitiagin, Rolewicz and 
+	{\.Z}elazko. Oudadess and El kinani extended this result to commutative, 
+	associative algebras, in which the Baire category theorem holds 
+	\cite{elkinani.oudadess:1997a}. For non-commutative algebras, the 
+	situation is different. There are associative ''Baire algebras'' having an 
+	entire calculus, which are not locally m-convex. {\.Z}elazko gave an 
+	example for such an algebra in \cite{zelazko:1994a}. Unfortunately, his 
+	example is also not AE. It seems to be is an interesting (and non-trivial) 
+	question, if a non locally m-convex but AE algebra exists at all and if 
+	yes, how an example could look like.
 \end{remark}
 
 
@@ -502,106 +526,111 @@ for special cases.
 
 We want to set up a topology on $\Sym^{\bullet}(\lie{g})$. Therefore, 
 we will first construct a topology on the tensor algebra $\Tensor^{\bullet}
-(\lie{g})$. As all the following constructions in this section don't use any 
-algebra structure, we will do them on a locally convex vector space $V$ where 
-$\algebra{P}$ is the set of continuous semi-norms. Then we can use the 
-projective tensor product $\tensor[\pi]$ in order to get a locally convex 
+(\lie{g})$. Since the construction is possible starting from any locally 
+convex vector space, we want to go back to this more general setting for a 
+moment. $V$ will always denote a locally convex vector space and $\algebra{P}$ 
+the set of its continuous seminorms. In this situation, we can use the 
+projective tensor product $\tensor[\pi]$ to get a locally convex 
 topology on each tensor power $V^{\tensor[\pi] n}$. The precise construction 
-can be found in standard textbooks on locally convex analysis like 
-\cite{Jarchow:LCSpaces} or in the lecture notes \cite{Waldmann:LectureAlgDyn}. 
+of the projective tensor product can be found in good textbooks on locally 
+convex analysis like \cite[Chapter 15]{jarchow:1981a} or in the lecture notes 
+\cite[Lemma 4.1.4]{waldmann:2014a:script}. 
 Recall that for $p_1, \ldots, p_n \in \algebra{P}$ we have a continuous 
-semi-norm on $V^{\tensor[\pi] n}$ via
+seminorm on $V^{\tensor[\pi] n}$ via
 \begin{equation*}
-	(p_1 \tensor[\pi] \ldots \tensor[\pi] p_n)(x)
+	(p_1 \tensor[\pi] \cdots \tensor[\pi] p_n)(x)
 	=
 	\inf
 	\left\{
 	\left.
 		\sum_i
 		p_1 \left( x_i^{(1)} \right)
-		\ldots
+		\cdots
 		p_n \left( x_i^{(n)} \right)
-	\right|
+	\ \right| \
 		x
 		=
 		\sum_i
 		x_i^{(1)}
-		\tensor \ldots \tensor
+		\tensor \cdots \tensor
 		x_i^{(n)}
 	\right\}.
 \end{equation*}
 On factorizing tensors, we moreover have the property
 \begin{equation}
 	\label{LCAna:FactorTensor}
-	(p_1 \tensor[\pi] \ldots \tensor[\pi] p_n)
-	(x_1 \tensor[\pi] \ldots \tensor[\pi] x_n)
+	(p_1 \tensor[\pi] \cdots \tensor[\pi] p_n)
+	(x_1 \tensor[\pi] \cdots \tensor[\pi] x_n)
 	=
-	p_1(x_1) \ldots p_n(x_n)
+	p_1(x_1) \cdots p_n(x_n)
 \end{equation}
 which will be extremely useful in the following and which can be proven by
 the Hahn-Banach theorem. We also have 
 \begin{equation*}
-	(p_1 \tensor \ldots \tensor p_n) 
+	(p_1 \tensor \cdots \tensor p_n) 
 	\tensor 
-	(q_1 \tensor \ldots \tensor q_m) 
+	(q_1 \tensor \cdots \tensor q_m) 
 	= 
-	p_1 \tensor \ldots \tensor p_n \tensor q_1 \tensor \ldots \tensor q_m.
+	p_1 \tensor \cdots \tensor p_n \tensor q_1 \tensor \cdots \tensor q_m.
 \end{equation*}
 For a given $p \in \algebra{P}$ we will denote $p^n = p^{\tensor[\pi] n}$ and 
 $p^0$ is just the absolute value on the field $\mathbb{K}$. The $\pi$-topology 
 on $V^{\tensor[\pi] n}$ is set up by all the projective tensor products of 
-continuous semi-norms, or, equivalently, by all the $p^n$ for $p \in 
+continuous seminorms, or, equivalently, by all the $p^n$ for $p \in 
 \algebra{P}$.
 
-The projective tensor product has a very nice feature: if we want to show a 
-(continuity) estimate on the tensor algebra, it is enough to do it on 
+The projective tensor product has a very helpful feature: if we want to show a 
+(continuity) estimate on the tensor algebra, it is enough to do so on 
 factorizing tensors. We will use this very often and just refer to it as the 
 ''infimum argument''.
 \begin{lemma}[Infimum argument for the projective tensor product]
 	\label{Lemma:LCAna:InfimumArgument}
-	Let $V_1, \ldots, V_n, W$ be locally convex vector spaces and 
+ 	Let $V_1, \ldots, V_n, W$ be locally convex vector spaces and 
 	\begin{equation*}
 		\phi \colon
-		V_1 \times \ldots \times V_n
+		V_1 \times \cdots \times V_n
 		\longrightarrow
 		W
 	\end{equation*}
 	a $n$-linear map, from which we get the linear map 
-	$\Phi \colon V_1 \tensor[\pi] \ldots \tensor[\pi] V_n \longrightarrow W$.
-	Then $\Phi$ is continuous if and only if this is true for $\phi$ and if 
-	for $p, q \in \algebra{P}$ the estimate
-	\begin{equation*}
+	$\Phi \colon V_1 \tensor[\pi] \cdots \tensor[\pi] V_n \longrightarrow W$.
+	Then $\Phi$ is continuous if and only if this is true for $\phi$. 
+	If the estimate
+	\begin{equation}
+		\label{LCAna:ContOnFactors}
 		p \left(
-			\Phi (x_1 \tensor \ldots \tensor x_n)
+			\Phi (x_1 \tensor \cdots \tensor x_n)
 		\right)
 		\leq
-		q(v_1) \ldots q(v_n)
-	\end{equation*}
-	is fulfilled for all $x_i \in V_i, i=1, \ldots, n$, then we have
-	\begin{equation*}
+		q_i(x_1) \cdots q_i(x_n)
+	\end{equation}
+	is fulfilled for $p\in\algebra{P}_V$ and $q_i \in \algebra{P}_{W_i}$ 
+	and all $x_i \in V_i, i=1, \ldots, n$ then we have
+	\begin{equation}
+		\label{LCAna:ContGeneral}
 		p \left(
 			\Phi (x)
 		\right)
 		\leq
-		q(x)
-	\end{equation*}
-	for all $x \in V_1 \tensor \ldots \tensor V_n$.
+		\left( q_1 \tensor \cdots \tensor q_n \right)(x)
+	\end{equation}
+	for all $x \in V_1 \tensor \cdots \tensor V_n$.
 \end{lemma}
 \begin{proof}
 	If $\Phi$ is continuous, the continuity of $\phi$ is clear. 
 	The other implication is more interesting.
-	Continuity for $\phi$ means, that for every continuous semi-norm $q$ on 
-	$W$ we have continuous semi-norms $p_i$ on $V_i$ with $i = 1, \ldots, n$ 
+	Continuity for $\phi$ means, that for every continuous seminorm $p$ on 
+	$W$ we have continuous seminorms $q_i$ on $V_i$ with $i = 1, \ldots, n$ 
 	such that for all $x^{(i)} \in V_i$ the estimate
 	\begin{equation}
 		\label{LCAna:ContiFactorTensors}
-		q \left(
+		p \left(
 			\phi\left( x^{(1)}, \ldots, x^{(n)} \right)
 		\right)
 		\leq
-		p_1 \left( x^{(1)} \right) 
-		\ldots 
-		p_n \left( x^{(n)} \right)
+		q_1 \left( x^{(1)} \right) 
+		\cdots 
+		q_n \left( x^{(n)} \right)
 	\end{equation}
 	holds. Let $x \in V_1 \tensor[\pi] \ldots \tensor[\pi] V_n$, then it 
 	has a representation in terms of factorizing tensors like
@@ -610,43 +639,60 @@ factorizing tensors. We will use this very often and just refer to it as the
 		=
 		\sum_j
 		x_j^{(1)} 
-		\tensor[\pi] \ldots \tensor[\pi] 
+		\tensor[\pi] \cdots \tensor[\pi] 
 		x_j^{(n)}.
 	\end{equation*}
 	We thus have
 	\begin{align*}
-		q( \Phi(x) )
+		p( \Phi(x) )
 		& =
-		q \left(
+		p \left(
 			\sum_j
 			\Phi \left(
 				x_j^{(1)} 
-				\tensor[\pi] \ldots \tensor[\pi] 
+				\tensor[\pi] \cdots \tensor[\pi] 
 				x_j^{(n)}
 			\right)
 		\right)
 		\\
 		& \leq
 		\sum_j
-		q \left(
+		p \left(
 			\phi \left(
 				x_j^{(1)} 
-				, \ldots ,
+				, \cdots ,
 				x_j^{(n)}
 			\right)
 		\right)
 		\\
 		& \leq
 		\sum_j
-		p_1 \left( x_j^{(1)} \right) 
-		\ldots 
-		p_n \left( x_j^{(n)} \right).
+		q_1 \left( x_j^{(1)} \right) 
+		\cdots 
+		q_n \left( x_j^{(n)} \right).
 	\end{align*}
 	Now we take the infimum over all possibilities of writing $x$ as a sum of 
 	factorizing tensors on both sides. While nothing will happen on the left 
-	hand side, on the right hand side we will find $\left( p_1 \tensor[\pi] 
-	\ldots \tensor[\pi] p_n \right)(x)$. This gives exactly the estimate we 
-	wanted.
+	hand side, on the right hand side we will find $\left( q_1 \tensor[\pi] 
+	\ldots \tensor[\pi] q_n \right)(x)$: 
+	\begin{equation*}
+		p( \Phi(x) )
+		\leq
+		\inf
+		\left\{
+		\left.
+			\sum_j
+			q_1 \left( x_j^{(1)} \right) 
+			\cdots 
+			q_n \left( x_j^{(n)} \right)
+		\ \right| \
+			x
+			=
+			\sum_j
+			x_j^{(1)} \cdots x_j^{(n)}
+		\right\}.
+	\end{equation*}
+	This is the estimate we wanted and the Lemma is proven.
 \end{proof}
 
 
@@ -656,7 +702,7 @@ $\pi$-topology from the $V^{\tensor[\pi] n}$. We will call it
 $\Sym_{\pi}^n(V)$ when we endow it with this topology.
 \begin{lemma}
 	\label{Lemma:LCAna:ProjTensSymm}
-	Let $V$ be a locally convex vector space, $p$ a continuous semi-norm 
+	Let $V$ be a locally convex vector space, $p$ a continuous seminorm 
 	and $n,m \in \mathbb{N}$.
 	\begin{lemmalist}
 		\item
@@ -752,17 +798,17 @@ $\Sym_{\pi}^n(V)$ when we endow it with this topology.
 		= 
 		\ker (\id - \Symmetrizer_n).
 	\end{equation*}
-	The third part is a consequence from the first and also immediate.
+	The third part is a consequence from the first.
 \end{proof}
 One could maybe think that the inequality in the first part of this lemma is 
 just an artefact which is due to the infimum argument and should actually be 
-an equality, if one looked to it more closely. It is very interesting to see, 
+an equality, if one looked at it more closely. It is very interesting to see, 
 that this is \textit{not} the case, since it may happen that this 
 inequality is strict. The following example illustrates this.
 \begin{example}
 	We take $V = \mathbb{R}^2$ with the standard basis $e_1,	e_2$ 
-	and $V$ is endowed with the maximum norm. Now look at 
-	$e_1 \tensor e_2$, which has the norm
+	and $V$ is endowed with the maximum norm. Hence we have $\norm{e_1} = 
+	\norm{e_2} = 1$. Now look at $e_1 \tensor e_2$, which has the norm
 	\begin{equation*}
 		\norm{
 			e_1 \tensor e_2
@@ -819,9 +865,21 @@ inequality is strict. The following example illustrates this.
 			\norm{ (-e_1 + e_2) \tensor (e_1 - e_2) }
 		)
 		\\
+		& \leq
+		\frac{1}{4}
+		(
+			\norm{e_1 + e_2}
+			\cdot
+			\norm{e_1 + e_2}
+			+
+			\norm{- e_1 + e_2}
+			\cdot
+			\norm{e_1 - e_2}
+		)
+		\\
 		& =
 		\frac{1}{4}
-		(1 + 1)
+		(1 \cdot 1 + 1 \cdot 1)
 		\\
 		& =
 		\frac{1}{2}.
@@ -830,7 +888,7 @@ inequality is strict. The following example illustrates this.
 \end{example}
 
 
-\subsection{A topology for the Gutt star product}
+\subsection{A Topology for the Gutt Star Product}
 
 The next step is to set up a topology on $\Tensor^{\bullet}(V)$ which 
 has the $\pi$-topology on each component. A priori, there are a lot of such 
@@ -838,20 +896,20 @@ topologies and at least two natural ones: the direct sum topology which is
 very fine and has a very small closure, and the cartesian product topology 
 which is very coarse and therefore has a very big closure. We need something 
 in between, which we can adjust in a convenient way.
-\begin{definition}[R-topology]
-	Let $p$ be an continuous semi-norm on a locally convex vector space 
-	$V$ and $R \in \mathbb{R}$. We define the semi-norm
+\begin{definition}[$\Tensor_R$-topology]
+	Let $p$ be a continuous seminorm on a locally convex vector space 
+	$V$ and $R \in \mathbb{R}$. We define by 
 	\begin{equation*}
 		p_R 
 		= 
 		\sum\limits_{n=0}^{\infty}
 		n!^R p^n
 	\end{equation*}
-	on the Tensor algebra $\Tensor^{\bullet}(V)$. We write for 
-	the tensor or the symmetric algebra endowed with all such semi-norms  
+	a seminorm on the Tensor algebra $\Tensor^{\bullet}(V)$. We write for 
+	the tensor or the symmetric algebra endowed with all such seminorms  
 	$\Tensor_R^{\bullet}(V)$ or $\Sym_R^{\bullet}(V)$ respectively.
 \end{definition}
-We now want to collect the most important results on the locally convex 
+Now we want to collect the most important results on the locally convex 
 algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left( 
 \Sym_R^{\bullet}(V), \vee \right)$. 
 \begin{lemma}[The $R$-topology]
@@ -881,21 +939,21 @@ algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left(
 	        	\begin{array}{ccccc}
 		    	    \Tensor_R^{\bullet}(V)
 		        	&
-	    	   		\longrightarrow
+	    	   		\ot{$\pi_n$}{\longrightarrow}
 	    	    		&
 	    	    		V^{\tensor_{\pi} n}
 	    	    		&
-	    	    		\longrightarrow
+	    	    		\ot{$\iota_n$}{\longrightarrow}
 	    		    &
 	    		    \Tensor^{\bullet}(V)
 	    		    \\
 		        \Sym_R^{\bullet}(V)
 		        &
-	    	        \longrightarrow
+	    	        \ot{$\pi_n$}{\longrightarrow}
 	    	    		&
 	    	    		\Sym_{\pi}^n(V)
 	    	    		&
-	    	    		\longrightarrow
+	    	    		\ot{$\iota_n$}{\longrightarrow}
 	    		    &
 	    		    \Sym_R^{\bullet}(V)
 	        	\end{array}
@@ -973,6 +1031,9 @@ algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left(
       \item \label{Item:FirstCountable}
     		The algebras $\Tensor_R^{\bullet}(V)$ and $\Sym_R^{\bullet}(V)$
     		are first countable if and only if this is true for $V$.
+      \item \label{item:PointsArePoints} The evaluation functionals
+        $\delta_{\varphi}\colon \Sym^\bullet_R(V) \longrightarrow
+        \mathbb{K}$ for $\varphi \in \lie{g}'$ are continuous.
     \end{lemmalist}
 \end{lemma}
 \begin{proof}
@@ -982,11 +1043,11 @@ algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left(
 	\begin{equation*}
 		x
 		=
-		x^{(1)} \tensor \ldots \tensor x^{(n)}
+		x^{(1)} \tensor \cdots \tensor x^{(n)}
 		\quad \text{ and }
 		y
 		=
-		y^{(1)} \tensor \ldots \tensor y^{(m)}
+		y^{(1)} \tensor \cdots \tensor y^{(m)}
 	\end{equation*}
 	and compute:
 	\begin{align*}
@@ -996,43 +1057,43 @@ algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left(
 		& =
 		(n + m)!^R
 		p^{n + m} \left(
-			x^{(1)} \tensor \ldots x^{(n)}
+			x^{(1)} \tensor \cdots \tensor x^{(n)}
 			\tensor
-			y^{(1)} \tensor \ldots y^{(m)}
+			y^{(1)} \tensor \cdots \tensor y^{(m)}
 		\right)
 		\\
 		& =
 		(n + m)!^R
 		p^n \left(
-			x^{(1)} \tensor \ldots x^{(n)}
+			x^{(1)} \tensor \cdots \tensor x^{(n)}
 		\right)
 		p^m \left(
-			y^{(1)} \tensor \ldots y^{(m)}
+			y^{(1)} \tensor \cdots \tensor y^{(m)}
 		\right)
 		\\
 		& =
 		\binom{n + m}{n}^R
 		n!^R m!^R
 		p^n \left(
-			x^{(1)} \tensor \ldots x^{(n)}
+			x^{(1)} \tensor \cdots \tensor x^{(n)}
 		\right)
 		p^m \left(
-			y^{(1)} \tensor \ldots y^{(m)}
+			y^{(1)} \tensor \cdots \tensor y^{(m)}
 		\right)
 		\\
 		& \leq
 		2^{(n + m) R}
-		p_R \left( x^{(1)} \tensor \ldots x^{(n)} \right)
-		p_R \left( y^{(1)} \tensor \ldots y^{(m)} \right)
+		p_R \left( x^{(1)} \tensor \cdots \tensor x^{(n)} \right)
+		p_R \left( y^{(1)} \tensor \cdots \tensor y^{(m)} \right)
 		\\
 		& =
 		\left( 2^R p\right)_R 
-		\left( x^{(1)} \tensor \ldots x^{(n)} \right)
+		\left( x^{(1)} \tensor \cdots \tensor x^{(n)} \right)
 		\left( 2^R p \right)_R 
-		\left( y^{(1)} \tensor \ldots y^{(m)} \right).
+		\left( y^{(1)} \tensor \cdots \tensor y^{(m)} \right).
 	\end{align*}
-	The parts $(iii)$ and $(iv)$ are clear from the construction of the $R$-
-	topology. In part $(v)$ we used the completion of the tensor product 
+	The parts $(iii)$ and $(iv)$ are clear from the construction of the 
+	$R$-	topology. In part $(v)$ we used the completion of the tensor product 
 	$\hat{\tensor}$, the statement itself is clear and implies $(vi)$ 
 	directly, since we have really more elements in the completion for $R < 
 	R'$, like the series over $x^{n} \frac{1}{n!^t}$ for $t \in (R, R')$ and 
@@ -1046,28 +1107,30 @@ algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left(
 		p(x)^n
 	\end{equation*}
 	for all $n \in \mathbb{N}$ and all $x \in V$. If we had a 
-	submultiplicative semi-norm $\norm{\cdot}$ from an equivalent topology, 
-	then we would have some $x \in V$, and a continuous semi-norm $p$ with 
-	$p(x) \neq 0$ such that $p_R \leq \norm{\cdot}$, and hence
+	submultiplicative seminorm $\varphi$ from an equivalent topology, 
+	then we would have some $x \in V$, and a continuous seminorm $p$ with 
+	$p(x) \neq 0$ such that $p_R \leq \varphi$, and hence
 	\begin{equation*}
 		n!^R p(x)^R
 		\leq
-		\norm{x^n}
+		\varphi \left(x^n\right)
 		\leq
-		\norm{x}^n.
+		\varphi\left(x\right)^n.
 	\end{equation*}
 	Since this is valid for all $n \in \mathbb{N}$, we get a contradiction.
-	For the last part, the tensor algebras cannot be first countable if $V$ 
-	itself isn't. On the other hand, if $V$ has a finite base of the topology, 
-	then $\Tensor_R^{\bullet}(V)$ and $\Sym_R^{\bullet}(V)$ are just a 
-	countable multiple of $V$ and stay therefore first countable.
+	For the ninth part, the tensor algebras can not be first countable if this 
+	is not true for $V$ itself. On the other hand, if $V$ has a finite base of 
+	the topology, then $\Tensor_R^{\bullet}(V)$ and $\Sym_R^{\bullet}(V)$ are 
+	just a countable multiple of $V$ and stay therefore first countable.
+	The last part finally assures, that every symmetric tensor really gives a 
+	continuous function and comes from the continuity of $\varphi$.
 \end{proof}
 The projective tensor product obviously keeps a lot of important and 
-strong properties of the original vector space $V$. But Proposition 
-\ref{Prop:LCAna:Projections} still leaves some important things. 
+strong properties of the original vector space $V$. But Lemma 
+\ref{Lemma:LCAna:Projections} still leaves out some important things. 
 We will not make use of them in the following, but it is worth naming 
 them for completeness. To do this in full generality, we 
-need one more definition, which will be also very important in chapter 5.
+need one more definition, which will be also very important in chapter 6.
 \begin{definition}\label{ProjectiveLimit}
 	For a locally convex vector space $V$ and $R \geq 0$ we set
 	\begin{equation*}
@@ -1078,8 +1141,14 @@ need one more definition, which will be also very important in chapter 5.
 	\end{equation*}
 	and call its completion $\widehat{\Sym}_{R^-}^{\bullet}(V)$.
 \end{definition}
+The projective limit is the intersection of all the algebras 
+$\Sym_R^{\bullet}(V)$ for $R < 1$. Its completion can be understood as all 
+those series in the cartesian product, which converge for all $p_R$ for $R < 1$ 
+and $p$ a continuous seminorm on $V$. We hence see that the completion 
+$\widehat{\Sym}_{R^-}^{\bullet}(V)$ is bigger than $\widehat{\Sym}_R^{\bullet}
+(V)$ without the projective limit. This will become important in chapter 6.
 Now we can state two more propositions. Since we won't use them, we omit the 
-proofs here. They can be found in \cite{Waldmann:nuclear:2014}.
+proofs here. They can be found in \cite{waldmann:2014a}.
 \begin{proposition}[Schauder bases]
 	\label{Prop:LCAna:Bases}
 	Let $R \geq 0$ and $V$ a locally convex vector space.
@@ -1150,7 +1219,33 @@ proofs here. They can be found in \cite{Waldmann:nuclear:2014}.
 	  	$\Sym_R^{\bullet}(V)$ is strongly nuclear.
 	\end{propositionlist}
 \end{proposition}
-
+Nuclearity is an important and natural property in physics. Actually every 
+example of a locally convex vector space, which play a role in physics, is 
+either a normed space or nuclear. Therefore we want this property to be 
+conserved.
+\begin{remark}[The $\Tensor_R$-topology in the literature]
+	It seems that this topology is actually not such a new construction, but 
+	was already found and refound in the past. A very similar construction is 
+	due to Goodman \cite{goodman:1971a}, who did this for finite-dimensional 
+	Lie algebras. He studied differential operators on the Lie group, that 
+	means the universal enveloping algebra, which he topologized via the 
+	tensor algebra using basically the same weights. He also showed the 
+	continuity of the multiplication, but by showing that certain ideals are 
+	closed in this topology and divided them out. In this sense his approach 
+	is less explicit than ours and also doesn't apply to infinite-dimensional 
+	Lie algebras, where the proofs are more involved. Goodman was more 
+	interested in the representation theory which arises from this and also 
+	knew about the functoriality of his construction. However, he did not know 
+	about the deformation aspect behind it, since the ideas of deformation 
+	quantization did not exist at that time. It seems a bit like his work has 
+	gone more or less unnoticed, since nobody used this topology for surveys 
+	in Lie theory in the later time. A different construction for a topology 
+	which coincides with ours for $R = 1$ was moreover given before by 
+	Ra{\v{s}}evski{\u{i}} in \cite{rasevskii:1966a}, who also restricted to 
+	the	finite-dimensional case and used bases of his Lie algebra to construct 
+	the 	topology. In this sense, also his ideas are bounded to finite 
+	dimensions.
+\end{remark}
 
 
 

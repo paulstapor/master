@@ -217,8 +217,262 @@ of smooth functions $\Cinfty(M)$ on this Poisson manifold.
 \subsection{Quantum Mechanics}
 \label{subsec:chap2_Quantum}
 
+In quantum theory, the modelling of a physical system looks completely 
+different on the first sight. There is indeed no obvious way to describe how 
+the transition from classical to quantum mechanics happened, but it was a hard 
+and non-straightforward way which was taken in small steps of which some were 
+more or less obvious and some were ingenious guesses. Built up on first ideas 
+by Max Planck, who described the radiation of a black body, Albert Einstein, 
+who explained the photo-electrical effect and Niels Bohr, who solved the 
+problem of atomic spectra, a hand full of physicists including Max Born, 
+Werner Heisenberg, Erwin Schr\"odinger, Paul Dirac, Wolfgang Pauli and Pascual 
+Jordan developed a non-intuitive and complex but extremely well working theory, 
+which was able to give precise answers to very most of the open questions of 
+physics at that time. However, this theory, mainly risen between 1925 and 1928, 
+did not have a satisfying mathematical fundament. It took around ten more 
+years, until mathematicians, mainly John von Neumann, worked out a mathematical 
+theory for this and gave also a physical interpretation to their mathematical 
+formulation \cite{vonneumann:1996a}. Today, quantum mechanics is usually 
+introduced as a mathematical theory based on axioms and most of the textbooks 
+(at least most of the more mathematical ones) use this axiomatical approach to 
+explain the theory. Two very nice mathematical introductions are given by 
+Bongaarts \cite{bongaarts:2015a} and Hall \cite{hall:2013a}.
+
+
+The \emph{state} of a physical system is described by a vector $\psi$ on a 
+Hilbert space $\hilbert H$ and the \emph{observables} are self-adjoint (and 
+usually unbounded) operators on it. The spectrum of these operators describes 
+the \emph{measurable values}. The theory is probabilistic with a deterministic 
+time development: the pair ($A$, $\phi$) gives a probabilistic distribution, 
+from which we can calculate the probability to measure $A$ with the value $a 
+\in \spec (A)$ in the state $\phi$ using the spectral resolution of $A$. We 
+want to illustrate this again using the example of a particle in $\mathbb{R}^3$ 
+moving in a potential. Let $x = (x_1, x_2, x_3) \in \mathbb{R}^3$ be a 
+coordinate vector, then we have the so called Schr\"odinger representation 
+given by the Hilbert space $\hilbert{H} = \Lzwei(\mathbb{R}^3)$ of square 
+integrable functions with the Lebesgue measure. The state $\phi$ of a particle 
+is a time-variant element of this Hilbert space which fulfils the 
+Schr\"odinger equation
+\begin{equation}
+	\label{QM:Schroedinger}
+	i \hbar \frac{d}{dt} \psi(x, t)
+	=
+	\hat{H}
+	\psi(x, t)
+\end{equation}
+where $\hat{H}$ denotes the Hamilton operator which is given by
+\begin{equation}
+	\hat{H}
+	=
+	- \frac{\hbar^2}{2 m}
+	\Laplace + V(x).
+\end{equation}
+Similar to the Hamilton function in classical mechanics, the Hamilton operator 
+(or more precise: its spectrum) gives the energy of this system, $m$ is the 
+mass of the particle and $V$ the potential. The operators which correspond to 
+the coordinate $x_i$ and the momentum $p_j$ of the particle are given by
+\begin{align*}
+	\left( \hat{q}_i
+	\psi \right) (x, t)
+	&=
+	x_i
+	\psi(x, t)
+	\\
+	\left( \hat{p}_j
+	\psi \right) (x, t)
+	&=
+	- i \hbar 
+	\frac{\partial}{\partial x_j}
+	\psi(x, t).
+\end{align*}
+This turns Equation \eqref{QM:Schroedinger} into
+\begin{equation*}
+	i \hbar \frac{d}{dt} \psi(x, t)
+	=
+	\left( \frac{\hat{p}^2}{2m} + V(x) \right)
+	\psi(x, t)
+\end{equation*}
+and makes it therefore similar to the classical time evolution.
+Since the  state is a function of the coordinate $x$, one calls this the 
+representation in \emph{position space}. Sometimes it is more convenient to 
+describe the state in terms of its momentum and one changes to \emph{momentum 
+space} via a Fourier transformation. Both representations are equivalent, very 
+similar to the variables $q$ and $p$ in the Hamilton form of classical 
+mechanics, from which this picture is very much inspired. Unlike the classical 
+position and momentum observables being functions, the quantum mechanical 
+observables are \emph{operators} and do not commute any longer. One can check 
+these by calculating commutators and finds the so called Heisenberg or 
+\emph{classical commutations relations}
+\begin{align}
+	[p_i, p_j]
+	& =
+	[q_i, q_j]
+	=
+	0
+	\\
+	[q_i, p_j]
+	& =
+	i \hbar \delta_{ij}.
+\end{align}
+These relations are the starting point for all quantization theories. The main 
+goal is always to find an algebra which fulfils these (and maybe other) 
+relations and this is what makes a quantum algebra so different from a 
+classical one. Physically spoken, this noncommutativity means that a 
+measurement of the position of a particle influences its momentum and vice 
+versa, such that it becomes impossible to measure both, position and momentum, 
+at the same time with arbitrarily high precision. This still very vague 
+statement can be made precise using the Hilbert norm and the Cauchy-Schwarz 
+inequality and yields the famous Heisenberg uncertainty relation
+\begin{equation*}
+	\Laplace a_\psi
+	\Laplace b_\psi
+	\geq
+	\frac{1}{2}
+	\left|
+		\sp{\psi, [a,b] \psi}
+	\right|.
+\end{equation*}
+Here $a,b$ are observables and $\Laplace a_\psi, \Laplace b_\psi$ denotes the 
+standard deviation in the state $\psi$. For the position and momentum of a 
+particle, this gives
+\begin{equation*}
+	\Laplace p
+	\Laplace q
+	\geq
+	\frac{\hbar}{2}.
+\end{equation*}
+However, the Schr\"odinger picture is not the only possibility to describe the 
+behaviour of a quantum system. Heisenberg proposed a description in which not 
+the particles, but the observables are time variant. Since time evolution is 
+described by a one-parameter group of unitary operators we have
+\begin{equation*}
+	\psi(x,t)
+	=
+	U(t - t_0) \psi(x, t_0),
+\end{equation*}
+at least in systems where the interactions are not explicitly time dependent. 
+This makes it of course possible to apply unitary transformations to the states 
+as well as to the operators 
+\begin{equation*}
+	\psi(x)
+	=
+	\psi(x, t_0)
+	=
+	U(t_0 - t) \psi(x, t)
+	\quad \text{ and } \quad
+	A(t)
+	=
+	U(t_0 - t)
+	A
+	U(t - t_0).
+\end{equation*}
+this gives the so called \emph{Heisenberg picture}, in which the 
+time-dependence is not expressed ion the states but in the operators. Both 
+pictures are equivalent and it is just a question of convenience which one is 
+used. The unitary operators can be given more explicitly as
+\begin{equation*}
+	U(t - t_0)
+	=
+	\E^{- \frac{i}{\hbar} \hat{H} t},
+\end{equation*}
+since they describe the time evolution of solutions of the Schr\"odinger 
+equation. If one differentiates an operator with respect to $t$ in the 
+Heisenberg picture, one finds the \emph{Heisenberg equation}
+\begin{equation*}
+	\frac{d}{dt}
+	A(t)
+	=
+	\frac{1}{i \hbar}
+	[A(t), H].
+\end{equation*}
+This reminds us of course of the time evolution in terms of Poisson bracekts in 
+classical mechanics., which is the second staring point for a quantization 
+theories.
+
+
+
 \subsection{The Correspondence Principle}
 \label{subsec:chap2_Correspondence}
+
+We have had a brief overview over the mathematical formulation of classical and quantum mechanics. On one hand, if we compare the description of the state of a physical system (a point in the cotangent bundle of a manifold and a vector in a Hilbert space) we will see that they are very different. On the other hand, we have seen that both theories have certain things in common: the time evolution can be described in a similar way and we have position and momentum operators in the quantum theory which play a similar role to the position and momentum functions in the classical theory, except for their noncommutativity. Let us give a short list of the main concepts of both theories and compare them (a much more detailed list and discussion can be found in \cite{waldmann:2007a}):
+\bgroup
+\renewcommand{\arraystretch}{1.6}
+\begin{center}
+	\begin{tabular}
+	{lll}
+		~ 
+		&
+		\textbf{Classical} 
+		&
+		\textbf{Quantum}
+		\\
+		\parbox{4cm}
+		{
+			Observables
+		}
+		&
+		\parbox{5cm}{
+			Poisson-*-algebra $\algebra{A}_{Cl}$
+			of \\
+			smooth functions $\Cinfty(M)$ \\
+			on a Poisson manifold
+		}
+		&
+		\parbox{5cm}{
+			*-algebra $\algebra{A}_{QM}$
+			of self-adjoint operators
+			on a Hilbert space $\hilbert{H}$
+		}
+		\\
+		\parbox{4cm}
+		{
+			Measurable 
+			Values
+		}
+		&
+		$\spec (f) \subseteq \mathbb{R}$
+		&
+		$\spec (A) \subseteq \mathbb{R}$
+		\\
+		States
+		&
+		\parbox{5cm}{
+			Points in the
+			phase space
+		}
+		&
+		\parbox{5cm}{
+			Vectors in a
+			Hilbert space
+		}
+		\\
+		Time evolution
+		&
+		Hamilton function $H$
+		&
+		Hamilton operator $\hat{H}$
+		\\
+		\parbox{4cm}{
+			Infinitesimal\\
+			time evolution
+		}
+		&
+		$
+		\frac{d}{dt} f(t)
+		=
+		\{f(t), H\}
+		$
+		&
+		$\frac{d}{dt} A(t)
+		=
+		\frac{1}{i \hbar}
+		[A(t), H]
+		$
+	\end{tabular} 
+\end{center}
+\egroup
+
+This little table gives us a good hint: if one really wants to compare both theories, then we should understand the observable algebras as their main concepts rather than the states. We know that the classical theory emerges as a limit of many quantum system, such that the physical constant $\hbar$ becomes small enough to be neglected. How to construct correspondence the other way round is the question to which the theory of quantization addresses. Physicists used to solve this by "making a hat on the variables $p$ and $q$ and saying they the do not commute any more". Surprisingly, this approach, which is called \emph{canonical quantization} in physics works for most of the relevant cases, which is namely when we do not have high powers of $\hat p$ and $\hat q$ and not mixed terms. That this idea is however not canonical in a \emph{mathematical sense} is almost needless to say and of course it causes severe problems when higher and mixed terms in position and momentum appear. Those problems can be made precise and is known as the Groenewold-van Hove theorem (\cite{vanhove:1951a, groenewold:1946a}). To create a mathematical theory of quantization, other ways are needed and one needs to impose an ordering on the $\hat p$ and $\hat q$. Already Hermann Weyl knew about this problem and looked for ways how to solve it by proposing a symmetrization \cite{weyl:1931a} which leads to an integral formula for such terms. This ordering is now known as the Weyl ordering and his integral formula became the starting point for the theory of deformation quantization any years later.
 
 
 

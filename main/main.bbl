@@ -25,11 +25,27 @@
   envelope of a Lie algebra}.
 \newblock Funkcion. Anal. Priloz.  \textbf{1}.5 (1967), 1--14.
 
+\bibitem {bogfjellmo.dahmen.schmedig:2015a}
+\textsc{Bogfjellmo, G., Dahmen, R., Schmedig, A.: }\newblock \emph{Character
+  groups of Hopf algebras as infinite-dimensional Lie groups}.
+\newblock Preprint  \textbf{arXiv: 1410.6468 [math.DG]} (2015).
+
+\bibitem {bongaarts:2015a}
+\textsc{Bongaarts, P.: }\newblock \emph{Quantum Theory}.
+\newblock Springer-Verlag, Cham, Heidelberg, New York, Dordrecht, London, 2015.
+\newblock A Mathematical Approach.
+
 \bibitem {bordemann.neumaier.waldmann:1999a}
 \textsc{Bordemann, M., Neumaier, N., Waldmann, S.: }\newblock \emph{Homogeneous
   Fedosov star products on cotangent bundles II: GNS representations, the WKB
   expansion, traces, and applications}.
 \newblock J. Geom. Phys.  \textbf{29} (1999), 199--234.
+
+\bibitem {boseck.czichowski.rudolph:1981a}
+\textsc{Boseck, H., Czichowski, G., Rudolph, K.-P.: }\newblock \emph{Analysis
+  on topological groups - General Lie Theory}, vol.~37 in \emph{Teubner-Texte
+  zur Mathematik [Teubner Texts in Mathematics]}.
+\newblock BSB B. G. Teubner Verlagsgesellschaft, 1981.
 
 \bibitem {bourbaki:1989a}
 \textsc{Bourbaki, N.: }\newblock \emph{Lie Groups and Lie Algebras}.
@@ -82,10 +98,36 @@
 \newblock Uspekhi Mat. Nauk.  \textbf{5} (1950), 135--186.
 \newblock English version in ''AMS Translation'', series 1, volume 9, 1962.
 
+\bibitem {elkinani.oudadess:1997a}
+\textsc{El~kinani, A., Oudadess, M.: }\newblock \emph{Entire functions and
+  {$m$}-convex structure in commutative Baire algebras}.
+\newblock Bulletin of the Belgian Mathematical Society  \textbf{4}.5 (1997),
+  685 -- 687.
+
+\bibitem {esposito.stapor.waldmann:2015a:pre}
+\textsc{Esposito, C., Stapor, P., Waldmann, S.: }\newblock \emph{Convergence of
+  the Gutt Star Product}.
+\newblock Preprint  \textbf{arXiv:1509.09160} (2015), 33.
+
+\bibitem {gloeckner.neeb:2012a}
+\textsc{Gl{\"o}ckner, H., Neeb, K.-H.: }\newblock \emph{When unit groups of
+  continuous inverse algebras are regular Lie groups}.
+\newblock Studia Math.  \textbf{211} (2012), 95--109.
+
 \bibitem {goldberg:1956a}
 \textsc{Goldberg, K.: }\newblock \emph{The formal power series for
   log($e^xe^y$)}.
 \newblock Duke Math. J.  \textbf{23} (1956), 13--21.
+
+\bibitem {goodman:1971a}
+\textsc{Goodman, R.: }\newblock \emph{Differential Operators of Infinite Order
+  on a Lie Group, II}.
+\newblock Indiana Math. J.  \textbf{21} (1971), 383--409.
+
+\bibitem {groenewold:1946a}
+\textsc{Groenewold, H.~J.: }\newblock \emph{On the principles of elementary
+  quantum mechanics}.
+\newblock Physica  \textbf{12} (1946), 405--460.
 
 \bibitem {gutt:1983a}
 \textsc{Gutt, S.: }\newblock \emph{An Explicit $*$-Product on the Cotangent
@@ -96,6 +138,11 @@
 \textsc{Hall, B.~C.: }\newblock \emph{Lie Groups, Lie Algebras, and
   Representations}, vol. 222 in \emph{Graduate Texts in Mathematics}.
 \newblock Springer-Verlag, Berlin, Heidelberg, New York, 2003.
+
+\bibitem {hall:2013a}
+\textsc{Hall, B.~C.: }\newblock \emph{Quantum Theory for Mathematicians}, vol.
+  267 in \emph{Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, Heidelberg, Berlin, New York, 2013.
 
 \bibitem {hausdorff:1906a}
 \textsc{Hausdorff, F.: }\newblock \emph{Die symbolische {E}xponentialformel in
@@ -112,6 +159,10 @@
 \textsc{Jacobson, N.: }\newblock \emph{Lie algebras}.
 \newblock Dover Publications Inc., New York, 1979.
 \newblock Republication of the 1962 original.
+
+\bibitem {jarchow:1981a}
+\textsc{Jarchow, H.: }\newblock \emph{Locally Convex Spaces}.
+\newblock B. G. Teubner, Stuttdart, 1981.
 
 \bibitem {kathotia:1998a:pre}
 \textsc{Kathotia, V.: }\newblock \emph{Kontsevich's universal formula for
@@ -144,6 +195,15 @@
 \textsc{Pflaum, M.~J., Schottenloher, M.: }\newblock \emph{Holomorphic
   deformation of Hopf algebras and applications to quantum groups}.
 \newblock J. Geom. Phys.  \textbf{28} (1998), 31--44.
+
+\bibitem {rasevskii:1966a}
+\textsc{Ra\v{s}evski\u{i}, P.~K.: }\newblock \emph{Associative hyper-envelopes
+  of Lie algebras, their regular representations and ideals}.
+\newblock Trans. Mosc. Math. Soc.  \textbf{15} (1966), 3--54.
+
+\bibitem {rudin:1991a}
+\textsc{Rudin, W.: }\newblock \emph{Functional Analysis}.
+\newblock McGraw-Hill Book Company, New York, 2. edition, 1991.
 
 \bibitem {schoetz:2014a}
 \textsc{Sch{\"o}tz, M.: }\newblock \emph{Konvergente Sternprodukte auf
@@ -179,17 +239,47 @@
   exponential series}.
 \newblock Linear Algebra and its Applications  \textbf{121} (1989), 3--7.
 
+\bibitem {vanhove:1951a}
+\textsc{van Hove, L.: }\newblock \emph{Sur certaines repr{\'e}sentations
+  unitaires d'un groupe infini de transformations}.
+\newblock Mem. de l'Acad. Roy. de Belgique (Classe des Sci.)  \textbf{XXVI}
+  (1951), 61--102.
+
 \bibitem {varadarajan:1974a}
 \textsc{Varadarajan, V.~S.: }\newblock \emph{Lie Groups, Lie Algebras, and
   Their Representations}, vol. 102 in \emph{Graduate Texts in Mathematics}.
 \newblock Springer-Verlag, New York, 1974.
 
+\bibitem {vonneumann:1996a}
+\textsc{von Neumann, J.: }\newblock \emph{Mathematische {G}rundlagen der
+  {Q}uantenmechanik}.
+\newblock Springer-Verlag, Heidelberg, Berlin, New York, 2. edition, 1996.
+
+\bibitem {waldmann:2007a}
+\textsc{Waldmann, S.: }\newblock \emph{Poisson-{G}eometrie und
+  {D}eformationsquantisierung. {E}ine {E}inf{\"u}hrung}.
+\newblock Springer-Verlag, Heidelberg, Berlin, New York, 2007.
+
 \bibitem {waldmann:2014a}
 \textsc{Waldmann, S.: }\newblock \emph{A nuclear Weyl algebra}.
 \newblock J. Geom. Phys.  \textbf{81} (2014), 10--46.
 
+\bibitem {waldmann:2014a:script}
+\textsc{Waldmann, S.: }\newblock \emph{Operator-Algebraic Methods in Quantum
+  Mechanics}, 2014.
+\newblock Lecture notes in preparation.
+
 \bibitem {waldmann:2015a:script}
 \textsc{Waldmann, S.: }\newblock \emph{Differential Geometry}, 2015.
 \newblock Lecture notes in preparation.
+
+\bibitem {weyl:1931a}
+\textsc{Weyl, H.: }\newblock \emph{The Theory of Groups and Quantum Mechanics}.
+\newblock Dover, New York, 1931.
+
+\bibitem {zelazko:1994a}
+\textsc{{\.Z}elazko, W.: }\newblock \emph{Concerning entire functions in
+  $B_0$-algebras}.
+\newblock Studia Math.  \textbf{110}.3 (1994), 283--290.
 
 \end{thebibliography}
