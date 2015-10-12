@@ -391,10 +391,22 @@ theories.
 
 
 
-\subsection{The Correspondence Principle}
-\label{subsec:chap2_Correspondence}
+\section{Making Things Noncommutative: Quantization}
+\label{sec:chap2_Quantization}
 
-We have had a brief overview over the mathematical formulation of classical and quantum mechanics. On one hand, if we compare the description of the state of a physical system (a point in the cotangent bundle of a manifold and a vector in a Hilbert space) we will see that they are very different. On the other hand, we have seen that both theories have certain things in common: the time evolution can be described in a similar way and we have position and momentum operators in the quantum theory which play a similar role to the position and momentum functions in the classical theory, except for their noncommutativity. Let us give a short list of the main concepts of both theories and compare them (a much more detailed list and discussion can be found in \cite{waldmann:2007a}):
+\subsection{The Task}
+\label{subsec:chap2_Task}
+
+We have had a brief overview over the mathematical formulation of classical and 
+quantum mechanics. On one hand, if we compare the description of the state of a 
+physical system (a point in the cotangent bundle of a manifold and a vector in a 
+Hilbert space) we will see that they are very different. On the other hand, we 
+have seen that both theories have certain things in common: the time evolution 
+can be described in a similar way and we have position and momentum operators in 
+the quantum theory which play a similar role to the position and momentum 
+functions in the classical theory, except for their noncommutativity. Let us 
+give a short list of the main concepts of both theories and compare them (a much 
+more detailed list and discussion can be found in \cite{waldmann:2007a}):
 \bgroup
 \renewcommand{\arraystretch}{1.6}
 \begin{center}
@@ -471,18 +483,33 @@ We have had a brief overview over the mathematical formulation of classical and 
 	\end{tabular} 
 \end{center}
 \egroup
+This little table gives us a good hint: if one really wants to compare both 
+theories, then we should understand the observable algebras as the main 
+concepts rather than the states. We know that the classical theory emerges as a 
+limit of many quantum system, such that the physical constant $\hbar$ becomes 
+small enough to be neglected. How to construct correspondence the other way 
+round is the question to which the theory of quantization addresses. Physicists 
+used to solve this by "making a hat on the variables $p$ and $q$ and saying they 
+the do not commute any more". Surprisingly, this approach, which is called 
+\emph{canonical quantization} in physics works for most of the relevant cases, 
+which is namely when we do not have high powers of $\hat p$ and $\hat q$ and not 
+mixed terms. That this idea is however not canonical in a \emph{mathematical 
+sense} is almost needless to say and of course it causes severe problems when 
+higher and mixed terms in position and momentum appear. Those problems can be 
+made precise and is known as the Groenewold-van Hove theorem 
+(\cite{vanhove:1951a, groenewold:1946a}). To create a mathematical theory of 
+quantization, other ways are needed and one needs to impose an ordering on the 
+$\hat p$ and $\hat q$. Already Hermann Weyl knew about this problem and looked 
+for ways how to solve it by proposing a symmetrization \cite{weyl:1931a} scheme 
+for such terms. This ordering is now known as the Weyl ordering and his integral 
+formula became the starting point for the theory of deformation quantization any 
+years later.
 
-This little table gives us a good hint: if one really wants to compare both theories, then we should understand the observable algebras as their main concepts rather than the states. We know that the classical theory emerges as a limit of many quantum system, such that the physical constant $\hbar$ becomes small enough to be neglected. How to construct correspondence the other way round is the question to which the theory of quantization addresses. Physicists used to solve this by "making a hat on the variables $p$ and $q$ and saying they the do not commute any more". Surprisingly, this approach, which is called \emph{canonical quantization} in physics works for most of the relevant cases, which is namely when we do not have high powers of $\hat p$ and $\hat q$ and not mixed terms. That this idea is however not canonical in a \emph{mathematical sense} is almost needless to say and of course it causes severe problems when higher and mixed terms in position and momentum appear. Those problems can be made precise and is known as the Groenewold-van Hove theorem (\cite{vanhove:1951a, groenewold:1946a}). To create a mathematical theory of quantization, other ways are needed and one needs to impose an ordering on the $\hat p$ and $\hat q$. Already Hermann Weyl knew about this problem and looked for ways how to solve it by proposing a symmetrization \cite{weyl:1931a} which leads to an integral formula for such terms. This ordering is now known as the Weyl ordering and his integral formula became the starting point for the theory of deformation quantization any years later.
 
-
-
-\section{Making Things Noncommutative: Quantization}
-\label{sec:chap2_Quantization}
-
-\subsection{The Task}
-\label{subsec:chap2_Task}
-
-First, we want to take a step back and formalize, what we actually mean by a quantization. A quantization should be a correspondence
+\subsubsection{A Definition}
+First, we want to take a step back and formalize, what we actually mean by a 
+quantization. (See also \cite{esposito:2015a} for a good introduction to this.) 
+A quantization should be a correspondence
 \begin{equation*}
 	\mathcal{Q}
 	\colon
@@ -490,21 +517,331 @@ First, we want to take a step back and formalize, what we actually mean by a qua
 	\longrightarrow
 	\algebra{A}_{\mathrm{Quantum}}
 \end{equation*}
-between a commutative algebra $\algebra{A}_{\mathrm{Classical}}$ and a noncommutative algebra $\algebra{A}_{\mathrm{Quantum}}$, which is a ''bijection'' in some sense: all classical observables appear as classical limits from quantum observables, hence we should expect $\mathcal{Q}$ to be ''injective''. On the other hand, if the Quantum algebra was bigger than the classical algebra, the whole concept of quantization would be pointless, since we could never recover all observables and thus we want $\mathcal{Q}$ to be ''surjective''. Our correspondence should also keep somehow the physical meaning of our observables, or at least tell us, what the observable $\mathcal{Q}(f)$ is for some $f \in \algebra{A}_{\mathrm{Classical}}$. Moreover, $\mathcal{Q}^{-1}$ should behave like the classical limit, since this is the rather well-known direction of both. Finally, the correspondence should keep associative structures: the classical algebra is commutative and we want the product in our noncommutative algebra to correspond to the concatenation of operators on a Hilbert space which is associative, too.
+between a commutative algebra $\algebra{A}_{\mathrm{Classical}}$ and a 
+noncommutative algebra $\algebra{A}_{\mathrm{Quantum}}$, which is a 
+''bijection'' in some sense: all classical observables appear as classical 
+limits from quantum observables, hence we should expect $\mathcal{Q}$ to be 
+''injective''. On the other hand, if the Quantum algebra was bigger than the 
+classical algebra, the whole concept of quantization would be pointless, since 
+we could never recover all observables and thus we want $\mathcal{Q}$ to be 
+''surjective'', too. The correspondence should also keep somehow the physical 
+meaning of our observables, or at least tell us, what the observable 
+$\mathcal{Q}(f)$ should be for some $f \in \algebra{A}_{\mathrm{Classical}}$. 
+Moreover, $\mathcal{Q}^{-1}$ should behave like the classical limit, since this 
+is the rather well-known direction of both. Finally, the correspondence should 
+keep associative structures: the classical algebra is associative and we want 
+the product in our noncommutative algebra to correspond to the concatenation of 
+operators on a Hilbert space which is associative, too. One possibility of 
+formulating this would be the following: in the very prototype of a classical 
+observable algebra, a symplectic vector space of dimension $2n$, $n \in 
+\mathbb{N}$, we want that the following three axioms are fulfilled:
+\begin{enumerate}
+	\item[(Q1)]
+	We want a correspondence, which allows a representation in the standard 
+	picture of quantum mechanics:
+	$\mathcal{Q}(1) = \Unit$, 
+	$\mathcal{Q}(q^i) = \hat{q}^i$, 
+	$\mathcal{Q}(p_j) = - i \hbar \frac{\partial}{\partial q^j}$.
+	
+	\item[(Q2)]
+	The correspondence principle should be fulfilled:
+	$[\mathcal{Q}(f), \mathcal{Q}(g)] = i \hbar \mathcal{Q}(\{f, g\}), 
+	\ \forall f \in \algebra{A}_{\mathrm{Classical}}$.
+	
+	\item[(Q3)]
+	The correspondence $\mathcal{Q}$ should be linear.
+\end{enumerate}
+We finally split up the whole process: in a first step. we \emph{quantize} the 
+system and in a second step, we look for \emph{representations} on a Hilbert 
+space.
+\begin{center}
+    \begin{tikzpicture}
+    	\tikzstyle{myarrowq} = 
+    	[line width = 2.7mm,
+    	draw = {rgb:black,1;white,2},
+    	-triangle 45,
+    	shorten >= -3mm,
+    	postaction = {
+    		draw, 
+    		line width = 4.5mm, 
+    		shorten >=2.5mm,
+    		-},
+    	postaction = {
+    		decorate,
+    		decoration = {
+    			text along path, 
+    			text = {|\small \color{white}| Quantization}, 
+    			text align = {align = center},
+    			raise = -0.5ex
+    			}
+    		},
+    	]
+    	\tikzstyle{myarrowg} = 
+    	[line width = 2.5mm,
+    	draw = {rgb:black,1;white,2},
+    	-triangle 45,
+    	postaction = {
+    		draw, 
+    		line width = 4.5mm, 
+    		shorten >=5.5mm,
+    		-},
+    	postaction = {
+    		decorate,
+    		decoration = {
+    			text along path, 
+    			text = {|\normalsize \color{white}| Goal }, 
+    			text align = {align = center},
+    			raise = -0.7ex
+    			}
+    		}
+    	]
+    	\tikzstyle{myarrowr} = 
+    	[line width = 2.5mm,
+    	draw = {rgb:black,1;white,2},
+   		shorten >=-5mm,
+   		shorten <=-2mm,
+    	-triangle 45,
+    	postaction = {
+    		draw, 
+    		line width = 4.5mm, 
+    		shorten >=1.5mm,
+    		-},
+    	postaction = {
+    		decorate,
+    		decoration = {
+    			text along path, 
+    			text = {|\small \color{white}|Representations}, 
+    			text align = {align = left},
+    			raise = -0.4ex
+    			}
+    		}
+    	]
+    		    	
+        \matrix (m)[
+        matrix of nodes,
+        row sep=3em,
+        column sep=0pt,
+		ampersand replacement=\&
+        ]
+        {
+        	\parbox{4.5cm}
+        	{
+        	  \begin{center}
+        		{\small
+        			\textbf{Classical}
+        		}
+        		\\
+        		{\footnotesize
+        			Smooth functions on
+        			a Poisson manifold
+        		}
+        	  \end{center}
+        	}
+        	\&
+        	\&
+        	\parbox{4.5cm}
+        	{
+        	  \begin{center}
+        		{\small
+        			\textbf{Quantum}
+        		}
+        		\\
+        		{\footnotesize
+        			Self-adjoint operators
+        			on a Hilbert space
+        		}
+        	  \end{center}
+        	}
+        	\\
+        	\&
+        	\parbox{4.5cm}
+        	{
+        	  \begin{center}
+        		{\small
+        			\textbf{Intermediate}
+        		}
+        		\\
+        		{\footnotesize
+        			Abstract algebra
+        		}
+        	  \end{center}
+        	}
+        	\&
+        	\\
+        };
+        \draw
+        [-stealth]
+        (m-1-1) edge[myarrowg]					(m-1-3) 
+        		edge[myarrowq, bend right=30]	(m-2-2)
+        (m-2-2) edge[myarrowr, bend right=30]	(m-1-3)
+		;
+    \end{tikzpicture}
+\end{center}
 
-Finally, we split up the whole procedure: in a first step, we \emph{quantize} the system and in a second step, we look for \emph{representations} on a Hilbert space.
+
+\subsubsection{Different approaches}
+There exist various ideas about how to build up such a scheme. For example, in 
+axiomatic quantum field theory one usually wants the quantum algebra to be a 
+$C^*$-algebra (see for example \cite{haag:1993a} or 
+\cite{baer.ginoux.pfaeffle:2007a}. 
+The reason is that the bounded operators $\Bounded[H]$ naturally form such an 
+algebra and actually even more than that. Unfortunately, most of the operators 
+in quantum mechanics are unbounded. This problem is cured by looking at the 
+exponentiated operators
+\begin{equation*}
+	A
+	\longmapsto
+	\E^{i t A},
+	\quad t \in \mathbb{R}.
+\end{equation*}
+This way, one gets a one parameter group for $t \in \mathbb{R}$ and unitary 
+operators are clearly bounded. Moreover, there is a very nice correspondence 
+between $C^*$-algebras and locally compact Hausdorff spaces, which is known as 
+the Gelfand-Naimark theorem. Roughly stated, this means that there is a 
+equivalence of categories between locally compact Hausdorff spaces and 
+commutative $C^*$-algebras: every such space gives rise to a commutative algebra 
+of complex-valued functions, which form a $C^*$-algebra. On the other hand, from 
+every commutative $C^*$-algebra $\algebra{A}$ one can construct a locally 
+compact Hausdorff space $X$ such that $\algebra{A} \cong \Stetig(X)$ . This 
+correspondence can be extended to open and closed subsets of the space, to 
+homeomorphism, the compactification of the space, vector bundles and even more. 
+There is a strong link between commutative algebra and topology or geometry. One 
+possibility to think of a quantized system is to think of Continuous or smooth 
+functions on a noncommutative space, which then should correspond to a 
+noncommutative $C^*$-algebra. This idea leads to noncommutative geometry, which 
+is mostly due to Alain Connes, who developed these ideas. A very detailed, but 
+not necessarily easy to read book on this idea is due to Alain Connes 
+\cite{connes:1994a}, another and rather brief introduction is for example 
+\cite{varilly:2006a}.
 
 
-\subsection{Different approaches and Deformation Quantization}
-\label{subsec:chap2_Deformation}
+A different approach is due to geometric quantization, which tries to fulfil all 
+of the three axioms (Q1) - (Q3) from the previous part. Unfortunately, this 
+causes problems: Groenewold showed in \cite{groenewold:1946a}, that there can be 
+no correspondence which maps the Poisson bracket directly to the quantum 
+mechanical commutator, at least in the case where the observable algebra is 
+$\Cinfty(M)$ for a given Poisson manifold $M$. Thus one restricts to a smaller 
+algebra of observables, which is not problematic. This ideas are mostly due 
+to Souriau \cite{souriau:1970a}, Kostant and Segal.
+
+
+There are also different approaches. Berezin proposed a quantization for 
+particular K\"ahler manifolds, for example 
+\cite{berezin:1975a, berezin:1975b, berezin:1975c}. Still, new ideas keep coming 
+up, but in the following, we want to concentrate on a very particular concept of 
+quantization, which is called \emph{deformation quantization}.
 
 
 
-\section{Formal vs. Strict Deformation Quantization}
-\label{sec:chap2_FormalStrict}
+\section{Deformation Quantization}
+\label{sec:chap2_DQ}
+
+\subsection{The Concept}
+\label{subsec:chap2_Concept}
+
+Deformation quantization tries to realize the three points (Q1) - (Q3) from the 
+previous section, but weakens the third. If it is not possible to have such a 
+correspondence in an exact way, we will at least want to have it 
+\emph{asymptotically}. The motivating example is the Weyl quantization which we 
+already talked of. There are actually two such formulas, which can be given: the 
+first maps a function $f$ in the variables $q, p \in \mathbb{R}^n$ to a 
+differential operator on $\mathbb{R}^n$, which is actually a formal power series 
+in the parameter $\hbar$. For polynomial functions, this is series is a sum and 
+well defined, for general function this will really be a formal power series. 
+The second is given by an integral formula and also holds for another class of 
+functions (Schwartz functions), but one gets the first formula out of the second 
+as an asymptotic expansion for $\hbar \longrightarrow 0$. With these 
+quantizations, one can also define a product of two functions $f, g$, which will 
+necessarily take those two functions to a formal power series in $\hbar$. Moyal 
+showed that the commutator of this product can be understood as the quantum 
+mechanical commutator \cite{moyal:1949a}. The reason, why all of a sudden power 
+series appear, is the following: if one wants the correspondence principle to be 
+fulfilled and the multiplication of these quantized functions to be associative 
+(as needed for representations on the Hilbert space), one will necessarily get 
+higher and higher orders in $\hbar$ and one can never stop without loosing 
+associativity. Motivated by this observation, a group of mathematicians (mostly 
+from Dijon) started working out this idea of products as formal power series. 
+They understood quantization as a \emph{deformation} of the commutative product 
+by a formal parameter (mostly called $\hbar$, in this work we will call it $z$ 
+from now on), which controls the noncommutativity of the theory and which 
+fulfils some compatibility condition with the classical theory. This was the 
+hour of birth of deformation quantization. The main characters of this group 
+were Flato, Lichnerowicz, Bayen, Fr{\o}nsdal and Sternheimer, who published 
+their ideas in the late 70's \cite{bayen.et.al:1977a, bayen.et.al:1978a} and 
+gave the definition of a star product.
+\begin{definition}[Star Product]
+	\label{Def:StarProduct}
+	Let $(M, \{\cdot, \cdot\})$ be a Poisson manifold over a field 
+	$\mathbb{K}$ with $\mathbb{K}$ is $\mathbb{R}$ or  $\mathbb{C}$.
+	A star product on $M$ is a bilinear map
+	\begin{equation*}
+	    \star_z \colon 
+    	\Cinfty(M) 
+    	\times 
+	    \Cinfty(M) 
+	    \longrightarrow
+	    \Cinfty(M) \llbracket z \rrbracket
+	    , \
+	    (f,g) 
+	    \longmapsto 
+	    f \star_z g 
+	    =
+	    \sum\limits_{n = 0}^\infty 
+	    z^n C_n(f,g)
+	\end{equation*}
+	such that its $\mathbb{K}\llbracket z \rrbracket$-linear extension to 
+	$\Cinfty(M) \llbracket z \rrbracket$ fulfils the following properties:
+	\begin{definitionlist}
+		\item
+		$\star_z$ is associative.
+		
+		\item
+		$C_0(f, g) = f g,\ \forall_{f,g \in \Cinfty(M)}$ (Classical limit).
+		
+		\item
+		$C_1(f, g) - C_1(g, f)= z \{f, g\},\ \forall_{f,g \in \Cinfty(M)}$
+		(Semi-classical limit).
+		
+		\item
+		$1 \star_z f = f \star_z 1 = f,\ \forall_{f \in \Cinfty(M)}$
+	\end{definitionlist}
+	is an associative product on
+	$\Cinfty(M)\llbracket z \rrbracket$, all $C_n$ are bidifferential 
+	operators and $C_0(f,g) = fg$ and $C_1(f,g) - C_1(g,f) = z \{f, g\}$ 
+	holds for all $f,g \in \Cinfty(M)$.
+\end{definition}
+Note that this definition is purely algebraic, since we nowhere ask for the 
+convergence of this power series. Hence the theory which developed from this in 
+the following years is also a mostly algebraic theory. There were still the 
+integral formulas around for which one can also make sense of convergence, but 
+as already said, on has to restrict the class of functions, which one can 
+multiply drastically, for example to the Schwartz space. However, these two 
+articles were the starting point for what has now become a rich and fruitful 
+theory.
+
+
 
 \subsection{A Mathematical Theory}
 \label{subsec:chap2_MathTheory}
+Deformation quantization is a good example for a mathematical theory, which is 
+motivated by a physical idea. It is not really talking about a physical problem, 
+since the world does not need to be quantized -- it already is. It is talking 
+about a mathematical problem: how to recover the quantized (and very counter-
+intuitive) mathematics, which describe the world out of the classical (and much 
+more intuitive) mathematics, which describe the world on our scale? Deformation 
+quantization tries to give an answer to that, but unfortunately is (at its 
+present state) still far from doing so completely. Like many such theories, it 
+started of from a more or less precise physical background and developed into 
+something quite different: a mostly algebraic, purely mathematical theory. That 
+is also a bit due to the fact that the questions, which had to be answered in 
+the beginning, were very hard and took a lot of time. Meanwhile, mathematicians 
+were interested in the purely mathematical aspect of the theory and started 
+working on that. We want to give a short overview over those questions and their 
+answers very briefly and point out a little the history of this theory.
+
+
+
+
 Example how Physics gives rise to new Math,
 Including a short history,
 Things got stuck somewhere
