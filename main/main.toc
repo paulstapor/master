@@ -6,8 +6,8 @@
 \contentsline {subsection}{\numberline {2.1.2}Quantum Mechanics}{11}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}The Correspondence Principle}{13}{subsection.2.1.3}
 \contentsline {section}{\numberline {2.2}Making Things Noncommutative: Quantization}{14}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Noncommutative Geometry}{14}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Deformation Quantization}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The Task}{14}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Different approaches and Deformation Quantization}{14}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Formal vs. Strict Deformation Quantization}{14}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}A Mathematical Theory}{14}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}From Formal to Strict}{14}{subsection.2.3.2}
@@ -24,7 +24,8 @@
 \contentsline {subsubsection}{Goldberg's theorems}{23}{section*.2}
 \contentsline {subsubsection}{Bernoulli numbers}{24}{section*.3}
 \contentsline {subsubsection}{BCH up to first order}{24}{section*.4}
-\contentsline {section}{\numberline {3.4}The Equality of the Star Products}{25}{section.3.4}
+\contentsline {subsubsection}{Thompson's estimates on the coefficients}{25}{section*.5}
+\contentsline {section}{\numberline {3.4}The Equality of the Star Products}{27}{section.3.4}
 \contentsline {chapter}{\numberline {4}Formulas for the Gutt star product}{33}{chapter.4}
 \contentsline {section}{\numberline {4.1}Formulas for the Gutt Star Product}{33}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}A Monomial with a Linear Term}{33}{subsection.4.1.1}
@@ -39,11 +40,11 @@
 \contentsline {subsection}{\numberline {5.2.3}The projective tensor product}{49}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}A Topology for the Gutt Star Product}{52}{subsection.5.2.4}
 \contentsline {section}{\numberline {5.3}Continuity results for the Gutt star product}{55}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{56}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Continuity of the product}{57}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Dependence on the formal parameter}{61}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Representations}{62}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}Functoriality}{64}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{66}{section.5.4}
+\contentsline {section}{\numberline {5.4}Alternative topologies and an optimal result}{67}{section.5.4}
 \contentsline {chapter}{\numberline {6}Nilpotent Lie algebras}{71}{chapter.6}
 \contentsline {section}{\numberline {6.1}The projective limit}{72}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Continuity of the Product}{72}{subsection.6.1.1}
@@ -56,7 +57,7 @@
 \contentsline {subsection}{\numberline {6.4.3}A new continuity result}{82}{subsection.6.4.3}
 \contentsline {chapter}{\numberline {7}The Hopf algebra structure}{85}{chapter.7}
 \contentsline {section}{\numberline {7.1}Everything works}{85}{section.7.1}
-\contentsline {chapter}{Appendices}{89}{section*.9}
+\contentsline {chapter}{Appendices}{89}{section*.10}
 \contentsline {chapter}{\numberline {A}Important theorems in Lie theory}{91}{Appendix.1.A}
 \contentsline {section}{\numberline {A.1}The Poincar\'e-Birkhoff-Witt theorem}{91}{section.1.A.1}
 \contentsline {section}{\numberline {A.2}The Integral form of Baker-Campbell-Hausdorff}{91}{section.1.A.2}
@@ -66,4 +67,4 @@
 \contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{95}{Appendix.1.C}
 \contentsline {section}{\numberline {C.1}Particular Lie algebras}{95}{section.1.C.1}
 \contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{95}{section.1.C.2}
-\contentsline {chapter}{Bibliography}{97}{chapter*.10}
+\contentsline {chapter}{Bibliography}{97}{chapter*.11}

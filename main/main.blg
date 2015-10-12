@@ -14,53 +14,56 @@ A level-1 auxiliary file: appendixC.aux
 The style file: ../../texmf/bibtex/bib/bst/chairx.bst
 Database file #1: ../../bibfiles/bib/dqbook.bib
 Database file #2: ../../bibfiles/bib/dqarticle.bib
+I was expecting a `,' or a `}'---line 9882 of file ../../bibfiles/bib/dqarticle.bib
+ :   
+ :   year =         {1987},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Database file #3: ../../bibfiles/bib/dqthesis.bib
 Database file #4: ../../bibfiles/bib/preprints.bib
 Database file #5: ../../bibfiles/bib/misc.bib
 Database file #6: ../../bibfiles/bib/script.bib
-Warning--I didn't find a database entry for "Rudin:blue"
-Warning--I didn't find a database entry for "wojtynski:2000a"
-Warning--I didn't find a database entry for "mueller:2000a"
 Warning--I didn't find a database entry for "mueller:XXXXa"
-You've used 55 entries,
+Warning--I didn't find a database entry for "wojtynski:2000a"
+You've used 58 entries,
             2314 wiz_defined-function locations,
-            795 strings with 10389 characters,
-and the built_in function-call counts, 15210 in all, are:
-= -- 1630
-> -- 480
+            809 strings with 10751 characters,
+and the built_in function-call counts, 16005 in all, are:
+= -- 1719
+> -- 506
 < -- 7
-+ -- 210
-- -- 148
-* -- 1223
-:= -- 2558
-add.period$ -- 122
-call.type$ -- 55
-change.case$ -- 188
++ -- 221
+- -- 156
+* -- 1289
+:= -- 2695
+add.period$ -- 128
+call.type$ -- 58
+change.case$ -- 198
 chr.to.int$ -- 0
-cite$ -- 55
-duplicate$ -- 687
-empty$ -- 1339
-format.name$ -- 148
-if$ -- 3240
+cite$ -- 58
+duplicate$ -- 721
+empty$ -- 1404
+format.name$ -- 156
+if$ -- 3410
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 70
-newline$ -- 235
-num.names$ -- 110
-pop$ -- 227
+int.to.str$ -- 58
+missing$ -- 73
+newline$ -- 247
+num.names$ -- 116
+pop$ -- 235
 preamble$ -- 1
-purify$ -- 184
+purify$ -- 194
 quote$ -- 0
-skip$ -- 341
+skip$ -- 364
 stack$ -- 0
-substring$ -- 788
-swap$ -- 162
+substring$ -- 824
+swap$ -- 171
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 178
+type$ -- 190
 warning$ -- 0
-while$ -- 152
-width$ -- 57
-write$ -- 553
-(There were 4 warnings)
+while$ -- 159
+width$ -- 60
+write$ -- 580
+(There was 1 error message)

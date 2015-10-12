@@ -35,9 +35,11 @@
 \backcite {thompson:1982a}{{22}{iv}{equation.3.3.7}}
 \backcite {oeis:A027641, oeis:A027642}{{24}{3.3.3}{equation.3.3.13}}
 \backcite {arakawa.ibukiyama.kaneko:2014a}{{24}{3.3.3}{equation.3.3.14}}
-\backcite {bordemann.neumaier.waldmann:1999a}{{25}{3.4.{1}}{remark.1}}
-\backcite {aigner:2000a}{{28}{V}{equation.3.4.5}}
-\backcite {carlitz:1968a}{{28}{V}{equation.3.4.5}}
+\backcite {newman.thompson:1987a}{{26}{3.3.3}{equation.3.3.17}}
+\backcite {thompson:1989a}{{26}{3.3.3}{equation.3.3.17}}
+\backcite {bordemann.neumaier.waldmann:1999a}{{27}{3.4.{1}}{remark.1}}
+\backcite {aigner:2000a}{{29}{VI}{equation.3.4.5}}
+\backcite {carlitz:1968a}{{29}{VI}{equation.3.4.5}}
 \backcite {gutt:1983a}{{35}{4.1.{4}}{remark.4}}
 \backcite {dixmier:1977a}{{35}{4.1.{4}}{remark.4}}
 \backcite {neumaier:1998a}{{35}{4.1.{4}}{remark.4}}
@@ -45,7 +47,7 @@
 \backcite {berezin:1967a}{{35}{4.1.{4}}{remark.4}}
 \backcite {rudin:1991a}{{47}{5.2.1}{subsection.5.2.1}}
 \backcite {rudin:1991a}{{47}{5.2.1}{Item.24}}
-\backcite {rudin:1991a}{{47}{XIV}{proof.14}}
+\backcite {rudin:1991a}{{47}{XV}{proof.15}}
 \backcite {boseck.czichowski.rudolph:1981a}{{48}{i}{Item.29}}
 \backcite {boseck.czichowski.rudolph:1981a}{{49}{i}{equation.5.2.3}}
 \backcite {gloeckner.neeb:2012a}{{49}{ii}{Item.30}}
@@ -58,15 +60,13 @@
 \backcite {waldmann:2014a}{{54}{5.2.4}{definition.14}}
 \backcite {goodman:1971a}{{55}{5.2.{17}}{remark.17}}
 \backcite {rasevskii:1966a}{{55}{5.2.{17}}{remark.17}}
-\backcite {thompson:1982a}{{56}{XIX}{proof.19}}
-\backcite {thompson:1989a}{{56}{XIX}{proof.19}}
-\backcite {Rudin:blue}{{62}{5.3.{8}}{remark.8}}
-\backcite {wojtynski:2000a}{{68}{5.4}{proof.31}}
-\backcite {mueller:2000a}{{68}{5.4}{proof.31}}
-\backcite {pflaum.schottenloher:1998a}{{68}{5.4.{6}}{remark.6}}
-\backcite {waldmann:2014a}{{71}{ii}{Item.65}}
+\backcite {rudin:1991a}{{62}{5.3.{8}}{remark.8}}
+\backcite {wojtynski:1998a}{{69}{5.4}{proof.32}}
+\backcite {mueller:1994a}{{69}{5.4}{proof.32}}
+\backcite {pflaum.schottenloher:1998a}{{69}{5.4.{6}}{remark.6}}
+\backcite {waldmann:2014a}{{71}{ii}{Item.63}}
 \backcite {waldmann:2014a}{{78}{6.3}{section.6.3}}
-\backcite {waldmann:2014a}{{79}{6.3}{proof.41}}
+\backcite {waldmann:2014a}{{79}{6.3}{proof.42}}
 \backcite {mueller:XXXXa}{{80}{6.4.1}{subsection.6.4.1}}
 \backcite {wojtynski:2000a}{{80}{6.4.1}{equation.6.4.2}}
 \backcite {mitiagin.rolewicz.zelazko:1962a}{{81}{6.4.2}{equation.6.4.5}}

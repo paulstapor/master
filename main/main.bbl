@@ -184,12 +184,21 @@
   functions in $B_0$-algebras}.
 \newblock Studia Math.  \textbf{21} (1962), 291--306.
 
+\bibitem {mueller:1994a}
+\textsc{M{\"u}ller, V.: }\newblock \emph{Nil, Nilpotent and PI-Algebras}.
+\newblock Functional Analysis and Operator Theory  \textbf{30} (1994).
+
 \bibitem {neumaier:1998a}
 \textsc{Neumaier, N.: }\newblock \emph{Sternprodukte auf
   {K}otangentenb{\"{u}}ndeln und {O}rdnungs-{V}orschriften}.
 \newblock master thesis, Fakult{\"{a}}t f{\"{u}}r Physik,
   Albert-Ludwigs-Universit{\"{a}}t, Freiburg, 1998.
 \newblock Available at \texttt{http://idefix.physik.uni-freiburg.de/\~{}nine/}.
+
+\bibitem {newman.thompson:1987a}
+\textsc{Newman, M., Thompson, R.~C.: }\newblock \emph{Numerical Values of
+  Goldberg's Coefficients in the Series $\log(e^x e^y)$}.
+\newblock Mathematics of Computation  \textbf{48}.177.
 
 \bibitem {pflaum.schottenloher:1998a}
 \textsc{Pflaum, M.~J., Schottenloher, M.: }\newblock \emph{Holomorphic
@@ -276,6 +285,11 @@
 \bibitem {weyl:1931a}
 \textsc{Weyl, H.: }\newblock \emph{The Theory of Groups and Quantum Mechanics}.
 \newblock Dover, New York, 1931.
+
+\bibitem {wojtynski:1998a}
+\textsc{Wojtynski, W.: }\newblock \emph{Quasi-nilpotent {B}anach-{L}ie-Algebras
+  are {B}aker-{C}ampbell-{H}ausdorff}.
+\newblock Journal of Functional Analysis  \textbf{153} (1998), 405--413.
 
 \bibitem {zelazko:1994a}
 \textsc{{\.Z}elazko, W.: }\newblock \emph{Concerning entire functions in

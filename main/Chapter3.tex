@@ -1181,6 +1181,131 @@ we want to give the first numbers of this series here.
 \end{remark}
 
 
+\subsubsection{Thompson's estimates on the coefficients}
+We know that we can put the BCH series into the form of Equation 
+\eqref{Alg:BCHinGoldbergThompson}:
+\begin{equation}
+	\bch{\xi}{\eta}
+	=
+	\sum\limits_{n = 1}^{\infty}
+	\sum\limits_{|w| = n}
+	\frac{g_w}{n} [w].
+\end{equation}
+We will need estimates on the coefficients $g_w$ in order to show the 
+continuity of the Gutt star product. The first simple estimate (together with a 
+table of the first Goldberg coefficients and good explanation of Goldberg 
+polynomials) was given by Newman and Thompson in \cite{newman.thompson:1987a}. 
+The idea behind was an analysis of the structure of the polynomials an its 
+roots. This allows to put tight bounds on the values of $|g_w|$. We will need a 
+bit more than that, but luckily, Thompson gave an estimate in exactly the form 
+we will need in \cite{thompson:1989a}.
+\begin{proposition}
+	\label{Alg:Prop:ThompsonsEstimate}
+	Let $n \in \mathbb{N}$ and $g_w$ denotes the Goldberg coefficient of a 
+	word in two letters. Then we have the estimate
+	\begin{equation}
+		\label{Alg:ThompsonsEstimate}
+		\sum\limits_{|w| = n}
+		\left| g_w \right|
+		\leq
+		2
+	\end{equation}
+\end{proposition}
+\begin{proof}
+	We want to sketch the proof here for convenience. One can see from the 
+	recursion formula \eqref{Alg:GoldbergPolynomials}, that the $G_s(t)$ are 
+	symmetric around $z = \frac{1}{2}$ (maybe up to a factor $t - \frac{1}
+	{2}$): doing a shift $t \mapsto t \frac{1}{2}$, they are of the form
+	\begin{equation*}
+		G_s(t)
+		=
+		\frac{1}{s!}
+		\frac{d}{dt}(t^2 - \frac{1}{4})
+		\cdots
+		\frac{d}{dt}(t^2 - \frac{1}{4}).
+	\end{equation*}
+	Their roots lie all in the interval $(0,1)$ and the polynomials are normed 
+	(which can also be seen from the recursion formula). This means that they 
+	can be written (in the shifted form) as
+	\begin{equation*}
+		G_s(t)
+		=
+		t^{s_0}
+		(t + t_{s_1})(t - t_{s_1})
+		\cdots
+		(t + t_{s_r})(t - t_{s_r})
+	\end{equation*}
+	with $r = \lfloor \frac{s-1}{2} \rfloor$, $t_{s_i} \in (0, \frac{1}{2})$ 
+	and 	$s_0 = 0$ if $s$ is odd and $s_0 = 1$ if $s$ is even. The symmetric, 
+	quadratic terms are bounded in their absolute value by $\frac{1}{4}$ and 
+	the linear term by $\frac{1}{2}$, since $t \in (-\frac{1}{2}, \frac{1}
+	{2})$. Hence we have the estimate $|G_s(t)| \leq 2^{-s + 1}$ for the 
+	integral domain. Now note that integration by parts yields
+	\begin{equation*}
+		\int\limits_{0}^1
+		t^a (t-1)^b
+		dt
+		=
+		\frac{a! b!}{(a + b + 1)!}.
+	\end{equation*}
+	We can put this together to get an estimate for $g_w = c_{\xi, \eta}(s_1, 
+	\ldots, s_m)$. Note again by $n = s_1 + \cdots + s_m$. A slight 
+	rearranging of the factor from integration by 
+	parts using the fact that one of the numbers $m' = \frac{m}{2}$ and $m'' = 
+	\frac{m - 1}{2}$ is not an integer and will therefore be rounded downwards 
+	gives
+	\begin{align*}
+		|g_w|
+		& \leq
+		2^{-n + m}
+		\frac{m' ! m'' !}{(m' + m'' + 1)!}
+		\\
+		& =
+		2^{-n + m}
+		\frac{1}{m}
+		\binom{m-1}{m'}^{-1}.
+	\end{align*}
+	Now we just need to sum all the expressions corresponding corresponding to 
+	words of the length $n$. Note, that the words can start with $\xi$ or 
+	$\eta$ and we therefore get a factor $2$ in front. The number of possible 
+	arrangements $(s_1, \ldots, s_m)$ is due to a combinatorial argument 
+	($n - m$ balls into $m$ buckets, since every bucket must contains at least 
+	one ball) given by $\binom{n-1}{m-1}$ and we have to sum over all possible	
+	$m$. We get
+	\begin{align*}
+		\sum\limits_{|w| = n}
+		|g_w|
+		& \leq
+		\sum\limits_{m = 1}^n
+		2 \binom{n-1}{m-1}
+		2^{-n + m} \frac{1}{m}
+		\binom{m-1}{m'}^{-1}
+		\\
+		& =
+		2^{-n + 1}
+		\sum\limits_{m = 1}^n
+		\binom{n-1}{m-1}
+		\underbrace{
+			2^m
+			\frac{1}{m}
+			\binom{m-1}{m'}^{-1}
+		}_{ \leq 2 \ (*)}
+		\\
+		& \leq
+		2^{-n + 2}
+		\sum\limits_{m = 1}^n
+		\binom{n-1}{m-1}
+		\\
+		& =
+		2.
+	\end{align*}
+	At $(*)$ we used the fact that $\binom{m-1}{m'}$ is the biggest term (or 
+	one of the two) biggest terms in the binomial expansion of $(1 + 1)^{m-1}$ 
+	and hence $m \binom{m-1}{m'} \geq 2^{m-1}$. Hence, the statement is 
+	proven.
+\end{proof}
+
+
 
 \section{The Equality of the Star Products}
 \label{sec:chap3_StarProductProof}

@@ -5,8 +5,8 @@
 \BOOKMARK [2][-]{subsection.2.1.2}{Quantum Mechanics}{section.2.1}% 5
 \BOOKMARK [2][-]{subsection.2.1.3}{The Correspondence Principle}{section.2.1}% 6
 \BOOKMARK [1][-]{section.2.2}{Making Things Noncommutative: Quantization}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{Noncommutative Geometry}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{Deformation Quantization}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{The Task}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Different approaches and Deformation Quantization}{section.2.2}% 9
 \BOOKMARK [1][-]{section.2.3}{Formal vs. Strict Deformation Quantization}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.3.1}{A Mathematical Theory}{section.2.3}% 11
 \BOOKMARK [2][-]{subsection.2.3.2}{From Formal to Strict}{section.2.3}% 12
@@ -52,7 +52,7 @@
 \BOOKMARK [2][-]{subsection.6.4.3}{A new continuity result}{section.6.4}% 52
 \BOOKMARK [0][-]{chapter.7}{The Hopf algebra structure}{}% 53
 \BOOKMARK [1][-]{section.7.1}{Everything works}{chapter.7}% 54
-\BOOKMARK [0][-]{section*.9}{Appendices}{}% 55
+\BOOKMARK [0][-]{section*.10}{Appendices}{}% 55
 \BOOKMARK [0][-]{Appendix.1.A}{Important theorems in Lie theory}{}% 56
 \BOOKMARK [1][-]{section.1.A.1}{The Poincar\351-Birkhoff-Witt theorem}{Appendix.1.A}% 57
 \BOOKMARK [1][-]{section.1.A.2}{The Integral form of Baker-Campbell-Hausdorff}{Appendix.1.A}% 58
@@ -62,4 +62,4 @@
 \BOOKMARK [0][-]{Appendix.1.C}{More explicit formulas for the Gutt star product}{}% 62
 \BOOKMARK [1][-]{section.1.C.1}{Particular Lie algebras}{Appendix.1.C}% 63
 \BOOKMARK [1][-]{section.1.C.2}{An Idea for a Mathematica Code}{Appendix.1.C}% 64
-\BOOKMARK [0][-]{chapter*.10}{Bibliography}{}% 65
+\BOOKMARK [0][-]{chapter*.11}{Bibliography}{}% 65

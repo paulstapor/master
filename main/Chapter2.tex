@@ -479,10 +479,23 @@ This little table gives us a good hint: if one really wants to compare both theo
 \section{Making Things Noncommutative: Quantization}
 \label{sec:chap2_Quantization}
 
-\subsection{Noncommutative Geometry}
-\label{subsec:chap2_NoncommGeometry}
+\subsection{The Task}
+\label{subsec:chap2_Task}
 
-\subsection{Deformation Quantization}
+First, we want to take a step back and formalize, what we actually mean by a quantization. A quantization should be a correspondence
+\begin{equation*}
+	\mathcal{Q}
+	\colon
+	\algebra{A}_{\mathrm{Classical}}
+	\longrightarrow
+	\algebra{A}_{\mathrm{Quantum}}
+\end{equation*}
+between a commutative algebra $\algebra{A}_{\mathrm{Classical}}$ and a noncommutative algebra $\algebra{A}_{\mathrm{Quantum}}$, which is a ''bijection'' in some sense: all classical observables appear as classical limits from quantum observables, hence we should expect $\mathcal{Q}$ to be ''injective''. On the other hand, if the Quantum algebra was bigger than the classical algebra, the whole concept of quantization would be pointless, since we could never recover all observables and thus we want $\mathcal{Q}$ to be ''surjective''. Our correspondence should also keep somehow the physical meaning of our observables, or at least tell us, what the observable $\mathcal{Q}(f)$ is for some $f \in \algebra{A}_{\mathrm{Classical}}$. Moreover, $\mathcal{Q}^{-1}$ should behave like the classical limit, since this is the rather well-known direction of both. Finally, the correspondence should keep associative structures: the classical algebra is commutative and we want the product in our noncommutative algebra to correspond to the concatenation of operators on a Hilbert space which is associative, too.
+
+Finally, we split up the whole procedure: in a first step, we \emph{quantize} the system and in a second step, we look for \emph{representations} on a Hilbert space.
+
+
+\subsection{Different approaches and Deformation Quantization}
 \label{subsec:chap2_Deformation}
 
 

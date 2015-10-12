@@ -745,6 +745,7 @@ need a last definition:
     		\right)
         & =
         \sum\limits_{J \in \mathcal{G}_{k + \ell - n}(k, \ell)}
+        \frac{1}{J!}
         \sum\limits_{\sigma \in S_k}
         \sum\limits_{\tau \in S_{\ell}}
         \prod_{i=1}^{l + \ell - n}
@@ -757,6 +758,30 @@ need a last definition:
             \ldots, \xi_{\sigma(a_1 + \cdots + a_i)} \big)
         \big( \eta_{\tau(b_1 + \cdots + b_{i - 1} + 1)}, 
             \ldots, \eta_{\tau(b_1 + \cdots + b_i)} \big).
+        \\
+        \nonumber
+        & =
+        \frac{1}{(k + \ell - n)!}
+        \sum\limits_{\sigma \in S_k, \tau \in S_{\ell}}
+        \sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
+            a_i + b_i \geq 1 \\
+            a_1 + \cdots + a_r = k \\
+            b_1 + \cdots + b_r = \ell
+          }
+        }
+        \\
+        \nonumber
+        & \qquad
+        \bchtilde{a_i}{b_i}
+        {\xi_{\sigma(1)}, \ldots, \xi_{\sigma(a_1)}}
+        {\eta_{\tau(1)}, \ldots, \eta_{\tau(b_1)}}
+        \cdots
+        \\
+        \label{Formulas:2MonomialsFormula22}
+        & \qquad
+        \bchtilde{a_r}{b_r}
+        {\xi_{\sigma(k - a_r + 1)}, \ldots, \xi_{\sigma(k)}}
+        {\eta_{\tau(\ell - b_r + 1)}, \ldots, \eta_{\tau(\ell)}}.
 	\end{align}
 \end{proposition}
 \begin{proof}
