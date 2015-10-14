@@ -20,10 +20,45 @@
 \textsc{Baker, H.: }\newblock \emph{Alternants and Continuous Groups}.
 \newblock Proc. Lond. Math. Soc.  \textbf{3} (1905), 24--47.
 
+\bibitem {baer.ginoux.pfaeffle:2007a}
+\textsc{B{\"a}r, C., Ginoux, N., Pf{\"a}ffle, F.: }\newblock \emph{Wave
+  equations on {L}orentzian manifolds and quantization}.
+\newblock \emph{ESI Lectures in Mathematics and Physics}.
+\newblock European Mathematical Society (EMS), Z\"urich, 2007.
+
+\bibitem {bayen.et.al:1977a}
+\textsc{Bayen, F., Flato, M., Fr{{\o}}nsdal, C., Lichnerowicz, A., Sternheimer,
+  D.: }\newblock \emph{Quantum Mechanics as a Deformation of Classical
+  Mechanics}.
+\newblock Lett. Math. Phys.  \textbf{1} (1977), 521--530.
+
+\bibitem {bayen.et.al:1978a}
+\textsc{Bayen, F., Flato, M., Fr{{\o}}nsdal, C., Lichnerowicz, A., Sternheimer,
+  D.: }\newblock \emph{Deformation Theory and Quantization}.
+\newblock Ann. Phys.  \textbf{111} (1978), 61--151.
+
 \bibitem {berezin:1967a}
 \textsc{Berezin, F.~A.: }\newblock \emph{Some remarks on the associative
   envelope of a Lie algebra}.
 \newblock Funkcion. Anal. Priloz.  \textbf{1}.5 (1967), 1--14.
+
+\bibitem {berezin:1975b}
+\textsc{Berezin, F.~A.: }\newblock \emph{General Concept of Quantization}.
+\newblock Commun. Math. Phys.  \textbf{40} (1975), 153--174.
+
+\bibitem {berezin:1975a}
+\textsc{Berezin, F.~A.: }\newblock \emph{Quantization}.
+\newblock Math. USSR Izvestija  \textbf{8}.5 (1975), 1109--1165.
+
+\bibitem {berezin:1975c}
+\textsc{Berezin, F.~A.: }\newblock \emph{Quantization in Complex Symmetric
+  Spaces}.
+\newblock Math. USSR Izvestija  \textbf{9}.2 (1975), 341--379.
+
+\bibitem {bertelson.cahen.gutt:1997a}
+\textsc{Bertelson, M., Cahen, M., Gutt, S.: }\newblock \emph{Equivalence of
+  Star Products}.
+\newblock Class. Quant. Grav.  \textbf{14} (1997), A93--A107.
 
 \bibitem {bogfjellmo.dahmen.schmedig:2015a}
 \textsc{Bogfjellmo, G., Dahmen, R., Schmedig, A.: }\newblock \emph{Character
@@ -40,6 +75,11 @@
   Fedosov star products on cotangent bundles II: GNS representations, the WKB
   expansion, traces, and applications}.
 \newblock J. Geom. Phys.  \textbf{29} (1999), 199--234.
+
+\bibitem {bordemann.waldmann:1997a}
+\textsc{Bordemann, M., Waldmann, S.: }\newblock \emph{A Fedosov Star Product of
+  Wick Type for K{\"{a}}hler Manifolds}.
+\newblock Lett. Math. Phys.  \textbf{41} (1997), 243--253.
 
 \bibitem {boseck.czichowski.rudolph:1981a}
 \textsc{Boseck, H., Czichowski, G., Rudolph, K.-P.: }\newblock \emph{Analysis
@@ -71,14 +111,45 @@
   applications}.
 \newblock J. Math. Phys.  \textbf{50} (2009).
 
+\bibitem {cattaneo.felder.tomassini:2002b}
+\textsc{Cattaneo, A.~S., Felder, G., Tomassini, L.: }\newblock \emph{From local
+  to global deformation quantization of {P}oisson manifolds}.
+\newblock Duke Math. J.  \textbf{115}.2 (2002), 329--352.
+
 \bibitem {chari.pressley:1994a}
 \textsc{Chari, V., Pressley, A.: }\newblock \emph{A Guide to Quantum Groups}.
 \newblock Cambridge University Press, Cambridge, 1994.
+
+\bibitem {connes:1994a}
+\textsc{Connes, A.: }\newblock \emph{Noncommutative Geometry}.
+\newblock Academic Press, San Diego, New York, London, 1994.
+
+\bibitem {deligne:1995a}
+\textsc{Deligne, P.: }\newblock \emph{D{\'{e}}formations de l'Alg{\`{e}}bre des
+  Fonctions d'une Vari{\'{e}}t{\'{e}} Symplectique: Comparaison entre Fedosov
+  et DeWilde, Lecomte}.
+\newblock Sel. Math. New Series  \textbf{1}.4 (1995), 667--697.
+
+\bibitem {dewilde.lecomte:1983b}
+\textsc{DeWilde, M., Lecomte, P. B.~A.: }\newblock \emph{Existence of
+  Star-Products and of Formal Deformations of the Poisson Lie Algebra of
+  Arbitrary Symplectic Manifolds}.
+\newblock Lett. Math. Phys.  \textbf{7} (1983), 487--496.
+
+\bibitem {dewilde.lecomte:1983a}
+\textsc{DeWilde, M., Lecomte, P. B.~A.: }\newblock \emph{Star-Products on
+  Cotangent Bundles}.
+\newblock Lett. Math. Phys.  \textbf{7} (1983), 235--241.
 
 \bibitem {dixmier:1977a}
 \textsc{Dixmier, J.: }\newblock \emph{Enveloping Algebras}.
 \newblock \emph{North-Holland Mathematical Library} no. \textbf{14}.
 \newblock North-Holland Publishing Co., Amsterdam, New York, Oxford, 1977.
+
+\bibitem {dolgushev:2005a}
+\textsc{Dolgushev, V.~A.: }\newblock \emph{Covariant and equivariant formality
+  theorems}.
+\newblock Adv. Math.  \textbf{191} (2005), 147--177.
 
 \bibitem {drinfeld:1983a}
 \textsc{Drinfel'd, V.~G.: }\newblock \emph{On constant quasiclassical solutions
@@ -104,10 +175,20 @@
 \newblock Bulletin of the Belgian Mathematical Society  \textbf{4}.5 (1997),
   685 -- 687.
 
+\bibitem {esposito:2015a}
+\textsc{Esposito, C.: }\newblock \emph{Formality theory. From {P}oisson
+  structures to deformation quantization.}
+\newblock Springer-Verlag, Heidelberg, Berlin, 2015.
+
 \bibitem {esposito.stapor.waldmann:2015a:pre}
 \textsc{Esposito, C., Stapor, P., Waldmann, S.: }\newblock \emph{Convergence of
   the Gutt Star Product}.
 \newblock Preprint  \textbf{arXiv:1509.09160} (2015), 33.
+
+\bibitem {fedosov:1994a}
+\textsc{Fedosov, B.~V.: }\newblock \emph{A Simple Geometrical Construction of
+  Deformation Quantization}.
+\newblock J. Diff. Geom.  \textbf{40} (1994), 213--238.
 
 \bibitem {gloeckner.neeb:2012a}
 \textsc{Gl{\"o}ckner, H., Neeb, K.-H.: }\newblock \emph{When unit groups of
@@ -133,6 +214,10 @@
 \textsc{Gutt, S.: }\newblock \emph{An Explicit $*$-Product on the Cotangent
   Bundle of a Lie Group}.
 \newblock Lett. Math. Phys.  \textbf{7} (1983), 249--258.
+
+\bibitem {haag:1993a}
+\textsc{Haag, R.: }\newblock \emph{Local Quantum Physics}.
+\newblock Springer-Verlag, Berlin, Heidelberg, New York, 2. edition, 1993.
 
 \bibitem {hall:2003a}
 \textsc{Hall, B.~C.: }\newblock \emph{Lie Groups, Lie Algebras, and
@@ -169,6 +254,16 @@
   deformation quantization and the Campbell-Baker-Hausdorff Formula, I}.
 \newblock Preprint  \textbf{math.QA/9811174v2} (December 1998).
 
+\bibitem {kontsevich:1997:pre}
+\textsc{Kontsevich, M.: }\newblock \emph{Deformation Quantization of Poisson
+  Manifolds, I}.
+\newblock Preprint  \textbf{q-alg/9709040} (September 1997).
+
+\bibitem {kontsevich:2003a}
+\textsc{Kontsevich, M.: }\newblock \emph{Deformation Quantization of {P}oisson
+  manifolds}.
+\newblock Lett. Math. Phys.  \textbf{66} (2003), 157--216.
+
 \bibitem {majid:1995a}
 \textsc{Majid, S.: }\newblock \emph{Foundations of Quantum Group Theory}.
 \newblock Cambridge University Press, 1995.
@@ -184,9 +279,18 @@
   functions in $B_0$-algebras}.
 \newblock Studia Math.  \textbf{21} (1962), 291--306.
 
+\bibitem {moyal:1949a}
+\textsc{Moyal, J.~E.: }\newblock \emph{Quantum Mechanics as a Statistical
+  Theory}.
+\newblock Proc. Camb. Phil. Soc.  \textbf{45} (1949), 99--124.
+
 \bibitem {mueller:1994a}
 \textsc{M{\"u}ller, V.: }\newblock \emph{Nil, Nilpotent and PI-Algebras}.
 \newblock Functional Analysis and Operator Theory  \textbf{30} (1994).
+
+\bibitem {nest.tsygan:1995a}
+\textsc{Nest, R., Tsygan, B.: }\newblock \emph{Algebraic Index Theorem}.
+\newblock Commun. Math. Phys.  \textbf{172} (1995), 223--262.
 
 \bibitem {neumaier:1998a}
 \textsc{Neumaier, N.: }\newblock \emph{Sternprodukte auf
@@ -199,6 +303,11 @@
 \textsc{Newman, M., Thompson, R.~C.: }\newblock \emph{Numerical Values of
   Goldberg's Coefficients in the Series $\log(e^x e^y)$}.
 \newblock Mathematics of Computation  \textbf{48}.177.
+
+\bibitem {omori.maeda.yoshioka:1991a}
+\textsc{Omori, H., Maeda, Y., Yoshioka, A.: }\newblock \emph{Weyl Manifolds and
+  Deformation Quantization}.
+\newblock Adv. Math.  \textbf{85} (1991), 224--255.
 
 \bibitem {pflaum.schottenloher:1998a}
 \textsc{Pflaum, M.~J., Schottenloher, M.: }\newblock \emph{Holomorphic
@@ -238,6 +347,17 @@
 \newblock The On-Line Encyclopedia of Integer Sequences, 1964, 2015.
 \newblock https://oeis.org/A027641.
 
+\bibitem {souriau:1970a}
+\textsc{Souriau, J.-M.: }\newblock \emph{Structure des syst{\`e}mes
+  dynamiques}.
+\newblock \emph{Ma{\^{\i}}trises de math{\'e}matiques}.
+\newblock Dunod, Paris, 1970.
+
+\bibitem {tamarkin:2003a}
+\textsc{Tamarkin, D.~E.: }\newblock \emph{Formality of Chain Operad of Little
+  Discs}.
+\newblock Lett. Math. Phys.  \textbf{66} (2003), 65--72.
+
 \bibitem {thompson:1982a}
 \textsc{Thompson, R.~C.: }\newblock \emph{Cyclic relations and the Goldberg
   coefficients in the Campbell–Baker–Hausdorff formula}.
@@ -258,6 +378,12 @@
 \textsc{Varadarajan, V.~S.: }\newblock \emph{Lie Groups, Lie Algebras, and
   Their Representations}, vol. 102 in \emph{Graduate Texts in Mathematics}.
 \newblock Springer-Verlag, New York, 1974.
+
+\bibitem {varilly:2006a}
+\textsc{V{\'a}rilly, J.~C.: }\newblock \emph{An introduction to noncommutative
+  geometry}.
+\newblock \emph{EMS Series of Lectures in Mathematics}.
+\newblock European Mathematical Society (EMS), Z\"urich, 2006.
 
 \bibitem {vonneumann:1996a}
 \textsc{von Neumann, J.: }\newblock \emph{Mathematische {G}rundlagen der

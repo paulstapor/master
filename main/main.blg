@@ -25,45 +25,45 @@ Database file #5: ../../bibfiles/bib/misc.bib
 Database file #6: ../../bibfiles/bib/script.bib
 Warning--I didn't find a database entry for "mueller:XXXXa"
 Warning--I didn't find a database entry for "wojtynski:2000a"
-You've used 58 entries,
+You've used 83 entries,
             2314 wiz_defined-function locations,
-            809 strings with 10751 characters,
-and the built_in function-call counts, 16005 in all, are:
-= -- 1719
-> -- 506
+            936 strings with 13524 characters,
+and the built_in function-call counts, 23971 in all, are:
+= -- 2599
+> -- 781
 < -- 7
-+ -- 221
-- -- 156
-* -- 1289
-:= -- 2695
-add.period$ -- 128
-call.type$ -- 58
-change.case$ -- 198
++ -- 339
+- -- 246
+* -- 1985
+:= -- 4001
+add.period$ -- 181
+call.type$ -- 83
+change.case$ -- 294
 chr.to.int$ -- 0
-cite$ -- 58
-duplicate$ -- 721
-empty$ -- 1404
-format.name$ -- 156
-if$ -- 3410
+cite$ -- 83
+duplicate$ -- 1032
+empty$ -- 2074
+format.name$ -- 246
+if$ -- 5090
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 73
-newline$ -- 247
-num.names$ -- 116
-pop$ -- 235
+int.to.str$ -- 83
+missing$ -- 104
+newline$ -- 350
+num.names$ -- 166
+pop$ -- 332
 preamble$ -- 1
-purify$ -- 194
+purify$ -- 289
 quote$ -- 0
-skip$ -- 364
+skip$ -- 531
 stack$ -- 0
-substring$ -- 824
-swap$ -- 171
+substring$ -- 1399
+swap$ -- 243
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 190
+type$ -- 278
 warning$ -- 0
-while$ -- 159
-width$ -- 60
-write$ -- 580
+while$ -- 245
+width$ -- 85
+write$ -- 817
 (There was 1 error message)
