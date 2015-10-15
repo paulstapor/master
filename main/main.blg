@@ -23,47 +23,60 @@ Database file #3: ../../bibfiles/bib/dqthesis.bib
 Database file #4: ../../bibfiles/bib/preprints.bib
 Database file #5: ../../bibfiles/bib/misc.bib
 Database file #6: ../../bibfiles/bib/script.bib
+Database file #7: ../../bibfiles/bib/dqproceeding.bib
+Database file #8: ../../bibfiles/bib/dqprocentry.bib
+I was expecting a `,' or a `}'---line 940 of file ../../bibfiles/bib/dqprocentry.bib
+ :   
+ :   year =         {1990},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "rieffel:1990c"
+refers to entry "arveson.douglas:1990a", which doesn't exist
+Warning--I didn't find a database entry for "schoetz:2015a"
 Warning--I didn't find a database entry for "mueller:XXXXa"
 Warning--I didn't find a database entry for "wojtynski:2000a"
-You've used 83 entries,
+Warning--I didn't find a database entry for "arveson.douglas:1990a"
+Warning--empty publisher in rieffel:1990c
+Warning--empty year in rieffel:1990c
+You've used 94 entries,
             2314 wiz_defined-function locations,
-            936 strings with 13524 characters,
-and the built_in function-call counts, 23971 in all, are:
-= -- 2599
-> -- 781
-< -- 7
-+ -- 339
-- -- 246
-* -- 1985
-:= -- 4001
-add.period$ -- 181
-call.type$ -- 83
-change.case$ -- 294
+            996 strings with 15092 characters,
+and the built_in function-call counts, 27236 in all, are:
+= -- 2955
+> -- 883
+< -- 8
++ -- 384
+- -- 278
+* -- 2272
+:= -- 4539
+add.period$ -- 204
+call.type$ -- 94
+change.case$ -- 332
 chr.to.int$ -- 0
-cite$ -- 83
-duplicate$ -- 1032
-empty$ -- 2074
-format.name$ -- 246
-if$ -- 5090
+cite$ -- 96
+duplicate$ -- 1169
+empty$ -- 2358
+format.name$ -- 278
+if$ -- 5783
 int.to.chr$ -- 0
-int.to.str$ -- 83
-missing$ -- 104
-newline$ -- 350
-num.names$ -- 166
-pop$ -- 332
+int.to.str$ -- 94
+missing$ -- 115
+newline$ -- 395
+num.names$ -- 188
+pop$ -- 372
 preamble$ -- 1
-purify$ -- 289
+purify$ -- 327
 quote$ -- 0
-skip$ -- 531
+skip$ -- 603
 stack$ -- 0
-substring$ -- 1399
-swap$ -- 243
-text.length$ -- 7
+substring$ -- 1607
+swap$ -- 276
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 278
-warning$ -- 0
-while$ -- 245
-width$ -- 85
-write$ -- 817
-(There was 1 error message)
+type$ -- 320
+warning$ -- 2
+while$ -- 278
+width$ -- 96
+write$ -- 921
+(There were 3 error messages)

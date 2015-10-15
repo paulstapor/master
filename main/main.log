@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.26)  12 OCT 2015 17:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.26)  14 OCT 2015 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1224,43 +1224,47 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [16])
+ [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
-[18]
+
+LaTeX Warning: Citation `schoetz:2015a' on page 18 undefined on input line 993.
+
+
+) [18] [19]
 \openout2 = `Chapter3.aux'.
 
- (./Chapter3.tex
+ (./Chapter3.tex [20
+
+
+
+]
 Chapter 3.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 55.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 68.
-[19
-
-
-
-]pdfTeX warning (ext4): destination with the same identifier (name{definition.2
-}) has been already used, duplicate ignored
+[21]pdfTeX warning (ext4): destination with the same identifier (name{definitio
+n.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.160 \begin{definition}
-                        [Kirillov-Kostant-Souriau bracket] [20] [21]
+                        [Kirillov-Kostant-Souriau bracket] [22] [23]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 410.
- [22]pdfTeX warning (ext4): destination with the same identifier (name{definiti
+ [24]pdfTeX warning (ext4): destination with the same identifier (name{definiti
 on.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.527 \begin{definition}
-                        [Gutt star product] [23] [24] [25] [26] [27]pdfTeX warn
+                        [Gutt star product] [25] [26] [27] [28] [29]pdfTeX warn
 ing (ext4): destination with the same identifier (name{proposition.1}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1051 \begin{proposition}
-                           [28]
+                           [30]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 1156.
 pdfTeX warning (ext4): destination with the same identifier (name{proposition.3
@@ -1268,18 +1272,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{proposition.3
 <to be read again> 
                    \relax 
 l.1202 \begin{proposition}
-                           [29] [30] [31]
+                           [31] [32] [33]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 1584.
 Package hyperref Info: bookmark level for unknown subproof defaults to 0 on inp
 ut line 1620.
- [32] [33] [34] [35]) [36]
+ [34] [35] [36] [37]) [38]
 \openout2 = `Chapter4.aux'.
 
 
 (./Chapter4.tex
 Chapter 4.
-[37
+[39
 
 
 
@@ -1293,11 +1297,14 @@ l.191 \begin{remark}
 <to be read again> 
                    \relax 
 l.198 \begin{proposition}
-                          [38] [39] [40] [41] [42]
+                          [40] [41] [42] [43] [44]
+
+LaTeX Warning: Reference `Alg:BCHinDynkinForm' on page 45 undefined on input li
+ne 819.
+
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 829.
- [43] [44] [45] [46] [47])
-[48]
+put line 837.
+[45] [46] [47] [48] [49]) [50]
 \openout2 = `Chapter5.aux'.
 
  (./Chapter5.tex
@@ -1307,7 +1314,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{proposition.1
 <to be read again> 
                    \relax 
 l.44 \begin{proposition}
-                         [49
+                         [51
 
 
 
@@ -1322,45 +1329,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [50]pdfTeX warning (ext4): destination with the same identifier (name{definiti
+ [52]pdfTeX warning (ext4): destination with the same identifier (name{definiti
 on.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.281 \begin{definition}
-                        [Topological vector space] [51]pdfTeX warning (ext4): d
+                        [Topological vector space] [53]pdfTeX warning (ext4): d
 estination with the same identifier (name{remark.6}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
 l.408 \begin{remark}
-                    [The notion ''asymptotic estimate''] [52] [53] [54]
-[55]
+                    [The notion ''asymptotic estimate''] [54] [55] [56]
+[57]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 810.
- [56] [57] [58] [59] [60] [61]pdfTeX warning (ext4): destination with the same 
+ [58] [59] [60] [61] [62] [63]pdfTeX warning (ext4): destination with the same 
 identifier (name{remark.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1635 \begin{remark}
-                     [Uniform continuity] [62] [63] [64]pdfTeX warning (ext4): 
+                     [Uniform continuity] [64] [65] [66]pdfTeX warning (ext4): 
 destination with the same identifier (name{proposition.7}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
 l.2011 \begin{proposition}
-                          [Dependence on $z$] [65]pdfTeX warning (ext4): destin
+                          [Dependence on $z$] [67]pdfTeX warning (ext4): destin
 ation with the same identifier (name{remark.8}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
 l.2101 \begin{remark}
                      [(Weakly) holomorphic maps with values in locally conve...
-[66]pdfTeX warning (ext4): destination with the same identifier (name{example.1
+[68]pdfTeX warning (ext4): destination with the same identifier (name{example.1
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2227 \begin{example}
-                       [67] [68] [69]pdfTeX warning (ext4): destination with th
+                       [69] [70] [71]pdfTeX warning (ext4): destination with th
 e same identifier (name{proposition.15}) has been already used, duplicate ignor
 ed
 <to be read again> 
@@ -1372,50 +1379,50 @@ nored
 <to be read again> 
                    \relax 
 l.2625 \begin{proposition}
-                          [Optimality of the $\Tensor_R$-topology] [70]pdfTeX w
+                          [Optimality of the $\Tensor_R$-topology] [72]pdfTeX w
 arning (ext4): destination with the same identifier (name{definition.2}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2659 \begin{definition}
-                          [71] [72]pdfTeX warning (ext4): destination with the 
+                          [73] [74]pdfTeX warning (ext4): destination with the 
 same identifier (name{remark.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2855 \begin{remark}
-                     [Another topology in $\algebra{U}(\lie{g})$]) [73]
+                     [Another topology in $\algebra{U}(\lie{g})$]) [75]
 \openout2 = `Chapter6.aux'.
 
 
-(./Chapter6.tex [74
+(./Chapter6.tex [76
 
 
 
 ]
 Chapter 6.
-[75] [76]
+[77] [78]
 
-LaTeX Warning: Reference `LCAna:Prop:Continuity1' on page 77 undefined on input
+LaTeX Warning: Reference `LCAna:Prop:Continuity1' on page 79 undefined on input
  line 244.
 
 
-LaTeX Warning: Reference `Nilpot:Thm:ProjLimitConti' on page 77 undefined on in
+LaTeX Warning: Reference `Nilpot:Thm:ProjLimitConti' on page 79 undefined on in
 put line 309.
 
-[77] [78]
+[79] [80]
 
-LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 79 undefined
+LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 81 undefined
  on input line 473.
 
 
-LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 79 undefined
+LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 81 undefined
  on input line 497.
 
 
-LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 79 undefined
+LaTeX Warning: Reference `Lemma:LCAna:LemmaPreContinuityN' on page 81 undefined
  on input line 508.
 
-[79]pdfTeX warning (ext4): destination with the same identifier (name{propositi
+[81]pdfTeX warning (ext4): destination with the same identifier (name{propositi
 on.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1425,13 +1432,13 @@ ifier (name{proposition.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.625 \begin{proposition}
-                         [Bimodules in $\Sym_R^{\bullet}(\lie{g})$] [80]pdfTeX 
+                         [Bimodules in $\Sym_R^{\bullet}(\lie{g})$] [82]pdfTeX 
 warning (ext4): destination with the same identifier (name{remark.2}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.708 \begin{remark}
-                    [Possible extensions] [81]pdfTeX warning (ext4): destinatio
+                    [Possible extensions] [83]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{proposition.1}) has been already used, duplica
 te ignored
 <to be read again> 
@@ -1447,9 +1454,9 @@ Overfull \hbox (12.3277pt too wide) in paragraph at lines 1008--1008
 [] 
  []
 
-[82] [83]
+[84] [85]
 
-LaTeX Warning: Citation `mueller:XXXXa' on page 84 undefined on input line 1055
+LaTeX Warning: Citation `mueller:XXXXa' on page 86 undefined on input line 1055
 .
 
 pdfTeX warning (ext4): destination with the same identifier (name{definition.1}
@@ -1459,7 +1466,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{definition.1}
 l.1058 \begin{definition}
                          
 
-LaTeX Warning: Citation `wojtynski:2000a' on page 84 undefined on input line 11
+LaTeX Warning: Citation `wojtynski:2000a' on page 86 undefined on input line 11
 40.
 
 
@@ -1475,7 +1482,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{definition.2}
 <to be read again> 
                    \relax 
 l.1168 \begin{definition}
-                         [Rapidly increasing sequences] [84]pdfTeX warning (ext
+                         [Rapidly increasing sequences] [86]pdfTeX warning (ext
 4): destination with the same identifier (name{remark.3}) has been already used
 , duplicate ignored
 <to be read again> 
@@ -1486,7 +1493,7 @@ r (name{proposition.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1297 \begin{proposition}
-                           [85] [86]
+                           [87] [88]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input 
 line 1469.
 
@@ -1494,12 +1501,12 @@ Overfull \hbox (5.40721pt too wide) in paragraph at lines 1590--1590
 [] 
  []
 
-[87]) [88]
+[89]) [90]
 \openout2 = `Chapter7.aux'.
 
  (./Chapter7.tex
 Chapter 7.
-[89
+[91
 
 
 
@@ -1513,52 +1520,51 @@ l.261 \begin{remark}
 <to be read again> 
                    \relax 
 l.276 \begin{proposition}
-                          [90]pdfTeX warning (ext4): destination with the same 
+                          [92]pdfTeX warning (ext4): destination with the same 
 identifier (name{proposition.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.365 \begin{proposition}
-                         ) [91] [92
+                         ) [93] [94
 
 
-] [93
+] [95
 
-] [94]
+] [96]
 \openout2 = `appendixA.aux'.
 
  (./appendixA.tex
 Appendix A.
-) [95
+) [97
 
 
 ]
 \openout2 = `appendixB.aux'.
 
- (./appendixB.tex [96
+ (./appendixB.tex [98
 
 
 
 ]
 Appendix B.
-) [97]
+) [99]
 \openout2 = `appendixC.aux'.
 
- (./appendixC.tex [98
+ (./appendixC.tex [100
 
 
 
 ]
 Appendix C.
-) [99] (./main.bbl (./main.brf)
+) [101] (./main.bbl (./main.brf)
 \tf@brf=\write6
 \openout6 = `main.brf'.
 
- [100
+ [102
 
 
-] [101] [102]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 301.
-
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1567,34 +1573,34 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 5726) in paragraph at lines 301--301
+ [103] [104]
+Underfull \hbox (badness 5726) in paragraph at lines 334--334
 []\T1/cmr/m/sc/9 Neumaier, N.:  \T1/cmr/m/it/9 Stern-pro-dukte auf Kotan-gen-te
 n-bün-deln und Ordnungs-Vorschriften\T1/cmr/m/n/9 .  mas-
  []
 
 
-Underfull \hbox (badness 7722) in paragraph at lines 301--301
+Underfull \hbox (badness 7722) in paragraph at lines 334--334
 \T1/cmr/m/n/9 ter the-sis, Fakultät für Physik, Albert-Ludwigs-Universität, Fre
 iburg, 1998.  Avail-able at
  []
 
-)
+[105])
 \tf@thm=\write7
 \openout7 = `main.thm'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
- [103]
+ [106]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
- (./main.aux (./Introduction.aux) (./Chapter2.aux) (./Chapter3.aux)
-(./Chapter4.aux) (./Chapter5.aux) (./Chapter6.aux) (./Chapter7.aux)
+ (./main.aux (./Introduction.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4
+.aux) (./Chapter5.aux) (./Chapter6.aux) (./Chapter7.aux)
 (./appendixA.aux) (./appendixB.aux) (./appendixC.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 491AD10F102B475BB3F5B28A7CE15C87;4927.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 5149C1EC8247CFEBD04BC0EB0D3AB0A3;5542.
+(rerunfilecheck)             Checksum: 6F67BBF70D21841B0A4A81F5929B14F9;6158.
 
 
 LaTeX Warning: There were undefined references.
@@ -1602,57 +1608,58 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
  ) 
 Here is how much of TeX's memory you used:
- 22587 strings out of 494935
- 394436 string characters out of 6178122
- 511721 words of memory out of 5000000
- 24683 multiletter control sequences out of 15000+600000
+ 22649 strings out of 494935
+ 395689 string characters out of 6178122
+ 511166 words of memory out of 5000000
+ 24730 multiletter control sequences out of 15000+600000
  38658 words of font info for 109 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,17n,73p,3611b,1475s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/pa
-ul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </home/paul/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk> </home/paul/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/eccc0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecss0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm08
-00.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/public/bbm/bbm8.600pk> </home/
-paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/paul/.texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecrm0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecbx1000.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
-1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> 
-</home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/paul/
-.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/paul/.texmf-var/f
-onts/pk/ljfour/public/bbm/bbm10.657pk> </home/paul/.texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecbx2074.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600p
-k> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/pa
-ul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/paul/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
-uler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on main.pdf (103 pages, 842778 bytes).
+ 56i,17n,73p,449b,1475s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/paul/.texmf-var/fonts/pk/ljfour/public/bbm/bbm9.600pk> </home/paul/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/paul/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecti0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/eccc0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.60
+0pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/
+paul/.texmf-var/fonts/pk/ljfour/public/bbm/bbm8.600pk> </home/paul/.texmf-var/f
+onts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecrm1000.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecrm0900.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.
+600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </hom
+e/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/paul/.texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/paul/.texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/pu
+blic/bbm/bbm10.657pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx20
+74.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </
+home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/paul/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/paul/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
+Output written on main.pdf (106 pages, 856091 bytes).
 PDF statistics:
- 2605 PDF objects out of 2984 (max. 8388607)
- 1676 compressed objects within 17 object streams
- 559 named destinations out of 1000 (max. 500000)
+ 2671 PDF objects out of 2984 (max. 8388607)
+ 1727 compressed objects within 18 object streams
+ 574 named destinations out of 1000 (max. 500000)
  19981 words of extra memory for PDF output out of 20736 (max. 10000000)
 
