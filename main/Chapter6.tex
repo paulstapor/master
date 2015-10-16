@@ -7,35 +7,40 @@
 \chapter{Nilpotent Lie algebras}
 
 At the end of the last chapter, we have seen that the Baker-Campbell-Hausdorff 
-series and its convergence plays an important role for a topology on the 
+series and its convergence play an important role for a topology on the 
 universal enveloping algebra. It is thus natural to ask whether things will 
-change, if we look at Lie algebras from which have a globally convergent BCH 
+change, if we look at Lie algebras with globally convergent BCH 
 series. To make things not too complicated from the beginning, we focus on 
 locally convex and truly nilpotent Lie algebras. Recall that a Lie algebra 
 $\lie{g}$ is nilpotent, if there exists a $N \in \mathbb{N}$, such that for 
-all $n \geq N$ and all $\xi_1, \ldots, \xi_n \in \lie{g}$ we have
+all $n > N$ and all $\xi_1, \ldots, \xi_n \in \lie{g}$ we have
 \begin{equation}
 	\label{Nilpot:StrongNilpotency}
-	\ad_{\xi_1} \circ \ldots \circ \ad_{\xi_n}
+	\ad_{\xi_1} \circ \cdots \circ \ad_{\xi_n}
 	=
 	0.
 \end{equation}
-In the infinite-dimensional case, this is \emph{not} the same as 
-\begin{equation*}
+In the infinite-dimensional case, this is a priori \emph{not} the same as 
+\begin{equation}
 	\label{Nilpot:WeakNilpotency}
 	\left( \ad_{\xi} \right)^n
 	=
 	0
-\end{equation*}
-for all $\xi \in \lie{g}$ and and $n \geq N$, but (typically strictly) 
+\end{equation}
+for all $\xi \in \lie{g}$ and and $n > N$, but something
 stronger. In the case of finite-dimensional Lie algebras, the notions 
 \eqref{Nilpot:StrongNilpotency} and \eqref{Nilpot:WeakNilpotency} coincide due 
-to the so-called theorem of Engel, which makes use of the existence of a 
-finite series of nilpotent ideals in the Lie algebra. Such a terminating 
-series doesn't need to exist in infinite dimensions and there are known 
-counter-examples to it.
+to the Engel theorem, which makes use of the existence of a 
+finite descending series of nilpotent ideals in the Lie algebra. Such a 
+terminating series does not need to exist in infinite dimensions. At least as 
+soon, as we are in the setting of Banach Lie algebras, those two notions will 
+coincide again, but note that one can give different forms of 
+\emph{quasi-nilpotency}, which weaken he statements from 
+\eqref{Nilpot:StrongNilpotency} and \eqref{Nilpot:WeakNilpotency}, respectively. 
+Those generalized notions will not coincide any more. So we have to be careful.
 
-Before we look at this case more closely, let's first make a list of things, 
+
+Before we look at this case more closely, we want make a list of things first, 
 that we expect to change or not when we go to this more particular setting.
 \begin{enumerate}
 	\item
@@ -45,34 +50,37 @@ that we expect to change or not when we go to this more particular setting.
 	expect to get much larger completions now.
 	
 	\item
-	In \cite{waldmann:2014a}, Waldmann showed that the Weyl-Moyal star product 
-	converges in the $R$-topology for $R \geq \frac{1}{2}$. This so-called 
-	Weyl algebra is, however, nothing but a quotient of the Heisenberg 
-	algebra. It would be interesting to understand this a bit better, since we 
-	know that we need $R \geq 1$ for the latter. The quotient procedure must 
+	In \cite{waldmann:2014a}, Waldmann showed that for example the Weyl-Moyal 
+	star product converges in the $\Tensor_R$-topology for $R \geq \frac{1}{2}$. 
+	This so-called 	Weyl algebra is, however, nothing but a quotient of the 
+	Heisenberg 	algebra. It would be interesting to understand this a bit better, 
+	since we know that we need $R \geq 1$ for the Heisenberg algebra. The quotient 
+	procedure must 
 	therefore have some strong influence on this construction. Can we 
 	reproduce the value $R \geq \frac{1}{2}$ somehow by dividing out an ideal?
 	
 	\item
 	The argument we used in Propositipon~\ref{LCAna:Prop:NoBetterTopology},
-	namely the non-global convergence of BCH, is not given any more. Now, we 
-	don't have a reason any longer to expect that exponentials won't be part 
-	of the completion. In this sense, it would be at least nice to have 
+	namely the non-global convergence of BCH, is not given any more. Now, there is 
+	no reason to expect that exponentials will not be part 
+	of the completion any longer. In this sense, it would be at least nice to have 
 	something more than ''just'' $R = 1$. Can we do that?
 	
 	\item
 	As already mentioned, there are generalizations or weaker forms of 
 	nilpotency in infinite-dimensions, especially for Banach-Lie algebras, 
 	which are equivalent to the usual notion of nilpotency in finite 
-	dimensions. If we get a stronger result for nilpotent Lie algebras, can we 
-	extend it to some of these generalizations?
+	dimensions. If we get a stronger result for nilpotent Lie algebras, will it be 
+	possible to extend it to some of these generalizations?
 \end{enumerate}
-The very fascinating and highly interesting answer to the three questions we 
-just posed is: yes, we can. The first section of this chapter will be devoted 
+The very fascinating and highly interesting answer to the three questions from 
+$(ii) - (iv)$ is: yes, we can. The first section of this chapter will be devoted 
 to the question from point $(iii)$: we get a bigger completion by using a 
-projective limit. We will also see how to get again the nice functorial 
-properties we had before. In second section, we will reproduce the result by 
-Waldmann, at least for the finite-dimensional case. The third part will take 
+projective limit. We will also see how to get again the good functorial 
+properties we had before. The next section treats another phenomenon, which was 
+not there before: we can observe bimodule-structures within $\Sym_R^{\bullet}
+(\lie{g})$. In third section, we will reproduce one of the results of 
+Waldmann's, at least for the finite-dimensional case. The forth part will take 
 care of some generalizations of nilpotentcy for Banach-Lie algebras and will 
 extend the result of the projective limit to a particular subcase there.
 
@@ -93,24 +101,24 @@ at
 	\projlim_{\epsilon \longrightarrow 0}
 	\Sym_{1 - \epsilon}^{\bullet}(\lie{g}).
 \end{equation*}
-A tensor is in the completion $\widehat{Sym}_{1^-}^{\bullet}(\lie{g})$, 
-when it lies for every $\epsilon > 0$ in the completion or 
+A tensor will be in the completed vector space $\widehat{\Sym}_{1^-}^{\bullet}(\lie{g})$, if and only if it lies for every $\epsilon > 0$ in the completion of 
 $\Sym_{1 - \epsilon}^{\bullet}(\lie{g})$. Otherwise stated: Let $\algebra{P}$ 
 be the set of all continuous seminorms of the Lie algebra $\lie{g}$, then 
 \begin{equation*}
-	f \in \widehat{Sym}_{1^-}^{\bullet}(\lie{g})
+	f \in \widehat{\Sym}_{1^-}^{\bullet}(\lie{g})
 	\quad \Longleftrightarrow \quad
-	p_{1 - \epsilon} (x) 
+	p_{1 - \epsilon} (f) 
 	< 
 	\infty
 	\quad
 	\forall_{p \in \algebra{P}}
 	\forall_{\epsilon > 0}.
 \end{equation*}
-So, if we want to show, that the Gutt star product is continuous in 
-$\widehat{Sym}_{1^-}^{\bullet}(\lie{g})$, we need to show that for every 
+So, if we want to show, that the Gutt star product is continuous on 
+$\widehat{\Sym}_{1^-}^{\bullet}(\lie{g})$, we need to show that for every 
 $p \in \algebra{P}$ and  $R < 1$, there exists a $q \in \algebra{P}$ and a 
-$R' < 1$, such that for all $x,y \in \Sym^{\bullet}(\lie{g})$ we have
+$R'$ with $R \leq R' < 1$, such that we have for all $x,y \in \Sym^{\bullet}
+(\lie{g})$
 \begin{equation*}
 	p_R \left(
 		x \star_z y
@@ -119,9 +127,9 @@ $R' < 1$, such that for all $x,y \in \Sym^{\bullet}(\lie{g})$ we have
 	q_{R'}(x)
 	q_{R'}(y).
 \end{equation*}
-Before we prove the next proposition, we want to remind that locally convex, 
+Before we prove the next Theorem, we want to remind that locally convex, 
 nilpotent Lie algebras are always AE Lie algebras. So the results we have 
-found so far, are valid in this case.
+found so far are valid in this case, too.
 \begin{theorem}
     \label{Nilpot:Thm:ProjLimit}%
     Let $\lie{g}$ be a nilpotent locally convex Lie algebra with
@@ -164,11 +172,13 @@ found so far, are valid in this case.
     \end{theoremlist}
 \end{theorem}
 \begin{proof}
-    Again we use $\star_z$ on the whole tensor algebra and compute the 
-    estimate for $\xi^{\tensor k}$ and $\eta^{\tensor \ell}$. The important 
-    point is that now, we get restrictions for the values of $n$.
-    Recall that $k + \ell - n$ is the symmetric degree of $C_n \left( 
-    \xi^{\tensor k}, \eta^{\tensor \ell} \right)$ and that we must have
+    We use again $\star_z$ on the whole tensor algebra and compute the 
+    estimate for $\xi_1 \tensor \cdots \tensor \xi_k$ and $\eta_1 \tensor \cdots 
+    \tensor \eta_\ell$. The important point is that now, we get restrictions for 
+    the values of $n$. Recall that $k + \ell - n$ is the symmetric degree of 
+    $C_n \left( \xi_1 \tensor \cdots \tensor \xi_k, \eta_1 \tensor \cdots 
+    \tensor \eta_\ell \right)$ and that we can have at most $N$ letters in one
+    symmetric factor. This means
     \begin{equation*}
 	    	(k + \ell - n) N
     		\geq
@@ -179,12 +189,11 @@ found so far, are valid in this case.
     		n 
     		\leq
     		(k + \ell)
-    		\frac{N - 1}{N}
+    		\frac{N - 1}{N}.
     \end{equation*}
-    for $C_n \left( \xi^{\tensor k}, \eta^{\tensor \ell} \right) \neq 0$. 
-    This makes it possible to estimate $n!^{1-R}$ in 
-    \eqref{LCAna:CnOperators}: set $\delta = \frac{N - 1}{N}$ and also denote 
-    a factorial where we have non-integers, meaning the gamma function. We get
+    Hence we can estimate $n!^{1-R}$ in Equation \eqref{LCAna:CnOperators}: set 
+    $\delta = \frac{N - 1}{N}$ and also denote a factorial where we have 
+    non-integers, meaning the gamma function. We get
     \begin{align*}
         n!^{1-R}
         & \leq
@@ -212,11 +221,14 @@ found so far, are valid in this case.
     \end{align*}
     using $\epsilon = \delta (1 - R)$. Hence
     \begin{align*}
-        p_R \left(
-        	C_n \left(
-        		\xi^{\tensor k}, \eta^{\tensor \ell}
-        	\right)
-        \right)
+        p_R \big(
+        	C_n \big(
+        		\xi_1 \tensor \cdots \tensor \xi_k, 
+        &
+        		\eta_1 \tensor \cdots \tensor \eta_\ell
+        	\big)
+        \big)
+        \\
         & \leq
         \frac{
         	\left(
@@ -225,13 +237,15 @@ found so far, are valid in this case.
         	k!^{\epsilon}
         	\ell!^{\epsilon}
         }{2 \cdot 8^n}
-        (16 q)_R \left( \xi^{\tensor k} \right)
-        (16 q)_R \left( \eta^{\tensor \ell} \right)
+        (16 q)_R \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
+        (16 q)_R \left( \eta_1 \tensor \cdots \tensor \eta_\ell \right)
         \\
         & \leq
         \frac{1}{2 \cdot 8^n}
-        (c q)_{R + \epsilon} \left( \xi^{\tensor k} \right)
-        (c q)_{R + \epsilon} \left( \eta^{\tensor \ell} \right)
+        (c q)_{R + \epsilon} 
+        \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
+        (c q)_{R + \epsilon} 
+        \left( \eta_1 \tensor \cdots \tensor \eta_\ell \right)
     \end{align*}
     with $c = 16 (2 \E)^{\delta (1 - R)} \leq 32 \E$.
     We then get the estimate on all tensors by the infimum argument and extend 
@@ -240,176 +254,27 @@ found so far, are valid in this case.
     this continuity estimate, we get closer and closer to $1$ and it is not 
     possible to repeat this process an arbitrary number of times and stop at 
     some value strictly less than $1$. For the second part, we can conclude 
-    analogously to the second part of 
-    Proposition~\ref{LCAna:Prop:Continuity1}.
+    analogously to the second part of Theorem~\ref{Thm:LCAna:Continuity1}.
 \end{proof}
-Again, we can do an easier proof by assuming submultiplicativity of the 
-seminorms, since we get an alternative version of 
-Lemma~\ref{LCAna:Lemma:PreContinuity2}:
-\begin{lemma}
-	\label{Nilpot:Lemma:PreContinuity2}
-	Let $\lie{g}$ be a locally m-convex, nilpotent Lie algebra such that more 
-	$N$ nested Lie brackets vanish. Let $p$ be a continuous seminorm, 
-	$z \in \mathbb{K}$ and $R \geq 0$. Then, for every tensor 
-	$x \in \Sym_R^{\bullet}(\lie{g})$ of degree at most $k \in \mathbb{N}$ and 
-	$\eta \in \lie{g}$, 	we have the estimate
-	\begin{equation}
-		\label{Nilpot:PreContinuity}
-		p_R \left( x \star_z \eta \right)
-		\leq
-		(k + 1)^R k^{N (1-R)} c
-		p_R (x) p(\eta)
-	\end{equation}
-	with the constant $c = \sum_{n = 0}^N \frac{|B_n^*|}{n!} |z|^n$.
-\end{lemma}
-\begin{proof}
-	Again, we do the estimate on factorizing tensors and apply the infimum 
-	argument later. So let $\xi, \eta \in \lie{g}$, $k \in \mathbb{N}$, $p$ a 
-	continuous seminorm on $\lie{g}$ and $z \in \mathbb{K}$. Then, we have for 
-	$R \geq 0$
-	\begin{align*}
-		p_R \left(
-			\xi^{ \tensor k } \star_z \eta
-		\right)
-		& =
-		\sum\limits_{n = 0}^k
-		(k + 1 - n)!^R \binom{k}{n}
-		|B_n^*| |z|^n
-		p^{k + 1 - n} \left(
-			\xi^{k-n}
-			\left( \ad_{\xi} \right)^n (\eta)
-		\right)
-		\\
-		& \leq
-		(k + 1)^R
-		\sum\limits_{n = 0}^N
-		\frac{ k! (k-n)!^R }{ (k-n)! n! }
-		|B_n^*| |z|^n
-		p(\xi)^k p(\eta)
-		\\
-		& =
-		(k + 1)^R
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)
-		\sum\limits_{n = 0}^N
-		\left( \frac{k!}{(k-n)!} \right)^{1-R}
-		\frac{|B_n^*| |z|^n}{n!}
-		\\
-		& \leq
-		(k + 1)^R
-		k^{N (1-R)}
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)
-		\sum\limits_{n = 0}^N
-		\frac{|B_n^*| |z|^n}{n!}.
-	\end{align*}
-\end{proof}
-Now, we can iterate Lemma~\ref{Nilpot:Lemma:PreContinuity2} in the same way, 
-we did it in Chapter 5:
-\begin{proof}[Alternative Proof of Theorem~\ref{Nilpot:Thm:ProjLimitConti}]
-	Again, we do the calculation only on factorizing tensors. We need to 
-	transform the $k^{N(1-R)}$ into a very small factorial somehow. This is 
-	possible, since for given $N \in \mathbb{N}$ and $0 \leq R < 1$, the 
-	sequence
-	\begin{equation*}
-		\left( \frac{k^N}{\sqrt{k!}} \right)^{1-R}
-	\end{equation*}
-	converges to $0$ for $k \longrightarrow \infty$ and is therefore bounded 
-	by some $\kappa_N > 0$. Hence we get
-	\begin{equation*}
-		k^{ N (1-R) } 
-		\leq
-		\kappa_N \sqrt{k!}^{1-R},
-	\end{equation*}
-	and together with Lemma~\ref{Nilpot:Lemma:PreContinuity2} we find
-	\begin{equation*}
-		p_R \left( x \star_z \eta \right)
-		\leq
-		(k + 1)^R k!^{\frac{1-R}{2}} c \kappa_N
-		p_R (x) p(\eta)
-	\end{equation*}
-	for any tensor $x$ of degree at most $k$. Now, we can iterate this result
-	for $\xi, \eta \in \lie{g}$, $R \geq 0$, $k, \ell \in \mathbb{N}$:
-	\begin{align*}
-		p_R \left(
-			\xi^{\tensor k} star_z \eta^{\tensor \ell}
-		\right)
-		& =
-		p_R \left(
-			\xi^{\tensor k} star_z 
-			\eta^{\star_z \ell}
-		\right)
-		\\
-		& \leq
-		(k + \ell)^R
-		(k + \ell - 1)!^{\frac{1-R}{2}}
-		c \kappa_N
-		p_R \left(
-			\xi^{\tensor k} star_z 
-			\eta^{\star_z (\ell - 1)}
-		\right)
-		p(\eta)
-		\\
-		& \leq
-		\quad \vdots
-		\\
-		& \leq
-		\left(
-			\frac{(k + \ell)!}{k!}
-		\right)^R
-		(k + \ell - 1)!^{\frac{1-R}{2}}
-		\ldots
-		k!^{\frac{1-R}{2^N}}
-		(c \kappa_N)^{\ell}
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)^{\ell}
-		\\
-		& \leq
-		\binom{k + \ell}{k}^R 
-		\ell!^R
-		(k + \ell)!^{\frac{(2^N - 1) (1-R)}{2^N} }
-		(c \kappa_N)^{\ell}
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)^{\ell}
-		\\
-		& \leq
-		2^{(k + \ell) R}
-		\ell!^R
-		k!^{\frac{(2^N - 1) (1-R)}{2^N} }
-		\ell!^{\frac{(2^N - 1) (1-R)}{2^N} }
-		2^{ (k + \ell) \frac{(2^N - 1) (1-R)}{2^N} }
-		(c \kappa_N)^{\ell}
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)^{\ell}
-		\\
-		& \leq
-		(2 p)_{R + \epsilon} 
-		\left( \xi^{\tensor k} \right)
-		(2 c \kappa_N p)_{R + \epsilon} 
-		\left( \eta^{\tensor \ell} \right),
-	\end{align*}
-	where we have set $\epsilon = \frac{(2^N - 1)(1 - R)}{2^N}$. From this,
-	we have clearly $R + \epsilon < 1$, and we get the wanted result for the 
-	projective limit.
-\end{proof}
-Of course, the projective limit case gives us a bigger completion. We
-immediately end up with the following result:
+We have proven one of the four statements. This projective limit is interesting, 
+because it has a bigger completion than just $R = 1$. For example, we get the 
+following result.
 \begin{corollary}
     \label{corollary:NilpotentCase}%
     Let $\lie{g}$ be a nilpotent, locally convex Lie algebra.
     \begin{corollarylist}
     \item \label{item:NilpotentHasExp} 
-    		Let $\exp(\xi)$ be the
-        exponential series for $\xi \in \lie{g}$, the we have $\exp(t
+    	Let $\exp(\xi)$ be the
+        exponential series for $\xi \in \lie{g}$, then we have $\exp(t
         \xi) \in \widehat{\Sym}_{1^-}^\bullet(\lie{g})$ for all $t
         \in \mathbb{K}$.
     \item \label{item:NilpotentExpGivesBCH} 
-    		For $\xi, \eta \in
+    	For $\xi, \eta \in
         \lie{g}$ and $z \neq 0$ we have $\exp(\xi) \ostar_z
         \exp(\eta) = \exp \left(\frac 1 z \bch{z \xi}{z \eta}
         \right)$.
     \item \label{item:NipotentOneParameterGroups}
-    		For $s,t \in
+    	For $s,t \in
         \mathbb{K}$ and $\xi \in \lie{g}$ we have $\exp(t \xi)
         \ostar_z \exp(s \xi) = \exp ((t + s) \xi)$.
     \end{corollarylist}
@@ -430,6 +295,220 @@ immediately end up with the following result:
     the homogeneous subspaces $\Sym_{\pi}^n$ are continuous. The third
     part is then a direct consequence of the second.
 \end{proof}
+So the exponential series is what we want it to be, somehow. It generates a one 
+parameter group. Recall that we can just exponentiate \emph{vectors}. If we wanted 
+to exponentiate a quadratic tensor, this would yield something like a Gaussian, 
+which is again \emph{not} part of the completion.
+
+
+In the general case, we could find easier proof by assuming submultiplicativity of 
+the seminorms. This is again the case for nilpotent Lie algebras. We get something 
+like an alternative version of Lemma~\ref{LCAna:Lemma:PreContinuity2}.
+\begin{lemma}
+	\label{Nilpot:Lemma:PreContinuity2}
+	Let $\lie{g}$ be a locally m-convex, nilpotent Lie algebra such that more than 
+	$N$ nested Lie brackets vanish. Let $p$ be a continuous seminorm, 
+	$z \in \mathbb{K}$ and $R \geq 0$. Then, for every tensor 
+	$x \in \Sym_R^{\bullet}(\lie{g})$ of degree at most $k \in \mathbb{N}$ and 
+	$\eta \in \lie{g}$, we have the estimate
+	\begin{equation}
+		\label{Nilpot:PreContinuity}
+		p_R \left( x \star_z \eta \right)
+		\leq
+		c (k + 1)^R k^{N (1-R)}
+		p_R (x) p(\eta)
+	\end{equation}
+	with the constant $c = \sum_{n = 0}^N \frac{|B_n^*|}{n!} |z|^n$.
+\end{lemma}
+\begin{proof}
+	Again, we do the estimate on factorizing tensors and apply the infimum 
+	argument later. So let $\xi_1, \ldots, \xi_k, \eta \in \lie{g}$, $k \in 
+	\mathbb{N}$, $p$ a continuous seminorm on $\lie{g}$ and $z \in \mathbb{K}$. 
+	Then, we have for $R \geq 0$
+	\begin{align*}
+		&
+		p_R 
+		\big(
+			\xi_1 \tensor \cdots \tensor \xi_k \star_z \eta
+		\big)
+		\\
+		& =
+		\sum\limits_{n = 0}^k
+		(k + 1 - n)!^R \binom{k}{n}
+		|B_n^*| |z|^n
+		p^{k + 1 - n} \left(
+			\frac{1}{k!}
+			\sum\limits_{\sigma \in S_k}
+			\xi_{\sigma(1)} \cdots \xi_{\sigma_{k-n}}
+			\left( 
+				\ad_{\xi_{\sigma(k-n+1)}} 
+				\circ \cdots \circ 
+				\ad_{\xi_{\sigma(k)}} 
+			\right) (\eta)
+		\right)
+		\\
+		& \leq
+		(k + 1)^R
+		\sum\limits_{n = 0}^N
+		\frac{ k! (k-n)!^R }{ (k-n)! n! }
+		|B_n^*| |z|^n
+		p\left( \xi_1 \right) \cdots p\left( \xi_k \right) 
+		p(\eta)
+		\\
+		& =
+		(k + 1)^R
+		p_R \left(
+			\xi_1 \tensor \cdots \tensor \xi_k
+		\right)
+		p(\eta)
+		\sum\limits_{n = 0}^N
+		\left( \frac{k!}{(k-n)!} \right)^{1-R}
+		\frac{|B_n^*| |z|^n}{n!}
+		\\
+		& \leq
+		(k + 1)^R
+		k^{N (1-R)}
+		p_R \left(
+			\xi_1 \tensor \cdots \tensor \xi_k
+		\right)
+		p(\eta)
+		\sum\limits_{n = 0}^N
+		\frac{|B_n^*| |z|^n}{n!}.
+	\end{align*}
+\end{proof}
+Now, we can iterate Lemma~\ref{Nilpot:Lemma:PreContinuity2} in the same way 
+we did it in Chapter 5:
+\begin{proof}[Alternative Proof of Theorem~\ref{Nilpot:Thm:ProjLimit}]
+	Again, we do the calculation only on factorizing tensors. We need to 
+	transform the $k^{N(1-R)}$ into a very small factorial somehow. This is 
+	possible, since for given $N \in \mathbb{N}$ and $0 \leq R < 1$, the 
+	sequence
+	\begin{equation*}
+		\left( \frac{k^N}{\sqrt{k!}} \right)^{1-R}
+	\end{equation*}
+	converges to $0$ for $k \longrightarrow \infty$ and is therefore bounded 
+	by some $\kappa_N > 0$. Hence we get
+	\begin{equation*}
+		k^{ N (1-R) } 
+		\leq
+		\kappa_N \sqrt{k!}^{1-R},
+	\end{equation*}
+	and together with Lemma~\ref{Nilpot:Lemma:PreContinuity2} we find
+	\begin{equation*}
+		p_R \left( x \star_z \eta \right)
+		\leq
+		c \kappa_N
+		(k + 1)^R k!^{\frac{1-R}{2}} 
+		p_R (x) p(\eta)
+	\end{equation*}
+	for any tensor $x$ of degree at most $k$. Now, we can iterate this result
+	for $\xi_1, \ldots, \xi_k, \eta_1, \ldots, \eta_\ell 
+	\in \lie{g}$, $R \geq 0$:
+	\begin{align*}
+		&
+		p_R \big(
+			\xi_1 \tensor \cdots \tensor \xi_k 
+			\star_z 
+			\eta_1 \cdots \eta_\ell
+		\big)
+		\\
+		& =
+		p_R \left(
+			\frac{1}{\ell!}
+			\sum\limits_{\tau \in S_\ell}
+			\xi_1 \tensor \cdots \tensor  \xi_k 
+			\star_z
+			\eta_{\tau(1)} \star_z \cdots \star_z \eta_{\tau(\ell)}
+		\right)
+		\\
+		& \leq
+		\frac{1}{\ell!}
+		\sum\limits_{\tau \in S_\ell}
+		c \kappa_N
+		(k + \ell)^R
+		(k + \ell - 1)!^{\frac{1-R}{2}}
+		p_R \left(
+			\frac{1}{\ell!}
+			\sum\limits_{\tau \in S_\ell}
+			\xi_1 \tensor \cdots \tensor \xi_k 
+			\star_z
+			\eta_{\tau(1)} \star_z \cdots \star_z \eta_{\tau(\ell-1)}
+		\right)
+		p\left( \eta_{\tau(\ell)} \right)
+		\\
+		& \leq
+		\quad \vdots
+		\\
+		& \leq
+		(c \kappa_N)^{\ell}
+		\left(
+			\frac{(k + \ell)!}{k!}
+		\right)^R
+		(k + \ell - 1)!^{\frac{1-R}{2}}
+		\ldots
+		k!^{\frac{1-R}{2^N}}
+		p_R \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
+		p\left( \eta_{\tau(1)} \right)
+		\cdots
+		p\left( \eta_{\tau(\ell)} \right)
+		\\
+		& \leq
+		(c \kappa_N)^{\ell}
+		\binom{k + \ell}{k}^R 
+		\ell!^R
+		(k + \ell)!^{\frac{(2^N - 1) (1-R)}{2^N} }
+		p_R \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
+		p\left( \eta_{\tau(1)} \right)
+		\cdots
+		p\left( \eta_{\tau(\ell)} \right)
+		\\
+		& \leq
+		(c \kappa_N)^{\ell}
+		2^{(k + \ell) R}
+		\ell!^R
+		k!^{\frac{(2^N - 1) (1-R)}{2^N} }
+		\ell!^{\frac{(2^N - 1) (1-R)}{2^N} }
+		2^{ (k + \ell) \frac{(2^N - 1) (1-R)}{2^N} }
+		p_R \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
+		p\left( \eta_{\tau(1)} \right)
+		\cdots
+		p\left( \eta_{\tau(\ell)} \right)
+		\\
+		& \leq
+		(2 p)_{R + \epsilon} 
+		\left( \xi_1 \tensor \cdots \tensor \xi_k  \right)
+		(2 c \kappa_N p)_{R + \epsilon} 
+		\left( \eta_1 \tensor \cdots \tensor \eta_\ell \right),
+	\end{align*}
+	where we have set $\epsilon = \frac{(2^N - 1)(1 - R)}{2^N}$. From this,
+	we have $R + \epsilon < 1$ and get the wanted result for the 
+	projective limit.
+\end{proof}
+Again, just like in the case of AE-Lie algebras for $R \geq 1$, we can show that 
+the star product depends analytically on the formal parameter.
+\begin{proposition}[Dependence on $z$]
+    \label{Nilpot:corollary:HolomorphicDependence}%
+    Let $\lie{g}$ be a nilpotent locally convex Lie algebra, $0 \leq R < 1$ and $z 
+    \in \mathbb{K}$, then for all $x, y \in \widehat{\Sym}_{1^-}^\bullet(\lie{g})$ 
+    the map
+    \begin{equation}
+        \label{Nilpot:Holomorphicity}
+        \mathbb{K} \ni z
+        \longmapsto
+        x \star_z y \in
+        \widehat{\Sym}_{1^-}^\bullet(\lie{g})
+    \end{equation}
+    is analytic with (absolutely convergent) Taylor expansion at $z = 0$ 
+    given by Equation~\eqref{Formulas:2MonomialsFormula1}. For 
+    $\mathbb{K} = \mathbb{C}$, the collection of algebras $\left\{ \left( 
+    \widehat{\Sym}_{1^-}^\bullet(\lie{g}), \star_z \right) \right\}_{z \in 
+    \mathbb{C}}$ is an entire holomorphic deformation of the completed 
+    symmetric tensor algebra $\left( \widehat{\Sym}_{1^-}^\bullet(\lie{g}), \vee 
+    \right)$.
+\end{proposition}
+\begin{proof}
+	The proof is completely analogue to the case of AE Lie algebras when $R = 1$.
+\end{proof}
 
 
 %
@@ -442,10 +521,10 @@ immediately end up with the following result:
 In the general AE case, we had some useful results concerning representations 
 of Lie algebras and the functorialty of our construction. These results can be 
 extended to the projective limit $\Sym_{1^-}^{\bullet}(\lie{g})$.
-\begin{proposition}[universal property]
+\begin{proposition}[Universal Property]
 	\label{Nilpot:Prop:UnivProperty}
 	Let $\lie{g}$ be a locally convex nilpotent Lie algebra, $\algebra{A}$ an 
-	associative AE algebra and $\phi \colon: \lie{g} \longrightarrow 
+	associative AE algebra and $\phi \colon \lie{g} \longrightarrow 
 	\algebra{A}$ is a continuous homomorphism of Lie algebras. Then, the 
 	lifted homomorphisms from $\Sym_{1^-}^{\bullet}(\lie{g})$ and 
 	$\algebra{U}(\lie{g}_z)$ to $\algebra{A}$ are continuous.
@@ -460,18 +539,17 @@ the case of continuous representations into a Banach space (and in particular
 into a finite-dimensional space) as a corollary.
 \begin{corollary}[Continuous Representations]
     \label{Nilpot:Coro:ContinuousRepresentations}%
-    Let $\mathcal{U}_R(\lie{g})$ the universal enveloping algebra of locally 
-    convex nilpotent Lie algebra $\lie{g}$, then for every continuous 
+    Let $\algebra{U}_R(\lie{g}_z)$ the universal enveloping algebra of locally 
+    convex nilpotent Lie algebra $\lie{g}$ with bracket scaled by $z \in 
+    \mathbb{C}$, then for every continuous 
     representation $\phi$ of $\lie{g}$ into the bounded linear operators 
     $\Bounded(V)$ on a Banach space $V$, the induced homomorphism of 
-    associative algebras $\Phi \colon \mathcal{U}(\lie{g}) \longrightarrow 
+    associative algebras $\Phi \colon \algebra{U}_R(\lie{g}_z) \longrightarrow 
     \Bounded(V)$ is continuous.
 \end{corollary}
-
-
 We can also extend the functoriality statement to the projective limit, but we 
-need to get another version of Lemma~\ref{Lemma:LCAna:LemmaPreContinuityN} for 
-nilpotent Lie algebras, since thisis the corner stone of the functoriality 
+need to get another version of Lemma~\ref{LCAna:Lemma:LemmaPreContinuityN} for 
+nilpotent Lie algebras, since this is the corner stone of the functoriality 
 proof.
 \begin{lemma}
     \label{Lemma:Nilpot:LemmaPreContinuityN}%
@@ -479,7 +557,7 @@ proof.
     \mathbb{N}$ such that $N + 1$ Lie brackets vanish, $0 \leq R < 1$ and 
     $z \in \mathbb{C}$. Then for $p$ a continuous seminorm, $q$ an
     asymptotic estimate, $n \in \mathbb{N}$ and all $\xi_1, \ldots,
-    \xi_n \in \lie{g}$ the following estimate
+    \xi_n \in \lie{g}$ the estimate
     \begin{equation}
         \label{Nilpot:LemmaPreContinuityN}
         p_R \left(
@@ -494,8 +572,8 @@ proof.
 \end{lemma}
 \begin{proof}
     We take $R < 1$ and go directly into the proof of
-    Lemma~\ref{Lemma:LCAna:LemmaPreContinuityN} at
-    \eqref{LCAna:PreContinuityIntermediateN}.  We know that, since we
+    Lemma~\ref{LCAna:Lemma:LemmaPreContinuityN} at
+    \eqref{LCAna:PreContinuityIntermediateN}. We know that, since we
     may have at most $N$ brackets, also the values for $\ell$ are
     restricted to
     \begin{equation*}
@@ -505,7 +583,7 @@ proof.
         =
         \delta n
     \end{equation*}
-    Using that in the proof of Lemma~\ref{Lemma:LCAna:LemmaPreContinuityN} 
+    Using that in the proof of Lemma~\ref{LCAna:Lemma:LemmaPreContinuityN} 
     leads to
     \begin{align*}
         &p_R \left(
@@ -590,8 +668,7 @@ proof.
     	\leq
     	16 \E^2 (|z|+1)
 	\end{equation*}
-	and note that the estimate is locally uniform in $z$, even
-    though it will not be uniform in $z$.
+	and note that the estimate is locally uniform in $z$.
 \end{proof}
 \begin{proposition}
 	\label{Nilpot:Prop:Functoriality}
@@ -602,7 +679,7 @@ proof.
 	\algebra{U}_R(\lie{g}_z) \longrightarrow \algebra{U}_R(\lie{h}_z)$.
 \end{proposition}
 \begin{proof}
-	The proof is mostly analogous to the one of Proposition 
+	The proof is analogous to the one of Proposition 
 	\ref{LCAna:Prop:Functoriality}.
 \end{proof}
 
@@ -612,30 +689,29 @@ proof.
 \label{sec:chap6_Modules}
 
 The projective limit $1^-$ is not the only additional structure we will get, if 
-our Lie algebra $\lie{g}$ is nilpotent. Lemma~\ref{Nilpot:Lemma:PreContinuity2} 
-allows the existence of certain module structures, if the seminorms on 
-$\lie{g}$ are in addition submultiplicative. For every $R \in \mathbb{R}$,the 
+our Lie algebra $\lie{g}$ is nilpotent. For every $R \in \mathbb{R}$, the 
 symmetric tensor algebra $\Sym_R^{\bullet}(\lie{g})$ is a locally convex vector 
 space. For $R \geq 0$, the (symmetric) tensor product is continuous, which is 
 very important for many estimates, and for $R \geq 1^-$, we have an algebra 
 structure. In between however, we have more than ''only'' vector spaces: The 
-spaces $\Sym_R^{\bullet}(\lie{g})$ form locally convex modules over the 
+spaces $\Sym_R^{\bullet}(\lie{g})$ form locally convex bimodules over the 
 $\Sym_{R'}^{\bullet}(\lie{g})$ for certain values of $R'$. The next proposition 
 will makes this more exact.
 \begin{proposition}[Bimodules in $\Sym_R^{\bullet}(\lie{g})$]
 	\label{Nilpot:Prop:Bimodules}
-	Let $\lie{g}$ be a nilpotent, locally m-convex Lie algebra such that 
-	$N + 1$ 	Lie brackets vanish, $z \in 	\mathbb{C}$ and $0 \leq R < 1$. 
-	Then, for all $x, y \in \Sym^{\bullet}(\lie{g})$ and every continuous 
-	seminorm $p$, we have the estimates
+	Let $\lie{g}$ be a nilpotent, locally convex Lie algebra, $N \in 
+	\mathbb{N}$ such that $N + 1$ Lie brackets vanish, $z \in \mathbb{K}$ and 
+	$0 \leq R < 1$. Then, for all $x, y \in \Sym^{\bullet}(\lie{g})$ and every 
+	continuous seminorm $p$, we have a continuous seminorm $q$, such that the 
+	estimates
 	\begin{align}
 		\label{Nilpot:BimoduleEstimate1}
 		p_R \left(
 			x \star_z y
 		\right)
 		& \leq
-		\left(2^{N + 1} p\right)_R(x) 
-		\left(2^{N + 1} c p\right)_{R + N(1-R)}(y)
+		\left(16 q\right)_R(x) 
+		\left(16 c q\right)_{R + N(1-R)}(y)
 		\\
 	\intertext{and}
 		\label{Nilpot:BimoduleEstimate2}
@@ -643,82 +719,173 @@ will makes this more exact.
 			x \star_z y
 		\right)
 		& \leq
-		\left(2^{N + 1} c p\right)_{R + N(1-R)}(x)
-		\left(2^{N + 1} p\right)_R(y) 
+		\left(16 c q\right)_{R + N(1-R)}(x)
+		\left(16 q\right)_R(y) 
 	\end{align}
-	with $c = \sum_{n = 0}^N \frac{|B_n^*| |z|^n}{n!}$.
-	Hence, the vector space $\widehat{\Sym}_R^{\bullet}
-	(\lie{g})$ forms a bimodule over the algebra $\widehat{\Sym}_{R + N(1-
-	R)}^{\bullet}(\lie{g})$. In particular, if $\lie{g}$ is 2-step nilpotent, 
+	hold with $c = (N \E)^{N (1- R)}$.
+	Hence, the vector space $\widehat{\Sym}_R^{\bullet}(\lie{g})$ forms a 
+	bimodule over the algebra $\widehat{\Sym}_{R + N(1-R)}^{\bullet}(\lie{g})$. 
+	In particular, if $\lie{g}$ is 2-step nilpotent, 
 	the vector space $\widehat{\Sym}_0^{\bullet}(\lie{g})$ is a 
 	$\widehat{\Sym}_1^{\bullet}(\lie{g})$-bimodule.
 \end{proposition}
 \begin{proof}
-	Again, we do the calculation on factorizing tensors: Let 
-	$\xi, \eta \in \lie{g}$, $R \geq 0$, $k, \ell \in \mathbb{N}$.
-	Using Lemma~\ref{Nilpot:Lemma:PreContinuity2}, we get
+	Note that for every degree $n$ we loose, we get a bracket of $\xi$'s and 
+	$\eta$'s. Since we can not have too highly nested brackets, we get the 
+	following bounds:
+	\begin{equation*}
+		n
+		\leq
+		N k
+		\quad \text{ and } \quad
+		n 
+		\leq 
+		N \ell.
+	\end{equation*}
+	We prove the statement only on factorizing tensors again. We 
+	want to show Estiamte \eqref{Nilpot:BimoduleEstimate1} and take
+	$x = \xi_1 \tensor \cdots \tensor \xi_k$ and $y = \eta_1 \tensor \cdots 
+	\tensor \eta_\ell$. So
 	\begin{align*}
-		p_R \left(
-			\xi^{\tensor k} star_z \eta^{\tensor \ell}
+		(\ell N)!^{1-R}
+		& \leq
+		(\ell N)^{(\ell N (1-R))}
+		\\
+		& \leq
+		(N \E)^{\ell N (1- R)}
+		\ell!^{N(1-R)}.
+	\end{align*}
+	This allows us again to go back to the proof of Theorem 
+	\ref{Nilpot:Thm:ProjLimit} and we find
+	\begin{align*}
+		p_R \big(
+			C_n \big(
+				\xi_1 \tensor \cdots \tensor \xi_k,
+		&
+				\eta_1 \tensor \cdots \tensor \eta_\ell
+			\big)
+		\big)
+		\\
+		& \leq 
+		\frac{ (N \E)^{\ell N (1- R)} \ell!^{N(1-R)} }
+		{2 \cdot 8^n}
+		(16 q)_R
+		\left(
+			\xi_1 \tensor \cdots \tensor \xi_k
 		\right)
-		& =
-		p_R \left(
-			\xi^{\tensor k} star_z 
-			\eta^{\star_z \ell}
+		(16 q)_R
+		\left(
+			\eta_1 \tensor \cdots \tensor \eta_\ell
 		\right)
 		\\
 		& \leq
-		(k + \ell)^R
-		(k + \ell - 1)^{N (1-R)}
-		p_R \left(
-			\xi^{\tensor k} star_z 
-			\eta^{\star_z (\ell - 1)}
+		\frac{1}{2 \cdot 8^n}
+		(16 q)_R
+		\left(
+			\xi_1 \tensor \cdots \tensor \xi_k
 		\right)
-		p(\eta)
+		(c q)_{R - N(1-R)}
+		\left(
+			\eta_1 \tensor \cdots \tensor \eta_\ell
+		\right)
+	\end{align*}
+	with $c = 16 (N \E)^{N (1- R)}$. The rest of the proof is analogue to the 
+	proofs of the Theorems \ref{Nilpot:Thm:ProjLimit} or
+	 \ref{Thm:LCAna:Continuity1}.
+\end{proof}
+Once again, assuming submultiplicativity of the seminorms, it is possible to give 
+an easier proof for Proposition~\ref{Nilpot:Prop:Bimodules} which relies on 
+Lemma~\ref{Nilpot:Lemma:PreContinuity2}.
+\begin{proof}[Alternative proof for Proposition~\ref{Nilpot:Prop:Bimodules}]
+	Again, we do the calculation on factorizing tensors: Let 
+	$\xi_1, \ldots, \xi_k, \eta_1, \ldots, \eta_\ell \in \lie{g}$, $R \geq 0$, $k, 
+	\ell \in \mathbb{N}$. Using Lemma~\ref{Nilpot:Lemma:PreContinuity2}, we get
+	\begin{align*}
+		p_R \big(
+			\xi_1 \tensor
+		&			
+			\cdots \tensor \xi_k
+			\star_z
+			\eta_1 \tensor \cdots \tensor \eta_\ell
+		\big)
+		\\
+		&=
+		p_R \left(
+			\frac{1}{\ell!}
+			\sum\limits_{\tau \in S_\ell}
+			\xi_1 \tensor \cdots \tensor \xi_k
+			\star
+			\eta_{\tau(1)} \star_z \cdots \star_z \eta_{\tau(\ell)}
+		\right)
+		\\
+		& \leq
+		c (k + \ell)^R
+		(k + \ell - 1)^{N (1-R)}
+		\frac{1}{\ell!}
+		\sum\limits_{\tau \in S_\ell}
+		p_R \left(
+			\xi_1 \tensor \cdots \tensor \xi_k
+			\star
+			\eta_{\tau(1)} \star_z \cdots \star_z \eta_{\tau(\ell-1)}
+		\right)
+		p\left( \eta_{\tau(\ell)} \right)
 		\\
 		& \leq
 		\quad \vdots
 		\\
 		& \leq
+		c^{\ell}
 		\left(
 			\frac{(k + \ell)!}{k!}
 		\right)^R
 		\left(
 			\frac{(k + \ell - 1)!}{(k - 1)!}
 		\right)^{N (1-R)}
-		c^{\ell}
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)^{\ell}
+		p_R \left(
+			\xi_1 \tensor \cdots \tensor \xi_k
+		\right)
+		p\left( \eta_{\tau(1} \right)
+		\cdots
+		p\left( \eta_{\tau(\ell)} \right)
 		\\
 		& \leq
+		c^{\ell}
 		2^{k + l} 2^{N (k + \ell)}
 		\ell!^{N (1-R)}
-		c^{\ell}
-		p_R \left( \xi^{\tensor k} \right)
-		p(\eta)^{\ell}
+		p_R \left(
+			\xi_1 \tensor \cdots \tensor \xi_k
+		\right)
+		p\left( \eta_{\tau(1} \right)
+		\cdots
+		p\left( \eta_{\tau(\ell)} \right)
 		\\
 		& =
 		\left(2^{N + 1} p\right)_R 
-		\left( \xi^{\tensor k} \right)
+		\left(
+			\xi_1 \tensor \cdots \tensor \xi_k
+		\right)
 		\left(2^{N + 1} c p\right)_{R + N(1-R)}
-		\left( \eta^{\tensor \ell} \right).
+		\left(
+			\eta_1 \tensor \cdots \tensor \eta_\ell
+		\right).
 	\end{align*}
 	The proof of the second estimate is analogous.
 \end{proof}
 \begin{remark}[Possible extensions]
-	This result immediately poses new questions, like the dependence on the 
-	formal parameter in this case, possible generalizations to ''weaker forms'' 
-	of nilpotency and so on. They may be issues of some future work, but can't
-	be addressed here, since we rather want to present something like a part of 
-	the ''big picture'' which is opened by the $R$-topology, instead of getting 
+	This result immediately raises new questions, like the one about possible 
+	generalizations to ''weaker forms'' of nilpotency, for example. They may be 
+	issues of some future work, but can not
+	be addressed here, since we rather want to present something like  
+	the ''big picture'', instead of getting 
 	lost in its details too much. There are, without any doubt, questions that 
 	are more significant than extending those estimates to very special cases 
-	and 	finding sharp bounds there, although this is interesting and important, 
+	and 	finding sharp bounds there, although this is interesting and 
+	important, 
 	too.
 \end{remark}
-Although it seems clear from the construction, that these bimodules cannot be 
+Though it seems clear from the construction that these bimodules can not be 
 there for general Lie algebras, we can give a concrete counter-example, which 
-shows that there are Lie algebras, which don't allow them.
+shows that there are Lie algebras, which don not allow them.
 \begin{example}
 	\label{Nilpot:Ex:NoModulesInGeneral}
 	Choose $R < 1$ and take $\lie{g} = \mathbbm{R}^3$ with the basis $e_1, e_2, 
@@ -746,21 +913,22 @@ shows that there are Lie algebras, which don't allow them.
 		=
 		1.
 	\end{equation*}
-	Now we define the sequence $(a_k)_{k \in \mathbb{N}}$
+	Now choose an $\epsilon > 0$ such that $R + \epsilon < 1$ and we define the 
+	sequence $(a_k)_{k \in \mathbb{N}}$
 	\begin{equation*}
 		a_k 
 		= 
 		\frac{1}{k!^R} e_1^k,
 	\end{equation*}
-	for which we get $n_R(a_k) = 1$. Now, we want to show that 
-	$a_k \star_z e_2$ grows faster than exponentially:
+	for which we get $\lim_{k \longrightarrow \infty} n_R(a_k) = 0$. Now, we want 
+	to show that $a_k \star_z e_2$ grows faster than exponentially:
 	\begin{align*}
 		n_R \left( a_k \star_z e_2 \right) 
 		& = 
 		n_R \left( 
 			\sum\limits_{j = 0}^k 
 			\binom{k}{j} B_j^* 
-			\frac{1}{k!^R} 
+			\frac{1}{k!^{R + \epsilon}} 
 			e_1^{n-j} 
 			\left( 
 				\operatorname{ad}_{e_1} 
@@ -771,7 +939,7 @@ shows that there are Lie algebras, which don't allow them.
 		\sum\limits_{j = 0}^k 
 		\binom{k}{j} 
 		|B_j^*| 
-		\frac{1}{k!^R} 
+		\frac{1}{k!^{R + \epsilon}} 
 		(k-j+1)!^R 
 		\underbrace{
 			n^{k-j} \left( e_1 (e_2 \wedge e_3) \right)
@@ -782,7 +950,7 @@ shows that there are Lie algebras, which don't allow them.
 		(k-j+1)^R 
 		\binom{k}{j}
 		\frac{|B_j^*|}{j!} 
-		\frac{(k-j)!^R j^R}{k!^R} 
+		\frac{(k-j)!^R j^R}{k!^{R + \epsilon}} 
 		j!^{1-R}
 		\\
 		& = 
@@ -790,25 +958,26 @@ shows that there are Lie algebras, which don't allow them.
 		(k-j+1)^R 
 		\binom{k}{j}^{1-R} 
 		\frac{|B_j^*|}{j!} 
-		j!^{1-R}
+		\frac{j!^{1-R}}{k!^\epsilon}
 		\\
 		& \geq 
 		\sum\limits_{j=0}^k 
 		\frac{|B_j^*|}{j!} 
-		j!^{1-R}
+		\frac{j!^{1-R}}{k!^\epsilon}
 		\\
 		& \geq 
-		\frac{|B_k^*|}{k!^R}.
+		\frac{|B_k^*|}{k!^{R + \epsilon}}.
 	\end{align*}
-	We know, that for $R < 1$ and any $c > 0$
+	We know that for $R +\epsilon < 1$ and any $c > 0$
 	\begin{equation*}
 		\limsup_{n \longrightarrow \infty}
-		\frac{|B_n^*|}{c^n n!^R}
+		\frac{|B_n^*|}{c^n n!^{R + \epsilon}}
 		=
-		\infty,
+		\infty.
 	\end{equation*}
-	and hence the limes superior of $n_R \left( a_k \star_z e_2 \right) $ grows 
-	faster than any exponential function.
+	Hence the limes superior of $n_R \left( a_k \star_z e_2 \right) $ grows 
+	faster than any exponential function and can not be absorbed into the seminorm 
+	of $e_2$. So the multiplication in the module can not be continuous.
 \end{example}
 
 
@@ -822,22 +991,20 @@ parameter $R$ concerning the continuity of the product in the Weyl and the
 Heisenberg algebra. In the following, we will show that this gap actually makes 
 a lot of sense. For simplicity, we consider the easiest case of
 the Weyl/Heisenberg algebra with two generators $Q$ and $P$, but the 
-generalization to the Heisenberg [Weyl] algebra in $2n + 1$ [$2n$] dimensions 
-is immediate and goes without problems. 
+calculation for the Heisenberg [Weyl] algebra in $2n + 1$ [$2n$] dimensions 
+is done exactly in the same way.
 Recall that the Weyl algebra is a quotient of the enveloping algebra of the 
 Heisenberg algebra $\lie{h}$ which one gets from dividing out its center. So 
-let $\mathsf{h} \in \mathbb{C}$ and we have a projection
+let $h \in \mathbb{K}$ and we have a projection
 \begin{equation}
     \label{Nilpot:WeylProjection}
     \pi \colon
-    \widehat{\Sym}_R^\bullet(\lie{h})
+    \Sym_R^\bullet(\lie{h})
     \longrightarrow
-    \widehat{\mathcal{W}}_R(\lie{h})
+    \mathcal{W}_R(\lie{h})
     =
-     \left(
-    	\frac{\Sym_R^\bullet(\lie{h})}
-    	{\langle E - \mathsf{h} \Unit \rangle}
-    \right)^{\widehat{} }
+    \frac{\Sym_R^\bullet(\lie{h})}
+    {\langle E - h \Unit \rangle}
 \end{equation}
 Of course we want to know if this projection is continuous.
 \begin{proposition}
@@ -855,19 +1022,19 @@ Of course we want to know if this projection is continuous.
         	E^{\tensor m}
         ) )
         & =
-        p_R( Q^k P^{\ell} \mathsf{h}^m )
+        p_R( Q^k P^{\ell} h^m )
         \\
         & =
-        |\mathsf{h}|^m (k + \ell)!^R
+        |h|^m (k + \ell)!^R
         p^{k + \ell}(Q^k P^{\ell})
         \\
         & \leq
-        (|\mathsf{h}| + 1)^{k + \ell + m}
+        (|h| + 1)^{k + \ell + m}
         (k + \ell + m)!^R
         p(Q)^k p(P)^{\ell} p(E)^m
         \\
         & =
-        ((|\mathsf{h}| + 1) p)_R
+        ((|h| + 1) p)_R
         (Q^{\tensor k} \tensor
         P^{\tensor \ell} \tensor
         E^{\tensor m}).
@@ -887,21 +1054,15 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
     \ostar_z$ is continuous.
 \end{proposition}
 \begin{proof}
-    We need to get the estimate on factorizing tensors: Let $p$ be a
-    continuous seminorm, $q$ an asymptotic estimate and $k, k',
-    \ell, \ell', m, m' \in \mathbb{N}_0$. Then we have to get an
-    estimate for
-    \begin{align*}
-        p_R \left(
-            \pi\left(
-                Q^k P^{\ell} E^m \ostar_z Q^{k'} P^{\ell'} E^{m'}
-            \right)
-        \right).
-    \end{align*}
-    If we calculate the star product explicitly, we see, that we only
-    get Lie brackets where we have $P$'s and $Q$'s. Let $r = k + \ell
-    + m$ and $s = k' + \ell' + m'$, then we can actually simplify the
-    calculations by
+    Since we are in finite dimensions, we can choose a
+    submultiplicative norm $p$ with $p(Q) = p(P) = p(E)$ without
+    restriction. Moreover, let $k, k', \ell, \ell', m, m' \in
+    \mathbb{N}_0$. Then we have to get an estimate for $p_R \left(
+        \pi\left( Q^k P^{\ell} E^m \ostar_z Q^{k'} P^{\ell'} E^{m'}
+        \right) \right)$.  If we calculate the star product
+    explicitly, we see, that we only get Lie brackets where we have
+    $P$'s and $Q$'s. Let $r = k + \ell + m$ and $s = k' + \ell' + m'$,
+    then we can actually simplify the calculations by
     \begin{align*}
         p_R \left(
         \pi(Q^k P^{\ell} E^m
@@ -939,7 +1100,7 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \\
         & =
         \sum\limits_{n=0}^{r + s - 1}
-        |z|^n |\mathsf{h}|^n
+        |z|^n |h|^n
         \frac{r! s!}{(r-n)! (s-n)! n!}
         p_R \left(
         Q^{r-n} P^{s-n}
@@ -947,7 +1108,7 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \\
         & \leq
         \sum\limits_{n=0}^{r + s - 1}
-        |z|^n |\mathsf{h}|^n
+        |z|^n |h|^n
         \frac{r! s!}{(r-n)! (s-n)! n!}
         \frac{(r + s - 2n)!^R}{r!^R s!^R}
         p_R \left(Q^{\tensor r} \right)
@@ -955,7 +1116,7 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \\
         & \leq
         \sum\limits_{n=0}^{r + s - 1}
-        |z|^n |\mathsf{h}|^n
+        |z|^n |h|^n
         \binom{r}{n} \binom{s}{n}
         \frac{(r + s - 2n)!^R n!}{r!^R s!^R}
         p_R \left(Q^{\tensor r} \right)
@@ -963,7 +1124,7 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \\
         & \leq
         \sum\limits_{n=0}^{r + s - 1}
-        |z|^n |\mathsf{h}|^n
+        |z|^n |h|^n
         \binom{r}{n} \binom{s}{n}
         \frac{(r + s - 2n)!^R n!}{r!^R s!^R}
         p_R \left(Q^{\tensor r} \right)
@@ -971,7 +1132,7 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \\
         & \ot{(a)}{\leq}
         \sum\limits_{n=0}^{r + s - 1}
-        |z|^n |\mathsf{h}|^n
+        |z|^n |h|^n
         \binom{r}{n} \binom{s}{n}
         \binom{r + s}{s}^R
         \binom{r + s}{2n}^{-R}
@@ -980,36 +1141,36 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \\
         & \leq
         \sum\limits_{n=0}^{r + s - 1}
-        (|z| + 1)^n (|\mathsf{h}| + 1)^n
+        (|z| + 1)^n (|h| + 1)^n
         4^{r + s}
         p_R \left(Q^{\tensor r} \right)
         p_R \left(P^{\tensor s} \right)
         \\
-        & \leq
+        & \ot{(b)}{ \leq }
         \underbrace{
-        (8 (|z| + 1) (|c| + 1))^{r + s}
-        }_{ = c^{r + s}}
+        (8 (|z| + 1) (|h| + 1))^{r + s}
+        }_{ = \tilde{c}^{r + s}}
         p_R \left(Q^{\tensor r} \right)
         p_R \left(P^{\tensor s} \right)
         \\
         & =
-        (c p)_R \left(Q^{\tensor r} \right)
-        (c p)_R \left(P^{\tensor s} \right)
+        (\tilde{c} p)_R \left(Q^{\tensor r} \right)
+        (\tilde{c} p)_R \left(P^{\tensor s} \right)
         \\
-        & \ot{(b)}{ = }
-        (c p)_R \left(
+        & \ot{(c)}{ = }
+        (\tilde{c} p)_R \left(
         Q^{\tensor k} \tensor
         P^{\tensor \ell} \tensor
         E^{\tensor m} \right)
-        (c p)_R \left(
+        (\tilde{c} p)_R \left(
         Q^{\tensor k'} \tensor
         P^{\tensor \ell'} \tensor
         E^{\tensor m'} \right),
     \end{align*}
-    where in (a) we expanded the fraction with $(r + s)!^R$ to get the
-    two binomial coefficients. It is clear, that this step just works
-    for $R \geq \frac{1}{2}$.  In (b) we used the fact that we can ask
-    for $p(Q) = p(P) = p(E)$. Now we just need to use
+    where we have set $c = 8 (|z| + 1) (|h| + 1)$. We rearranged the factorials in 
+    ($a$) and used $R \geq \frac{1}{2}$. The estimates ($b$) are the standard 
+    binomial coefficient estimates. In ($c$) we used $p(Q) = p(P) = p(E)$. Now
+    we just use
     \begin{equation*}
         \left(
         	Q^{\tensor k} \tensor
@@ -1027,8 +1188,8 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         \ostar_z
         Q^{k'} P^{\ell'} E^{m'}
     \end{equation*}
-    in the first line and we are done, since we can use again the
-    infimum argument to expand this estimate to all tensors.
+    and the infimum argument to expand this estimate to all tensors.
+    This concludes the proof.
 \end{proof}
 The previous proposition can be seen as something like the ''finite-dimensional 
 version'' of Lemma 3.10 in \cite{waldmann:2014a}, just that we took a large 
@@ -1037,7 +1198,7 @@ paper using finite-dimensional versions the Heisenberg algebra and the
 projection onto the Weyl algebra, but this would yield, also most probably, 
 nothing new. It is good to know that this connections exists, but it is not 
 something which is very helpful to pursue, since an evident generalization to 
-infinite dimensions doesn't seem be quite easy.
+infinite dimensions does not seem be obvious.
 
 
 
@@ -1046,14 +1207,14 @@ infinite dimensions doesn't seem be quite easy.
 \label{sec:chap6_TheEProperty}
 
 Now we want to focus a bit on weaker notions than true nilpotency. Since there 
-are many of them, we want to focus on the easier case of Banach-Lie algebras, 
-where a certain classification and quite a lot of results already exist.
+are many of them, we want to restrict to the easier case of Banach-Lie algebras, 
+where a somewhat developed theory already exists.
 
 
 \subsection{Generalizations of nilpotency}
 
-In \cite{mueller:XXXXa}, M\"uller gives a list of weaker forms of nilpotency in 
-associative Banach algebras. We can mostly copy the ideas and use it for 
+In \cite{muller:1994a}, M\"uller gives a list of weaker forms of nilpotency for 
+associative Banach algebras. We can mostly copy the ideas and use them for 
 Banach-Lie algebras, too
 \begin{definition}
 	Let $\lie{g}$ be a Banach-Lie algebra in which the Lie bracket fulfils the 
@@ -1135,22 +1296,22 @@ Banach-Lie algebras, too
 It is clear that $(ii) \Rightarrow (i)$ and $(iv) \Rightarrow (iii)$. In the 
 associative case, we have $(iii) \Leftrightarrow (iv)$ and hence $(iii) 
 \Rightarrow (ii)$. Of course, it is a good question, if this remains true for 
-Banach-Lie algebras. We have already encountered notion $(i)$: Wojty\'nski 
-proved it to be equivalent to the fact that the BCH series converges globally 
-in \cite{wojtynski:2000a}. In the following, we will make use of notion $(iv)$: 
-we will show, that it is possible to generalize the result of Theorem 
+Banach-Lie algebras. We have already encountered notion $(i)$: in 
+\cite{wojtynski:1998a} Wojty\'nski gave a proof that it is equivalent to the 
+global convergence of the BCH series. In the following, we will make use of notion 
+$(iv)$: we will show, that it is possible to generalize the result of Theorem 
 \ref{Nilpot:Thm:ProjLimit} to this case.
 
 
 
-\subsection{An adapted $R$-topology}
+\subsection{An adapted $\Tensor_R$-topology}
 
-The idea will be to slightly change the topology: Instead of taking 
+The idea will be to change the $\Tensor_R$-topology a bit: Instead of taking 
 $n!^R$ as weights with $0 \leq R < 1$, we take sequence $(\alpha_n)_{n \in 
-\mathbb{N}}$ (or just $(\alpha)$, for short) with a certain asymptotic 
+\mathbb{N}}$ with a certain asymptotic 
 behaviour for $n \longrightarrow \infty$ and use $\frac{n!}{\alpha_n}$ as 
-weights. This will generalize the idea of $n!^R$ and be the starting point for 
-the estimates.
+weights. This will generalize the idea of $n!^R$ and will be the starting point 
+for estimates.
 
 First, we observe that every uniformly topologically nilpotent Banach-Lie 
 algebra $\lie{g}$ comes with a characteristic, monotonously decreasing sequence
@@ -1167,11 +1328,13 @@ algebras, where we have $\omega_n > 0$ for all $n \in \mathbb{N}$. This allows
 the next definition.
 \begin{definition}[Rapidly increasing sequences]
 	Let $\lie{g}$ be a uniformly topologically nilpotent Banach-Lie algebra and 
-	$(\omega)$ the sequence defined in \eqref{Nilpot:CharDownSequence}. Then we 
-	define the characteristic sequence $\chi(\lie{g})$ of $\lie{g}$ by
+	$(\omega_n)_{n \in \mathbb{n}}$ the sequence defined in 
+	\eqref{Nilpot:CharDownSequence}. Then we 
+	define the characteristic sequence $(\chi_n^{\lie{g}})_{n \in \mathbb{N}}$ 
+	of $\lie{g}$ by
 	\begin{equation}
 		\label{Nilpot:CharSequence}
-		\chi(\lie{g})_n
+		\chi_n^{\lie{g}}
 		=
 		\max
 		\left\{ 
@@ -1180,8 +1343,9 @@ the next definition.
 			2
 		\right\}.
 	\end{equation}
-	We moreover say, that a sequence $(\alpha)$ in $(1, \infty)$ is $\lie{g}$-
-	rapidly increasing, if it fulfils the following properties:
+	We moreover say, that a sequence $(\alpha_n)_{n \in \mathbb{N}}$ in 
+	$(1, \infty)$ is $\lie{g}$-rapidly increasing, if it fulfils the following 
+	properties:
 	\begin{definitionlist}
 		\item
 		It grows fast than exponentially, i.e.
@@ -1197,42 +1361,48 @@ the next definition.
 		\begin{equation*}
 			\alpha_n 
 			\leq 
-			c^n  \chi(\lie{g})_n.
+			c^n  \chi_n^{\lie{g}}.
 		\end{equation*}
 	\end{definitionlist}
-	We denote by $\algebra{I}_{\lie{g}}$ the set of all $\lie{g}$-rapidly 
+	We denote by $\mathfrak{I}_{\lie{g}}$ the set of all $\lie{g}$-rapidly 
 	increasing sequences.
 \end{definition}
-Clearly, $(\chi(\lie{g}))$ is a $\lie{g}$-rapidly increasing series itself.
-\begin{remark}
-	The number $2$ in \eqref{Nilpot:CharSequence} may look a bit confusing at 
-	the first sight, since it is somehow arbitrary, but for technical reasons, 
-	we will need $\chi(g) > 1$ later. So actually every real number $c > 1$ 
-	could have been put there. In this sense, the previous definition is rather 
-	a technical tool than a ''general idea''.
-\end{remark}
-Each $(\alpha) \in \algebra{I}_{\lie{g}}$ gives a continuous seminorm 
-$p_{\alpha}$ on the tensor algebra with the projective tensor product 
-$\Tensor_{\pi}^{\bullet}(\lie{g})$ by
-\begin{equation*}
-	p_{\alpha}
-	=
-	\sum\limits_{n = 0}^{\infty}
-	\frac{n!}{\alpha_n}
-	\norm{\cdot}^{\tensor[\pi] n},
-\end{equation*}
-and we denote the set of all those seminorms by $\algebra{P}_{\lie{g}}$. 
-Furthermore, For every sequence $(\xi_n)_{n \in \mathbb{N}} \subset 
-\mathbb{B}_1(0)$ we get
-\begin{equation*}
+Clearly, $(\chi_n^{\lie{g}})_{n \in \mathbb{N}}$ is a $\lie{g}$-rapidly 
+increasing sequence itself. Note that we get with this definition for every 
+sequence $(\xi_n)_{n \in \mathbb{N}} \subset \mathbb{B}_1(0)$
+\begin{equation}
+	\label{Nilpot:ChiEstimate}
 	\norm{
 		[ \ldots [[\xi_1, \xi_2], \xi_3], \ldots \xi_n]
 	}
 	\leq
-	\frac{2^n}{\chi(\lie{g})_n}.
-\end{equation*}
-Every rapidly increasing sequence $(\alpha)$ yields a continuous function 
-$f_{\alpha}$ by
+	\frac{2^n}{\chi^{\lie{g}}_n}.
+\end{equation}
+\begin{remark}
+	The number $2$ in \eqref{Nilpot:CharSequence} may look a bit confusing at 
+	the first sight, since it is somehow arbitrary, but for technical reasons, 
+	we will need $\chi^{\lie{g}}_n > 1$ later. 
+	So actually every real number $c > 1$ 
+	could have been used there. In this sense, the previous definition is rather 
+	a technical tool than a ''general idea''.
+\end{remark}
+Each $(\alpha_n)_{n \in \mathbb{N}} \in \algebra{I}_{\lie{g}}$ gives a continuous 
+seminorm.
+\begin{definition}[Adapted seminorms]
+	Let $(\alpha_n)_{n \in \mathbb{N}} \in \mathfrak{I}_{\lie{g}}$. Then
+	\begin{equation*}
+		p_{\alpha}
+		=
+		\sum\limits_{n = 0}^{\infty}
+		\frac{n!}{\alpha_n}
+		\norm{\cdot}^{\tensor[\pi] n}
+	\end{equation*}
+	defines a seminorm on the tensor algebra with the projective tensor product 
+	$\Tensor_{\pi}^{\bullet}(\lie{g})$. We denote the set of all continuous 
+	seminorms with respect to those	coming from such sequences by $\algebra{P}$.
+\end{definition}
+It will be important to see that every rapidly increasing sequence 
+$(\alpha_n)_{n \in \mathbb{N}}$ yields a continuous function $f_{\alpha}$ by
 \begin{equation}
 	\label{Nilpot:IncreasingFunction}
 	f_{\alpha}
@@ -1252,9 +1422,10 @@ $f_{\alpha}$ by
 	\forall_{n \in \mathbb{N}},
 \end{equation}
 and linear interpolation between the values at the integers. The idea behind is 
-that this will allow us to use a lemma, which we now introduce. It is taken 
-from a work \cite{mitiagin.rolewicz.zelazko:1962a} by Mitiagin, Rolewicz and 
-\.{Z}elazko, where it is stated in Lemma~2.1 and Lemma~2.2.
+that this will allow us to use a technical lemma, which we now introduce. This 
+lemma shows that there are always ''many'' rapidly increasing functions in a 
+certain sense. It is taken from a work \cite{mitiagin.rolewicz.zelazko:1962a} by 
+Mitiagin, Rolewicz and \.{Z}elazko, where it is stated in Lemma~2.1 and Lemma~2.2.
 \begin{lemma}
 	\label{Nilpot:Lemma:MRZGrothLemma}
 	Let $f\colon \mathbb{R}_0^+ \longrightarrow \mathbb{R}^+$ be a continuous 
@@ -1271,12 +1442,12 @@ from a work \cite{mitiagin.rolewicz.zelazko:1962a} by Mitiagin, Rolewicz and
 	\begin{equation}
 		\label{Nilpot:SplittingProperty}
 		g \left(
-			t_1 + \ldots + t_n
+			t_1 + \cdots + t_n
 		\right)
 		\leq
 		8 \left(
 			g \left( t_1 \right)
-			+ \ldots +
+			+ \cdots +
 			g \left( t_n \right)
 		\right)
 		+
@@ -1287,8 +1458,16 @@ from a work \cite{mitiagin.rolewicz.zelazko:1962a} by Mitiagin, Rolewicz and
 		t_i \in \mathbb{R}_0^+.
 	\end{equation}
 \end{lemma}
-It is clear that Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} is applicable to our 
-function $f_{\alpha}$. 
+\begin{proof}
+	We refer the reader to the paper \cite{mitiagin.rolewicz.zelazko:1962a},
+	since we just want to use this lemma and do not want to go too much into
+	details here.
+\end{proof}
+Note that if we have $(\alpha_n)_{n \in \mathbb{N}} \in \mathfrak{I}_{\lie{g}}$, 
+then we can apply Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} to 
+the function $f_{\alpha}$, which is defined according to Equation 
+\ref{Nilpot:IncreasingFunction}.
+
 
 
 \subsection{A new continuity result}
@@ -1297,10 +1476,10 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 \begin{proposition}
 	\label{Nilpot:Prop:TopNilBanachLie}
 	Let $\lie{g}$ be a uniformly topologically nilpotent Banach-Lie algebra,
-	$\alpha \in \algebra{I}_{\lie{g}}$, $p_{\alpha}$ the corresponding seminorm 
-	according to \eqref{Nilpot:IncreasingFunction} and $z \in \mathbb{C}$. 
-	Then, there exists a series $\beta = (\beta_n)_{n \in \mathbb{N}} \in 
-	\algebra{I}_{\lie{g}}$, such that for all $x,y \in \Tensor_{\pi}^{\bullet}
+	$(\alpha_n)_{n \in \mathbb{N}} \in \mathfrak{I}_{\lie{g}}$, $p_{\alpha}$ the 
+	corresponding seminorm according to \eqref{Nilpot:IncreasingFunction} and 
+	$z \in \mathbb{K}$. Then, there exists a series $(\beta_n)_{n \in \mathbb{N}} 
+	\in \mathfrak{I}_{\lie{g}}$, such that for all $x,y \in \Tensor^{\bullet}
 	(\lie{g})$ we have the estimate
 	\begin{equation}
 		\label{Nilpot:TopNilBanachLie}
@@ -1311,73 +1490,71 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 		(c p)_{\beta} (x)
 		(c p)_{\beta} (y)
 	\end{equation}
-	with a $c > 0$, which only depends on $\alpha$.
+	with a $c > 0$, which only depends on $\alpha, z$ and the Lie algebra 
+	$\lie{g}$.
 \end{proposition}
 \begin{proof}
-	We can again do the estimate on factorizing tensors and extend it with the 
+	We compute the estimate on factorizing tensors and extend it with the 
 	infimum argument later. Let hence $k, \ell \in \mathbb{N}$ and 
-	$\xi, \eta \in \lie{g}$. we need to estimate the $C_n$-operators for $n = 
-	0, 1, \ldots, k + \ell - 1$ and note therefore $r = k + \ell - n$ again.
-	We get for $p_{\alpha} \in \algebra{P}_{\lie{g}}$
+	$\xi_1, \ldots, \xi_k, \eta_1, \ldots, \eta_\ell \in \lie{g}$. 
+	We need to estimate the $C_n$-operators for $n = 0, 1, \ldots, k + \ell - 1$. 
+	Therefore we note $r = k + \ell - n$ and use the short-hand notation for the 
+	sums, which appear in the Gutt star product, again.
+	We take $(\alpha_n)_{n \in \mathbb{N}} \in \mathfrak{I}_{\lie{g}}$ and get 
+	for $p_{\alpha}$
 	\begin{align*}
-		p_{\alpha} \left(
-			C_n\left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
-		\right)
+		p_{\alpha} \big(
+			C_n \big( 
+			\xi_1 \tensor \cdots \tensor \xi_k,
+		&
+			\eta_1 \tensor \cdots \tensor \eta_\ell 
+			\big)
+		\big)
+		\\
 		& =
 		p_{\alpha}
 		\bigg(
-        		\frac{k! \ell!}{r!}
-        		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
-            		a_i + b_i \geq 1 \\
-            		a_1 + \ldots + a_r = k \\
-            		b_1 + \ldots + b_r = \ell
-          		}}
-        		\bchparts{a_1}{b_1}{\xi}{\eta}
-        		\ldots
-        		\bchparts{a_r}{b_r}{\xi}{\eta}
+         	\frac{1}{r!}
+			\sum\limits_{\sigma, \tau}
+			\sum\limits_{a_i, b_j}
+			\bchtilde{a_1}{b_1}{\xi_{\sigma(i)}}{\eta_{\tau(j)}}
+			\cdots
+			\bchtilde{a_r}{b_r}{\xi_{\sigma(i)}}{\eta_{\tau(j)}}
         \bigg)
         \\
         & \leq 
-    		\frac{k! \ell!}{r!}
+    		\frac{1}{r!}
     		\frac{r!}{\alpha_r}
-    		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
-        		a_i + b_i \geq 1 \\
-        		a_1 + \ldots + a_r = k \\
-        		b_1 + \ldots + b_r = \ell
-       	}}
+    		\sum\limits_{\sigma, \tau}
+			\sum\limits_{a_i, b_j}
        	\norm{
-    			\bchparts{a_1}{b_1}{\xi}{\eta}
+    			\bchtilde{a_1}{b_1}{\xi_{\sigma(i)}}{\eta_{\tau(j)}}
     		}
-    		\ldots
+    		\cdots
     		\norm{
-    			\bchparts{a_r}{b_r}{\xi}{\eta}
+    			\bchtilde{a_r}{b_r}{\xi_{\sigma(i)}}{\eta_{\tau(j)}}
     		}
         \\
         & \leq
-    		\frac{k! \ell!}{\alpha_r}
-    		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
-        		a_i + b_i \geq 1 \\
-        		a_1 + \ldots + a_r = k \\
-        		b_1 + \ldots + b_r = \ell
-       	}}
-       	2^r 
-       	\frac{1}{\chi(\lie{g})_{a_1 + b_1}}
+    	\frac{k! \ell!}{\alpha_r}
+    	\sum\limits_{a_i, b_j}
+       	\frac{2}{\chi_{a_1 + b_1}^{\lie{g}}}
        	\ldots
-       	\frac{1}{\chi(\lie{g})_{a_r + b_r}}
-       	\norm{\xi}^k
-       	\norm{\eta}^{\ell},
+       	\frac{2}{\chi_{a_r + b_r}^{\lie{g}}}
+       	\norm{\xi_1} \cdots \norm{\xi_k}
+       	\norm{\eta_1} \cdots \norm{\eta_\ell},
     \end{align*}
-	where we have used the estimate from Lemma 
-	\ref{LCAna:Lemma:BCHTermsEstiamte} \textit{(\ref{Item:BCHEstimate})}
+	where we have used the estimate from Lemma \ref{LCAna:Lemma:BCHTermsEstiamte}
+	 $(\ref{Item:BCHEstimate})$ and Estimate \eqref{Nilpot:ChiEstimate}
 	in the last step. Rearranging this, we have
 	\begin{equation*}
 		p_{\alpha} \left(
 			C_n\left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
 		\right)
 		\leq
-    		k! \ell! 2^r
-    		\norm{\xi}^k
-       	\norm{\eta}^{\ell}
+    	k! \ell! 2^r
+       	\norm{\xi_1} \cdots \norm{\xi_k}
+       	\norm{\eta_1} \cdots \norm{\eta_\ell}
     		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
         		a_i + b_i \geq 1 \\
         		a_1 + \ldots + a_r = k \\
@@ -1387,12 +1564,13 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
        	{
        		\alpha_r
        		\cdot
-       		\chi(\lie{g})_{a_1 + b_1}
-       		\ldots
-       		\chi(\lie{g})_{a_r + b_r}
+       		\chi^{\lie{g}}_{a_1 + b_1}
+       		\cdots
+       		\chi^{\lie{g}}_{a_r + b_r}
        	},
 	\end{equation*}
-	and we would like to find a $(\beta) \in \algebra{I}_{\lie{g}}$ such that
+	and we would like to find a $(\beta_n)_{n \in \mathbb{N}} \in 
+	\mathfrak{I}_{\lie{g}}$ such that
 	\begin{equation}
 		\label{Nilpot:SavingSequence}
 		\sup
@@ -1402,9 +1580,9 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 	       	{
 	       		\alpha_r
 	       		\cdot
-	       		\chi(\lie{g})_{a_1 + b_1}
+	       		\chi^{\lie{g}}_{a_1 + b_1}
 	       		\ldots
-	       		\chi(\lie{g})_{a_r + b_r}
+	       		\chi^{\lie{g}}_{a_r + b_r}
 	       	}
 	    \right|
 	    		k, \ell \in \mathbb{N},\
@@ -1417,14 +1595,19 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 	\end{equation}
 	for some $\kappa > 0$, just depending on $(\alpha)$. Then we would have
 	\begin{align*}
-		p_{\alpha} \left(
-			C_n\left( \xi^{\tensor k}, \eta^{\tensor \ell} \right)
-		\right)
+		p_{\alpha} \big(
+			C_n \big( 
+			\xi_1 \tensor \cdots \tensor \xi_k,
+		&
+			\eta_1 \tensor \cdots \tensor \eta_\ell 
+			\big)
+		\big)
+		\\
 		& \leq
-    		\frac{k! \ell!}{\beta_k \beta_{\ell}} 
-    		2^r
-    		\norm{\xi}^k
-       	\norm{\eta}^{\ell}
+    	\frac{k! \ell!}{\beta_k \beta_{\ell}} 
+    	2^r
+       	\norm{\xi_1} \cdots \norm{\xi_k}
+       	\norm{\eta_1} \cdots \norm{\eta_\ell}
     		\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
         		a_i + b_i \geq 1 \\
         		a_1 + \ldots + a_r = k \\
@@ -1436,9 +1619,9 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
        	2^{-n}
        	(2 \kappa)^{k + \ell}
        	p_{\beta}
-       	\left( \xi^{\tensor k} \right)
+       	\left( \xi_1 \tensor \cdots \tensor \xi_k \right)
        	p_{\beta}
-       	\left( \eta^{\tensor \ell} \right)
+       	\left( \eta_1 \tensor \cdots \tensor \eta_\ell \right)
        	\sum\limits_{\substack{a_1, b_1, \ldots, a_r, b_r \geq 0 \\
         		a_i + b_i \geq 1 \\
         		a_1 + \ldots + a_r = k \\
@@ -1450,26 +1633,27 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
        	\frac{1}{2 \cdot 8^n} 
        	(16 \kappa)^{k + \ell}
        	p_{\beta}
-       	\left( \xi^{\tensor k} \right)
+       	\left( \xi_1 \tensor \cdots \tensor \xi_k \right)
        	p_{\beta}
-       	\left( \eta^{\tensor \ell} \right)
+       	\left( \eta_1 \tensor \cdots \tensor \eta_\ell  \right)
        	\\ 
        	& =
        	\frac{1}{2 \cdot 8^n} 
        	(16 \kappa p)_{\beta}
-       	\left( \xi^{\tensor k} \right)
+       	\left( \xi_1 \tensor \cdots \tensor \xi_k \right)
        	(16 \kappa p)_{\beta}
-       	\left( \eta^{\tensor \ell} \right).
+       	\left( \eta_1 \tensor \cdots \tensor \eta_\ell  \right).
     \end{align*}
     From this we could conclude analogously to the procedure in the proof of 
-    Theorem~\ref{Thm:LCAna:Continuity1} and the statement would be proven.
-    We now need to show the existence of a $(\beta) \in \algebra{I}_{\lie{g}}$ 
-    and a $\kappa > 0$, such that \eqref{Nilpot:SavingSequence} holds.
-    \begin{claim}
+    Theorem~\ref{Thm:LCAna:Continuity1} and the statement would follow.
+    However, we need to show the existence of a $(\beta_n)_{n \in \mathbb{N}} 
+    \in \algebra{I}_{\lie{g}}$ and a $\kappa > 0$, such that 
+    \eqref{Nilpot:SavingSequence} holds.
+    \begin{lemma}
     		For $f_{\alpha}$ defined as in \eqref{Nilpot:IncreasingFunction}, we 
     		take the function $g$ we get from 
-    		Lemma~\ref{Nilpot:Lemma:MRZGrothLemma}. Then the sequence $(\beta)$ 
-    		defined by
+    		Lemma~\ref{Nilpot:Lemma:MRZGrothLemma}. Then the sequence 
+    		$((\beta_n)_{n \in \mathbb{N}}$ defined by
     		\begin{equation}
     			\beta_n
     			=
@@ -1477,51 +1661,60 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
     				\frac{g(n)}{8}
     			\right)
     		\end{equation}
-    		and $\kappa = c' \E^{8 g(1)}$ have the desired properties, where 
-    		$c' > 0$ is a constant, such that $\alpha_n \leq c'^n \chi(\lie{g})_n$.
-    \end{claim}
+    		and $\kappa = c \E^{8 g(1)}$ fulfil \eqref{Nilpot:SavingSequence}, 
+    		where $c > 0$ is a constant such that $\alpha_n \leq c^n 
+    		\chi^{\lie{g}}_n$.
+    \end{lemma}
     \begin{subproof}
-    		First note that there is a fixed $c' > 0$
+    		First, note that there is a fixed $c \geq 1$ such that
     		\begin{equation*}
+    			\alpha_n
+    			\leq
+    			c^n \chi^{\lie{g}}_n
+    			\quad \Longleftrightarrow \quad
     			\frac{1}{\chi(\lie{g})_n}
     			\leq
     			\frac{c'^n}{\alpha_n}
     		\end{equation*}
+    		by the definition of a rapidly increasing sequence.
     		Denote $a_i + b_i = n_i$. Then we have
     		\begin{equation*}
     			\frac{\beta_k \cdot \beta_{\ell}}
 	       	{
 	       		\alpha_r
 	       		\cdot
-	       		\chi(\lie{g})_{n_1}
-	       		\ldots
-	       		\chi(\lie{g})_{n_r}
+	       		\chi^{\lie{g}}_{n_1}
+	       		\cdots
+	       		\chi^{\lie{g}}_{n_r}
 	       	}
 	       	\leq
-    			\frac{c'^{k + \ell} \beta_k \cdot \beta_{\ell}}
+    			\frac{c^{k + \ell} \beta_k \cdot \beta_{\ell}}
 	       	{
 	       		\alpha_r
 	       		\cdot
 	       		\alpha_{n_1}
-	       		\ldots
+	       		\cdots
 	       		\alpha_{n_r}
 	       	}
     		\end{equation*}
     		and hence
     		\begin{align*}
-    			\log \left(
-    				\frac{\beta_k \cdot \beta_{\ell}}
+    		\log 
+    		&
+    		\left(
+    			\frac{\beta_k \cdot \beta_{\ell}}
 		       	{
 		       		\alpha_r
 		       		\cdot
-		       		\chi(\lie{g})_{a_1 + b_1}
-		       		\ldots
-		       		\chi(\lie{g})_{a_r + b_r}
+	  	     		\chi^{\lie{g}}_{n_1}
+	 	      		\cdots
+	  	     		\chi^{\lie{g}}_{n_r}
 		       	}
 	       	\right)
+	       	\\
 	       	& \leq
-    			\log \left(
-    				\frac{c'^{k + \ell} \beta_k \cdot \beta_{\ell}}
+    		\log \left(
+    			\frac{c^{k + \ell} \beta_k \cdot \beta_{\ell}}
 		       	{
 		       		\alpha_r
 		       		\cdot
@@ -1532,7 +1725,7 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 	       	\right)
 	       	\\
 	       	& =
-	       	(k + \ell) \log(c')
+	       	(k + \ell) \log(c)
 	       	+
 	       	\frac{g(k)}{8}
 	       	+
@@ -1541,24 +1734,24 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 	       	f_{\alpha}(r)
 	       	-
 	       	f_{\alpha}(n_1)
-	       	- \ldots -
+	       	- \cdots -
 	       	f_{\alpha}(n_r)
 	       	\\
 	       	& \ot{(a)}{\leq}
-	       	(k + \ell) \log(c')
+	       	(k + \ell) \log(c)
 	       	+
 	       	\frac{g(k + \ell)}{8}
 			-
 	       	f_{\alpha}(r)
 	       	-
 	       	f_{\alpha}(n_1)
-	       	- \ldots -
+	       	- \cdots -
 	       	f_{\alpha}(n_r)
 	       	\\
 	       	& \ot{(b)}{\leq}
-			(k + \ell) \log(c')
+			(k + \ell) \log(c)
 	       	+
-	       	g(n_1) + \ldots + g(n_r)
+	       	g(n_1) + \cdots + g(n_r)
 	       	+
 	       	\frac{f_{\alpha}(r)}{8}
 	       	\\
@@ -1567,41 +1760,63 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 	       	f_{\alpha}(r)
 	       	-
 	       	f_{\alpha}(n_1)
-	       	- \ldots -
+	       	- \cdots -
 	       	f_{\alpha}(n_r)
 	       	\\
 	       	& \ot{(c)}{\leq}
-	       	(k + \ell) \log(c')
+	       	(k + \ell) \log(c)
 	       	+
 	       	\left( g(n_1) - f_{\alpha}(n_1) \right)
-	       	+ \ldots + 
+	       	+ \cdots + 
 	       	\left( g(n_r) - f_{\alpha}(n_r) \right)
 	       	\\
 	       	& \ot{(d)}{\leq}
 	       	(k + \ell) \log(c')
 	       	+
 	       	8 g(1) n_1
-	       	+ \ldots + 
+	       	+ \cdots + 
 	       	8 g(1) n_r
 	       	\\
 	       	& =
 	       	(k + \ell)
-	       	(\log(c') + 8 g(1)),
+	       	(\log(c') + 8 g(1)).
     		\end{align*}
-    		where we have used the convexity of $g$ in (a), 
-    		Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} in (b) and $\frac{g(n)}{8} \leq 
-    		g(n)$ in (c). In (d) we used the lemma again by estimating
-    		\begin{equation*}
-    			g(n)
-    			=
-    			g(1 + \ldots - 1)
-    			\leq
-    			8 n g(1) + f_{\alpha}(n).
-    		\end{equation*}
-    		This shows that $\kappa = c' \E^{8 g(1)}$ really gives the estimate.
+    	In (a), we have used the convexity of $g$ and 
+    	Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} in (b). 
+    	Then, (c) is just $\frac{f_\alpha(n)}{8} \leq f_\alpha(n)$.
+    	In (d) we used Lemma~\ref{Nilpot:Lemma:MRZGrothLemma} again 
+    	by estimating
+    	\begin{equation*}
+    		g(n)
+    		=
+    		g(1 + \ldots + 1)
+    		\leq
+    		8 n g(1) + f_{\alpha}(n)
+    		\quad \Longleftrightarrow \quad
+    		g(n) - f_\alpha(n)
+    		\leq8 n g(1).
+    	\end{equation*}
+    	Now we need to exponentiate the inequality we just found and get
+    	\begin{equation*}
+   			\frac{\beta_k \cdot \beta_{\ell}}
+	       	{
+	       		\alpha_r
+	       		\cdot
+  	     		\chi^{\lie{g}}_{n_1}
+ 	      		\cdots
+  	     		\chi^{\lie{g}}_{n_r}
+	       	}
+	       	\leq
+	       	\E^{k + \ell)(\log(c') + 8 g(1))}
+	       	=
+	       	\left( c \E^{8 g(1)} \right)^{k + \ell}.
+    	\end{equation*}
+    	Since the $n_1, \ldots, n_r$ have been arbitrary, 
+    	$(\beta_n)_{n \in \mathbb{N}}$ and $\kappa$ fulfil 
+    	\eqref{Nilpot:SavingSequence} and the Lemma is proven.
     \end{subproof}
-    Now, we only need to sum up the $|z|^n C_n\left( \xi^{\tensor} k, 
-    \eta^{\tensor \ell} \right)$. We know this is possible from Chapter 5, and 
+    Now, we only need to take the sum of the $C_n$. 
+    We know this is possible from Chapter 5, and 
     we finally get a continuity estimate which is locally uniform in $z$.
 \end{proof}
 
@@ -1609,7 +1824,7 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
 At the end of Chapter 5, we showed that a finite-dimensional Lie algebra 
 $\lie{g}$ is nilpotent if and only if its universal enveloping algebra 
 $\algebra{U}(\lie{g})$ admitted a locally convex topology, such that the 
-following three things are fulfilled:
+following three things are fulfilled.
 \begin{enumerate}
 	\item
 	The product in $\algebra{U}(\lie{g})$ is continuous.
@@ -1630,11 +1845,12 @@ following three things are fulfilled:
 	\end{equation*}
 	are continuous for all $n \in \mathbb{N}$.
 \end{enumerate}
-For Banach-Lie algebras, we came quite close to a similar statement: We know 
+For Banach-Lie algebras, we came quite close to a similar statement: we know 
 from Proposition~\ref{LCAna:Prop:NoBetterTopology} and the result of 
 Wojty\`nski, that a Banach-Lie algebra must at least be \emph{topologically 
-nil} to satisfy the three upper points. We also know, that a uniformly 
-topologically nilpotent Banach-Lie algebra $\lie{g}$ allows us to construct 
-such a locally convex topology on $\algebra{U}(\lie{g})$ explicitly. Maybe it 
-is possible to find a notion of generalized nilpotency, which characterizes 
-those three points exactly.
+nil} to satisfy the three upper points, so being topologically nil is 
+\emph{necessary}. We also know, that a uniformly topologically nilpotent 
+Banach-Lie algebra $\lie{g}$ allows us to construct such a locally convex topology 
+on $\algebra{U}(\lie{g})$ explicitly, hence uniform topological nilpotency is 
+\emph{sufficient}. Maybe it is possible to find a notion of generalized 
+nilpotency, which is equivalent to those three points.

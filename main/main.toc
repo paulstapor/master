@@ -50,22 +50,22 @@
 \contentsline {section}{\numberline {6.1}The projective limit}{78}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Continuity of the Product}{78}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Representations and Functoriality}{81}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Module structures}{82}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Heisenberg and the Weyl algebra}{84}{section.6.3}
-\contentsline {section}{\numberline {6.4}Banach-Lie algebras}{85}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Generalizations of nilpotency}{86}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}An adapted $R$-topology}{86}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}A new continuity result}{88}{subsection.6.4.3}
-\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{91}{chapter.7}
-\contentsline {section}{\numberline {7.1}Everything works}{91}{section.7.1}
-\contentsline {chapter}{Appendices}{95}{section*.12}
-\contentsline {chapter}{\numberline {A}Important theorems in Lie theory}{97}{Appendix.1.A}
-\contentsline {section}{\numberline {A.1}The Poincar\'e-Birkhoff-Witt theorem}{97}{section.1.A.1}
-\contentsline {section}{\numberline {A.2}The Integral form of Baker-Campbell-Hausdorff}{97}{section.1.A.2}
-\contentsline {chapter}{\numberline {B}Locally convex algebras}{99}{Appendix.1.B}
-\contentsline {section}{\numberline {B.1}Locally convex algebras with entire calculus}{99}{section.1.B.1}
-\contentsline {section}{\numberline {B.2}Locally m-convex and AE-algebras}{99}{section.1.B.2}
-\contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{101}{Appendix.1.C}
-\contentsline {section}{\numberline {C.1}Particular Lie algebras}{101}{section.1.C.1}
-\contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{101}{section.1.C.2}
-\contentsline {chapter}{Bibliography}{103}{chapter*.13}
+\contentsline {section}{\numberline {6.2}Module structures}{83}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Heisenberg and the Weyl algebra}{85}{section.6.3}
+\contentsline {section}{\numberline {6.4}Banach-Lie algebras}{87}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Generalizations of nilpotency}{87}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}An adapted $\Tensor _R$-topology}{88}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}A new continuity result}{89}{subsection.6.4.3}
+\contentsline {chapter}{\numberline {7}The Hopf algebra structure}{93}{chapter.7}
+\contentsline {section}{\numberline {7.1}Everything works}{93}{section.7.1}
+\contentsline {chapter}{Appendices}{97}{section*.12}
+\contentsline {chapter}{\numberline {A}Important theorems in Lie theory}{99}{Appendix.1.A}
+\contentsline {section}{\numberline {A.1}The Poincar\'e-Birkhoff-Witt theorem}{99}{section.1.A.1}
+\contentsline {section}{\numberline {A.2}The Integral form of Baker-Campbell-Hausdorff}{99}{section.1.A.2}
+\contentsline {chapter}{\numberline {B}Locally convex algebras}{101}{Appendix.1.B}
+\contentsline {section}{\numberline {B.1}Locally convex algebras with entire calculus}{101}{section.1.B.1}
+\contentsline {section}{\numberline {B.2}Locally m-convex and AE-algebras}{101}{section.1.B.2}
+\contentsline {chapter}{\numberline {C}More explicit formulas for the Gutt star product}{103}{Appendix.1.C}
+\contentsline {section}{\numberline {C.1}Particular Lie algebras}{103}{section.1.C.1}
+\contentsline {section}{\numberline {C.2}An Idea for a Mathematica Code}{103}{section.1.C.2}
+\contentsline {chapter}{Bibliography}{105}{chapter*.13}

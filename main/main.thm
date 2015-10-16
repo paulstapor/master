@@ -106,38 +106,43 @@
 \contentsline {proof}{{Proof}{XXXII}{}}{74}{proof.32}
 \contentsline {remark}{{Remark}{5.4.{6}}{Another topology in $\algebra {U}(\lie {g})$}}{75}{remark.6}
 \contentsline {theorem}{{Theorem}{6.1.{1}}{}}{78}{thm.6.1.1}
-\contentsline {proof}{{Proof}{XXXIII}{}}{78}{proof.33}
-\contentsline {lemma}{{Lemma}{6.1.{2}}{}}{79}{lemma.6.1.2}
+\contentsline {proof}{{Proof}{XXXIII}{}}{79}{proof.33}
+\contentsline {corollary}{{Corollary}{6.1.{2}}{}}{79}{corollary.2}
 \contentsline {proof}{{Proof}{XXXIV}{}}{79}{proof.34}
-\contentsline {proof}{{Proof}{XXXV}{Alternative Proof of Theorem~\ref {Nilpot:Thm:ProjLimitConti}}}{80}{proof.35}
-\contentsline {corollary}{{Corollary}{6.1.{3}}{}}{80}{corollary.3}
-\contentsline {proof}{{Proof}{XXXVI}{}}{80}{proof.36}
-\contentsline {proposition}{{Proposition}{6.1.{4}}{universal property}}{81}{proposition.4}
+\contentsline {lemma}{{Lemma}{6.1.{3}}{}}{80}{lemma.6.1.3}
+\contentsline {proof}{{Proof}{XXXV}{}}{80}{proof.35}
+\contentsline {proof}{{Proof}{XXXVI}{Alternative Proof of Theorem~\ref {Nilpot:Thm:ProjLimit}}}{80}{proof.36}
+\contentsline {proposition}{{Proposition}{6.1.{4}}{Dependence on $z$}}{81}{proposition.4}
 \contentsline {proof}{{Proof}{XXXVII}{}}{81}{proof.37}
-\contentsline {corollary}{{Corollary}{6.1.{5}}{Continuous Representations}}{81}{corollary.5}
-\contentsline {lemma}{{Lemma}{6.1.{6}}{}}{81}{lemma.6.1.6}
+\contentsline {proposition}{{Proposition}{6.1.{5}}{Universal Property}}{81}{proposition.5}
 \contentsline {proof}{{Proof}{XXXVIII}{}}{81}{proof.38}
-\contentsline {proposition}{{Proposition}{6.1.{7}}{}}{82}{proposition.7}
+\contentsline {corollary}{{Corollary}{6.1.{6}}{Continuous Representations}}{82}{corollary.6}
+\contentsline {lemma}{{Lemma}{6.1.{7}}{}}{82}{lemma.6.1.7}
 \contentsline {proof}{{Proof}{XXXIX}{}}{82}{proof.39}
-\contentsline {proposition}{{Proposition}{6.2.{1}}{Bimodules in $\Sym _R^{\bullet }(\lie {g})$}}{82}{proposition.1}
-\contentsline {proof}{{Proof}{XL}{}}{82}{proof.40}
-\contentsline {remark}{{Remark}{6.2.{2}}{Possible extensions}}{83}{remark.2}
-\contentsline {example}{{Example}{6.2.{3}}{}}{83}{example.3}
-\contentsline {proposition}{{Proposition}{6.3.{1}}{}}{84}{proposition.1}
-\contentsline {proof}{{Proof}{XLI}{}}{84}{proof.41}
-\contentsline {proposition}{{Proposition}{6.3.{2}}{}}{84}{proposition.2}
-\contentsline {proof}{{Proof}{XLII}{}}{84}{proof.42}
-\contentsline {definition}{{Definition}{6.4.{1}}{}}{86}{definition.1}
-\contentsline {definition}{{Definition}{6.4.{2}}{Rapidly increasing sequences}}{87}{definition.2}
-\contentsline {remark}{{Remark}{6.4.{3}}{}}{87}{remark.3}
-\contentsline {lemma}{{Lemma}{6.4.{4}}{}}{87}{lemma.6.4.4}
-\contentsline {proposition}{{Proposition}{6.4.{5}}{}}{88}{proposition.5}
-\contentsline {proof}{{Proof}{XLIII}{}}{88}{proof.43}
-\contentsline {claim}{{Claim}{6.4.{6}}{}}{89}{claim.6}
-\contentsline {subproof}{{Proof}{IV}{}}{89}{subproof.4}
-\contentsline {lemma}{{Lemma}{7.1.{1}}{}}{91}{lemma.7.1.1}
-\contentsline {proof}{{Proof}{XLIV}{}}{91}{proof.44}
-\contentsline {remark}{{Remark}{7.1.{2}}{}}{92}{remark.2}
-\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{92}{proposition.3}
-\contentsline {proof}{{Proof}{XLV}{}}{93}{proof.45}
-\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{93}{proposition.4}
+\contentsline {proposition}{{Proposition}{6.1.{8}}{}}{83}{proposition.8}
+\contentsline {proof}{{Proof}{XL}{}}{83}{proof.40}
+\contentsline {proposition}{{Proposition}{6.2.{1}}{Bimodules in $\Sym _R^{\bullet }(\lie {g})$}}{83}{proposition.1}
+\contentsline {proof}{{Proof}{XLI}{}}{83}{proof.41}
+\contentsline {proof}{{Proof}{XLII}{Alternative proof for Proposition~\ref {Nilpot:Prop:Bimodules}}}{84}{proof.42}
+\contentsline {remark}{{Remark}{6.2.{2}}{Possible extensions}}{84}{remark.2}
+\contentsline {example}{{Example}{6.2.{3}}{}}{84}{example.3}
+\contentsline {proposition}{{Proposition}{6.3.{1}}{}}{85}{proposition.1}
+\contentsline {proof}{{Proof}{XLIII}{}}{85}{proof.43}
+\contentsline {proposition}{{Proposition}{6.3.{2}}{}}{85}{proposition.2}
+\contentsline {proof}{{Proof}{XLIV}{}}{86}{proof.44}
+\contentsline {definition}{{Definition}{6.4.{1}}{}}{87}{definition.1}
+\contentsline {definition}{{Definition}{6.4.{2}}{Rapidly increasing sequences}}{88}{definition.2}
+\contentsline {remark}{{Remark}{6.4.{3}}{}}{88}{remark.3}
+\contentsline {definition}{{Definition}{6.4.{4}}{Adapted seminorms}}{88}{definition.4}
+\contentsline {lemma}{{Lemma}{6.4.{5}}{}}{89}{lemma.6.4.5}
+\contentsline {proof}{{Proof}{XLV}{}}{89}{proof.45}
+\contentsline {proposition}{{Proposition}{6.4.{6}}{}}{89}{proposition.6}
+\contentsline {proof}{{Proof}{XLVI}{}}{89}{proof.46}
+\contentsline {claim}{{Claim}{6.4.{7}}{}}{90}{claim.7}
+\contentsline {subproof}{{Proof}{IV}{}}{90}{subproof.4}
+\contentsline {lemma}{{Lemma}{7.1.{1}}{}}{93}{lemma.7.1.1}
+\contentsline {proof}{{Proof}{XLVII}{}}{93}{proof.47}
+\contentsline {remark}{{Remark}{7.1.{2}}{}}{94}{remark.2}
+\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{94}{proposition.3}
+\contentsline {proof}{{Proof}{XLVIII}{}}{95}{proof.48}
+\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{95}{proposition.4}
