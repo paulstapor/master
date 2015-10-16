@@ -243,6 +243,11 @@
   Bundle of a Lie Group}.
 \newblock Lett. Math. Phys.  \textbf{7} (1983), 249--258.
 
+\bibitem {gutt.rawnsley:2003a}
+\textsc{Gutt, S., Rawnsley, J.: }\newblock \emph{Natural Star Products on
+  Symplectic Manifolds and Quantum Moment Maps}.
+\newblock Lett. Math. Phys.  \textbf{66} (2003), 123--139.
+
 \bibitem {haag:1993a}
 \textsc{Haag, R.: }\newblock \emph{Local Quantum Physics}.
 \newblock Springer-Verlag, Berlin, Heidelberg, New York, 2. edition, 1993.
@@ -330,12 +335,11 @@
   {K}otangentenb{\"{u}}ndeln und {O}rdnungs-{V}orschriften}.
 \newblock master thesis, Fakult{\"{a}}t f{\"{u}}r Physik,
   Albert-Ludwigs-Universit{\"{a}}t, Freiburg, 1998.
-\newblock Available at \texttt{http://idefix.physik.uni-freiburg.de/\~{}nine/}.
 
 \bibitem {newman.thompson:1987a}
 \textsc{Newman, M., Thompson, R.~C.: }\newblock \emph{Numerical Values of
   Goldberg's Coefficients in the Series $\log(e^x e^y)$}.
-\newblock Mathematics of Computation  \textbf{48}.177.
+\newblock Mathematics of Computation  \textbf{48}.177 (1987), 265--271.
 
 \bibitem {omori.maeda.yoshioka:1991a}
 \textsc{Omori, H., Maeda, Y., Yoshioka, A.: }\newblock \emph{Weyl Manifolds and
@@ -360,7 +364,7 @@
 \bibitem {rieffel:1990c}
 \textsc{Rieffel, M.: }\newblock \emph{Deformation Quantization and Operator
   Algebras}.
-\newblock In: \emph{Proceedings of Symposia in Pure Mathematics}.
+\newblock In: \emph{Proceedings of Symposia in Pure Mathematics}. 1990.
 
 \bibitem {rieffel:1989a}
 \textsc{Rieffel, M.~A.: }\newblock \emph{Deformation Quantization of Heisenberg

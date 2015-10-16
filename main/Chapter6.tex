@@ -427,6 +427,9 @@ we did it in Chapter 5:
 		c \kappa_N
 		(k + \ell)^R
 		(k + \ell - 1)!^{\frac{1-R}{2}}
+		\\
+		& \quad 
+		\cdot
 		p_R \left(
 			\frac{1}{\ell!}
 			\sum\limits_{\tau \in S_\ell}
@@ -469,6 +472,9 @@ we did it in Chapter 5:
 		k!^{\frac{(2^N - 1) (1-R)}{2^N} }
 		\ell!^{\frac{(2^N - 1) (1-R)}{2^N} }
 		2^{ (k + \ell) \frac{(2^N - 1) (1-R)}{2^N} }
+		\\
+		& \quad
+		\cdot
 		p_R \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
 		p\left( \eta_{\tau(1)} \right)
 		\cdots
@@ -1065,10 +1071,18 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
     then we can actually simplify the calculations by
     \begin{align*}
         p_R \left(
-        \pi(Q^k P^{\ell} E^m
-        \ostar_z    Q^{k'} P^{\ell'} E^{m'}
-        ) \right)
-        & =
+         	\pi\left( 
+         		Q^k P^{\ell} E^m
+         		\right.
+         	\right.
+        &
+         	\left.
+         		\left.
+         		\ostar_z
+         		Q^{k'} P^{\ell'} E^{m'}
+         	\right)
+        \right)
+        =
         (p_R \circ \pi) \left(
         \sum\limits_{n=0}^{r + s - 1}
         z^n C_n(Q^k P^{\ell} E^m,
@@ -1213,7 +1227,7 @@ where a somewhat developed theory already exists.
 
 \subsection{Generalizations of nilpotency}
 
-In \cite{muller:1994a}, M\"uller gives a list of weaker forms of nilpotency for 
+In \cite{mueller:1994a}, M\"uller gives a list of weaker forms of nilpotency for 
 associative Banach algebras. We can mostly copy the ideas and use them for 
 Banach-Lie algebras, too
 \begin{definition}
@@ -1304,7 +1318,7 @@ $(iv)$: we will show, that it is possible to generalize the result of Theorem
 
 
 
-\subsection{An adapted $\Tensor_R$-topology}
+\subsection{An adapted Topology for the Tensor Algebra}
 
 The idea will be to change the $\Tensor_R$-topology a bit: Instead of taking 
 $n!^R$ as weights with $0 \leq R < 1$, we take sequence $(\alpha_n)_{n \in 

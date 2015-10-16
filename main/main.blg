@@ -8,75 +8,59 @@ A level-1 auxiliary file: Chapter4.aux
 A level-1 auxiliary file: Chapter5.aux
 A level-1 auxiliary file: Chapter6.aux
 A level-1 auxiliary file: Chapter7.aux
-A level-1 auxiliary file: appendixA.aux
-A level-1 auxiliary file: appendixB.aux
-A level-1 auxiliary file: appendixC.aux
 The style file: ../../texmf/bibtex/bib/bst/chairx.bst
 Database file #1: ../../bibfiles/bib/dqbook.bib
 Database file #2: ../../bibfiles/bib/dqarticle.bib
-I was expecting a `,' or a `}'---line 9882 of file ../../bibfiles/bib/dqarticle.bib
- :   
- :   year =         {1987},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Database file #3: ../../bibfiles/bib/dqthesis.bib
 Database file #4: ../../bibfiles/bib/preprints.bib
 Database file #5: ../../bibfiles/bib/misc.bib
 Database file #6: ../../bibfiles/bib/script.bib
 Database file #7: ../../bibfiles/bib/dqproceeding.bib
 Database file #8: ../../bibfiles/bib/dqprocentry.bib
-I was expecting a `,' or a `}'---line 940 of file ../../bibfiles/bib/dqprocentry.bib
- :   
- :   year =         {1990},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 A bad cross reference---entry "rieffel:1990c"
 refers to entry "arveson.douglas:1990a", which doesn't exist
-Warning--I didn't find a database entry for "schoetz:2015a"
-Warning--I didn't find a database entry for "mueller:XXXXa"
-Warning--I didn't find a database entry for "wojtynski:2000a"
+Warning--I didn't find a database entry for "beretlson.cahen.gutt:1997a"
 Warning--I didn't find a database entry for "arveson.douglas:1990a"
 Warning--empty publisher in rieffel:1990c
-Warning--empty year in rieffel:1990c
-You've used 94 entries,
+You've used 95 entries,
             2314 wiz_defined-function locations,
-            996 strings with 15092 characters,
-and the built_in function-call counts, 27236 in all, are:
-= -- 2955
-> -- 883
+            996 strings with 15094 characters,
+and the built_in function-call counts, 27673 in all, are:
+= -- 3009
+> -- 895
 < -- 8
-+ -- 384
-- -- 278
-* -- 2272
-:= -- 4539
-add.period$ -- 204
-call.type$ -- 94
-change.case$ -- 332
++ -- 389
+- -- 282
+* -- 2315
+:= -- 4604
+add.period$ -- 206
+call.type$ -- 95
+change.case$ -- 336
 chr.to.int$ -- 0
 cite$ -- 96
-duplicate$ -- 1169
-empty$ -- 2358
-format.name$ -- 278
-if$ -- 5783
+duplicate$ -- 1182
+empty$ -- 2397
+format.name$ -- 282
+if$ -- 5879
 int.to.chr$ -- 0
-int.to.str$ -- 94
-missing$ -- 115
-newline$ -- 395
-num.names$ -- 188
-pop$ -- 372
+int.to.str$ -- 95
+missing$ -- 116
+newline$ -- 398
+num.names$ -- 190
+pop$ -- 373
 preamble$ -- 1
-purify$ -- 327
+purify$ -- 331
 quote$ -- 0
-skip$ -- 603
+skip$ -- 610
 stack$ -- 0
-substring$ -- 1607
-swap$ -- 276
+substring$ -- 1662
+swap$ -- 279
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 320
-warning$ -- 2
-while$ -- 278
-width$ -- 96
-write$ -- 921
-(There were 3 error messages)
+type$ -- 324
+warning$ -- 1
+while$ -- 284
+width$ -- 97
+write$ -- 929
+(There was 1 error message)

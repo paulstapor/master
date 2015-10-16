@@ -140,9 +140,12 @@
 \contentsline {proof}{{Proof}{XLVI}{}}{89}{proof.46}
 \contentsline {lemma}{{Lemma}{6.4.{7}}{}}{90}{lemma.6.4.7}
 \contentsline {subproof}{{Proof}{IV}{}}{90}{subproof.4}
+\contentsline {definition}{{Definition}{6.4.{8}}{The $\Sym _{1^{--}}$-Topology}}{91}{definition.8}
 \contentsline {lemma}{{Lemma}{7.1.{1}}{}}{93}{lemma.7.1.1}
 \contentsline {proof}{{Proof}{XLVII}{}}{93}{proof.47}
-\contentsline {remark}{{Remark}{7.1.{2}}{}}{94}{remark.2}
-\contentsline {proposition}{{Proposition}{7.1.{3}}{}}{94}{proposition.3}
+\contentsline {corollary}{{Corollary}{7.1.{2}}{}}{95}{corollary.2}
+\contentsline {remark}{{Remark}{7.1.{3}}{Hopf structures on the tensor algebra}}{95}{remark.3}
+\contentsline {proposition}{{Proposition}{7.2.{1}}{}}{95}{proposition.1}
 \contentsline {proof}{{Proof}{XLVIII}{}}{95}{proof.48}
-\contentsline {proposition}{{Proposition}{7.1.{4}}{}}{95}{proposition.4}
+\contentsline {remark}{{Remark}{7.2.{2}}{}}{96}{remark.2}
+\contentsline {theorem}{{Theorem}{7.2.{3}}{}}{96}{thm.7.2.3}
