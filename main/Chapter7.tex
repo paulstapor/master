@@ -8,12 +8,13 @@
 
 \section{Everything works}
 
-In the above sections we discussed a locally convex topology on the universal
-enveloping algebra considered as an associative algebra, which makes the Gutt 
-star product continuous. In the following we investigate the continuity of the structures
-of Hopf structure on $\algebra{U}_R(\lie{g}_z)$. 
-For this purpose, we need an explicit formula for
-the antipode
+In the previous chapters we discussed a locally convex topology on $\Sym^{\bullet}
+(\lie{g})$ or on the universal enveloping algebra with scaled Lie bracket, 
+considered as an associative algebra. The Gutt star product (or just the 
+multiplication in the case of $\algebra{U}_R(\lie{g}_z)$) was continuous.
+In the following, we investigate the continuity of the other maps which belong to 
+the Hopf structure on $\algebra{U}_R(\lie{g}_z)$. For this purpose, we need an 
+explicit formula for the antipode
 \begin{equation}
     \label{eq:Antipode}
     S_z \colon
@@ -31,17 +32,17 @@ and the coproduct
     \tensor
     \algebra{U}(\lie{g}_z)
 \end{equation}
-in the universal enveloping algebra. We pull them back on the symmetric 
-algebra and extend them to the whole tensor algebra by symmetrizing beforehand.
-We set
+in the $\algebra{U}_R(\lie{g}_z)$ and in $\Sym^{\bullet}(\lie{g})$. We pull them 
+back to the symmetric algebra and extend them to the whole tensor algebra by 
+symmetrizing beforehand. We define
 \begin{equation}
     \label{eq:AntipodeOnTensor}
-    S_z \colon
+    \widetilde{S}_z \colon
     \Tensor^\bullet(\lie{g})
     \longrightarrow
     \Sym^\bullet(\lie{g})
     , \quad
-    S_z
+    \widetilde{S}_z
     =
     \mathfrak{q}_z^{-1}
     \circ
@@ -54,14 +55,14 @@ We set
 and
 \begin{equation}
     \label{eq:CoProductOnTensor}
-    \ocoproduct_z \colon
+    \widetilde{\ocoproduct}_z \colon
     \Tensor^\bullet(\lie{g})
     \longrightarrow
     \Sym^\bullet(\lie{g})
     \tensor
     \Sym^\bullet(\lie{g})
     , \quad
-    \ocoproduct_z
+    \widetilde{\ocoproduct}_z
     =
     (\mathfrak{q}_z^{-1} \tensor \mathfrak{q}_z^{-1})
     \circ
@@ -69,9 +70,11 @@ and
     \circ
     \mathfrak{q}_z
     \circ
-    \Symmetrizer.
+    \Symmetrizer,
 \end{equation}
-Now we can prove two explicit formulas.
+to avoid that the maps on $\Sym^{\bullet}(\lie{g})$ and on $\algebra{U}
+(\lie{g}_z)$ are denoted by the same symbols. The next lemma gives us the two 
+explicit formulas we need.
 \begin{lemma}
     \label{Thm:Hopf:Formulas}%
     For $\xi_1, \ldots, \xi_n \in \lie{g}$ we have the identities

@@ -1389,6 +1389,7 @@ sequence $(\xi_n)_{n \in \mathbb{N}} \subset \mathbb{B}_1(0)$
 Each $(\alpha_n)_{n \in \mathbb{N}} \in \algebra{I}_{\lie{g}}$ gives a continuous 
 seminorm.
 \begin{definition}[Adapted seminorms]
+	\label{Def:AdaptedBanachSeminorms}
 	Let $(\alpha_n)_{n \in \mathbb{N}} \in \mathfrak{I}_{\lie{g}}$. Then
 	\begin{equation*}
 		p_{\alpha}
@@ -1819,6 +1820,20 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
     We know this is possible from Chapter 5, and 
     we finally get a continuity estimate which is locally uniform in $z$.
 \end{proof}
+From the result of the previous proposition, we see that the next definition is 
+useful:
+\begin{definition}[The $\Sym_{1^{--}}$-Topology]
+	Let $\lie{g}$ be a uniformly topologically nilpotent Banach-Lie algebra.
+	Then we denote by $\Sym_{1^{--}}^{\bullet}(\lie{g})$ the symmetric tensor 
+	algebra endowed with the topology, which is defined by the set of seminorms 
+	$\algebra{P}$ from Definition \ref{Def:AdaptedBanachSeminorms} and which is 
+	based $\lie{g}$-rapidly increasing sequences.
+\end{definition}
+Now we can rephrase the statement of Proposition~\ref{Nilpot:Prop:TopNilBanachLie} 
+in the following way: $\Sym_{1^{--}}^{\bullet}(\lie{g})$ endowed with the Gutt 
+star product is a locally convex algebra. We also see analogously to 
+Corollary~\ref{corollary:NilpotentCase} that exponentials functions are in the 
+completion $\widehat{\Sym}_{1^{--}}^{\bullet}(\lie{g})$.
 
 
 At the end of Chapter 5, we showed that a finite-dimensional Lie algebra 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.2.9)  16 OCT 2015 17:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.2.9)  16 OCT 2015 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1044,20 +1044,20 @@ ext.code.tex
 (./Chapter7.aux) (./appendixA.aux) (./appendixB.aux) (./appendixC.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
 
 (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1124,7 +1124,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \microtypecontext on input line 117.
+LaTeX Info: Redefining \microtypecontext on input line 114.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1138,7 +1138,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 117.
+Package hyperref Info: Link coloring OFF on input line 114.
 
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1148,19 +1148,19 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count218
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 114.
+LaTeX Info: Redefining \pageref on input line 114.
+LaTeX Info: Redefining \nameref on input line 114.
  (./main.out)
 (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for U+wasy on input line 126.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 123.
  (/usr/share/texmf/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 126.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1168,7 +1168,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 126.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1176,12 +1176,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texmf/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 126.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 123.
 
 (/usr/share/texmf/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 126.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 123.
 
 
 (/usr/share/texmf/tex/latex/stmaryrd/Ustmry.fd) [1
@@ -1254,11 +1254,17 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+LaTeX Warning: Citation `gutt.rawnsley:2003a' on page 17 undefined on input lin
+e 893.
 
-LaTeX Warning: Citation `schoetz:2015a' on page 18 undefined on input line 993.
+
+LaTeX Warning: Citation `beretlson.cahen.gutt:1997a' on page 17 undefined on in
+put line 895.
+
+[17]
+
+LaTeX Warning: Citation `schoetz:2015a' on page 18 undefined on input line 996.
 
 
 ) [18] [19]
@@ -1584,15 +1590,7 @@ icate ignored
 <to be read again> 
                    \relax 
 l.1476 \begin{proposition}
-                           [89]
-Package hyperref Info: bookmark level for unknown claim defaults to 0 on input 
-line 1647.
-
-Overfull \hbox (5.40721pt too wide) in paragraph at lines 1768--1768
-[] 
- []
-
-[90]) [91]
+                           [89] [90]) [91]
 \openout2 = `Chapter7.aux'.
 
  (./Chapter7.tex [92
@@ -1605,59 +1603,35 @@ Chapter 7.
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \begin{remark}
+l.264 \begin{remark}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{proposition.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.276 \begin{proposition}
+l.279 \begin{proposition}
                           [94]pdfTeX warning (ext4): destination with the same 
 identifier (name{proposition.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.365 \begin{proposition}
+l.368 \begin{proposition}
                          ) [95] [96
 
 
 ] [97
 
-] [98]
-\openout2 = `appendixA.aux'.
-
- (./appendixA.tex
-Appendix A.
-) [99
-
-
-]
-\openout2 = `appendixB.aux'.
-
- (./appendixB.tex [100
-
-
-
-]
-Appendix B.
-) [101]
-\openout2 = `appendixC.aux'.
-
- (./appendixC.tex [102
-
-
-
-]
-Appendix C.
-) [103] (./main.bbl (./main.brf)
+] [98] (./main.bbl (./main.brf)
 \tf@brf=\write6
 \openout6 = `main.brf'.
 
- [104
+
+[104
+
+
 
 
 ]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 46.
-
-(/usr/share/texmf/tex/latex/base/t1cmtt.fd
+ (/usr/share/texmf/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
@@ -1680,72 +1654,99 @@ iburg, 1998.  Avail-able at
 \tf@thm=\write7
 \openout7 = `main.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 251.
  [108]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 251.
  (./main.aux (./Introduction.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4
 .aux) (./Chapter5.aux) (./Chapter6.aux) (./Chapter7.aux)
 (./appendixA.aux) (./appendixB.aux) (./appendixC.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 251.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 251.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 82228E8B629CB97C8B19F40E5A19C031;4953.
+(rerunfilecheck)             Checksum: C15DFC434B3C35BCAA08CE7842316523;4210.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: CA55A001E851B0656672909DDD629553;6222.
+(rerunfilecheck)             Checksum: B71423CA489F7E9D7ABFF956BCBAE5CA;6355.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 251.
  ) 
 Here is how much of TeX's memory you used:
- 22948 strings out of 493315
- 397506 string characters out of 6145894
- 525258 words of memory out of 5000000
- 25240 multiletter control sequences out of 15000+600000
+ 22932 strings out of 493315
+ 397356 string characters out of 6145894
+ 525228 words of memory out of 5000000
+ 25235 multiletter control sequences out of 15000+600000
  38658 words of font info for 109 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,17n,73p,449b,1475s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/stapor/.cache/texmf/fonts/pk/ljfour/public/bbm/bbm9.600pk>{/usr/share
-/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc} </home/stapor/.cache/texmf/fon
-ts/pk/ljfour/public/bbm/bbm8.600pk> </home/stapor/.cache/texmf/fonts/pk/ljfour/
-public/bbm/bbm10.657pk></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex10.
-pfb></usr/share/texmf/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share
-/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share
-/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
-xmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/publi
-c/amsfonts/cm/cmss10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
-xmf/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/publ
-ic/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/euler/eu
-fm10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/share/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/f
-onts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/publ
-ic/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfcc0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfsl1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0900.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sftt0900.pfb></usr/share/texmf/fonts/type1/public/stmaryrd/stmary10.pfb></usr/
-share/texmf/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on main.pdf (108 pages, 1035693 bytes).
+pdfTeX warning (dest): name{section.1.C.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.C.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.1.C} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.B.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.B.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.1.B} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.A.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.A.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.1.A} has been referenced but does not exis
+t, replaced by a fixed one
+
+ </home/stapor/.cache/texmf/fonts/pk/ljfour/public/bbm/bbm9.600pk>{/usr/share/t
+exmf/fonts/enc/dvips/cm-super/cm-super-t1.enc} </home/stapor/.cache/texmf/fonts
+/pk/ljfour/public/bbm/bbm8.600pk> </home/stapor/.cache/texmf/fonts/pk/ljfour/pu
+blic/bbm/bbm10.657pk></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/share/texmf/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/t
+exmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
+exmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr6
+.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texm
+f/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/public/
+amsfonts/cm/cmss10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texm
+f/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/euler/eufm
+10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
+hare/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fon
+ts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public
+/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfcc0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfsl1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0900.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+ftt0900.pfb></usr/share/texmf/fonts/type1/public/stmaryrd/stmary10.pfb></usr/sh
+are/texmf/fonts/type1/public/stmaryrd/stmary8.pfb>
+Output written on main.pdf (103 pages, 1033879 bytes).
 PDF statistics:
- 1923 PDF objects out of 2073 (max. 8388607)
- 1741 compressed objects within 18 object streams
- 582 named destinations out of 1000 (max. 500000)
- 19981 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 1879 PDF objects out of 2073 (max. 8388607)
+ 1702 compressed objects within 18 object streams
+ 577 named destinations out of 1000 (max. 500000)
+ 19909 words of extra memory for PDF output out of 20736 (max. 10000000)
 
