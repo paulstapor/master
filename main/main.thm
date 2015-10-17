@@ -1,8 +1,8 @@
 \contentsline {definition}{{Definition}{2.1.{1}}{Poisson Manifold}}{11}{definition.1}
-\contentsline {definition}{{Definition}{2.3.{1}}{Star Product}}{16}{definition.1}
-\contentsline {definition}{{Definition}{2.3.{2}}{Equivalence of Star Products}}{16}{definition.2}
+\contentsline {definition}{{Definition}{2.3.{1}}{Star Product}}{17}{definition.1}
+\contentsline {definition}{{Definition}{2.3.{2}}{Equivalence of Star Products}}{17}{definition.2}
 \contentsline {proposition}{{Proposition}{3.1.{1}}{}}{21}{proposition.1}
-\contentsline {proof}{{Proof}{I}{}}{21}{proof.1}
+\contentsline {proof}{{Proof}{I}{}}{22}{proof.1}
 \contentsline {definition}{{Definition}{3.1.{2}}{Kirillov-Kostant-Souriau bracket}}{22}{definition.2}
 \contentsline {proposition}{{Proposition}{3.1.{3}}{}}{23}{proposition.3}
 \contentsline {proof}{{Proof}{II}{}}{23}{proof.2}
@@ -19,23 +19,23 @@
 \contentsline {lemma}{{Lemma}{3.4.{3}}{}}{34}{lemma.3.4.3}
 \contentsline {proof}{{Proof}{VI}{}}{34}{proof.6}
 \contentsline {lemma}{{Lemma}{3.4.{4}}{}}{34}{lemma.3.4.4}
-\contentsline {subproof}{{Proof}{I}{}}{34}{subproof.1}
-\contentsline {lemma}{{Lemma}{3.4.{5}}{}}{35}{lemma.3.4.5}
-\contentsline {subproof}{{Proof}{II}{}}{35}{subproof.2}
+\contentsline {subproof}{{Proof}{I}{}}{35}{subproof.1}
+\contentsline {lemma}{{Lemma}{3.4.{5}}{}}{36}{lemma.3.4.5}
+\contentsline {subproof}{{Proof}{II}{}}{36}{subproof.2}
 \contentsline {theorem}{{Theorem}{3.4.{6}}{}}{38}{thm.3.4.6}
 \contentsline {lemma}{{Lemma}{4.1.{1}}{}}{39}{lemma.4.1.1}
 \contentsline {proof}{{Proof}{VII}{}}{39}{proof.7}
 \contentsline {remark}{{Remark}{4.1.{2}}{}}{40}{remark.2}
 \contentsline {proposition}{{Proposition}{4.1.{3}}{}}{40}{proposition.3}
-\contentsline {proof}{{Proof}{VIII}{}}{40}{proof.8}
+\contentsline {proof}{{Proof}{VIII}{}}{41}{proof.8}
 \contentsline {remark}{{Remark}{4.1.{4}}{}}{41}{remark.4}
 \contentsline {proposition}{{Proposition}{4.1.{5}}{}}{42}{proposition.5}
 \contentsline {proof}{{Proof}{IX}{}}{42}{proof.9}
 \contentsline {remark}{{Remark}{4.1.{6}}{}}{42}{remark.6}
-\contentsline {definition}{{Definition}{4.1.{7}}{G-Index}}{42}{definition.7}
+\contentsline {definition}{{Definition}{4.1.{7}}{G-Index}}{43}{definition.7}
 \contentsline {definition}{{Definition}{4.1.{8}}{G-Factorial}}{43}{definition.8}
 \contentsline {lemma}{{Lemma}{4.1.{9}}{}}{43}{lemma.4.1.9}
-\contentsline {proof}{{Proof}{X}{}}{43}{proof.10}
+\contentsline {proof}{{Proof}{X}{}}{44}{proof.10}
 \contentsline {definition}{{Definition}{4.1.{10}}{}}{44}{definition.10}
 \contentsline {proposition}{{Proposition}{4.1.{11}}{}}{44}{proposition.11}
 \contentsline {proof}{{Proof}{XI}{}}{45}{proof.11}
@@ -46,13 +46,13 @@
 \contentsline {proof}{{Proof}{XIII}{}}{47}{proof.13}
 \contentsline {proposition}{{Proposition}{5.1.{1}}{}}{51}{proposition.1}
 \contentsline {proof}{{Proof}{XIV}{}}{51}{proof.14}
-\contentsline {lemma}{{Lemma}{5.1.{2}}{}}{51}{lemma.5.1.2}
+\contentsline {lemma}{{Lemma}{5.1.{2}}{}}{52}{lemma.5.1.2}
 \contentsline {subproof}{{Proof}{III}{}}{52}{subproof.3}
-\contentsline {remark}{{Remark}{5.1.{3}}{}}{52}{remark.3}
+\contentsline {remark}{{Remark}{5.1.{3}}{}}{53}{remark.3}
 \contentsline {definition}{{Definition}{5.2.{1}}{Topological vector space}}{53}{definition.1}
 \contentsline {theorem}{{Theorem}{5.2.{2}}{}}{53}{thm.5.2.2}
 \contentsline {proof}{{Proof}{XV}{}}{53}{proof.15}
-\contentsline {definition}{{Definition}{5.2.{3}}{Locally convex space}}{53}{definition.3}
+\contentsline {definition}{{Definition}{5.2.{3}}{Locally convex space}}{54}{definition.3}
 \contentsline {definition}{{Definition}{5.2.{4}}{Locally convex algebra}}{54}{definition.4}
 \contentsline {definition}{{Definition}{5.2.{5}}{Asymptotic estimate algebra}}{54}{definition.5}
 \contentsline {remark}{{Remark}{5.2.{6}}{The notion ''asymptotic estimate''}}{54}{remark.6}
@@ -64,47 +64,47 @@
 \contentsline {lemma}{{Lemma}{5.2.{10}}{}}{57}{lemma.5.2.10}
 \contentsline {proof}{{Proof}{XVIII}{}}{57}{proof.18}
 \contentsline {example}{{Example}{5.2.{11}}{}}{58}{example.11}
-\contentsline {definition}{{Definition}{5.2.{12}}{$\Tensor _R$-topology}}{58}{definition.12}
+\contentsline {definition}{{Definition}{5.2.{12}}{$\Tensor _R$-topology}}{59}{definition.12}
 \contentsline {lemma}{{Lemma}{5.2.{13}}{The $\Tensor _R$-topology}}{59}{lemma.5.2.13}
 \contentsline {proof}{{Proof}{XIX}{}}{59}{proof.19}
 \contentsline {definition}{{Definition}{5.2.{14}}{}}{60}{definition.14}
-\contentsline {proposition}{{Proposition}{5.2.{15}}{Schauder bases}}{60}{proposition.15}
+\contentsline {proposition}{{Proposition}{5.2.{15}}{Schauder bases}}{61}{proposition.15}
 \contentsline {proposition}{{Proposition}{5.2.{16}}{Nuclearity}}{61}{proposition.16}
 \contentsline {remark}{{Remark}{5.2.{17}}{The $\Tensor _R$-topology in the literature}}{61}{remark.17}
-\contentsline {lemma}{{Lemma}{5.3.{1}}{}}{61}{lemma.5.3.1}
+\contentsline {lemma}{{Lemma}{5.3.{1}}{}}{62}{lemma.5.3.1}
 \contentsline {proof}{{Proof}{XX}{}}{62}{proof.20}
 \contentsline {theorem}{{Theorem}{5.3.{2}}{Continuity of the star product}}{63}{thm.5.3.2}
-\contentsline {proof}{{Proof}{XXI}{}}{63}{proof.21}
-\contentsline {remark}{{Remark}{5.3.{3}}{Uniform continuity}}{64}{remark.3}
-\contentsline {lemma}{{Lemma}{5.3.{4}}{}}{64}{lemma.5.3.4}
+\contentsline {proof}{{Proof}{XXI}{}}{64}{proof.21}
+\contentsline {remark}{{Remark}{5.3.{3}}{Uniform continuity}}{65}{remark.3}
+\contentsline {lemma}{{Lemma}{5.3.{4}}{}}{65}{lemma.5.3.4}
 \contentsline {proof}{{Proof}{XXII}{}}{65}{proof.22}
-\contentsline {proof}{{Proof}{XXIII}{Alternative Proof of Theorem~\ref {Thm:LCAna:Continuity1}}}{65}{proof.23}
+\contentsline {proof}{{Proof}{XXIII}{Alternative Proof of Theorem~\ref {Thm:LCAna:Continuity1}}}{66}{proof.23}
 \contentsline {example}{{Example}{5.3.{5}}{A counter-example}}{66}{example.5}
 \contentsline {proposition}{{Proposition}{5.3.{6}}{}}{67}{proposition.6}
-\contentsline {proof}{{Proof}{XXIV}{}}{67}{proof.24}
-\contentsline {proposition}{{Proposition}{5.3.{7}}{Dependence on $z$}}{67}{proposition.7}
-\contentsline {proof}{{Proof}{XXV}{}}{67}{proof.25}
-\contentsline {remark}{{Remark}{5.3.{8}}{(Weakly) holomorphic maps with values in locally convex spaces}}{68}{remark.8}
-\contentsline {definition}{{Definition}{5.3.{9}}{The $\algebra {U}_R$-Topology}}{68}{definition.9}
+\contentsline {proof}{{Proof}{XXIV}{}}{68}{proof.24}
+\contentsline {proposition}{{Proposition}{5.3.{7}}{Dependence on $z$}}{68}{proposition.7}
+\contentsline {proof}{{Proof}{XXV}{}}{68}{proof.25}
+\contentsline {remark}{{Remark}{5.3.{8}}{(Weakly) holomorphic maps with values in locally convex spaces}}{69}{remark.8}
+\contentsline {definition}{{Definition}{5.3.{9}}{The $\algebra {U}_R$-Topology}}{69}{definition.9}
 \contentsline {proposition}{{Proposition}{5.3.{10}}{Universal property}}{69}{proposition.10}
-\contentsline {proof}{{Proof}{XXVI}{}}{69}{proof.26}
-\contentsline {example}{{Example}{5.3.{11}}{}}{69}{example.11}
+\contentsline {proof}{{Proof}{XXVI}{}}{70}{proof.26}
+\contentsline {example}{{Example}{5.3.{11}}{}}{70}{example.11}
 \contentsline {corollary}{{Corollary}{5.3.{12}}{Continuous Representations}}{70}{corollary.12}
 \contentsline {proof}{{Proof}{XXVII}{}}{70}{proof.27}
 \contentsline {remark}{{Remark}{5.3.{13}}{}}{70}{remark.13}
-\contentsline {lemma}{{Lemma}{5.3.{14}}{}}{70}{lemma.5.3.14}
-\contentsline {proof}{{Proof}{XXVIII}{}}{70}{proof.28}
-\contentsline {proposition}{{Proposition}{5.3.{15}}{Functoriality}}{72}{proposition.15}
-\contentsline {proof}{{Proof}{XXIX}{}}{72}{proof.29}
+\contentsline {lemma}{{Lemma}{5.3.{14}}{}}{71}{lemma.5.3.14}
+\contentsline {proof}{{Proof}{XXVIII}{}}{71}{proof.28}
+\contentsline {proposition}{{Proposition}{5.3.{15}}{Functoriality}}{73}{proposition.15}
+\contentsline {proof}{{Proof}{XXIX}{}}{73}{proof.29}
 \contentsline {proposition}{{Proposition}{5.4.{1}}{Optimality of the $\Tensor _R$-topology}}{73}{proposition.1}
-\contentsline {definition}{{Definition}{5.4.{2}}{}}{73}{definition.2}
-\contentsline {lemma}{{Lemma}{5.4.{3}}{Root test in locally convex spaces}}{73}{lemma.5.4.3}
-\contentsline {proof}{{Proof}{XXX}{}}{73}{proof.30}
-\contentsline {lemma}{{Lemma}{5.4.{4}}{}}{73}{lemma.5.4.4}
+\contentsline {definition}{{Definition}{5.4.{2}}{}}{74}{definition.2}
+\contentsline {lemma}{{Lemma}{5.4.{3}}{Root test in locally convex spaces}}{74}{lemma.5.4.3}
+\contentsline {proof}{{Proof}{XXX}{}}{74}{proof.30}
+\contentsline {lemma}{{Lemma}{5.4.{4}}{}}{74}{lemma.5.4.4}
 \contentsline {proof}{{Proof}{XXXI}{}}{74}{proof.31}
-\contentsline {lemma}{{Lemma}{5.4.{5}}{}}{74}{lemma.5.4.5}
-\contentsline {proof}{{Proof}{XXXII}{}}{74}{proof.32}
-\contentsline {remark}{{Remark}{5.4.{6}}{Another topology in $\algebra {U}(\lie {g})$}}{75}{remark.6}
+\contentsline {lemma}{{Lemma}{5.4.{5}}{}}{75}{lemma.5.4.5}
+\contentsline {proof}{{Proof}{XXXII}{}}{75}{proof.32}
+\contentsline {remark}{{Remark}{5.4.{6}}{Another topology in $\algebra {U}(\lie {g})$}}{76}{remark.6}
 \contentsline {theorem}{{Theorem}{6.1.{1}}{}}{78}{thm.6.1.1}
 \contentsline {proof}{{Proof}{XXXIII}{}}{79}{proof.33}
 \contentsline {corollary}{{Corollary}{6.1.{2}}{}}{79}{corollary.2}
@@ -128,7 +128,7 @@
 \contentsline {example}{{Example}{6.2.{3}}{}}{84}{example.3}
 \contentsline {proposition}{{Proposition}{6.3.{1}}{}}{85}{proposition.1}
 \contentsline {proof}{{Proof}{XLIII}{}}{85}{proof.43}
-\contentsline {proposition}{{Proposition}{6.3.{2}}{}}{85}{proposition.2}
+\contentsline {proposition}{{Proposition}{6.3.{2}}{}}{86}{proposition.2}
 \contentsline {proof}{{Proof}{XLIV}{}}{86}{proof.44}
 \contentsline {definition}{{Definition}{6.4.{1}}{}}{87}{definition.1}
 \contentsline {definition}{{Definition}{6.4.{2}}{Rapidly increasing sequences}}{88}{definition.2}

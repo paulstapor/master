@@ -10,57 +10,53 @@ A level-1 auxiliary file: Chapter6.aux
 A level-1 auxiliary file: Chapter7.aux
 The style file: ../../texmf/bibtex/bib/bst/chairx.bst
 Database file #1: ../../bibfiles/bib/dqbook.bib
-Database file #2: ../../bibfiles/bib/dqarticle.bib
-Database file #3: ../../bibfiles/bib/dqthesis.bib
-Database file #4: ../../bibfiles/bib/preprints.bib
-Database file #5: ../../bibfiles/bib/misc.bib
+Database file #2: ../../bibfiles/bib/misc.bib
+Database file #3: ../../bibfiles/bib/dqarticle.bib
+Database file #4: ../../bibfiles/bib/dqthesis.bib
+Database file #5: ../../bibfiles/bib/preprints.bib
 Database file #6: ../../bibfiles/bib/script.bib
-Database file #7: ../../bibfiles/bib/dqproceeding.bib
-Database file #8: ../../bibfiles/bib/dqprocentry.bib
-A bad cross reference---entry "rieffel:1990c"
-refers to entry "arveson.douglas:1990a", which doesn't exist
+Database file #7: ../../bibfiles/bib/dqprocentry.bib
+Database file #8: ../../bibfiles/bib/dqproceeding.bib
 Warning--I didn't find a database entry for "beretlson.cahen.gutt:1997a"
-Warning--I didn't find a database entry for "arveson.douglas:1990a"
-Warning--empty publisher in rieffel:1990c
 You've used 95 entries,
             2314 wiz_defined-function locations,
-            996 strings with 15094 characters,
-and the built_in function-call counts, 27673 in all, are:
-= -- 3009
-> -- 895
-< -- 8
-+ -- 389
-- -- 282
-* -- 2315
-:= -- 4604
-add.period$ -- 206
+            1000 strings with 15344 characters,
+and the built_in function-call counts, 27741 in all, are:
+= -- 3015
+> -- 901
+< -- 9
++ -- 391
+- -- 284
+* -- 2328
+:= -- 4619
+add.period$ -- 207
 call.type$ -- 95
 change.case$ -- 336
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 1182
-empty$ -- 2397
-format.name$ -- 282
-if$ -- 5879
+cite$ -- 95
+duplicate$ -- 1183
+empty$ -- 2399
+format.name$ -- 284
+if$ -- 5891
 int.to.chr$ -- 0
 int.to.str$ -- 95
 missing$ -- 116
-newline$ -- 398
-num.names$ -- 190
-pop$ -- 373
+newline$ -- 399
+num.names$ -- 191
+pop$ -- 368
 preamble$ -- 1
 purify$ -- 331
 quote$ -- 0
 skip$ -- 610
 stack$ -- 0
 substring$ -- 1662
-swap$ -- 279
-text.length$ -- 8
+swap$ -- 282
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 324
-warning$ -- 1
-while$ -- 284
+warning$ -- 0
+while$ -- 285
 width$ -- 97
-write$ -- 929
-(There was 1 error message)
+write$ -- 934
+(There was 1 warning)

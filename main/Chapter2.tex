@@ -6,12 +6,13 @@
 
 \chapter{Deformation quantization}
 
-The starting point for every theory of quantization is surely mechanics. Here, 
+The starting point for every theory of quantization is without any doubt the 
+theory of mechanics. Here, 
 mechanics means both, the classical and the quantum theory. Since we want to 
-explain how one can link them together, we will give a short overview of both 
+explain how one can link those two together, we will give a short overview of both 
 theories and show their similarities and their differences in the first section 
-of this chapter. Then we will come to different aspects of quantization and 
-state the most important ideas in the next part. In section three, we will 
+of this chapter. Then we will explain what a quantization should actually be and 
+what kind of approaches to it exist in the next part. In section three, we will 
 focus on Deformation quantization and give an overview of this rather young 
 theory.
 
@@ -23,21 +24,21 @@ theory.
 \subsection{Classical Mechanical Systems}
 \label{subsec:chap2_Classical}
 We want to recall briefly the notions of classical mechanics. There are many 
-good books on this subject and also the notation is mostly uniform everywhere, 
-but nevertheless want to refer to the books of Marsden and Ratiu 
-\cite{marsden.ratiu:1999a} and Arnold \cite{arnold:1989a}, which give very good 
-introductions and overviews of the whole theory.
+good books on this subject and also the notation for the basic concepts is more or 
+less uniform everywhere, but nevertheless want to refer to the books of Marsden 
+and Ratiu \cite{marsden.ratiu:1999a} and Arnold \cite{arnold:1989a}, which give 
+very good introductions and overviews of the theory.
 Imagine the simplest model for a mechanical system, which is not trivial: a 
-single particle with mass $m$ in $\mathbb{R}^3$ in a scalar potential $V$. We 
-will denote his position by $q = (q^1, q^2, q^3) \in Q = \mathbb{R}^3$ and call 
-the set of all possible positions $Q$ the configuration space. Since we also 
-have a time coordinate $t \in \mathbb{R}$, we can describe the path on which 
+single particle with mass $m$ moving in $\mathbb{R}^3$ in a scalar potential $V$. 
+We will denote its position by $q = (q^1, q^2, q^3) \in Q = \mathbb{R}^3$ and call 
+the set $Q$ of all possible positions the \emph{configuration space}. Since we 
+also have a time coordinate $t \in \mathbb{R}$, we can describe the path on which 
 the particle moves by $q(t)$. The state of the particle is completely described 
 by its position and its velocity $(q(t), \dot q(t))$ and the velocity should be 
 understood as a tangent vector $\dot q(t) \in T_{q(t)}Q = \mathbb{R}^3$. 
 Therefore, the tangent bundle $TQ$, which is in this case $\mathbb{R}^6$, is 
 sometimes called the state space. In classical mechanics, we can describe the 
-movement of the particle with the Euler-Lagrange equations, which are derived 
+movement of the particle using the Euler-Lagrange equations, which are derived 
 from the Lagrange function by a variational principle. The Lagrange function of 
 this system reads
 \begin{equation*}
@@ -45,9 +46,8 @@ this system reads
 	=
 	T(q, \dot q) - V(q, \dot q)
 \end{equation*}
-and $T(q, \dot q) = \frac{1}{2} m  \sum_{i=1}^3 \dot{q^i}^2$ is the kinetic 
-energy. The action 
-is defined as the integral
+and $T(q, \dot q) = \frac{m}{2}  \sum_{i=1}^3 \left( \dot{q}^i \right)^2$ is the 
+kinetic energy. The action along a path is defined as the integral
 \begin{equation*}
 	\mathcal{S}(q, \dot q)
 	=
@@ -56,7 +56,7 @@ is defined as the integral
 	dt.
 \end{equation*}
 It is a physical observation, similar to a mathematical axiom, that this action 
-functional is minimized along the trajectories of the particle. So fixing a 
+functional is minimized along the trajectories of the particle. So by fixing a 
 starting point $q_0$ and an end point $q_1$ of a trajectory, we find
 \begin{equation*}
 	\delta \mathcal{S}
@@ -87,8 +87,8 @@ In our case this means
 	0
 \end{equation*}
 and we can integrate the equations to get the trajectory. So far, we described 
-the system in the state space and for obvious reasons, this formalism is called 
-the Lagrange formalism. It is not the only formalism, which describes to 
+the system in the state space. This description is called 
+the Lagrange formalism. It is not the only picture, which describes to 
 behaviour of the system: one can go to the so called Hamilton formalism, which 
 is based on the conjugate momenta $p = (p_1, p_2, p_3) \in T_{q(t)}^*Q$
 \begin{equation*}
@@ -96,8 +96,9 @@ is based on the conjugate momenta $p = (p_1, p_2, p_3) \in T_{q(t)}^*Q$
 	=
 	\frac{\partial \mathcal{L}}{\partial \dot q^i}
 \end{equation*}
-and linked to the Lagrange formalism by a Legendre transformation. Now we can 
-define the Hamilton function
+and linked to the Lagrange formalism by a Legendre transformation. The set $T^*Q$ 
+also describes all possible states of the system and is called the phase space. 
+Now we can define the Hamilton function
 \begin{equation*}
 	H(q, p)
 	=
@@ -106,7 +107,7 @@ define the Hamilton function
 	\mathcal{L}(q, \dot q),
 \end{equation*} 
 which is the crucial quantity in this setting. It represents the energy of the 
-system. On finds the equations
+system. One finds the equations
 \begin{equation*}
 	\frac{\partial H}{\partial p_i}
 	=
@@ -155,11 +156,15 @@ and finds the time evolution of a function $f$ given by
 	=
 	\{ f, H \}.
 \end{equation*}
-All of those objects have, of course, a geometrical interpretation which remain 
-true for and allow generalizations from this very easy example. For a more 
+All of those objects have, of course, geometrical interpretations which 
+allow generalizations from this very easy example. For a more 
 complex system than one particle in a scalar potential, the configuration space 
 $Q$ will be a smooth manifold, the state space $TQ$ is described by the tangent 
-bundle and the phase space $T^*Q$ by the cotangent bundle. The transition from 
+bundle and the phase space $T^*Q$ by the cotangent bundle. Points in the phase 
+space, which can also be understood as Dirac measures in $T^*Q$, describe the 
+possible states of the system. This interpretation allows to speak of positive 
+Borel measures on $T^*Q$ as mixed states, which describe a probabilistic 
+distribution of the state of the system. The transition from 
 the Lagrange to the Hamilton formalism is done by a fiber derivative, the 
 kinetic energy has a mathematical interpretation as a Riemannian metric and the 
 Poisson bracket is the one which is due to the canonical symplectic form on the 
@@ -174,9 +179,11 @@ symmetry can mathematically be described by a Lie group $G$, which acts on
 $T^*Q$ and a reduction by a momentum map $J \colon T^*Q \longrightarrow 
 \lie{g}^*$, where $\lie{g}$ is the Lie algebra of the Lie group and $\lie{g}^*$ 
 its dual. The reduced phase space is a quotient of the cotangent bundle and 
-does not need to be symplectic any more. Anyway, in both cases, the result will 
-be something more general than a symplectic manifold: it will be a Poisson 
-manifold. 
+does not need to be symplectic any more. In both cases, the result will 
+be something more general than a symplectic manifold, because the quotient 
+procedure may not leave closed and nondegenerate $2$-form on the reduced phase 
+space any more. The Poisson bracket however will still be there. So the objects we 
+actually want to use to describe classical mechanics are Poisson manifolds. 
 \begin{definition}[Poisson Manifold]
 	A Poisson manifold is a tuple $(M, \{ \cdot, \cdot \})$ of a smooth 
 	manifold $M$ and a Poisson bracket $\{ \cdot, \cdot\}$. The bracket is a 
@@ -201,37 +208,42 @@ manifold.
 		0.
 	\end{equation*}
 \end{definition}
-A classical mechanical system will be described as a Poisson manifold together 
-with a Hamilton function $H$, such that the time derivation of every function 
-$f \in \Cinfty(M)$ is given by the relation
+The objects we can observe in this setting are the smooth functions on the Poisson 
+manifold. Together with the Poisson bracket, they form the prototype of a 
+\emph{Poisson algebra}: an algebra with a bracket, which is an antisymmetric 
+biderivation and which fulfils the Jacobi identity. The range, sometimes also 
+called the spectrum, of those smooth functions should be seen as the measurable 
+values of the observable. So in full generality, we could say that a classical 
+mechanical system is a Poisson manifold together with a Hamilton function $H$, and 
+the time evolution of every observable $f \in \Cinfty(M)$ is given by the relation
 \begin{equation*}
 	\frac{d}{dt} f(t)
 	=
 	\{f, H\}.
 \end{equation*}
-The observable algebra of this classical system is then modelled as the algebra 
-of smooth functions $\Cinfty(M)$ on this Poisson manifold.
+We will soon see that this formalism is as close as we can get to the one of 
+quantum mechanics.
 
 
 
 \subsection{Quantum Mechanics}
 \label{subsec:chap2_Quantum}
 
-In quantum theory, the modelling of a physical system looks completely 
-different on the first sight. There is indeed no obvious way to describe how 
-the transition from classical to quantum mechanics happened, but it was a hard 
-and non-straightforward way which was taken in small steps of which some were 
+In quantum theory, the model of a physical system looks completely different on 
+the first sight. There is indeed no obvious way to describe how this formalism was 
+derived out of the one describing classical mechanics. It was a hard 
+and non-straightforward way, taken in small steps of which some were 
 more or less obvious and some were ingenious guesses. Built up on first ideas 
 by Max Planck, who described the radiation of a black body, Albert Einstein, 
 who explained the photo-electrical effect and Niels Bohr, who solved the 
 problem of atomic spectra, a hand full of physicists including Max Born, 
 Werner Heisenberg, Erwin Schr\"odinger, Paul Dirac, Wolfgang Pauli and Pascual 
-Jordan developed a non-intuitive and complex but extremely well working theory, 
-which was able to give precise answers to very most of the open questions of 
-physics at that time. However, this theory, mainly risen between 1925 and 1928, 
-did not have a satisfying mathematical fundament. It took around ten more 
-years, until mathematicians, mainly John von Neumann, worked out a mathematical 
-theory for this and gave also a physical interpretation to their mathematical 
+Jordan developed a complex, counter-intuitive but extremely well working theory, 
+which was able to give precise answers to very most of the open questions at that 
+time. However, this theory, mainly risen between 1925 and 1928, did not have a 
+satisfying mathematical fundament. It took around ten more years until 
+mathematicians, mainly John von Neumann, worked out a mathematical theory for 
+quantum mechanics and gave also a physical interpretation to their mathematical 
 formulation \cite{vonneumann:1996a}. Today, quantum mechanics is usually 
 introduced as a mathematical theory based on axioms and most of the textbooks 
 (at least most of the more mathematical ones) use this axiomatical approach to 
@@ -239,19 +251,19 @@ explain the theory. Two very nice mathematical introductions are given by
 Bongaarts \cite{bongaarts:2015a} and Hall \cite{hall:2013a}.
 
 
-The \emph{state} of a physical system is described by a vector $\psi$ on a 
-Hilbert space $\hilbert H$ and the \emph{observables} are self-adjoint (and 
+The state of a physical system is described by a vector $\psi$ on a 
+Hilbert space $\hilbert H$ and the observables are self-adjoint (and 
 usually unbounded) operators on it. The spectrum of these operators describes 
-the \emph{measurable values}. The theory is probabilistic with a deterministic 
-time development: the pair ($A$, $\phi$) gives a probabilistic distribution, 
+the measurable values. The theory is probabilistic, but has a deterministic 
+time evolution: the pair $(A, \psi)$ gives a probabilistic distribution, 
 from which we can calculate the probability to measure $A$ with the value $a 
-\in \spec (A)$ in the state $\phi$ using the spectral resolution of $A$. We 
-want to illustrate this again using the example of a particle in $\mathbb{R}^3$ 
+\in \spec (A)$ in the state $\psi$ using the spectral resolution of $A$. We 
+want to look again at the example of a particle in $\mathbb{R}^3$ 
 moving in a potential. Let $x = (x_1, x_2, x_3) \in \mathbb{R}^3$ be a 
 coordinate vector, then we have the so called Schr\"odinger representation 
 given by the Hilbert space $\hilbert{H} = \Lzwei(\mathbb{R}^3)$ of square 
-integrable functions with the Lebesgue measure. The state $\phi$ of a particle 
-is a time-variant element of this Hilbert space which fulfils the 
+integrable functions with the Lebesgue measure. The state $\psi$ of a particle 
+is a time-dependent element of this Hilbert space which fulfils the 
 Schr\"odinger equation
 \begin{equation}
 	\label{QM:Schroedinger}
@@ -268,7 +280,7 @@ where $\hat{H}$ denotes the Hamilton operator which is given by
 	\Laplace + V(x).
 \end{equation}
 Similar to the Hamilton function in classical mechanics, the Hamilton operator 
-(or more precise: its spectrum) gives the energy of this system, $m$ is the 
+(or more precisely: its spectrum) describes the energy of this system, $m$ is the 
 mass of the particle and $V$ the potential. The operators which correspond to 
 the coordinate $x_i$ and the momentum $p_j$ of the particle are given by
 \begin{align*}
@@ -292,11 +304,11 @@ This turns Equation \eqref{QM:Schroedinger} into
 	\left( \frac{\hat{p}^2}{2m} + V(x) \right)
 	\psi(x, t)
 \end{equation*}
-and makes it therefore similar to the classical time evolution.
+and looks therefore similar to the classical time evolution.
 Since the  state is a function of the coordinate $x$, one calls this the 
 representation in \emph{position space}. Sometimes it is more convenient to 
-describe the state in terms of its momentum and one changes to \emph{momentum 
-space} via a Fourier transformation. Both representations are equivalent, very 
+describe a state in terms of its momentum and one changes to \emph{momentum 
+space} via Fourier transformation. Both representations are equivalent, very 
 similar to the variables $q$ and $p$ in the Hamilton form of classical 
 mechanics, from which this picture is very much inspired. Unlike the classical 
 position and momentum observables being functions, the quantum mechanical 
@@ -308,14 +320,14 @@ these by calculating commutators and finds the so called Heisenberg or
 	& =
 	[q_i, q_j]
 	=
-	0
+	0,
 	\\
 	[q_i, p_j]
 	& =
 	i \hbar \delta_{ij}.
 \end{align}
 These relations are the starting point for all quantization theories. The main 
-goal is always to find an algebra which fulfils these (and maybe other) 
+goal is always to find an algebra which fulfils these (or maybe equivalent) 
 relations and this is what makes a quantum algebra so different from a 
 classical one. Physically spoken, this noncommutativity means that a 
 measurement of the position of a particle influences its momentum and vice 
@@ -324,34 +336,34 @@ at the same time with arbitrarily high precision. This still very vague
 statement can be made precise using the Hilbert norm and the Cauchy-Schwarz 
 inequality and yields the famous Heisenberg uncertainty relation
 \begin{equation*}
-	\Laplace a_\psi
-	\Laplace b_\psi
+	\Laplace A_\psi
+	\Laplace B_\psi
 	\geq
 	\frac{1}{2}
 	\left|
-		\sp{\psi, [a,b] \psi}
+		\SP{\psi, [A, B] \psi}
 	\right|.
 \end{equation*}
-Here $a,b$ are observables and $\Laplace a_\psi, \Laplace b_\psi$ denotes the 
-standard deviation in the state $\psi$. For the position and momentum of a 
+Here $A, B$ are observables and $\Laplace A_\psi, \Laplace B_\psi$ denote their 
+standard deviations in the state $\psi$. For the position and momentum of a 
 particle, this gives
 \begin{equation*}
-	\Laplace p
-	\Laplace q
+	\Laplace \hat{p}
+	\Laplace \hat{q}
 	\geq
 	\frac{\hbar}{2}.
 \end{equation*}
 However, the Schr\"odinger picture is not the only possibility to describe the 
 behaviour of a quantum system. Heisenberg proposed a description in which not 
-the particles, but the observables are time variant. Since time evolution is 
-described by a one-parameter group of unitary operators we have
+the particles, but the observables depend on the time. Since quantum mechanics,
+time evolution is described by a one-parameter group of unitary operators, we have
 \begin{equation*}
 	\psi(x,t)
 	=
 	U(t - t_0) \psi(x, t_0),
 \end{equation*}
 at least in systems where the interactions are not explicitly time dependent. 
-This makes it of course possible to apply unitary transformations to the states 
+This makes it possible to apply unitary transformations to the states 
 as well as to the operators 
 \begin{equation*}
 	\psi(x)
@@ -366,10 +378,10 @@ as well as to the operators
 	A
 	U(t - t_0).
 \end{equation*}
-this gives the so called \emph{Heisenberg picture}, in which the 
-time-dependence is not expressed ion the states but in the operators. Both 
+One gets the so called \emph{Heisenberg picture}, in which the 
+time-dependence is not expressed in the states but in the operators. Both 
 pictures are equivalent and it is just a question of convenience which one is 
-used. The unitary operators can be given more explicitly as
+used. In our example, the unitary operators are given by
 \begin{equation*}
 	U(t - t_0)
 	=
@@ -386,8 +398,10 @@ Heisenberg picture, one finds the \emph{Heisenberg equation}
 	[A(t), H].
 \end{equation*}
 This reminds us of course of the time evolution in terms of Poisson bracekts in 
-classical mechanics., which is the second staring point for a quantization 
-theories.
+classical mechanics. The idea that both objects, the quantum mechanical commutator 
+and the Poisson bracket, should somehow be seen as counterparts to each other, is 
+called the \emph{correspondence principle}. It is the second staring point for 
+nearly all theories of quantization.
 
 
 
@@ -398,15 +412,13 @@ theories.
 \label{subsec:chap2_Task}
 
 We have had a brief overview over the mathematical formulation of classical and 
-quantum mechanics. On one hand, if we compare the description of the state of a 
-physical system (a point in the cotangent bundle of a manifold and a vector in a 
-Hilbert space) we will see that they are very different. On the other hand, we 
-have seen that both theories have certain things in common: the time evolution 
-can be described in a similar way and we have position and momentum operators in 
-the quantum theory which play a similar role to the position and momentum 
-functions in the classical theory, except for their noncommutativity. Let us 
-give a short list of the main concepts of both theories and compare them (a much 
-more detailed list and discussion can be found in \cite{waldmann:2007a}):
+quantum mechanics. On one hand, if we compare for example the way states of a 
+physical system are described (a point in the cotangent bundle of a manifold and a 
+vector in a Hilbert space) we will see that they are very different. On the other 
+hand, we have seen that both theories have certain things in common: the time 
+evolution can be described in a similar way. We want to give a short list of the 
+main concepts of both theories and compare them (a much more detailed list and 
+discussion can be found in chapter 5 of \cite{waldmann:2007a}):
 \bgroup
 \renewcommand{\arraystretch}{1.6}
 \begin{center}
@@ -483,33 +495,36 @@ more detailed list and discussion can be found in \cite{waldmann:2007a}):
 	\end{tabular} 
 \end{center}
 \egroup
-This little table gives us a good hint: if one really wants to compare both 
-theories, then we should understand the observable algebras as the main 
-concepts rather than the states. We know that the classical theory emerges as a 
-limit of many quantum system, such that the physical constant $\hbar$ becomes 
-small enough to be neglected. How to construct correspondence the other way 
-round is the question to which the theory of quantization addresses. Physicists 
-used to solve this by "making a hat on the variables $p$ and $q$ and saying they 
-the do not commute any more". Surprisingly, this approach, which is called 
-\emph{canonical quantization} in physics works for most of the relevant cases, 
-which is namely when we do not have high powers of $\hat p$ and $\hat q$ and not 
+When we look at this table, we see that is is probably a good guideline to 
+understand the observable algebras as the main concepts of mechanics, rather than 
+the states. We know that the classical theory emerges as a limit of many quantum 
+systems, such that the physical constant $\hbar$ becomes small in enough (in 
+comparison to the characteristic energy scale of the system) to be neglected. How 
+to construct a correspondence the other way round is the question which the theory 
+of quantization addresses. Physicists used to solve this by "making a hat on the 
+variables $p$ and $q$ and saying that they the do not commute any more". 
+Surprisingly enough, this approach, which is called \emph{canonical quantization} 
+in physics, works for most of the simple examples. In particular, this is the 
+case when we do not have high powers of $\hat p$ and $\hat q$ and no 
 mixed terms. That this idea is however not canonical in a \emph{mathematical 
 sense} is almost needless to say and of course it causes severe problems when 
-higher and mixed terms in position and momentum appear. Those problems can be 
-made precise and is known as the Groenewold-van Hove theorem 
-(\cite{vanhove:1951a, groenewold:1946a}). To create a mathematical theory of 
-quantization, other ways are needed and one needs to impose an ordering on the 
-$\hat p$ and $\hat q$. Already Hermann Weyl knew about this problem and looked 
-for ways how to solve it by proposing a symmetrization \cite{weyl:1931a} scheme 
-for such terms. This ordering is now known as the Weyl ordering and his integral 
-formula became the starting point for the theory of deformation quantization any 
-years later.
+higher and mixed terms in position and momentum appear. Briefly stated, the 
+problem is that in the classical theory, the expressions $q^2p, qpq, pq^2$ 
+describe the same polynomial, but in the quantum theory, they do not. So we must 
+think about the question, to which operators we want to map mixed polynomials, and 
+canonical quantization does not provide an answer. To create a mathematical theory 
+of quantization, one needs to impose an ordering on the $\hat p$ and $\hat q$. 
+Already Hermann Weyl knew about this problem and looked for ways how to solve it 
+by proposing a totally symmetrized expression \cite{weyl:1931a} for such terms. 
+This ordering is now known as the Weyl ordering and his formula became the 
+starting point for the theory of deformation quantization many years later.
 
 
 \subsubsection{A Definition}
-First, we want to take a step back and formalize, what we actually mean by a 
-quantization. (See also \cite{esposito:2015a} for a good introduction to this.) 
-A quantization should be a correspondence
+First, we want to take a step back and try to formalize what we actually mean by a 
+quantization. See also section 3.2 in \cite{esposito:2015a} or section 5.1.2 in
+\cite{waldmann:2007a} for a good introduction to this topic. For us, a 
+quantization should be a correspondence
 \begin{equation*}
 	\mathcal{Q}
 	\colon
@@ -523,12 +538,12 @@ noncommutative algebra $\algebra{A}_{\mathrm{Quantum}}$, which is a
 limits from quantum observables, hence we should expect $\mathcal{Q}$ to be 
 ''injective''. On the other hand, if the Quantum algebra was bigger than the 
 classical algebra, the whole concept of quantization would be pointless, since 
-we could never recover all observables and thus we want $\mathcal{Q}$ to be 
-''surjective'', too. The correspondence should also keep somehow the physical 
-meaning of our observables, or at least tell us, what the observable 
+we could never recover all observables and hence we want $\mathcal{Q}$ to be 
+''surjective'', too. The correspondence should also keep somehow track of the 
+physical meaning of our observables, or at least tell us, what the observable 
 $\mathcal{Q}(f)$ should be for some $f \in \algebra{A}_{\mathrm{Classical}}$. 
 Moreover, $\mathcal{Q}^{-1}$ should behave like the classical limit, since this 
-is the rather well-known direction of both. Finally, the correspondence should 
+is the rather well-understood part of both. Finally, we want the correspondence to
 keep associative structures: the classical algebra is associative and we want 
 the product in our noncommutative algebra to correspond to the concatenation of 
 operators on a Hilbert space which is associative, too. One possibility of 
@@ -537,7 +552,7 @@ observable algebra, a symplectic vector space of dimension $2n$, $n \in
 \mathbb{N}$, we want that the following three axioms are fulfilled:
 \begin{enumerate}
 	\item[(Q1)]
-	We want a correspondence, which allows a representation in the standard 
+	We want a ''map'', which allows a representation in the standard 
 	picture of quantum mechanics:
 	$\mathcal{Q}(1) = \Unit$, 
 	$\mathcal{Q}(q^i) = \hat{q}^i$, 
@@ -545,11 +560,11 @@ observable algebra, a symplectic vector space of dimension $2n$, $n \in
 	
 	\item[(Q2)]
 	The correspondence principle should be fulfilled:
-	$[\mathcal{Q}(f), \mathcal{Q}(g)] = i \hbar \mathcal{Q}(\{f, g\}), 
-	\ \forall f \in \algebra{A}_{\mathrm{Classical}}$.
+	$[\mathcal{Q}(f), \mathcal{Q}(g)] = i \hbar \mathcal{Q}(\{f, g\})$, 
+	for all $f, g \in \algebra{A}_{\mathrm{Classical}}$.
 	
 	\item[(Q3)]
-	The correspondence $\mathcal{Q}$ should be linear.
+	For mathematical simplicity, $\mathcal{Q}$ should be linear.
 \end{enumerate}
 We finally split up the whole process: in a first step. we \emph{quantize} the 
 system and in a second step, we look for \emph{representations} on a Hilbert 
@@ -557,13 +572,13 @@ space.
 \begin{center}
     \begin{tikzpicture}
     	\tikzstyle{myarrowq} = 
-    	[line width = 2.7mm,
+    	[line width = 3.4mm,
     	draw = {rgb:black,1;white,2},
     	-triangle 45,
     	shorten >= -3mm,
     	postaction = {
     		draw, 
-    		line width = 4.5mm, 
+    		line width = 5.3mm, 
     		shorten >=2.5mm,
     		-},
     	postaction = {
@@ -577,12 +592,12 @@ space.
     		},
     	]
     	\tikzstyle{myarrowg} = 
-    	[line width = 2.5mm,
+    	[line width = 3.2mm,
     	draw = {rgb:black,1;white,2},
     	-triangle 45,
     	postaction = {
     		draw, 
-    		line width = 4.5mm, 
+    		line width = 5.3mm, 
     		shorten >=5.5mm,
     		-},
     	postaction = {
@@ -596,7 +611,7 @@ space.
     		}
     	]
     	\tikzstyle{myarrowr} = 
-    	[line width = 2.5mm,
+    	[line width = 3.2mm,
     	draw = {rgb:black,1;white,2},
    		shorten >=-5mm,
    		shorten <=-2mm,
@@ -683,11 +698,10 @@ space.
 There exist various ideas about how to build up such a scheme. For example, in 
 axiomatic quantum field theory one usually wants the quantum algebra to be a 
 $C^*$-algebra (see for example \cite{haag:1993a} or 
-\cite{baer.ginoux.pfaeffle:2007a}. 
-The reason is that the bounded operators $\Bounded[H]$ naturally form such an 
-algebra and actually even more than that. Unfortunately, most of the operators 
-in quantum mechanics are unbounded. This problem is cured by looking at the 
-exponentiated operators
+\cite{baer.ginoux.pfaeffle:2007a}). The reason is that the bounded operators 
+$\Bounded(\hilbert{H})$ naturally form such an algebra (and actually even more 
+than that). Unfortunately, most of the operators in quantum mechanics are 
+unbounded. This problem is cured by looking at the exponentiated operators
 \begin{equation*}
 	A
 	\longmapsto
@@ -697,39 +711,42 @@ exponentiated operators
 This way, one gets a one parameter group for $t \in \mathbb{R}$ and unitary 
 operators are clearly bounded. Moreover, there is a very nice correspondence 
 between $C^*$-algebras and locally compact Hausdorff spaces, which is known as 
-the Gelfand-Naimark theorem. Roughly stated, this means that there is a 
-equivalence of categories between locally compact Hausdorff spaces and 
-commutative $C^*$-algebras: every such space gives rise to a commutative algebra 
+the Gelfand-Naimark theorem. Roughly stated, this means that there is an 
+equivalence of categories between compact Hausdorff spaces and unital commutative 
+$C^*$-algebras: every such space gives rise to a commutative algebra 
 of complex-valued functions, which form a $C^*$-algebra. On the other hand, from 
-every commutative $C^*$-algebra $\algebra{A}$ one can construct a locally 
+every unital commutative $C^*$-algebra $\algebra{A}$ one can construct a 
 compact Hausdorff space $X$ such that $\algebra{A} \cong \Stetig(X)$ . This 
 correspondence can be extended to open and closed subsets of the space, to 
-homeomorphism, the compactification of the space, vector bundles and even more. 
-There is a strong link between commutative algebra and topology or geometry. One 
-possibility to think of a quantized system is to think of Continuous or smooth 
-functions on a noncommutative space, which then should correspond to a 
+homeomorphism, locally compact spaces, their compactification, vector bundles and 
+even more. There is a strong link between commutative algebra and topology or 
+geometry. One possibility to think of a quantized system is to think of continuous 
+or smooth functions on a noncommutative space, which then should correspond to a 
 noncommutative $C^*$-algebra. This idea leads to noncommutative geometry, which 
-is mostly due to Alain Connes, who developed these ideas. A very detailed, but 
-not necessarily easy to read book on this idea is due to Alain Connes 
-\cite{connes:1994a}, another and rather brief introduction is for example 
-\cite{varilly:2006a}.
+is mostly due to Alain Connes. A very detailed, but not necessarily easy to read 
+book is \cite{connes:1994a} by Connes, another and rather brief introduction is 
+for example \cite{varilly:2006a}.
 
 
-A different approach is due to geometric quantization, which tries to fulfil all 
+A different approach, called geometric quantization, tries to fulfil all 
 of the three axioms (Q1) - (Q3) from the previous part. Unfortunately, this 
-causes problems: Groenewold showed in \cite{groenewold:1946a}, that there can be 
-no correspondence which maps the Poisson bracket directly to the quantum 
-mechanical commutator, at least in the case where the observable algebra is 
-$\Cinfty(M)$ for a given Poisson manifold $M$. Thus one restricts to a smaller 
-algebra of observables, which is not problematic. This ideas are mostly due 
-to Souriau \cite{souriau:1970a}, Kostant and Segal.
+causes problems: Already for a symplectic vector space, it is impossible to have a 
+$1$ to $1$ correspondence of the Poisson bracket and the quantum mechanical 
+commutator. This is known as the Groenewold-van Hove theorem, which was found 
+around 1950 \cite{vanhove:1951a, groenewold:1946a}. More precisely spoken: no 
+representation of the Lie algebra, which is generated by the $q^i$ and $p_j$ and 
+which is defined by the classical commutation relations, can be extended 
+irreducibly and faithfully to the commutator Lie algebra which comes from the 
+associative unital algebra which is generated by the $q^i$ and $p_j$. Thus 
+geometric quantization restricts to smaller observable algebras, which are not 
+problematic. This ideas are mostly due to Souriau \cite{souriau:1970a}, Kostant 
+and Segal.
 
 
-There are also different approaches. Berezin proposed a quantization for 
-particular K\"ahler manifolds, for example 
-\cite{berezin:1975a, berezin:1975b, berezin:1975c}. Still, new ideas keep coming 
-up, but in the following, we want to concentrate on a very particular concept of 
-quantization, which is called \emph{deformation quantization}.
+There are also different approaches. Berezin proposed a quantization scheme for 
+particular K\"ahler manifolds, \cite{berezin:1975a, berezin:1975b, berezin:1975c}. 
+Still, new ideas keep coming up, but in the following, we want to concentrate on a 
+particular type of quantization, which is called \emph{deformation quantization}.
 
 
 
@@ -739,41 +756,50 @@ quantization, which is called \emph{deformation quantization}.
 \subsection{The Concept}
 \label{subsec:chap2_Concept}
 
-Deformation quantization tries to realize the three points (Q1) - (Q3) from the 
+Deformation quantization tries to realize the three points (Q1) and (Q2) from the 
 previous section, but weakens the third. If it is not possible to have such a 
-correspondence in an exact way, we will at least want to have it 
+correspondence exactly, we will at least want to have it 
 \emph{asymptotically}. The motivating example is the Weyl quantization which we 
-already talked of. There are actually two such formulas, which can be given: the 
+already talked of. There are actually two such formulas, that can be given: the 
 first maps a function $f$ in the variables $q, p \in \mathbb{R}^n$ to a 
 differential operator on $\mathbb{R}^n$, which is actually a formal power series 
 in the parameter $\hbar$. For polynomial functions, this is series is a sum and 
-well defined, for general function this will really be a formal power series. 
-The second is given by an integral formula and also holds for another class of 
+well defined, for general functions this will really be a formal power series. 
+The second is given by an integral formula and holds for another class of 
 functions (Schwartz functions), but one gets the first formula out of the second 
 as an asymptotic expansion for $\hbar \longrightarrow 0$. With these 
 quantizations, one can also define a product of two functions $f, g$, which will 
 necessarily take those two functions to a formal power series in $\hbar$. Moyal 
-showed that the commutator of this product can be understood as the quantum 
-mechanical commutator \cite{moyal:1949a}. The reason, why all of a sudden power 
-series appear, is the following: if one wants the correspondence principle to be 
-fulfilled and the multiplication of these quantized functions to be associative 
+showed that the commutator of this product can be understood as a series which 
+approximates the quantum mechanical commutator \cite{moyal:1949a}. The reason why 
+seemingly all of a sudden power series appear is the following: if one wants the 
+correspondence principle to be asymptotically fulfilled, i.e.
+\begin{equation*}
+	[\mathcal{Q}(f), \mathcal{g}]
+	=
+	i \hbar \mathcal{Q}(\{ f, g \})
+	+ \mathcal{O}(\hbar^2)
+\end{equation*}
+and the multiplication of these quantized functions to be associative 
 (as needed for representations on the Hilbert space), one will necessarily get 
-higher and higher orders in $\hbar$ and one can never stop without loosing 
-associativity. Motivated by this observation, a group of mathematicians (mostly 
-from Dijon) started working out this idea of products as formal power series. 
-They understood quantization as a \emph{deformation} of the commutative product 
-by a formal parameter (mostly called $\hbar$, in this work we will call it $z$ 
-from now on), which controls the noncommutativity of the theory and which 
-fulfils some compatibility condition with the classical theory. This was the 
+higher and higher orders in $\hbar$. This iteration can never be stopped without 
+loosing associativity. Motivated by this observation, a group of mathematicians, 
+the so called Dijon-school, started working out this idea of products as formal 
+power series. They understood quantization as a \emph{deformation} of the 
+commutative product by a formal parameter (mostly called $\hbar$, $\lambda$ or 
+$\nu$, in this work we will call it $z$ from now on), which controls the 
+noncommutativity of the theory. These deformed products should moreover fulfil 
+some compatibility conditions with the classical theory. This was the 
 hour of birth of deformation quantization. The main characters of this group 
 were Flato, Lichnerowicz, Bayen, Fr{\o}nsdal and Sternheimer, who published 
 their ideas in the late 70's \cite{bayen.et.al:1977a, bayen.et.al:1978a} and 
-gave the definition of a star product.
+gave a first definition of a star product. These two articles became the starting 
+point for what has now become a rich and fruitful theory.
 \begin{definition}[Star Product]
 	\label{Def:StarProduct}
 	Let $(M, \{\cdot, \cdot\})$ be a Poisson manifold over a field 
-	$\mathbb{K}$ with $\mathbb{K}$ is $\mathbb{R}$ or  $\mathbb{C}$.
-	A star product on $M$ is a bilinear map
+	$\mathbb{K}$ ($\mathbb{K} = \mathbb{R}$ or $\mathbb{C}$).
+.	A star product on $M$ is a bilinear map
 	\begin{equation*}
 	    \star_z \colon 
     	\Cinfty(M) 
@@ -796,7 +822,7 @@ gave the definition of a star product.
 		$\star_z$ is associative.
 		
 		\item
-		$C_0(f, g) = f g,\ \forall_{f,g \in \Cinfty(M)}$ (Classical limit).
+		$C_0(f, g) = f \cdot g,\ \forall_{f,g \in \Cinfty(M)}$ (Classical limit).
 		
 		\item
 		$C_1(f, g) - C_1(g, f)= z \{f, g\},\ \forall_{f,g \in \Cinfty(M)}$
@@ -808,11 +834,12 @@ gave the definition of a star product.
 	If the $C_n$ are bidifferential operators, the star product is said to be 
 	differential and if the order of differentiation of the $C_n$ does not 
 	exceed $n$ in both arguments, a differential star product is said to be 
-	natural.
+	natural. Moreover, we will say that a star product $\star_z$ is of Weyl-type,
+	if $\cc{f \star_z g} = \cc{g} \star_z \cc{f}$ for all $f,g \in \Cinfty(M)$
+	and $\cc{\cdot}$ denotes the complex conjugation.
 \end{definition}
 They also defined a notion of equivalence of star products. The idea behind is 
-that two equivalent star products should give rise to the same physics, in some 
-way.
+that two equivalent star products should give rise to the same physics.
 \begin{definition}[Equivalence of Star Products]
 	Two star products $\star_z$ and $\widehat{\star}_z$ for a Poisson manifold 
 	$(M, \{\cdot, \cdot\})$ are said to be equivalent, if there is a formal 
@@ -825,14 +852,14 @@ way.
 		z^n T_n
 	\end{equation*}
 	of linear maps $T_n \colon \Cinfty(M) \longrightarrow \Cinfty(M)$, which 
-	extends linearly to $\Cinfty(M) \llbracket z \rrbracket$, such that the 
-	following things hold:
+	extends $\mathbb{K}\llbracket z \rrbracket$-linearly to 
+	$\Cinfty(M) \llbracket z \rrbracket$, such that the following statements hold:
 	\begin{equation*}
-		f \widehat{\star}_z g
+		f \star_z g
 		=
 		T^{-1}
 		\left(
-			T(f) \star_z T(g)
+			T(f) \widehat{\star}_z T(g)
 		\right)
 		, \ 
 		\forall_{f,g \in Cinfty(M) \llbracket z \rrbracket}
@@ -841,17 +868,16 @@ way.
 		= 
 		1.
 	\end{equation*}
-	For differential or natural star products, we also speak of differential or 
-	natural equivalence transformations.
+	For differential or natural star products, we accordingly speak of 
+	differential or 	natural equivalences.
 \end{definition}
-Note that these definitions are purely algebraic, since we nowhere ask for the 
+Note that these definitions are purely algebraic, since we do not ask for the
 convergence of those power series. Hence the theory which was developed from 
-this in the following years is also a mostly algebraic theory. There were still 
-the integral formulas around for which one can also make sense of convergence, 
-but as already said, one has to restrict the class of functions, which one can 
-multiply drastically, for example to the Schwartz space. However, these two 
-articles were the starting point for what has now become a rich and fruitful 
-theory.
+this in the following years is also a mostly algebraic theory. Like for the Weyl 
+product, there were also integral formulas around for other types of star products 
+for which one can also make sense of convergence. But as already pointed out, one 
+has to strongly restrict the algebra of functions, for example to the Schwartz 
+space.
 
 
 
@@ -860,39 +886,41 @@ theory.
 Deformation quantization is a good example for a mathematical theory, which is 
 motivated by a physical idea. It is not really talking about a physical problem, 
 since the world does not need to be quantized -- it already is. It is talking 
-about a mathematical problem: how to recover the quantized (and very counter-
-intuitive) mathematics, which describe the world out of the classical (and much 
-more intuitive) mathematics, which describe the world on our scale? Deformation 
-quantization tries to give an answer to that, but unfortunately is (at its 
-present state) still far from doing so completely. Like many such theories, it 
-started of from a more or less precise physical background and developed into 
-something quite different: a mostly algebraic, purely mathematical theory. That 
-is also a bit due to the fact that the questions, which had to be answered in 
-the beginning, were very hard and took a lot of time. Meanwhile, mathematicians 
-were interested in the purely mathematical aspect of the theory and started 
-working on that. We want to give a short overview over those questions and their 
-answers very briefly and point out a little the history of this theory.
+about a mathematical problem: how to recover the quantized (and very 
+counter-intuitive) mathematics, which describe the world on very small scales out 
+of the classical (and much more intuitive) mathematics, which describe the world 
+on our scale? Deformation quantization tries to give an answer to that, but is 
+unfortunately (at least at its present state) still far from doing so completely. 
+Like many such theories, it started of from a more or less precise physical 
+background and developed into something very different: a mostly algebraic, purely 
+mathematical theory. That is also due to the fact that the questions, which had to 
+be answered in the beginning, were very hard and of mathematical nature. It took a 
+lot of time to find answers and meanwhile, the mathematicians working on them
+were interested other aspects of the theory. We want to give a short overview of
+those questions and their answers very briefly and summarize a bit the history of 
+deformation quantization next. A more detailed summary can be found in section 6.1 
+of \cite{waldmann:2007a}.
 
 
 The prototype is, as already mentioned, a symplectic vector space, for which 
 Weyl proposed a star product with a certain (symmetric) ordering (although the 
 definition of a star product did not exist at his time). However, other 
 orderings are possible: one can have a standard or an anti-standard ordering, 
-where the $p$'s are all put to the right or to the left, respectively, or 
-something in  between. One of the first questions was, if one can also construct 
+where the $\hat p$'s are all ordered to the right or to the left, respectively, or 
+something in  between. One of the first questions was, if one could also construct 
 star products on symplectic manifolds and if these products will be standard or 
 Weyl ordered, if they will be differential or natural and so on. Locally, the 
 answer was yes, but it took some time and many small steps, until DeWilde and 
 Lecomte could show that every cotangent bundle of a smooth manifold has star 
 products \cite{dewilde.lecomte:1983a} and then extended this result to arbitrary 
 smooth manifolds \cite{dewilde.lecomte:1983b}. Another proof was given 
-indepently from that by Omori, Maeda and Yoshioka 
+independently from that by Omori, Maeda and Yoshioka 
 \cite{omori.maeda.yoshioka:1991a} and then by Fedosov, who presented a simple 
-and very geometric construction \cite{fedosov:1994a}, which always gives even 
-natural ordered star products, as shown in \cite{bordemann.waldmann:1997a} 
-or more generally in \cite{gutt.rawnsley:2003a}. Moreover, every star product an a 
-symplectic manifold is equivalent to a edosov star product 
-\cite{beretlson.cahen.gutt:1997a} A lot of 
+and very geometric construction \cite{fedosov:1994a}, which always give rise to 
+natural star products, as shown in \cite{bordemann.waldmann:1997a} 
+or more generally in \cite{gutt.rawnsley:2003a}. Moreover, every star product on a 
+symplectic manifold is equivalent to a Fedosov star product 
+\cite{bertelson.cahen.gutt:1997a}. A lot of 
 results were found for K\"ahler manifolds and also the already mentioned 
 procedure, which is due to Berezin, gives rise to star products. There are 
 moreover standard, anti-standard ordered and many other types of star products 
@@ -901,28 +929,28 @@ equivalence classes of star products in the symplectic case. One can show that
 locally, two star products on a symplectic manifold are always equivalent. Hence 
 a classification result should depend on global phenomena. Indeed, this is the 
 case and it can be shown that star products on a symplectic manifold are 
-classified by the second deRham cohomology $\HdR^2(M)$ of a manifold. This 
-result is due to Deligne \cite{deligne:1995a}, a different proof was given by 
-Nest and Tsygan \cite{nest.tsygan:1995a, nest.tsygan:1995a}, another by 
-Bertelson, Cahen and Gutt \cite{bertelson.cahen.gutt:1997a}. More exactly: the 
-choice of an equivalence class of closed 2-forms $\omega \in \Formen^2(M)$ 
-determines a Fedosov star product (hence a natural one) and from every Fedosov 
+classified by its second deRham cohomology $\HdR^2(M)$. This result is due to 
+Deligne \cite{deligne:1995a}, a different proof was given by Nest and Tsygan 
+\cite{nest.tsygan:1995a, nest.tsygan:1995a}, another by Bertelson, Cahen and Gutt 
+\cite{bertelson.cahen.gutt:1997a}. More exactly: the choice of an equivalence 
+class of closed, nondenerate 2-forms $\omega \in \Formen^2(M)$ determines a 
+Fedosov star product and from every Fedosov 
 star product one can calculate such an equivalence class. This already 
 determines all star products on symplectic manifolds, since every star product 
 on such a manifold is equivalent to a Fedosov star product. The case of Poisson 
 manifolds took longer and was much harder to solve, since associativity turned 
-out to be a complicated property to fulfil. There were some examples of star 
+out to be a complicated condition to fulfil. There were some examples of star 
 products known for particular Poisson structure, like the Gutt star product 
 \cite{gutt:1983a}, which was also found by Drinfel'd \cite{drinfeld:1983a} 
 idependently, but the general existence (and also the classification) result was 
 proven by Kontsevich \cite{kontsevich:1997:pre, kontsevich:2003a} many years 
-later. his classification result is known as the formality theorem and needs the 
-notion of $L_{\infty}$-algebras, which are fairly involved objects. He gave a 
-construction, how star products can be constructed out of Poisson brackets on 
+later. His classification result is known as the formality theorem and needs the 
+notion of $L_{\infty}$-algebras, which are fairly involved objects. He gave an 
+explicit construction, how star products can be built out of Poisson brackets on 
 $\mathbb{R}^d$. This construction was extended by Cattaneo, Felder and Tomassini 
-to Poisson manifolds \cite{cattaneo.felder.tomassini:2002b} and also by 
-Dolgushev \cite{dolgushev:2005a}. Another and easier formulation of the 
-Kontsevich construction on $\mathbb{R}^d$ in terms of operads was then given by 
+to Poisson manifolds \cite{cattaneo.felder.tomassini:2002b} and indepedently from 
+that by Dolgushev \cite{dolgushev:2005a}. Another and easier formulation of the 
+Kontsevich construction on $\mathbb{R}^d$ in terms of operads was later given by 
 Tamrakin \cite{tamarkin:2003a}.
 
 
@@ -932,8 +960,8 @@ Tamrakin \cite{tamarkin:2003a}.
 
 So far, one could say that the big cornerstones of the theory are already there 
 and that it is somehow ''finished''. For two reasons, this is not the case. 
-First, a mathematical theory is actually never ''finished'', since there is 
-always a lot new things which can be found. There are still a lot of different 
+First, a mathematical theory is never actually ''finished'', since there are 
+always a lot of new things which can be found. There are still many different 
 types of star products to classify, like invariant or equivariant star products 
 in the case that one has Lie group or Lie algebra actions. A very recent result 
 concerning the classification of equivariant star products on symplectic 
@@ -945,72 +973,71 @@ If some day, this theory shall have a real drawback on physics, it will be
 necessary to talk about the convergence properties of these star products, since 
 in physics $\hbar$ is \emph{not} a formal parameter but a constant with a 
 dimension and a fixed value and therefore the question of convergence matters. 
-When we talk about continuous star products, we leave the field of \emph{formal} 
-deformation quantization and come to \emph{strict} deformation quantization.
+When we dace those problems and speak about continuous star products, we leave the 
+field of \emph{formal} deformation quantization and come to \emph{strict} 
+deformation quantization.
 
 
 Although it is closer to physics, strict deformation quantization is still an 
-entirely mathematical theory. There are two different approaches to it: we 
-already mentioned the integral formulas, which allow to speak of continuous star 
+mathematical theory. There are two different approaches to it: we 
+already mentioned integral formulas, which allow to speak of continuous star 
 products. The second approach uses the formal power series instead and wants to 
-construct a topology on the polynomial algebra, such that the star product is 
-continuous and then extend by the completion of the vector space to a subalgebra 
-of the smooth functions, on which the star product will still be continuous.
+construct a topology on the polynomial algebra, such that the star product becomes 
+continuous. Then one completes the tensor algebra over the vector space to a 
+subalgebra of the smooth functions, on which the star product will still be 
+continuous.
 
 
-The first approach is mostly due to Rieffel, who developed this ideas in some of 
+The first approach is mostly due to Rieffel, who developed these ideas in some of 
 his papers \cite{rieffel:1989a, rieffel:1990c, rieffel:1993a}. He wants to 
-realize a strict deformation quantization by actions of a Lie group on a 
-$C^*$-algebra of classical observables. The idea behind is that in physics, one 
-often wants the observable algebra to be a $C^*$-algebra. One can realize the 
-this algebra (by exponentiating) as a subalgebra of $\Bounded{H}$ which has the 
-$C^*$-property. Later Rieffel formulated a list of open questions, which strict 
-deformation quantization should try to answer \cite{rieffel:1998a}. His approach 
-was carried on by Bieliavsky and Gayral 
-\cite{bieliavsky:2002a, bieliavsky.gayral:2015a}, who 
-extended these ideas to more general Lie groups and different manifolds. To get 
+realize a strict deformation quantization by actions of an abelian Lie group on a 
+$C^*$-algebra of classical observables. Later Rieffel formulated a list of open 
+questions, which strict deformation quantization should try to answer 
+\cite{rieffel:1998a} in the next years. His approach was carried on by Bieliavsky 
+and Gayral \cite{bieliavsky:2002a, bieliavsky.gayral:2015a}, who extended these 
+concepts to much more general Lie groups and different manifolds. To get 
 reasonably big observable algebras, they used oscillatory integrals and pushed 
-this theory strongly forward. A similar idea was realized by Natsume, Nest and 
+this theory forward. A similar idea was realized by Natsume, Nest and 
 Peter \cite{natsume.nest.peter:2003a}, who could show that under certain 
-topological conditions, symplectic manifolds admit strict deformations.
+topological conditions, symplectic manifolds always admit strict deformations.
 
 
 The second approach is due to Beiser and Waldmann 
-\cite{beiser:2011a, beiser.waldmann:2014a}. They restrict to the 
-local situation, that means to Poisson structures on vector space. Then, they 
+\cite{beiser:2011a, beiser.waldmann:2014a, waldmann:2014a}. They restrict to the 
+local situation, that means to Poisson structures on vector spaces. Then, they 
 look at the polynomial functions on this vector spaces and try to find 
-continuity estimates for them, by constructing and explicit locally convex 
-topology on the symmetric tensor algebra which is isomorphic to the polynomial 
-algebra. The aim is to make the topology as coarse as possible, to get then a 
-large completion of the polynomial algebra and hence a big quantized algebra of 
+continuity estimates for them by constructing an explicit locally convex 
+topology on the symmetric tensor algebra (which is isomorphic to the polynomial 
+algebra). The aim is to make the topology as coarse as possible, to get then a 
+large completion and hence a big quantized algebra of 
 observables. There are two big advantages of this approach: the first one is 
-that it can be applied to infinite dimensional vector spaces, which is necessary 
+that it can be applied to infinite dimensional vector spaces, what is necessary 
 for quantum field theory, which deals with infinitely many degrees of freedom. 
-The second one is, that we can really speak about all observables, also those 
+The second is that we can really speak about all observables, also those 
 which will correspond to unbounded operators, without having to exponentiate. In 
 this sense, this idea is somehow more fundamental. The disadvantage is, however, 
 that it is just a local theory at the moment. The idea is worked out just for 
-one type of star products by now, which are star products of exponential type, 
-which means star products on symplectic vector spaces which come from a constant 
-Poisson tensor \cite{waldmann:2014a}. This theory was carried on in the master 
-thesis of Matthias Sch\"otz \cite{schoetz:2014a}, who rephrased it using 
-semi-inner product, which are a somehow more physical notion, since one can 
-interpret spaces with such a topology as projective limit of Hilbert spaces.
-This also allows a slightly coarser topology and hence a larger completion of the 
-symmetric tensor algebra.
+one type of star products by now, which are star products of exponential type like 
+the Weyl product. This means until now one can only control star products on 
+symplectic vector spaces which come from a constant Poisson tensor 
+\cite{waldmann:2014a}. This theory was carried on in the master thesis of Matthias 
+Sch\"otz \cite{schoetz:2014a}, who rephrased it using semi-inner product, which 
+are a somehow more physical notion, since one can interpret spaces with such a 
+topology as projective limits of pre-Hilbert spaces. This also allows a slightly 
+coarser topology and hence a larger completion of the symmetric tensor algebra.
 
 
-In this work, we will follow this approach and apply it to 
-another type of star product, the Gutt star product, which comes from linear 
-Poisson tensors on a vector space. This is somehow the next logical step after 
-constant Poisson tensors. However, these are also the first \emph{Poisson} (so 
-non-symplectic) structures, which will be strictly quantized this way. Thus this 
+In this work, we will follow the second approach and apply it to 
+another type of star product, the Gutt star product, which comes from a linear 
+Poisson tensor on a vector space. Of course, this is the next logical step after 
+constant Poisson tensors. However, these are also the first \emph{non-symplectic}
+Poisson structures, which will be strictly quantized this way. Thus this 
 master thesis really contributes something new to the theory of strict 
 deformation quantization: a second example, in which Waldmann's locally convex 
 topology on the tensor algebra leads to a continuous star product, when 
-considered as a power series and not as an integral. Remind that this also has a 
+considered as a power series and not as an integral. Note that this also has a 
 certain effect on Lie theory: the result can be seen as a functorial 
 construction for a locally convex topology on the universal enveloping algebra 
 $\algebra{U}(\lie{g})$ of a (possibly infitely-dimensional) Lie algebra 
-$\lie{g}$ and can therefore have applications to, for example, the 
+$\lie{g}$. Therefore they may have applications to, for example, the 
 representation theory of $\algebra{U}(\lie{g})$.
