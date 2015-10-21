@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {2.3}Deformation Quantization}{18}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}The Concept}{18}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}A Mathematical Theory}{19}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}From Formal to Strict}{20}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}From Formal to Strict}{21}{subsection.2.3.3}
 \contentsline {chapter}{\numberline {3}Algebraic Preliminaries}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Linear Poisson structures in infinite dimensions}{23}{section.3.1}
 \contentsline {section}{\numberline {3.2}The Gutt star product}{25}{section.3.2}
