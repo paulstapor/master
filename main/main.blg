@@ -17,10 +17,9 @@ Database file #5: ../../bibfiles/bib/preprints.bib
 Database file #6: ../../bibfiles/bib/script.bib
 Database file #7: ../../bibfiles/bib/dqprocentry.bib
 Database file #8: ../../bibfiles/bib/dqproceeding.bib
-Warning--I didn't find a database entry for "beretlson.cahen.gutt:1997a"
 You've used 95 entries,
             2314 wiz_defined-function locations,
-            1000 strings with 15344 characters,
+            999 strings with 15318 characters,
 and the built_in function-call counts, 27741 in all, are:
 = -- 3015
 > -- 901
@@ -59,4 +58,3 @@ warning$ -- 0
 while$ -- 285
 width$ -- 97
 write$ -- 934
-(There was 1 warning)
