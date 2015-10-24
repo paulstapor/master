@@ -37,7 +37,7 @@ product explicitly by computing two easy examples.
 \subsection{A Monomial with a Linear Term}
 
 The easiest case for which we will develop a formula is surely the 
-following one: For a given Lie algebra $\lie{g}$ and $\xi, \eta \in 
+following one: for a given Lie algebra $\lie{g}$ and $\xi, \eta \in 
 \lie{g}$ we would like to compute
 \begin{equation*}
     \xi^k \star_z \eta
@@ -45,8 +45,8 @@ following one: For a given Lie algebra $\lie{g}$ and $\xi, \eta \in
     \sum\limits_{n=0}^k
     z^n C_n(\xi^k, \eta)
 \end{equation*}
-We have already done this for $\star_z$ and $\widehat{\star}_z$, now we 
-want to do the same for $\ast_z$. This will finish the proof of the equality of 
+We have already done this for $\star_z$ and $\widehat{\star}_z$ in Lemma 
+\ref{Alg:FuckingDeadlyLemma}, and want to do the same for $\ast_z$ now. This will finish the proof of the equality of 
 the star products from Theorem~\ref{Alg:Thm:ThreeStarsAreOne}. We will use that
 \begin{equation}\label{Formulas:MonomialDerivative}
     \xi^k
@@ -297,7 +297,7 @@ Now it is actually easy to get the formula for monomials of the form $\xi_1 \ldo
 	\end{align*}
 	In the last step, all expression which did not contain each $\xi_i$ 
 	exactly once disappeared due to the differentiation. The proof of 
-	Equation~\ref{Formulas:LinearMonomial2T} works analogously.
+	Equation~\eqref{Formulas:LinearMonomial2T} works analogously.
 \end{proof}
 \begin{remark}
 	\label{Formulas:Rem:EasierFormulaAlreadyKnown}
@@ -340,7 +340,7 @@ combinatorics in the formula will not be important. Hence we rewrite
 Equation \eqref{Formulas:LinearMonomial2} in order to cook up such a 
 formula.
 
-Let's take $\xi_1, \ldots, \xi_k, \eta \in \lie{g}$, then we have
+Take $\xi_1, \ldots, \xi_k, \eta \in \lie{g}$, then we have
 \begin{equation*}
 	\xi_1 \cdots \xi_k \star_z \eta
 	=
@@ -612,7 +612,7 @@ Now we can state a good formula for the Gutt star product:
 	and the product is taken in the symmetric tensor algebra.
 \end{lemma}
 \begin{proof}
-	We want to calculate what the $C_n$ look like. Let's denote $r = k 
+	We want to see what the $C_n$ look like. Let's denote $r = k 
 	+ \ell - n$ for brevity. Then we have
 	\begin{equation*}
 		C_n \left( \xi^k, \eta^{\ell} \right)
@@ -682,7 +682,7 @@ Now we can state a good formula for the Gutt star product:
         \bchparts{a_r}{b_r}{\xi}{\eta}
     \end{align*}
     We sum over all possible arrangements of the $(a_i, b_i)$. In order 
-    to find n easier summation range, we put the ordering from Definition 
+    to find an easier summation range, we put the ordering from Definition 
     \ref{Def:GuttIndex} on these multi-indices and avoid therefore double 
     counting. We loose the freedom of arranging the $(a_i, b_i)$ and 
     need to count the number of multi-indices $((a_1, b_1), \ldots, 
@@ -718,7 +718,7 @@ need a last definition:
 		\longrightarrow
 		\lie{g}
 	\end{equation*}
-	the map which we get when we replace in$\bchparts{a}{b}{\xi}{\eta}$ 
+	the map which we get when we replace in $\bchparts{a}{b}{\xi}{\eta}$ 
 	the $i$-th $\xi$ by $\xi_i$ and the $j$-th $\eta$ by $\eta_j$
 	for $i = 1, \ldots, a$ and $j = 1, \ldots, b$.
 \end{definition}
@@ -823,10 +823,10 @@ need a last definition:
 \end{remark}
 
 
-\section{Consequences and examples}
+\section{Consequences and Examples}
 \label{sec:chap4_Consequences}
 
-\subsubsection*{Some consequences}
+\subsection{Some Consequences}
 Proposition \ref{Formulas:Prop:2MonomialsFormula2} allows us to get some 
 algebraic results. For example, we would like to see that the Gutt star 
 product fulfils the classical and the semi-classical limit from Definition 
@@ -835,7 +835,7 @@ product fulfils the classical and the semi-classical limit from Definition
 Theorem~\ref{Alg:Thm:ThreeStarsAreOne}.
 \begin{corollary}
 	\label{Formulas:Cor:LimitCases}
-	Let $\lie{g}$ be a Lie algebra and $\Sym^{\bullet}(\lie{g})$ edowed with 
+	Let $\lie{g}$ be a Lie algebra and $\Sym^{\bullet}(\lie{g})$ endowed with 
 	the Gutt star product
 	\begin{equation*}
 		x \star_z y
@@ -1123,7 +1123,7 @@ we want to check it, to have the evidence that everything works as we wanted.
 
 
 
-\subsubsection*{Two examples}
+\subsection{Two Examples}
 Equation \eqref{Formulas:2MonomialsFormula2} is useful if one wants to do 
 real computations with the star product, but it is maybe not intuitive to 
 apply. This is why we will give two examples here. The easiest one which is 
@@ -1185,7 +1185,7 @@ calculate the G-factorial and finally go through the permutations.
 			\big((1,1), (1,1)\big) 
 		\big\}.
 	\end{equation*}
-	The G-factorials give $J_1! = J_2! = 1$ and $J^3! = 2$, since the index 
+	The G-factorials give $J_1! = J_2! = 1$ and $J_3! = 2$, since the index 
 	$(1,1)$ appears twice in $J_3$. We take $\bchparts{a}{b}{\xi}{\eta}$ 
 	from Equation \eqref{Alg:BCHSeriesLong} for $(a,b) \in \{(1,2), (2,1)\}$:
 	\begin{equation*}

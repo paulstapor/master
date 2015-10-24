@@ -4,7 +4,15 @@
 % The Hopf algebra structure
 %
 
-\chapter{The Hopf algebra structure}
+\chapter{The Hopf Algebra Structure}
+
+As already pointed out in Chapter 3, universal enveloping algebras of a Lie 
+algebras are more than just an associative, unital algebra: it is a prototype of a 
+Hopf algebra. Hopf algebras are very common structures in mathematics and there 
+are of course various other examples, like group algebras or functions from a 
+finite group into a field $\mathbb{K}$.
+
+
 
 \section{An Undeformed Hopf Structure}
 
@@ -50,7 +58,7 @@ symmetrizing beforehand. We define
     \circ
     \mathfrak{q}_z
     \circ
-    \Symmetrizer.
+    \Symmetrizer
 \end{equation}
 and
 \begin{equation}
@@ -322,7 +330,7 @@ This lemma yields immediately the following result.
 		precise: it is the Hopf algebra structure using the tensor product and 
 		the shuffle coproduct. There is also a second Hopf algebra structure: the 
 		one using the deconcatenation coproduct and the shuffle product. We find 
-		these structures on every tensor algebra of a vector space, in does not 
+		these structures on every tensor algebra of a vector space, it does not 
 		need to be a tensor algebra over a Lie algebra. Since the coalgebra 
 		structure on $\algebra{U}(\lie{g}_z)$ is inherited from 
 		$\Tensor^{\bullet}(\lie{g})$ and does not make use of the Lie bracket, 
@@ -360,7 +368,7 @@ so again. The continuity of the two maps is then very easy to show.
     \begin{equation}
         \label{Hopf:CoproductContinuity}
         (p_R \tensor p_R)
-        \left( \widetilde{ocoproduct}_z(x) \right)
+        \left( \widetilde{\ocoproduct}_z(x) \right)
         \leq
         (2 p)_R (x).
     \end{equation}
@@ -369,11 +377,10 @@ so again. The continuity of the two maps is then very easy to show.
 	We just need to show both estimates on factorizing tensors and extend them 
 	with the infimum argument. Inequality \eqref{Hopf:AntipodeContinuity} is 
 	clear, since we only get a sign.
-	To get Inequality~\eqref{Hopf:CoproductContinuity}, 
-	we compute:
+	To get Equation~\eqref{Hopf:CoproductContinuity}, we compute:
 	\begin{align*}
 		(p_R \tensor p_R)
-        \left( \widetilde{ocoproduct}_z
+        \left( \widetilde{\ocoproduct}_z
         	\left(
         		\xi_1 \tensor \cdots \tensor \xi_n
         	\right)
@@ -436,9 +443,9 @@ so again. The continuity of the two maps is then very easy to show.
 	surprising: the Hopf structure of the symmetric or the universal enveloping 
 	algebra over a vector space is cocommutative. The symmetric tensor product is 
 	commutative and its continuity estimate does not depend on the parameter $R$ 
-	either. Note that for an abelian Lie algebra, also the product structure will 
-	remain undeformed and all maps will be continuous for $R \geq 0$. In this 
-	sense, the independence of $R$ fits into the picture.
+	either. Note that for an abelian Lie algebra, also the product structure  
+	remains undeformed and all Hopf algebra maps are continuous for $R \geq 0$. In 
+	this sense, the independence of $R$ fits into the picture.
 \end{remark}
 
 

@@ -7,29 +7,31 @@
 \chapter{Algebraic Preliminaries}
 
 
-\section{Linear Poisson structures in infinite dimensions}
+\section{Linear Poisson Structures in Infinite Dimensions}
 \label{sec:chap3_LinearPoisson}
 
 As we have seen before, there has already been done some work on how to 
 strictly quantize Poisson structures on vector spaces. Star products of
 exponential type on locally convex vector spaces were topologized by Stefan 
 Waldmann in \cite{waldmann:2014a} and then investigated more closely by 
-Matthias Schötz in \cite{schoetz:2014a}. Hence, as a the next step, we want 
-to do linear Poisson structures on locally convex vector spaces. This 
-will give a new big class of Poisson structures, which will be deformable 
+Matthias Schötz in \cite{schoetz:2014a}. The Poisson tensor which cooresponds to 
+the Poisson bracket in these cases, is constant. Hence, as a the next step, we 
+want to investigate linear Poisson structures on locally convex vector spaces. 
+This will give a new big class of Poisson structures, which will be deformable 
 in a strict way. Before we do so in the rest of this master thesis, we 
 recall briefly some basics on linear Poisson structures.
 
 
-We will always take a vector space $V$ and look at Poisson structures on 
-the coordinates which are elements of the dual space $V^*$. In order to 
-cover most of the physically interesting examples by our reflections, we 
-will assume that $V$ is a locally convex vector space. Every 
-finite-dimensional vector space is normable and complete and hence locally convex, 
-so it fits in this framework. It is clear what $V^*$ should be and there is 
-just one interesting topology on it. For infinite-dimensional spaces, the 
-situation is more delicate: we have to think about what coordinates should 
-be and how a Poisson structure on them could look like. A priori, it is not 
+In the following, we always consider a vector space $V$ and study Poisson 
+structures on the coordinates which are elements of the dual space $V^*$. In order 
+to cover most of the physically interesting examples by our reflections, we want 
+to allow vector spaces of very general type and therefore assume that $V$ is a 
+locally convex vector space. Every finite-dimensional vector space is normable and 
+hence locally convex, so it fits in this framework. In this case, it is clear what 
+$V^*$ should be and there is just one interesting topology on it. For 
+infinite-dimensional spaces, the situation is more delicate: we have to think 
+about what coordinates should be and how a Poisson structure on them could look 
+like. A priori, it is not 
 clear which dual we should consider: the algebraic dual $V^*$ of all linear 
 forms on $V$, or the topological dual $V'$ which contains just the 
 continuous linear forms? Here, one could argue that only $V'$ is of real 
@@ -40,16 +42,16 @@ But even if we stick to $V'$, the question of the topology still remains:
 do we want to consider the weak or the strong topology there and why one of 
 them should be more interesting. In any case, we have to choose a topology 
 on this space. Once this is done, we have to think about a good notion of 
-Poisson tensors in this context. However, we encounter quite a number of 
+Poisson structures in this context. However, we encounter quite a number of 
 question, which have no trivial answer. For this reason, it is worth 
-looking at some equivalent formulations of $Pol(V^*)$ in the finite-
-dimensional case, since they may allow better generalizations.
+looking at some equivalent formulations of $\Pol^{\bullet}(V^*)$ in the 
+finite-dimensional case, since they may allow better generalizations.
 
 
-Let $V$ be a finite dimensional vector space. Now, there is now question 
+Let $V$ be a finite-dimensional vector space. Now, there is no question 
 about the dual or its topology, since $V^* = V'$ is finite-dimensional, 
-too, and we deal with polynomials on it. A linear Poisson structure on 
-$V^*$ is something very familiar: it is equivalent to a Lie algebra 
+too, and we deal with polynomials on it. It is easy to see that a linear Poisson 
+structure on $V^*$ is something very familiar: it is equivalent to a Lie algebra 
 structure on $V$.
 \begin{proposition}
 	\label{Alg:Prop:LinPoissonIsLieAlg}
@@ -65,8 +67,8 @@ structure on $V$.
 	\end{propositionlist}
 \end{proposition}
 \begin{proof}
-	We choose a basis $e_1, \ldots, e_n \in V$ and denote its dual basis 
-	$e^1, \ldots, e^n \in V^*$. Then we call the linear coordinates in 
+	We choose a basis $\{e_1, \ldots, e_n\} subset V$ and denote its dual basis 
+	$\{e^1, \ldots, e^n\} \subset V^*$. Then we call the linear coordinates in 
 	these bases $x_1, \ldots, x_n \in \Cinfty(V^*)$ and $\xi^1, \ldots, 
 	\xi^n \in \Cinfty(V)$, such that for all $\xi \in V, x \in V^*$
 	\begin{equation*}
@@ -88,21 +90,14 @@ structure on $V$.
 		\wedge
 		\frac{\partial}{\partial x_j},
 	\end{equation*}
-	where $\pi$ is linear in the coordinates and we have
+	where $\pi$ is linear in the coordinates. Since $\pi_{ij}(x)$ is linear in the 
+	coordinates, we can write it as
 	\begin{equation*}
 		\pi_{ij}(x)
 		=
 		c_{ij}^k x_k.
 	\end{equation*}
-	This equivalent to a tensor
-	\begin{equation*}
-		c
-		=
-		\frac{1}{2}
-		c_{ij}^k 
-		e_k \tensor e^i \wedge e^j
-	\end{equation*}
-	which gives for $f,g \in \Cinfty(V^*)$
+	This gives for $f,g \in \Cinfty(V^*)$
 	\begin{equation}
 		\label{Alg:KksInCoordinates}
 		\{f, g\} (x)
@@ -151,40 +146,40 @@ structure on $V$.
 \end{proof}
 A more detailed explanation of Poisson manifolds in general, their 
 correspondence to Lie algebroids this special correspondence of linear Poisson 
-structures ond a Vector space and Lie algebras can be found in the textbook of 
+structures and a vector space and Lie algebras can be found in the textbook of 
 Waldmann \cite{waldmann:2007a} or in his lecture notes 
-\cite{waldmann:2015a:script}. From now on, however, we will call the original 
-vector space $\lie{g}$ instead of 
-$V$ which is more intuitive for a Lie algebra. Since this kind of Poisson 
-systems has a particular structure, there is a proper name for them.
+\cite{waldmann:2015a:script}. The fact that $V$ is a Lie algebra in the situation 
+we want to consider motivates a change of notation: from now on, we will call the 
+original vector space $\lie{g}$, which is more intuitive for a Lie algebra.
+Since this kind of Poisson systems has a particular structure, there is a proper 
+name for them.
 \begin{definition}[Kirillov-Kostant-Souriau bracket]
 	\label{Def:KKS}
-	Let $\lie{g}$ be a finite-dimensional Lie algebra. Then the Poisson 
-	bracket $\{ \cdot , \cdot \}_{KKS}$, which is given by 
-	Proposition~\ref{Alg:Prop:LinPoissonIsLieAlg} on $\lie{g}^*$ is called 
-	the Kirillov-Kostant-Souriau bracket.
+	Let $\lie{g}$ be a finite-dimensional Lie algebra. We call the Poisson 
+	bracket, which is given on $g^*$ by Equation~\eqref{Alg:KksInCoordinates}, 
+	the Kirillov-Kostant-Souriau bracket and denote it by 
+	$\{ \cdot , \cdot \}_{KKS}$.
 \end{definition}
 
 
 
-Proposittion~\ref{Alg:Prop:LinPoissonIsLieAlg} gives us a hint how we could
-think of ''infinite-dimensionsal vector spaces with linear Poisson 
-tensor'':We take $\lie{g}$ to be an infinite-dimensional Lie algebra, which 
+Proposition~\ref{Alg:Prop:LinPoissonIsLieAlg} gives us a hint how we could
+think of infinite-dimensional vector spaces with linear Poisson 
+tensor: We take $\lie{g}$ to be an infinite-dimensional Lie algebra, which 
 gives something like a linear Poisson structure on $\lie{g}'$.
-If, on the other hand, we chose directly $\lie{g}'$ to have a linear
-Poisson tensor, we would get a Lie algebra structure on $\lie{g}''$.
-Of course, we could think of ''just using this structure on $\lie{g}$'',
-but in general, this will \emph{not} be closed: taking the Lie bracket of
-$\xi, \eta \in \lie{g}$, we might drop out of $\lie{g}$ and have
+If we chose directly $\lie{g}'$ to have a linear Poisson tensor, we would get a 
+Lie algebra structure on $\lie{g}''$. Of course, we could think of using this 
+structure on $\lie{g}$, since it canonically injects into $\lie{g}''$.
+The problem is that in general, this will \emph{not} be closed: taking the Lie 
+bracket of $\xi, \eta \in \lie{g}$, we might drop out of $\lie{g}$ and have
 $[\xi, \eta] \subseteq \lie{g}'' \backslash \lie{g}$. Usually, such
-a behaviour will not be of physical interest, since the algebras of 
-physical systems are usually closed objects and the double-dual is
-not object of interest. This is why we will translate  the term
-''linear Poisson structure on $\lie{g}^*$'' by  ''$\lie{g}$ is a Lie 
-algebra'' in infinite dimensions and  from now on,we will restrict our 
-observations to systems which can be described as such. Remark however, 
-that, from a mathematical point of view, this is a choice and not a 
-necessity and other choices would be possible.
+a behaviour will not be of interest, since the algebras of 
+physical systems are closed objects and the double-dual is not what we are aiming 
+for. This is why we will translate  the term ``linear Poisson structure on 
+$\lie{g}^*$'' by ``$\lie{g}$ is a Lie algebra'' in infinite dimensions. Remark 
+however that, from a mathematical point of view, this way of thinking about 
+infinite-dimensional Poisson structures is a choice, not a 
+logical necessity and other choices would have been possible.
 
 
 The next task are the polynomials on $\lie{g}'$. As already mentioned, it 
@@ -200,7 +195,7 @@ have the following result:
 \end{proposition}
 \begin{proof}
 	Since this is a very well-known result, we just want to sketch the 
-	proof briefly: Take a basis $e_1, \ldots, e_n$ of $\lie{g}$ and its 
+	proof briefly: take a basis $\{e_1, \ldots, e_n\}$ of $\lie{g}$ and its 
 	linear coordinates $x_1, \ldots, x_n \in \Cinfty(\lie{g}^*)$ with 
 	$x_i(x) = e_i(x)$ for $x \in \lie{g}^*$. On homogeneous symmetric 
 	tensors this yields the map
@@ -211,11 +206,11 @@ have the following result:
 		\longrightarrow
 		\Pol^{\bullet}(\lie{g}^*),
 		\quad
-		e_1^{\mu_1} \ldots e_n^{\mu_n}
+		e_1^{\mu_1} \cdots e_n^{\mu_n}
 		\longmapsto
-		\xi_1^{\mu_1} \ldots \xi_n^{\mu_n}.
+		\xi_1^{\mu_1} \cdots \xi_n^{\mu_n}.
 	\end{equation*}
-	From the construction, we see that this is an isomorphism, but note, 
+	We see immediately that this is an isomorphism, but note 
 	that we have used the identification $\lie{g}^{**} \cong \lie{g}$ via
 	\begin{equation*}
 		e_i(x)
@@ -223,38 +218,38 @@ have the following result:
 		\langle x, e_i \rangle.
 	\end{equation*}
 \end{proof}
-The last identification we used in the last step will not work in both
-directions any more, but just in one: we have a canonical injection
+In infinite dimensions, the last identification we used in the last step will not 
+work in both directions any more, but just in one: we have a canonical injection
 $\Sym^{\bullet}(\lie{g}) \subseteq \Pol^{\bullet}(\lie{g}')$, so every 
 symmetric tensor still gives a polynomial. Anyway, this gives an idea 
-how to avoid speaking about $\Pol(\lie{g}^*)$ and its topology: we 
-restrict right from the beginning to $\Sym^{\bullet}(\lie{g})$.
+how to avoid speaking about $\Pol^{\bullet}(\lie{g}^*)$ and its topology: we 
+restrict from the beginning to $\Sym^{\bullet}(\lie{g})$.
 For finite-dimensional systems, both points of view are equivalent,
 but in infinite dimensions, this becomes a choice. However,
 we have good reasons to think that this is enough: we get a closed 
-and reasonably big subalgebra of of the polynomials. Moreover, 
+and reasonably big subalgebra of the polynomials. Moreover, 
 the symmetric tensor algebra is defined on infinite-dimensional spaces 
-exactly in the same way as on finite-dimensional ones,  and the 
+exactly in the same way as on finite-dimensional ones, and the 
 construction is identical. 
 
 So finally, we found a suitable way of speaking about our object of 
-interest: We replace linear Poisson structures on $\Pol^{\bullet}
+interest: we replace linear Poisson structures on $\Pol^{\bullet}
 (\lie{g}^*)$ by $\Sym^{\bullet}(\lie{g})$. 
 
 
 
 
-\section{The Gutt star product}
+\section{The Gutt Star Product}
 \label{sec:chap3_GuttStar}
 
-The aim of this chapter is to endow the symmetric algebra, and hence the 
-polynomial algebra, with a new, noncommutative product. This is possible in 
+The aim of this chapter is to endow the symmetric algebra, and as a consequence 
+the polynomial algebra, with a new, noncommutative product. This is possible in 
 a very natural way, due to the Poincar\'e-Birkhoff-Witt theorem. It links 
 the symmetric tensor algebra $\Sym^{\bullet}(\lie{g})$ of a Lie algebra 
 $\lie{g}$ to its universal enveloping algebra $\algebra{U}(\lie{g})$.
 
 
-\subsection{The universal enveloping algebra}
+\subsection{The Universal Enveloping Algebra}
 \label{subsec:chap3_UniversalEnvelopingAlgebra}
 
 If $\algebra{A}$ is an associative algebra, one can construct a Lie algebra 
@@ -266,15 +261,15 @@ out of it by using the commutator
 	, \quad
 	a,b \in \algebra{A}.
 \end{equation*}
-This construction is functorial, since it doesn't only map associative 
+This construction is functorial, since it does not only map associative 
 algebras to Lie algebras, but also morphisms of the former to those of the 
 latter. While constructing a Lie algebra out of an associative algebra is 
 easy, the reversed process is more complicated, but also possible. Every 
 Lie algebra $\lie{g}$ can be embedded into a particular associative 
 algebra, known as the universal enveloping algebra $\algebra{U}(\lie{g})$, 
-whichis uniquely determined (up to isomorphism) by the universal property: 
-for every unital associative algebra $\algebra{A}$ and every homomorphism 
-for Lie algebras $\phi\colon \lie{g} \longrightarrow \algebra{A}$ using the 
+which is uniquely determined (up to isomorphism) by the universal property: 
+for every unital associative algebra $\algebra{A}$ and every Lie algebra 
+homomorphism $\phi\colon \lie{g} \longrightarrow \algebra{A}$ using the 
 commutator on $\algebra{A}$, one gets a unital homomorphism of associative 
 algebras $\Phi \colon \algebra{U}(\lie{g}) \longrightarrow \algebra{A}$ 
 such that the following diagram commutes:
@@ -286,7 +281,7 @@ such that the following diagram commutes:
         column sep=8em
         ]
         {
-          \mathcal{U}(\lie{g}) & \\
+          \algebra{U}(\lie{g}) & \\
            & \algebra{A} \\
           \lie{g} &  \\
         };
@@ -308,9 +303,10 @@ such that the following diagram commutes:
         	;
     \end{tikzpicture}
 \end{center}
+where $\iota$ denotes the embedding of $\lie{g}$ into $\algebra{U}(\lie{g})$.
 The proof of existence and uniqueness of the universal enveloping algebra 
-can be found in every standard textbook on Lie theory like 
-\cite{hilgert.neeb:2012a} or \cite{varadarajan:1974a}, and we won't do it 
+can be found in standard textbooks on Lie theory like 
+\cite{hilgert.neeb:2012a} or \cite{varadarajan:1974a}, and we will not explain it 
 here in detail. Just recall that existence is proven by an explicit 
 construction: one takes the tensor algebra $\Tensor^{\bullet}(\lie{g})$ and 
 considers the two-sided ideal
@@ -319,7 +315,7 @@ considers the two-sided ideal
 	=
 	\langle \xi \tensor \eta - \eta \tensor \xi - [\xi, \eta] \rangle
 	, \quad
-	\forall_{\xi, \eta \in \lie{g}}
+	\text{ for }\xi, \eta \in \lie{g}
 \end{equation*}
 inside of it. Then one gets the universal enveloping algebra by the 
 quotient
@@ -346,7 +342,7 @@ filtered algebra
 		x 
 		= 
 		\sum_i
-		\xi_1^i \odot \ldots \odot \xi_n^i
+		\xi_1^i \odot \cdots \odot \xi_n^i
 	\ \Big| \ 
 		\xi_j^i \in \lie{g}
 		, \
@@ -355,12 +351,12 @@ filtered algebra
 	\Big\rbrace.
 \end{equation*}
 Generally, we just get a filtration, not a graded structure, since the 
-ideal $\mathfrak{I}$ is not homogeneous in the symmetric degree. We only 
+ideal $\mathfrak{I}$ is not homogeneous in the symmetric degree. We will 
 get a graded structure on $\algebra{U}(\lie{g})$, if and only if $\lie{g}$ 
 was commutative. Then $\algebra{U}(\lie{g})$ is isomorphic to the symmetric
-tensor algebra and hence commutative, too. But $\algebra{U}(\lie{g})$
+tensor algebra and thus also commutative. But $\algebra{U}(\lie{g})$
 is much more than an associative algebra: it is also a Hopf algebra, 
-since one can define a coassociative, cocommutative coproduct on it
+since one can define a coassociative, cocommutative coproduct on it by
 \begin{equation*}
 	\Delta \colon
 	\algebra{U}(\lie{g})
@@ -375,7 +371,7 @@ since one can define a coassociative, cocommutative coproduct on it
 	+
 	\Unit \tensor \xi
 	, \quad
-	\forall_{\xi \in \lie{g}}
+	\text{ for } \xi \in \lie{g}
 \end{equation*} 
 which extends to $\algebra{U}(\lie{g})$ via algebra homomorphism, 
 as well as an antipode
@@ -389,10 +385,10 @@ as well as an antipode
 	\longmapsto
 	- \xi
 	, \quad
-	\forall_{\xi \in \lie{g}}
+	\text{ for } \xi \in \lie{g}
 \end{equation*}
 which extends to $\algebra{U}(\lie{g})$ via algebra antihomomorphism.
-We will come back to those two maps and to the Hopf structure in chapter 7,
+We will come back to those two maps and to the Hopf structure in Chapter 7,
 when we talk about their continuity. More details on the algebraic
 aspect of deformation theory using Hopf algebras can be found in 
 \cite{chari.pressley:1994a} and \cite{majid:1995a}, for example.
@@ -401,7 +397,7 @@ aspect of deformation theory using Hopf algebras can be found in
 
 
 
-\subsection{The Poincar\'e-Birkhoff-Witt theorem}
+\subsection{The Poincar\'e-Birkhoff-Witt Theorem}
 \label{subsec:chap3_PoincareBirkhoffWitt}
 
 The algebra $\algebra{U}(\lie{g})$ always admits a basis, which must be 
@@ -416,12 +412,12 @@ Poincar\'e, Birkhoff and Witt:
 		=
 		\big\{
 			\beta_{i_1}^{\mu_{i_1}}
-			\odot \ldots \odot
+			\odot \cdots \odot
 			\beta_{i_n}^{\mu_{i_n}}
 		\ \big| \
 			n \in \mathbb{N}, \ 
 			i_k \in I
-			\text{ with } i_1 \earlier \ldots \earlier i_n 
+			\text{ with } i_1 \earlier \cdots \earlier i_n 
 			\text{ and } \beta_{i_k} \in \mathcal{B}_{\lie{g}}, \
 			\mu_{i_1}, \ldots, \mu_{i_n} \in \mathbb{N}
 		\big\}
@@ -429,13 +425,13 @@ Poincar\'e, Birkhoff and Witt:
 	defines a basis of $\algebra{U}(\lie{g})$.
 \end{theorem}
 There are different proofs for this statement. While a geometrical proof 
-(like it can be found in \cite{waldmann:2015a:script}) is very convenient 
+(like e.g. in \cite{waldmann:2015a:script}) is very convenient 
 in the finite-dimensional case, a combinatorial argument must be used for 
 infinite-dimensional Lie algebras. Most textbooks restrict to 
 finite-dimensional Lie algebras and give a version of the latter one, except 
-\cite{bourbaki:1989a}, which does it ni full generality. The idea of most
+\cite{bourbaki:1989a}, which does it in full generality. The idea of most
 of the combinatoric proof works with minor changes also for any Lie algebra,
-since in relies on ordered index sets which can be defined in any dimension.
+since it  relies on ordered index sets which can be defined in any dimension.
 The PBW theorem allows us to set up an isomorphism between $\Sym^{\bullet}
 (\lie{g})$ and $\algebra{U}(\lie{g})$ immediately, since a basis of the 
 former can be given by almost the same expression
@@ -455,15 +451,14 @@ former can be given by almost the same expression
 	\big\}
 \end{equation*}
 where we just have replaced the noncommutative product in $\algebra{U}
-(\lie{g})$ by the symmetric tensor product $\cdot$ (which we will usually 
-denote without a symbol, if possible) in $\Sym^{\bullet}(\lie{g})$. This 
+(\lie{g})$ by the symmetric tensor product in $\Sym^{\bullet}(\lie{g})$. This 
 allows us to write down an isomorphism between the symmetric tensor algebra 
 and the universal enveloping algebra, just by mapping the basis vectors to 
 each other in a naive way. Of course, this can never be an isomorphism in 
 the sense of algebras, but only of (filtered) vector spaces, because one of 
 the algebras is commutative and the other isn't. Moreover, the symmetric 
-algebra has a graded structure from the one on the tensor algebra which the 
-universal enveloping algebra does not have:
+algebra has a graded structure, which comes from the one on the tensor algebra, 
+that the universal enveloping algebra does not have:
 \begin{equation*}
 	\Sym^{\bullet}(\lie{g})
 	=
@@ -482,7 +477,7 @@ We will denote by $\pi_n \colon \Sym^{\bullet}(\lie{g}) \longrightarrow
 \Sym^n(\lie{g})$ the canonical projections of this grading.
 This induces a filtration by $\Sym^{(k)}(\lie{g}) = \sum_{j=0}^k 
 \Sym^j(\lie{g})$. Our simple isomorphism will respect the filtration, but 
-not the grading. However, it isn't the only isomorphism which one can write 
+not the grading. However, it is not the only isomorphism which one can write 
 down. In \cite{berezin:1967a}, Berezin proposed another isomorphism which is 
 more helpful to use:
 \begin{equation}
@@ -493,12 +488,12 @@ more helpful to use:
 	\longrightarrow
 	\algebra{U}^n(\lie{g})
 	, \quad
-	\beta_{i_1} \ldots \beta_{i_n}
+	\beta_{i_1} \cdots \beta_{i_n}
 	\longmapsto
 	\frac{1}{n!}
 	\sum\limits_{\sigma \in S_n}
 	\beta_{i_{\sigma(1)}} 
-	\cdot \ldots \cdot
+	\odot \cdots \odot
 	\beta_{i_{\sigma(n)}}
 	, \quad
 	\mathfrak{q}
@@ -514,7 +509,7 @@ current situation: the graded structure of $\Sym^{\bullet}(\lie{g})$, or the
 Hopf algebra structure of $\algebra{U}(\lie{g})$.
 
 
-\subsection{The Gutt star product}
+\subsection{The Gutt Star Product}
 Since we know, that the universal enveloping and the symmetric tensor 
 algebra are isomorphic as vector spaces, we have a good tool at hand to 
 endow the symmetric tensor algebra, and hence the polynomials, with a 
@@ -530,6 +525,7 @@ way.
 	$f, g \in \Sym^{\bullet}(\lie{g})$ of degree $k$ and $\ell$ 
 	respectively. Then we define the Gutt star product by:
 	\begin{equation}
+		\label{Alg:GuttStar}
 		\star_z
 		\colon
 		\Sym^{\bullet}(\lie{g})
@@ -545,17 +541,17 @@ way.
 		\pi_{k + \ell - n}
 		\left(
 			\mathfrak{q}^{-1} \left(
-				\mathfrak{q}(f) \cdot \mathfrak{q}(g)
+				\mathfrak{q}(f) \odot \mathfrak{q}(g)
 			\right)
 		\right).
 	\end{equation}
 \end{definition}
-This is the original way in which Gutt defined her star product in 
+This is the original way in which Gutt defined the star product in 
 \cite{gutt:1983a}, but there are two more ways to do it. Define
 \begin{equation*}
 	\mathfrak{I}_z
 	=
-	< \xi \tensor \eta - \eta \tensor \xi - z [\xi, \eta] >
+	\langle \xi \tensor \eta - \eta \tensor \xi - z [\xi, \eta] \rangle
 \end{equation*}
 for $z \in \mathbb{C}$. Then we set 
 \begin{equation}
@@ -571,14 +567,14 @@ and get the map
 	\colon
 	\Sym^n(\lie{g})
 	\longrightarrow
-	\algebra{U}^n(\lie{g}_z)
+	\algebra{U}(\lie{g}_z)
 	, \quad
-	\beta_{i_1} \ldots \beta_{i_n}
+	\beta_{i_1} \cdots \beta_{i_n}
 	\longmapsto
 	\frac{1}{n!}
 	\sum\limits_{\sigma \in S_n}
 	\beta_{i_{\sigma(1)}} 
-	\cdot \ldots \cdot
+	\odot \cdots \odot
 	\beta_{i_{\sigma(n)}}
 	, \quad
 	\mathfrak{q}_z
@@ -601,10 +597,10 @@ This way, we also get a star product:
 	\longmapsto
 	\mathfrak{q}_z^{-1} 
 	\left(
-		\mathfrak{q}_z(f) \cdot \mathfrak{q}_z(g)
+		\mathfrak{q}_z(f) \odot \mathfrak{q}_z(g)
 	\right).
 \end{equation}
-In \cite{drinfeld:1983a}, Drinfeld also constructed a star product using the 
+In \cite{drinfeld:1983a}, Drinfel'd also constructed a star product using the 
 Baker-Campbell-Hausdorff series: take $\xi, \eta \in \lie{g}$ and set
 \begin{equation}
 	\label{Alg:DrinfeldStar}
@@ -616,7 +612,7 @@ Baker-Campbell-Hausdorff series: take $\xi, \eta \in \lie{g}$ and set
 	\right),
 \end{equation}
 where the exponential series is understood a formal power series in $\xi$ 
-and $\eta$. By formally differentiating, on gets the star product on all 
+and $\eta$. By formally differentiating, one gets the star product on all 
 polynomials.
 
 
@@ -628,13 +624,13 @@ first.
 
 
 
-\section{The Baker-Campbell-Hausdorff series}
+\section{The Baker-Campbell-Hausdorff Series}
 \label{sec:chap3_BCH}
 
 Since we have a formula for $\star_z$ which involves the
 Baker-Campbell-Hausdorff series, we want to give a short overview
 about it and introduce some results that will be helpful later on.
-Note however, that there is not \emph{the} BCH \emph{formula}, since one 
+Note however, that there is not \emph{the BCH formula}, since one 
 can always rearrange terms using antisymmetry or Jacobi identity, but for 
 $\xi, \eta \in \lie{g}$, we can always write it as
 \begin{equation}
@@ -648,10 +644,10 @@ $\xi, \eta \in \lie{g}$, we can always write it as
 	\bchparts{a}{b}{\xi}{\eta},
 \end{equation}
 where $\bchpart{n}{\xi}{\eta}$ denotes all expressions having $n$ letters 
-and $\bchparts{a}{b}{\xi}{\eta}$ denotes all expressions with $a$ $\xi$'s 
-and $b$ $\eta$'s. We have $\bchparts{0}{0}{\xi}{\eta} = 0$, $\bchparts{1}{0}
-{\xi}{\eta} = \xi$ and $\bchparts{0}{1}{\xi}{\eta} = \eta$. Clearly this 
-gives
+and $\bchparts{a}{b}{\xi}{\eta}$ denotes all expressions with $a$ times the letter 
+$\xi$ and $b$ times the letter $\eta$. We have $\bchparts{0}{0}{\xi}{\eta} = 0$, 
+$\bchparts{1}{0}{\xi}{\eta} = \xi$ and $\bchparts{0}{1}{\xi}{\eta} = \eta$. 
+Clearly this gives
 \begin{equation*}
 	\bchpart{n}{\xi}{\eta}
 	=
@@ -664,14 +660,14 @@ this will be helpful.
 
 
 
-\subsection{Some general and historical remarks}
+\subsection{Some General and Historical Remarks}
 Assume $\lie{g}$ to be the Lie algebra of a finite-dimensional Lie group 
 $G$. From the geometric point of view, the BCH formula is the infinitesimal 
 counterpart of the multiplication law in $G$. Since the multiplication is 
-smooth and and the exponential function locally diffeomorphic around the 
+smooth and the exponential function locally diffeomorphic around the 
 unit element $e$, we would expect that there is a Lie algebraic analogon to 
 the group multiplication, at least near the origin, which depends somehow 
-''smoothly on the arguments''. Finding this expression is, however, a 
+``smoothly on the arguments''. Finding this expression is, however, a 
 different task.
 
 
@@ -714,10 +710,10 @@ in order to get an expression for $\chi$. This yields
 	}}
 	\frac{
 		\xi^{n_1} \eta^{m_1} 
-		\ldots 
+		\cdots 
 		\xi^{n_k} \eta^{m_k}
 	}
-	{n_1! m_1! \ldots n_k! m_k!}.
+	{n_1! m_1! \cdots n_k! m_k!}.
 \end{equation}
 It is far from trivial, if and how this can be expressed using Lie brackets.
 The first one who found a general way for this was Dynkin in the 1950's 
@@ -737,7 +733,7 @@ finds
 	\nonumber
 	\bch{\xi}{\eta}
 	& =
-	\log \left( \exp(X) \exp(Y) \right)
+	\log \left( \exp(\xi) \exp(\eta) \right)
 	\\
 	\nonumber
 	& =
@@ -815,7 +811,7 @@ well suited. One can classify them roughly into four groups.
 		\longmapsto
 		[\xi, \eta]
 	\end{equation*}
-	the usual ad-operator. Then one has for $\xi, \eta \in \lie{g}$
+	the usual adjoint operator. Then one has for $\xi, \eta \in \lie{g}$
 	\begin{equation}
 		\label{Alg:BCHinIntegral}
 		\bch{\xi}{\eta}
@@ -851,11 +847,12 @@ well suited. One can classify them roughly into four groups.
 		}}
 		\frac{1}{ \sum_{i = 1}^k(n_i + m_i) }
 		\frac{ \left[
-			\xi^{n_1} \eta^{m_1} \ldots \xi^{n_k} \eta^{m_k}
+			\xi^{n_1} \eta^{m_1} \cdots \xi^{n_k} \eta^{m_k}
 		\right]}
-		{ n_1! m_1! \ldots n_k! m_k! },
+		{ n_1! m_1! \cdots n_k! m_k! },
 	\end{equation}
 	where the expression $[ \ldots ]$ denotes Lie brackets nested to the left:
+	for instance, we have
 	\begin{equation*}
 		[\xi \eta \eta \xi]
 		=
@@ -887,20 +884,21 @@ well suited. One can classify them roughly into four groups.
 	\end{equation}
 	Again, the $[w]$ are Lie brackets nested to the left. Of course, this 
 	formula will also have redundancies, but its combinatorial aspect is much 
-	easier than the one of \eqref{Alg:BCHinDynkin}. Since there are estimates 
-	for the coefficients $g_w$, we will use this form for our Main Theorem.
+	easier than the one of Equation~\eqref{Alg:BCHinDynkin}. Since there are 
+	estimates for the coefficients $g_w$, we will use this form for our Main 
+	Theorem.
 \end{enumerate}
 
 
-\subsection{The Goldberg-Thompson formula and some results}
+\subsection{The Goldberg-Thompson Formula and some Results}
 
-\subsubsection{Goldberg's theorems}
-We now introduce the results of Goldberg: he noted a word in the letters $\xi$ 
+\subsubsection{Goldberg's Theorems}
+We now introduce the results of Goldberg: he denoted a word in the letters $\xi$ 
 and $\eta$ as
 \begin{equation*}
 	w_{\xi}(s_1, s_2, \ldots, s_m)
 	=
-	\xi^{s_1} \eta^{s_2} \ldots (\xi \vee \eta)^{s_m},
+	\xi^{s_1} \eta^{s_2} \cdots (\xi \vee \eta)^{s_m},
 \end{equation*}
 with $m \in \mathbb{N}$ and the last letter will be $\xi$ if $m$ is odd and 
 $\eta$ if $m$ is even. The index $\xi$ of $w_{\xi}$ means that the word 
@@ -913,7 +911,7 @@ done by the following formula:
 	= 
 	\int\limits_0^1 
 	t^{m'} (t - 1)^{m''} 
-	G_{s_1}(t) \ldots G_{s_m}(t) dt,
+	G_{s_1}(t) \cdots G_{s_m}(t) dt,
 \end{equation}
 where we have $m' = \lfloor \frac{m}{2} \rfloor$, $m'' = \lfloor \frac{m-1}{2} 
 \rfloor$ with $\lfloor \cdot \rfloor$ denoting the entire part of a real 
@@ -956,7 +954,7 @@ permutations $\sigma \in S_m$ one has
 	=
 	c_{\xi}\left( s_{\sigma(1)}, \ldots, s_{\sigma(m)} \right),
 \end{equation*}
-since \eqref{Alg:GoldbergCoeff1} obviously doesn't see the ordering of the 
+since \eqref{Alg:GoldbergCoeff1} obviously does not see the ordering of the 
 $s_i$ and $m'$, $m''$ and $n$ are not affected by reordering. For words with 
 $m = 2$, an easier formula can be found:
 \begin{equation*}
@@ -997,7 +995,7 @@ things about them. They are defined by the series expansion of
 	\sum\limits_{n=0}^{\infty}
 	\frac{B_n}{n!}z^n.
 \end{equation}
-Clearly, $g$ has poles at $z = 2 k \pi i$, $k \in \mathbb{Z}\backslash \{0\}$.
+Clearly, $g$ has poles at $z = 2 k \pi \I$, $k \in \mathbb{Z}\backslash \{0\}$.
 Moreover, one can easily show that all odd Bernoulli numbers are zero, except 
 for $B_1 = - \frac{1}{2}$ and since in some applications one wants $B_1$ to be 
 positive, there is a different convention for naming them: one often 
@@ -1008,10 +1006,10 @@ the asymptotic behaviour (see \cite{oeis:A027641, oeis:A027642})
 	|B_{2n}|
 	\sim 
 	(-1)^{n-1}
-	\frac{2 (2n)!}{(2 \pi)^{2*n}}.
+	\frac{2 (2n)!}{(2 \pi)^{2n}}.
 \end{equation*}
 This is not surprising, since we know that the generating function $g$ had 
-poles at $\pm 2\pi i$. The Bernoulli numbers can also be calculated by the 
+poles at $\pm 2\pi \I$. The Bernoulli numbers can also be calculated by the 
 recursion formula
 \begin{equation}
 	\label{Alg:BernoulliRecursive}
@@ -1071,10 +1069,10 @@ we want to give the first numbers of this series here.
 \end{proposition}
 \begin{proof}
 	We want to can calculate this using the Goldberg coefficients. Remind that 
-	we will put words to Lie brackets, and for computing the coefficients we 
-	will need the words $\eta \xi^n$ \emph{and} $\xi \eta \xi^{n-1}$ because 
+	we put words to Lie brackets, and for computing the coefficients we 
+	need the words $\eta \xi^n$ \emph{and} $\xi \eta \xi^{n-1}$ because 
 	of antisymmetry and words of the form $\xi^k \eta \xi^{n-k}$ with $k > 1$ 
-	will give vanishing expressions. Now let $n \in \mathbb{N}$. We have
+	give vanishing expressions. Now let $n \in \mathbb{N}$. We have
 	\begin{equation*}
 		c_{\eta}(1,n) 
 		= 
@@ -1138,7 +1136,7 @@ we want to give the first numbers of this series here.
 		= 
 		\frac{n}{(n+1)!} 
 		B_n 
-		\left( \ad_{\xi} \right)^n (\eta)
+		\left( \ad_{\xi} \right)^n (\eta).
 	\end{equation*}
 	For $n > 1$ we add up those two and use the fact that $B_n = B_n^*$ and 
 	find the result we want. For $n = 1$, there is just the first contribution 
@@ -1191,14 +1189,14 @@ We know that we can put the BCH series into the form of Equation
 	\sum\limits_{|w| = n}
 	\frac{g_w}{n} [w].
 \end{equation}
-We will need estimates on the coefficients $g_w$ in order to show the 
+Later, we will need estimates on the coefficients $g_w$ in order to show the 
 continuity of the Gutt star product. The first simple estimate (together with a 
 table of the first Goldberg coefficients and good explanation of Goldberg 
 polynomials) was given by Newman and Thompson in \cite{newman.thompson:1987a}. 
-The idea behind was an analysis of the structure of the polynomials an its 
+The idea behind it was an analysis of the structure of the polynomials an its 
 roots. This allows to put tight bounds on the values of $|g_w|$. We will need a 
-bit more than that, but luckily, Thompson gave an estimate in exactly the form 
-we will need in \cite{thompson:1989a}.
+bit more than that, but luckily, Thompson \cite{thompson:1989a} gave an estimate 
+in exactly the form we will need.
 \begin{proposition}
 	\label{Alg:Prop:ThompsonsEstimate}
 	Let $n \in \mathbb{N}$ and $g_w$ denotes the Goldberg coefficient of a 
@@ -1236,7 +1234,7 @@ we will need in \cite{thompson:1989a}.
 		(t + t_{s_r})(t - t_{s_r})
 	\end{equation*}
 	with $r = \lfloor \frac{s-1}{2} \rfloor$, $t_{s_i} \in (0, \frac{1}{2})$ 
-	and 	$s_0 = 0$ if $s$ is odd and $s_0 = 1$ if $s$ is even. The symmetric, 
+	and $s_0 = 0$ if $s$ is odd and $s_0 = 1$ if $s$ is even. The symmetric, 
 	quadratic terms are bounded in their absolute value by $\frac{1}{4}$ and 
 	the linear term by $\frac{1}{2}$, since $t \in (-\frac{1}{2}, \frac{1}
 	{2})$. Hence we have the estimate $|G_s(t)| \leq 2^{-s + 1}$ for the 
@@ -1265,7 +1263,7 @@ we will need in \cite{thompson:1989a}.
 		\frac{1}{m}
 		\binom{m-1}{m'}^{-1}.
 	\end{align*}
-	Now we just need to sum all the expressions corresponding corresponding to 
+	Now we just need to sum up all the expressions corresponding to 
 	words of the length $n$. Note, that the words can start with $\xi$ or 
 	$\eta$ and we therefore get a factor $2$ in front. The number of possible 
 	arrangements $(s_1, \ldots, s_m)$ is due to a combinatorial argument 
@@ -1299,10 +1297,9 @@ we will need in \cite{thompson:1989a}.
 		& =
 		2.
 	\end{align*}
-	At $(*)$ we used the fact that $\binom{m-1}{m'}$ is the biggest term (or 
+	In $(*)$ we used the fact that $\binom{m-1}{m'}$ is the biggest term (or 
 	one of the two) biggest terms in the binomial expansion of $(1 + 1)^{m-1}$ 
-	and hence $m \binom{m-1}{m'} \geq 2^{m-1}$. Hence, the statement is 
-	proven.
+	and hence we have $m \binom{m-1}{m'} \geq 2^{m-1}$.
 \end{proof}
 
 
@@ -1321,13 +1318,14 @@ step, it will be helpful to show their associativity.
 	not at hand in infinite dimensions and one has to find an algebraic proof 
 	instead. Since in the community of deformation quantization, this 
 	statement is somehow folklore and believed for any Lie algebra, it 
-	strongly seems like such a proof already exists. However, the author was 
-	not able to trace it down in literature and therefore gives an own proof.
+	strongly seems like such a proof already exists. However, the we were 
+	not able to trace it down in literature and therefore give an own proof.
 \end{remark}
 \begin{proposition}
 	\label{Alg:Lemma:Associtivity}
-	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ define
-	associative multiplications.
+	The three maps $\star_z$, $\widehat{\star}_z$ and $\ast_z$ from 
+	\eqref{Alg:GuttStar}, \eqref{Alg:DeformedStar} and \eqref{Alg:DrinfeldStar}  
+	respectively define	associative multiplications.
 \end{proposition}
 \begin{proof}
   All maps are defined as $\Sym^{\bullet}(\lie{g}) \times \Sym^{\bullet}
@@ -1345,7 +1343,7 @@ step, it will be helpful to show their associativity.
 	interchange sums and shift projections.
 	Recall that $\pi_n(f \star_z g) = 0$, if $n > \deg(f) + \deg(g)$.
 	Take homogeneous tensors $f, g, h \in \Sym^{\bullet}(\lie{g})$
-	of degree $k, \ell, m \in \mathbb{N}$ respectively. The we have
+	of degree $k, \ell, m \in \mathbb{N}$ respectively. Then we have
 	\begin{align*}
 		\big(
 			f 
@@ -1568,20 +1566,20 @@ step, it will be helpful to show their associativity.
 		\right)
 	}.
 	\end{align*}
-	Bilinearity follows from differentiating the formula and is 
-	a simple computation.
+	Bilinearity follows from differentiating.
   \end{enumerate}	 
 \end{proof}
-Note star products must fulfil the classical and the semi-classical limit. 
+Note that star products must fulfil the classical and the semi-classical limit. 
 We will do this in Corollary~\ref{Formulas:Cor:LimitCases} and so just the 
 equality is left to show. It is enough to prove the coincidence for terms of 
 the form $\xi^k \star \eta$ with $\xi, \eta \in \lie{g}$ and $k \in 
 \mathbb{N}$, because $\Sym^{\bullet}(\lie{g})$ is a commutative algebra and 
-hence we get them on arbitrary monomials by polarization. The equality for the 
-product of two monomials then follows by iteration, which is possible due to 
-associativity. The next lemma will be a first big step.
+hence we get the coincidence on arbitrary monomials by polarization. The equality 
+for the product of two monomials then follows by iteration, which is possible due 
+to associativity. The next lemma presents a first big step.
 \begin{lemma}
-	Let $\xi, \eta \lie{g}$, then we have
+	\label{Alg:FuckingDeadlyLemma}
+	Let $\xi, \eta \in \lie{g}$, then we have
 	\begin{equation}
 		\label{Alg:GuttStarFormula}
 		\xi^k \widehat{\star}_z \eta
@@ -1985,6 +1983,7 @@ associativity. The next lemma will be a first big step.
 			$k$ is even.
 		\end{enumerate}
 	\end{subproof}
+	Finally, Lemma \ref{Alg:FuckingDeadlyLemma} is proven.
 \end{proof}
 In Lemma \ref{Formulas:Lemma:LinearMonomial1}, we will see that also	$\ast_z$ 
 fulfils this identity. Hence $\ast_z = \widehat{\star}_z$. We only need to 

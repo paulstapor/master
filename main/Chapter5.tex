@@ -4,7 +4,7 @@
 % The analysis part begins
 %
 
-\chapter{A locally convex topology for the Gutt star product}
+\chapter{A Locally Convex Topology for the Gutt Star Product}
 
 We have finished the algebraic part of this work, except for one little 
 lemma concerning the Hopf theoretic chapter. Our next goal is setting up a 
@@ -19,31 +19,107 @@ parameter are proven. We also show that continuous representations of Lie
 algebras lift to  those of the deformed symmetric algebra and that our 
 construction is in fact functorial. Part four treats the case when the formal 
 parameter $z = 1$ and hence talks about a locally convex topology on universal 
-enveloping algebras. We will show, that our topology is ''optimal'' in a 
+enveloping algebras. We will show, that our topology is ``optimal'' in a 
 specific sense.
 
 
 
-\section{Why locally convex?}
+\section{Why Locally Convex?}
 \label{sec:chap5_Prelim}
 
-The first question one could ask is why we want the observable algebra 
-to be a \textit{locally convex} one. One can think of very different types of 
-topologies and most of them would be nicer than a locally convex setting: we 
-could think of locally multiplicatively convex algebras, Banach algebras, 
-$C^*$- or even von Neumann algebras. All of them have much more structure than 
-just locally convex algebras. We would have an entire holomorphic calculus 
-within our algebra if we assumed it to be locally m-convex, or even a 
-continuous one if we wanted it to be $C^*$.
+There are very different types of topologies on vector spaces and algebras. On one 
+hand, we want a topology on the symmetric tensor algebra -- which will 
+after its completion be the algebra of observables -- that has as many 
+convenient features as possible, of course. On the other hand, if we choose a too 
+good topology, we will risk to have no representations of our algebra as 
+(unbounded) operators on a Hilbert space, which means something like the $\hat 
+q$ and $\hat p$ operators. Thus we have to think of the possible options first. 
+Assume that $\lie{g}$ is a complex Lie algebra (if not, we can always complexify 
+it), then the complex conjugation plays the role of a \emph{star involution} on 
+the algebra of observables $\algebra{A}$, that means it is an automorphism
+\begin{equation*}
+	^* \colon
+	\algebra{A}
+	\longrightarrow
+	\algebra{A}
+	, \quad
+	a 
+	\longmapsto 
+	a^*,
+\end{equation*}
+which fulfils for all $a \in \algebra{A}$ the identity $(a^*)^* = a$. We want to 
+summarize briefly the options, which we would have in this case.
+\begin{enumerate}
+	\item
+	We can try a $C^*$-algebra. This means that we have a norm $\norm{\cdot}$ 
+	on our algebra, which fulfils the two properties
+	\begin{equation}
+		\label{LCAna:BanachAlg}
+		\norm{a \cdot b}
+		\leq
+		\norm{a}
+		\norm{b}
+		, \quad
+		\forall_{a,b \in \algebra{A}}
+	\end{equation}
+	and
+	\begin{equation}
+		\label{LCAna:CStarAlg}
+		\norm{a^* \cdot a}
+		=
+		\norm{a}^2
+		, \quad
+		\forall_{a,b \in \algebra{A}}.
+	\end{equation}
+	The bounded operators on a Hilbert space form a $C^*$-algebra, for example.	
+	In particular, we can define continuous functions of algebra elements in this
+	case, see e.g. \cite{blackadar:2006a} or \cite{waldmann:2014a:script}.
+		
+	\item
+	A Banach-$^*$-algebra is a bit less: we still have a norm, which fulfils
+	\eqref{LCAna:BanachAlg}, but not \eqref{LCAna:CStarAlg} any more. This stil 
+	allows holomorphic functions of algebra elements (like it can be seen in 
+	\cite{rudin:1991a}).
 
-
-The reason for our choice is that, in general, all these nice features are 
-simply not there. Quantum mechanics tells us that even for the simplest systems 
-the algebra made up by the space and momentum operators $\hat{q}$ and $\hat{p}$ 
-can not be locally m-convex and hence not Banach or $C^*$.
+	\item
+	A weaker choice is a \emph{locally multiplicatively convex 
+	$^*$-algebra}. We do not have a norm any more in this case, but a set of 
+	submultiplicative \emph{seminorms} $\{p_i\}_{i \in I}$. A seminorm $p$ is 
+	almost the same as a norm, except that we may have $p(x) = 0$ for some $x \in 
+	\algebra{A}$ with $x \neq 0$. Submultiplicativity means that every seminorm
+	$p$ fulfils
+	\begin{equation}
+		\label{LCAna:LMCAlg}
+		p(a \cdot b)
+		\leq
+		p(a)
+		p(b)
+		, \quad
+		\forall_{a,b \in \algebra{A}}.
+	\end{equation}
+	Examples for such algebras are the entire functions on $\mathbb{C}$ or the 
+	continuous functions on $\mathbb{R}$. In this case, entire functions of 
+	algebra elements can still be defined (see e.g. \cite{michael:1952a}).
+	
+	\item
+	As a last possibility, we can have a \emph{locally convex $^*$-algebra}. 
+	Here again, we have seminorms, but without \eqref{LCAna:LMCAlg}. Instead, we 
+	have to use another seminorm $q$ to control $p$ of the product of two 
+	elements. We will make this statement more precise later. Examples for such 
+	structures are distributions or vector fields on vector space. Good books on 
+	this kind of structure are \cite{hoermander:2003a}, \cite{rudin:1991a} or 
+	\cite{jarchow:1981a}.
+\end{enumerate}
+So in principle, we have a lot of possibilities. Unfortunately, the canonical 
+commutation relations, which should be fulfilled, do not allow 
+submultiplicative structures: this is precisely what we show in the next 
+proposition (and what can also be found in some textbooks, like 
+\cite{reed.simon:1980a}, for example). So all the nice features like a continuous 
+or an entire calculus will simply not be there, and therefore we have to aim at an 
+honestly locally convex topology on the symmetric tensor algebra.
 \begin{proposition}
 	\label{Prop:LCAna:QMnotLMC}
-	Let $\mathcal{A}$ be a unital associative algebra which contains the 
+	Let $\algebra{A}$ be a unital associative algebra which contains the 
 	quantum mechanical observables $\hat{q}$ and $\hat{p}$ and in which 
 	the canonical commutation relation
 	\begin{equation*}
@@ -57,7 +133,7 @@ can not be locally m-convex and hence not Banach or $C^*$.
 	First, we need to show a little lemma:
 	\begin{lemma}
 		\label{Lemma:LCAna:NotLMCHelp}
-		In the given algebra, we have for $n \in \mathbb{N}$
+		In the algebra given above, we have for $n \in \mathbb{N}$
 		\begin{equation}
 			\label{LCAna:NotLMCHelp}
 			\left( \ad_{\hat{q}} \right)^n (\hat{p}^n)
@@ -66,10 +142,10 @@ can not be locally m-convex and hence not Banach or $C^*$.
 		\end{equation}
 	\end{lemma}
 	\begin{subproof}
-		To show it, we use the fact that for $a \in \mathcal{A}$ the 
+		To show it, we use the fact that for $a \in \algebra{A}$ the 
 		operator $\ad_a$ is a derivation. This is always true for the 
 		commutator Lie algebra of an associative algebra, since for 
-		$a, b, c \in \mathcal{A}$ we have
+		$a, b, c \in \algebra{A}$ we have
 		\begin{equation*}
 			[a, bc]
 			=
@@ -246,16 +322,16 @@ can not be locally m-convex and hence not Banach or $C^*$.
 	complex. Moreover, the Weyl algebra is actually nothing but a 
 	quotient of the universal enveloping algebra of the so called 
 	Heisenberg algebra, which is a particular Lie algebra. There is 
-	no reason why the original algebra should have a ''better'' analytical 
+	no reason why the original algebra should have a ``better'' analytical 
 	structure than its quotient, since the ideal, which is divided out by 
 	this procedure, is a closed one.
 \end{remark}
-There's a second good reason why we should avoid our topology to be locally 
+There is a second good reason why we should avoid our topology to be locally 
 m-convex. The topology we set up on $\Sym^{\bullet}(\lie{g})$ for a Lie 
-algebra $\lie{g}$ will also give a topology on $\mathcal{U}(\lie{g})$.
-In Proposition \ref{LCAna:Prop:NoBetterTopology} ,we will show that, under 
+algebra $\lie{g}$ will also give a topology on $\algebra{U}(\lie{g})$.
+In Proposition \ref{LCAna:Prop:NoBetterTopology}, we will show that, under 
 weak (but for our purpose necessary) additional assumptions, there can be no 
-topology on $\mathcal{U}(\lie{g})$, which allows an entire holomorphic 
+topology on $\algebra{U}(\lie{g})$, which allows an entire holomorphic 
 calculus. This underlines the results from Proposition 
 \ref{Prop:LCAna:QMnotLMC}, since locally m-convex algebras always have such a 
 calculus.
@@ -269,10 +345,10 @@ technology from locally convex analysis.
 
 
 
-\section{Locally convex algebras}
+\section{Locally Convex Algebras}
 \label{sec:chap5_LCAlg}
 
-\subsection{Locally convex spaces and algebras}
+\subsection{Locally Convex Spaces and Algebras}
 
 Every locally convex algebra is also a locally convex space which 
 is, of course, a topological vector space. To make clear what we talk about, 
@@ -294,10 +370,10 @@ we first give a definition which is taken from
 \end{definition}
 Not all books require axiom $(i)$ for a topological vector space. It is, 
 however, useful, since it assures that our topological vector 
-space is Hausdorff -- a feature which we will always want to have. The proof 
+space is Hausdorff -- a feature which we always want to have. The proof 
 for this is not difficult, but since we do not want to go too much into details 
-here, we refer to \cite{rudin:1991a} again, where it can be found in the 
-theorem 1.10 and 1.12.
+here, we refer to \cite{rudin:1991a} again, where it can be found in 
+Theorem 1.10 and 1.12.
 
 
 The most important class of topological vector spaces are, at least from a 
@@ -313,8 +389,8 @@ geometrical, the second is better suited for our analytic purpose.
 	\begin{theoremlist}
 		\item
 		$V$ has a local base $\algebra{B}$ of the topology whose members are 
-		convex.
-		
+		convex, i.e. for all $U in \algebra{B}$ we have for all $x,y \in U$
+		and all $\lambda \in [0,1]$: $\lambda x + (1 - \lambda)y \in U$.
 		\item
 		The topology on $V$ is generated by a separating family of seminorms 
 		$\mathcal{P}$.
@@ -331,7 +407,7 @@ geometrical, the second is better suited for our analytic purpose.
 	thus all) of the properties from Theorem \ref{Thm:LCAna:LCSpace} are 
 	fulfilled.
 \end{definition}
-The first property explains the term ''locally convex''. 
+The first property explains the term ``locally convex''. 
 For our concrete computations, the second property is more helpful, 
 since in this setting proving continuity just means putting estimates on 
 seminorms. For this purpose, one often extends the set of seminorms 
@@ -373,7 +449,7 @@ algebras, we will always say it explicitly.
 
 
 
-\subsection{A special class of locally convex algebras}
+\subsection{A Special Class of Locally Convex Algebras}
 
 For our study of the Gutt star product, the usual continuity estimate 
 \eqref{LCAna:ProductContinuity} will not be enough, since 
@@ -405,7 +481,7 @@ we can define the property we need also for other locally convex algebras.
         (AE algebra), if every $p \in \algebra{P}$ has an asymptotic estimate.
     \end{definitionlist}
 \end{definition}
-\begin{remark}[The notion ''asymptotic estimate'']
+\begin{remark}[The notion ``asymptotic estimate'']
 	\label{LCAna:Rem:AE1}
 	\mbox{}
 	\begin{remarklist}
@@ -432,7 +508,7 @@ we can define the property we need also for other locally convex algebras.
 		\begin{equation*}
 		 	p(x_1 \cdots x_i)
 		 	\leq
-		 	q^{(i)}(x_1) \ldots q^{(i)}(x_i)
+		 	q^{(i)}(x_1) \cdots q^{(i)}(x_i)
 		 	\quad
 		 	\forall_{x_1, \ldots, x_i \in \algebra{A}}
 		\end{equation*}
@@ -475,7 +551,7 @@ and not locally m-convex or nilpotent? We don't have an answer to this
 questions, but we can make some simple observations, which allow us to give an 
 answer for special cases.
 \begin{proposition}[Entire calculus]
-	Let $\mathcal{A}$ be an associative AE algebra. Then it admits an
+	Let $\algebra{A}$ be an associative AE algebra. Then it admits an
 	entire calculus.
 \end{proposition}
 \begin{proof}
@@ -522,10 +598,10 @@ answer for special cases.
 
 
 
-\subsection{The projective tensor product}
+\subsection{The Projective Tensor Product}
 
 We want to set up a topology on $\Sym^{\bullet}(\lie{g})$. Therefore, 
-we will first construct a topology on the tensor algebra $\Tensor^{\bullet}
+we first construct a topology on the tensor algebra $\Tensor^{\bullet}
 (\lie{g})$. Since the construction is possible starting from any locally 
 convex vector space, we want to go back to this more general setting for a 
 moment. $V$ will always denote a locally convex vector space and $\algebra{P}$ 
@@ -582,7 +658,7 @@ continuous seminorms, or, equivalently, by all the $p^n$ for $p \in
 The projective tensor product has a very helpful feature: if we want to show a 
 (continuity) estimate on the tensor algebra, it is enough to do so on 
 factorizing tensors. We will use this very often and just refer to it as the 
-''infimum argument''.
+``infimum argument''.
 \begin{lemma}[Infimum argument for the projective tensor product]
 	\label{LCAna:Lemma:InfimumArgument}
  	Let $V_1, \ldots, V_n$, \hfill  \\
@@ -605,7 +681,7 @@ factorizing tensors. We will use this very often and just refer to it as the
 		\leq
 		q_i(x_1) \cdots q_i(x_n)
 	\end{equation}
-	is fulfilled for $p\in\algebra{P}_V$ and $q_i \in \algebra{P}_{W_i}$ 
+	is fulfilled for $p\in\algebra{P}_V$, $q_i \in \algebra{P}_{W_i}$ 
 	and all $x_i \in V_i, i=1, \ldots, n$ then we have
 	\begin{equation}
 		\label{LCAna:ContGeneral}
@@ -673,8 +749,8 @@ factorizing tensors. We will use this very often and just refer to it as the
 		q_n \left( x_j^{(n)} \right).
 	\end{align*}
 	Now we take the infimum over all possibilities of writing $x$ as a sum of 
-	factorizing tensors on both sides. While nothing will happen on the left 
-	hand side, on the right hand side we will find $\left( q_1 \tensor[\pi] 
+	factorizing tensors on both sides. While nothing happens on the left 
+	hand side, on the right hand side we find $\left( q_1 \tensor[\pi] 
 	\ldots \tensor[\pi] q_n \right)(x)$: 
 	\begin{equation*}
 		p( \Phi(x) )
@@ -819,7 +895,7 @@ inequality is strict. The following example illustrates this.
 		\tensor
 		\norm{e_2}
 		=
-		1
+		1.
 	\end{equation*}
 	We now evaluate the symmetrization map on $V \tensor[\pi] V$:
 	\begin{equation*}
@@ -906,7 +982,7 @@ in between, which we can adjust in a convenient way.
 		\sum\limits_{n=0}^{\infty}
 		n!^R p^n
 	\end{equation*}
-	a seminorm on the Tensor algebra $\Tensor^{\bullet}(V)$. We write for 
+	a seminorm on the tensor algebra $\Tensor^{\bullet}(V)$. We write for 
 	the tensor or the symmetric algebra endowed with all such seminorms  
 	$\Tensor_R^{\bullet}(V)$ or $\Sym_R^{\bullet}(V)$ respectively.
 \end{definition}
@@ -987,6 +1063,8 @@ algebras $\left( \Tensor_R^{\bullet}(V), \tensor \right)$ and $\left(
 		    		&
 		    		\prod\limits_{n=0}^{\infty}
 		    		V^{\hat{\tensor}_{\pi} n}
+		    		\\
+		    		&&&&
 		    		\\
 		    		\widehat{\Sym}_R^{\bullet}(V)
 		    		&
@@ -1131,7 +1209,7 @@ strong properties of the original vector space $V$. But Lemma
 \ref{Lemma:LCAna:Projections} still leaves out some important things. 
 We will not make use of them in the following, but it is worth naming 
 them for completeness. To do this in full generality, we 
-need one more definition, which will be also very important in chapter 6.
+need one more definition, which will be also very important in Chapter 6.
 \begin{definition}\label{ProjectiveLimit}
 	For a locally convex vector space $V$ and $R \geq 0$ we set
 	\begin{equation*}
@@ -1147,7 +1225,7 @@ $\Sym_R^{\bullet}(V)$ for $R < 1$. Its completion can be understood as all
 those series in the cartesian product, which converge for all $p_R$ for $R < 1$ 
 and $p$ a continuous seminorm on $V$. We hence see that the completion 
 $\widehat{\Sym}_{R^-}^{\bullet}(V)$ is bigger than $\widehat{\Sym}_R^{\bullet}
-(V)$ without the projective limit. This will become important in chapter 6.
+(V)$ without the projective limit. This will become important in Chapter 6.
 Now we can state two more propositions. Since we won't use them, we omit the 
 proofs here. They can be found in \cite{waldmann:2014a}.
 \begin{proposition}[Schauder bases]
@@ -1252,13 +1330,13 @@ conserved.
 
 
 
-\section{Continuity results for the Gutt star product}
+\section{Continuity Results for the Gutt Star Product}
 \label{sec:chap5_TopologyStar}
 
 From now on, we start with an AE Lie algebra $\lie{g}$ rather than with a 
 general locally convex space $V$. We have most of the tools at hand to show the 
 continuity of the Gutt star product, except for precise estimates on the 
-$\bchtilde{a}{b}{\xi}{\eta}$-terms. Therefore, we state the following lemma.
+$\widetilde{\mathrm{BCH}_{a, b}}$-terms. Therefore, we state the following lemma.
 \begin{lemma}
 	\label{LCAna:Lemma:BCHTermsEstiamte}
 	Let $\lie{g}$ be a AE-Lie algebra, $\xi, \eta \in \lie{g}$, $p$ a 
@@ -1279,7 +1357,7 @@ $\bchtilde{a}{b}{\xi}{\eta}$-terms. Therefore, we state the following lemma.
 		Recall that $|w|$ denotes the length of a word $w$ and $[w]$ is the
 		word put in Lie brackets nested to  the left.
 	\item \label{Item:AEonWords}
-		For every word $w$, which consists of $a$ $\xi$'s and $b$ $\eta$'s,
+		For every word $w$, which consists of $a$ $\xi$ and $b$ $\eta$,
 		we have
 		\begin{equation}
 		\label{LCAna:AEonWords}
@@ -1308,8 +1386,8 @@ $\bchtilde{a}{b}{\xi}{\eta}$-terms. Therefore, we state the following lemma.
 	\ref{Alg:Prop:ThompsonsEstimate} and put in the factor $\frac{1}{n}$ 
 	because these factors will appear later. The next estimate 
 	\eqref{LCAna:AEonWords} is due to the AE property which does not see the 
-	way how brackets are set but just counts the number of $\xi_i$'s and 
-	$\eta_j$'s in the whole expression.
+	way how brackets are set but just counts the number of $\xi_i$ and 
+	$\eta_j$ in the whole expression.
 	Let us use the notation $|w|_{\xi}$ for the number of $\xi$'s appearing
 	in a word $w$ and $|w|_{\eta}$ for the number of $\eta$'s. Clearly, $|w| =
 	|w|_{\xi} + |w|_{\eta}$. With \eqref{LCAna:ThompsonEstimate} and the AE
@@ -1380,7 +1458,7 @@ map $f \colon \Sym_R^{\bullet}(\lie{g}) \longrightarrow
 		\ostar_z 
 		= 
 		\star_z \circ 
-		\left( \Symmetrizer \tensor \right).
+		\left( \Symmetrizer \tensor \right)
 	\end{equation*}
 	and for the $C_n$-operators analogously.
 
@@ -1401,7 +1479,7 @@ map $f \colon \Sym_R^{\bullet}(\lie{g}) \longrightarrow
 \end{enumerate}
 
 
-\subsection{Continuity of the product}
+\subsection{Continuity of the Product}
 In the first proof, we want to give an estimate via the formula
 \begin{equation}
     \label{eq:GstarOfXisAndEtas}
@@ -1637,9 +1715,9 @@ using $r = k + \ell - n$.
 	only hold if $R \geq 1$: the estimate in \eqref{LCAna:CnOperators} shows, 
 	that all the $C_n$ are indeed continuous for any $R \geq 0$, but only 
 	for $R \geq 1$ there is something like a uniform continuity. When $R$ 
-	decreases, the continuity of the $C_n$ ''gets worse'' and the uniform 
+	decreases, the continuity of the $C_n$ ``gets worse'' and the uniform 
 	continuity finally breaks down when the threshold $R = 1$ is trespassed. 
-	But we need this uniform estimate, since we will have to control the 
+	But we need this uniform estimate, since we have to control the 
 	operators up to an arbitrarily high order if we want to guarantee the 
 	continuity of the whole star product. Continuity up to a previously fixed
 	order $n$ does not suffice.
@@ -1647,21 +1725,21 @@ using $r = k + \ell - n$.
 
 
 Now, we want to give a second proof, which relies on 
-\eqref{Formulas:LinearMonomial2}. Approaching like this, we don't account for 
-the fact that we will encounter terms like $[\eta, \eta]$ which will vanish, 
-but we estimate more brutally. During this procedure, we will also count the 
-formal parameter $z$ more often than it is actually there. This is why we will 
+\eqref{Formulas:LinearMonomial2}. Approaching like this, we do not account for 
+the fact that we will encounter terms like $[\eta, \eta]$ which vanish, 
+but we estimate more brutally. During this procedure, we also count the 
+formal parameter $z$ more often than it is actually there. This is why we now 
 have to make assumptions on $R$ and $z$ which are a bit stronger than before. 
-Moreover, we will split up tensor products and put them together again various 
-times, which is the reason why an AE Lie algebra will not suffice any more: we 
-will need $\lie{g}$ to be locally m-convex. But if we make these assumptions, 
-we get the following lemma which will finally simplify the proof.
+Moreover, we split up tensor products and put them together again various 
+times, which is the reason why an AE Lie algebra does not suffice any more: we 
+need $\lie{g}$ to be locally m-convex. But if we make these assumptions, 
+we get the following lemma, which finally simplifies the proof.
 \begin{lemma}
     \label{LCAna:Lemma:PreContinuity2}%
     Let $\lie{g}$ be a locally m-convex Lie algebra and $R \geq1$. 
-    Then if $|z| < 2 \pi$ or $R >1$ there exists for $x \in
+    Then if $|z| < 2 \pi$ or $R >1$ there exists, for $x \in
     \Tensor^{\bullet}(\lie{g})$ of degree at most $k$, $\eta \in \lie{g}$
-    and each continuous submultiplicative seminorm $p$ a constant $c_{z,R}$ 
+    and each continuous submultiplicative seminorm $p$, a constant $c_{z,R}$ 
     only depending on $z$ and $R$ such that the following estimate holds:
     \begin{equation}
         \label{LCAna:PreContinuity2}
@@ -1849,7 +1927,7 @@ Lie algebra:
         & \leq
         (2^R p)_R 
         \left( \xi_1 \tensor \cdots \tensor \xi_k \right)
-        (2^R c_{z,R} p)_R 
+        (2^R c_{z,R}\ p)_R 
         \left( \eta_1 \tensor \cdots \tensor \eta_\ell \right).
     \end{align*}
     Once again, we extend the estimate via the infimum argument to the whole
@@ -1859,8 +1937,8 @@ Lie algebra:
 
 
 Using this approach for continuity, it is easy to see that nilpotency
-of the Lie algebra will change the estimate substantially: If we knew that
-we will have at most $N$ brackets because $N + 1$ brackets vanish,
+of the Lie algebra would change the estimate substantially: if we knew that
+we had at most $N$ brackets because $N + 1$ brackets vanish,
 then the sum in the proof of Lemma \ref{LCAna:Lemma:PreContinuity2}
 would end at $N$ instead of $k$ and would therefore be independent of
 the degree of $x$.
@@ -1968,7 +2046,7 @@ continuity for $R < 1$:
 
 
 
-\subsection{Dependence on the formal parameter}
+\subsection{Dependence on the Formal Parameter}
 
 Now we want to analyse the completion $\widehat{\Sym}_R^{\bullet}(\lie{g})$ of
 the symmetric algebra with $\star_z$. Concerning exponential functions, we 
@@ -2003,11 +2081,11 @@ get the following negative result:
     and hence $\exp(\xi)$ does not converge for the seminorm $(cp)_R$.
 \end{proof}
 When we go back to Theorem~\ref{Thm:LCAna:Continuity1}, we see that we have 
-actually proven slightly more than we stated: We showed that the star product 
-converges absolutely and locally uniform in $z$. This means that the star 
-product is not only continuous, but also that the formal series converges 
-to the star product in the completion. We can take a closer look at this proof 
-in order to get a new result for the dependence on the formal parameter $z$:
+actually proven slightly more than we stated: we showed that the star product 
+converges absolutely and locally uniform in $z$. This means that the star product 
+is \emph{not only continuous}, but also that \emph{the formal series converges to 
+the star product in the completion}. We can take a closer look at this proof in 
+order to get a new result for the dependence on the formal parameter $z$:
 \begin{proposition}[Dependence on $z$]
     \label{corollary:HolomorphicDependence}%
     Let $R \geq 1$, then for all $x, y \in \widehat{\Sym}_R^\bullet(\lie{g})$ 
@@ -2076,7 +2154,7 @@ in order to get a new result for the dependence on the formal parameter $z$:
 		(16M q)_R \left( y^{(\ell)} \right),
 	\end{align*}
 	where we used that $0 \leq n \leq k + \ell - 1$. The infimum argument 
-	gives the estimate on all Tensors $x,y \in \Tensor_R^{\bullet}(\lie{g})$ 
+	gives the estimate on all tensors $x,y \in \Tensor_R^{\bullet}(\lie{g})$ 
 	and it extends to the completion such that
 	\begin{equation*}
 		p_R \left( z^n C_n(x, y) \right)
@@ -2100,22 +2178,22 @@ in order to get a new result for the dependence on the formal parameter $z$:
 \end{proof}
 \begin{remark}[(Weakly) holomorphic maps with values in locally convex spaces]
 	\label{LCAna:Rem:Holomorphicity} \hfill \\
-	One could argue that the term ''holomorphic'' in a locally convex space 
+	One could argue that the term ``holomorphic'' in a locally convex space 
 	$V$ does not necessarily mean that a map has a absolutely convergent 
 	Taylor expansion, but one should rather see the map 
 	\eqref{LCAna:Holomorphicity} as a collection of paths $\mathbb{C} 
 	\longrightarrow \widehat{\Sym}_R^{\bullet}(\lie{g})$ and ask for their 
 	complex differentiability in the sense of a differential quotient. Of 
-	course, this would be is a valid formulation of the word ''holomorphic'' 
-	and this is also the standard definition for holomorphic maps with values 
-	in locally convex spaces. According to this definition one calls a map 
-	''weakly holomorphic'', if every continuous linear form 
+	course, this is also a valid formulation of the word ``holomorphic'' 
+	and it is actually even the standard definition for holomorphic maps with 
+	values in locally convex spaces. According to this definition one calls a map 
+	``weakly holomorphic'', if every continuous linear form 
 	$\lambda \colon V \longrightarrow \mathbb{C}$ applied to it gives a 
 	holomorphic map $\mathbb{C} \longrightarrow \mathbb{C}$. Using this 
-	terminology, we would just have proven the map 
-	\eqref{LCAna:Holomorphicity} to be \emph{weakly holomorphic}. Yet, we have 
-	proven ''real'' holomorphicity, since in \cite[Theorem 3.31]{rudin:1991a} 
-	Rudin proved the two notions of holomorphicity coincide in locally convex 
+	terminology, we would just have proven the map \eqref{LCAna:Holomorphicity} to 
+	be \emph{weakly holomorphic}. Yet, we have also
+	proven ``strong'' holomorphicity, since in \cite[Theorem 3.31]{rudin:1991a} 
+	Rudin proved that the two notions of holomorphicity coincide in locally convex 
 	spaces.
 \end{remark}
 
@@ -2123,15 +2201,16 @@ in order to get a new result for the dependence on the formal parameter $z$:
 
 \subsection{Representations}
 
-We now want to identify the symmetric algebra with the Gutt star product with 
-the the universal enveloping algebra $\algebra{U}(\lie{g}_z)$ with the scaled 
-product.
+We now want to identify the deformed symmetric algebra $(\Sym_R^{\bullet}
+(\lie{g}), \star_z)$ with the the universal enveloping algebra $\algebra{U}
+(\lie{g}_z)$ with the scaled product.
 \begin{definition}[The $\algebra{U}_R$-Topology]
 	We denote by $\algebra{U}_R(\lie{g}_z)$ the locally convex algebra which we 
-	get from $\algebra{U}(\lie{g}_z)$ by pulling back the $\Sym_R(\lie{g})$ 
-	topology with the Poincar\'e-Birkholl-Witt isomophism $\mathfrak{q}$.
+	get from $\algebra{U}(\lie{g}_z)$ by pulling back the $\Sym_R^{\bullet}
+	(\lie{g})$-topology via the Poincar\'e-Birkholl-Witt isomophism
+	$\mathfrak{q}$.
 \end{definition}
-We know that this algebra has the universal property that Lie algebra 
+We know this algebra has the universal property that Lie algebra 
 homomorphisms into associative algebras can be lifted to unital homomorphisms 
 of associative algebras. As a commutative diagram, this reads
 \begin{center}
@@ -2142,7 +2221,7 @@ of associative algebras. As a commutative diagram, this reads
         column sep=7em
         ]
         {
-          \mathcal{U}_R(\lie{g})
+          \algebra{U}_R(\lie{g})
           & \Sym_R^{\bullet}(\lie{g}) \\
           \lie{g}
           & \algebra{A} \\
@@ -2236,8 +2315,8 @@ very easy to see directly.
         =
         \frac{n!^R}{c^n} q(\xi)^n
     \end{equation}
-    for $c = \frac{p(\xi)}{q(\xi)}$. But since $\frac{n!^R}{c^n}$ will always
-    diverge for $n \rightarrow \infty$ we will never get an asymptotic
+    for $c = \frac{p(\xi)}{q(\xi)}$. But since $\frac{n!^R}{c^n}$ always
+    diverges for $n \longrightarrow \infty$, we never get an asymptotic
     estimate for $p$.
 \end{example}
 Another argument would be that we know that we can not have exponential 
@@ -2248,7 +2327,7 @@ exponential functions. Although the construction is not universal, we can draw
 a strong conclusion from Proposition~\ref{LCAna:Prop:Semi-functoriality}:
 \begin{corollary}[Continuous Representations]
     \label{LCAna:Coro:ContinuousRepresentations}%
-    Let $R \geq 1$ and $\mathcal{U}_R(\lie{g})$ the universal
+    Let $R \geq 1$ and $\algebra{U}_R(\lie{g})$ the universal
     enveloping algebra of an AE-Lie algebra $\lie{g}$, then for every
     continuous representation $\phi$ of $\lie{g}$ into the bounded
     linear operators $\Bounded(V)$ on a Banach space $V$ the induced
@@ -2283,10 +2362,10 @@ a strong conclusion from Proposition~\ref{LCAna:Prop:Semi-functoriality}:
 Now let $\lie{g}, \lie{h}$ be two AE-Lie algebras. We know that a homomorphism 
 of Lie algebras from $\lie{g}$ to $\algebra{U}(\lie{h}_z)$ would lift to a 
 homomorphism $\algebra{U}(\lie{g}_z) \longrightarrow \algebra{U}(\lie{h}_z)$, 
-if the latter one was AE, which is not the case. Yet, we would like to have 
+if the latter one was AE, but this is not the case. Yet, we would like to have 
 this result and prove that our construction is functorial, but it will be 
 more complicated than that. We draw the commutative diagram to clarify the 
-situation:
+situation.
 \begin{center}
     \begin{tikzpicture}
         \matrix (m)[
@@ -2322,8 +2401,55 @@ situation:
 \end{center}
 Assume that $\phi$ is a continuous Lie algebra homomorphism. We want to know if 
 $\Phi_z$ and $\widetilde{\Phi}_z$ will be continuous, too. Luckily, the answer 
-is yes and our construction is functorial. For the proof, we will need the 
-next lemma.
+is yes and our construction is functorial. For the proof, we need the 
+next two lemmas.
+\begin{lemma}
+    \label{LCAna:Lemma:NStarPrePreSubResult}%
+    Let $\lie{g}$ be an AE-Lie algebra, $n \in \mathbb{N}$, $\xi_1, \ldots, \xi_n 
+    \in \lie{g}$, $i_j \in \{0, \ldots, j\}$, $\forall_{j = 1, 
+    \ldots, n-1}$ and denote $I = \sum_j i_j$. Then we have the formula
+	\begin{align}
+		\nonumber
+		z^{i_{n-1}} 
+		&
+		C_{i_{n-1}}\left(
+			\ldots
+			z^{i_2} C_{i_2} \left(
+				z^{i_1} c_{i_1} \left(
+					\xi_1, \xi_2
+				\right)
+				,
+				\xi_3
+			\right)
+			\ldots,
+			\xi_n
+		\right)
+		=
+		z^I B_{i_{n-1}}^* \cdots B_{i_1}^*
+		\\
+		& \quad
+		\cdot
+		\frac{\binom{1}{i_1}}{1!} 
+		\frac{\binom{2 -i_1}{i_2}}
+		{(2-i_1)!}
+		\cdots 
+		\frac{\binom{n-1 - i_1 - \cdots - i_{n-2}}{i_{n-1}}}
+		{(n-1 - i_1 - \cdots - i_{n-2})!}
+		\sum\limits_{\substack{
+			\sigma_1 \in S_{2 - i_1} \\
+			\ldots\\
+			\sigma_{n-1} \in S_{n-1 - i_1 - \ldots - i_{n-2}}			
+		}}
+		[w_1] \cdots [w_{n-I}],
+	\end{align}
+	where the expressions $[w_i]$ denote nested Lie brackets in the $\xi_i$.
+\end{lemma}
+\begin{proof}
+	The statement follows from the bilinearity of the $C_{i_j}$-operators. They 
+	are always applied to homogeneous symmetric tensors. The proof itself is an 
+	easy induction and follows very directly from
+	Formula~\eqref{Formulas:LinearMonomial2}.
+\end{proof}
 \begin{lemma}
     \label{LCAna:Lemma:LemmaPreContinuityN}%
     Let $\lie{g}$ be an AE-Lie algebra, $R \geq 1$, $z \in \mathbb{C}$ and $p$ 
@@ -2404,28 +2530,26 @@ next lemma.
 		}}
         |B_{i_{n-1}}^*| \cdots |B_{i_1}^*|
         |z|^{i_{n-1}} \cdots |z|^{i_1}
-        \\
-        \nonumber
-        & \quad \cdot
-        \binom{1}{i_1} \binom{2 - i_1}{i_2}
+        \frac{\binom{1}{i_1}}{1!}
+        \frac{\binom{2 - i_1}{i_2}}{(2-i_1)!}
         \cdots
-        \binom{n - 1 - i_1 - \cdots i_{n-2}}{i_{n-1}}
-        \frac{1}{2! 3 ! \cdots n!}
-        \sum\limits_{\sigma_1 \in S_2, \ldots, \sigma_{n-1} \in S_n}
         \\
-        & \quad \cdot
         \label{LCAna:PreContinuityIntermediateN}
-        p^{n - i_1 - \cdots i_{n-1}}
+        & \quad \cdot
+        \frac{\binom{n - 1 - i_1 - \cdots i_{n-2}}{i_{n-1}}}
+        {(n - 1 - i_1 - \cdots - i_{n-2})!}
+		\sum\limits_{\substack{
+			\sigma_1 \in S_{2 - i_1} \\
+			\ldots\\
+			\sigma_{n-1} \in S_{n-1 - i_1 - \ldots - i_{n-2}}			
+		}}       
+        p^{n - \ell}
         \left( 
-         	\left[ w\left( \xi_1, \ldots, \xi_n \right) \right] 
+         	[w_1] \cdots [w_{n - \ell}]
         	\right).
     \end{align}
-    In the last step, we iterated the $C_{i_j}$-operators. They are always 
-    applied to a homogeneous symmetric tensor with a vector and hence always 
-    give back a symmetrized sum of homogeneous symmetric tensors of the same 
-    degree and with the same coefficients. $w[\cdots]$ denotes a symmetric 
-    product of nested Lie bracket expressions involving all $\xi_i$.
-    We can apply the AE property to it and get $q(\xi_1) \cdots q(\xi_n)$. Thus 
+    In the last step, we used Lemma \ref{LCAna:Lemma:NStarPrePreSubResult}. Now
+    we can apply the AE property to it and get $q(\xi_1) \cdots q(\xi_n)$. Thus 
     the sum over the $\sigma_j$ vanishes with the inverse factorials.
     By using the fact that $|B_m^*| \leq m!$ for all $m \in
     \mathbb{N}$ and grouping together the powers of $|z|$, we find
@@ -2611,15 +2735,15 @@ next lemma.
 
 
 
-\section{Alternative topologies and an optimal result}
+\section{Alternative Topologies and an Optimal Result}
 \label{sec:chap5_Optimality}
 
 In this section we set the formal parameter $z = 1$ and make some 
 observations. So far, we found a topology on $\Sym_R^{\bullet}(\lie{g})$ which 
 gives a continuous star product and which has a reasonably large completion, 
 but it is always fair to ask if we can do better than that: we have seen that 
-our completed algebra will not contain exponential series, which would be a 
-very good thing to have. So is it possible to put another locally convex 
+our completed algebra does not contain exponential series, which would be a 
+very good feature to have. So is it possible to put another locally convex 
 topology on $\Sym_R^{\bullet}(\lie{g})$ which gives a completion with 
 exponentials? The answer is no, at least under mild additional assumptions. 
 \begin{proposition}[Optimality of the $\Tensor_R$-topology]
@@ -2647,11 +2771,11 @@ exponentials? The answer is no, at least under mild additional assumptions.
 		are continuous.
 	\end{propositionlist}
 \end{proposition}
-First of all, we should make clear what ''the Baker-Campbell-Hausdorff series 
+First of all, we should make clear what ``the Baker-Campbell-Hausdorff series 
 does not converge'' actually means. This may be clear for a finite-dimensional 
 Lie algebra, but in the locally convex setting, it is not that obvious. For 
 simplicity, we assume our local convex space to be complete in the 
-following, since we can always achieve this be completing it. First, we note 
+following, since we can always achieve this by completing it. First, we note 
 here that a net or a sequence in a locally convex space is  convergent [or 
 Cauchy], if and only if it is convergent [or Cauchy] with respect 
 to all $p \in \algebra{P}$. Quite similar to a normed space, we can make the 
@@ -2663,14 +2787,14 @@ following definition.
 	$\alpha = (\alpha_n)_{n \in \mathbb{N}}\subseteq V$ a sequence in $V$. 
 	We set
 	\begin{equation*}
-		\rho_p(\alpha)
+		\varrho_p(\alpha)
 		=
 		\left(
 			\limsup_{n \longrightarrow \infty}
 			\sqrt[n]{p \left(\alpha_n \right)}
 		\right)^{-1}
 	\end{equation*}
-	where $\rho_p(\alpha) = \infty$ if $\limsup_{n \longrightarrow \infty} 
+	where $\varrho_p(\alpha) = \infty$ if $\limsup_{n \longrightarrow \infty} 
 	\sqrt[n]{p \left(\alpha_n \right)} = 0$ as usual.
 \end{definition}
 From this, we immediately get the two following lemmas.
@@ -2678,16 +2802,16 @@ From this, we immediately get the two following lemmas.
 	\label{LCAna:Lemma:RootTest}
 	Let $V$ be a complete locally convex vector space, $p \in \algebra{P}$ 
 	and $\alpha = (\alpha_n)_{n \in \mathbb{N}} \subseteq V$ a sequence. 
-	Then, if $\rho_p(\alpha) > 1$, the series
+	Then, if $\varrho_p(\alpha) > 1$, the series
 	\begin{equation*}
 		\mathcal{S}_n(\alpha)
 		=
 		\sum\limits_{j = 0}^n
 		\alpha_j
 	\end{equation*}
-	converges absolutely with respect to $p$. If, conversely, this
-	series convegres with respect to $p$, then we have 
-	$\rho_p(\alpha) \geq 1$.	
+	converges absolutely with respect to $p$. Conversely, if this
+	series converges with respect to $p$, then we have 
+	$\varrho_p(\alpha) \geq 1$.	
 \end{lemma}
 \begin{proof}
 	The proof is completely analogous to the one in finite dimensions.
@@ -2707,18 +2831,18 @@ From this, we immediately get the two following lemmas.
 	$|z| < M$.
 \end{lemma}
 \begin{proof}
-	Like in the finite-dimensional setting, we use the root test: Convergence 
-	for $|z| \leq M$ means $\rho_p(\alpha_z) \geq 1$, where we have set 
+	Like in the finite-dimensional setting, we use the root test: convergence 
+	for $|z| \leq M$ means $\varrho_p(\alpha_z) \geq 1$, where we have set 
 	$\alpha_z = (\alpha_n z^n)_{n \in \mathbb{N}}$. Hence, for every $z' < z$ 
-	we get $\rho_p(\alpha_{z'}) > 1$ and absolute convergence by Lemma 
+	we get $\varrho_p(\alpha_{z'}) > 1$ and absolute convergence by Lemma 
 	\ref{LCAna:Lemma:RootTest}.
 \end{proof}
-But this means, that a power series $\alpha_z$ in a locally convex space have 
-have $\rho_p(\alpha_z) = \infty$ for all $p \in \algebra{P}$: if there was a $p 
+But this means that a convergent power series $\alpha_z$ in a locally convex space  
+has $\varrho_p(\alpha_z) = \infty$ for all $p \in \algebra{P}$: if there was a $p 
 \in \algebra{P}$ with a finite radius of convergence, we could take a multiple 
 of $p$ in order to get a seminorm with arbitrarily small radius of convergence. 
 Hence $\alpha_z$ could not converge for any $z \neq 0$. This helps us to make 
-clear, what ''BCH does not converge'' can be interpreted, since we can read it 
+clear, how ``BCH does not converge'' can be interpreted, since we can read it 
 as a power series in two variables:
 \begin{equation*}
 	\bch{t \xi}{s \eta}
@@ -2745,7 +2869,7 @@ converges if and only if the series
 	\bchparts{a}{b}{\xi}{\eta}
 \end{equation*}
 converges. Now we can prove a Lemma, from which Proposition 
-\ref{LCAna:Prop:NoBetterTopology} will follow immediately.
+\ref{LCAna:Prop:NoBetterTopology} follows immediately.
 \begin{lemma}
 	Let $\lie{g}$ be an AE Lie algebra and $\Sym^{\bullet}(\lie{g})$ is 
 	endowed with a locally convex topology, such that the conditions $(i) - 
@@ -2755,7 +2879,7 @@ converges. Now we can prove a Lemma, from which Proposition
 \end{lemma}
 \begin{proof}
 	First, we complete the algebra to $\widehat{\Sym}^{\bullet}(\lie{g})$.
-	We will need the projection $\pi_1$ to the Lie algebra. Take 
+	We need the projection $\pi_1$ to the Lie algebra. Take 
 	$\xi, \eta \in 	\lie{g}$. Now, since the the Gutt star product is 
 	continuous and the exponential series is absolutely convergent for 
 	all $\xi, \eta \in \lie{g}$, we get for $t, s \in \mathbb{K}$
@@ -2835,10 +2959,11 @@ Now we want to use a result due to Wojty\'nski \cite{wojtynski:1998a}, who
 showed that for Banach-Lie algebras, global convergence of the BCH series is 
 equivalent to the fact that for any $\xi$ we have
 \begin{equation*}
+	\lim_{n \longrightarrow \infty}
 	\norm{ 
 		\left( \ad_{\xi} \right)^n 
 	}^{\frac{1}{n}}
-	\stackrel{n \rightarrow \infty}{\longrightarrow}
+	=
 	0.
 \end{equation*}
 A Banach-Lie algebra with this property is sometimes called quasi-nilpotent, 
@@ -2849,7 +2974,7 @@ Hence for a finite-dimensional Lie algebra $\lie{g}$, BCH is globally
 convergent if and only if $\lie{g}$ is nilpotent.
 
 
-From this, we see that at least for ''non-quasi-nilpotent'' Banach-Lie 
+From this, we see that at least for ``non-quasi-nilpotent'' Banach-Lie 
 algebras, our result is in some sense optimal, at least if we want the grading 
 structure to compatible with the topology.
 \begin{remark}[Another topology in $\algebra{U}(\lie{g})$]
@@ -2860,14 +2985,14 @@ structure to compatible with the topology.
     topology, such that all finite-dimensional representations of $\lie{g}$ 
     extend to continuous algebra homomorphisms. This topology is in fact even 
     locally m-convex and has therefore an entire holomorphic calculus. In 
-    particular, the completion will contain exponential functions for all Lie 
+    particular, this completion contains exponential functions for all Lie 
     algebra elements. Therefore, as we have seen in 
     Proposition~\ref{LCAna:Prop:NoBetterTopology}, it can not respect the 
     grading structure, as our topology does. The $\Tensor_R$-topology must 
     hence be different from that. As we have seen in 
     Corollary~\ref{LCAna:Coro:ContinuousRepresentations}, it is finer for 
     $R \geq 1$, and since the topologies are different, it is even strictly 
-    finer. One could argue that the $R$-topology is ''just'' locally convex, 
+    finer. One could argue that the $R$-topology is ``just'' locally convex, 
     but its advantage (for our purpose) is that the grading is necessary for 
     the holomorphic dependence on the formal parameter which is a feature that 
     we want.

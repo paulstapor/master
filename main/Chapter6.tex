@@ -4,13 +4,13 @@
 % The nilpotent case
 %
 
-\chapter{Nilpotent Lie algebras}
+\chapter{Nilpotent Lie Algebras}
 
 At the end of the last chapter, we have seen that the Baker-Campbell-Hausdorff 
 series and its convergence play an important role for a topology on the 
-universal enveloping algebra. It is thus natural to ask whether things will 
-change, if we look at Lie algebras with globally convergent BCH 
-series. To make things not too complicated from the beginning, we focus on 
+universal enveloping algebra. Thus it is natural to ask whether things will 
+change, if we restrict our observations to Lie algebras with globally convergent 
+BCH series. To make things not too complicated from the beginning, we focus on 
 locally convex and truly nilpotent Lie algebras. Recall that a Lie algebra 
 $\lie{g}$ is nilpotent, if there exists a $N \in \mathbb{N}$, such that for 
 all $n > N$ and all $\xi_1, \ldots, \xi_n \in \lie{g}$ we have
@@ -33,15 +33,15 @@ stronger. In the case of finite-dimensional Lie algebras, the notions
 to the Engel theorem, which makes use of the existence of a 
 finite descending series of nilpotent ideals in the Lie algebra. Such a 
 terminating series does not need to exist in infinite dimensions. At least as 
-soon, as we are in the setting of Banach Lie algebras, those two notions will 
+soon as we are in the setting of Banach-Lie algebras, these two notions  
 coincide again, but note that one can give different forms of 
-\emph{quasi-nilpotency}, which weaken he statements from 
+\emph{quasi-nilpotency}, which weaken the statements from 
 \eqref{Nilpot:StrongNilpotency} and \eqref{Nilpot:WeakNilpotency}, respectively. 
-Those generalized notions will not coincide any more. So we have to be careful.
+Those generalized notions do not coincide any more, so we have to be careful.
 
 
-Before we look at this case more closely, we want make a list of things first, 
-that we expect to change or not when we go to this more particular setting.
+Before we look at this case more closely, we first want to make a list of things, 
+which we expect to change or not when we go to this more particular setting.
 \begin{enumerate}
 	\item
 	In Example~\ref{LCAna:Ex:HeisenbergAlgebra} we have seen that we can not 
@@ -60,11 +60,11 @@ that we expect to change or not when we go to this more particular setting.
 	reproduce the value $R \geq \frac{1}{2}$ somehow by dividing out an ideal?
 	
 	\item
-	The argument we used in Propositipon~\ref{LCAna:Prop:NoBetterTopology},
-	namely the non-global convergence of BCH, is not given any more. Now, there is 
-	no reason to expect that exponentials will not be part 
-	of the completion any longer. In this sense, it would be at least nice to have 
-	something more than ''just'' $R = 1$. Can we do that?
+	The argument we used in Proposition~\ref{LCAna:Prop:NoBetterTopology},
+	namely the non-global convergence of BCH, is not given any more. Now there is 
+	no longer a reason to expect that exponentials are not part 
+	of the completion. In this sense, it would be at least nice to have 
+	something more than ``just'' $R = 1$. Can we do that?
 	
 	\item
 	As already mentioned, there are generalizations or weaker forms of 
@@ -78,31 +78,31 @@ $(ii) - (iv)$ is: yes, we can. The first section of this chapter will be devoted
 to the question from point $(iii)$: we get a bigger completion by using a 
 projective limit. We will also see how to get again the good functorial 
 properties we had before. The next section treats another phenomenon, which was 
-not there before: we can observe bimodule-structures within $\Sym_R^{\bullet}
-(\lie{g})$. In third section, we will reproduce one of the results of 
-Waldmann's, at least for the finite-dimensional case. The forth part will take 
-care of some generalizations of nilpotentcy for Banach-Lie algebras and will 
-extend the result of the projective limit to a particular subcase there.
+not there in the generic case: we can observe bimodule-structures within 
+$\Sym_R^{\bullet}(\lie{g})$. In third section, we will reproduce one of the 
+results of Waldmann's, at least for the finite-dimensional case. The fourth part 
+will take care of some generalizations of nilpotentcy for Banach-Lie algebras and 
+will extend the result of the projective limit to a particular subcase there.
 
 
 
  
-\section{The projective limit} 
+\section{The Projective Limit} 
 \label{sec:chap6_ProjLim} 
 
 \subsection{Continuity of the Product}
 
 As already mentioned, it is possible to extend the continuity result. 
-Therefore, we take a locally convex, nilpotent Lie algebra $\lie{g}$ and look 
-at
+Therefore, we take a locally convex, nilpotent Lie algebra $\lie{g}$ and look at
 \begin{equation*}
 	\Sym_{1^-}^{\bullet}(\lie{g})
 	=
 	\projlim_{\epsilon \longrightarrow 0}
 	\Sym_{1 - \epsilon}^{\bullet}(\lie{g}).
 \end{equation*}
-A tensor will be in the completed vector space $\widehat{\Sym}_{1^-}^{\bullet}(\lie{g})$, if and only if it lies for every $\epsilon > 0$ in the completion of 
-$\Sym_{1 - \epsilon}^{\bullet}(\lie{g})$. Otherwise stated: Let $\algebra{P}$ 
+A tensor will be in the completed vector space $\widehat{\Sym}_{1^-}^{\bullet}
+(\lie{g})$, if and only if it lies for every $\epsilon > 0$ in the completion of 
+$\Sym_{1 - \epsilon}^{\bullet}(\lie{g})$. Otherwise stated: let $\algebra{P}$ 
 be the set of all continuous seminorms of the Lie algebra $\lie{g}$, then 
 \begin{equation*}
 	f \in \widehat{\Sym}_{1^-}^{\bullet}(\lie{g})
@@ -127,14 +127,14 @@ $R'$ with $R \leq R' < 1$, such that we have for all $x,y \in \Sym^{\bullet}
 	q_{R'}(x)
 	q_{R'}(y).
 \end{equation*}
-Before we prove the next Theorem, we want to remind that locally convex, 
+Before we prove the next theorem, we want to remind that locally convex, 
 nilpotent Lie algebras are always AE Lie algebras. So the results we have 
 found so far are valid in this case, too.
 \begin{theorem}
     \label{Nilpot:Thm:ProjLimit}%
     Let $\lie{g}$ be a nilpotent locally convex Lie algebra with
     continuous Lie bracket and $N \in \mathbb{N}$ such that $N + 1$
-    Lie brackets vanish.
+    Lie brackets nested into each other vanish.
     \begin{theoremlist}
 	    	\item \label{item:Nilpot:CnOperators}
 	    	If $0 \leq R < 1$, the $C_n$-operators are continuous and fulfil the 
@@ -281,7 +281,7 @@ following result.
 \end{corollary}
 \begin{proof}
     For the first part, recall that the completion of the projective
-    limit $1^-$ will contain all those series $(a_n)_{n \in
+    limit $1^-$ contains all those series $(a_n)_{n \in
       \mathbb{N}_0}$ such that
     \begin{equation*}
         \sum\limits_{n=0}^{\infty}
@@ -307,8 +307,8 @@ like an alternative version of Lemma~\ref{LCAna:Lemma:PreContinuity2}.
 \begin{lemma}
 	\label{Nilpot:Lemma:PreContinuity2}
 	Let $\lie{g}$ be a locally m-convex, nilpotent Lie algebra such that more than 
-	$N$ nested Lie brackets vanish. Let $p$ be a continuous seminorm, 
-	$z \in \mathbb{K}$ and $R \geq 0$. Then, for every tensor 
+	$N$ Lie brackets nested into each other vanish. Let $p$ be a continuous 
+	seminorm, $z \in \mathbb{K}$ and $R \geq 0$. Then, for every tensor 
 	$x \in \Sym_R^{\bullet}(\lie{g})$ of degree at most $k \in \mathbb{N}$ and 
 	$\eta \in \lie{g}$, we have the estimate
 	\begin{equation}
@@ -321,7 +321,7 @@ like an alternative version of Lemma~\ref{LCAna:Lemma:PreContinuity2}.
 	with the constant $c = \sum_{n = 0}^N \frac{|B_n^*|}{n!} |z|^n$.
 \end{lemma}
 \begin{proof}
-	Again, we do the estimate on factorizing tensors and apply the infimum 
+	We do the estimate on factorizing tensors and apply the infimum 
 	argument later. So let $\xi_1, \ldots, \xi_k, \eta \in \lie{g}$, $k \in 
 	\mathbb{N}$, $p$ a continuous seminorm on $\lie{g}$ and $z \in \mathbb{K}$. 
 	Then, we have for $R \geq 0$
@@ -377,9 +377,9 @@ like an alternative version of Lemma~\ref{LCAna:Lemma:PreContinuity2}.
 	\end{align*}
 \end{proof}
 Now, we can iterate Lemma~\ref{Nilpot:Lemma:PreContinuity2} in the same way 
-we did it in Chapter 5:
+we did in Chapter 5:
 \begin{proof}[Alternative Proof of Theorem~\ref{Nilpot:Thm:ProjLimit}]
-	Again, we do the calculation only on factorizing tensors. We need to 
+	The calculation is done only on factorizing tensors. We need to 
 	transform the $k^{N(1-R)}$ into a very small factorial somehow. This is 
 	possible, since for given $N \in \mathbb{N}$ and $0 \leq R < 1$, the 
 	sequence
@@ -537,9 +537,9 @@ extended to the projective limit $\Sym_{1^-}^{\bullet}(\lie{g})$.
 \end{proposition}
 \begin{proof}
 	The proof is exactly the same as in the general AE case, since there, 
-	$R \geq 0$ was enough.
+	we actually only needed $R \geq 0$.
 \end{proof}
-Again, this construction will be not a universal in the categorial sense, 
+Again, this construction is not universal in the categorial sense, 
 since $\Sym_{1^-}^{\bullet}(\lie{g})$ fails to be AE. But also here, we get 
 the case of continuous representations into a Banach space (and in particular 
 into a finite-dimensional space) as a corollary.
@@ -587,7 +587,7 @@ proof.
         \leq
         \frac{N-1}{N} n
         =
-        \delta n
+        \delta n.
     \end{equation*}
     Using that in the proof of Lemma~\ref{LCAna:Lemma:LemmaPreContinuityN} 
     leads to
@@ -625,7 +625,7 @@ proof.
         q(\xi_1) \cdots q(\xi_n)
         \sum\limits_{\ell = 0}^{\delta n}
         (n - \ell)!^R \ell!
-        \binom{n + \ell - 2}{\ell - 1}
+        \binom{n + \ell - 2}{\ell - 1}.
     \end{align*}
     We have
     \begin{equation*}
@@ -691,7 +691,7 @@ proof.
 
 
 
-\section{Module structures}
+\section{Module Structures}
 \label{sec:chap6_Modules}
 
 The projective limit $1^-$ is not the only additional structure we will get, if 
@@ -699,10 +699,10 @@ our Lie algebra $\lie{g}$ is nilpotent. For every $R \in \mathbb{R}$, the
 symmetric tensor algebra $\Sym_R^{\bullet}(\lie{g})$ is a locally convex vector 
 space. For $R \geq 0$, the (symmetric) tensor product is continuous, which is 
 very important for many estimates, and for $R \geq 1^-$, we have an algebra 
-structure. In between however, we have more than ''only'' vector spaces: The 
+structure. In between however, we have more than ``only'' vector spaces: the 
 spaces $\Sym_R^{\bullet}(\lie{g})$ form locally convex bimodules over the 
 $\Sym_{R'}^{\bullet}(\lie{g})$ for certain values of $R'$. The next proposition 
-will makes this more exact.
+makes this more exact.
 \begin{proposition}[Bimodules in $\Sym_R^{\bullet}(\lie{g})$]
 	\label{Nilpot:Prop:Bimodules}
 	Let $\lie{g}$ be a nilpotent, locally convex Lie algebra, $N \in 
@@ -749,7 +749,7 @@ will makes this more exact.
 		N \ell.
 	\end{equation*}
 	We prove the statement only on factorizing tensors again. We 
-	want to show Estiamte \eqref{Nilpot:BimoduleEstimate1} and take
+	want to show Estimate \eqref{Nilpot:BimoduleEstimate1} and take
 	$x = \xi_1 \tensor \cdots \tensor \xi_k$ and $y = \eta_1 \tensor \cdots 
 	\tensor \eta_\ell$. So
 	\begin{align*}
@@ -803,7 +803,7 @@ Once again, assuming submultiplicativity of the seminorms, it is possible to giv
 an easier proof for Proposition~\ref{Nilpot:Prop:Bimodules} which relies on 
 Lemma~\ref{Nilpot:Lemma:PreContinuity2}.
 \begin{proof}[Alternative proof for Proposition~\ref{Nilpot:Prop:Bimodules}]
-	Again, we do the calculation on factorizing tensors: Let 
+	We do the calculation on factorizing tensors: let 
 	$\xi_1, \ldots, \xi_k, \eta_1, \ldots, \eta_\ell \in \lie{g}$, $R \geq 0$, $k, 
 	\ell \in \mathbb{N}$. Using Lemma~\ref{Nilpot:Lemma:PreContinuity2}, we get
 	\begin{align*}
@@ -879,15 +879,14 @@ Lemma~\ref{Nilpot:Lemma:PreContinuity2}.
 \end{proof}
 \begin{remark}[Possible extensions]
 	This result immediately raises new questions, like the one about possible 
-	generalizations to ''weaker forms'' of nilpotency, for example. They may be 
+	generalizations to ``weaker forms'' of nilpotency, for example. They may be 
 	issues of some future work, but can not
 	be addressed here, since we rather want to present something like  
-	the ''big picture'', instead of getting 
+	the ``big picture'', instead of getting 
 	lost in its details too much. There are, without any doubt, questions that 
 	are more significant than extending those estimates to very special cases 
-	and 	finding sharp bounds there, although this is interesting and 
-	important, 
-	too.
+	and finding sharp bounds there, although this is interesting and 
+	important, too.
 \end{remark}
 Though it seems clear from the construction that these bimodules can not be 
 there for general Lie algebras, we can give a concrete counter-example, which 
@@ -981,14 +980,14 @@ shows that there are Lie algebras, which don not allow them.
 		=
 		\infty.
 	\end{equation*}
-	Hence the limes superior of $n_R \left( a_k \star_z e_2 \right) $ grows 
+	Hence the Limes superior of $n_R \left( a_k \star_z e_2 \right) $ grows 
 	faster than any exponential function and can not be absorbed into the seminorm 
 	of $e_2$. So the multiplication in the module can not be continuous.
 \end{example}
 
 
 
-\section{The Heisenberg and the Weyl algebra}
+\section{The Heisenberg and the Weyl Algebra}
 \label{sec:chap6_HeisenbergWeyl}
 
 Now we want to see how we get the link to the Weyl algebra from
@@ -997,7 +996,7 @@ parameter $R$ concerning the continuity of the product in the Weyl and the
 Heisenberg algebra. In the following, we will show that this gap actually makes 
 a lot of sense. For simplicity, we consider the easiest case of
 the Weyl/Heisenberg algebra with two generators $Q$ and $P$, but the 
-calculation for the Heisenberg [Weyl] algebra in $2n + 1$ [$2n$] dimensions 
+calculation for the Heisenberg/Weyl algebra in $2n + 1$ [$2n$] dimensions 
 is done exactly in the same way.
 Recall that the Weyl algebra is a quotient of the enveloping algebra of the 
 Heisenberg algebra $\lie{h}$ which one gets from dividing out its center. So 
@@ -1018,9 +1017,9 @@ Of course we want to know if this projection is continuous.
     The projection $\pi$ is continuous for $R \geq 0$.
 \end{proposition}
 \begin{proof}
-    We extend $\pi$ to the whole tensor algebra by symmetrizing
-    beforehand. Let then $p$ be a continuous seminorm on $\lie{h}$, $k,
-    \ell, m \in \mathbb{N}_0$. We have
+    We extend $\pi$ to the whole tensor algebra by symmetrizing beforehand. Let 
+    then $p$ be a continuous seminorm on $\lie{h}$ and $k, \ell, m \in 
+    \mathbb{N}_0$. We have
     \begin{align*}
         p_R(\pi (
         	Q^{\tensor k} \tensor
@@ -1062,11 +1061,11 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
 \begin{proof}
     Since we are in finite dimensions, we can choose a
     submultiplicative norm $p$ with $p(Q) = p(P) = p(E)$ without
-    restriction. Moreover, let $k, k', \ell, \ell', m, m' \in
+    restrictions. Moreover, let $k, k', \ell, \ell', m, m' \in
     \mathbb{N}_0$. Then we have to get an estimate for $p_R \left(
-        \pi\left( Q^k P^{\ell} E^m \ostar_z Q^{k'} P^{\ell'} E^{m'}
-        \right) \right)$.  If we calculate the star product
-    explicitly, we see, that we only get Lie brackets where we have
+    \pi\left( Q^k P^{\ell} E^m \ostar_z Q^{k'} P^{\ell'} E^{m'}
+    \right) \right)$.  If we calculate the star product
+    explicitly, we will see that we only get Lie brackets where we have
     $P$'s and $Q$'s. Let $r = k + \ell + m$ and $s = k' + \ell' + m'$,
     then we can actually simplify the calculations by
     \begin{align*}
@@ -1125,14 +1124,6 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
         |z|^n |h|^n
         \frac{r! s!}{(r-n)! (s-n)! n!}
         \frac{(r + s - 2n)!^R}{r!^R s!^R}
-        p_R \left(Q^{\tensor r} \right)
-        p_R \left(P^{\tensor s} \right)
-        \\
-        & \leq
-        \sum\limits_{n=0}^{r + s - 1}
-        |z|^n |h|^n
-        \binom{r}{n} \binom{s}{n}
-        \frac{(r + s - 2n)!^R n!}{r!^R s!^R}
         p_R \left(Q^{\tensor r} \right)
         p_R \left(P^{\tensor s} \right)
         \\
@@ -1205,7 +1196,7 @@ we need more: $\pi \circ \ostar_z$ should to be continuous for $R \geq \frac
     and the infimum argument to expand this estimate to all tensors.
     This concludes the proof.
 \end{proof}
-The previous proposition can be seen as something like the ''finite-dimensional 
+The previous proposition can be seen as something like the ``finite-dimensional 
 version'' of Lemma 3.10 in \cite{waldmann:2014a}, just that we took a large 
 detour for proving it. One could, most probably, redo some more results of this 
 paper using finite-dimensional versions the Heisenberg algebra and the 
@@ -1217,7 +1208,7 @@ infinite dimensions does not seem be obvious.
 
 
 
-\section{Banach-Lie algebras}
+\section{Banach-Lie Algebras}
 \label{sec:chap6_TheEProperty}
 
 Now we want to focus a bit on weaker notions than true nilpotency. Since there 
@@ -1225,7 +1216,7 @@ are many of them, we want to restrict to the easier case of Banach-Lie algebras,
 where a somewhat developed theory already exists.
 
 
-\subsection{Generalizations of nilpotency}
+\subsection{Generalizations of Nilpotency}
 
 In \cite{mueller:1994a}, M\"uller gives a list of weaker forms of nilpotency for 
 associative Banach algebras. We can mostly copy the ideas and use them for 
@@ -1258,7 +1249,7 @@ Banach-Lie algebras, too
 			\lim_{n \longrightarrow \infty}
 			\mathcal{N}_1(n)
 			=
-			0.
+			0
 		\end{equation*}
 		for
 		\begin{equation}
@@ -1290,7 +1281,7 @@ Banach-Lie algebras, too
 			\lim_{n \longrightarrow \infty}
 			\mathcal{N}(n)
 			=
-			0.
+			0
 		\end{equation*}
 		for
 		\begin{equation}
@@ -1318,9 +1309,9 @@ $(iv)$: we will show, that it is possible to generalize the result of Theorem
 
 
 
-\subsection{An adapted Topology for the Tensor Algebra}
+\subsection{An Adapted Topology for the Tensor Algebra}
 
-The idea will be to change the $\Tensor_R$-topology a bit: Instead of taking 
+The idea consists in changing the $\Tensor_R$-topology a bit: instead of taking 
 $n!^R$ as weights with $0 \leq R < 1$, we take sequence $(\alpha_n)_{n \in 
 \mathbb{N}}$ with a certain asymptotic 
 behaviour for $n \longrightarrow \infty$ and use $\frac{n!}{\alpha_n}$ as 
@@ -1357,7 +1348,7 @@ the next definition.
 			2
 		\right\}.
 	\end{equation}
-	We moreover say, that a sequence $(\alpha_n)_{n \in \mathbb{N}}$ in 
+	Furthermore, we will say that a sequence $(\alpha_n)_{n \in \mathbb{N}}$ in 
 	$(1, \infty)$ is $\lie{g}$-rapidly increasing, if it fulfils the following 
 	properties:
 	\begin{definitionlist}
@@ -1382,7 +1373,7 @@ the next definition.
 	increasing sequences.
 \end{definition}
 Clearly, $(\chi_n^{\lie{g}})_{n \in \mathbb{N}}$ is a $\lie{g}$-rapidly 
-increasing sequence itself. Note that we get with this definition for every 
+increasing sequence itself. Note that with this definition we get for every 
 sequence $(\xi_n)_{n \in \mathbb{N}} \subset \mathbb{B}_1(0)$
 \begin{equation}
 	\label{Nilpot:ChiEstimate}
@@ -1398,9 +1389,9 @@ sequence $(\xi_n)_{n \in \mathbb{N}} \subset \mathbb{B}_1(0)$
 	we will need $\chi^{\lie{g}}_n > 1$ later. 
 	So actually every real number $c > 1$ 
 	could have been used there. In this sense, the previous definition is rather 
-	a technical tool than a ''general idea''.
+	a technical tool than a ``general concept''.
 \end{remark}
-Each $(\alpha_n)_{n \in \mathbb{N}} \in \algebra{I}_{\lie{g}}$ gives a continuous 
+Each $(\alpha_n)_{n \in \mathbb{N}} \in \mathfrak{I}_{\lie{g}}$ gives a continuous 
 seminorm.
 \begin{definition}[Adapted seminorms]
 	\label{Def:AdaptedBanachSeminorms}
@@ -1434,11 +1425,11 @@ $(\alpha_n)_{n \in \mathbb{N}}$ yields a continuous function $f_{\alpha}$ by
 	=
 	\log \left( \alpha_n \right)
 	,\
-	\forall_{n \in \mathbb{N}},
+	\forall_{n \in \mathbb{N}}
 \end{equation}
 and linear interpolation between the values at the integers. The idea behind is 
 that this will allow us to use a technical lemma, which we now introduce. This 
-lemma shows that there are always ''many'' rapidly increasing functions in a 
+lemma shows that there are always ``many'' rapidly increasing functions in a 
 certain sense. It is taken from a work \cite{mitiagin.rolewicz.zelazko:1962a} by 
 Mitiagin, Rolewicz and \.{Z}elazko, where it is stated in Lemma~2.1 and Lemma~2.2.
 \begin{lemma}
@@ -1485,7 +1476,7 @@ the function $f_{\alpha}$, which is defined according to Equation
 
 
 
-\subsection{A new continuity result}
+\subsection{A New Continuity Result}
 
 Now, we have finally prepared our toolbox well enough to prove a new result.
 \begin{proposition}
@@ -1662,7 +1653,7 @@ Now, we have finally prepared our toolbox well enough to prove a new result.
     From this we could conclude analogously to the procedure in the proof of 
     Theorem~\ref{Thm:LCAna:Continuity1} and the statement would follow.
     However, we need to show the existence of a $(\beta_n)_{n \in \mathbb{N}} 
-    \in \algebra{I}_{\lie{g}}$ and a $\kappa > 0$, such that 
+    \in \mathfrak{I}_{\lie{g}}$ and a $\kappa > 0$, such that 
     \eqref{Nilpot:SavingSequence} holds.
     \begin{lemma}
     		For $f_{\alpha}$ defined as in \eqref{Nilpot:IncreasingFunction}, we 
