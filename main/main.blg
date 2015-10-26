@@ -17,44 +17,46 @@ Database file #5: ../../bibfiles/bib/preprints.bib
 Database file #6: ../../bibfiles/bib/script.bib
 Database file #7: ../../bibfiles/bib/dqprocentry.bib
 Database file #8: ../../bibfiles/bib/dqproceeding.bib
-You've used 95 entries,
+Warning--I didn't find a database entry for ""
+You've used 100 entries,
             2314 wiz_defined-function locations,
-            999 strings with 15318 characters,
-and the built_in function-call counts, 27741 in all, are:
-= -- 3015
-> -- 901
-< -- 9
-+ -- 391
-- -- 284
-* -- 2328
-:= -- 4619
-add.period$ -- 207
-call.type$ -- 95
-change.case$ -- 336
+            1028 strings with 16008 characters,
+and the built_in function-call counts, 28985 in all, are:
+= -- 3141
+> -- 941
+< -- 10
++ -- 409
+- -- 296
+* -- 2415
+:= -- 4834
+add.period$ -- 221
+call.type$ -- 100
+change.case$ -- 354
 chr.to.int$ -- 0
-cite$ -- 95
-duplicate$ -- 1183
-empty$ -- 2399
-format.name$ -- 284
-if$ -- 5891
+cite$ -- 100
+duplicate$ -- 1249
+empty$ -- 2513
+format.name$ -- 296
+if$ -- 6158
 int.to.chr$ -- 0
-int.to.str$ -- 95
-missing$ -- 116
-newline$ -- 399
-num.names$ -- 191
-pop$ -- 368
+int.to.str$ -- 100
+missing$ -- 124
+newline$ -- 423
+num.names$ -- 201
+pop$ -- 392
 preamble$ -- 1
-purify$ -- 331
+purify$ -- 347
 quote$ -- 0
-skip$ -- 610
+skip$ -- 636
 stack$ -- 0
-substring$ -- 1662
-swap$ -- 282
-text.length$ -- 9
+substring$ -- 1688
+swap$ -- 298
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 324
+type$ -- 336
 warning$ -- 0
-while$ -- 285
-width$ -- 97
-write$ -- 934
+while$ -- 295
+width$ -- 103
+write$ -- 994
+(There was 1 warning)

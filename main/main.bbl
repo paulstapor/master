@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem {aigner:2000a}
 \textsc{Aigner, M.: }\newblock \emph{A course in enumeration}, vol. 238 in
@@ -82,6 +82,11 @@
   for Actions of {K}{\"a}hlerian Lie Groups}, vol. 236.1115 in \emph{Memoirs of
   the American Mathematical Society}.
 \newblock American Mathematical Society, Providence, RI, 2015.
+
+\bibitem {blackadar:2006a}
+\textsc{Blackadar, B.: }\newblock \emph{Operator algebras}, vol. 122 in
+  \emph{Encyclopaedia of Mathematical Sciences}.
+\newblock Springer-Verlag, Berlin, Heidelberg, 2006.
 
 \bibitem {bogfjellmo.dahmen.schmedig:2015a}
 \textsc{Bogfjellmo, G., Dahmen, R., Schmedig, A.: }\newblock \emph{Character
@@ -273,6 +278,13 @@
 \newblock \emph{Springer Monographs in Mathematics}.
 \newblock Springer-Verlag, Heidelberg, New York, 2012.
 
+\bibitem {hoermander:2003a}
+\textsc{H{\"{o}}rmander, L.: }\newblock \emph{The Analysis of Linear Partial
+  Differential Operators {I}}.
+\newblock \emph{Classics in Mathematics}.
+\newblock Springer-Verlag, Berlin, Heidelberg, New York, 2. edition, 2003.
+\newblock Reprint of the 2nd Edition 1990.
+
 \bibitem {jacobson:1979a}
 \textsc{Jacobson, N.: }\newblock \emph{Lie algebras}.
 \newblock Dover Publications Inc., New York, 1979.
@@ -306,6 +318,12 @@
   Mechanics and Symmetry}.
 \newblock \emph{Texts in applied mathematics} no. \textbf{17}.
 \newblock Springer-Verlag, New York, Heidelberg, 1999.
+
+\bibitem {michael:1952a}
+\textsc{Michael, E.~A.: }\newblock \emph{Locally Multiplicatively-Convex
+  Topological Algebras}.
+\newblock \emph{Mem. Amer. Math. Soc.} no. \textbf{11}.
+\newblock AMS, Providence, R. I., 1952.
 
 \bibitem {mitiagin.rolewicz.zelazko:1962a}
 \textsc{Mitiagin, B.~S., Rolewicz, S., {\.Z}elazko, W.: }\newblock \emph{Entire
@@ -356,6 +374,12 @@
   of Lie algebras, their regular representations and ideals}.
 \newblock Trans. Mosc. Math. Soc.  \textbf{15} (1966), 3--54.
 
+\bibitem {reed.simon:1980a}
+\textsc{Reed, M., Simon, B.: }\newblock \emph{Methods of modern mathematical
+  physics {I}. Functional analysis}.
+\newblock Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York,
+  second. edition, 1980.
+
 \bibitem {reichert.waldmann:2015a:pre}
 \textsc{Reichert, T., Waldmann, S.: }\newblock \emph{Classification of
   Equivariant Star Products on Symplectic Manifolds}.
@@ -395,6 +419,12 @@
   Hilbertr{\"a}umen}.
 \newblock master thesis, Mathematisches Institut der Universit{\"a}t
   W{\"u}rzburg, W{\"u}rzburg, 2014.
+
+\bibitem {schweigert:2015a:script}
+\textsc{Schweigert, C.: }\newblock \emph{Hopf algebras, quantum groups and
+  topological field theory}.
+\newblock Hamburg University, Department of Mathematics, 2015.
+\newblock Lecture notes.
 
 \bibitem {serre:2006a}
 \textsc{Serre, J.-P.: }\newblock \emph{Lie algebras and {L}ie groups}, vol.

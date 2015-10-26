@@ -7,22 +7,86 @@
 \chapter{The Hopf Algebra Structure}
 
 As already pointed out in Chapter 3, universal enveloping algebras of a Lie 
-algebras are more than just an associative, unital algebra: it is a prototype of a 
-Hopf algebra. Hopf algebras are very common structures in mathematics and there 
-are of course various other examples, like group algebras or functions from a 
-finite group into a field $\mathbb{K}$.
+algebras are more than just associative, unital algebras: they constitute one of 
+the most important types of \emph{Hopf algebras}, which are very common 
+structures in mathematics. Hopf algebras are a particular \emph{bialgebras}, 
+which in turn are on one hand associative, unital algebras, and on the other hand 
+coassociative, counital coalgebras. Those two substructures of bialgebras must of 
+course fulfil certain compatibility conditions. Note at this point, that 
+coalgebras play a crucial role in the theory of formal deformation quantization, 
+which is due to Kontsevich, but which has been a lot further developed since. 
+Good references on this so-called formality theory are given by Esposito 
+\cite{esposito:2015a}.
+
+In a Hopf algebra however, we have an 
+additional map, called the \emph{antipode}, which again must fulfil some 
+compatibility relations. So, in brief, a Hopf algebra over a field $\mathbb{K}$ 
+is a tuple $(H, \cdot, \eta, \Delta, \varepsilon, S)$ of a vector space $H$ 
+together with the following maps
+\begin{equation*}
+\begin{array}{rlrl}
+	\cdot \colon
+	&
+	H \tensor H 
+	\longrightarrow
+	H, 
+	& \quad &
+	\text{ multiplication}
+	\\
+	\eta \colon
+	&
+	\mathbb{K}
+	\longrightarrow
+	H
+	, 
+	& \quad &
+	\text{ unit}
+	\\
+	\Delta \colon
+	&
+	H
+	\longrightarrow
+	H \tensor H
+	, & \quad &
+	\text{ coproduct}
+	\\
+	\varepsilon \colon
+	&
+	H
+	\longrightarrow
+	\mathbb{K}
+	, & \quad &
+	\text{ counit}
+	\\
+	S \colon
+	&
+	H
+	\longrightarrow
+	H
+	, & \quad &
+	\text{ antipode},
+\end{array}
+\end{equation*}
+such that we have a certain set of commuting diagrams. A very nice introduction 
+to the theory of Hopf algebras with a lot of examples can e.g. be found in 
+\cite{schweigert:2015a:script}.
+
+
+In the previous chapters, we have mostly studied the properties of the 
+multiplication in $\algebra{U}(\lie{g}_z)$, endowed with a particular topology. 
+In this last chapter of this thesis, we will treat the remaining Hopf algebra 
+structure maps. In the first section, we will see that the comultiplication and 
+the antipode are not touched by our deformation procedure. Hence, it will be 
+enough to show the continuity of the undeformed versions of those maps, which we 
+will do in second section.
 
 
 
 \section{An Undeformed Hopf Structure}
 
-In the previous chapters we discussed a locally convex topology on $\Sym^{\bullet}
-(\lie{g})$ or on the universal enveloping algebra with scaled Lie bracket, 
-considered as an associative algebra. The Gutt star product (or just the 
-multiplication in the case of $\algebra{U}_R(\lie{g}_z)$) was continuous.
-In the following, we investigate the continuity of the other maps which belong to 
-the Hopf structure on $\algebra{U}_R(\lie{g}_z)$. For this purpose, we need an 
-explicit formula for the antipode
+To get show the continuity of the remaining structure maps of 
+$\algebra{U}_R(\lie{g}_z)$, we have to put estimates on seminorms again. For this 
+purpose, we need explicit formulas for the antipode
 \begin{equation}
     \label{eq:Antipode}
     S_z \colon
